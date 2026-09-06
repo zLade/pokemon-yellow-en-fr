@@ -1,0 +1,58 @@
+# ROMs, dumps, saves and emulator state
+*.nes
+*.nes.*
+*.gb
+*.gbc
+*.rom
+*.bin
+*.cdl
+*.deb
+*.sav
+*.srm
+*.state
+*.state*
+*.fm2
+*.fm3
+
+# Executables, archives and extracted binary assets
+*.exe
+*.dll
+*.jar
+*.chm
+*.zip
+*.7z
+*.rar
+*.chr
+*.bmp
+*.png
+
+# Generated output and runtime evidence
+/build/
+/dist/
+/outputs/
+/private/
+/graphics/chr_modular/manifest-*.json
+/graphics/chr_modular/catalog-*.csv
+/graphics/chr_modular/screen-pack-catalog-*.json
+/graphics/chr_modular/pack-*/
+
+# Root-level historical patches and local inputs
+/*.ips
+/*.bps
+
+# Python and tool caches
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local agent and editor state
+/.agents/
+/.codex/
+*.log
+*.tmp
+/NUL
+Thumbs.db
+.DS_Store

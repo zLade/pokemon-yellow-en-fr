@@ -1,0 +1,694 @@
+{
+  "schema": "nj046-en2-source-review-v1",
+  "batch_id": "other-007",
+  "entries": [
+    {
+      "stable_key": "MAIN:0x036195",
+      "english_v2": "Psyduck",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Psyduck, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03619D",
+      "english_v2": "Golduck",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Golduck, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0361A5",
+      "english_v2": "Mankey",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Mankey, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0361AC",
+      "english_v2": "Primeape",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Primeape, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0361B5",
+      "english_v2": "Growlithe",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Growlithe, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0361BF",
+      "english_v2": "Arcanine",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Arcanine, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0361C8",
+      "english_v2": "Poliwag",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Poliwag, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0361D0",
+      "english_v2": "Poliwhirl",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Poliwhirl, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0361DA",
+      "english_v2": "Poliwrath",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Poliwrath, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0361FA",
+      "english_v2": "Machop",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Machop, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036201",
+      "english_v2": "Machoke",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Machoke, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036209",
+      "english_v2": "Machamp",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Machamp, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036211",
+      "english_v2": "Bellsprout",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Bellsprout, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03621C",
+      "english_v2": "Weepinbell",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The neighboring Bellsprout and Victreebel entries resolve the source spelling variant as Weepinbell.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036227",
+      "english_v2": "Victreebel",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Victreebel, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036247",
+      "english_v2": "Geodude",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Geodude, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03624F",
+      "english_v2": "Graveler",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Graveler, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036258",
+      "english_v2": "Golem",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Golem, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036265",
+      "english_v2": "Rapidash",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Rapidash, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03626E",
+      "english_v2": "Slowpoke",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Slowpoke, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036277",
+      "english_v2": "Slowbro",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Slowbro, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03627F",
+      "english_v2": "Magnemite",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Magnemite, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036289",
+      "english_v2": "Magneton",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The table position after Magnemite resolves the shortened Chinese compound as Magneton.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036292",
+      "english_v2": "Farfetch'd",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Farfetch'd, including the official English apostrophe.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0362AA",
+      "english_v2": "Seel",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Seel, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0362AF",
+      "english_v2": "Dewgong",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Dewgong, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0362B7",
+      "english_v2": "Grimer",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Grimer, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0362BE",
+      "english_v2": "Muk",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Muk, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0362C2",
+      "english_v2": "Shellder",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Shellder, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0362CB",
+      "english_v2": "Cloyster",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Cloyster, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0362D4",
+      "english_v2": "Gastly",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Gastly, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0362DB",
+      "english_v2": "Haunter",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Haunter, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0362E3",
+      "english_v2": "Gengar",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Gengar, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0362EF",
+      "english_v2": "Drowzee",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The older Chinese transliteration identifies Drowzee, confirmed by Hypno immediately following it.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0362F7",
+      "english_v2": "Hypno",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The older Chinese transliteration and evolution-table position unambiguously identify Hypno.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036304",
+      "english_v2": "Kingler",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Kingler, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03630C",
+      "english_v2": "Voltorb",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Voltorb, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036314",
+      "english_v2": "Electrode",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Electrode, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03631E",
+      "english_v2": "Exeggcute",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Exeggcute, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036328",
+      "english_v2": "Exeggutor",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Exeggutor, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036332",
+      "english_v2": "Cubone",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Cubone, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036339",
+      "english_v2": "Marowak",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Marowak, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036341",
+      "english_v2": "Hitmonlee",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese name Sha Walang unambiguously denotes Hitmonlee, so the official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03634B",
+      "english_v2": "Hitmonchan",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese name Aibilang unambiguously denotes Hitmonchan, so the official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036356",
+      "english_v2": "Lickitung",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Lickitung, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036360",
+      "english_v2": "Koffing",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Koffing, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036368",
+      "english_v2": "Weezing",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Weezing, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036370",
+      "english_v2": "Rhyhorn",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Rhyhorn, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036378",
+      "english_v2": "Rhydon",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Rhydon, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03637F",
+      "english_v2": "Chansey",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Chansey, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036387",
+      "english_v2": "Tangela",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Tangela, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03638F",
+      "english_v2": "Kangaskhan",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Kangaskhan, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03639A",
+      "english_v2": "Horsea",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Horsea, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0363A1",
+      "english_v2": "Seadra",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Seadra, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0363A8",
+      "english_v2": "Goldeen",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Goldeen, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0363B0",
+      "english_v2": "Seaking",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Seaking, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0363B8",
+      "english_v2": "Staryu",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Staryu, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0363BF",
+      "english_v2": "Starmie",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Starmie, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0363C7",
+      "english_v2": "Mr. Mime",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name identifies Mr. Mime; the official English spacing and punctuation replace the cramped old form.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0363CF",
+      "english_v2": "Scyther",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Scyther, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0363D7",
+      "english_v2": "Jynx",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Jynx, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0363DC",
+      "english_v2": "Electabuzz",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name identifies Electabuzz; this restores the final z missing from the 2015 spelling.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0363ED",
+      "english_v2": "Pinsir",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name Dajia unambiguously identifies Pinsir in this Kanto species table.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0363FB",
+      "english_v2": "Magikarp",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Magikarp, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036404",
+      "english_v2": "Gyarados",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Gyarados, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03640D",
+      "english_v2": "Lapras",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Lapras, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036414",
+      "english_v2": "Ditto",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Ditto, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03641A",
+      "english_v2": "Eevee",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Eevee, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036420",
+      "english_v2": "Vaporeon",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese water-evolution name unambiguously identifies Vaporeon.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036429",
+      "english_v2": "Jolteon",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese electric-evolution name unambiguously identifies Jolteon.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036431",
+      "english_v2": "Flareon",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese fire-evolution name unambiguously identifies Flareon.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036441",
+      "english_v2": "Omanyte",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Omanyte, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036449",
+      "english_v2": "Omastar",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Omastar, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036451",
+      "english_v2": "Kabuto",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Kabuto, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036461",
+      "english_v2": "Aerodactyl",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese fossil-winged-dragon name unambiguously identifies Aerodactyl.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03646C",
+      "english_v2": "Snorlax",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Snorlax, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036474",
+      "english_v2": "Articuno",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese ice-bird name unambiguously identifies Articuno.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03647D",
+      "english_v2": "Zapdos",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese lightning-bird name unambiguously identifies Zapdos.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036484",
+      "english_v2": "Moltres",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese flame-bird name unambiguously identifies Moltres.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03648C",
+      "english_v2": "Dratini",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Dratini, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x036494",
+      "english_v2": "Dragonair",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Dragonair, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03649E",
+      "english_v2": "Dragonite",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese species name unambiguously identifies Dragonite, so its official English name is used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0364F0",
+      "english_v2": "Used a Potion!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese explicitly names an ordinary Potion; Max in the 2015 English and French witnesses is unsupported and is not imported.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03650D",
+      "english_v2": " is fully paralyzed!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Restores both the paralysis and resulting inability to move, with a leading space for the affected Pokémon's name. Full-text review: Keeps the full-paralysis/no-action result grammatical on the engine-provided second row.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03651B",
+      "english_v2": " fell asleep!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "This status-infliction pointer marks entry into sleep and retains its structural leading join after the Pokémon name.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x039D3B",
+      "english_v2": "LASS: Respect!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Non-live overlap cell: reference 0x038347 resolves to RESTORED:0x038347 at final target 0x03A2CE; this MAIN row is not a displayed ROM surface.",
+      "compression": true,
+      "compression_justification": "Fixed 17-byte displaced cell after restoration; the complete meaning remains at RESTORED:0x038347."
+    }
+  ]
+}

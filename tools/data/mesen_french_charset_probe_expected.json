@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "probe": "tools/mesen_intro_french_accents_probe.lua",
+  "runtime_mode": "assisted_transient_prg_record",
+  "source_entry_offset": "0x035E82",
+  "original_record_bytes": 104,
+  "diagnostic_record_bytes": 104,
+  "transient_prg_patch_writes": 91,
+  "transient_prg_restore_writes": 91,
+  "semantic_sequence": "ÀÂÉÎÇàâçèéêîïôùû",
+  "encoded_sequence_hex": "22232a3c3b7b7e5b7c407d5c5d5e5f60",
+  "diagnostic_record_hex": "474c5950484553204652414e434149532022232a3c3b7b7e5b7c407d5c5d5e5f602020204d4f54455552205445585445205245454c20204c45435455524520504f4c49434520524f4d204543524954555245204348522052414d2020505245555645204f4b20200d",
+  "page_boundaries": [
+    [0, 35],
+    [36, 73],
+    [74, 102]
+  ],
+  "required_page": 1,
+  "native_glyph_count": 16,
+  "glyphs": [
+    {
+      "character": "À",
+      "label": "A_grave_upper",
+      "code": "0x22",
+      "rom_offset": "0x078230",
+      "tile_hex": "0c031028447c82820000000000000000"
+    },
+    {
+      "character": "Â",
+      "label": "A_circumflex_upper",
+      "code": "0x23",
+      "rom_offset": "0x078240",
+      "tile_hex": "18241028447c82820000000000000000"
+    },
+    {
+      "character": "É",
+      "label": "E_acute_upper",
+      "code": "0x2A",
+      "rom_offset": "0x0782B0",
+      "tile_hex": "30c0fe80fc8080fe0000000000000000"
+    },
+    {
+      "character": "Ç",
+      "label": "C_cedilla_upper",
+      "code": "0x3B",
+      "rom_offset": "0x0783C0",
+      "tile_hex": "3c428080423c10200000000000000000"
+    },
+    {
+      "character": "Î",
+      "label": "I_circumflex_upper",
+      "code": "0x3C",
+      "rom_offset": "0x0783D0",
+      "tile_hex": "18247c101010107c0000000000000000"
+    },
+    {
+      "character": "é",
+      "label": "e_acute",
+      "code": "0x40",
+      "rom_offset": "0x078410",
+      "tile_hex": "0030c03c427e403e0000000000000000"
+    },
+    {
+      "character": "ç",
+      "label": "c_cedilla",
+      "code": "0x5B",
+      "rom_offset": "0x0785C0",
+      "tile_hex": "00788480847810200000000000000000"
+    },
+    {
+      "character": "î",
+      "label": "i_circumflex",
+      "code": "0x5C",
+      "rom_offset": "0x0785D0",
+      "tile_hex": "18240010101010100000000000000000"
+    },
+    {
+      "character": "ï",
+      "label": "i_diaeresis",
+      "code": "0x5D",
+      "rom_offset": "0x0785E0",
+      "tile_hex": "24000010101010100000000000000000"
+    },
+    {
+      "character": "ô",
+      "label": "o_circumflex",
+      "code": "0x5E",
+      "rom_offset": "0x0785F0",
+      "tile_hex": "1824003c4242423c0000000000000000"
+    },
+    {
+      "character": "ù",
+      "label": "u_grave",
+      "code": "0x5F",
+      "rom_offset": "0x078600",
+      "tile_hex": "000c03444444443c0000000000000000"
+    },
+    {
+      "character": "û",
+      "label": "u_circumflex",
+      "code": "0x60",
+      "rom_offset": "0x078610",
+      "tile_hex": "182400444444443c0000000000000000"
+    },
+    {
+      "character": "à",
+      "label": "a_grave",
+      "code": "0x7B",
+      "rom_offset": "0x0787C0",
+      "tile_hex": "000c0338043c443e0000000000000000"
+    },
+    {
+      "character": "è",
+      "label": "e_grave",
+      "code": "0x7C",
+      "rom_offset": "0x0787D0",
+      "tile_hex": "000c033c427e403e0000000000000000"
+    },
+    {
+      "character": "ê",
+      "label": "e_circumflex",
+      "code": "0x7D",
+      "rom_offset": "0x0787E0",
+      "tile_hex": "1824003c427e403e0000000000000000"
+    },
+    {
+      "character": "â",
+      "label": "a_circumflex",
+      "code": "0x7E",
+      "rom_offset": "0x0787F0",
+      "tile_hex": "18240038043c443e0000000000000000"
+    }
+  ],
+  "runtime_assertions": [
+    "mapper_163_prg_2mib_chr_ram",
+    "all_font_tiles_match_expected_rom_bytes",
+    "diagnostic_record_read_104_of_104",
+    "each_encoded_glyph_byte_read",
+    "each_font_plane0_read_8_of_8",
+    "each_font_read_followed_by_at_least_32_ppu_writes",
+    "each_generated_tile_pair_referenced_in_both_mirrored_nametables",
+    "three_completed_dialogue_pages_captured",
+    "transient_prg_record_restored"
+  ],
+  "required_artifact_patterns": [
+    "french_charset_exhaustive_validation.txt",
+    "french_charset_exhaustive_page_*_frame_*.png",
+    "french_charset_exhaustive_page_*_frame_*_chr_ram_8k.bin",
+    "french_charset_exhaustive_page_*_frame_*_ppu_pattern_8k.bin",
+    "french_charset_exhaustive_page_*_frame_*_nametable_4k.bin",
+    "french_charset_exhaustive_page_*_frame_*_palette_32.bin",
+    "french_charset_exhaustive_page_*_frame_*_oam_256.bin"
+  ],
+  "pass_marker": "POKEMON_FRENCH_CHARSET_EXHAUSTIVE_PASS"
+}

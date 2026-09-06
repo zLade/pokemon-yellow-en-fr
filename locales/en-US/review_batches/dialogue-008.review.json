@@ -1,0 +1,806 @@
+{
+  "schema": "nj046-en2-source-review-v1",
+  "batch_id": "dialogue-008",
+  "entries": [
+    {
+      "stable_key": "MAIN:0x03CB0E",
+      "english_v2": "Don't you like fishing?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the full official trainer-class label and question. Omits the contextual one-speaker label 'FISHERMAN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; directly preserves the Fisherman's question about whether the player likes fishing."
+    },
+    {
+      "stable_key": "MAIN:0x03CB20",
+      "english_v2": "Many Pokémon swim here too!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses the full official trainer-class label. Omits the contextual one-speaker label 'FISHERMAN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; keeps the Fisherman's statement that many Pokémon also live in the water."
+    },
+    {
+      "stable_key": "MAIN:0x03CB39",
+      "english_v2": "Water-types are the cutest!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the article and full official trainer-class label. Omits the contextual one-speaker label 'FISHERMAN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; preserves the Fisherman's opinion that Water-type Pokémon are the cutest of all."
+    },
+    {
+      "stable_key": "MAIN:0x03CB4C",
+      "english_v2": "Water-types are lovely!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly retains the girl's admiration for the beauty of Water-type Pokémon.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly retains the girl's admiration for the beauty of Water-type Pokémon."
+    },
+    {
+      "stable_key": "MAIN:0x03CB5E",
+      "english_v2": "Don't you like them?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the follow-up question about whether the player likes the Water-type Pokémon just discussed.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03CB64",
+      "english_v2": "Can't you see me fishing?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses the full official trainer-class label. Omits the contextual one-speaker label 'FISHERMAN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; faithfully renders the Fisherman's annoyed question about his visible fishing activity."
+    },
+    {
+      "stable_key": "MAIN:0x03CB80",
+      "english_v2": "Oh well... You scared all the fish away.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the missing article and idiomatic particle. Omits the contextual one-speaker label 'FISHERMAN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; preserves the Fisherman's resignation and accusation that the player frightened every fish away."
+    },
+    {
+      "stable_key": "MAIN:0x03CB91",
+      "english_v2": "I caught a good one. Want to see?",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject and complete question. Omits the contextual one-speaker label 'FISHERMAN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; keeps the Fisherman's claim to have something good and his invitation to look at the catch."
+    },
+    {
+      "stable_key": "MAIN:0x03CBB2",
+      "english_v2": "Water beats Fire!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses the full official trainer-class label. Omits the contextual one-speaker label 'FISHERMAN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; directly preserves the stated Water-over-Fire type advantage."
+    },
+    {
+      "stable_key": "MAIN:0x03CBBB",
+      "english_v2": "My Pokémon rule here!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; uses the matching Electric-specialist Rocker class and preserves the boast that his Pokémon are nearly unrivaled here.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; uses the matching Electric-specialist Rocker class and preserves the boast that his Pokémon are nearly unrivaled here."
+    },
+    {
+      "stable_key": "MAIN:0x03CBD9",
+      "english_v2": "I actually lost...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; keeps the Rocker's surprise that he unexpectedly suffered a setback.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps the Rocker's surprise that he unexpectedly suffered a setback."
+    },
+    {
+      "stable_key": "MAIN:0x03CBF5",
+      "english_v2": "I don't want anything from you.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Turns a noun fragment into the complete contextual statement. Omits the contextual one-speaker label 'SCOUT', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly preserves the Scout's claim to have no requests or demands."
+    },
+    {
+      "stable_key": "MAIN:0x03CC09",
+      "english_v2": "I'm not suspicious!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject. Omits the contextual one-speaker label 'SCOUT', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; faithfully keeps the Scout's denial that he is suspicious."
+    },
+    {
+      "stable_key": "MAIN:0x03CC2E",
+      "english_v2": "Get lost, stranger!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Replaces the unnatural plural imperative with a direct source dismissal. Omits the contextual one-speaker label 'GIRL', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; naturally renders the girl's order that unfamiliar people leave her alone."
+    },
+    {
+      "stable_key": "MAIN:0x03CC54",
+      "english_v2": "Sorry. I mistook you for someone else.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Explains the source misunderstanding in natural English. Omits the contextual one-speaker label 'GIRL', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses 'a mix-up' to retain the mistaken-identification fact instead of a generic admission of error."
+    },
+    {
+      "stable_key": "MAIN:0x03CC68",
+      "english_v2": "Speed is all!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; uses the matching Bird Keeper class and retains his belief that speed is all that matters. Full-text review: Normalizes nonstandard speaker abbreviation 'BIRD KPR:' to 'BIRD KEEPER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; uses the matching Bird Keeper class and retains his belief that speed is all that matters."
+    },
+    {
+      "stable_key": "MAIN:0x03CC88",
+      "english_v2": "Defeat changes nothing!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; keeps the Bird Keeper's insistence that defeat does not alter his view about speed. Full-text review: Normalizes nonstandard speaker abbreviation 'BIRD KPR:' to 'BIRD KEEPER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; keeps the Bird Keeper's insistence that defeat does not alter his view about speed."
+    },
+    {
+      "stable_key": "MAIN:0x03CCA0",
+      "english_v2": "You make me drool.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; preserves the Beauty's explicit and deliberately suggestive reaction that seeing the player makes her salivate.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; preserves the Beauty's explicit and deliberately suggestive reaction that seeing the player makes her salivate."
+    },
+    {
+      "stable_key": "MAIN:0x03CCB8",
+      "english_v2": "I was wrong...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly retains the Beauty's admission that she was mistaken.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly retains the Beauty's admission that she was mistaken."
+    },
+    {
+      "stable_key": "MAIN:0x03CCCA",
+      "english_v2": "What? I'm not charming?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; keeps the Beauty's incredulous question about whether the player finds her lacking in charm.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps the Beauty's incredulous question about whether the player finds her lacking in charm."
+    },
+    {
+      "stable_key": "MAIN:0x03CCE8",
+      "english_v2": "You're right.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject and copula. Omits the contextual one-speaker label 'BEAUTY', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; faithfully preserves the Beauty's concession that the player is correct."
+    },
+    {
+      "stable_key": "MAIN:0x03CCF5",
+      "english_v2": "You again!!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves the girl's emphatic recognition of the player as a repeat encounter.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03CD0E",
+      "english_v2": "Fate reunites us.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; naturally conveys the girl's statement that repeated meetings reveal a bond of fate between them.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; naturally conveys the girl's statement that repeated meetings reveal a bond of fate between them."
+    },
+    {
+      "stable_key": "MAIN:0x03CD22",
+      "english_v2": "Stop pacing before me.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; keeps the girl's order not to pace repeatedly within her sight.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps the girl's order not to pace repeatedly within her sight."
+    },
+    {
+      "stable_key": "MAIN:0x03CD39",
+      "english_v2": "I was too hard on you.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject and source regret. Omits the contextual one-speaker label 'GIRL', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses a compact idiomatic admission while retaining the target and excessive harshness."
+    },
+    {
+      "stable_key": "MAIN:0x03CD4C",
+      "english_v2": "I specialize in bird Pokémon.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses a natural statement of the speaker's specialty and full class label. Omits the contextual one-speaker label 'BIRD KEEPER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; retains the Bird Keeper's claim of expertise specifically in training bird Pokémon."
+    },
+    {
+      "stable_key": "MAIN:0x03CD6D",
+      "english_v2": "Yours are stronger.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the Bird Keeper's explicit comparison that the player's Pokémon are stronger than his own, not merely that they won once. Full-text review: Normalizes nonstandard speaker abbreviation 'BIRD KPR:' to 'BIRD KEEPER:'.",
+      "compression": true,
+      "compression_justification": "Uses possessive pronouns to retain both teams and the strength comparison in fewer bytes."
+    },
+    {
+      "stable_key": "MAIN:0x03CD81",
+      "english_v2": "Don't think beating my big brother will make me submit!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the source warning as a complete sentence. Omits the contextual one-speaker label 'BIRD KEEPER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; keeps the defeated elder brother and the Bird Keeper's refusal to submit merely because of that earlier victory."
+    },
+    {
+      "stable_key": "MAIN:0x03CD9C",
+      "english_v2": "I have nothing to say.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject and verb. Omits the contextual one-speaker label 'BIRD KEEPER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; faithfully preserves the Bird Keeper's statement that he is left speechless."
+    },
+    {
+      "stable_key": "MAIN:0x03CDA6",
+      "english_v2": "Like speed? Join me!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; uses the matching Biker class and preserves both the question about speed and invitation to come along.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; uses the matching Biker class and preserves both the question about speed and invitation to come along."
+    },
+    {
+      "stable_key": "MAIN:0x03CDBD",
+      "english_v2": "I shouldn't have pushed you.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject and idiomatic verb. Omits the contextual one-speaker label 'BIKER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; naturally preserves the Biker's admission that he should not have forced the issue."
+    },
+    {
+      "stable_key": "MAIN:0x03CDC7",
+      "english_v2": "Fly, my Pokémon!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly keeps the Bird Keeper's command for his Pokémon to take flight. Full-text review: Normalizes nonstandard speaker abbreviation 'BIRD KPR:' to 'BIRD KEEPER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; directly keeps the Bird Keeper's command for his Pokémon to take flight."
+    },
+    {
+      "stable_key": "MAIN:0x03CDE9",
+      "english_v2": "All is lost...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; faithfully renders the Bird Keeper's despair that everything is finished. Full-text review: Normalizes nonstandard speaker abbreviation 'BIRD KPR:' to 'BIRD KEEPER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; faithfully renders the Bird Keeper's despair that everything is finished."
+    },
+    {
+      "stable_key": "MAIN:0x03CDFD",
+      "english_v2": "Have you been to the Safari Zone?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the auxiliary and article. Omits the contextual one-speaker label 'BIRD KEEPER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; preserves the question about whether the player has visited the Safari Zone."
+    },
+    {
+      "stable_key": "MAIN:0x03CE16",
+      "english_v2": "There are many rare Pokémon there...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the existential construction. Omits the contextual one-speaker label 'BIRD KEEPER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; keeps the follow-up information that the Safari Zone contains many rare Pokémon."
+    },
+    {
+      "stable_key": "MAIN:0x03CE1E",
+      "english_v2": "Flying beats Bug!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; preserves the older woman's explicit claim that bird or Flying-type Pokémon counter Bug-types.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; preserves the older woman's explicit claim that bird or Flying-type Pokémon counter Bug-types."
+    },
+    {
+      "stable_key": "MAIN:0x03CE3B",
+      "english_v2": "So you knew!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; keeps her realization that the player already understood the type-matchup principle.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps her realization that the player already understood the type-matchup principle."
+    },
+    {
+      "stable_key": "MAIN:0x03CE4F",
+      "english_v2": "You offended me.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; naturally preserves the Bird Keeper's accusation that the player has offended him. Full-text review: Normalizes nonstandard speaker abbreviation 'BIRD KPR:' to 'BIRD KEEPER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; naturally preserves the Bird Keeper's accusation that the player has offended him."
+    },
+    {
+      "stable_key": "MAIN:0x03CE69",
+      "english_v2": "It's fine...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly retains the Bird Keeper's brief dismissal of the matter. Full-text review: Normalizes nonstandard speaker abbreviation 'BIRD KPR:' to 'BIRD KEEPER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; directly retains the Bird Keeper's brief dismissal of the matter."
+    },
+    {
+      "stable_key": "MAIN:0x03CE78",
+      "english_v2": "So cute!",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; preserves the Beauty's compliment that the player looks very cute."
+    },
+    {
+      "stable_key": "MAIN:0x03D0A7",
+      "english_v2": "Don't go! Stay and chat with me.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores both complete imperatives. Omits the contextual one-speaker label 'BEAUTY', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps the Beauty's request that the player not leave and instead remain to talk with her."
+    },
+    {
+      "stable_key": "MAIN:0x03D0C2",
+      "english_v2": "Time for a lesson!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly preserves the Biker's threat to punish or teach the player a lesson.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly preserves the Biker's threat to punish or teach the player a lesson."
+    },
+    {
+      "stable_key": "MAIN:0x03D0D3",
+      "english_v2": "I like strong people!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses natural English for the source preference. Omits the contextual one-speaker label 'BIKER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps the Biker's explicit preference for people with real strength."
+    },
+    {
+      "stable_key": "MAIN:0x03D0E3",
+      "english_v2": "I own a rare Pokémon.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly preserves the Bird Keeper's claim to own a rare Pokémon. Full-text review: Normalizes nonstandard speaker abbreviation 'BIRD KPR:' to 'BIRD KEEPER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; directly preserves the Bird Keeper's claim to own a rare Pokémon."
+    },
+    {
+      "stable_key": "MAIN:0x03D0FB",
+      "english_v2": "Well? Nice, isn't it?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Repairs the malformed tag punctuation. Omits the contextual one-speaker label 'BIRD KEEPER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; keeps the Bird Keeper's follow-up question seeking approval of the rare Pokémon."
+    },
+    {
+      "stable_key": "MAIN:0x03D10F",
+      "english_v2": "Nice to meet you!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Naturally renders the girl's polite formula asking for favorable regard before the encounter.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03D11F",
+      "english_v2": "I yield!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; preserves the girl's complete and sincere acceptance of her loss.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; preserves the girl's complete and sincere acceptance of her loss."
+    },
+    {
+      "stable_key": "MAIN:0x03D12B",
+      "english_v2": "Oh! You touched me!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly keeps the girl's alarm that the player made physical contact with her.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly keeps the girl's alarm that the player made physical contact with her."
+    },
+    {
+      "stable_key": "MAIN:0x03D13F",
+      "english_v2": "What if I'm pregnant...?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; faithfully preserves the source's deliberately absurd pregnancy worry following the brief contact.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; faithfully preserves the source's deliberately absurd pregnancy worry following the brief contact."
+    },
+    {
+      "stable_key": "MAIN:0x03D157",
+      "english_v2": "Can't stand you!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly conveys the Biker's immediate dislike of the player's appearance.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly conveys the Biker's immediate dislike of the player's appearance."
+    },
+    {
+      "stable_key": "MAIN:0x03D16B",
+      "english_v2": "My attack barrage leaves you no chance!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the missing object. Omits the contextual one-speaker label 'BIRD KEEPER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; preserves the Bird Keeper's claimed consecutive-attack ability and assertion that the player cannot win."
+    },
+    {
+      "stable_key": "MAIN:0x03D191",
+      "english_v2": "I boasted again...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject. Omits the contextual one-speaker label 'BIRD KEEPER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; keeps the Bird Keeper's admission that he once again made an overconfident boast."
+    },
+    {
+      "stable_key": "MAIN:0x03D1A4",
+      "english_v2": "Used to your face now. Fine.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; preserves the comic reversal that the Biker has become accustomed to the player's appearance and no longer minds it.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; preserves the comic reversal that the Biker has become accustomed to the player's appearance and no longer minds it."
+    },
+    {
+      "stable_key": "MAIN:0x03D1AF",
+      "english_v2": "You look like trouble!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses an idiomatic rendering of the source suspicion. Omits the contextual one-speaker label 'BIKER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly keeps the Biker's judgment from the player's appearance that they cannot be a good person."
+    },
+    {
+      "stable_key": "MAIN:0x03D1C3",
+      "english_v2": "Loyal, aren't you?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; naturally conveys the Biker's question about the player's loyalty and personal code of honor.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; naturally conveys the Biker's question about the player's loyalty and personal code of honor."
+    },
+    {
+      "stable_key": "MAIN:0x03D1CF",
+      "english_v2": "You're my 52nd boyfriend.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the Beauty's exact claim that the player is her fifty-second boyfriend.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03D1F5",
+      "english_v2": "Fine, you can go...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; keeps the Beauty's decision to abandon the matter and release the player.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps the Beauty's decision to abandon the matter and release the player."
+    },
+    {
+      "stable_key": "MAIN:0x03D20F",
+      "english_v2": "You've seen my power. Now get lost!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores tense and sequence. Omits the contextual one-speaker label 'BIRD KEEPER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; preserves the Bird Keeper's demand that the player recognize his strength and leave immediately."
+    },
+    {
+      "stable_key": "MAIN:0x03D22A",
+      "english_v2": "Safe travels. Ha ha!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; keeps the Bird Keeper's conspicuously polite send-off and closing laugh. Full-text review: Normalizes nonstandard speaker abbreviation 'BIRD KPR:' to 'BIRD KEEPER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; keeps the Bird Keeper's conspicuously polite send-off and closing laugh."
+    },
+    {
+      "stable_key": "MAIN:0x03D23B",
+      "english_v2": "Why stare like that?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly preserves the girl's objection to the way the player is looking at her.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly preserves the girl's objection to the way the player is looking at her."
+    },
+    {
+      "stable_key": "MAIN:0x03D24B",
+      "english_v2": "Too bad. I have a boyfriend.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; keeps the girl's regret and explicit statement that she already has a boyfriend.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps the girl's regret and explicit statement that she already has a boyfriend."
+    },
+    {
+      "stable_key": "MAIN:0x03D25A",
+      "english_v2": "I raise bird Pokémon for a living.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the subject and expresses the profession naturally. Omits the contextual one-speaker label 'BIRD KEEPER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; directly retains the Bird Keeper's claim that catching birds is his profession."
+    },
+    {
+      "stable_key": "MAIN:0x03D276",
+      "english_v2": "I'm entering the Pokémon League this year!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the subject and article. Omits the contextual one-speaker label 'BIRD KEEPER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; preserves the Bird Keeper's plan to participate in the Pokémon League competition this year."
+    },
+    {
+      "stable_key": "MAIN:0x03D292",
+      "english_v2": "Fuchsia Gym has invisible walls! Watch for gaps!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03D2DD",
+      "english_v2": "You can't come here!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; naturally preserves the ninja's warning that this is not a place the player is permitted to enter.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; naturally preserves the ninja's warning that this is not a place the player is permitted to enter."
+    },
+    {
+      "stable_key": "MAIN:0x03D2EE",
+      "english_v2": "Your ninjutsu is impressive!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Turns a noun phrase into a complete compliment. Omits the contextual one-speaker label 'NINJA', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly retains the ninja's praise for the player's powerful ninjutsu."
+    },
+    {
+      "stable_key": "MAIN:0x03D2FD",
+      "english_v2": "Strength alone fails! Technique matters most!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Replaces the unidiomatic phrase 'Technique is best'. Omits the contextual one-speaker label 'NINJA', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; preserves the rejection of strength alone, the direct question, and the assertion that technique is strongest."
+    },
+    {
+      "stable_key": "MAIN:0x03D31C",
+      "english_v2": "Now you understand.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; keeps the ninja's conclusion that the player now understands the lesson about technique.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps the ninja's conclusion that the player now understands the lesson about technique."
+    },
+    {
+      "stable_key": "MAIN:0x03D341",
+      "english_v2": "This Gym Leader is strong. Take care.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; preserves the warning about the strength of this Gym's Leader and the advice to take care.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; preserves the warning about the strength of this Gym's Leader and the advice to take care."
+    },
+    {
+      "stable_key": "MAIN:0x03D35D",
+      "english_v2": "I worried too much...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly conveys the ninja's realization that his concern was unnecessary.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly conveys the ninja's realization that his concern was unnecessary."
+    },
+    {
+      "stable_key": "MAIN:0x03D37C",
+      "english_v2": "So confident!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; faithfully preserves the ninja's observation of the player's confidence.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; faithfully preserves the ninja's observation of the player's confidence."
+    },
+    {
+      "stable_key": "MAIN:0x03D39A",
+      "english_v2": "I haven't fought this seriously in ages.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the subject, verb, and natural time expression. Omits the contextual one-speaker label 'NINJA', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps the ninja's statement that it has been a long time since he was this serious in battle."
+    },
+    {
+      "stable_key": "MAIN:0x03D3B7",
+      "english_v2": "Let's see if you can get past me!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses the idiomatic challenge. Omits the contextual one-speaker label 'NINJA', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; preserves the ninja's challenge to pass his checkpoint."
+    },
+    {
+      "stable_key": "MAIN:0x03D3C9",
+      "english_v2": "You passed...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly acknowledges that the player successfully passed the ninja's test.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly acknowledges that the player successfully passed the ninja's test."
+    },
+    {
+      "stable_key": "MAIN:0x03D3D8",
+      "english_v2": "Ninja dreams led me to Fuchsia Gym.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; preserves the speaker's fascination with ninjas as the reason for joining the specifically named Fuchsia Gym.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; preserves the speaker's fascination with ninjas as the reason for joining the specifically named Fuchsia Gym."
+    },
+    {
+      "stable_key": "MAIN:0x03D406",
+      "english_v2": "You truly are strong.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject and copula. Omits the contextual one-speaker label 'NINJA', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; directly keeps the ninja's sincere recognition of the player's strength."
+    },
+    {
+      "stable_key": "MAIN:0x03D41F",
+      "english_v2": "KOGA: A kid challenges me? Fool! Poison kills! Witness its art!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; uses Koga's matching official identity and preserves his contempt for the young challenger, lethal poison threat, and promise to demonstrate poison's art.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; uses Koga's matching official identity and preserves his contempt for the young challenger, lethal poison threat, and promise to demonstrate poison's art."
+    },
+    {
+      "stable_key": "MAIN:0x03D453",
+      "english_v2": "KOGA: Good, kid! Take the Soul Badge to use Surf at sea!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; maps the Fuchsia-colored Gym Badge to its matching official Soul Badge identity and preserves Koga's praise, award, and permission to use Surf at sea.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; maps the Fuchsia-colored Gym Badge to its matching official Soul Badge identity and preserves Koga's praise, award, and permission to use Surf at sea."
+    },
+    {
+      "stable_key": "MAIN:0x03D49D",
+      "english_v2": "Welcome to the Safari Zone! Catch its unique Pokémon for $500. Join the hunt?",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03D4EF",
+      "english_v2": "I see. Come again!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; keeps the declined-entry branch's acknowledgment and invitation to return another time. Full-text review: Uses a natural Safari refusal farewell.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps the declined-entry branch's acknowledgment and invitation to return another time."
+    },
+    {
+      "stable_key": "MAIN:0x03D4FB",
+      "english_v2": "That'll be $500. Good luck!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the official English Gen I scene voice where it agrees with the Chinese; Chinese-only facts and bootleg-specific terminology are retained.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03D50C",
+      "english_v2": "You reached the deepest area! You win a prize!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03D539",
+      "english_v2": "Got HM03: SURF!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves acquisition of the explicitly named Surf technique and uses the matching official English machine label HM03.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03D543",
+      "english_v2": "HM03 is Surf! Ride Pokémon across water. This HM is reusable. Lucky you!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03D582",
+      "english_v2": "Got Gold Teeth!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; faithfully renders receipt of the Gold Teeth with the established official English item name.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; faithfully renders receipt of the Gold Teeth with the established official English item name."
+    },
+    {
+      "stable_key": "MAIN:0x03D58E",
+      "english_v2": "My Gold Teeth are gone... Did I drop them in the Safari Zone?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the possessive subject, verb, and article. Omits the contextual one-speaker label 'WARDEN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; preserves the Warden's missing Gold Teeth, uncertainty about their location, and suspicion that they fell in the Safari Zone."
+    },
+    {
+      "stable_key": "MAIN:0x03D5B0",
+      "english_v2": "My Gold Teeth! Thank you, and sorry for the trouble! Don't tell anyone, but I lost my dentures and was too embarrassed to show my face at the office. Take this reward!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses complete natural clauses while preserving the secret and reward. Omits the contextual one-speaker label 'WARDEN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English connective wording and tightened syntax for ROM space; keeps recognition of the Gold Teeth, apology and thanks, request for secrecy, lost dentures, shame about appearing at the office, and promised reward."
+    },
+    {
+      "stable_key": "MAIN:0x03D61A",
+      "english_v2": "Got HM04: STRENGTH!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves acquisition of the explicitly named Strength technique and uses the matching official English machine label HM04.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03D624",
+      "english_v2": "HM04 is Strength! It moves boulders blocking the way!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03D64A",
+      "english_v2": "Don't frown.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; preserves the female swimmer's advice not to wear a worried or unhappy expression. Full-text review: Normalizes nonstandard speaker abbreviation 'SWIMMER GIRL:' to 'SWIMMER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; preserves the female swimmer's advice not to wear a worried or unhappy expression."
+    },
+    {
+      "stable_key": "MAIN:0x03D65B",
+      "english_v2": "Go out with me!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses the natural English dating invitation and the official common Gen I Swimmer class. Omits the contextual one-speaker label 'SWIMMER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; directly keeps the female swimmer's invitation to date her."
+    },
+    {
+      "stable_key": "MAIN:0x03D667",
+      "english_v2": "I haven't seen you around.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Replaces a noun fragment with a natural recognition line. Omits the contextual one-speaker label 'SWIMMER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; naturally preserves the male swimmer's recognition that the player is unfamiliar."
+    },
+    {
+      "stable_key": "MAIN:0x03D683",
+      "english_v2": "You're the strongest Trainer I've seen!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the subject and copula. Omits the contextual one-speaker label 'SWIMMER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; directly preserves the male swimmer's superlative judgment that no Trainer he has seen is stronger."
+    },
+    {
+      "stable_key": "MAIN:0x03D692",
+      "english_v2": "Stare again and I'll hit you!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Replaces a semicolon compression with the source conditional and uses the official common Gen I Swimmer class. Omits the contextual one-speaker label 'SWIMMER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; keeps the female swimmer's warning that another look will make her strike the player."
+    },
+    {
+      "stable_key": "MAIN:0x03D6A4",
+      "english_v2": "I won't do it again!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject and object and uses the official common Gen I Swimmer class. Omits the contextual one-speaker label 'SWIMMER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; faithfully preserves the female swimmer's promise that she will not dare repeat the behavior."
+    },
+    {
+      "stable_key": "MAIN:0x03D6B5",
+      "english_v2": "Ha ha ha...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly retains the male swimmer's three-part laugh. Full-text review: Normalizes nonstandard speaker abbreviation 'SWIM BOY:' to 'SWIMMER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; directly retains the male swimmer's three-part laugh."
+    },
+    {
+      "stable_key": "MAIN:0x03D6CF",
+      "english_v2": "It's nothing.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject and copula. Omits the contextual one-speaker label 'SWIMMER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; faithfully keeps the male swimmer's brief dismissal that nothing is wrong."
+    },
+    {
+      "stable_key": "MAIN:0x03D6E0",
+      "english_v2": "You won't pass!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; preserves the male swimmer's absolute refusal to allow the player through. Full-text review: Normalizes nonstandard speaker abbreviation 'SWIM BOY:' to 'SWIMMER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; preserves the male swimmer's absolute refusal to allow the player through."
+    },
+    {
+      "stable_key": "MAIN:0x03D700",
+      "english_v2": "I was kidding!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Turns a gerund fragment into a sentence. Omits the contextual one-speaker label 'SWIMMER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; keeps the male swimmer's revelation that the earlier obstruction was a joke."
+    },
+    {
+      "stable_key": "MAIN:0x03D70F",
+      "english_v2": "You angered me!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact direct rendering from Chinese; directly preserves the male swimmer's statement that the player angered him. Full-text review: Normalizes nonstandard speaker abbreviation 'SWIM BOY:' to 'SWIMMER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker tag and tightened syntax for ROM space; directly preserves the male swimmer's statement that the player angered him."
+    }
+  ]
+}

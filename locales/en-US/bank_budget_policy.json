@@ -1,0 +1,14 @@
+{
+  "schema": "nj046-en2-bank-budget-policy/v1",
+  "rationale": "Measured independently from the English 2.0 corpus after exhaustive repacking. Each text PRG pair must retain at least 1 KiB both in total and as one contiguous span; the historical French 51/135-byte figures are not reused.",
+  "pairs": {
+    "6": {
+      "minimum_remaining_free_bytes": 1024,
+      "minimum_largest_remaining_span": 1024
+    },
+    "7": {
+      "minimum_remaining_free_bytes": 1024,
+      "minimum_largest_remaining_span": 1024
+    }
+  }
+}

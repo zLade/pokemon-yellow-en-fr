@@ -1,0 +1,806 @@
+{
+  "schema": "nj046-en2-source-review-v1",
+  "batch_id": "dialogue-010",
+  "entries": [
+    {
+      "stable_key": "MAIN:0x03E483",
+      "english_v2": "Just seeing you annoys me!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses natural emphasis for the source irritation. Omits the contextual one-speaker label 'SWIMMER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; directly preserves the male swimmer's irritation at the mere sight of the player."
+    },
+    {
+      "stable_key": "MAIN:0x03E4A6",
+      "english_v2": "Defeat won't change my tune!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; keeps the swimmer's insistence that defeat will not make him retract or alter his opinion. Full-text review: Normalizes nonstandard speaker abbreviation 'M.SWIM:' to 'SWIMMER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; keeps the swimmer's insistence that defeat will not make him retract or alter his opinion."
+    },
+    {
+      "stable_key": "MAIN:0x03E4C7",
+      "english_v2": "Know your limits! I'll knock your teeth out!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; preserves the insult about not knowing one's limits and the explicit threat to knock out the player's teeth. Full-text review: Normalizes nonstandard speaker abbreviation 'M.SWIM:' to 'SWIMMER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; preserves the insult about not knowing one's limits and the explicit threat to knock out the player's teeth."
+    },
+    {
+      "stable_key": "MAIN:0x03E4E8",
+      "english_v2": "I was wrong...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; directly retains the male swimmer's admission that he was mistaken. Full-text review: Normalizes nonstandard speaker abbreviation 'M.SWIM:' to 'SWIMMER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; directly retains the male swimmer's admission that he was mistaken."
+    },
+    {
+      "stable_key": "MAIN:0x03E502",
+      "english_v2": "Hi! Want to battle?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses a natural invitation and the official common Gen I Swimmer class. Omits the contextual one-speaker label 'SWIMMER', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; preserves the female swimmer's greeting and invitation to compete."
+    },
+    {
+      "stable_key": "MAIN:0x03E51F",
+      "english_v2": "How frustrating...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; naturally renders the female swimmer's unwillingness to accept the outcome and resulting frustration. Full-text review: Normalizes nonstandard speaker abbreviation 'SWIMMER GIRL:' to 'SWIMMER:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; naturally renders the female swimmer's unwillingness to accept the outcome and resulting frustration."
+    },
+    {
+      "stable_key": "MAIN:0x03E53E",
+      "english_v2": "You won't advance!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; directly preserves the Karateka's threat to stop the player's advance. Full-text review: Normalizes nonstandard speaker abbreviation 'KARATEKA:' to 'BLACK BELT:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; directly preserves the Karateka's threat to stop the player's advance."
+    },
+    {
+      "stable_key": "MAIN:0x03E565",
+      "english_v2": "BLACK BELT: The Pokémon League? You're ambitious, kid! TAMER: Don't be afraid.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; preserves both speakers, the League goal, praise for the child's ambition, and the Tamer's reassurance. Full-text review: Gives both speakers complete natural clauses and uses the official Gen I class.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; preserves both speakers, the League goal, praise for the child's ambition, and the Tamer's reassurance."
+    },
+    {
+      "stable_key": "MAIN:0x03E580",
+      "english_v2": "TAMER: You can't beat the Boss without stamina! BLACK BELT: My rage has peaked!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrected against the Chinese source: the Tamer states a condition—without stamina, the Boss cannot be beaten—rather than asking a question; the Karateka's maximum rage remains. Full-text review: Uses complete natural clauses for both speakers and the official Gen I Blackbelt class.",
+      "compression": true,
+      "compression_justification": "Uses a compact 'no X, no Y' condition and clipped rage declaration while preserving both speakers and claims."
+    },
+    {
+      "stable_key": "MAIN:0x03E5B4",
+      "english_v2": "BLACK BELT: I need more training... TAMER: I understand Pokémon best!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; preserves the Karateka's insufficient practice and the Tamer's claimed expertise in communicating with Pokémon. Full-text review: Restores subjects and a natural specialty claim while using the official Gen I class.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; preserves the Karateka's insufficient practice and the Tamer's claimed expertise in communicating with Pokémon."
+    },
+    {
+      "stable_key": "MAIN:0x03E5E2",
+      "english_v2": "TAMER: Please... BLACK BELT: Come on!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; faithfully retains the two speakers and their brief contrasting appeals without importing the unrelated 2015 line. Full-text review: Expands the embedded speaker label to the official Gen I class while preserving the interrupted plea.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; faithfully retains the two speakers and their brief contrasting appeals without importing the unrelated 2015 line."
+    },
+    {
+      "stable_key": "MAIN:0x03E612",
+      "english_v2": "BLACK BELT: I wish I were as strong as the Boss! TAMER: Time to go!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; keeps the Karateka's wish to match the Boss's strength and the Tamer's statement that it is time to leave. Full-text review: Uses the grammatical English subjunctive and official Gen I class.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; keeps the Karateka's wish to match the Boss's strength and the Tamer's statement that it is time to leave."
+    },
+    {
+      "stable_key": "MAIN:0x03E640",
+      "english_v2": "TAMER: Beat Boss to reach Pokémon League! GIOVANNI: Ha ha! You again...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; preserves the Boss victory condition for advancing to the League and identifies the returning Boss as the contextually matching Giovanni.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; preserves the Boss victory condition for advancing to the League and identifies the returning Boss as the contextually matching Giovanni."
+    },
+    {
+      "stable_key": "MAIN:0x03E674",
+      "english_v2": "ASH: Team Rocket's Boss? You own this Gym?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; keeps Ash as speaker and his shocked questions linking Team Rocket's Boss with ownership of the Gym.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; keeps Ash as speaker and his shocked questions linking Team Rocket's Boss with ownership of the Gym."
+    },
+    {
+      "stable_key": "MAIN:0x03E6A6",
+      "english_v2": "Wait! You cost our jobs! Unforgivable!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; preserves the Rocket speakers, their unemployment caused by the player, and refusal to forgive it.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; preserves the Rocket speakers, their unemployment caused by the player, and refusal to forgive it."
+    },
+    {
+      "stable_key": "MAIN:0x03E6CC",
+      "english_v2": "ASH: Who are you?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves Ash's question about the group's identity.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03E6E9",
+      "english_v2": "TAMER: Darn! Do you know who I am? BLACK BELT: Strong Trainers win in style!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; retains both speakers, the Tamer's angry identity challenge, and the Karateka's belief that a real Trainer wins beautifully. Full-text review: Restores the complete natural question and official full class label.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; retains both speakers, the Tamer's angry identity challenge, and the Karateka's belief that a real Trainer wins beautifully."
+    },
+    {
+      "stable_key": "MAIN:0x03E732",
+      "english_v2": "BLACK BELT: I lost; the Boss will be angry... TAMER: I'm a genius!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; preserves the Karateka's defeat and fear of the Boss's anger alongside the Tamer's separate boast of genius. Full-text review: Replaces two clipped fragments with complete clauses and uses the official Gen I class.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; preserves the Karateka's defeat and fear of the Boss's anger alongside the Tamer's separate boast of genius."
+    },
+    {
+      "stable_key": "MAIN:0x03E777",
+      "english_v2": "No kids allowed here.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; directly keeps the researcher's age-based claim that the player is not allowed here. Full-text review: Normalizes nonstandard speaker abbreviation 'SCI:' to 'SCIENTIST:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; directly keeps the researcher's age-based claim that the player is not allowed here."
+    },
+    {
+      "stable_key": "MAIN:0x03E797",
+      "english_v2": "Cinnabar Island's near.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; uses the matching official Cinnabar Island name and preserves its nearby location.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; uses the matching official Cinnabar Island name and preserves its nearby location."
+    },
+    {
+      "stable_key": "MAIN:0x03E82C",
+      "english_v2": "Cinnabar's volcano erupts often.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Corrects the impossible claim that the island itself erupts. Omits the contextual one-speaker label 'BEAUTY', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; preserves the source's claim that volcanic eruptions frequently occur at Cinnabar Island."
+    },
+    {
+      "stable_key": "MAIN:0x03E853",
+      "english_v2": "We study Pokémon here every day.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the subject and natural adverb placement. Omits the contextual one-speaker label 'SCIENTIST', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; directly retains the daily Pokémon research conducted at this location."
+    },
+    {
+      "stable_key": "MAIN:0x03E874",
+      "english_v2": "My Mt. Moon fossil seems valuable!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; keeps the fossil's discovery on Mt. Moon and the child's belief that it is precious.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; keeps the fossil's discovery on Mt. Moon and the child's belief that it is precious."
+    },
+    {
+      "stable_key": "MAIN:0x03E8A0",
+      "english_v2": "GIOVANNI: Ha! You've discovered my hideout. Now that you've found me, I won't hold back! Face the power of Giovanni, the strongest Trainer!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; uses Giovanni's matching official identity and preserves his hideout, discovery, refusal of mercy, rematch, and claim to be the strongest Trainer. Full-text review: Restores Giovanni's explicit source name in complete natural challenge clauses.",
+      "compression": true,
+      "compression_justification": "Compressed clause structure and removed redundant transitions to reduce ROM pagination; uses Giovanni's matching official identity and preserves his hideout, discovery, refusal of mercy, rematch, and claim to be the strongest Trainer."
+    },
+    {
+      "stable_key": "MAIN:0x03E954",
+      "english_v2": "GIOVANNI: I lost, though I hate admitting it. Take the promised Earth Badge. You'll be a great Trainer. My Pokémon journey starts anew; I'll disband Team Rocket for now. If fate allows, we'll meet again!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrected against the Chinese source: explicitly restores Giovanni's reluctant admission that he lost and that he plans, rather than definitively declares, Team Rocket's temporary dissolution; all reward and farewell facts remain. Full-text review: Repairs articles and the unidiomatic final fate clause.",
+      "compression": true,
+      "compression_justification": "Uses short active clauses while retaining the reluctant loss, promised Earth Badge, praise, renewed journey, intended temporary dissolution, and possible reunion."
+    },
+    {
+      "stable_key": "MAIN:0x03EAB4",
+      "english_v2": "JAMES: And make it double!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03EB91",
+      "english_v2": "Even Fire has weaknesses...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; directly preserves the researcher's realization that the Fire type is not without weaknesses. Full-text review: Normalizes nonstandard speaker abbreviation 'SCI:' to 'SCIENTIST:'.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; directly preserves the researcher's realization that the Fire type is not without weaknesses."
+    },
+    {
+      "stable_key": "MAIN:0x03EC21",
+      "english_v2": "Fire loses to Water but beats Ice.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Turns a comma splice into a grammatical contrast. Omits the contextual one-speaker label 'SCIENTIST', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; keeps both stated matchups: Fire's disadvantage against Water and advantage over Ice."
+    },
+    {
+      "stable_key": "MAIN:0x03EC46",
+      "english_v2": "JESSIE: To protect the world from devastation!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03ECFD",
+      "english_v2": "Future Champ! Even I don't know Viridian Gym's Leader...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses the established full guide label. Omits the contextual one-speaker label 'GUIDE', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Abbreviated the explicit speaker label and tightened syntax to reduce ROM pagination; preserves the future-Champion address, Viridian Gym, and the referee's own ignorance of its Leader's identity."
+    },
+    {
+      "stable_key": "MAIN:0x03F3D2",
+      "english_v2": "Welcome! We heal Pokémon to perfect health!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03F426",
+      "english_v2": "OAK: Gary, I have a favor to ask of you both. I made the Pokédexes on the table. They automatically record data on discovered Pokémon and add pages, making them handy guides. Ash, Gary, they're yours!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; preserves Oak, Gary and Ash, the request, table devices, Oak's authorship, automatic discovery records and added pages, their reference purpose, and transfer into the boys' care. Full-text review: Restores the request and explanation as complete natural clauses.",
+      "compression": true,
+      "compression_justification": "Compressed clause structure and removed redundant transitions to reduce ROM pagination; preserves Oak, Gary and Ash, the request, table devices, Oak's authorship, automatic discovery records and added pages, their reference purpose, and transfer into the boys' care."
+    },
+    {
+      "stable_key": "MAIN:0x03F5A3",
+      "english_v2": "Grandpa fell asleep here? We'll have to wait until he wakes up.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the subject and complete waiting clause. Omits the contextual one-speaker label 'GIRL', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; keeps the girl's question about Grandpa sleeping here and the decision to wait for him to wake, without the 2015 back injury."
+    },
+    {
+      "stable_key": "MAIN:0x03F5F5",
+      "english_v2": "Watch me!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; directly preserves the Bug Catcher's challenge to demonstrate his ability.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; directly preserves the Bug Catcher's challenge to demonstrate his ability."
+    },
+    {
+      "stable_key": "RESTORED:0x033137",
+      "english_v2": "JESSIE: We're Team Rocket, crossing the galaxy and about to disband!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Restores Jessie, the galaxy-crossing Team Rocket identity, and this variant's explicit imminent dissolution.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x033139",
+      "english_v2": "JAMES: A black hole! A dark future with no tomorrow awaits us!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves James's black-hole image and the variant's dark, futureless tomorrow rather than replacing it with the usual white-hole line. Full-text review: Keeps the NJ046 black-hole wordplay in natural English.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03313B",
+      "english_v2": "MEOWTH: That's right!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Uses Meowth's official English name and directly retains his emphatic agreement. Full-text review: Normalizes duplicated exclamation punctuation.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03313D",
+      "english_v2": "JAMES: Why is it always like this...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves James's complaint that the same outcome happens every time.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03313F",
+      "english_v2": "JESSIE: What an awful feeling...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Faithfully restores Jessie's statement that the feeling is hateful or awful without adding an anime catchphrase continuation.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x033141",
+      "english_v2": "MEOWTH: Meow...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Uses Meowth's official English identity and preserves the short feline utterance.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x033193",
+      "english_v2": "ASH: Mewtwo?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves Ash and his surprised recognition of Mewtwo by its matching official English name.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x033195",
+      "english_v2": "LORELEI: Team Rocket did this. They cloned this Pokémon from Mew's DNA... Luckily, you found it in time, before it caused a huge commotion! I should return to the League now. You're welcome to challenge us anytime!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Uses Lorelei's matching English identity and preserves Team Rocket's deed, cloning from Mew's genes, Ash's timely discovery, the avoided commotion, her League return, and open challenge.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x033197",
+      "english_v2": "ASH: Count on it!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves Ash's emphatic promise to accept the future League challenge. Full-text review: Uses a natural affirmative promise.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x033199",
+      "english_v2": "LORELEI: Oh, right! I have a gift for you! A friend gave me this Mystic Ticket for a Mew voyage, but League business leaves me no time to go. Take it as my thanks.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves Lorelei's gift, the friend who supplied the Mew voyage ticket under its established Mystic Ticket name, her League duties and lack of time, and the reward as thanks.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331B3",
+      "english_v2": "JESSIE: Prepare for trouble!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331B5",
+      "english_v2": "JAMES: And make it double!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331B7",
+      "english_v2": "JESSIE: To protect the world from devastation!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331B9",
+      "english_v2": "JAMES: To unite all peoples in peace!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331BB",
+      "english_v2": "JESSIE: To denounce the evils of truth and love!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331BD",
+      "english_v2": "JAMES: Charming villains reaching for the stars!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331BF",
+      "english_v2": "JESSIE: Jessie!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves Jessie as both speaker and the name she announces.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331C1",
+      "english_v2": "JAMES: James!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves James as both speaker and the name he announces.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331C3",
+      "english_v2": "JESSIE: Team Nanjing blasts across the galaxy!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331C5",
+      "english_v2": "JAMES: A white hole and bright tomorrow await!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331C7",
+      "english_v2": "MEOWTH: Meowth! That's right!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331C9",
+      "english_v2": "JAMES: We follow a new Boss now. We're not who we used to be!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves James's claim that the team serves a new Boss and has changed from its former self. Full-text review: Normalizes duplicated exclamation punctuation.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x0331D1",
+      "english_v2": "JAMES: You may be very strong, but against our new Boss Kameiyu's Pokémon, you're bound to lose! Ha ha ha!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves James, the player's great strength, new Boss Kameiyu by name, his Pokémon's claimed superiority, certain defeat, and laugh.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x038313",
+      "english_v2": "JAMES: And make it double!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x038315",
+      "english_v2": "JESSIE: To protect the world from devastation!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x038317",
+      "english_v2": "JAMES: To unite all peoples in peace!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x038319",
+      "english_v2": "JESSIE: To denounce the evils of truth and love!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03831B",
+      "english_v2": "JAMES: Charming villains reaching for the stars!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03831D",
+      "english_v2": "JESSIE: Jessie!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves Jessie's repeated name announcement exactly.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03831F",
+      "english_v2": "JAMES: James!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves James's repeated name announcement exactly.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x038321",
+      "english_v2": "JESSIE: Team Rocket blasts across the galaxy!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x038323",
+      "english_v2": "JAMES: A white hole and bright tomorrow await!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x038325",
+      "english_v2": "MEOWTH: Meowth! That's right!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x038347",
+      "english_v2": "You have my respect.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; uses the matching Lass class and restores her recognition that the player has proven worthy.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; uses the matching Lass class and restores her recognition that the player has proven worthy."
+    },
+    {
+      "stable_key": "RESTORED:0x03834B",
+      "english_v2": "Not bad!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; uses the matching Youngster class and restores his acknowledgment of the player's ability instead of the bad-pointer Charmander message.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; uses the matching Youngster class and restores his acknowledgment of the player's ability instead of the bad-pointer Charmander message."
+    },
+    {
+      "stable_key": "RESTORED:0x03834F",
+      "english_v2": "I'll watch you from now on.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compact Chinese-led wording; preserves the Lass's promise to watch or follow the player's progress from this point forward.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; preserves the Lass's promise to watch or follow the player's progress from this point forward."
+    },
+    {
+      "stable_key": "RESTORED:0x038353",
+      "english_v2": "You're the first to beat all of us!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject and auxiliary. Omits the contextual one-speaker label 'SCOUT', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; restores the Scout's statement that the player is the first person to defeat their whole group."
+    },
+    {
+      "stable_key": "RESTORED:0x03AF94",
+      "english_v2": "ASH: Who are you?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly restores Ash's question about the group's identity.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AF96",
+      "english_v2": "JESSIE: Prepare for trouble!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AF98",
+      "english_v2": "JAMES: And make it double!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AF9A",
+      "english_v2": "JESSIE: To protect the world from devastation!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AF9C",
+      "english_v2": "JAMES: To unite all peoples in peace!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AF9E",
+      "english_v2": "JESSIE: To denounce the evils of truth and love!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFA0",
+      "english_v2": "JAMES: Charming villains reaching for the stars!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFA2",
+      "english_v2": "JESSIE: Jessie!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves Jessie and the name she announces.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFA4",
+      "english_v2": "JAMES: James!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves James and the name he announces.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFA6",
+      "english_v2": "JESSIE: Team Rocket blasts across the galaxy!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFA8",
+      "english_v2": "JAMES: A white hole and bright tomorrow await!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFAA",
+      "english_v2": "MEOWTH: Meowth! That's right!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFAC",
+      "english_v2": "JAMES: Let's settle our old score now!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrected against the Chinese source: James calls for settling an old score now; the source does not add any new score.",
+      "compression": true,
+      "compression_justification": "Uses a short inclusive challenge while retaining the old score and immediate timing without the invented new grievance."
+    },
+    {
+      "stable_key": "RESTORED:0x03AFB0",
+      "english_v2": "JESSIE: What an awful feeling...",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail. Full-text review: Restores the omitted determiner and complete exclamation.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; restores Jessie as the Chinese speaker and her complaint about the awful feeling, rejecting the unrelated French speed line."
+    },
+    {
+      "stable_key": "RESTORED:0x03AFB2",
+      "english_v2": "MEOWTH: Meow...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves Meowth's brief feline utterance with his official English name.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFEA",
+      "english_v2": "ASH: Who are you?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly restores Ash's repeated question about the group's identity.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFEC",
+      "english_v2": "JESSIE: Prepare for trouble!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFEE",
+      "english_v2": "JAMES: And make it double!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFF0",
+      "english_v2": "JESSIE: To protect the world from devastation!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFF2",
+      "english_v2": "JAMES: To unite all peoples in peace!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFF4",
+      "english_v2": "JESSIE: To denounce the evils of truth and love!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFF6",
+      "english_v2": "JAMES: Charming villains reaching for the stars!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFF8",
+      "english_v2": "JESSIE: Jessie!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves Jessie's repeated self-introduction by name.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFFA",
+      "english_v2": "JAMES: James!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves James's repeated self-introduction by name.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFFC",
+      "english_v2": "JESSIE: Team Rocket blasts across the galaxy!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03AFFE",
+      "english_v2": "JAMES: A white hole and bright tomorrow await!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03B000",
+      "english_v2": "MEOWTH: Meowth! That's right!",
+      "editorial_origin": "adapted_from_english_anime_motto_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the recognizable English-dub motto cadence while retaining the Chinese segment's meaning and bootleg-specific details.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "RESTORED:0x03B004",
+      "english_v2": "JESSIE: What an awful feeling...",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail. Full-text review: Restores the omitted determiner and complete exclamation.",
+      "compression": true,
+      "compression_justification": "Removed redundant English wording and tightened syntax to reduce ROM pagination; restores Jessie and her exact complaint about the awful feeling, excluding the unrelated French bicycle-speed joke."
+    },
+    {
+      "stable_key": "RESTORED:0x03B006",
+      "english_v2": "MEOWTH: Meow...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves Meowth's closing meow with his official English identity.",
+      "compression": false,
+      "compression_justification": ""
+    }
+  ]
+}

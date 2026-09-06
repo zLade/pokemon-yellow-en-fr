@@ -1,0 +1,19 @@
+record_index,start_hex,end_hex_exclusive,glyph_count,classification,review_status,reason
+32,0x03059D,0x0305A2,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+33,0x0305A3,0x0305A6,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+34,0x0305A7,0x0305AA,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+35,0x0305AB,0x0305AE,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+36,0x0305AF,0x0305B2,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+37,0x0305B3,0x0305B6,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+38,0x0305B7,0x0305BA,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+39,0x0305BB,0x0305BE,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+40,0x0305BF,0x0305C2,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+41,0x0305C3,0x0305C6,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+42,0x0305C7,0x0305CA,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+43,0x0305CB,0x0305CE,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+44,0x0305CF,0x0305D2,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+45,0x0305D3,0x0305D6,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+46,0x0305D7,0x0305DA,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+47,0x0305DB,0x0305DE,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+48,0x0305DF,0x0305E2,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.
+49,0x0305E3,0x0305E6,1,language_neutral_type_pictogram,reviewed_language_neutral,Graphical type pictogram without linguistic content.

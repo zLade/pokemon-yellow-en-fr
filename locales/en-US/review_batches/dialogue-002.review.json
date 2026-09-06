@@ -1,0 +1,806 @@
+{
+  "schema": "nj046-en2-source-review-v1",
+  "batch_id": "dialogue-002",
+  "entries": [
+    {
+      "stable_key": "MAIN:0x034C4B",
+      "english_v2": "Sorry. Due to technical limits, you can't battle here yet...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the apology, the technical limitation, and the temporary unavailability of battles at this location.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034C75",
+      "english_v2": "The trade machine is broken too... Come back another time.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps both the additional broken trade machine and the invitation to return later.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034C96",
+      "english_v2": "Hi there! May I help you?",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034CA6",
+      "english_v2": "Thank you! Please come again!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034CB3",
+      "english_v2": "I'm raising Pokémon too! Once they get strong, no one will bully me anymore.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves that the speaker also raises Pokémon and hopes their strength will put an end to the bullying.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034D08",
+      "english_v2": "If you need Poké Balls to catch Pokémon, get them at the Poké Mart!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the advice to buy Poké Balls at the shop specifically for catching Pokémon.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034D3A",
+      "english_v2": "Raise Pokémon with care, and they'll grow close to you.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly conveys that well-raised Pokémon become attached to their Trainer.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034D4C",
+      "english_v2": "Flying is a little scary... but it gets you back to Pallet Town in no time.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves both the fear of flying and its ability to return the speaker quickly to Pallet Town.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034DA2",
+      "english_v2": "Bug-type Pokémon come in two kinds. Caterpie isn't poisonous, but Weedle is.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains the source's two Bug-type examples and its exact distinction between nonpoisonous Caterpie and poisonous Weedle.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034DE5",
+      "english_v2": "I've never seen this Gym's Leader.",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology. Full-text review: Removes an unsupported claim that the Gym is always closed and translates the Chinese line directly.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034E1E",
+      "english_v2": "Yes! I found a dragon bone!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the excited discovery and identifies the find as a dragon bone.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034E32",
+      "english_v2": "Potions are great! Use one when a Pokémon is low on HP.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Uses the matching official Potion and HP terms while retaining when the medicine should be used.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034E55",
+      "english_v2": "Rattata may be small, but its front teeth are fierce!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps Rattata's small size and the contrasting power of its front teeth.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034E6D",
+      "english_v2": "Viridian Forest is a natural maze. Be careful!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves Viridian Forest, its maze-like nature, and the warning to take care.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034E8B",
+      "english_v2": "See those little trees by the road? A Pokémon move can cut them down.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains the roadside trees and the fact that a Pokémon's move can cut them down, unlike the unrelated 2015 Flash line.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034EB8",
+      "english_v2": "Some Pokémon live only in forests or caves. Explore far and wide to find more!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the exclusive forest and cave habitats and the advice to travel more in order to find additional Pokémon.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034EEF",
+      "english_v2": "Rocky caves are very dark. A Pokémon can light the way with Flash.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the dark rocky cave and the use of a Pokémon's Flash move to see clearly.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034F18",
+      "english_v2": "Ah... These arcade games are so captivating...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Restores the speaker's fascination with the game machines rather than the unrelated 2015 Pokémon friendship line.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034F38",
+      "english_v2": "The Bug Catchers in Pewter City are nothing like Brock at the Gym!",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034F66",
+      "english_v2": "Keep wild Pokémon out of the flower beds!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly retains the instruction not to let wild Pokémon enter the flower beds.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034F7F",
+      "english_v2": "I got my Pokémon in a trade.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Faithfully states that the speaker obtained the Pokémon by trading with someone else.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034F9B",
+      "english_v2": "Some Pokémon won't obey you... A Badge would help!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the disobedient Pokémon and the source's suggestion that possessing a Badge would help.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034FBD",
+      "english_v2": "It's $50 for a child's ticket. Would you like to come in?",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034FCE",
+      "english_v2": "Right! $50, please!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034FE0",
+      "english_v2": "Come again!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x034FE7",
+      "english_v2": "We're going into space this month!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves both the planned journey into space and its timing this month.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03500E",
+      "english_v2": "If you catch more Pokémon than you can carry, use the PC to store them.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains the too-many-to-carry condition and the instruction to use the computer storage system.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035035",
+      "english_v2": "You can carry up to six Pokémon.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves the carrying limit of six Pokémon.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035048",
+      "english_v2": "I'm scared... I often hear strange sounds here.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the speaker's fear, the repeated strange sounds, and this location.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035077",
+      "english_v2": "Those poor people were robbed! We're sure Team Rocket did it. Even our Police Force has trouble with them!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0350BD",
+      "english_v2": "You have Pokémon too? Train them well!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the surprised recognition that the player owns Pokémon and the advice to train them well.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0350D6",
+      "english_v2": "Oh! Are you completing the Pokédex? That's great!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the question about completing the Pokédex and the speaker's enthusiastic approval.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035106",
+      "english_v2": "Hi! Do you know how it feels to ride a Bicycle?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the greeting and question about the feeling of riding a Bicycle.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035122",
+      "english_v2": "My bike is beautiful!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Faithfully keeps the speaker's admiration for the appearance of their bicycle.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03513A",
+      "english_v2": "Team Rocket is making Pokémon dig holes. They must be up to something!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains Team Rocket's use of Pokémon to dig and the suspicion that it serves a hidden purpose.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035154",
+      "english_v2": "If we can't find what was stolen, we'll have to give up.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the missing stolen property and the consequence that failure to recover it means giving up.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035188",
+      "english_v2": "Sigh... Nothing has happened lately...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Faithfully renders the sigh and the complaint that nothing has happened recently.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0351AC",
+      "english_v2": "I just can't seem to raise my Bulbasaur properly...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the repeated difficulty the speaker has raising their Bulbasaur well.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0351CB",
+      "english_v2": "Evolve your Pokémon to add more entries to the Pokédex...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the connection between evolving Pokémon and increasing progress in the Pokédex.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0351E6",
+      "english_v2": "I hear Ghost-type Pokémon have appeared in Lavender Town...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the rumor of ghost Pokémon appearing in Lavender Town, using the matching official place name.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035206",
+      "english_v2": "This town is famous for its Pokémon graveyard. When Pokémon die, they're brought to Pokémon Tower.",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03523F",
+      "english_v2": "Ghosts appeared in Pokémon Tower. I think they're the spirits of Pokémon that Team Rocket killed.",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035279",
+      "english_v2": "Do you believe in ghosts?",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035294",
+      "english_v2": "I can never forgive Team Rocket! They caught Cubone's mother as she fled and killed her!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains the speaker's anger and the full account that Team Rocket caught and killed Cubone's fleeing mother.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0352BA",
+      "english_v2": "The city is under martial law!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves the current state of martial law rather than the unrelated 2015 command.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0352CE",
+      "english_v2": "Many ghosts live in Pokémon Tower.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Faithfully states that Pokémon Tower is inhabited by many ghosts.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0352E4",
+      "english_v2": "Lavender Town's famous Pokémon Tower is a cemetery. People bring their departed Pokémon there to pray for them.",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035335",
+      "english_v2": "Mr. Fuji can soothe Cubone's spirit.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Uses the official matching identity Mr. Fuji for the Lavender elder and keeps his ability to comfort Cubone's spirit.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035355",
+      "english_v2": "Those Team Rocket thugs are awful...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly conveys the speaker's disgust toward the members of Team Rocket.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035370",
+      "english_v2": "You're taking on Team Rocket? That's incredible!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the question about opposing Team Rocket and the speaker's admiration for doing so.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035397",
+      "english_v2": "I saw Team Rocket's boss enter the building...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the eyewitness report that Team Rocket's leader entered the building.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0353B5",
+      "english_v2": "I admire you! I'll be cheering for you!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains both the speaker's admiration and promise of support.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0353D4",
+      "english_v2": "I saw your battle. You're really strong!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the witnessed battle and the resulting praise of the player's strength.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0353F0",
+      "english_v2": "Have you heard of Kameiyu from Nanjing Tech? They say all his Pokémon are as strong as Legendary Pokémon...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the Kameiyu and Nanjing Tech creator cameo and the rumor that his Pokémon have Legendary-level strength.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035433",
+      "english_v2": "Welcome! Win coins in our games and trade them for the prizes you want. But it looks like you don't have a Coin Case...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps earning coins through games, exchanging them for desired prizes, and the player's missing Coin Case.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03546D",
+      "english_v2": "I love games so much, I lost track of time...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the speaker's love of gaming and the resulting loss of awareness of time.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035486",
+      "english_v2": "You want to play too? Sorry, you don't have a Coin Case.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the desire to play and the explicit refusal caused by the missing Coin Case.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0354AB",
+      "english_v2": "You can trade your winnings for Pokémon... Oh, but you don't have a Coin Case...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the Pokémon prize exchange and the fact that it is unavailable without a Coin Case.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0354E1",
+      "english_v2": "Where'd that person go?",
+      "editorial_origin": "english_2015_verified_against_chinese_ai_review",
+      "fidelity_comment": "The 2015 question matches the Chinese disappearance question; only its accidental missing word space was repaired.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035500",
+      "english_v2": "When my Pokémon runs low on HP, I buy medicine for it at the shop.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains the Pokémon's depleted health and the speaker's response of buying medicine at the shop.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03551C",
+      "english_v2": "Hmm... There seems to be a basement under the Game Corner.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the uncertain discovery of a basement beneath the matching official Game Corner location.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035539",
+      "english_v2": "This really is a beautiful place!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly conveys the speaker's admiration for the beauty of this place.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035556",
+      "english_v2": "I won again today... Ha ha!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the speaker's latest victory, its timing today, and the laugh.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03556A",
+      "english_v2": "I wanted to put up a building here, but Pokémon attacked me!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the plan to construct a building at this spot and the Pokémon attack that interrupted it.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035588",
+      "english_v2": "I hear the Elite Four at Indigo Plateau are very strong.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains the rumor about the Elite Four's strength and their location at Indigo Plateau.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03559C",
+      "english_v2": "The Chairman never stops talking about Pokémon...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the Chairman and his habit of talking endlessly about Pokémon.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0355B7",
+      "english_v2": "Did you know Grimer is born from sludge in the sea?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the question and the source's claim that Grimer originates in marine sludge.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0355DD",
+      "english_v2": "The Safari Zone is home to many special Pokémon!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves the presence of many unusual Pokémon in the Safari Zone.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035615",
+      "english_v2": "Strange... Where has my Pidgey flown off to this time?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains the speaker's puzzlement and the recurring disappearance of their Pidgey.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035638",
+      "english_v2": "They say someone once saw a Legendary Pokémon in the Safari Zone...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the reported past sighting of a Legendary Pokémon inside the Safari Zone.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03565F",
+      "english_v2": "Do you watch TV often?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the question about frequently watching television.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035685",
+      "english_v2": "How many Pokémon species are there in the world?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the speaker's question about the total number of Pokémon species worldwide.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0356AA",
+      "english_v2": "You want to beat this Gym...? You should give up.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the player's intent to defeat the Gym and the speaker's discouraging advice to abandon the attempt.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0356CF",
+      "english_v2": "The old master at the dojo is tough!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves the formidable old master and his association with the dojo.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0356F2",
+      "english_v2": "Surprised? We've lived on this little island for years.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains the surprising fact that the group has lived on the small island for many years.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03571F",
+      "english_v2": "I feel so weak today... I'm exhausted...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves today's weakness and the speaker's extreme fatigue.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035733",
+      "english_v2": "Fire-type Pokémon are in trouble against Water-types!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the source's unfavorable Fire-versus-Water type matchup.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035759",
+      "english_v2": "Guests with rare Pokémon are welcome here!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves the welcome extended to visitors carrying rare Pokémon.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035780",
+      "english_v2": "The fossil I found at Mt. Moon was brought back to life here!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains the fossil's discovery at Mt. Moon and its successful revival at this location.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0357A3",
+      "english_v2": "Technology really has come a long way!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Faithfully conveys the speaker's amazement at modern technological progress.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0357C7",
+      "english_v2": "By the way, they say Eevee has more than three evolved forms...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves Eevee and the explicit rumor that its possible evolutions number more than three.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0357DF",
+      "english_v2": "Hello, future Champion... Good luck!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the greeting, the player's future-Champion title, and the wish for good luck.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035806",
+      "english_v2": "Every member of the Elite Four is tough. Be careful...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the strength of all four Elite Four members and the warning to be cautious.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035824",
+      "english_v2": "Dragon-type Pokémon are very strong... They have no weaknesses...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Faithfully retains the Chinese source's explicit claim that Dragon-type Pokémon have no weaknesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03584D",
+      "english_v2": "Win, and you can enter the next room. Good luck!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps victory as the condition for entering the next room and the closing encouragement.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035874",
+      "english_v2": "My grandfather at home wants to trade Pokémon.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves the grandfather at home and his wish to trade Pokémon.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0358AD",
+      "english_v2": "A switch was activated!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Faithfully reports that triggering the interaction activated a switch.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0358BD",
+      "english_v2": "You don't want such a fine fossil?!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the surprised question about refusing a particularly good fossil.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0358D2",
+      "english_v2": "Pokémon are not good or evil. It depends on their Trainer!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0358F6",
+      "english_v2": "Many people in the world use Pokémon for evil. Those scoundrels are Team Rocket!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the existence of people who misuse Pokémon and explicitly identifies the villains as Team Rocket.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03591B",
+      "english_v2": "Prices are too high, and no one will do anything about it. Sigh!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the complaint about excessive prices, the lack of anyone willing to intervene, and the final sigh.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035939",
+      "english_v2": "Even Pokémon at the same level can differ in strength.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves the claim that equal-level Pokémon need not have equal strength.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03596B",
+      "english_v2": "Higher-level Pokémon are stronger, but every type has opponents it struggles against...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains both the strength gained with levels and the unfavorable opponents created by type matchups.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0359A3",
+      "english_v2": "Got the Mystic Ticket!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves receipt of the special voyage ticket and keeps Mystic Ticket consistent with the matching earlier acquisition and boarding dialogue.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0359B7",
+      "english_v2": "You never know when a Pokémon might leap out of the tall grass.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the uncertainty and the sudden appearance of Pokémon from the grass.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0359DE",
+      "english_v2": "Visit a big city, and you'll meet many skilled Trainers.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the advice to visit a large city in order to encounter many excellent Trainers.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035A02",
+      "english_v2": "Have you been to Saffron City? I hear it has very tall buildings.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves both the question about visiting Saffron City and the rumor about its tall buildings.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035A27",
+      "english_v2": "I want a Legendary Pokémon too, but where can they be found?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the speaker's desire to own a Legendary Pokémon and uncertainty about where any can be found.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035A5F",
+      "english_v2": "Judging by your skill, you must be a rookie Trainer. Always keep an eye on your Pokémon's condition!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the assessment that the player is a novice and the advice to monitor their Pokémon's condition constantly.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x035A9F",
+      "english_v2": "With a Flying-type Pokémon, I could fly to faraway cities...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Retains the Flying-type Pokémon and the wish to use it to reach distant cities by air.",
+      "compression": false,
+      "compression_justification": ""
+    }
+  ]
+}

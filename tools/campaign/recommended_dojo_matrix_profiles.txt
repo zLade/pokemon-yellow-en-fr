@@ -1,0 +1,6 @@
+# Profils classés par couverture observée.
+tools/campaign/explorer_dialogue_offset2_profile.txt
+tools/campaign/explorer_target_e90610aa_profile.txt
+tools/campaign/explorer_building_probe_all_offset2_profile.txt
+tools/campaign/explorer_checkpoint_8b_interior_hold_profile.txt
+tools/campaign/explorer_dojo_probe_profile.txt

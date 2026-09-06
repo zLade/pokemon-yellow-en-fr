@@ -1,0 +1,806 @@
+{
+  "schema": "nj046-en2-source-review-v1",
+  "batch_id": "other-004",
+  "entries": [
+    {
+      "stable_key": "MAIN:0x031584",
+      "english_v2": "Explosn",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese large-explosion label identifies Explosn, distinct from the preceding Self-Destruct entry. The eight-character battle label uses Explosn so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03158C",
+      "english_v2": "HornDril",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the swapped witness: the Chinese explicitly names a pointed-horn drill, which is Horn Drill rather than Guillotine. The executable eight-character battle cell displays HornDril for the full move name Horn Drill.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031595",
+      "english_v2": "Guillotn",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the reciprocal witness swap: the Chinese scissor-decapitation label identifies Guillotne, not Horn Drill. The executable eight-character battle cell displays Guillotn for the full move name Guillotne.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03159C",
+      "english_v2": "Sing",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese label directly means singing and identifies Sing.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315A1",
+      "english_v2": "LovlyKis",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The reviewed demon-kiss label and executable move slot identify Lovely Kiss; the unreadable old graphics are not retained. The executable eight-character battle cell displays LovlyKis for the full move name Lovely Kiss.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315AB",
+      "english_v2": "Supersnc",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese supersonic-wave label directly identifies Supersonic. The executable eight-character battle cell displays Supersnc for the full move name Supersonic.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315B2",
+      "english_v2": "SwrdDnce",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese sword-dance label directly identifies Swords Dance. The executable eight-character battle cell displays SwrdDnce for the full move name Swords Dance.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315B9",
+      "english_v2": "Growl",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese cry or growl label identifies Growl.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315BF",
+      "english_v2": "Charm",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the old Bulk Up mismatch: the Chinese explicitly means acting cute or charming, identifying Charm.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315C7",
+      "english_v2": "DefCurl",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese curl-into-a-ball label and move slot identify Defense Curl. The executable eight-character battle cell displays DefCurl for the full move name Defense Curl.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315D0",
+      "english_v2": "Harden",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese hardening label directly identifies Harden.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315D7",
+      "english_v2": "TailWhip",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese tail-wagging label identifies TailWhip in this move-table slot. The eight-character battle label uses TailWhip so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315E1",
+      "english_v2": "Tickle",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the old Charm mismatch: the Chinese explicitly means tickling, identifying Tickle.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315E7",
+      "english_v2": "SmokScrn",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese smoke-screen label directly identifies Smokescreen. The executable eight-character battle cell displays SmokScrn for the full move name Smokescreen.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315F4",
+      "english_v2": "DblTeam",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese shadow-clone label identifies Double Team. The executable nine-character battle cell displays DblTeam for the full move name Double Team.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0315FB",
+      "english_v2": "Recover",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese self-regeneration label directly identifies Recover.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03160A",
+      "english_v2": "Roar",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese roaring label directly identifies Roar.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03160F",
+      "english_v2": "Whirlwnd",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese blow-away label and move slot identify Whirlwnd. The eight-character battle label uses Whirlwnd so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03163B",
+      "english_v2": "PsnPowdr",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese poison-powder label directly identifies Poison Powder. The executable eight-character battle cell displays PsnPowdr for the full move name Poison Powder.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0316EE",
+      "english_v2": "Great B",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese ball name and its item-table position identify the Great Ball; legacy abbreviation and padding are omitted. Full-text review: Abbreviates Great Ball for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0316F7",
+      "english_v2": "Ultra B",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese ultra-power ball label and neighboring Ball entries identify the Ultra Ball, correcting the old typo. Full-text review: Abbreviates Ultra Ball for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031700",
+      "english_v2": "MasterB",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese master-ball label directly identifies the Master Ball. Full-text review: Abbreviates Master Ball for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031709",
+      "english_v2": "Potion",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese medicine label and executable healing-item slot identify Potion.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031710",
+      "english_v2": "Sup.Pot",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese better-potion label and 50-HP item slot identify Super Potion. Full-text review: Abbreviates Super Potion for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031719",
+      "english_v2": "Hyp.Pot",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese super-potion label and 200-HP item slot identify Hyper Potion. Full-text review: Abbreviates Hyper Potion for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031722",
+      "english_v2": "Max.Pot",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese maximum-potion label and full-HP item slot identify Max Potion. Full-text review: Abbreviates Max Potion for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031737",
+      "english_v2": "PARHeal",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese paralysis-curing medicine label directly matches Paralyze Heal. Full-text review: Uses the Gen I PAR abbreviation in the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03173E",
+      "english_v2": "Awaken.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese wake-up medicine label and status-healing slot identify Awakening; no legacy padding is semantic. Full-text review: Abbreviates Awakening for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031746",
+      "english_v2": "IceHeal",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese freezing medicine label directly identifies Ice Heal; the witness's trailing space is storage padding. Full-text review: Compacts Ice Heal for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03174F",
+      "english_v2": "BurnHl.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese burn medicine label directly identifies Burn Heal. Full-text review: Abbreviates Burn Heal for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031758",
+      "english_v2": "FullHl.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese all-purpose recovery label and all-status healing slot identify Full Heal. Full-text review: Abbreviates Full Heal for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031761",
+      "english_v2": "Revive",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese spirit-restoring medicine label and fainted-Pokémon recovery slot identify Revive.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031769",
+      "english_v2": "Ether",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Although the short Chinese name says PP increase, the executable slot and Chinese description specify restoring 10 PP to one move, identifying Ether rather than PP Up.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03176F",
+      "english_v2": "MaxEth.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese maximum-PP label is resolved by its executable slot and full-PP description as Max Ether, not a different PP item. Full-text review: Abbreviates Max Ether for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031779",
+      "english_v2": "RareCdy",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese magical-candy label and level-up item slot identify Rare Candy. Full-text review: Abbreviates Rare Candy for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031782",
+      "english_v2": "FireSt.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese fire-stone label directly identifies Fire Stone. Full-text review: Abbreviates Fire Stone for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03178B",
+      "english_v2": "WatrSt.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese water-stone label directly identifies Water Stone. Full-text review: Abbreviates Water Stone for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031794",
+      "english_v2": "ThunSt.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese thunder-stone label directly identifies Thunder Stone. Full-text review: Abbreviates Thunder Stone for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03179D",
+      "english_v2": "MoonSt.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese moon-stone label directly identifies Moon Stone. Full-text review: Abbreviates Moon Stone for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0317A6",
+      "english_v2": "Parcel",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese label says parcel; its executable key-item slot and Chinese description identify Oak's Parcel. Full-text review: Uses the unambiguous key noun for Oak's Parcel in the Bag list.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0317B5",
+      "english_v2": "TownMap",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The generic Chinese map label is mechanically resolved by its key-item slot as the Town Map. Full-text review: Compacts Town Map for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0317B9",
+      "english_v2": "HelixFs",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese ammonite-fossil label and fossil key-item slot identify the Helix Fossil. Full-text review: Abbreviates Helix Fossil for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0317C4",
+      "english_v2": "DomeFos",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese armored-fossil label and adjacent fossil slot identify the Dome Fossil. Full-text review: Abbreviates Dome Fossil for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0317CF",
+      "english_v2": "S.S.Tkt",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese ship-ticket label and executable key-item slot identify the S.S. Ticket. Full-text review: Abbreviates S.S. Ticket for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0317DA",
+      "english_v2": "FreshWt",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Translates the Chinese mineral-water item directly; the old Lemonade wording denotes a different drink and is not restored. Full-text review: Abbreviates the official Fresh Water name for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0317E3",
+      "english_v2": "SilphSc",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese spirit-viewing glasses label, ghost-viewing description, and key-item slot concord with Silph Scope. Full-text review: Abbreviates Silph Scope for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0317EE",
+      "english_v2": "PokéFlt",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese Pokémon-flute label and wake-up key-item slot identify the Poké Flute; the reserved at-sign spelling is removed. Full-text review: Abbreviates Poké Flute for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0317F8",
+      "english_v2": "GoldTth",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese gold-teeth label directly identifies Gold Teeth; the witness's trailing space is nonsemantic padding. Full-text review: Abbreviates Gold Teeth for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031803",
+      "english_v2": "Cut HM",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese Cut technique occupies the first executable HM item slot, so the inventory label is Cut HM; legacy leading padding is omitted.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03180D",
+      "english_v2": "Fly HM",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese flying technique occupies the second executable HM item slot, identifying Fly HM.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031815",
+      "english_v2": "Surf HM",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese surfing technique occupies the third executable HM item slot, identifying Surf HM.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03181D",
+      "english_v2": "STR HM",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese strength technique occupies the fourth executable HM item slot, expanding the old truncated label to Strength HM. Full-text review: Uses the standard STR abbreviation in the Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031824",
+      "english_v2": "FlashHM",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese flashing technique occupies the fifth executable HM item slot, identifying Flash HM. Full-text review: Compacts Flash HM for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03182D",
+      "english_v2": "TM 01",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese numbered secret-technique label begins the executable 40-item TM series, identifying TM 01.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031835",
+      "english_v2": "TM 02",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 02.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03183D",
+      "english_v2": "TM 03",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 03.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031845",
+      "english_v2": "TM 04",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 04.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03184D",
+      "english_v2": "TM 05",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 05.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031855",
+      "english_v2": "TM 06",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 06.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03185D",
+      "english_v2": "TM 07",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 07.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031865",
+      "english_v2": "TM 08",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 08.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03186D",
+      "english_v2": "TM 09",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 09.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031875",
+      "english_v2": "TM 10",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 10.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03187D",
+      "english_v2": "TM 11",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 11.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031885",
+      "english_v2": "TM 12",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 12.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03188D",
+      "english_v2": "TM 13",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 13.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031895",
+      "english_v2": "TM 14",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 14.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03189D",
+      "english_v2": "TM 15",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 15.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318A5",
+      "english_v2": "TM 16",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 16.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318AD",
+      "english_v2": "TM 17",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 17.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318B5",
+      "english_v2": "TM 18",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 18.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318BD",
+      "english_v2": "TM 19",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 19.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318C5",
+      "english_v2": "TM 20",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 20.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318CD",
+      "english_v2": "TM 21",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 21.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318D5",
+      "english_v2": "TM 22",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 22.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318DD",
+      "english_v2": "TM 23",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 23.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318E5",
+      "english_v2": "TM 24",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 24.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318ED",
+      "english_v2": "TM 25",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 25.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318F5",
+      "english_v2": "TM 26",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 26.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0318FD",
+      "english_v2": "TM 27",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 27.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031905",
+      "english_v2": "TM 28",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 28.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03190D",
+      "english_v2": "TM 29",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 29.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031915",
+      "english_v2": "TM 30",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 30.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03191D",
+      "english_v2": "TM 31",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 31.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031925",
+      "english_v2": "TM 32",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 32.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03192D",
+      "english_v2": "TM 33",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 33.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031935",
+      "english_v2": "TM 34",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 34.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03193D",
+      "english_v2": "TM 35",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 35.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031945",
+      "english_v2": "TM 36",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 36.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03194D",
+      "english_v2": "TM 37",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 37.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031955",
+      "english_v2": "TM 38",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 38.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03195D",
+      "english_v2": "TM 39",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-table position identify TM 39.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031965",
+      "english_v2": "TM 40",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and final executable machine-table position identify TM 40.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031A24",
+      "english_v2": "Always catches",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves guaranteed capture.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031A37",
+      "english_v2": "Evolvessome   Pokémon",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 grid as 'Evolves' / 'some' / 'Pokémon'.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031A4A",
+      "english_v2": "Evolvessome   Pokémon",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 grid as 'Evolves' / 'some' / 'Pokémon'.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031A5D",
+      "english_v2": "Restore20 HP",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the exact recovery amount.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031A78",
+      "english_v2": "Restore50 HP",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the exact recovery amount.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031A86",
+      "english_v2": "Restore200 HP",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the exact recovery amount.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031A95",
+      "english_v2": "RestoreAll HP",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves full HP recovery.",
+      "compression": false,
+      "compression_justification": ""
+    }
+  ]
+}

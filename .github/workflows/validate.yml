@@ -1,0 +1,40 @@
+name: Validate English branch
+
+on:
+  push:
+    branches: [en]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rom-free-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Validate language separation and ROM exclusion
+        run: python3 tools/validate_branch_separation.py --language en
+      - name: Verify published patch checksums
+        working-directory: releases/en/2.0.2
+        run: sha256sum -c SHA256SUMS
+      - name: Validate the complete English catalogue
+        run: python3 tools/validate_english_catalog.py
+      - name: Verify the human-review CSV is synchronized
+        run: python3 tools/export_english_review_sheet.py --check
+      - name: Run ROM-free unit tests
+        run: |
+          python3 -m unittest -v \
+            tools.test_validate_branch_separation \
+            tools.test_validate_english_catalog \
+            tools.test_english_codec \
+            tools.test_english_layout \
+            tools.test_locale_profiles \
+            tools.test_restoration_topology \
+            tools.test_english_review_workflow \
+            tools.test_export_english_review_sheet

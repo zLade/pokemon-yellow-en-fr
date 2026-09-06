@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.csv -text
+/locales/**/*.csv text eol=lf
+*.ips binary
+*.bps binary
+*.chr binary
+*.bmp binary
+*.bin binary
+*.nes binary
+*.cdl binary

@@ -1,0 +1,806 @@
+{
+  "schema": "nj046-en2-source-review-v1",
+  "batch_id": "other-005",
+  "entries": [
+    {
+      "stable_key": "MAIN:0x031AA4",
+      "english_v2": "Cures  poison",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the cured status.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031AB2",
+      "english_v2": "Cures  PAR",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 grid; PAR is the official Gen I battle abbreviation.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031AC1",
+      "english_v2": "Cures  sleep",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the awakening effect.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031ACE",
+      "english_v2": "Cures  freeze",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the cured status.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031ADC",
+      "english_v2": "Cures  burns",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the cured status.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031AE8",
+      "english_v2": "Cures  all    status",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 grid as 'Cures' / 'all' / 'status'.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031AFF",
+      "english_v2": "Revive half HP",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves half-HP revival.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031B0E",
+      "english_v2": "Restore10 PP",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the exact PP recovery.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031B29",
+      "english_v2": "RestoreAll PP",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves full PP recovery.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031B42",
+      "english_v2": "Raises level 1",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the one-level increase.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031B54",
+      "english_v2": "Evolvessome   Pokémon",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 grid as 'Evolves' / 'some' / 'Pokémon'.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031B67",
+      "english_v2": "Evolvessome   Pokémon",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 grid as 'Evolves' / 'some' / 'Pokémon'.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031B7A",
+      "english_v2": "Evolvessome   Pokémon",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 grid as 'Evolves' / 'some' / 'Pokémon'.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031B8D",
+      "english_v2": "View   Pokémondata",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 grid as 'View' / 'Pokémon' / 'data'.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031BA0",
+      "english_v2": "Gary's map",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the source owner.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031BAB",
+      "english_v2": "Oak's  parcel",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the parcel owner.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031BBC",
+      "english_v2": "AncientPokémonfossil",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 grid as 'Ancient' / 'Pokémon' / 'fossil'.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031BCA",
+      "english_v2": "Titanicticket",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 grid as 'Titanic' / 'ticket' and preserves the NJ046 ship name.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031BE0",
+      "english_v2": "Lucky  memento",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the lucky-customer memento.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031BE8",
+      "english_v2": "Reveal ghosts",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the supernatural-vision function.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031BFD",
+      "english_v2": "Wakes  Pokémon",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the Poké Flute effect.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C13",
+      "english_v2": "Gold   Teeth",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the key item's identity.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C27",
+      "english_v2": "Mew    ticket",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Fits the fixed 7x3 item-description grid and preserves the NJ046 Mew-voyage ticket.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C36",
+      "english_v2": "Tamer",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese class directly means a beast or animal tamer and matches its speakers elsewhere; the unrelated old Will name is discarded.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C3B",
+      "english_v2": "Boy",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly translates the generic male-child class; the more specific old Jr. Trainer title is not stated by the Chinese.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C47",
+      "english_v2": "Juggler",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves the Chinese magician class instead of substituting the mechanically adjacent but semantically different Juggler label. Full-text review: Matches the official Gen I trainer class used in the same live dialogues.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C4F",
+      "english_v2": "Rocket Executive",
+      "editorial_origin": "translated_from_chinese_with_executable_context_ai_review",
+      "fidelity_comment": "The Chinese female-ringleader title and her Team Rocket dialogue jointly identify this executable female Rocket Executive class.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C61",
+      "english_v2": "Twins",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese class directly and unambiguously means twins, positively matching the executable class witness.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C67",
+      "english_v2": "Uncle",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly retains the Chinese familiar adult-male title; the old Pokéfan class is not semantically present.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C70",
+      "english_v2": "Mature Lady",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves both maturity and the adult-woman sense of the Chinese class rather than reducing it to the old Beauty label.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C77",
+      "english_v2": "Medium",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese folk-medium class and executable witness agree on the official English class term Medium.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C7E",
+      "english_v2": "Auntie",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly retains the Chinese familiar older-woman title; the old female Pokéfan interpretation is not imported.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C87",
+      "english_v2": "Cut",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese field-move label and executable HM description slot identify Cut; no extra HM prefix or unreadable graphics are retained.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C91",
+      "english_v2": "Fly",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese field-move label and executable HM description slot identify Fly; the source contains no additional wording.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031C99",
+      "english_v2": "Surf",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese field-move label and executable HM description slot identify Surf without requiring the French HM prefix.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CA1",
+      "english_v2": "Strength",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese field-move label and executable HM description slot identify Strength; the complete official term remains within UI width.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CA9",
+      "english_v2": "Flash",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese field-move label and executable HM description slot identify Flash; no unsupported prefix or padding is added.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CB2",
+      "english_v2": "TM 01 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 01; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CBA",
+      "english_v2": "TM 02 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 02; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CC2",
+      "english_v2": "TM 03 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 03; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CCA",
+      "english_v2": "TM 04 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 04; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CD2",
+      "english_v2": "TM 05 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 05; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CDA",
+      "english_v2": "TM 06 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 06; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CE2",
+      "english_v2": "TM 07 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 07; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CEA",
+      "english_v2": "TM 08 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 08; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CF2",
+      "english_v2": "TM 09 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 09; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031CFA",
+      "english_v2": "TM 10 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 10; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D02",
+      "english_v2": "TM 11 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 11; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D0A",
+      "english_v2": "TM 12 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 12; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D12",
+      "english_v2": "TM 13 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 13; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D1A",
+      "english_v2": "TM 14 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 14; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D22",
+      "english_v2": "TM 15 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 15; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D2A",
+      "english_v2": "TM 16 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 16; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D32",
+      "english_v2": "TM 17 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 17; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D3A",
+      "english_v2": "TM 18 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 18; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D42",
+      "english_v2": "TM 19 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 19; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D4A",
+      "english_v2": "TM 20 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 20; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D52",
+      "english_v2": "TM 21 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 21; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D5A",
+      "english_v2": "TM 22 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 22; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D62",
+      "english_v2": "TM 23 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 23; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D6A",
+      "english_v2": "TM 24 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 24; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D72",
+      "english_v2": "TM 25 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 25; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D7A",
+      "english_v2": "TM 26 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 26; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D82",
+      "english_v2": "TM 27 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 27; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D8A",
+      "english_v2": "TM 28 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 28; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D92",
+      "english_v2": "TM 29 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 29; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031D9A",
+      "english_v2": "TM 30 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 30; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031DA2",
+      "english_v2": "TM 31 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 31; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031DAA",
+      "english_v2": "TM 32 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 32; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031DB2",
+      "english_v2": "TM 33 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 33; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031DBA",
+      "english_v2": "TM 34 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 34; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031DC2",
+      "english_v2": "TM 35 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 35; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031DCA",
+      "english_v2": "TM 36 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 36; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031DD2",
+      "english_v2": "TM 37 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 37; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031DDA",
+      "english_v2": "TM 38 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 38; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031DE2",
+      "english_v2": "TM 39 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and executable machine-description table identify TM 39; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031DEA",
+      "english_v2": "TM 40 ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese number and final executable machine-description position identify TM 40; one trailing space is retained as fixed-width structural padding.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031E6F",
+      "english_v2": "Brock",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese name Xiaogang and the first Gym Leader table position identify the official English name Brock.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031E75",
+      "english_v2": "Misty",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese name Xiaoxia and the second Gym Leader table position identify the official English name Misty.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031E7B",
+      "english_v2": "Lt. Surge",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese transliteration Maqisi and third Gym Leader table position identify Lt. Surge; standard English punctuation is restored.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031E84",
+      "english_v2": "Erika",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese transliteration and fourth Gym Leader table position positively identify the official English name Erika.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031E8A",
+      "english_v2": "Koga",
+      "editorial_origin": "official_english_name_verified_by_executable_table_ai_review",
+      "fidelity_comment": "The isolated Chinese character Qiao is anomalous, but the uninterrupted Gym Leader table position between Erika and Sabrina mechanically identifies Koga.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031E8F",
+      "english_v2": "Sabrina",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese name Namei and sixth Gym Leader table position identify the official English name Sabrina.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031E97",
+      "english_v2": "Blaine",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese name Agui and seventh Gym Leader table position identify the official English name Blaine.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031E9E",
+      "english_v2": "Giovanni",
+      "editorial_origin": "official_english_name_verified_by_executable_table_ai_review",
+      "fidelity_comment": "Chinese gives the title Boss; the eighth Gym Leader slot and matching story dialogue resolve that boss specifically as Giovanni.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031EA7",
+      "english_v2": "Lorelei",
+      "editorial_origin": "official_english_name_verified_by_executable_table_ai_review",
+      "fidelity_comment": "The Chinese alias Jiana is irregular, but the first Elite Four table position and matching dialogue identity mechanically establish Lorelei.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031EAF",
+      "english_v2": "Bruno",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese name Xiba and second Elite Four table position identify the official English name Bruno.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031EB5",
+      "english_v2": "Agatha",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese name Juzi and third Elite Four table position identify the official English name Agatha.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031EBC",
+      "english_v2": "Lance",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese transliteration of Wataru and fourth Elite Four table position identify the official English name Lance.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031EC2",
+      "english_v2": "Jessie & James",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Chinese explicitly names Musashi and Kojiro; their official English names are Jessie and James, correcting the old Jessie misspelling.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031EDD",
+      "english_v2": "Deputy",
+      "editorial_origin": "english_cameo_name_verified_against_executable_context_ai_review",
+      "fidelity_comment": "Chinese identifies this Fighting Dojo figure as the second-in-command; Deputy restores that role and removes the translator cameo.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031EE7",
+      "english_v2": "Bug Catcher",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese bug-catching boy class directly matches the established official English class name Bug Catcher.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031EF3",
+      "english_v2": "Scout",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly translates the Chinese scout class; the old Psychic and French psychic-class witnesses conflict with the source.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031EFB",
+      "english_v2": "Lass",
+      "editorial_origin": "translated_from_chinese_with_executable_context_ai_review",
+      "fidelity_comment": "The Chinese Miniskirt class is the matching class concept officially localized as Lass, corroborated by its executable table position.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031F00",
+      "english_v2": "Young Negotiator",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves both the negotiation role and youthful Xiaozǐ label in the Chinese; the old Schoolkid interpretation is not semantically equivalent.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031F0A",
+      "english_v2": "Team Rocket",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly translates the Chinese organization name. This first adjacent executable slot is male, but the source itself does not add Grunt or a gender marker.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031F18",
+      "english_v2": "Team Rocket",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly translates the same Chinese organization name. This second adjacent executable slot is female, but the source payload remains ungendered.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031F26",
+      "english_v2": "Scientist",
+      "editorial_origin": "translated_from_chinese_with_executable_context_ai_review",
+      "fidelity_comment": "The Chinese researcher concept and executable trainer-class slot agree with the official English class term Scientist.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031F30",
+      "english_v2": "Man",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Naturalizes the generic Chinese middle-aged-man address as Man; nothing in the source supports the old Hiker profession.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031F36",
+      "english_v2": "Male Swimmer",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves both the swimmer class and the explicit male distinction, which separates this executable slot from the following female swimmer entry.",
+      "compression": false,
+      "compression_justification": ""
+    }
+  ]
+}

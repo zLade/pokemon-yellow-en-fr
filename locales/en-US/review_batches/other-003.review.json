@@ -1,0 +1,806 @@
+{
+  "schema": "nj046-en2-source-review-v1",
+  "batch_id": "other-003",
+  "entries": [
+    {
+      "stable_key": "MAIN:0x03128B",
+      "english_v2": "EarthQke",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese move name directly denotes Earthquake; unreadable legacy graphics are not retained. The executable eight-character battle cell displays EarthQke for the full move name Earthquake.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031292",
+      "english_v2": "BoneRang",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Uses the official move name matching the Chinese bone boomerang, with no legacy padding copied into the payload. The executable eight-character battle cell displays BoneRang for the full move name Bonemerang.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03129D",
+      "english_v2": "Fissure",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese label and executable move-table slot both identify Fissure; no surrounding spaces are semantically required.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0312A9",
+      "english_v2": "SandAtk",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Uses the official two-word move name for the Chinese instruction to throw sand. The executable eight-character battle cell displays SandAtk for the full move name Sand Attack.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0312B0",
+      "english_v2": "RockThrw",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese falling-rock label identifies Rock Throw in the neighboring Rock-type move sequence. The executable eight-character battle cell displays RockThrw for the full move name Rock Throw.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0312B7",
+      "english_v2": "RockTomb",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The rock-sealing wording is mechanically resolved as RockTomb by its Rock-move neighbors; this is not a literal-name substitution with a different effect. The eight-character battle label uses RockTomb so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0312C1",
+      "english_v2": "AncntPwr",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Uses the official spaced English name matching the Chinese ancient-power label. The executable nine-character battle cell displays AncntPwr for the full move name Ancient Power.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0312CA",
+      "english_v2": "RockSlid",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese rock-collapse label directly matches Rock Slide. The executable eight-character battle cell displays RockSlid for the full move name Rock Slide.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0312D1",
+      "english_v2": "LechLife",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese blood-draining label directly identifies Leech Life. The executable eight-character battle cell displays LechLife for the full move name Leech Life.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0312D8",
+      "english_v2": "TwinNeed",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Uses the official one-word move name for the Chinese double-needle label. The eight-character battle label uses TwinNeed so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0312DF",
+      "english_v2": "SlvrWind",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese silver-wind label directly matches Silver Wind. The executable eight-character battle cell displays SlvrWind for the full move name Silver Wind.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0312E6",
+      "english_v2": "SignalBm",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese signal-ray label directly matches Signal Beam. The executable nine-character battle cell displays SignalBm for the full move name Signal Beam.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0312ED",
+      "english_v2": "Megahorn",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The powerful horn-thrust wording and its Bug-move context identify Megahorn.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0312F7",
+      "english_v2": "TailGlow",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Although the Chinese literally evokes a firefly glow, the executable slot and matching witness identify the move TailGlow. The eight-character battle label uses TailGlow so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031301",
+      "english_v2": "StrngSht",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese silk-spitting label directly identifies String Shot. The executable eight-character battle cell displays StrngSht for the full move name String Shot.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031308",
+      "english_v2": "PsnSting",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Uses the official move name for the Chinese poison-needle label; apparent legacy leading padding is not semantic text. The executable eight-character battle cell displays PsnSting for the full move name Poison Sting.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031313",
+      "english_v2": "Smog",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese smoke label and Poison-move neighborhood concord with Smog.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031318",
+      "english_v2": "Acid",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese dissolving-liquid label directly identifies Acid in this move slot.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03131D",
+      "english_v2": "PsnTail",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese poison-tail label directly matches Poison Tail. The executable eight-character battle cell displays PsnTail for the full move name Poison Tail.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031324",
+      "english_v2": "PsnFang",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese venomous-fang label directly matches Poison Fang. The executable eight-character battle cell displays PsnFang for the full move name Poison Fang.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03132B",
+      "english_v2": "Sludge",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The mud-like attack is resolved as Sludge by the contiguous Poison-move table and the following Sludge Bomb entry, not as a Ground move.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031332",
+      "english_v2": "SludgBom",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese sludge-bomb label and adjacent Poison moves directly identify Sludge Bomb. The executable eight-character battle cell displays SludgBom for the full move name Sludge Bomb.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031339",
+      "english_v2": "PoisnGas",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese poison-smoke label identifies Poison Gas; legacy visual padding is not reproduced. The executable nine-character battle cell displays PoisnGas for the full move name Poison Gas.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031344",
+      "english_v2": "Toxic",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese severe-poison label and executable context directly identify Toxic.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03134A",
+      "english_v2": "RockSmsh",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the mechanically wrong old Low Kick label: the Chinese explicitly names Rock Smash. The executable eight-character battle cell displays RockSmsh for the full move name Rock Smash.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031353",
+      "english_v2": "MachPnch",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese sonic-speed punch label and Fighting-move sequence identify Mach Punch. The executable eight-character battle cell displays MachPnch for the full move name Mach Punch.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03135A",
+      "english_v2": "KaratChp",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese empty-hand chop label directly matches Karate Chop. The executable eight-character battle cell displays KaratChp for the full move name Karate Chop.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031361",
+      "english_v2": "Low Kick",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese low-kick label identifies Low Kick; the shifted French witness is not followed.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031368",
+      "english_v2": "DblKick",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the old Revenge mismatch: the Chinese explicitly describes a two-stage kick, Double Kick. The executable nine-character battle cell displays DblKick for the full move name Double Kick.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031370",
+      "english_v2": "RollKick",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese spinning-kick label directly matches Rolling Kick. The executable nine-character battle cell displays RollKick for the full move name Rolling Kick.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031379",
+      "english_v2": "VitalThr",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The martial-arts counter-throw term is resolved as Vital Throw by its exact position in the Fighting-move sequence. The executable eight-character battle cell displays VitalThr for the full move name Vital Throw.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031380",
+      "english_v2": "JumpKick",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese flying-kick label identifies JumpKick in this Fighting-move slot, not the shifted old witness. The eight-character battle label uses JumpKick so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031389",
+      "english_v2": "BrickBrk",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese tile-breaking label directly matches Brick Break. The executable nine-character battle cell displays BrickBrk for the full move name Brick Break.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031390",
+      "english_v2": "SkyUpCut",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese rising-to-the-sky punch label directly identifies Sky Uppercut. The executable eight-character battle cell displays SkyUpCut for the full move name Sky Uppercut.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031399",
+      "english_v2": "CrossChp",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese cross-cut label directly matches Cross Chop. The executable eight-character battle cell displays CrossChp for the full move name Cross Chop.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313A0",
+      "english_v2": "DynmPnch",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese explosive-punch label and Fighting-move order identify Dynamic Punch. The executable eight-character battle cell displays DynmPnch for the full move name Dynamic Punch.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313A9",
+      "english_v2": "SuperPwr",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese brute-force label directly identifies Superpower; the divergent French witness is not used. The executable nine-character battle cell displays SuperPwr for the full move name Superpower.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313B2",
+      "english_v2": "FocsPnch",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The focused-energy punch term and its Fighting-move slot identify Focus Punch. The executable eight-character battle cell displays FocsPnch for the full move name Focus Punch.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313B9",
+      "english_v2": "Peck",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese pecking label directly matches Peck.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313BE",
+      "english_v2": "Gust",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese whirlwind label identifies Gust in the Flying-move sequence.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313C3",
+      "english_v2": "AirCuttr",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese vacuum-slash label and neighboring Flying moves identify Air Cutter. The executable eight-character battle cell displays AirCuttr for the full move name Air Cutter.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313CA",
+      "english_v2": "WingAtk",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese wing-strike label directly matches Wing Attack. The executable eight-character battle cell displays WingAtk for the full move name Wing Attack.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313D1",
+      "english_v2": "Aerl Ace",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The traditional swallow-return name is the established source term for Aerial Ace in this executable slot. The executable eight-character battle cell displays Aerl Ace for the full move name Aerial Ace.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313D8",
+      "english_v2": "Fly",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese flying technique directly identifies Fly.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313DC",
+      "english_v2": "DrilPeck",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese drilling-peck label directly matches Drill Peck. The executable eight-character battle cell displays DrilPeck for the full move name Drill Peck.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313E3",
+      "english_v2": "Bounce",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese airborne leap and executable Flying-move slot concord with Bounce.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313EA",
+      "english_v2": "AeroBlst",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese aerial blast label directly matches AeroBlst. The eight-character battle label uses AeroBlst so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313F1",
+      "english_v2": "Sky Atk",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese divine-bird move name is the established source label for Sky Attack in this slot. The executable eight-character battle cell displays Sky Atk for the full move name Sky Attack.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0313F8",
+      "english_v2": "Confusn",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese telekinetic-force label and Psychic-move sequence identify Confusn. The eight-character battle label uses Confusn so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031402",
+      "english_v2": "Psybeam",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Uses the official one-word English name matching the Chinese psychic-beam label.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03140B",
+      "english_v2": "MistBall",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese mist-ball label and the structurally verified move-table target identify MistBall. The eight-character battle label uses MistBall so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031415",
+      "english_v2": "ExtrSens",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese supernatural-power term and its Psychic-move position identify Extrasensory. The executable eight-character battle cell displays ExtrSens for the full move name Extrasensory.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03141F",
+      "english_v2": "FutrSght",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the shifted witness: the Chinese explicitly says to foresee the future, identifying Future Sight. The executable eight-character battle cell displays FutrSght for the full move name Future Sight.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031428",
+      "english_v2": "Psywave",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the old Psychic mismatch: the Chinese specifically names a psychic wave, Psywave.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031430",
+      "english_v2": "DrmEater",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese dream-eating label directly matches Dream Eater. The executable eight-character battle cell displays DrmEater for the full move name Dream Eater.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031437",
+      "english_v2": "PsyBoost",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese psychic-boost label directly identifies Psycho Boost. The executable nine-character battle cell displays PsyBoost for the full move name Psycho Boost.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031441",
+      "english_v2": "Hypnosis",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese hypnosis technique directly matches Hypnosis.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03144A",
+      "english_v2": "Rest",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The literal sleep label is mechanically resolved as Rest by this Psychic/status move slot and both aligned witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03144F",
+      "english_v2": "Teleport",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese instantaneous-movement label directly identifies Teleport.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031458",
+      "english_v2": "CalmMind",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The meditation label and its verified position before Agility identify CalmMind rather than a generic state fragment. The eight-character battle label uses CalmMind so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031462",
+      "english_v2": "Agility",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese high-speed movement label directly matches Agility.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03146A",
+      "english_v2": "Lick",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese tongue-lick label directly matches Lick.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03146F",
+      "english_v2": "Astonish",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese fright or surprise label identifies Astonish in the Ghost-move sequence.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031478",
+      "english_v2": "ShdwPnch",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese shadow-punch label directly matches Shadow Punch. The executable eight-character battle cell displays ShdwPnch for the full move name Shadow Punch.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03147F",
+      "english_v2": "ShdwBall",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese shadow-ball label directly matches Shadow Ball. The executable nine-character battle cell displays ShdwBall for the full move name Shadow Ball.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031486",
+      "english_v2": "Nightmar",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the shifted French witness: the Chinese explicitly names Nightmar. The eight-character battle label uses Nightmar so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03148D",
+      "english_v2": "ConfRay",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese strange-light label and Ghost-move context identify Confuse Ray. The executable eight-character battle cell displays ConfRay for the full move name Confuse Ray.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031496",
+      "english_v2": "Twister",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese dragon-tornado label identifies Twister at the start of the Dragon-move sequence.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03149E",
+      "english_v2": "DrgnRage",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese dragon-rage label directly matches Dragon Rage. The executable eight-character battle cell displays DrgnRage for the full move name Dragon Rage.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314A5",
+      "english_v2": "DrgnBrth",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese dragon-breath label directly matches Dragon Breath. The executable eight-character battle cell displays DrgnBrth for the full move name Dragon Breath.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314AC",
+      "english_v2": "DrgnClaw",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese dragon-claw label directly matches Dragon Claw. The executable eight-character battle cell displays DrgnClaw for the full move name Dragon Claw.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314B3",
+      "english_v2": "Outrage",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese enraged-scales term and Dragon-move context identify Outrage.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314BA",
+      "english_v2": "DrgnDnce",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese dragon-dance label directly matches Dragon Dance. The executable eight-character battle cell displays DrgnDnce for the full move name Dragon Dance.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314C1",
+      "english_v2": "KnockOff",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese knock-down or knock-away label and Dark-move sequence identify KnockOff. The eight-character battle label uses KnockOff so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314CB",
+      "english_v2": "Pursuit",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the shifted witness: the Chinese explicitly names pursuit or chasing.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314D2",
+      "english_v2": "Bite",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese tooth-thrust label and Dark-move context identify Bite.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314D7",
+      "english_v2": "Crunch",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese crushing-bite label directly matches Crunch.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314DE",
+      "english_v2": "MetlClaw",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese steel-claw label directly identifies Metal Claw. The executable eight-character battle cell displays MetlClaw for the full move name Metal Claw.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314E5",
+      "english_v2": "StelWing",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese steel-wing label directly matches Steel Wing. The executable eight-character battle cell displays StelWing for the full move name Steel Wing.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314EC",
+      "english_v2": "IronTail",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese steel-tail concept and Steel-move slot identify the official move IronTail, not a different mechanic. The eight-character battle label uses IronTail so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314F6",
+      "english_v2": "MetrMash",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The apparent Chinese character typo still denotes a meteor punch; its Steel-move position resolves it as Meteor Mash. The executable eight-character battle cell displays MetrMash for the full move name Meteor Mash.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0314FD",
+      "english_v2": "IronDef",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese iron-wall label directly identifies Iron Defense. The executable eight-character battle cell displays IronDef for the full move name Iron Defense.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031506",
+      "english_v2": "Splash",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The generic leap label is mechanically resolved as Splash by this move-table slot and both aligned witnesses; Bounce already occupies its own earlier slot.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03150D",
+      "english_v2": "SonicBom",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the shifted French witness: the Chinese sonic-wave label identifies Sonic Boom. The executable eight-character battle cell displays SonicBom for the full move name Sonic Boom.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031514",
+      "english_v2": "Tackle",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese collision or body-check label directly matches Tackle.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03151B",
+      "english_v2": "FlsSwipe",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the old Scratch mismatch: the Chinese blunt-edge strike is the established label for False Swipe. The executable eight-character battle cell displays FlsSwipe for the full move name False Swipe.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031523",
+      "english_v2": "Scratch",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese clawing or scratching label identifies Scratch, not the shifted old Pound entry.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031529",
+      "english_v2": "QuickAtk",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese lightning-fast action idiom directly identifies Quick Attack. The executable eight-character battle cell displays QuickAtk for the full move name Quick Attack.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031530",
+      "english_v2": "Pay Day",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The beckoning lucky-cat label and executable slot concord with Pay Day.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031538",
+      "english_v2": "Snore",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the old Fake Out mismatch: the Chinese explicitly means the sound of snoring, identifying Snore.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031541",
+      "english_v2": "Cut",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese iai-cut technique and executable move slot identify Cut.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031545",
+      "english_v2": "Swift",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese meteor label is the established source name for Swift in this slot.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03154B",
+      "english_v2": "HornAtk",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the old Stomp mismatch: the Chinese explicitly describes a horn thrust, identifying Horn Attack. The executable eight-character battle cell displays HornAtk for the full move name Horn Attack.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031551",
+      "english_v2": "CrshClaw",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese crushing-claw label directly identifies Crush Claw. The executable eight-character battle cell displays CrshClaw for the full move name Crush Claw.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031558",
+      "english_v2": "SecrtPwr",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese secret-power label identifies Secret Power; the French witness names a different move and is not followed. The executable nine-character battle cell displays SecrtPwr for the full move name Secret Power.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03155F",
+      "english_v2": "HyprFang",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese finishing-fang term is the established source label for Hyper Fang. The executable eight-character battle cell displays HyprFang for the full move name Hyper Fang.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031566",
+      "english_v2": "Tri Atk",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrects the shifted French witness: the Chinese explicitly names a triangular attack, Tri Attack. The executable eight-character battle cell displays Tri Atk for the full move name Tri Attack.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03156D",
+      "english_v2": "Dbl-Edge",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese self-sacrificing strike label directly identifies Double-Edge. The executable nine-character battle cell displays Dbl-Edge for the full move name Double-Edge.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031574",
+      "english_v2": "HyprBeam",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese destructive-beam label directly identifies Hyper Beam. The executable eight-character battle cell displays HyprBeam for the full move name Hyper Beam.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03157B",
+      "english_v2": "SelfDstr",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese self-detonation label identifies Self-Destruct specifically, not the separate move Explosion. The executable eight-character battle cell displays SelfDstr for the full move name Self-Destruct.",
+      "compression": false,
+      "compression_justification": ""
+    }
+  ]
+}

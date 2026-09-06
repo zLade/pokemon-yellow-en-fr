@@ -1,0 +1,806 @@
+{
+  "schema": "nj046-en2-source-review-v1",
+  "batch_id": "other-002",
+  "entries": [
+    {
+      "stable_key": "MAIN:0x0306F5",
+      "english_v2": "Can't escape!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Can't escape!; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0306FE",
+      "english_v2": "No longer poisoned!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly states that the poisoned condition has ended; no unreadable 2015 graphic residue is reused. Full-text review: Keeps the cured-status sentence on the engine-provided second row.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03070B",
+      "english_v2": "Woke up!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Woke up!; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030714",
+      "english_v2": "No longer paralyzed!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly states that paralysis has ended; no unreadable 2015 graphic residue is reused. Full-text review: Keeps the cured-status sentence on the engine-provided second row.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030720",
+      "english_v2": "No longer burned!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly states that the burned condition has ended; no unreadable 2015 graphic residue is reused. Full-text review: Keeps the cured-status sentence on the engine-provided second row.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03072D",
+      "english_v2": "No longer confused!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly states that confusion has ended rather than retaining the vague 2015 recovery message.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030738",
+      "english_v2": "No longer frozen!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as No longer frozen!; the 2015 English and French gloss were used only as secondary witnesses. Full-text review: Keeps the cured-status sentence on the engine-provided second row.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030744",
+      "english_v2": "No longer badly poisoned!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the source's distinct severe-poison condition and states that it has ended. Full-text review: Keeps the complete severe-poison cure formula within the fully cleared 25-cell row.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030750",
+      "english_v2": "No longer afraid!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly states that the fear condition has ended; no unreadable 2015 graphic residue is reused. Full-text review: Keeps the cured-flinch sentence on the engine-provided second row.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03075C",
+      "english_v2": "Got ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The trailing space is deliberate: this obtained-value fragment precedes a dynamically inserted object name or prize amount.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030765",
+      "english_v2": "Paid ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The trailing space is deliberate: this payment fragment precedes a dynamically inserted amount.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03076B",
+      "english_v2": "Trainer ",
+      "editorial_origin": "translated_from_chinese_with_executable_context_ai_review",
+      "fidelity_comment": "Executable tracing proves that no player name precedes this fragment; it therefore labels the following dynamic opponent name as the winning Trainer.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030775",
+      "english_v2": "won!",
+      "editorial_origin": "translated_from_chinese_with_executable_context_ai_review",
+      "fidelity_comment": "Completes the executable two-line loss message as 'Trainer <name>' followed by 'won!'.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03077A",
+      "english_v2": "Requires ",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The trailing space is deliberate because this requirement fragment precedes a dynamically selected Badge label.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030782",
+      "english_v2": "Cascade Badge",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the Chinese color label Blue Badge; the executable badge identity may correspond to Cascade Badge, but the source itself does not say Cascade. Full-text review: Uses the official Badge name for the blue/Cut requirement.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03078C",
+      "english_v2": "Thunder Badge",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the Chinese color label Orange Badge; the executable badge identity may correspond to Thunder Badge, but the source itself does not say Thunder. Full-text review: Uses the official Badge name for the orange requirement.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030796",
+      "english_v2": "Soul Badge",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the Chinese color label Pink Badge; the executable badge identity may correspond to Soul Badge, but the source itself does not say Soul. Full-text review: Uses the official Badge name for the pink/Surf requirement.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0307A0",
+      "english_v2": "Rainbow Badge",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves Rainbow Badge, whose Chinese label and established official English identity coincide. Full-text review: Retains the official Rainbow Badge name.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0307AA",
+      "english_v2": "Boulder Badge",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the Chinese color label Gray Badge; the executable badge identity may correspond to Boulder Badge, but the source itself does not say Boulder. Full-text review: Uses the official Badge name for the gray/Flash requirement.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0307B9",
+      "english_v2": "\nCan't be poisoned!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Can't be poisoned!; the 2015 English and French gloss were used only as secondary witnesses. Full-text review: Moves the poison-immunity result to row two after the Pokémon name.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0307C4",
+      "english_v2": "\nCan't be burned!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Can't be burned!; the 2015 English and French gloss were used only as secondary witnesses. Full-text review: Moves the burn-immunity result to row two after the Pokémon name.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0307CF",
+      "english_v2": "\nCan't be frozen!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Can't be frozen!; the 2015 English and French gloss were used only as secondary witnesses. Full-text review: Moves the freeze-immunity result to row two after the Pokémon name.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0307DA",
+      "english_v2": "Store",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Store; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0307E1",
+      "english_v2": "Box 1",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Box 1; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0307E9",
+      "english_v2": "Box 2",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Box 2; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0307F1",
+      "english_v2": "Box 3",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Box 3; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0307F9",
+      "english_v2": "Box 4",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Box 4; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030801",
+      "english_v2": "Box 5",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Box 5; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030809",
+      "english_v2": "Box 6",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Box 6; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030811",
+      "english_v2": "Box 7",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Box 7; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030819",
+      "english_v2": "Box 8",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Box 8; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03081F",
+      "english_v2": "Party full!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Party full!; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0308C7",
+      "english_v2": " attacks!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The leading space is deliberate so the dynamically printed attacker and this verb compose as 'name attacks!'.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0308D3",
+      "english_v2": "Welcome!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Welcome!; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0308E1",
+      "english_v2": "Buy",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Buy; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0308E5",
+      "english_v2": "Sell",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Sell; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0308E9",
+      "english_v2": "How many?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Both the buy-count and sell-count pointers intentionally share this neutral quantity prompt.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0308F6",
+      "english_v2": "Transaction complete!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Transaction complete!; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030902",
+      "english_v2": "Transaction failed!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Transaction failed!; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030919",
+      "english_v2": "No Pokédex!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Pokédex not obtained!; the 2015 English and French gloss were used only as secondary witnesses. Full-text review: Replaces a noun-fragment error with a compact natural system message.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03092D",
+      "english_v2": "No Pokémon!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as No Pokémon!; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030939",
+      "english_v2": "Also took damage!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Also took damage!; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03094A",
+      "english_v2": "Was cursed!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Was cursed!; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030955",
+      "english_v2": "HP restored!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as HP restored!; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030AB5",
+      "english_v2": " EXP gained!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The leading space is deliberate because the runtime places a dynamic experience value immediately before this fragment.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030AC9",
+      "english_v2": "Not enough money!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Not enough money!; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030ADB",
+      "english_v2": "Ash defeated ",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "The trailing space joins the following dynamic Trainer name to form 'Ash defeated <Trainer>'.",
+      "compression": true,
+      "compression_justification": "Pointer repacking accommodates the official Generation I subject-verb order without changing the battle routine."
+    },
+    {
+      "stable_key": "MAIN:0x030AE5",
+      "english_v2": "Tackle",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese slot explicitly says Tackle. Adjacent recoil handling plus both 2015 witnesses suggest the executable event may instead be Struggle; Chinese wording is retained and the mechanical conflict remains flagged.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030F83",
+      "english_v2": "MystTkt",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Maps the Chinese dream-or-Mew voyage ticket to Mystic Ticket only because the established boarding dialogue and executable event-ticket context identify that item. Full-text review: Abbreviates Mystic Ticket for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x030F8E",
+      "english_v2": "LeafSt.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Leaf Stone; the 2015 English and French gloss were used only as secondary witnesses. Full-text review: Abbreviates Leaf Stone for the seven-cell Bag-list field.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031101",
+      "english_v2": "FlameWhl",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Flame Wheel; the 2015 English and French gloss were used only as secondary witnesses. The executable nine-character battle cell displays FlameWhl for the full move name Flame Wheel.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031108",
+      "english_v2": "FirePnch",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Fire Punch; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays FirePnch for the full move name Fire Punch.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03110F",
+      "english_v2": "Flamethr",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Flamethrower; the 2015 English and French gloss were used only as secondary witnesses. The executable nine-character battle cell displays Flamethr for the full move name Flamethrower.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031118",
+      "english_v2": "SacrFire",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Sacred Fire; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays SacrFire for the full move name Sacred Fire.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03111F",
+      "english_v2": "FireBlst",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Fire Blast; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays FireBlst for the full move name Fire Blast.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031126",
+      "english_v2": "Eruption",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Eruption; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03112C",
+      "english_v2": "WillWisp",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Will-O-Wisp; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays WillWisp for the full move name Will-O-Wisp.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031131",
+      "english_v2": "Bubble",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Bubble; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031138",
+      "english_v2": "Watr Gun",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Watr Gun; the 2015 English and French gloss were used only as secondary witnesses. The eight-character battle label uses Watr Gun so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031142",
+      "english_v2": "WatrPlse",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Water Pulse; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays WatrPlse for the full move name Water Pulse.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031149",
+      "english_v2": "BubbleBm",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Bubble Beam; the 2015 English and French gloss were used only as secondary witnesses. The executable nine-character battle cell displays BubbleBm for the full move name Bubble Beam.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031150",
+      "english_v2": "Octazook",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Octazook; the 2015 English and French gloss were used only as secondary witnesses. The eight-character battle label uses Octazook so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03115A",
+      "english_v2": "Crabhamr",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Crabhammer; the 2015 English and French gloss were used only as secondary witnesses. The executable nine-character battle cell displays Crabhamr for the full move name Crabhammer.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031166",
+      "english_v2": "HydroPmp",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Hydro Pump; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays HydroPmp for the full move name Hydro Pump.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031170",
+      "english_v2": "WtrSpout",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese name literally matches Water Spout. The French table calls this slot Water Sport, so the possible name-versus-effect conflict remains explicitly flagged. The executable eight-character battle cell displays WtrSpout for the full move name Water Spout.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031177",
+      "english_v2": "Clamp",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Clamp; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03117D",
+      "english_v2": "Withdraw",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Withdraw; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031186",
+      "english_v2": "ThndrShk",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The first Electric move and Pikachu starting move are the official ThunderShock, also rendered as Thunder Shock by the 2015 Luiga build; the executable eight-character battle cell displays ThndrShk.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03118F",
+      "english_v2": "ShockWav",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Shock Wave; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays ShockWav for the full move name Shock Wave.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031196",
+      "english_v2": "Spark",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Spark; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03119C",
+      "english_v2": "ThndrPch",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Thunder Punch; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays ThndrPch for the full move name Thunder Punch.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311A5",
+      "english_v2": "ThndrBlt",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Thunderbolt; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays ThndrBlt for the full move name Thunderbolt.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311AE",
+      "english_v2": "ZapCanon",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Zap Cannon; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays ZapCanon for the full move name Zap Cannon.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311B5",
+      "english_v2": "VoltTckl",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Volt Tackle; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays VoltTckl for the full move name Volt Tackle.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311BC",
+      "english_v2": "Thunder",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Thunder; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311C4",
+      "english_v2": "ThndrWav",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Thunder Wave; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays ThndrWav for the full move name Thunder Wave.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311CD",
+      "english_v2": "Absorb",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Absorb; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311D4",
+      "english_v2": "MegaDrn",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Mega Drain; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays MegaDrn for the full move name Mega Drain.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311DB",
+      "english_v2": "GigaDrn",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese escalating drain name supports Giga Drain. The French table calls this slot Magical Leaf, so the possible name-versus-effect conflict remains flagged. The executable eight-character battle cell displays GigaDrn for the full move name Giga Drain.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311E2",
+      "english_v2": "VineWhip",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as VineWhip; the 2015 English and French gloss were used only as secondary witnesses. The eight-character battle label uses VineWhip so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311EC",
+      "english_v2": "RazorLef",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Razor Leaf; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays RazorLef for the full move name Razor Leaf.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311F3",
+      "english_v2": "LeafSlsh",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Literally preserves the Chinese Magic Leaf Slash label. The French table calls this slot Needle Arm, so the possible name-versus-effect conflict remains flagged. The executable eight-character battle cell displays LeafSlsh for the full move name Magic Leaf Slash.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x0311FA",
+      "english_v2": "LeafBlde",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese blade-leaf label matches Leaf Blade. The French table calls this slot Seed Bomb, so the possible name-versus-effect conflict remains flagged. The executable eight-character battle cell displays LeafBlde for the full move name Leaf Blade.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031204",
+      "english_v2": "SolarBem",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Solar Beam; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays SolarBem for the full move name Solar Beam.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03120B",
+      "english_v2": "FrnzyPlt",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Frenzy Plant; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays FrnzyPlt for the full move name Frenzy Plant.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031212",
+      "english_v2": "GrssWstl",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as GrassWhistle; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays GrssWstl for the full move name GrassWhistle.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03121B",
+      "english_v2": "SlpPowdr",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Sleep Powder; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays SlpPowdr for the full move name Sleep Powder.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031224",
+      "english_v2": "Spore",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Spore; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03122A",
+      "english_v2": "StunSpor",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Stun Spore; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays StunSpor for the full move name Stun Spore.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031231",
+      "english_v2": "PwdrSnow",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Powder Snow; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays PwdrSnow for the full move name Powder Snow.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031238",
+      "english_v2": "Icy Wind",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Icy Wind; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031241",
+      "english_v2": "AuroraBm",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "The Chinese aurora-ray label matches Aurora Beam. The French table calls this slot Arctic Breeze, so the possible name-versus-effect conflict remains flagged. The executable nine-character battle cell displays AuroraBm for the full move name Aurora Beam.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031248",
+      "english_v2": "IcePnch",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as IcePnch; the 2015 English and French gloss were used only as secondary witnesses. The eight-character battle label uses IcePnch so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031252",
+      "english_v2": "Ice Beam",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Ice Beam; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03125B",
+      "english_v2": "Blizzard",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Blizzard; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031264",
+      "english_v2": "SheerCld",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Sheer Cold; the 2015 English and French gloss were used only as secondary witnesses. The executable eight-character battle cell displays SheerCld for the full move name Sheer Cold.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03126B",
+      "english_v2": "Mud-Slap",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Mud-Slap; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031274",
+      "english_v2": "Mud Shot",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Mud Shot; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03127D",
+      "english_v2": "Dig",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as Dig; the 2015 English and French gloss were used only as secondary witnesses.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x031281",
+      "english_v2": "BoneClub",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly renders the Chinese source as BoneClub; the 2015 English and French gloss were used only as secondary witnesses. The eight-character battle label uses BoneClub so adjacent moves remain visually separated.",
+      "compression": false,
+      "compression_justification": ""
+    }
+  ]
+}

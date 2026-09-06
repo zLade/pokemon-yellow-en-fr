@@ -1,0 +1,806 @@
+{
+  "schema": "nj046-en2-source-review-v1",
+  "batch_id": "dialogue-007",
+  "entries": [
+    {
+      "stable_key": "MAIN:0x03B9F1",
+      "english_v2": "ERIKA: You're very strong! Please take the Rainbow Badge. It lets you use Strength!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology. Full-text review: Restores the compliment's subject and a natural award formula.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03BA58",
+      "english_v2": "I'm from Vermilion City.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly restores the woman's origin in Vermilion City; the 2015 sister complaint is unrelated.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03BA87",
+      "english_v2": "The Poké Flute makes a special sound people can't hear. It wakes sleeping Pokémon.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Splits an overloaded semicolon into two natural source-faithful sentences. Omits the contextual one-speaker label 'MAN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 94 to 79 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BAB6",
+      "english_v2": "BEIBEI: I know everything, even the world inside games! This Eevee is yours!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves Beibei's cameo, claim to know even the video-game world, and explicit gift of Eevee. Full-text review: Replaces the unidiomatic 'I know all' while preserving the creator cameo.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 110 to 53 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BAF9",
+      "english_v2": "Hey! A switch behind the poster!? Let's push it!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03BB1B",
+      "english_v2": "Who are you? How'd you get in?",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 54 to 41 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BB39",
+      "english_v2": "You dared underestimate us!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrected against the Chinese source: the Rocket member accuses the player of underestimating Team Rocket, not mocking it.",
+      "compression": true,
+      "compression_justification": "Uses a compact direct accusation while retaining the source's frustration and exact sense of underestimation."
+    },
+    {
+      "stable_key": "MAIN:0x03BB57",
+      "english_v2": "Who are you? How did you get here?",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03BB79",
+      "english_v2": "Punk! You won't get far!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Restores the insult and threat to prevent the player from advancing easily.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 64 to 33 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BB86",
+      "english_v2": "Boss says Silph Scope reveals unseen ghosts...",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 88 to 54 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BBB2",
+      "english_v2": "You're too cocky!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly restores the accusation of arrogance instead of the unrelated 2015 surrender.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 36 to 25 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BBBF",
+      "english_v2": "Why are you here?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly preserves the question about the player's purpose in coming here.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 36 to 24 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BBCE",
+      "english_v2": "I see. Farewell.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Keeps the Rocket member's acknowledgment and polite permission to continue without adding the 2015 elevator instruction.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 43 to 28 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BBFA",
+      "english_v2": "Intruder alert!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the official English Gen I scene voice where it agrees with the Chinese; Chinese-only facts and bootleg-specific terminology are retained.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03BC0A",
+      "english_v2": "Silph Scope? I don't know where it is!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03BC31",
+      "english_v2": "If you oppose Team Rocket, you'll get nowhere!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the complete source conditional. Omits the contextual one-speaker label 'ROCKET', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 64 to 38 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BC4C",
+      "english_v2": "Boss stole Silph Scope from Nanjing Tech!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves the stolen Silph Scope, the Boss's responsibility, and the creator reference to Nanjing Tech.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 70 to 51 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BC5A",
+      "english_v2": "Just in time!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves the female Rocket speaker's statement that the player arrived at exactly the right time.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 34 to 27 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BC7A",
+      "english_v2": "If you've got the nerve, go find our Boss!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the conditional clause. Omits the contextual one-speaker label 'ROCKET', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 62 to 43 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BC9C",
+      "english_v2": "I really don't know!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly preserves the emphatic denial of knowledge.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 37 to 30 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BCA7",
+      "english_v2": "You're customer 100 at our new store! Take Fresh Water as a souvenir!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves the new store, exact 100th-customer milestone, luck, free mineral water, and commemorative purpose, using the official item name Fresh Water.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 104 to 85 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BCE8",
+      "english_v2": "Got Fresh Water!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Restores the mineral-water acquisition under its matching official English item name Fresh Water; the 2015 Lemonade is incorrect.",
+      "compression": true,
+      "compression_justification": "Drops only the optional English determiner in the acquisition formula, reducing this entry from 25 to 16 formatted bytes; the exact item Fresh Water remains explicit."
+    },
+    {
+      "stable_key": "MAIN:0x03BCF6",
+      "english_v2": "XIAOHONG: I'm the artist; I drew you!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves Xiaohong's creator cameo, role as the artist, and claim to have drawn the player character.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 51 to 38 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BD1A",
+      "english_v2": "KAMEIYU: I wrote the script... Pikachu is cute, right?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves Kameiyu's creator cameo as scriptwriter and his question about Pikachu's cuteness. Full-text review: Uses a complete creator-credit sentence.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 66 to 50 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BD3F",
+      "english_v2": "WEI CUNFU: I'm the programmer. Nice to meet you!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves Wei Cunfu's name, creator cameo, programmer role, and friendly introduction. Full-text review: Replaces the vague greeting with the source's polite introduction.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 55 to 34 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BD65",
+      "english_v2": "I'm BOSS! It's hard to catch all Pokémon. Keep trying, then tell Kameiyu!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves the BOSS cameo, difficulty of collecting every Pokémon, encouragement, completion condition, and instruction to report to Kameiyu.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 122 to 84 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BD9E",
+      "english_v2": "...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the Nun silent instead of replacing the ellipsis with the 2015 growls.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03BDB1",
+      "english_v2": "What did I do? Sorry! I was possessed by an evil force...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Replaces a semicolon fragment with a natural possession statement. Omits the contextual one-speaker label 'NUN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses short direct clauses while retaining her explicit question, apology, cause, and resulting frenzy."
+    },
+    {
+      "stable_key": "MAIN:0x03BDC5",
+      "english_v2": "I know nothing!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly restores the Rocket member's denial instead of the unrelated 2015 taunt.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 47 to 27 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BDE2",
+      "english_v2": "GIOVANNI: Ha! You made it here! This is Team Rocket HQ, where we trade Pokémon worldwide. I'm Boss Giovanni! Resist me, and you'll suffer!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Uses Giovanni as the official English identity of Sakaki while preserving his praise, worldwide Pokémon trafficking HQ, leadership, self-introduction, and threat. Full-text review: Restores complete clauses in Giovanni's NJ046-specific headquarters speech.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 209 to 106 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BE0E",
+      "english_v2": "XIAO LI: You found me... Tell no one. Please take this!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves Xiao Li's cameo, discovery, plea for secrecy, and offered item.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 75 to 55 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BE50",
+      "english_v2": "Got HM02: FLY!",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03BE5E",
+      "english_v2": "JAMES: How dare you come here and cause trouble again!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology. Full-text review: Removes an unsupported Boss-meeting claim and translates the Chinese Rocket threat.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03BF2D",
+      "english_v2": "GIOVANNI: I-impossible! You truly love your Pokémon. I can't understand it... I have business to attend to. I'm off! (He vanishes.)",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Keeps Giovanni's shock, inability to understand the player's love for Pokémon, important business, departure, and the source's explicit disappearance direction. Full-text review: Repairs clipped clauses while retaining the displayed source stage direction.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 181 to 111 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BFD6",
+      "english_v2": "Got Silph Scope!",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail.",
+      "compression": true,
+      "compression_justification": "Drops only the optional English determiner in the acquisition formula, reducing this entry from 25 to 16 formatted bytes; the exact item Silph Scope remains explicit."
+    },
+    {
+      "stable_key": "MAIN:0x03BFE7",
+      "english_v2": "Join me in a curse...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses the natural invitation syntax. Omits the contextual one-speaker label 'NUN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 36 to 24 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03BFF8",
+      "english_v2": "Huh? What happened?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves the Nun's confusion about her own condition rather than the 2015 declaration of rescue.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 34 to 28 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C008",
+      "english_v2": "Give me... your soul!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses natural dramatic word order and punctuation. Omits the contextual one-speaker label 'NUN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C01C",
+      "english_v2": "I'm tired...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly preserves the Nun's fatigue rather than narrating the spirit's departure.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 31 to 17 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C02D",
+      "english_v2": "Ooh... A ghost...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the Medium's moan and explicit recognition of a ghost.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C035",
+      "english_v2": "Huh? This...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly restores the Medium's surprised unfinished question without adding the Silph Scope requirement.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 29 to 26 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C04F",
+      "english_v2": "Can you win?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves the Nun's question about the player's ability to win.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C059",
+      "english_v2": "Huh? What happened?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Restores the repeated confusion after possession; the 2015 prayer belongs to a different meaning.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 34 to 28 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C088",
+      "english_v2": "Darn...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly restores the Medium's frustrated exclamation.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 18 to 15 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C096",
+      "english_v2": "Dizzy... Am I anemic?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves the dizziness and the Medium's specific question about anemia; the 2015 healing-circle instruction is unrelated.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 64 to 28 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C0C5",
+      "english_v2": "A zombie...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps the Nun's identification of a zombie rather than changing it to a ghost.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C0D6",
+      "english_v2": "I guard this poster. Cross me and suffer!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves the Rocket member's poster-guarding role and threat against interference.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 86 to 52 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C114",
+      "english_v2": "Darn! Our base may be found! I must alert Boss!",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 106 to 56 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C15A",
+      "english_v2": "I've come to my senses.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses the idiomatic recovery phrase. Omits the contextual one-speaker label 'NUN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 33 to 25 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C16A",
+      "english_v2": "Kang'er... Kang'er...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Preserves the repeated name Kang'er exactly as a source-specific personal reference.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C17D",
+      "english_v2": "I'm shaking...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly restores the Nun's trembling rather than the 2015 possession statement.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 31 to 19 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C18E",
+      "english_v2": "How sad...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves the Nun's expression of sadness rather than the unrelated zombie exclamation.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C197",
+      "english_v2": "Something flew out of me...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrected against the Chinese source: restores that something flew out of the Nun's body, rather than merely leaving it.",
+      "compression": true,
+      "compression_justification": "Uses 'out of me' to preserve the explicit flight and bodily origin compactly."
+    },
+    {
+      "stable_key": "MAIN:0x03C1A2",
+      "english_v2": "Hee... hee...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Faithfully renders the Medium's repeated giggle rather than the 2015 groans.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 29 to 25 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C1B2",
+      "english_v2": "Hee hee... What happened to me?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Keeps both the giggle and the Medium's confusion about her condition.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C1D6",
+      "english_v2": "Leave! Get out of here!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves the two urgent commands to leave this place without assigning an unsupported speaker. Full-text review: Removes an ellipsis after an exclamation and restores the location.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 27 to 18 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C1EA",
+      "english_v2": "Silph Scope showed the ghost's true form!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Keeps use of the Silph Scope and the revelation of the ghost's true identity without naming it before the next line does.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 66 to 43 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C21F",
+      "english_v2": "ASH: The ghost was Cubone's kind mother...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves Ash as speaker and identifies the ghost specifically as Cubone's gentle mother without adding her later fate.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 57 to 47 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C28D",
+      "english_v2": "JESSIE: Pesky Mr. Fuji! Beat us to save him!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C370",
+      "english_v2": "MR. FUJI: Did you come to rescue me? Thank you... I came to calm the spirit of Marowak, Cubone's mother. It seems she has gone to heaven. Thank you for coming all this way. Now, come home with me.",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology. Full-text review: Restores every source sentence and relation in natural English.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C424",
+      "english_v2": "MR. FUJI: Ash, you'll never finish the Pokédex without loving your Pokémon. This may help!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Keeps Ash's Pokédex goal, love for Pokémon as a requirement, Fuji's uncertainty, and his offered item. Full-text review: Repairs the conditional logic and the gift transition.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 152 to 100 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C464",
+      "english_v2": "MR. FUJI: The Poké Flute wakes even sleeping Pokémon. Use it when you meet one!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C493",
+      "english_v2": "I'm parched! Fresh Water for me? Thanks! I'll let you pass.",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C4FE",
+      "english_v2": "Hey, kid! Don't loiter here!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly restores the warning to the child not to loiter in this area.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 50 to 37 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C51C",
+      "english_v2": "Boss aims to seize Silph Co...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Corrected against the Chinese source: explicitly restores the Boss's intent to seize Silph Co., not merely want it.",
+      "compression": true,
+      "compression_justification": "Uses 'aims to seize' as a compact rendering of intended hostile takeover."
+    },
+    {
+      "stable_key": "MAIN:0x03C541",
+      "english_v2": "I'm one of four Rocket Brothers!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves membership in the explicitly four-man Rocket Brothers group.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 54 to 47 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C54E",
+      "english_v2": "With Silph, we can sell Pokémon for more!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted subject and auxiliary. Omits the contextual one-speaker label 'ROCKET', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses a compact conditional phrase and natural 'for more' while retaining Silph control and the higher-price motive."
+    },
+    {
+      "stable_key": "MAIN:0x03C55B",
+      "english_v2": "Darn you for getting in my way!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Replaces an unnatural curse construction with the direct source complaint. Omits the contextual one-speaker label 'ROCKET', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 52 to 29 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C577",
+      "english_v2": "I was wrong...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly restores the Rocket member's admission of being wrong.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C58E",
+      "english_v2": "I've spotted someone suspicious!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Turns a label fragment into the source alert. Omits the contextual one-speaker label 'ROCKET', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 46 to 26 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C5A6",
+      "english_v2": "Who are you?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Restores the demand for the player's true identity instead of the unrelated dual-employment claim.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 35 to 23 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C5CA",
+      "english_v2": "You made it here? Impressive...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves the reluctant acknowledgment of the player's ability to reach this point.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 45 to 38 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C5E5",
+      "english_v2": "Impressive! You've made it this far, but reaching the President's office won't be easy!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the missing article and a natural contrast. Omits the contextual one-speaker label 'ROCKET', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses a direct contrast while preserving the praise, successful arrival, destination, and difficulty rather than prohibition."
+    },
+    {
+      "stable_key": "MAIN:0x03C5F0",
+      "english_v2": "I've never seen you.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly restores the Rocket member's observation that the player is unfamiliar.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 45 to 28 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C60E",
+      "english_v2": "Will beating me satisfy you? You won't win!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves both the taunting question about satisfaction and the refusal to let the player win.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 65 to 57 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C650",
+      "english_v2": "Silph Co. is ours!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly restores the claim that Team Rocket has seized and occupied Silph Co.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 48 to 27 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C662",
+      "english_v2": "Long live Team Rocket!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Faithfully restores the Rocket member's celebratory slogan.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 36 to 31 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C66F",
+      "english_v2": "You again, causing trouble?!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Keeps recognition of the returning player and accusation of renewed interference.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 52 to 36 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C68D",
+      "english_v2": "Feel free to look...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly preserves the Rocket member's permission, likely sarcastic, to look around freely.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 47 to 29 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C6AC",
+      "english_v2": "What do you want?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly restores the demand to know the player's intent.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 31 to 24 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C6CF",
+      "english_v2": "Darn you!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Naturally renders the Rocket member's insult toward the player without blaming weak Pokémon as in 2015.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 23 to 17 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C6EB",
+      "english_v2": "Boss is here. We fear nothing!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Preserves the female Rocket speaker, the Boss's presence, and the confidence that it removes all fear.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 62 to 46 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C70E",
+      "english_v2": "I'm a Silph employee and a member of Team Rocket.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Uses the complete official organization name in a natural reveal. Omits the contextual one-speaker label 'ROCKET', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 64 to 47 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C722",
+      "english_v2": "Silph is ours!",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 31 to 24 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C748",
+      "english_v2": "Don't hit me! I was forced too...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Keeps the plea not to be struck and the claim that the Rocket member was also coerced.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 63 to 44 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C765",
+      "english_v2": "GARY: Hahaha! I knew you'd come, Ash! Team Rocket gave you trouble? I don't care! Show me how much stronger you've gotten!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology. Full-text review: Repairs the source questions and the ungrammatical final challenge.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C7DF",
+      "english_v2": "GARY: Just kidding... I'm off to face the Elite Four! Keep it up, Ash! Smell ya!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C861",
+      "english_v2": "I'm also one of the four Rocket Brothers!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the definite article. Omits the contextual one-speaker label 'ROCKET', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 66 to 47 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C886",
+      "english_v2": "Fine. My kid brother will avenge me!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Keeps the concession and explicit promise that the speaker's younger brother will take revenge.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 53 to 48 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C890",
+      "english_v2": "You dare mock me?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Restores the challenge about being underestimated, not betrayed.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 41 to 27 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C8A4",
+      "english_v2": "Go on, mock me.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Directly preserves the Rocket member's resigned invitation to keep underestimating him.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 36 to 22 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C8B1",
+      "english_v2": "I just heard that a kid is lurking nearby!",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Restores the omitted hearsay subject and complete clause. Omits the contextual one-speaker label 'ROCKET', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses 'just heard' as a compact natural rendering of the newly received report."
+    },
+    {
+      "stable_key": "MAIN:0x03C8C9",
+      "english_v2": "Better not oppose us...",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Compressed directly against the Chinese source. Restores the warning that resisting Team Rocket is unwise.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 52 to 31 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03C8E5",
+      "english_v2": "JAMES: Wait! Boss is discussing business. Don't disturb him!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C958",
+      "english_v2": "ASH: Who are you?",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Directly preserves Ash's identity question; the 2015 blast-off line belongs to another scene state.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03C992",
+      "english_v2": "GIOVANNI: Ah, Ash! Again! I'm talking business with Silph staff. Stay out of grown-up matters, or face pain!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03CA26",
+      "english_v2": "GIOVANNI: Blast it! I quit Silph for now. Team Rocket won't fall! All Pokémon exist for us! Remember, Ash! I'm off!",
+      "editorial_origin": "adapted_from_official_english_gen1_with_chinese_fidelity_ai_review",
+      "fidelity_comment": "Uses the matching official English Red/Blue/Yellow scene as its primary voice while retaining Chinese-only facts and Famicom-specific terminology.",
+      "compression": false,
+      "compression_justification": ""
+    },
+    {
+      "stable_key": "MAIN:0x03CAB3",
+      "english_v2": "The President and I are so grateful you saved us!",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 92 to 66 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03CAE7",
+      "english_v2": "The Poké Flute woke sleeping Snorlax!",
+      "editorial_origin": "official_english_gen1_reviewed_chinese_specific_retained_ai_review",
+      "fidelity_comment": "Reviewed against the matching English Red/Blue/Yellow scene; the Chinese/Famicom wording is retained because the official line omits or contradicts a material source detail.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 46 to 36 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    },
+    {
+      "stable_key": "MAIN:0x03CAFB",
+      "english_v2": "This is a famous fishing spot.",
+      "editorial_origin": "translated_directly_from_chinese_ai_review",
+      "fidelity_comment": "Full-text review: Replaces the unidiomatic phrase 'Fishing is famous here'. Omits the contextual one-speaker label 'FISHERMAN', as in official Gen I field dialogue; the sprite and encounter retain the speaker identity.",
+      "compression": true,
+      "compression_justification": "Uses shorter direct clauses and removes English-only scaffolding, reducing this entry from 43 to 34 formatted bytes while retaining every Chinese-source detail named in the fidelity comment."
+    }
+  ]
+}

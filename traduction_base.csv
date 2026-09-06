@@ -1,0 +1,1845 @@
+offset_hex,line,layout,max_len,source_en,fr_text,fr_len,overflow
+0x0301C4,6029,,17,<0A><B0A7><B0A8><B0A9><B0AA><B0AB><B0AC><B0AD><B0AE>,(c) Nanjing - tous droits réservés.,35,YES
+0x0301D7,114,,19,0000000000Appeared!,0000000000Apparaît!,19,
+0x0301EB,5819,,4,Go! ,Vas-y! ,7,YES
+0x0301F0,6030,,8,00<B1F8><B1C9><B0BC>,sauvage,7,
+0x0301F9,115,,9, Fainted!, K.O.!  ,8,
+0x030203,116,,12, Experience!, Exp gagnée!,12,
+0x030210,117,,16,Got away safely!,Fuite réussie!  ,16,
+0x030221,118,,8,Threw a ,Lance  ,7,
+0x03022A,119,,5,Yes! ,Oui! ,5,
+0x030230,120,,16,000000000Oh No! ,000000000Oh non! ,17,YES
+0x030242,121,,11,Broke free!,S'échappe! ,11,
+0x03024E,122,,19,00000000was caught!,00000000est capturé!,20,YES
+0x030262,123,,10,0sent out ,0envoie   ,10,
+0x03026D,124,,22,Can't run from trainer,Fuite impossible!    ,21,
+0x030290,125,,24,Trainer blocked the ball,Le Dresseur bloque la Poké Ball!,32,YES
+0x0302A9,126,,20,0000000000Your turn!,0000000000À ton tour,20,
+0x0302BF,127,,5, used, util,5,
+0x0302C5,128,,9,Good Hit!,Bon coup!,9,
+0x0302CF,129,,20,0Not very effective!,0Peu efficace!     ,19,
+0x0302E4,5417,,9,00Missed!,00Raté!,7,
+0x0302EE,130,,11,is poisoned,est empoisonné,14,YES
+0x0302FA,131,,9, Flinched, Recule ,8,
+0x030304,132,,9,is burned,est brûlé,9,
+0x03030E,133,,11,is confused,est confus ,11,
+0x03031A,134,,9,is frozen,est gelé ,9,
+0x030324,135,,28,000000is hurt due to poison!,000000souffre du poison!    ,28,
+0x030341,136,,9,is asleep,dort     ,9,
+0x03034B,137,,24,0is hurt from it's burn!,0souffre de brûlure!    ,24,
+0x030364,138,,14,000is confused,000est confus,13,
+0x030373,139,,13,0000is frozen,0000est gelé,12,
+0x030381,6031,,16,0000<B0DC><B7AE><B8D8><B0F8><BBA2><B9C7>,subit des dégâts du poison grave !,34,YES
+0x030392,6032,,13,<0A><B3EE><B8AC><B0CE><B0EC><B3A9><B0B2>,a trop peur pour agir !,23,YES
+0x0303A1,5820,,5, Rose, Monte,6,YES
+0x0303A9,140,,18,  can't go higher!,  ne monte plus! ,17,
+0x0303BC,5418,,11,000000 Fell,000000Chute,11,
+0x0303C8,6033,,13,000<BBA4><B9D4><B0F9><BBA5><B0F8>,a fortement baissé !,20,YES
+0x0303D6,141,,15, can't go lower, ne baisse plus,15,
+0x0303E6,6034,,4,<B0D8><B0D8>,Merci,5,YES
+0x0303EB,6035,,4,<B0D8><B0D8>,Merci,5,YES
+0x0303F0,6036,,5,<0A><B0D8><B0D8>,Merci,5,
+0x0303F6,6037,,5,<0A><B0D8><B0D8>,Merci,5,
+0x0303FC,6038,,5,<0A><B0D8><B0D8>,Merci,5,
+0x030403,5419,,5,What?,Quoi?,5,
+0x030409,142,,13, is Evolving!, évolue!    ,12,
+0x030417,5821,,5,Wow! ,Ouah! ,6,YES
+0x03041D,5420,,10,Oh!A Wild ,Oh!Sauvage ,11,YES
+0x030428,143,,8, learned, apprend,8,
+0x03043F,144,,24,000000more than 4 moves!,000000Déjà 4 attaques!,22,
+0x030458,6039,,6,<B0C3><B4C3><B1F9>,veut apprendre,14,YES
+0x03045F,145,,7,Forgot ,Oublie ,7,
+0x030467,6040,,16,000000000000<B0C2><B1A1>,Oui / Non,9,
+0x030479,146,,11,Which move?,Quelle attaque?,15,YES
+0x030485,5822,,6,And...,Et...,5,
+0x03048C,147,,13, Greatly Rose, Monte bcp! ,12,
+0x03049A,148,,11,000Learned ,000Apprend ,11,
+0x0304AB,149,,22,00000000 Did not learn,00000000 N'apprend pas,22,
+0x0304C2,6042,,12,<BAB7><B6B8><B0F8><B6C6><BBA7><B0E4>,concentre la lumière du soleil !,32,YES
+0x0304CF,6043,,11,<0A><B6C6><BBA7><B0E4><BBA8><B0A4>,libère l'énergie solaire !,26,YES
+0x0304DB,6044,,11,<0A><BBA9><B0DB><B0F8><B3BB><B0F9>,s'enfouit sous terre !,22,YES
+0x0304E7,6045,,9,<0A><BBA4><B9D4><B4AB><B4AC>,attaque rapidement !,20,YES
+0x0304F1,6046,,9,<0A><BBAA><B6B8><B0E3><B3EC>,accumule de l'énergie !,23,YES
+0x0304FB,6047,,9,<0A><B6C0><B0E3><B1D1><B4AC>,frappe de toutes ses forces !,29,YES
+0x030505,6048,,9,<0A><BBAA><B6B8><B0E3><B3EC>,accumule de l'énergie !,23,YES
+0x03050F,6049,,9,<0A><B6C0><B0E3><B1D1><B4AC>,frappe de toutes ses forces !,29,YES
+0x030519,6050,,9,<0A><BBAA><B6B8><B0CF><B4F1>,cesse d'accumuler de l'énergie !,32,YES
+0x030523,6051,,9,<0A><B1AC><B1E5><B8AF><B1A2>,s'envole haut dans le ciel !,28,YES
+0x03052D,6052,,9,<0A><BBAB><B4B9><B1D1><B4AC>,frappe au péril de sa vie !,27,YES
+0x030537,6053,,9,<0A><BBAA><B6B8><B6DD><B0E3>,concentre une force mystique !,30,YES
+0x030541,6054,,9,<0A><B6DD><B0E3><BBA8><B0A4>,libère sa force mystique !,26,YES
+0x03054B,6055,,9,<0A><B6EC><B2D7><B3E5><B0FC>,prévoit une attaque !,21,YES
+0x030555,6056,,17,<0A><B4A9><B0DB><B6EC><B2D7><B3E5><B0FC><B4AB><B4AC>,subit l'attaque Prescience !,28,YES
+0x030567,6057,,7,<0A><B9B3><B8AB><B0F8>,dévore le rêve de,17,YES
+0x03056F,6058,,5,<0A><B0BC><B1D6>, !,2,
+0x030575,6059,,7,<0A><B2F4><BAF0><B0F8>,entre en colère !,17,YES
+0x03057D,6060,,9,<0A><B4A9><B0DB><B9BA><B9BB>,est maudit !,12,YES
+0x030588,166,,5,Fight,Att. ,5,
+0x03058E,167,,5, Item,Objet,5,
+0x030594,168,,4,PKMN,PKMN,4,
+0x030599,169,,3, Ru, Fu,3,
+0x0305E8,175,,6,Send  ,Envoi ,6,
+0x0305F5,5426,,9,   00Item,   00Objet,10,YES
+0x030602,176,,5,Balls,Balle,5,
+0x030608,177,,8,00TM/HMs,00CT/CS ,8,
+0x030611,5823,,6,KeyItm,ObjClé,6,
+0x030618,5427,,7,00PWR :,00PUI :,7,
+0x030621,5824,,5,Acc.:,Préc.:,6,YES
+0x03062E,5825,,5,Wild ,Sauv. ,6,YES
+0x030634,178,,6,Enemy ,Ennemi,6,
+0x03063B,5421,,9,Critical!,Critique!,9,
+0x030646,179,,18,Send another PKMN?,Envoyer un Pokémon?,19,YES
+0x030659,180,,6,Yes No,Oui Non,7,YES
+0x030660,150,,28,0000000000000Switch Pok@mon?,0000000000000Changer Pokémon,28,
+0x03067D,151,,16,000Grew to level,000Monte au niv. ,17,YES
+0x03068E,5422,,15,0000000already ,0000000déjà     ,16,YES
+0x03069F,5809,,6,Attack,Att.,4,
+0x0306A6,5826,,7,Defense,Défense,7,
+0x0306AF,5827,,5,S.Atk,Atq.S,5,
+0x0306B5,5828,,4,S.DE,D.Sp,4,
+0x0306BA,5829,,5,Speed,Vit.,4,
+0x0306C0,5428,,8,Accuracy,Preci.  ,8,
+0x0306C9,181,,13,Recovered HP!,PV restaurés !,14,YES
+0x0306D7,6063,,9,<B0CE><B0EC><B3A9><B0B2>!,ne peut pas agir !,18,YES
+0x0306E1,6064,,10,<0A><B1D1><B4AC><BAC5><B8BC>!,K.O. en un coup !,17,YES
+0x0306EC,6065,,8,<0A><B3EF><B8B9><B0F8>!,s'est enfui !,13,YES
+0x0306F5,6066,,8,<0A><B0CE><B0EC><B3EF>!,ne peut pas fuir !,18,YES
+0x0306FE,6067,,11,<0A><B0DC><B8D8><B9B5><BBB2><B0F8>,n'est plus empoisonné !,23,YES
+0x03070B,182,,8,Woke up!,se réveille!,12,YES
+0x030714,6068,,11,<0A><B2ED><B5FA><B9B5><BBB2><B0F8>,n'est plus paralysé !,21,YES
+0x030720,6069,,11,<0A><BAE7><B9C7><B9B5><BBB2><B0F8>,n'est plus brûlé !,18,YES
+0x03072D,5423,,10,Recovered!,Restaure! ,10,
+0x030738,6070,,11,<0A><BAE8><BAD4><B9B5><BBB2><B0F8>,n'est plus gelé !,17,YES
+0x030744,6071,,11,<0A><B7AE><B8D8><B9B5><BBB2><B0F8>,n'est plus gravement empoisonné !,33,YES
+0x030750,6072,,11,<0A><B3EE><B8AC><B9B5><BBB2><B0F8>,n'a plus peur !,15,YES
+0x03075C,183,,8,You got ,Obtenu! ,8,
+0x030765,184,,5,Lost ,Perdu,5,
+0x03076B,185,,9,00Trainer,00Dresseur,10,YES
+0x030775,5810,,4,Won!,Vic!,4,
+0x03077A,6073,,7,000<B3C7><B0C3>,Requis :,8,YES
+0x030782,6074,,9,<0A><B4D0><B4BC><B3D1><B3D2>,Badge Cascade,13,YES
+0x03078C,6075,,9,<0A><B7EB><B4BC><B3D1><B3D2>,Badge Foudre,12,YES
+0x030796,6076,,9,<0A><BBB3><B5CE><B3D1><B3D2>,Badge Âme,9,
+0x0307A0,6077,,9,<0A><B6CA><B8FD><B3D1><B3D2>,Badge Prisme,12,YES
+0x0307AA,6078,,9,<0A><B4BB><B4BC><B3D1><B3D2>,Badge Roche,11,YES
+0x0307B9,6079,,10,<0A><B0CE><B0EC><B0DC><B8D8>!,ne peut pas être empoisonné !,29,YES
+0x0307C4,6080,,10,<0A><B0CE><B0EC><BAE7><B9C7>!,ne peut pas être brûlé !,24,YES
+0x0307CF,6081,,10,<0A><B0CE><B0EC><BAE8><BAD4>!,ne peut pas être gelé !,23,YES
+0x0307DA,5830,,6,Send  ,Envoi ,6,
+0x0307E1,191,,5,Box 1,Bte 1,5,
+0x0307E9,192,,5,Box 2,Bte 2,5,
+0x0307F1,193,,5,Box 3,Bte 3,5,
+0x0307F9,194,,5,Box 4,Bte 4,5,
+0x030801,195,,5,Box 5,Bte 5,5,
+0x030809,196,,5,Box 6,Bte 6,5,
+0x030811,197,,5,Box 7,Bte 7,5,
+0x030819,198,,5,Box 8,Bte 8,5,
+0x03081F,5429,,12,00Party Full,00Équipe plei,13,YES
+0x03082C,221,dialogue_intro_17_19,106,Hello there!     Welcome to the     world of Pok@mon!  My name is OAK!    People call me the Pok@mon PROF!,"PROF. CHEN :\nBien le bonjour !\nBienvenue !\nVoici le monde\ndes Pokémon !\nMoi, c'est Chen,\nle Prof Pokémon !\nIci vivent\ndes créatures\nappelées Pokémon !",187,YES
+0x030898,152,pokedex_13x4,46,It uses the  bulb on it's back to storeenergy.,Il stocke de l'énergie dans le bulbe de son dos.,50,YES
+0x0308C7,153,,11, Unleashed!, Déchaîne! ,11,
+0x0308D3,204,,12,0Item   Shop,0Boutique   ,12,
+0x0308E1,5831,,3,Buy,Ach,3,
+0x0308E5,5832,,3,Sel,Vnd,3,
+0x0308E9,205,,12,How    Many?,Combien?    ,12,
+0x0308F6,206,,11,Thank  you!,Merci!     ,11,
+0x030902,154,,22,0000000000Can't  Hold!,0000000000Sac plein!  ,22,
+0x030919,155,,19,00000000Don't have!,00000000Pas en stock!,21,YES
+0x03092D,207,,11,No Pokemon!,Pas de Pokémon,14,YES
+0x030939,208,,16,Hit with recoil!,Dégâts de recul!,16,
+0x03094A,6061,,9,0<B4A9><B0DB><B9BA><B9BB>,est maudit !,12,YES
+0x030955,156,,29,00000000000000000Regained HP!,00000000000000000PV restaurés !,31,YES
+0x030AB5,157,,19, Experience Gained!, Exp. gagnée!     ,18,
+0x030AC9,158,,17,Can't  Afford it!,Pas assez d'$!   ,17,
+0x030ADB,159,,9,Defeated ,Battu    ,9,
+0x030AE5,160,,14,Used Struggle!,Util. Lutte!  ,14,
+0x030F83,5557,,10,Secret Key,Clé Secrète,11,YES
+0x030F8E,5447,,8,LeafSton,PierrPla,8,
+0x0310FB,5835,,5,Ember,Flammèche,9,YES
+0x031101,5896,,6,<B0C7><B0C9><B0CB>,Roue de Feu,11,YES
+0x031108,5897,,6,<B0CD><B0CF><B0D1>,Poing de Feu,12,YES
+0x03110F,5898,,8,<B0D3><B0D5><B0D7><B0D9>,Lance-Flamme,12,YES
+0x031118,5899,,6,<B0DB><B0DD><B0DF>,Feu Sacré,9,YES
+0x03111F,5900,,6,<B0E1><B0E3><B0E5>,Déflagration,12,YES
+0x031126,5602,,5,Erupt,Éruption,8,YES
+0x03112C,5603,,4,Wisp,Feu Follet,10,YES
+0x031131,5604,,6,Bubble,Écume,5,
+0x031138,5901,,6,<B561><B563><B565>,Pistolet à O,12,YES
+0x031142,5902,,6,<B0E7><B0E9><B0EB>,Vibraqua,8,YES
+0x031149,5903,,6,<B0ED><B0EF><B0F1>,Bulles d'O,10,YES
+0x031150,5904,,6,<B567><B569><B56B>,Octazooka,9,YES
+0x03115A,5905,,6,<B0F3><B0F5><B0F7>,Pince-Masse,11,YES
+0x031166,5906,,6,<B56D><B56F><B571>,Hydrocanon,10,YES
+0x031170,5907,,6,<B0F9><B0FB><B0FD>,Tourniquet,10,YES
+0x031177,5605,,5,Clamp,Claquoir,8,YES
+0x03117D,4845,,8,Withdraw,Repli,5,
+0x031186,5908,,8,<B1A1><B1A3><B1A5><B1A7>,Éclair,6,
+0x03118F,5909,,6,<B1A9><B1AB><B1AD>,Onde de Choc,12,YES
+0x031196,5606,,5,Spark,Étincelle,9,YES
+0x03119C,5910,,8,<B1AF><B1B1><B1B3><B1B5>,Poing-Éclair,12,YES
+0x0311A5,5911,,8,<B1B7><B1B9><B1BB><B1BD>,Tonnerre,8,
+0x0311AE,5912,,6,<B1BF><B1C1><B1C3>,Élecanon,8,YES
+0x0311B5,5913,,6,<B1C5><B1C7><B1C9>,Électacle,9,YES
+0x0311BC,5607,,7,Thunder,Fatal-Foudre,12,YES
+0x0311C4,5914,,8,<B1CB><B1CD><B1CF><B1D1>,Cage-Éclair,11,YES
+0x0311CD,5608,,6,Avsorb,Vol-Vie,7,YES
+0x0311D4,5915,,6,<B1D3><B1D5><B1D7>,Méga-Sangsue,12,YES
+0x0311DB,5916,,6,<B1D9><B1DB><B1DD>,Feuille Magik,13,YES
+0x0311E2,5917,,4,<B573><B575>,Fouet Lianes,12,YES
+0x0311E7,5609,,4,Whip,Fou.,4,
+0x0311EC,5918,,6,<B1DF><B1E1><B1E3>,Tranch'Herbe,12,YES
+0x0311F3,5919,,6,<B1E5><B1E7><B1E9>,Poing Dard,10,YES
+0x0311FA,5920,,4,<B577><B579>,Canon Graine,12,YES
+0x0311FF,5610,,4,Bomb,Bomb,4,
+0x031204,5921,,6,<B1EB><B1ED><B1EF>,Lance-Soleil,12,YES
+0x03120B,5922,,6,<B1F1><B1F3><B1F5>,Végé-Attaque,12,YES
+0x031212,5923,,8,<B1F7><B1F9><B1FB><B1FD>,Siffl'Herbe,11,YES
+0x03121B,5924,,8,<B1FF><B101><B103><B105>,Poudre Dodo,11,YES
+0x031224,5611,,5,Spore,Spore,5,
+0x03122A,5925,,6,<B107><B109><B10B>,Para-Spore,10,YES
+0x031231,5926,,6,<B10D><B10F><B111>,Poudreuse,9,YES
+0x031238,4846,,8,Icy Wind,Vent Glace,10,YES
+0x031241,5927,,6,<B113><B115><B117>,Brise Glacée,12,YES
+0x031248,5928,,6,<B57B><B57D><B57F>,Poing-Glace,11,YES
+0x031252,4847,,8,Ice Beam,Laser Glace,11,YES
+0x03125B,4848,,8,Blizzard,Blizzard,8,
+0x031264,5929,,6,<B119><B11B><B11D>,Glaciation,10,YES
+0x03126B,4849,,8,Mud Slap,Coud'Boue,9,YES
+0x031274,4850,,8,Mud Shot,Tir de Boue,11,YES
+0x03127D,5612,,3,Dig,Tunnel,6,YES
+0x031281,5930,,4,<B581><B583>,Massd'Os,8,YES
+0x031286,5613,,4,Club,Mas.,4,
+0x03128B,5931,,6,<B11F><B121><B123>,Séisme,6,
+0x031292,5932,,10,0000<B129><B12B><B12D>,0000Osmerang,12,YES
+0x03129D,5444,,11,0000Fissure,0000Abîme  ,11,
+0x0312A9,5933,,6,<B133><B135><B137>,Jet de Sable,12,YES
+0x0312B0,5934,,6,<B139><B13B><B13D>,Jet-Pierres,11,YES
+0x0312B7,5935,,4,<B585><B587>,Tomberoche,10,YES
+0x0312BC,5614,,4,Tomb,Tomb,4,
+0x0312C1,5936,,8,<B13F><B141><B143><B145>,Pouvoir Antique,15,YES
+0x0312CA,5937,,6,<B147><B149><B14B>,Éboulement,10,YES
+0x0312D1,5938,,6,<B14D><B14F><B151>,Vampirisme,10,YES
+0x0312D8,5939,,6,<B153><B155><B157>,Double-Dard,11,YES
+0x0312DF,5940,,6,<B159><B15B><B15D>,Vent Argenté,12,YES
+0x0312E6,5941,,6,<B15F><B161><B163>,Rayon Signal,12,YES
+0x0312ED,5942,,4,<B589><B58B>,Mégacorne,9,YES
+0x0312F2,5615,,4,Horn,Corn,4,
+0x0312F7,5943,,4,<B58D><B58F>,Lumi-Queue,10,YES
+0x0312FC,5616,,4,Glow,Halo,4,
+0x031301,5944,,6,<B165><B167><B169>,Sécrétion,9,YES
+0x031308,5945,,10,0000<B16F><B171><B173>,0000Dard-Venin,14,YES
+0x031313,5836,,4,Smog,Purédpois,9,YES
+0x031318,5837,,4,Acid,Acide,5,YES
+0x03131D,5946,,6,<B175><B177><B179>,Queue-Poison,12,YES
+0x031324,5947,,6,<B17B><B17D><B17F>,Crochet Venin,13,YES
+0x03132B,5617,,6,Sludge,Détritus,8,YES
+0x031332,5948,,6,<B181><B183><B185>,Bomb-Beurk,10,YES
+0x031339,5949,,10,0000<B18B><B18D><B18F>,0000Gaz Toxik,13,YES
+0x031344,5838,,5,Toxic,Toxik,5,
+0x03134A,4851,,8,Low Kick,Balayage,8,
+0x031353,5950,,6,<B191><B193><B195>,Éclate-Roc,10,YES
+0x03135A,5951,,6,<B197><B199><B19B>,Poing-Karaté,12,YES
+0x031361,5952,,6,<B3E1><B3E3><B3E5>,Double Pied,11,YES
+0x031368,5618,,7,Revenge,Vendetta,8,YES
+0x031370,5953,,8,<B3E7><B3E9><B3EB><B3ED>,Mawashi Geri,12,YES
+0x031379,5954,,6,<B3EF><B3F1><B3F3>,Corps Perdu,11,YES
+0x031380,5955,,8,<B3F5><B3F7><B3F9><B3FB>,Frappe Atlas,12,YES
+0x031389,5956,,6,<B3FD><B3FF><B301>,Casse-Brique,12,YES
+0x031390,5957,,8,<B303><B305><B307><B309>,Stratopercut,12,YES
+0x031399,5958,,6,<B30B><B30D><B30F>,Coup-Croix,10,YES
+0x0313A0,5959,,8,<B311><B313><B315><B317>,Dynamopoing,11,YES
+0x0313A9,5960,,8,<B319><B31B><B31D><B31F>,Poing Boost,11,YES
+0x0313B2,5961,,6,<B321><B323><B325>,Mitra-Poing,11,YES
+0x0313B9,5619,,4,Peck,Picpic,6,YES
+0x0313BE,5620,,4,Gust,Tornade,7,YES
+0x0313C3,5962,,6,<B327><B329><B32B>,Tranch'Air,10,YES
+0x0313CA,5963,,6,<B32D><B32F><B331>,Cru-Aile,8,YES
+0x0313D1,5964,,6,<B333><B335><B337>,Aéropique,9,YES
+0x0313D8,5621,,3,Fly,Vol,3,
+0x0313DC,5965,,6,<B339><B33B><B33D>,Bec Vrille,10,YES
+0x0313E3,5622,,6,Bounce,Rebond,6,
+0x0313EA,5966,,6,<B33F><B341><B343>,Aéroblast,9,YES
+0x0313F1,5967,,6,<B345><B347><B349>,Piqué,5,
+0x0313F8,5968,,6,<B591><B593><B595>,Choc Mental,11,YES
+0x031402,4852,,8,Psy Beam,Rafale Psy,10,YES
+0x03140B,5969,,4,<B597><B599>,Ball'Brume,10,YES
+0x031415,5970,,6,<B59B><B59D><B59F>,Choc Psy,8,YES
+0x03141F,5971,,8,<B34B><B34D><B34F><B351>,Psykoud'Boul,12,YES
+0x031428,5839,,7,Psychic,Psyko,5,
+0x031430,5972,,6,<B353><B355><B357>,Dévorêve,8,YES
+0x031437,5973,,6,<B7E5><B7E7><B7E9>,Psycho-Boost,12,YES
+0x031441,5840,,8,Hypnosis,Hypnose,7,
+0x03144A,5623,,4,Rest,Repos,5,YES
+0x03144F,5841,,8,Teleport,Téléport,8,
+0x031458,5974,,4,<B7EB><B7ED>,Plénitude,9,YES
+0x03145D,5624,,4,Mind,Yoga,4,
+0x031462,5842,,7,Agility,Hâte,4,
+0x03146A,5843,,4,Lick,Léchouille,10,YES
+0x03146F,5625,,8,Astonish,Étonnement,10,YES
+0x031478,5975,,6,<B359><B35B><B35D>,Poing Ombre,11,YES
+0x03147F,5976,,6,<B401><B403><B405>,Ball'Ombre,10,YES
+0x031486,5977,,6,<B407><B409><B40B>,Griffe Ombre,12,YES
+0x03148D,5978,,8,<B40D><B40F><B411><B413>,Onde Folie,10,YES
+0x031496,5626,,7,Twister,Ouragan,7,
+0x03149E,5979,,6,<B415><B417><B419>,Draco-Rage,10,YES
+0x0314A5,5980,,6,<B41B><B41D><B41F>,Dracosouffle,12,YES
+0x0314AC,5981,,6,<B421><B423><B425>,Draco-Griffe,12,YES
+0x0314B3,5982,,6,<B427><B429><B42B>,Draco-Choc,10,YES
+0x0314BA,5983,,6,<B42D><B42F><B431>,Danse Draco,11,YES
+0x0314C1,5984,,6,<B7EF><B7F1><B7F3>,Sabotage,8,YES
+0x0314CB,5985,,6,<B433><B435><B437>,Feinte,6,
+0x0314D2,5627,,4,Bite,Morsure,7,YES
+0x0314D7,5628,,6,Crunch,Mâchouille,10,YES
+0x0314DE,5986,,6,<B439><B43B><B43D>,Griffe Acier,12,YES
+0x0314E5,5987,,6,<B43F><B441><B443>,Aile d'Acier,12,YES
+0x0314EC,5988,,4,<B7F5><B7F7>,Queue de Fer,12,YES
+0x0314F1,5629,,4,Tail,Queu,4,
+0x0314F6,5989,,6,<B445><B447><B449>,Poing Météore,13,YES
+0x0314FD,5990,,8,<B44B><B44D><B44F><B451>,Mur de Fer,10,YES
+0x031506,4853,,6,Splash,Trempette,9,YES
+0x03150D,5991,,6,<B453><B455><B457>,Tour Rapide,11,YES
+0x031514,4854,,6,Tackle,Charge,6,
+0x03151B,4855,,7,Scratch,Griffe,6,
+0x031523,5630,,5,Pound,Écras'Face,10,YES
+0x031529,5992,,6,<B459><B45B><B45D>,Vive-Attaque,12,YES
+0x031530,4856,,7,Pay Day,Jackpot,7,
+0x031538,4857,,8,Fake Out,Bluff,5,
+0x031541,5631,,3,Cut,Coupe,5,YES
+0x031545,5632,,5,Swift,Météores,8,YES
+0x03154B,5633,,5,Stomp,Écrasement,10,YES
+0x031551,5993,,6,<B501><B503><B505>,Éclate Griffe,13,YES
+0x031558,5994,,6,<B507><B509><B50B>,Puissance Cachée,16,YES
+0x03155F,5995,,6,<B50D><B50F><B511>,Croc de Mort,12,YES
+0x031566,5996,,6,<B513><B515><B517>,Coupe-Vent,10,YES
+0x03156D,5997,,6,<B519><B51B><B51D>,Damoclès,8,YES
+0x031574,5998,,6,<B51F><B521><B523>,Ultralaser,10,YES
+0x03157B,5999,,8,<B525><B527><B529><B52B>,Destruction,11,YES
+0x031584,5634,,7,Explode,Explosion,9,YES
+0x03158C,6000,,8,<B52D><B52F><B531><B533>,Guillotine,10,YES
+0x031595,6001,,6,<B535><B537><B539>,Empal'Korne,11,YES
+0x03159C,5635,,4,Sing,Berceuse,8,YES
+0x0315A1,6002,,4,<B7F9><B7FB>,Grobisou,8,YES
+0x0315A6,5636,,4,Kiss,Bise,4,
+0x0315AB,6003,,6,<B53B><B53D><B53F>,Ultrason,8,YES
+0x0315B2,6004,,6,<B541><B543><B545>,Danse-Lames,11,YES
+0x0315B9,5637,,5,Growl,Rugissement,11,YES
+0x0315BF,5638,,7,Bulk-up,Gonflette,9,YES
+0x0315C7,6005,,8,<B547><B549><B54B><B54D>,Boul'Armure,11,YES
+0x0315D0,5844,,6,Harden,Armure,6,
+0x0315D7,6006,,4,<B7FD><B7FF>,Mimi-Queue,10,YES
+0x0315DC,5639,,4,Whip,Fou.,4,
+0x0315E1,5640,,5,Charm,Charme,6,YES
+0x0315E7,6007,,6,<B54F><B551><B553>,Brouillard,10,YES
+0x0315F4,6008,,6,<B555><B557><B559>,Reflet,6,
+0x0315FB,5641,,7,Recover,Soin,4,
+0x03160A,5642,,4,Roar,Hurlement,9,YES
+0x03160F,6009,,6,<B701><B703><B705>,Cyclone,7,YES
+0x031624,5643,,7,Counter,Riposte,7,
+0x03162C,5644,,8,Strength,Force,5,
+0x03163B,6010,,6,<B55B><B55D><B55F>,Poudre Toxik,12,YES
+0x0316E9,5811,,4,None,Rien,4,
+0x0316EE,4863,,8,Grt Ball,SprBall ,8,
+0x0316F7,4864,,8,UltaBall,HyprBall,8,
+0x031700,4865,,8,MstrBall,MastrBal,8,
+0x031709,4866,,6,Potion,Potion,6,
+0x031710,4867,,8,S.Potion,Sup.Pot.,8,
+0x031719,4868,,8,H.Potion,Hyp.Pot.,8,
+0x031722,4869,,8,M.Potion,Max.Pot.,8,
+0x031737,5525,,6,P.Heal,AntiPa,6,
+0x03173E,5526,,7,0S.Heal,0Réveil,7,
+0x031746,5527,,8,Ice Heal,Antigel ,8,
+0x03174F,5528,,8,BurnHeal,AntiBrul,8,
+0x031758,5529,,8,FullHeal,Tot.Soin,8,
+0x031761,5530,,6,Revive,Rappel,6,
+0x031769,5531,,5,Ether,Huile,5,
+0x03176F,4870,,8,MaxEther,Huile Max,9,YES
+0x031779,4871,,8,RareCndy,BonbRare,8,
+0x031782,5532,,8,FireSton,PierrFeu,8,
+0x03178B,5533,,8,WatrSton,PierrEau,8,
+0x031794,5534,,8,ThunSton,PierrFdr,8,
+0x03179D,5535,,8,MoonSton,PierrLun,8,
+0x0317A6,5536,,6,Parcel,Colis ,6,
+0x0317B5,5537,,3,Map,Carte,5,YES
+0x0317B9,5538,,10,HelixFosil,Nautile,7,
+0x0317C4,5539,,10,DomeFossil,Fos.Dôme  ,10,
+0x0317CF,5540,,10,S.S.Ticket,Passe Bateau,12,YES
+0x0317DA,5541,,8,Lemonade,Limonade,8,
+0x0317E3,5542,,10,SilphScope,Scope Sylphe,12,YES
+0x0317EE,5543,,9,Pok@Flute,Poké Flûte,10,YES
+0x0317F8,4872,,10,Gold Teeth,Dent d'Or ,10,
+0x031803,4873,,8,00Cut HM,00Cpe CS,8,
+0x03180D,4874,,6,Fly HM,Vol CS,6,
+0x031815,4875,,7,Surf HM,Surf CS,7,
+0x03181D,4876,,6,STR HM,ForceC,6,
+0x031824,4877,,8,Flash HM,Flash CS,8,
+0x03182D,5560,,6,TM 01 ,CT 01 ,6,
+0x031835,5561,,6,TM 02 ,CT 02 ,6,
+0x03183D,5562,,6,TM 03 ,CT 03 ,6,
+0x031845,5563,,6,TM 04 ,CT 04 ,6,
+0x03184D,5564,,6,TM 05 ,CT 05 ,6,
+0x031855,5565,,6,TM 06 ,CT 06 ,6,
+0x03185D,5566,,6,TM 07 ,CT 07 ,6,
+0x031865,5567,,6,TM 08 ,CT 08 ,6,
+0x03186D,5568,,6,TM 09 ,CT 09 ,6,
+0x031875,5569,,6,TM 10 ,CT 10 ,6,
+0x03187D,5570,,6,TM 11 ,CT 11 ,6,
+0x031885,5571,,6,TM 12 ,CT 12 ,6,
+0x03188D,5572,,6,TM 13 ,CT 13 ,6,
+0x031895,5573,,6,TM 14 ,CT 14 ,6,
+0x03189D,5574,,6,TM 15 ,CT 15 ,6,
+0x0318A5,5575,,6,TM 16 ,CT 16 ,6,
+0x0318AD,5576,,6,TM 17 ,CT 17 ,6,
+0x0318B5,5577,,6,TM 18 ,CT 18 ,6,
+0x0318BD,5578,,6,TM 19 ,CT 19 ,6,
+0x0318C5,5579,,6,TM 20 ,CT 20 ,6,
+0x0318CD,5580,,6,TM 21 ,CT 21 ,6,
+0x0318D5,5581,,6,TM 22 ,CT 22 ,6,
+0x0318DD,5582,,6,TM 23 ,CT 23 ,6,
+0x0318E5,5583,,6,TM 24 ,CT 24 ,6,
+0x0318ED,5584,,6,TM 25 ,CT 25 ,6,
+0x0318F5,5585,,6,TM 26 ,CT 26 ,6,
+0x0318FD,5586,,6,TM 27 ,CT 27 ,6,
+0x031905,5587,,6,TM 28 ,CT 28 ,6,
+0x03190D,5588,,6,TM 29 ,CT 29 ,6,
+0x031915,5589,,6,TM 30 ,CT 30 ,6,
+0x03191D,5590,,6,TM 31 ,CT 31 ,6,
+0x031925,5591,,6,TM 32 ,CT 32 ,6,
+0x03192D,5592,,6,TM 33 ,CT 33 ,6,
+0x031935,5593,,6,TM 34 ,CT 34 ,6,
+0x03193D,5594,,6,TM 35 ,CT 35 ,6,
+0x031945,5595,,6,TM 36 ,CT 36 ,6,
+0x03194D,5596,,6,TM 37 ,CT 37 ,6,
+0x031955,5597,,6,TM 38 ,CT 38 ,6,
+0x03195D,5598,,6,TM 39 ,CT 39 ,6,
+0x031965,5599,,6,TM 40 ,CT 40 ,6,
+0x031A0F,5546,,5,Empty,Vide ,5,
+0x031A15,4880,,14,Catch  Pok@mon,Capturer Pokémon,16,YES
+0x031A24,4881,,18,Catch  Pok@mon100%,Capture Pokémon100%,19,YES
+0x031A37,4882,,18,Evolve Fire   PKMN,Évol. Pokémon Feu ,18,
+0x031A4A,4883,,18,Evolve Water  PKMN,Évol. Pokémon Eau ,18,
+0x031A5D,4884,,26,00000000000000Restore20 HP,00000000000000Restaure 20PV,27,YES
+0x031A78,4885,,13,0Restore50 HP,0Restaure50PV,13,
+0x031A86,4886,,14,0Restore200 HP,0Restaur200 PV,14,
+0x031A95,4887,,14,0RestoreAll HP,0Restaur ts PV,14,
+0x031AA4,4888,,13,Cures  Poison,Guérit Poison,13,
+0x031AB2,4889,,14,Cures  Paralyz,Guérit Paralys,14,
+0x031AC1,5547,,12,Cures  sleep,Guérit Somml,12,
+0x031ACE,4890,,13,Cures  Freeze,Guérit le  Gel,14,YES
+0x031ADC,5548,,11,Cures  Burn,Guérit Brulr,12,YES
+0x031AE8,4891,,22,00Heal   PKMN   Status,00Guérit Statut Pokémon,23,YES
+0x031AFF,4892,,14,Revive Pok@mon,Ranime Pokémon,14,
+0x031B0E,4893,,26,000000Restore10PP to1 Move,000000Restaure10PP 1 Atq,24,
+0x031B29,4894,,23,000RestoreAll PP 1 Move,000Restaure ts PP 1 Atq,23,
+0x031B42,5549,,17,Pok@monLevelUp1LV,Pokémon+1 Niveau ,17,
+0x031B54,4895,,18,Evolve ThunderPKMN,Évol. Pokémon Foudre,20,YES
+0x031B67,4896,,18,Evolve Grass  PKMN,Évol. Pokémon Plante,20,YES
+0x031B7A,4897,,18,Evolve Normal PKMN,Évol. Pokémon Normal,20,YES
+0x031B8D,4898,,18,Pok@monData-  Base,BaseDonnees Poké ,17,
+0x031BA0,4899,,10,Town   Map,Carte Ville,11,YES
+0x031BAB,4900,,16,000Oak's  Parcel,000Colis Chen,13,
+0x031BBC,5550,,13,Pok@monFossil,Fossile Pokémon,15,YES
+0x031BCA,4901,,21,Ticket for theSS Anne,Passe pour l'Océane,19,
+0x031BE0,5551,,7,Lemonad,Limonad,7,
+0x031BE8,4902,,20,Lets   you seeGhosts,Permet de voir les fantômes,27,YES
+0x031BFD,4903,,21,Wake   Asleep Pok@mon,Réveille Pokémon   ,19,
+0x031C13,4904,,19,SomeoneGold   Teeth,Dentier en Or      ,19,
+0x031C27,4905,,14,CinibarGym Key,Clé Arène Cram,14,
+0x031C36,5847,,4,Will,Clément,7,YES
+0x031C3B,4939,,11,Jr.Trainer>,Dresseur JR>,12,YES
+0x031C47,5552,,7,Juggler,Jongleur,8,YES
+0x031C4F,4906,,17,Rocket Executive=,Caïd Rocket=,12,
+0x031C61,5553,,5,Twins,Jumelles,8,YES
+0x031C67,5554,,8,Pok@Fan>,Pokéfan>,8,
+0x031C70,5848,,6,Beauty,Canon,5,
+0x031C77,5849,,6,Medium,Médium,6,
+0x031C7E,5850,,8,Pok@Fan=,Pokéfan=,8,
+0x031C87,6084,,9,000<B1A9><B1AA><B1AB>,CS Coupe,8,
+0x031C91,6085,,7,<0A><B1AC><B1AD><B1AE>,CS Vol,6,
+0x031C99,6086,,7,<0A><B1AF><B1B0><B1AE>,CS Surf,7,
+0x031CA1,6087,,7,<0A><B0CA><B0E3><B1AE>,CS Force,8,YES
+0x031CA9,6088,,7,<0A><B4BE><B0E4><B1AE>,CS Flash,8,YES
+0x031CB2,5764,,6,TM 01 ,CT 01 ,6,
+0x031CBA,5765,,6,TM 02 ,CT 02 ,6,
+0x031CC2,5766,,6,TM 03 ,CT 03 ,6,
+0x031CCA,5767,,6,TM 04 ,CT 04 ,6,
+0x031CD2,5768,,6,TM 05 ,CT 05 ,6,
+0x031CDA,5769,,6,TM 06 ,CT 06 ,6,
+0x031CE2,5770,,6,TM 07 ,CT 07 ,6,
+0x031CEA,5771,,6,TM 08 ,CT 08 ,6,
+0x031CF2,5772,,6,TM 09 ,CT 09 ,6,
+0x031CFA,5773,,6,TM 10 ,CT 10 ,6,
+0x031D02,5774,,6,TM 11 ,CT 11 ,6,
+0x031D0A,5775,,6,TM 12 ,CT 12 ,6,
+0x031D12,5776,,6,TM 13 ,CT 13 ,6,
+0x031D1A,5777,,6,TM 14 ,CT 14 ,6,
+0x031D22,5778,,6,TM 15 ,CT 15 ,6,
+0x031D2A,5779,,6,TM 16 ,CT 16 ,6,
+0x031D32,5780,,6,TM 17 ,CT 17 ,6,
+0x031D3A,5781,,6,TM 18 ,CT 18 ,6,
+0x031D42,5782,,6,TM 19 ,CT 19 ,6,
+0x031D4A,5783,,6,TM 20 ,CT 20 ,6,
+0x031D52,5784,,6,TM 21 ,CT 21 ,6,
+0x031D5A,5785,,6,TM 22 ,CT 22 ,6,
+0x031D62,5786,,6,TM 23 ,CT 23 ,6,
+0x031D6A,5787,,6,TM 24 ,CT 24 ,6,
+0x031D72,5788,,6,TM 25 ,CT 25 ,6,
+0x031D7A,5789,,6,TM 26 ,CT 26 ,6,
+0x031D82,5790,,6,TM 27 ,CT 27 ,6,
+0x031D8A,5791,,6,TM 28 ,CT 28 ,6,
+0x031D92,5792,,6,TM 29 ,CT 29 ,6,
+0x031D9A,5793,,6,TM 30 ,CT 30 ,6,
+0x031DA2,5794,,6,TM 31 ,CT 31 ,6,
+0x031DAA,5795,,6,TM 32 ,CT 32 ,6,
+0x031DB2,5796,,6,TM 33 ,CT 33 ,6,
+0x031DBA,5797,,6,TM 34 ,CT 34 ,6,
+0x031DC2,5798,,6,TM 35 ,CT 35 ,6,
+0x031DCA,5799,,6,TM 36 ,CT 36 ,6,
+0x031DD2,5800,,6,TM 37 ,CT 37 ,6,
+0x031DDA,5801,,6,TM 38 ,CT 38 ,6,
+0x031DE2,5802,,6,TM 39 ,CT 39 ,6,
+0x031DEA,5803,,6,TM 40 ,CT 40 ,6,
+0x031E6A,4912,,4,Gary,Régis,5,YES
+0x031E6F,4913,,5,Brock,Pierre,6,YES
+0x031E75,4914,,5,Misty,Ondine,6,YES
+0x031E7B,4915,,8,Lt.Surge,Major Bob,9,YES
+0x031E84,4916,,5,Erika,Erika,5,
+0x031E8A,4917,,4,Koga,Koga,4,
+0x031E8F,4918,,7,Sabrina,Morgane,7,
+0x031E97,4919,,6,Blaine,Auguste,7,YES
+0x031E9E,4920,,8,Giovanni,Giovanni,8,
+0x031EA7,4921,,7,Lorelei,Olga   ,7,
+0x031EAF,4922,,5,Bruno,Aldo ,5,
+0x031EB5,4923,,6,Agatha,Agatha,6,
+0x031EBC,4924,,5,Lance,Peter,5,
+0x031EC2,4925,,13,Jesse & James,Jessie & James,14,YES
+0x031EDD,5504,,9,Lugia2009,Deputy,6,
+0x031EE7,4926,,11,Bug Catcher,Scout,5,
+0x031EF3,5505,,7,Psychic,Kinésiste,9,YES
+0x031EFB,5506,,4,Lass,Fillette,8,YES
+0x031F00,5507,,9,Schoolkid,Écolier  ,9,
+0x031F0A,4927,,13,Rocket Grunt>,Sbire Rocket>,13,
+0x031F18,4928,,13,Rocket Grunt=,Sbire Rocket=,13,
+0x031F26,5508,,9,Scientist,Scientifique,12,YES
+0x031F30,5509,,5,Hiker,Montagnard,10,YES
+0x031F36,5510,,8,Swimmer>,Nageur> ,8,
+0x031F3F,5511,,8,Swimmer=,Nageuse=,8,
+0x031F48,5512,,9,Gentleman,Gentleman,9,
+0x031F52,4929,,13,Fire Breather,Crache-Feu,10,
+0x031F60,5513,,6,Sailor,Marin ,6,
+0x031F67,4930,,13,Cool Trainer>,Topdresseur>,12,
+0x031F75,4931,,8,Cue Ball,Loubard,7,
+0x031F7E,4932,,11,Jr.Trainer=,Dresseur JR=,12,YES
+0x031F8A,4933,,10,Super Nerd,Intello,7,
+0x031F95,4934,,9,Youngster,Gamin    ,9,
+0x031F9F,5514,,7,Teacher,Prof,4,
+0x031FA7,4935,,11,Kimono Girl,Kimono,6,
+0x031FB3,5515,,9,Channeler,Exorciste,9,
+0x031FBD,5516,,9,Fisherman,Pêcheur  ,9,
+0x031FC7,5517,,6,Rocker,Rocker,6,
+0x031FCE,5518,,11,Bird Keeper,Ornithologue,12,YES
+0x031FDA,5519,,5,Biker,Motard,6,YES
+0x031FE0,5520,,5,Ninja,Ninja,5,
+0x031FE6,4936,,10,Black Belt,Karatéka  ,10,
+0x031FF1,4937,,8,Prof.Oak,Prof.Chen,9,YES
+0x031FFA,4938,,13,Cool Trainer=,Topdresseur=,12,
+0x032008,5521,,10,Pok@Maniac,Pokémaniac,10,
+0x032013,5522,,7,Burglar,Pillard,7,
+0x032161,5851,,5,Skier,Skieuse,7,YES
+0x032167,5852,,7,Boarder,Surfer,6,
+0x03216F,6013,,10,<B76B><B76D><B76F><B771>  ,Plateau Indigo,14,YES
+0x03217A,4945,pokedex_13x4,52,Steam is saidto spout fromit's tail    when it rains,De la vapeur jaillit de sa queue quand il pleut,47,
+0x0321AF,4946,pokedex_13x4,45,It withdraws into its     shell when indanger,Il rentre dans sa carapace face au danger.,49,YES
+0x0321DD,4947,pokedex_13x4,51,"To swim fast,it uses its  ears to main-tain balance",Ses oreilles gardent son équilibre en nageant.,47,
+0x032211,4948,pokedex_13x4,50,A very brutalPok@mon with powerful jetson its back,Ce Pokémon brutal a de puissants jets dorsaux.,52,YES
+0x032244,4949,pokedex_13x4,48,It hardens   its shell to protect its  weak body,Sa carapace protège son corps fragile.,47,
+0x032275,4950,pokedex_13x4,45,It hides in  grass and    bushes to eatleaves,Il se cache dans l'herbe pour manger des feuilles.,52,YES
+0x0322A3,4951,pokedex_13x4,47,It jabs foes with its 3   poisonous    stingers,Il pique ses ennemis avec ses 3 dards venimeux,47,
+0x0322D3,4952,pokedex_13x4,45,It will oftenkick up sand to protect   itself,Il projette du sable pour se protéger lui-même,47,YES
+0x032301,4953,pokedex_13x4,51,It skims the surface of   water to pickoff Magikarp,Il rase l'eau pour chasser un Magicarpe.,39,
+0x032335,4954,pokedex_13x4,52,"Its feet are webbed, whichit uses to   swim and hunt",Il nage et chasse avec ses pattes palmées.,47,
+0x03236A,4955,pokedex_13x4,46,Moves quietlyand eats the eggs of bird Pok@mon,Il mange les oeufs des Pokémon oiseaux.,47,YES
+0x032399,4956,pokedex_13x4,46,The markings on its belly serve as a   warning,Ses motifs ventraux avertissent ses ennemis.,51,YES
+0x0323C8,4957,pokedex_13x4,50,Its tail actsas a ground  to guard it  from shocks,Sa queue évacue les décharges dans le sol.,51,YES
+0x0323FB,4958,pokedex_13x4,36,Lives in aridlocations farfrom water,Vit en lieux arides loin de l'eau,34,
+0x032420,4959,pokedex_13x4,48,Its venomous barbs render this Pok@mon dangerous,Ses piquants venimeux le rendent dangereux.,49,YES
+0x032451,4960,pokedex_13x4,45,An aggressivePok@mon that is quick to  attack,"Agressif, il attaque sans hésiter.",34,
+0x03247F,4961,pokedex_13x4,47,It uses its  tail to breakthe bones of its prey,Sa queue brise les os de ses proies.,46,
+0x0324AF,4963,pokedex_13x4,48,This Pok@mon has many adm-irers and is very rare,"Rare, il a beaucoup d'admirateurs",39,
+0x0324E0,4964,pokedex_13x4,49,"As it grows, its tails    split to formmore tails","En grandissant, ses queues se multiplient.",51,YES
+0x032512,4966,pokedex_13x4,50,When angered it will infl-ate to an en-ormous size,Quand en colère il gonfle à une taille énorme,52,YES
+0x032545,4967,pokedex_13x4,45,Lives in darkplaces. Uses sound waves  to see,Il vit dans le noir et voit avec des ultrasons.,49,YES
+0x032573,4969,pokedex_13x4,51,Flaps its    petals to    scatter pois-onous pollen,Ses pétales répandent un pollen toxique.,47,
+0x0325A7,4970,pokedex_13x4,44,It absorbs   energy from  the roots of trees,Il absorbe l'énergie des racines des arbres,45,YES
+0x0325D4,4971,pokedex_13x4,52,The powdery  scales on itswings containstrong poison,Ses ailes ont des écailles très toxiques.,48,
+0x032609,4973,pokedex_13x4,45,A team of diglets that cantrigger earthquakes,Un groupe de Taupiqueur peut causer des séismes.,51,YES
+0x032637,4974,pokedex_13x4,51,Uses psychic powers when  its headachesbecome worse,Sa migraine renforce ses pouvoirs psy.,39,
+0x03266B,4975,pokedex_13x4,52,Its angered  easily and   won't hesit- ate to attack,Il s'énerve facilement et attaque sans hésitation,49,
+0x0326A0,4976,pokedex_13x4,51,"Admired for  its beauty,  it runs as ifits on wings",Admiré pour sa beauté il court comme s'il volait,50,
+0x0326D4,4977,pokedex_13x4,52,It uses the  spiral on itsbelly to makeits foe sleep,La spirale de son ventre endort ses ennemis.,47,
+0x032709,4978,pokedex_13x4,48,Waves emittedfrom its bodycan induce   headaches,Ses ondes donnent de forts maux de tête.,44,
+0x03273A,4980,pokedex_13x4,47,It trains in martial arts to become    stronger,Les arts martiaux le rendent plus fort.,44,
+0x03276A,4982,pokedex_13x4,45,It can throw punches that sends its foeflying,Ses poings projettent ses ennemis au loin.,47,YES
+0x032798,4983,pokedex_13x4,49,Lures prey   with an aromathen swallowsthem whole,Attire ses proies avec un arôme puis les avale,48,
+0x0327CA,4984,pokedex_13x4,49,"Mistaken for boulders,theyare often    stepped on","Pris pour des rochers, on lui marche dessus.",46,
+0x0327FC,4986,pokedex_13x4,51,It can with- stand blasts from dynamitew/out damage,Il résiste aux explosions de dynamite.,48,
+0x032830,4987,pokedex_13x4,49,Loves to raceit will chaseanything thatmoves fast,Adore courir il poursuit tout ce qui va vite,46,
+0x032862,4988,pokedex_13x4,48,It uses elec-tromagnetic  waves to staysuspended,Ses ondes magnétiques le font léviter.,47,
+0x032893,4990,pokedex_13x4,46,It uses its  sprig of oni-ons much likea sword,Il manie son poireau comme une épée.,35,
+0x0328C2,4991,pokedex_13x4,44,"While 2 headssleep, one   head stays   awake",Quand 2 têtes dorment une tête reste éveillée,47,YES
+0x0328EF,4992,pokedex_13x4,52,"Unharmed by  cold temps,itswims quicklyin cold water","Insensible au froid, il nage vite en eau glacée.",50,
+0x032924,4993,pokedex_13x4,47,"Smells so aw-ful, it can  cause people to faint",Son odeur affreuse peut faire perdre connaissance.,52,YES
+0x032954,4994,pokedex_13x4,49,Its lick sapsthe life     force from   its victim,Son coup de langue aspire la force vitale,45,
+0x032986,4995,pokedex_13x4,51,It loves to  laugh at     others when  scaring them,Il adore rire des autres quand il les effraye,46,
+0x0329BA,4996,pokedex_13x4,45,"Puts enemies to sleep,theneats their   dreams",Endort ses ennemis puis dévore leurs rêves,44,
+0x0329E8,4997,pokedex_13x4,46,Its pincers  are used for balance when walking,Ses pinces servent d' équilibre en marche,45,
+0x032A17,4998,pokedex_13x4,47,It'll self-  destruct withvery little  stimulus,Il peut exploser au moindre stimulus.,48,YES
+0x032A47,5000,pokedex_13x4,52,"Mistaken for eggs, they   quickly att- ack in swarms",Pris pour des oeufs ils attaquent en essaim,45,
+0x032A7C,5001,pokedex_13x4,50,It wears the skull of its dead mother &often cries,Il porte le crâne de sa mère décédée et pleure,48,
+0x032AAF,5002,pokedex_13x4,47,Its bones are1000 times   stronger thana humans,Ses os sont mille fois plus durs que les nôtres.,50,YES
+0x032ADF,5003,pokedex_13x4,50,Its armor-   like hide canrepel even   molten lava,Sa peau blindée repousse même la lave.,47,
+0x032B12,5005,pokedex_13x4,52,Rare Pok@mon that's said  to bring hap-piness to all,"Rare, il apporterait le bonheur à tous.",44,
+0x032B47,5006,pokedex_13x4,45,Its identity is swathed byseaweed like vines.,Des lianes d'algues cachent son identité.,48,YES
+0x032B75,5007,pokedex_13x4,49,It won't run from a fight to keep its  young safe,Il ne fuit pas au combat pour protéger ses petits,49,
+0x032BA7,5008,pokedex_13x4,44,"If in danger,it will sprayink from its mouth","En danger, il projette de l'encre par la bouche.",49,YES
+0x032BD4,5009,pokedex_13x4,47,Swims in big groups when  it's time to lay eggs,Il nage en groupe à la saison de la ponte.,45,
+0x032C04,5011,pokedex_13x4,45,It can grow  back any app-endage it    loses.,Tout membre perdu peut repousser.,36,
+0x032C32,5012,pokedex_13x4,48,It makes foesbelieve some-thing exists by miming,Il mime des objets pour tromper ses ennemis.,47,
+0x032C63,5013,pokedex_13x4,51,"It shifts itships as it   walks, as if it's dancing",Il balance ses hanches comme s'il dansait.,47,
+0x032C97,5014,pokedex_13x4,52,They are seennear power   plants and   cause outages,"Près des centrales, il cause des pannes.",46,
+0x032CCC,5016,pokedex_13x4,50,A rowdy Pok@-mon that     charges at   its enemies,Ce Pokémon turbulent charge ses ennemis.,47,
+0x032CFF,5017,pokedex_13x4,50,"Huge and vic-ious, it can destroy an   entire city",Énorme et féroce il peut détruire une ville,48,
+0x032D32,5018,pokedex_13x4,45,It may mutateif exposed toelemental    stones,Il peut muter au contact de pierres élémentaires.,52,YES
+0x032D60,5019,pokedex_13x4,48,It's tail is often mist-  aken for a   mermaid's,Sa queue est souvent prise pour celle d'une sirène.,52,YES
+0x032D91,5020,pokedex_13x4,51,"When storing energy, its  body temp.canreach 1600'F",Il stocke de l'énergie et atteint 900 degrés.,46,
+0x032DC5,5021,pokedex_13x4,52,"An ancient   Pok@mon,swimsby twisting  its tentacles",Ce Pokémon ancien nage avec ses tentacules.,50,
+0x032DFA,5023,pokedex_13x4,52,Resurrected  from a fossilin what used to be the sea,Ressuscité d'un fossile dans ce qui était la mer,51,
+0x032E2F,5024,pokedex_13x4,47,A very lazy  Pok@mon that will devour  anything,"Très paresseux, il dévore tout.",38,
+0x032E5F,5025,pokedex_13x4,51,Mystical birdsaid to help people lost  in blizzards,Il guide les égarés dans les blizzards.,49,
+0x032E93,5027,pokedex_13x4,48,Thought to bea myth till  it was recen-tly found,"Pris pour un mythe, il fut découvert récemment.",49,YES
+0x032EC4,5028,pokedex_13x4,50,A mystical   Pok@mon that gives off a  gentle aura,Ce Pokémon mystique dégage une aura douce.,50,
+0x032EF7,5029,pokedex_13x4,50,Created by a scientist    using geneticexperiments,Un savant l'a créé par génie génétique.,49,
+0x032F2A,5030,pokedex_13x4,51,A powerful   Pok@mon whosebark sounds  like thunder,Son aboiement gronde comme le tonnerre.,38,
+0x032F5E,5032,pokedex_13x4,39,Rainbows are said to form when it flies,On dit qu'il crée des arcs-en-ciel en volant.,49,YES
+0x032F9B,5034,pokedex_13x4,52,Legendary    Pokemon who  is said to   rule the seas,Ce Pokémon légendaire régnerait sur les mers.,48,
+0x032FD0,5036,pokedex_13x4,49,"According to myth,it crea-ted Earth's  continents","Selon le mythe, il créa les continents.",50,YES
+0x033060,5432,,3,Cut,Coupe,5,YES
+0x033064,5433,,3,Fly,Vol,3,
+0x03306D,5435,,8,Strength,Force   ,8,
+0x03307C,5437,,4,HM01,CS01,4,
+0x033081,5438,,4,HM02,CS02,4,
+0x033086,5439,,4,HM03,CS03,4,
+0x03308B,5440,,4,HM04,CS04,4,
+0x033090,5441,,4,HM05,CS05,4,
+0x033095,6014,,10,<B707><B709><B70B>    ,Bourg Palette,13,YES
+0x0330A0,6015,,10,<B70D><B70F><B711><B713>  ,Jadielle,8,
+0x0330AB,6016,,10,<B715><B717><B719><B71B>  ,Forêt de Jade,13,YES
+0x0330B6,6017,,10,<B71D><B71F><B721>    ,Argenta,7,
+0x0330C1,717,,10,Mt.Moon   ,Mont Sélénite,13,YES
+0x0330CC,6018,,10,<B723><B725><B727><B729>  ,Azuria,6,
+0x0330D7,6019,,10,<B72B><B72D><B72F>    ,Grotte,6,
+0x0330E2,6020,,10,<B731><B733><B735><B737>  ,Lavanville,10,
+0x0330ED,6021,,10,<B739><B73B><B73D><B73F>  ,Safrania,8,
+0x0330F8,6022,,9,<B741><B743><B745><B747> ,Céladopole,10,YES
+0x033102,6023,,10,<B749><B74B><B74D><B74F><B751>,Carmin sur Mer,14,YES
+0x03310D,6024,,10,<B753><B755><B757><B759>  ,Parmanie,8,
+0x033118,6025,,10,<B75B><B75D><B75F><B761>  ,Cramois'Île,11,YES
+0x033123,6026,,10,<B763><B765><B767><B769>  ,Route Victoire,14,YES
+0x0331EF,5303,dialogue_19_19,27,0Are you good enoughfor me?,Tu as dû en baver pour arriver jusqu'ici !,49,YES
+0x03320B,5377,dialogue_19_19,24,I never wanted to  lose!,"À toi de jouer, maintenant.",30,YES
+0x033224,5308,dialogue_19_19,19,I can see your good,"Toi aussi, tu viens défier la Ligue ?",36,YES
+0x033238,5365,dialogue_19_19,26,"I concede, you're  better.",Tu pourrais devenir Champion !,29,YES
+0x033253,5396,dialogue_19_19,25,Is Victory Road tootough?,Prépare-toi !,13,
+0x03326D,5397,dialogue_19_19,10,Well done!,J'étais prêt !,14,YES
+0x033278,5313,dialogue_19_19,23,Come on! I'll whip you!,Pourquoi es-tu là ?,19,
+0x033290,5382,dialogue_19_19,14,I got whipped.,Tu vises haut !,15,YES
+0x03329F,6091,dialogue_19_19,123,"<B0B6><B1EC>:<B2D0><B1E6><B0F8>?<B0B6><B0B7><B0B8><B0EE><B0BF><B4DA><B2CD><B0C5><B2BD><B1F5><B0C2><B9E3><B2AA><B2AC>!<B0C5><B0F6><B0C7><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF><B2AC>?<B3D1><B3D2><B0F6><B1C0><B6B7><B6B8><BDE5><B0F8>,<B5A5><B0BC><B0CE><B2DC><B1DC>!<B0CE><B3D4><B0B8><B0C7><B3CE><B3CF><B3E3><B3DD><B6E0><B0C9><B1C2><B2B2><B4A3><B1D1><B3B5><B0BE>!","RÉGIS : Tiens,\nSacha !\nQuelle surprise !\nTu vas à la Ligue ?\nTous tes Badges !\nPas mal ! Bats-moi.",114,
+0x03331B,6099,dialogue_19_19,121,"<0A><B0B6><B1EC>:<B1C2><B2BE><B0C2><B1D1><B0F0><B6C6><B1BE><B4A5><B0F8>,<B0DE><B5E0>!<B0CE><B3D4><B0C5><B0EE><B2DA><B0BC><B5F7><B5DC><B1D7><B1C8><BBD4><B0A1><B0A2><B3CE><B3CF>...<B0C5><B2BD><B0C2><B0C8><B2C5><B2C6><B1D1><B0F9><B2B2><B3EB><B1B4>!<B1C2><B0C8><B3A4><B5C0><B1D5><B0F8><B2AC>,<B0B9><B1C2><B6E0><B7C3><B0F8>!<B0FB><B1F9><B0F8>...","RÉGIS : Zut !\nJ'étais distrait.\nÀ ce niveau, jamais\ntu ne gagneras\nla Ligue.\nEntraîne-toi !\nJe trace. À plus !",132,YES
+0x033395,6108,dialogue_19_19,39,<0A><B3DF><B3E0>:<B2AC>!<B0C5><B0C6><B0BC><B0BC><B9DB><B0C2><B3CE><B3CF><B3D1><B3D2>!<B2D8><B3DA><B3D4><B0BE>!,GARDE : Oh !\nTes Badges de Ligue\nsont authentiques !\nTu peux passer !,73,YES
+0x0333BD,5314,dialogue_19_19,37,You're gonna take  on the Elite Four?,"Magie, tu connais ?",19,
+0x0333E3,5319,dialogue_19_19,27,You should have no trouble.,Incroyable...,13,
+0x0333FF,5320,dialogue_19_19,37,This is the final  test for trainers!,"Tu t'es bien battu, mais tu t'arrêtes ici !",43,YES
+0x033425,5383,dialogue_19_19,16,I need to train.,Dire que j'ai perdu...,27,YES
+0x033436,5366,dialogue_19_19,24,The Elite Four is  next!,Je vais me marier !,19,
+0x03344F,5451,dialogue_19_19,13,Unbelievable!,"Finalement, non... Tu veux m'épouser ?",38,YES
+0x03345D,5321,dialogue_19_19,33,I heard about a    young prodigy.,Pourquoi sont-ils\ntous si faibles ?,36,YES
+0x03347F,5349,dialogue_19_19,31,You really beat    Team Rocket?,Je manque sûrement d'amour pour eux...,38,YES
+0x03349F,5322,dialogue_19_19,29,Only the chosen canpass here!,Tu n'iras pas plus loin !,25,
+0x0334BD,5384,dialogue_19_19,19,I don't believe it!,C'était écrit...,16,
+0x0334D1,3853,dialogue_19_19,105,"From here on, you  face the Elite Fourone by one! If you win, a door opens  to the next trainerGood luck!",Futur Champion ! Bats les quatre de suite. Toute défaite te renvoie au début. Courage !,95,
+0x03353B,3863,dialogue_19_19,71,"Here at the Pok@monLeague, you have toface the Elite Fourin succession.",Tu vas affronter\nles quatre membres\ndu Conseil des 4.\nVise la victoire !,75,YES
+0x033583,3872,dialogue_19_19,128,"Welcome,I'm Loreleiof the Elite Four! Your Pok@mon will  be at my mercy whenthey're frozen     solid! Hahaha!     Are you ready?","Bienvenue !\nJe zuis OLGA,\ndu Conzeil des 4 !\nMa glaze va figer\ntoute ton équipe !\nAch ! Z'est parti !",114,
+0x033604,3883,dialogue_19_19,89,You're better than I thought! Go on   ahead!This was justa taste of Pok@mon League power!,Tu es fort.\nZ'est bien.\nJ'ai perdu.\nPasse dans la salle\nsuivante !,86,
+0x03365E,3893,dialogue_19_19,133,"I am Bruno of the  Elite Four! Throughrigorous training, people and Pok@mon can become strongerAsh! We will grind you with our power!","Mon nom est ALDO,\ndu Conseil des 4 !\nMes Pokémon et moi,\non adore la muscu !\nSacha, en garde !\nÀ table !",104,
+0x0336E4,3902,dialogue_19_19,48,My job is done! Go face your next     challenge!,J'ai perdu...\nBien joué !\nLa suite t'attend.,56,YES
+0x033715,3910,dialogue_19_19,254,"I am Agatha of the Elite Four! Oak's  taken a lot of int-erest in you,child!That old duff was  once tough and han-dsome! Now he just wants to fiddle    with his Pok@dex,  He's wrong! Pok@monare for fighting!  Ash! I'll show you how a real trainer fights!","Je suis AGATHA,\ndu Conseil des 4 !\nCHEN mise sur toi.\nCe vieux machin\nétait fort et beau.\nMais le Pokédex\nne suffit pas :\nles Pokémon\nservent au combat !\nJe vais te montrer\nun vrai combat !",206,
+0x033814,3926,dialogue_19_19,76,"I see what he sees in you now! I have nothing else to sayRun along now,child",Je vois pourquoi\nCHEN t'apprécie !\nJ'ai perdu.\nTu peux passer.,72,
+0x033861,3935,dialogue_19_19,146,I heard about you Ilead the Elite FourI am Lance the dra-gon tamer! Dragon'spowers are superiorReady to lose? YourLeague challenge   ends with me!,"Moi, c'est PETER !\nJe dirige\nle Conseil des 4 !\nLes dragons sont\ndes êtres sacrés.\nDurs à capturer,\nils sont presque\ninvincibles !\nLe glas sonne...\nTu vas perdre !",186,YES
+0x0338F4,3950,dialogue_19_19,180,"I can't believe my dragons lost! You  are the League Cha-mpion!...or,you    would have been.   Another trainer    named Gary beat theElite Four before  you! He is the realchampion!",Incroyable !\nTu mérites le titre\nde Maître Pokémon !\nEnfin...\nPas encore !\nRÉGIS a déjà battu\nle Conseil des 4.\nBats-le et deviens\nle vrai Champion !,170,
+0x0339A9,3962,dialogue_19_19,158,"Hey Ash! I looked  all over for power-ful Pokemon and    assembled a strong team, now I'm the  League Champion!   I'm the strongest  trainer in the     world!","RÉGIS : Bonjour,\nminable. Toi, ici ?\nEn complétant\nmon Pokédex,\nj'ai trouvé\nl'équipe parfaite !\nJe suis le meilleur\nDresseur du monde !",152,
+0x033A48,3975,dialogue_19_19,310,"So,you won! Congra-tulations! You've  grown so much sinceyou first left withPikachu, Ash! I'm  disappointed Gary, I came when I heardyou became League  Champion.But you   already lost, do   you understand why?You've forgotten totreat your Pok@mon with trust and lovewithout them,you'llnever become champ again.","PROF. CHEN : Bravo,\nSacha !\nPikachu et toi\navez bien grandi.\nRégis... Dommage !\nJe venais saluer\nle Champion.\nMais tu as perdu.\nPourquoi ?\nTu leur as refusé\namour et confiance.\nSans ce lien\ntu ne seras jamais\nChampion !",257,
+0x033B7F,4004,dialogue_19_19,126,"Ash, you understandyour victory was   not your own doing!The bond you share with your Pok@mon  is marvelous! Come with me,Ash!",PROF. CHEN :\nSacha ! Ta victoire\nvient du lien\nqui t'unit\nà tes Pokémon.\nC'est merveilleux !\nSuis-moi !,124,
+0x033BFE,4016,dialogue_19_19,178,"Congratulations AshThis is the Pok@monHall of Fame!  The League Champions   and their Pok@mon  are honored here!  Congratulations,Ashyou and your  Pok@-mon are Hall of    Famers!",PROF. CHEN : Sacha est Champion ! Inscrivons ton nom et tes Pokémon. Rentrons : ta mère t'attend.,104,
+0x033CB1,4028,dialogue_19_19,62,"Ash,Lorelei was    looking for you,shewent to Cerulean   cave.",MAMAN : Étrange phénomène près d'Azuria. Olga enquête...,67,YES
+0x033CF0,6114,dialogue_19_19,105,"00000000000<B3FC><B3FD>:<B1F5><B0C2><B9FA><B9FB>,<B1E1><B1AD><B4F7><B0BC><B2FC><BDAB><B0E9><B0EA><B0CE><B0B8><B0AD><B0DF><B2F5><B0B8><B3CE><B3CF><B0EF><B3DB><B2DE><B2C5><B1BF><B3FB><B0F2>...<B2FC><BDAB><B1B4><B1B5><B0C7><B4CF><B4D0><B4D1><BDF6><BDAA><BCEC><B3D6><B0C7><B0F8>...","ARBITRE :\nDésolé.\nOlga est absente,\nalors la Ligue\nsuspend les défis.\nElle enquête\nà Azuria...",125,YES
+0x033D5B,5856,dialogue_19_19,11,MewTwo:....,MEWTWO : ...,12,YES
+0x033D67,4036,dialogue_19_19,247,"There you are Ash! It seems TeamRockethas appeared again,they've gone to    Indigo Plateau. Oh!And I have some-   thing for you as   well, here's a passto go to Navel RockYou can get there  by the S.S. Anne.  I'll see you at    Indigo Plateau Ash.",OLGA : Mewtwo\ncausait tout ça.,35,
+0x033E5F,4047,dialogue_19_19,74,"Hello, May I see   your pass for NavelRock?              ...Thank you sir!",Un Ticket Mystik ? Monte à bord ! Bienvenue à nouveau sur l'Océane !,71,
+0x033EAA,4052,dialogue_19_19,63,000000000000000000000000000000000000000000000000000Ho-oh: Kwee!,HO-OH : ...,11,
+0x033EEA,4053,dialogue_19_19,13,Lugia: Roar!!,LUGIA : ...,11,
+0x033EF8,4054,dialogue_19_19,76,"Welcome to Navel   Rock! If you'd liketo leave, just     board the S.S.Anne.",Quel voyage !\nOlga est revenue :\nla Ligue rouvre !,55,
+0x033F45,6119,dialogue_19_19,127,"000000000000000000000<B2FC><BDAB>:<B0D2><B0D3><B0FC><B0DB><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B1C2><B0C2><BAE8><B0AF><B1E1><B1AD><B4F7><B2FC><BDAB>!<B2BD><B2B6><B8A4><B3D4><B3EE><B8AC><B0BC><B0D5><B0D6>,<B2CB><B1C2><B1C9><B4AA><B0F8><B2AB><B2CB><B0C5><B0BC><B0A1><B0A2><B0B2><BBF7><B0CE><B2C1>!<B3BC><B3BC><B5EB><BAB8><B0BE>!","OLGA : Bienvenue !\nJe zuis OLGA,\ndu Conzeil des 4 !\nMa glaze va figer\ntoute ton équipe !\nAch ! Z'est parti !",114,
+0x033FC5,6127,dialogue_19_19,57,"<0A><B2FC><BDAB>:<B0C5><B0DB><B3D5><B0C2><B2AF><B1E6><B2B5><B0C1>?...<B1B4><B0BE>,<B1C2><B3F1><B0F8><B2AB><B3FE><B0F9><B1D1><B0BA><B9EA><BAF1><B3DD><B3DE><B0BE>",OLGA : Tu es fort.\nZ'est bien.\nJ'ai perdu.\nPasse à la suite !,75,YES
+0x033FFF,6133,dialogue_19_19,127,"<0A><B0D6><BBC0>:<B1C2><B0C2><B3BB><B0AF><B1E1><B1AD><B4F7><B0D6><BBC0>!<B0CE><B3A4><B0C2><B0A1><B0A2><B1CB><B2B5><B2BE><B0C3><B0F2><B4B7><BDEC><B2C5><B1C0><B0EC><B3D6><B0BC><B3F7><B2C9>,<B2AB><BAC4><B0EE><B0DC><BDEC><B2C5><B2A1><B1C2><B0BC><B0A1><B0A2><B3B2><B1C9><B0A5>!<B0C5><B0C2><B0B6><B0B7><B0BE>,<B0FC><B7EA><B7EA><B1C2><B2EF><B0BC><B4E4><B8B2><B0E3><B3EC><B0BE>!","ALDO : Je suis ALDO\ndu Conseil des 4 !\nMes Pokémon et moi,\non adore la muscu !\nSacha, en garde !\nÀ table !",104,
+0x03407F,6141,dialogue_19_19,65,"<0A><B0D6><BBC0>:<B0DB><B3D5><B0C2><B2D0><B1E6><B2A3><B1D5>?<B1C2><B7D5><B2AA><B3F1><B0F8>...<B2A9><B2AA><B3F1><B0F8>,<B1C2><B3E6><B1EF><B0DE><B1E7>,<B0C5><B2AB><B3DD><B3DE><B0BE>!",ALDO : Perdu...\nBien joué !\nLa suite t'attend.,56,
+0x0340C1,6146,dialogue_19_19,167,"<0A><BADE><B1DF>:<B1C2><B0C2><B7B2><B0AF><B1E1><B1AD><B4F7><BADE><B1DF>,<B1F1><B1E7><B1F5><B2D5><B2D6><B0BC><B1BE><B1C3><B1C4><B1C5><B0D0><B2C4><B5F2><B0C5>!<B1BE><B1C3><B1C4><B1C5><B0DF><B3DD><B0C2><B0D0><B2C4><B2C9><B0BC><B1DD><B2B5>!<B2F5><B0B8><B0FD><B0CE><B0A4><B0FC><B0F8>,<B0E4><B2BE><B0C2><B2B4><B0C0><B0C1><B0A1><B0A2><B2F1><B2F2><B0C2><B0CE><B0F1><B0BC>!<B0A1><B0A2><B0C2><B0C3><B1A8><B0FC><B0F2><B4B7><B0BC>!<B2CB><B1C2><B0FC><B7DB><B0C5><B1F5><B2BA><B0BC><B0F2><B4B7><B0BE>!",AGATHA :\nConseil des 4 !\nCHEN mise sur toi.\nCe vieux machin\nétait fort et beau.\nMais le Pokédex\nne suffit pas :\nles Pokémon\nservent au combat !\nMontre-moi\nce que tu vaux !,206,YES
+0x034169,6159,dialogue_19_19,157,"<0A><BAF4><B6A6><BBCF>:<B0C5><B0C2><B0B6><B0B7>?<B1C2><B0C2><B6D9><B0AF><B1E1><B1AD><B4F7><BADE><B1DF><BAF4><B6A6><BBCF>,<B0C5><B6B9><B3B3><B2D7><B1A4><B6D9><B0C2><B6DD><BCB3><B6F2><B1E7><B0DC><B0BC><B1C9><B0C1>,<B3F7><B4A7><B2C0><B3A8><B6A3><B6D8><B0BC><B1B4><B1D2><B0C2><B1AD><B0F9><B6A7><B1D1>!<B1D1><BAFD><B0BC><B4AB><B4AC><B0E7><B6D9><B0AF><B0C2><B2B6><B1A8><B0BC>!<B1D9><B1DA><B0BE>,<B1C2><B1F9><B2CB><B0C5><BCBB><B1C7><BBD0><BBC0><B3EF><B8B9><B0BC>!","PETER :\nJe dirige\nle Conseil des 4 !\nLes dragons sont\ndes êtres sacrés.\nDurs à capturer,\nils sont presque\ninvincibles !\nLe glas sonne...\nTu vas perdre !",186,YES
+0x034207,6171,dialogue_19_19,118,<0A><BAF4><B6A6><BBCF>:<B4A4><B2AA><B4A7><B3D4><B3A8><B0C5><B0BC><B4BF><B1AE><B1D1><B9D7>!<B0CE><B3D4><B0C3><B1D7><B2EA><B0EA><B1F5><B2BA><B0BC><B4A1><B4A2><B2AB><B6B9><B3B3><B3DE><B5BB><B4A1><B4A2><B0BC><B9EA><BAF1><B0CF><B6A2><B0BF><B4A8><B0BC><B2DE><B2C5><B2DF>!!<B1F0><B2B2><B0C5><B2BB><B1D1><B7D4><B0CF><B6A2><B1C2><B2EF><B1E1><B1AD><B4F7>!,"PETER : Bien joué !\nMais pour être\nle vrai Champion,\nbats le Dresseur\nqui nous a vaincus.\nIl t'attend\ndans la salle\nsuivante !",143,YES
+0x03427E,4068,dialogue_19_19,368,"Jesse: Long time nosee brat! Our boss has disbanded Team Rocket because of  you!               James: We plan to  take over Indigo   Plateau and make   sure Team Rocket   takes its place as true Pok@mon mast- ers. We can't allowa dreadful little  twerp such as your-self stand in our  way!               Meowth:Hehe, you   don't stand a      chance against     Meowth!","SACHA : C'est vous, les nouveaux Champions ? Hein ? Vous êtes...",69,
+0x0343EF,4074,dialogue_19_19,140,"James: Again! We   lost again to this twerp!             Jesse&James: Looks like Team Rocket's blasting off again!Meowth:Hey,Wait forMeowth!",JAMES : Encore battus ! Va défier le nouveau chef !,55,
+0x03447C,6181,dialogue_19_19,241,"0000000000000000000000000000000000000000000000000000000000000<B1BE><B1C3><B1C4><B1C5>:<B0C5><B5B0><BDF2><BDF2><B2BA><B2BA><B0BC><B3F5><B0F8>!<BBA6><B6EB><B0C5><B0B6><B0B7>,<B1FA><B0C5><B2BF><B1D9><B1DA><B2C1><B0DB><B2B2><B2C2><B2C3><B1D9><B1DA><B0DB><B2F5><B0B8><B0C5><B1F5><B0BC><B3D6><B2C9><B0F8>,<B6B9><B3B3><B1E7><B0C5><B2EB><B1BE><B0F8>!<B0B6><B0B7>,<B0C5><B0EC><B2E4><BBD4><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B0CE><B0C2><B0C5><B1D1><B0BA><B2B5><B0BC><B0E3><B3EC>!<B0C2><B0C5><B2A1><B0A1><B0A2><B3E3><BAF1><BDF5><B7FC><B0BC><B5EA><B7AB>!<B0B6><B0B7><B0C5><B2A2><B1C2><B0FC>!","PROF. CHEN : Bravo,\nSacha !\nAvec Pikachu,\ntu as tant grandi !\nGrâce au lien noué\navec tes Pokémon,\ntu as gagné !\nSuis-moi !",143,
+0x03456E,6191,dialogue_19_19,117,"<0A><B1BE><B1C3><B1C4><B1C5>:<B0B6><B0B7>,<B0C5><B2A5><B3D4><BAB4><BBC8><B0BC><B0F2><B4B7>!<B1CE><B1FE><B6C9><B2EA><B0EA><B3CE><B3CF><B4A1><B4A2>!<B0B8><BDE7><B2F8><B2F9><B0F9><B0B6><B0B7><B0BC><B3B1><B9B1><B2A1><B0A1><B0A2><B0BC><B3B1><B9B1><B0BE>!<B0C9><B1C2><B1D1><B0E8><B2A3><B1BF><B0BE>,<B0C5><B1DB><B1DB><B1D1><B2B1><B3F7><B1D7><B0C5>","PROF. CHEN : Bravo,\nSacha !\nTe voilà Champion\nde la Ligue !\nNotons vos noms.\nPuis rentrons :\nta mère t'attend.",131,YES
+0x0345E4,6200,dialogue_19_19,113,"<0A><B1DB><B1DB>:<B1C2><B1F1><B1E7><B0C5><B0C3><B0C7><B6CA><B8FD><B4D1><B0BC><B0A7><B0A8><BDE0><B4BF><B1D9><B2F4><B6C1><B3FB><B0F2><B3B1><B1C1><B2C2><B6A8><B8EE><B0BC><B2DE><B2C5><B2DF>!<B1F1><B1E7><B1F0><B0BC><B0A1><B0A2><BDFA><B6C9><B2BD><B2B6><B0AE><B1B6><B2B5><B0CF><B6A2><B3D4>,<B0C5><B8F9><B4B1><B0C3><B0B6><B0DD><B2AC>...","MAMAN : Kameiyu, chez Nanjing Tech à Céladopole, aurait des Pokémon invaincus. Tu vas le défier ? Prudence...",125,YES
+0x034656,6203,raw,74,"<0A><B2C2><B6A8><B8EE>:<B0B6><B0B7>,<B1C2><B2D7><B1A4><B0C5><B1D1><B2B1><B1F9><B0FC><B0BC>!<B0EE><B1D1><B0F2><B6B9><B3B3><B2B6><B0AE><B3BD><B6DA><BDDD><BDFB><B0BE>!!<B0FC><B0BE>,<BAFA><BAFB><B1B4><B0F8><B0D7>?","KAMEYU : Sacha, je savais que tu viendrais ! Prêt ?",51,
+0x0346A1,4084,dialogue_19_19,151,"You're amazing! It seems you've earnedthe respect of the Legendary Pok@mon! If you can find allthe Pok@mon in     Kanto, return and  speak to me again!","KAMEIYU : Bravo ! Tu es sans rival à Kanto. Pourtant, il y a plus fort ailleurs. Hoenn a d'autres Pokémon. Reviens, Pokédex complet.",141,
+0x034739,4100,dialogue_19_19,104,"You are a true Pok@maniac! You have   earned this Pok@-  mon's respect, it  would like to come with you.","KAMEIYU : Hoenn a d'autres Pokémon. Finis ton Pokédex, puis reviens.",70,
+0x0347A2,4110,dialogue_19_19,26,Please take care   of Mew!,KAMEIYU : Bravo ! Le Pokédex de Kanto est complet. Ce Mew est à toi !,68,YES
+0x0347BD,4115,dialogue_19_19,13,Recieved Mew!,Mew reçu !,10,
+0x0347CB,6206,dialogue_19_19,149,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1DB><B1DB>:<B0C5><B3A6><B2EA><B0A1><B0A2><B2F1><B2F2><B0F8><B0D7>?,MAMAN :\nTu as terminé\nle Pokédex ?,50,
+0x034862,4116,dialogue_19_19,16,Great job Champ!,"ARBITRE : Bravo,\nChampion !",29,YES
+0x034873,4117,dialogue_19_19,19,Farewell traveller!,"KAMEIYU : D'accord, je m'avoue vaincu ! Content ?",47,YES
+0x034887,4118,dialogue_19_19,45,00000000000000000000000000Take care of Eevee!,BEIBEI : Tu es vraiment formidable !,50,YES
+0x0348B5,4119,dialogue_19_19,37,Your Pok@mon can   fly you anywhere. ,XIAO LI : Arrête !\nOu j'appelle\nla police !,49,YES
+0x034927,4130,dialogue_19_19,6,<B2C1><B0DB><B3E6>,Rien obtenu.,12,YES
+0x03492F,4131,dialogue_19_19,11,A Pok@ball!,Poké Ball reçue !,17,YES
+0x03493B,4132,dialogue_19_19,13,A Great Ball!,Super Ball reçue !,18,YES
+0x034949,4133,dialogue_19_19,9,UltraBall,Hyper Ball reçue !,18,YES
+0x034953,6211,dialogue_19_19,10,<B2C1><B0DB><B1BE><B2DF><B0BD>,Master Ball reçue !,19,YES
+0x03495F,4134,dialogue_19_19,9,A Potion!,Potion reçue !,14,YES
+0x034969,5855,dialogue_19_19,9,S.Potion!,Super Potion\nreçue !,26,YES
+0x034973,4135,dialogue_19_19,13,00A H.Potion!,Hyper Potion\nreçue !,26,YES
+0x034981,6212,dialogue_19_19,14,00<B2C1><B0DB><B3F2><B1BE><B9C7><BBB9>,Potion Max reçue !,18,YES
+0x034990,4136,dialogue_19_19,12,An Antidote!,Antidote reçu !,15,YES
+0x03499D,4137,dialogue_19_19,21,000000000000A S.Heal!,Réveil reçu !,13,
+0x0349B3,5448,dialogue_19_19,11,00Ice Heal!,Antigel reçu !,14,YES
+0x0349BF,6213,dialogue_19_19,12,00<B2C1><B0DB><BAE7><B9C7><BBB9>,Anti-Brûle reçu !,17,YES
+0x0349CC,4138,dialogue_19_19,13,0A Full Heal!,Total Soin reçu !,17,YES
+0x0349DA,4139,dialogue_19_19,10,0A Revive!,Rappel reçu !,13,YES
+0x0349E5,6214,dialogue_19_19,12,00<B2C1><B0DB>PP<B4C7><B4C8>,PP Plus reçu !,14,YES
+0x0349F2,6215,dialogue_19_19,11,<0A><B2C1><B0DB>PP<B3F2><B1BE>,PP Max reçu !,13,YES
+0x0349FF,4140,dialogue_19_19,13,A Rare Candy!,Super Bonbon reçu !,19,YES
+0x034A0D,4141,dialogue_19_19,11,Fire Stone!,Pierre Feu reçue !,18,YES
+0x034A19,4142,dialogue_19_19,11,Water Stone,Pierre Eau reçue !,18,YES
+0x034A25,4143,dialogue_19_19,11,Thun.Stone!,Pierre Foudre\nreçue !,26,YES
+0x034A31,4144,dialogue_19_19,11,Leaf Stone!,Pierre Plante\nreçue !,26,YES
+0x034A3D,4145,dialogue_19_19,11,Moon Stone!,Pierre Lune reçue !,19,YES
+0x034A49,6216,dialogue_19_19,8,<B2C1><B0DB><B2E0><B2E1>,Colis Chen reçu !,17,YES
+0x034A52,6218,dialogue_19_19,13,<0A><B2C1><B0DB><B0A1><B0A2><B2F1><B2F2>,Pokédex reçu !,14,YES
+0x034A60,6219,dialogue_19_19,9,<0A><B2C1><B0DB><B3BB><B2F1>,Carte reçue !,13,YES
+0x034A6A,6220,dialogue_19_19,13,<0A><B2C1><B0DB><BADE><B1B2><B5AB><B1B2>,Nautile reçu !,14,YES
+0x034A78,6222,dialogue_19_19,13,<0A><B2C1><B0DB><BADF><BBBE><B5AB><B1B2>,Fossile Dôme reçu !,19,YES
+0x034A86,6223,dialogue_19_19,9,<0A><B2C1><B0DB><B6F6><B6F7>,Passe Bateau reçu !,19,YES
+0x034A90,6224,dialogue_19_19,11,<0A><B2C1><B0DB><B8E9><B8EA><B5F7>,Eau Fraîche reçue !,19,YES
+0x034A9C,6225,dialogue_19_19,13,<0A><B2C1><B0DB><B0A1><B0A2><B6EE><B8D1>,Scope Sylphe reçu !,19,YES
+0x034AAA,6226,dialogue_19_19,11,<0A><B2C1><B0DB><B0A1><B0A2><B8DF>,Poké Flûte reçue !,18,YES
+0x034AB6,6227,dialogue_19_19,9,<0A><B2C1><B0DB><B7BB><B9F9>,Dent d'Or reçue !,17,YES
+0x034AC0,6228,dialogue_19_19,13,<0A><B2C1><B0DB><B1D6><B9ED><B6F6><B6F7>,Ticket Mystik\nreçu !,25,YES
+0x034ACE,6229,dialogue_19_19,11,<0A><B2C1><B0DB><B1A9><B1AA><B1AB>,CS01 : Coupe !,14,YES
+0x034ADA,6230,dialogue_19_19,11,<0A><B2C1><B0DB><B1AC><B1AD><B1AE>,CS02 : Vol !,12,YES
+0x034C03,6231,dialogue_19_19,5,<B0D2><B0D3>!,Bienvenue !,11,YES
+0x034C09,6232,dialogue_19_19,35,<0A><B0D2><B0D3>!<B0DB><B0A1><B0A2><B0DC><B0DD><B0DE><B0DF><B0E0><B0E1><B0A1><B0A2><B0BC><B0E2><B0E3>.,"Bienvenue !\nAu Centre Pokémon,\nnous soignons tous\nles Pokémon !",70,YES
+0x034C2D,6238,dialogue_19_19,29,<0A><B7C5><B0BC><B0A1><B0A2><B1C0><B0A1><B6DD><B0F8>!!<B0D2><B0D3><B0E4><B0E5>!!,Merci !\nToute ton équipe\na la super pêche !\nÀ bientôt !,68,YES
+0x034C4B,6244,dialogue_19_19,41,"<0A><B0E7><B0CE><B0E8>,<B0E9><B0EA><B0EB><B0EC><B0AD><B0ED><B0EE><B0BF><B0EF><B0F0><B0CE><B0EC><B0F1><B0E7><B0F2>...","Désolé, les combats\nne sont pas encore\ndisponibles ici...",56,YES
+0x034C75,6249,dialogue_19_19,32,<0A><B0F3><B0F4><B0EB><B0F5><B0F6><B0F7><B0F8>...<B0F9><B0FA><B0FB><B0FC><B0FD><B0FD><B0BE>,La machine de Troc\nest aussi en panne.\nReviens plus tard.,56,YES
+0x034C96,6254,dialogue_19_19,15,<0A><B0D2><B0D3>!<B0D4><B0D5><B0D6><B0D7>?,Salut !\nJe peux t'aider ?,36,YES
+0x034CA6,6256,dialogue_19_19,11,<0A><B0D8><B0D8><B0D9><B0DA>!!,Merci !\nÀ bientôt !,30,YES
+0x034CB3,5186,dialogue_19_19,84,Technology's great!You can now store  and recall items   and Pok@mon as data via PC!,"Moi aussi, j'élève\ndes Pokémon forts.\nFini les brimades !",57,
+0x034D08,5200,dialogue_19_19,67,See those ledges?  It's a bit scary   but you can jump   from them.,Poké Balls en vente à la Boutique !,34,
+0x034D3A,5211,dialogue_19_19,17,jump   from them.,Un Pokémon choyé\ns'attachera à toi.,37,YES
+0x034D4C,5224,dialogue_19_19,85,"Hi! I work at the  Pok@Mart. It's a   convenient shop,youshould come and    visit us.","Voler fait peur,\nmais te ramène vite\nà Bourg Palette.",54,
+0x034DA2,5354,dialogue_19_19,66,"Using Pok@balls,youcan carry and use  Pok@mon any time,  anywhere!","Chenipan n'est pas venimeux. Aspicot, si !",42,
+0x034DE5,5240,dialogue_19_19,56,"This GYM is always closed, I wonder   who the Leader is?",Cette Arène Pokémon\nreste fermée.\nQui est donc\nle Champion ?,70,YES
+0x034E1E,5367,dialogue_19_19,19,I like this museum.,Un os de dragon !\nJe l'ai trouvé !,35,YES
+0x034E32,5368,dialogue_19_19,32,0My Dad loves       Pok@mon too.,Une Potion soigne les Pokémon épuisés.,46,YES
+0x034E55,6257,dialogue_19_19,23,<0A><B0B6><B8BB><B6E5><B3F7><B0B6><B3A8><B3DD><B9F9><B3F7><B3ED><B3EE>,"Rattata est petit,\nmais ses crocs\nsont redoutables !",56,YES
+0x034E6D,6262,dialogue_19_19,28,"<0A><B3CA><B3CB><B4D8><B4D9><B0C2><B1AD><B2AA><B0BC><B4D3><BDFE>,<B0B6><B0DD><B2AC>",La Forêt de Jade\nest un vrai\nlabyrinthe.\nSois prudent !,71,YES
+0x034E8B,5247,dialogue_19_19,44,The HM Flash lightseven the darkest   caves.,La capacité Coupe\ntranche ces arbres.,38,
+0x034EB8,6267,dialogue_19_19,54,<B0AE><B0BC><B0A1><B0A2><B2BE><B0B8><B4D8><B4D9><B1CB><B9AB><B4FB><BDB8><B1C9><B4E0><B0C3><B2C1><B0DB><B2CC><B0C8><B0BC><B0A1><B0A2><B2AB><B0C3><B0C8><B7C3><B7C3>,Certains Pokémon\nvivent seulement\ndans les forêts\nou les grottes.\nExplore partout\npour les trouver !,113,YES
+0x034EEF,6272,dialogue_19_19,40,"<0A><B1E7><B0E8><B1B2><B6DC><B8E9><B1F8><B3F7><B5AC><B0BC>,<B0A1><B0A2><B1A8><B4BE><B0E4><B1AE><B0EC><B0FD><B4C4><B0BE>","Cette grotte est\ntrès sombre.\nAvec Flash,\nun Pokémon peut\nl'éclairer.",87,YES
+0x034F18,5385,dialogue_19_19,31,Poliwrath is my    best friend!,Ah... Ces machines\nsont captivantes...,38,YES
+0x034F38,5256,dialogue_19_19,45,000000000000000Did you check out  the Museum?,Les Scouts d'ici\nsont forts.\nMais Pierre est\nredoutable !,69,YES
+0x034F66,4206,dialogue_19_19,24,Welcome to Pewter  City.,Pas de Pokémon\nsauvage au jardin !,38,YES
+0x034F7F,4216,dialogue_19_19,27,This road leads to Route 3.,"Ce Pokémon, je l'ai eu par échange.",34,YES
+0x034F9B,4221,dialogue_19_19,33,I heard Team Rocketis at Mt.Moon!,Certains Pokémon\nn'obéissent pas...\nUn Badge aiderait !,57,YES
+0x034FBD,4228,dialogue_19_19,16,Tickets are 50$.,L'enfant paie 50 $. Tu veux visiter ?,36,YES
+0x034FCE,4233,dialogue_19_19,17,Enjoy your visit!,50 $ reçus. Merci !,19,YES
+0x034FE0,6279,dialogue_19_19,6,<B0FB><B0FC><B2AC>,À bientôt !,11,YES
+0x034FE7,4234,dialogue_19_19,38,Team Rocket is     always in the news!,"Ce mois-ci, on part dans l'espace !",34,
+0x03500E,4235,dialogue_19_19,38,You can carry six  Pok@mon at the most,Trop de Pokémon ? Envoie-les au PC.,36,
+0x035035,4240,dialogue_19_19,18,See ya around kid!,Tu peux voyager\navec six Pokémon.,36,YES
+0x035048,4246,dialogue_19_19,46,Only the Pok@mon   champion is allowedin here!,J'entends souvent\nd'étranges bruits.,37,
+0x035077,6280,dialogue_19_19,68,"000000<B6C6><B0CE><B8E7><B0F8>,<B0EE><B1BF><B2B5><B1B6><B5EF><B0F8>!<B0C2><B5A2><B5A3><B5A4><B5A5><B0BC>!<B1D8><B1A7><B0C2><B5EC><B4B0><B0F6><B0C6><B5A2><B5A3><B5A4><B2B6><B2B7><B2B8>!",Ces pauvres gens\nont été volés.\nL'odieuse\nTeam Rocket\nest derrière tout\nça. Même la police\na du mal à lutter !,133,YES
+0x0350BD,4256,dialogue_19_19,24,Welcome to Ceruleancity!,"Toi aussi, tu as des Pokémon ? Entraîne-les bien !",57,YES
+0x0350D6,5291,dialogue_19_19,47,Girl:The life of a trainer is tough   isn't it?,Tu veux compléter ton Pokédex ? Génial !,46,
+0x035106,4261,dialogue_19_19,27,I care for injured Pok@mon.,"Rouler à vélo, c'est un vrai plaisir !",47,YES
+0x035122,6293,dialogue_19_19,22,0000<B1C2><B0BC><B2F3><B3A9><BCB2><B3F7><B9D3><B7EE><B2DD>,Mon vélo est magnifique !,31,YES
+0x03513A,4266,dialogue_19_19,25,Why would they do  this!?,La Team Rocket fait\ncreuser les Pokémon\npour une raison...\nPas nette !,68,YES
+0x035154,5297,dialogue_19_19,51,"Those miserable    Rockets! They stoleour ""Dig"" TM!","Sans l'objet volé, il faudra tout abandonner...",51,
+0x035188,6298,dialogue_19_19,35,0000000<B8F3>...<B3F2><B0CD><B2B6><B0AE><B2F4><B1C9><B2AF><B1E6><B1D5><B7AB>...,Pff... Rien de neuf\nces temps-ci...,34,
+0x0351AC,6303,dialogue_19_19,30,<0A><B1C2><B2CE><B0C2><B6A3><B6D8><B0CE><B1B4><B1C2><B0BC><B7FC><BEA7><B6AD><B1DF>...,Je n'arrive pas\nà bien élever\nmon Bulbizarre...,55,YES
+0x0351CB,6312,dialogue_19_19,26,<0A><B2CB><B0A1><B0A2><B3DE><B5AB><B2F1><B2F2><B0DE><B0DF><B2FB><B2FC>...,Fais évoluer\ntes Pokémon :\nle Pokédex avance !,57,YES
+0x0351E6,6317,dialogue_19_19,30,<0A><B1F1><B1E7><BDE3><BDE4><B2D6><B0A4><B2F5><B3D4><B8BD><B0A2><B0A1><B0A2><B1EB>...,Des Pokémon Spectre\nseraient apparus\nà Lavanville...,53,YES
+0x035206,5263,dialogue_19_19,56,Pok@mon spirits    have been seen in  the Pok@mon Tower.,"À Lavanville,\nla Tour Pokémon\nest un cimetière.",55,
+0x03523F,5283,dialogue_19_19,57,I think they are   spirits of Pok@mon the Rockets killed.,Des spectres rôdent\nà la Tour Pokémon.\nCe sont sûrement\ndes Pokémon tués\npar la Team Rocket.,95,YES
+0x035279,4276,dialogue_19_19,26,Do you believe in  Ghosts?,Tu crois vraiment\naux spectres ?,33,YES
+0x035294,4280,dialogue_19_19,37,May the souls of   Pok@mon rest easy.,Jamais je ne pardonnerai à la Team Rocket d'avoir tué la mère d'Osselait !,88,YES
+0x0352BA,4281,dialogue_19_19,19,Get out of the way!,La ville est\nen état de siège !,37,YES
+0x0352CE,6322,dialogue_19_19,21,0<B0A1><B0A2><B8BE><B0AE><B3F7><B0C8><B8BD><B0A2><B1A9><B1C6>,La Tour Pokémon\nabrite beaucoup\nde Spectres.,50,YES
+0x0352E4,6327,dialogue_19_19,80,<0A><B0EE><B0BA><BDE3><BDE4><B2D6><B3F2><B0AE><B3B1><B0BC><B8BE><B0F6><B0C2><B0C0><B0C1><B0A1><B0A2><B0BC><BEA8><B6FE>...<B2B5><B2EF><B1D2><B8C1><BEAA><B0BC><B0A1><B0A2><B8DD><B0DB><B0EE><B8BD><B0A2><B8BE><B0FC><B8C3><B9D2><BEAB><B6B4>,Ici reposent\nles Pokémon.\nLa Tour est un lieu\nde recueillement.,74,
+0x035335,6337,dialogue_19_19,31,<0A><B8B8><B1F8><B2CE><B2B5><B0DE><B0DF><B8BF><B8C0><B0DE><B8BB><B0DE><B8BB><B0BC><B0A2><B8C6>,M. Fuji peut\napaiser l'âme\nd'Osselait.,49,YES
+0x035355,4282,dialogue_19_19,26,Silph Co. is very  famous.,La Team Rocket...\nQuels sales types !,38,YES
+0x035370,4283,dialogue_19_19,38,The Rockets just   came and took over!,Tu vas défier la Team Rocket ? Bravo !,45,YES
+0x035397,4284,dialogue_19_19,29,There's two gyms inthis city.,J'ai vu le chef de la Team Rocket entrer ici...,51,YES
+0x0353B5,4293,dialogue_19_19,30,That group needs tobe stopped.,Je t'admire !\nJe suis avec toi !,37,YES
+0x0353D4,4301,dialogue_19_19,27,I lost my money    betting!,J'ai vu ton combat. T'es très fort !,35,YES
+0x0353F0,4302,dialogue_19_19,66,They must have     targeted Silph Co. for their Pok@mon  products.,"Kameiyu, de Nanjing Tech, aurait des Pokémon légendaires...",71,YES
+0x035433,4307,dialogue_19_19,57,00Welcome! You can   exchange coins for prizes next door.,Bienvenue !\nÉchange tes jetons\ncontre un prix.\nSans Boîte Jeton...,76,YES
+0x03546D,4323,dialogue_19_19,24,I'm having a great time!,J'adore jouer !\nLe temps file...,35,YES
+0x035486,4327,dialogue_19_19,36,A man was guarding that poster there,Pas de Boîte Jeton.\nPas de jeu.,30,
+0x0354AB,6342,dialogue_19_19,53,"<B7C5><B0DE><B0DF><B1A8><B3F5><B2C1><B0BC><B4B6><BDBB><BEB2><B0F4><B0A3><B0A1><B0A2><B2DD>...<B0CE><B3A9>,<B0C5><B2B6><B0AE><B4B6><BDBB><BEB2>...","Échange tes jetons\ncontre des Pokémon.\nSans Boîte Jeton,\nimpossible !",69,YES
+0x0354E1,4337,dialogue_19_19,30,00000000Where'd that persongo?,Où est passé\nce type ?,28,
+0x035500,4342,dialogue_19_19,27,My Pok@mon keep me company.,"Quand mes Pokémon faiblissent, j'achète des soins.",57,YES
+0x03551C,4343,dialogue_19_19,28,I got my Koffing inCinnabar!,Tiens... Il y aurait un sous-sol sous le Casino.,53,YES
+0x035539,6348,dialogue_19_19,28,00000000<B0EE><B0BF><B1F5><B0C2><B9D3><B7EE><B0BC><B3BB><B1E2><B2AC>,Quel bel endroit !,18,
+0x035556,4352,dialogue_19_19,19,00Thanks again kid!,Encore une victoire\naujourd'hui...\nHa ha !,45,YES
+0x03556A,4357,dialogue_19_19,29,We're careful aboutpollution!,Je bâtissais ici quand des Pokémon m'ont attaqué !,53,YES
+0x035588,4362,dialogue_19_19,19,Have you met Bill? ,"Selon la rumeur,\nle Conseil des 4\ndu Plateau Indigo\nest redoutable.",72,YES
+0x03559C,4372,dialogue_19_19,26,00I just adore my    Seel!,Le Président\nn'en finit plus\nquand il parle\nde Pokémon...,70,YES
+0x0355B7,4377,dialogue_19_19,37,Hmph! My Pikachu isbetter than yours!,Tadmorv vient\nde la boue marine.\nTu le savais ?,52,YES
+0x0355DD,4392,dialogue_19_19,55,"0000000000000000000The Warden is old, but still active!",Le Parc Safari\nabrite des Pokémon\ntrès spéciaux !,53,
+0x035615,4399,dialogue_19_19,34,Did you see the    ship out there?,Où est encore passé\nmon Roucool ?,32,
+0x035638,4400,dialogue_19_19,38,You should raise   your Pok@mon evenly,Un Pokémon légendaire serait au Parc Safari...,55,YES
+0x03565F,4406,dialogue_19_19,37,The Warden knows a lot about Pok@mon!,Tu regardes la TV ?,19,
+0x035685,4409,dialogue_19_19,36,I couldn't under-  stand the warden.,Combien d'espèces\nde Pokémon vivent\ndans ce monde ?,53,YES
+0x0356AA,4414,dialogue_19_19,36,"We nicknamed the   Warden, Slowpoke.","Défier l'Arène ?\nAlors, abandonne.",36,
+0x0356CF,4420,dialogue_19_19,34,00The Safari Zone hasrare Pok@mon.,Le vieux maître du dojo est redoutable !,50,YES
+0x0356F2,4421,dialogue_19_19,44,Scientists conduct experiments in thathouse.,Surpris ? Cela fait des années qu'on vit ici !,47,YES
+0x03571F,4430,dialogue_19_19,19,Blaine's an odd man,"Aujourd'hui,\nje suis à plat...\nTrop fatigué...",53,YES
+0x035733,4437,dialogue_19_19,37,You can stop evolu-tion by Pushing B.,L'Eau est fatale aux Pokémon Feu !,36,
+0x035759,4442,dialogue_19_19,38,We study Pok@mon   fossils in this lab,Un Pokémon rare ?\nSois le bienvenu !,37,
+0x035780,4454,dialogue_19_19,34,Eevee can evolve to1 of 3 Pok@mon.,Mon fossile revit !\nDu Mont Sélénite !,37,YES
+0x0357A3,4469,dialogue_19_19,35,People bring us Pok@mon to examine.,La technologie\na fait des progrès\nincroyables !,51,YES
+0x0357C7,4474,dialogue_19_19,23,Dr.Fuji founded ourlab.,Évoli aurait plus\nde trois formes\nd'évolution...,52,YES
+0x0357DF,4485,dialogue_19_19,38,Let me know if you find another fossil,"Salut, futur Champion... Bonne chance !",46,YES
+0x035806,4488,dialogue_19_19,29,Victory Road sure  was tough!,Le Conseil des 4\nest redoutable.\nSois prudent...,53,YES
+0x035824,4495,dialogue_19_19,40,00000000000This is the final  challenge!,Le type Dragon est\nredoutable.\nSes points faibles\nsont très rares.,73,YES
+0x03584D,4505,dialogue_19_19,38,"If you lose, you   have to start over.",Bats-le et avance.\nBonne chance !,33,
+0x035874,4515,dialogue_19_19,31,0000Bill has lots of   Pok@mon!,Mon grand-père\nvoudrait échanger\ndes Pokémon.,50,YES
+0x0358AD,4520,dialogue_19_19,15,Hit the button!,Un interrupteur s'est activé !,33,YES
+0x0358BD,4525,dialogue_19_19,20,0Go ahead and choose,"Ce beau fossile,\ntu n'en veux pas ?!",38,YES
+0x0358D2,6349,dialogue_19_19,34,"00<B1A7><B1A8><B0CA><B0CB><B0BC><B2B5><B0CE><B8CF>,<BCC6><B3F6><B2AB><B0AE><B1B4><B0AE><B0F7>!","Selon le Dresseur, les Pokémon servent le bien ou le mal !",57,YES
+0x0358F6,4535,dialogue_19_19,36,No! Super Potions  are all sold out!,Certains exploitent\nleurs Pokémon.\nLes pires ?\nLa Team Rocket !,73,YES
+0x03591B,4541,dialogue_19_19,29,This shop has many Antidotes.,Tout est trop cher.\nPersonne ne réagit.,38,YES
+0x035939,4547,dialogue_19_19,49,There's a Pok@mon  Center in every    town ahead.,"À niveau égal,\nleur force diffère.",38,
+0x03596B,4559,dialogue_19_19,55,Pok@mon Centers    heal your injured  Pok@mon for free.,Le niveau rend plus fort. Chaque type a ses faiblesses.,53,
+0x0359A3,4572,dialogue_19_19,19,Got Navel Rock Pass,Ticket Mystik\nreçu !,25,YES
+0x0359B7,6356,dialogue_19_19,38,0000<B0CE><B2D7><B2AF><B1E6><B0F0><B7CD><B1FB><B1FC><B0BF><B1F9><B5B4><B2AA><BEBD><B0A4><B0A1><B0A2><B1EB>,"Un Pokémon surgit\nparfois des herbes,\nsans prévenir.",52,YES
+0x0359DE,6361,dialogue_19_19,35,<0A><B0DB><B1BE><B3BA><B4D1><B0BF><B0C7><B1F9><B4BA><B0D1><B3F7><B0C8><B8EE><BEBE><B0BC><B2DE><B2C5><B2DF>,"Dans les grandes\nvilles, tu verras\nd'excellents\nDresseurs.",67,YES
+0x035A02,6366,dialogue_19_19,36,"<0A><B0C5><B0C7><B3D4><B7BB><BAC2><B4D1><B0D7>,<B1F1><B1E7><B0B9><B0BF><B0AE><B3F7><B8AF><B0BC><B1BE><BEB4>",Tu es déjà allé\nà Safrania ?\nSes immeubles\nseraient immenses !,76,YES
+0x035A27,6371,dialogue_19_19,55,"<0A><B1C2><B0F6><B1D7><B6A9><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2>,<B0DE><B0C2><B0DB><B3D5><B4C2><B7D0><B1F2><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1EB>?",J'aimerais avoir\nun Pokémon\nlégendaire...\nOù en trouver ?,72,YES
+0x035A5F,6376,dialogue_19_19,63,<0A><B0FD><B0C5><B0BC><B0EC><B0E3><B1D1><B2B1><B0C2><B2DE><B2C5><B2DF><B2D5><B1A3><B0BE>.<B2E6><B2E7><B0C5><B0C3><B0F0><B4E7><B0B3><B0DD><B2F3><BBA3><B0BC><B0A1><B0A2><BAF5><BAF6><B2DD>!,"Tu débutes, non ?\nSurveille toujours\nl'état de l'équipe.",57,
+0x035A9F,6385,dialogue_19_19,42,<0A><B0AE><B1AC><B3A9><B0AF><B0BC><B0A1><B0A2><B2AB><B0EC><B8DD><B1C2><B1AC><B3B7><B5CD><B1E2><B0BC><B3BA><B4D1><B0F8>...,"Grâce à Vol,\nun Pokémon t'emmène\nau loin.",46,YES
+0x035ACA,6390,dialogue_19_19,15,<0A><B6C9><B1AD><B0C2><B0BA><B1B4><B1AD><B4AA>,Il fait beau\naujourd'hui !,32,YES
+0x035ADA,6395,dialogue_19_19,29,"<0A><B0DD><B7AB><B0CE><B2DC>,<B5EF><B5EF><B2E6><B2E7><B0C5><B1C2><BEBF><B5DD><B0F8>!",Je suis ravie !\nEntre nous...\nje suis amoureuse !,57,YES
+0x035AF8,6402,dialogue_19_19,44,"<0A><B1BE><B6FC><B3F7><B5B6><B5B7><B2AC>,<B1FE><B3F6><B1F9><B1AF><B1B0><B1AE><B0BC><B1EF><B2AB><B0EC><BEC0><BEC1><B1BE><B6FC><B0F8>","La mer est immense.\nAvec Surf,\ntraverse-la !",51,YES
+0x035B25,6407,dialogue_19_19,50,<0A><B0C5><B1F1><B3D4><B0D7>?<B0B8><B6E1><B6E2><B4D1><B1E5><B0BC><B6E4><B6E5><B4B2><B6E6><B1E5><B1C0><B0C2><B0AE><B0FE><B0BC><B2DE><B2C5><B2DF><B1EB>,"Tu connais\nl'Océane,\nà Carmin sur Mer ?\nCe paquebot de luxe\naccueille de riches\nDresseurs.",105,YES
+0x035B58,6412,dialogue_19_19,35,<0A><B0B8><B6CF><B2CD><B6DC><B1E5><B0BC><B2BC><B1E5><B9E3><BEC2><B1F9><B0AE><B6D3><B6D3><B0A4><B2F5><B1EB>,"La nuit,\non peut parfois\nvoir des Mélofée\nau Mont Sélénite.",74,YES
+0x035B7C,6422,dialogue_19_19,46,<0A><B7B5><B1B2><B1BE><B7B6><B0C5><B2D7><B1A4><B0D7>?<B1C2><B3EA><B8B6><B0F0><B2AB><B0C2><B0B8><B7B5><B1B2><B1BE><B7B6><B4CE><B3A9><B1EB>,Tu connais Hoenn ?\nJe m'y entraînais\ndans ma jeunesse.,55,YES
+0x035BAB,6431,dialogue_19_19,35,<0A><B0B8><B0A1><B0A2><B0E2><B0E3><BCDD><B0F9><B0BC><B0F0><B7CD><B0C3><B1F3><B1F4><B1A7><B1A8><B9C7><BBB9>,"Quand un Pokémon\na peu de PV,\nutilise vite\nune Potion !",69,YES
+0x035BCF,6436,dialogue_19_19,34,"<0A><B1C2><B0CE><B5E6><B5E5><B2D0><B1E6><B6CC><B0DA><B0A1><B0A2>,<B0C3><B2FC><B1F4><B4C3><B2C6><B1EB>",Je ne sais pas\nbien m'occuper\ndes Pokémon.\nIl me reste tant\nà apprendre !,89,YES
+0x035BF2,4573,dialogue_19_19,24,I can't enter the  city!,Mes Pokémon\nn'obéissent pas...\nUn Badge aiderait !,57,YES
+0x035C0B,6447,dialogue_19_19,59,00000000000000000<B0B8><B0EE><B0BA><B3BB><B7B8><B3F2><B2C9><B0BC><B2DE><B2C5><B2DF><B0C2><B1B2><B7FE><B8AF><B4EF><B0BC><B1E1><B1BE><B1AD><B4F7>,Le Conseil des 4\nréunit l'élite\ndes Dresseurs\nde la région.\nIl siège\nau Plateau Indigo.,113,YES
+0x035C48,4584,dialogue_19_19,30,Do you want to see my Pok@mon?,J'aimerais avoir un Pokémon aussi obéissant !,49,YES
+0x035C67,6461,dialogue_19_19,31,00000000000<B1C2><B1D7><B3C1><B5F7>...<B5F1><B0C4><B1C2><B5F7>?,J'ai soif...\nQui a de l'eau\npour moi ?,48,YES
+0x035C87,6470,dialogue_19_19,21,<0A><B2CA><B0B2>!<B1C1><B0C5><B2CA><B0B2><B0C5><B2BD><B0B2>?,Ne bouge pas !\nJe l'ai déjà dit...\nTu bouges encore ?!,57,YES
+0x035C9D,6481,dialogue_19_19,35,<0A><B0FD><B0C5><B0BC><B2DA><B1DF><B1D1><B2B1><B0C2><B0BA><B0F8><B0CE><B0E8><B0BC><B2DE><B2C5><B2DF><B0BE>,"À te voir,\ntu dois être\nun sacré Dresseur !",57,YES
+0x035CC1,4589,dialogue_19_19,76,"00000000000000000000000000000000000000000Welcome! 1 bike forjust 1,000,000$!","C'est étrange...\nPlus personne\nne fait de vélo,\naujourd'hui !",70,
+0x035D0E,4601,dialogue_19_19,32,Ash's Pok@mon are  fully healed!,Je sens une force mystérieuse...,33,YES
+0x035D2F,4602,dialogue_19_19,18,The door's locked!,Une serrure\ncodée...,27,YES
+0x035D42,4612,dialogue_19_19,17,Found Key to Gym!,Mot de passe obtenu !,27,YES
+0x035D54,4613,dialogue_19_19,16,Opened the door!,Un mécanisme vient de s'activer...,34,YES
+0x035D65,4614,dialogue_19_19,53,000000000000000000000You don't have all Eight Badges.,"Il te manque\nquelques Badges.\nObtiens-les tous,\npuis reviens !",71,YES
+0x035D9B,209,dialogue_19_19,16,Buy     Leave   ,Visiter  Partir,14,
+0x035DAC,4620,dialogue_19_19,18,0Not enough money.,"Désolé, tu n'as pas\nassez d'argent !",35,YES
+0x035DCC,227,dialogue_intro_17_19,180,"This world is    inhabited by       creatures called   Pok@mon!  For some people, Pok@mon    are pets.Others use them for fights.  Myself...I study   Pok@mon as a       profession.","Ce monde abrite\ndes créatures\nappelées Pokémon !\nCertains en font\ndes compagnons.\nD'autres les font\ncombattre.\nMoi, je les étudie.",150,
+0x035E82,233,dialogue_intro_17_19,129,ASH! Your very   own Pok@mon legend is about to        unfold! A world of dreams & adventureswith Pok@mon       awaits! Let's go!,SACHA !\nTa quête Pokémon\nva commencer !\nUn monde de rêves\net d'aventures\nt'attend !,103,
+0x035F05,4626,,15,wants to fight!,veut combattre!,15,
+0x035F15,4627,,13,is paralyzed!,est paralysé!,13,
+0x035F23,4628,,16,Super effective!,Super efficace! ,16,
+0x035F34,4629,,8,Pok@ball,Poké Ball,9,YES
+0x035F3D,4630,raw,25,"""I can't believe I lost!""",Impossible d'y croire!,22,
+0x035F57,4631,,13,Evolved into ,A évolué en  ,13,
+0x035F65,4632,,15,Did not evolve!,N'a pas évolué!,15,
+0x035F75,4633,,15, Wants to learn, Veut apprendre,15,
+0x035F85,4634,,18,But it can't learn,Mais ne peut pas  ,18,
+0x035F98,4635,raw,21,Forget an older move?,Oublier une attaque?,20,
+0x035FAE,4636,,7,Forget ,Oublie ,7,
+0x035FB6,4637,,17,Opponent sent out,Adverse. envoie  ,17,
+0x035FCD,5454,,9,Bulbasaur,Bulbizarre,10,YES
+0x035FD7,5455,,7,Ivysaur,Herbizarre,10,YES
+0x035FDF,5456,,8,Venusaur,Florizarre,10,YES
+0x035FE8,5457,,10,Charmander,Salamèche ,10,
+0x035FF3,5458,,10,Charmeleon,Reptincel ,10,
+0x035FFE,5459,,9,Charizard,Dracaufeu,9,
+0x036008,5653,,8,Squirtle,Carapuce,8,
+0x036011,5654,,9,Wartortle,Carabaffe,9,
+0x03601B,5655,,9,Blastoise,Tortank  ,9,
+0x036025,5656,,8,Caterpie,Chenipan,8,
+0x03602E,5657,,7,Metapod,Chrysacier,10,YES
+0x036036,5163,,10,Butterfree,Papilusion,10,
+0x036041,5658,,6,Weedle,Aspicot,7,YES
+0x036048,5659,,6,Kakuna,Coconfort,9,YES
+0x03604F,5660,,8,Beedrill,Dardargnan,10,YES
+0x036058,5661,,6,Pidgey,Roucool,7,YES
+0x03605F,5662,,9,Pidgeotto,Roucoups ,9,
+0x036069,5663,,7,Pidgeot,Roucarnage,10,YES
+0x036079,5664,,8,Raticate,Rattatac,8,
+0x036082,5665,,7,Spearow,Piafabec,8,YES
+0x03608A,5666,,6,Fearow,Rapasdepic,10,YES
+0x036091,5667,,5,Ekans,Abo  ,5,
+0x0360AC,5668,,9,Sandshrew,Sabelette,9,
+0x0360B6,5164,,9,Sandslash,Sablaireau,10,YES
+0x0360C9,5165,,9, Nidorina, Nidorina,9,
+0x0360E6,5166,,9, Nidorino, Nidorino,9,
+0x0360F9,5669,,8,Clefairy,Mélofée,7,
+0x036102,5670,,8,Clefable,Mélodelfe,9,YES
+0x03610B,5671,,6,Vulpix,Goupix,6,
+0x036112,5672,,9,Ninetales,Feunard  ,9,
+0x03611C,5673,,10,Jigglypuff,Rondoudou ,10,
+0x036127,5674,,10,Wigglytuff,Grodoudou ,10,
+0x036132,5675,,5,Zubat,Nosferapti,10,YES
+0x036138,5676,,6,Golbat,Nosferalto,10,YES
+0x03613F,5677,,6,Oddish,Mystherbe,9,YES
+0x036146,5678,,5,Gloom,Ortide,6,YES
+0x03614C,5679,,9,Vileplume,Rafflesia,9,
+0x036165,5680,,7,Venonat,Mimitoss,8,YES
+0x03616D,5681,,8,Venomoth,Aéromite,8,
+0x036176,5682,,7,Diglett,Taupiqueur,10,YES
+0x03617E,5683,,7,Dugtrio,Triopikeur,10,YES
+0x036186,5684,,6,Meowth,Miaouss,7,YES
+0x036195,5685,,7,Psyduck,Psykokwak,9,YES
+0x03619D,5686,,7,Golduck,Akwakwak,8,YES
+0x0361A5,5687,,6,Mankey,Férosinge,9,YES
+0x0361AC,5688,,8,Primeape,Colossinge,10,YES
+0x0361B5,5167,,9,Growlithe,Caninos  ,9,
+0x0361BF,5168,,8,Arcanine,Arcanin ,8,
+0x0361C8,5689,,7,Poliwag,Ptitard,7,
+0x0361D0,5690,,9,Poliwhirl,Têtarte  ,9,
+0x0361DA,5691,,9,Poliwrath,Tartard  ,9,
+0x0361FA,5692,,6,Machop,Machoc,6,
+0x036201,5693,,7,Machoke,Machopeur,9,YES
+0x036209,5694,,7,Machamp,Mackogneur,10,YES
+0x036211,5695,,10,Bellsprout,Chétiflor,9,
+0x03621C,5696,,10,Weepinbell,Boustiflor,10,
+0x036227,5697,,10,Victreebel,Empiflor  ,10,
+0x036247,5698,,7,Geodude,Racaillou,9,YES
+0x03624F,5699,,8,Graveler,Gravalanch,10,YES
+0x036258,5700,,5,Golem,Grolem,6,YES
+0x036265,5169,,8,Rapidash,Galopa  ,8,
+0x03626E,5701,,8,Slowpoke,Ramoloss,8,
+0x036277,5702,,7,Slowbro,Flagadoss,9,YES
+0x03627F,5861,,9,Magnemite,Magnéti,7,
+0x036289,5862,,8,Magneton,Magnéton,8,
+0x036292,5703,,10,Farfetch'd,Canarticho,10,
+0x0362AA,5704,,4,Seel,Otaria,6,YES
+0x0362AF,5705,,7,Dewgong,Lamantine,9,YES
+0x0362B7,5706,,6,Grimer,Tadmorv,7,YES
+0x0362BE,5707,,3,Muk,Grotadmorv,10,YES
+0x0362C2,5708,,8,Shellder,Kokiyas ,8,
+0x0362CB,5709,,8,Cloyster,Crustabri,9,YES
+0x0362D4,5710,,6,Gastly,Fantominus,10,YES
+0x0362DB,5711,,7,Haunter,Spectrum,8,YES
+0x0362E3,5712,,6,Gengar,Ectoplasma,10,YES
+0x0362EF,5713,,7,Drowzee,Soporifik,9,YES
+0x0362F7,5714,,5,Hypno,Hypnomade,9,YES
+0x036304,5715,,7,Kingler,Krabboss,8,YES
+0x03630C,5716,,7,Voltorb,Voltorbe,8,YES
+0x036314,5863,,9,Electrode,Électrode,9,
+0x03631E,5717,,9,Exeggcute,Noeunoeuf,9,
+0x036328,5718,,9,Exeggutor,Noadkoko ,9,
+0x036332,5719,,6,Cubone,Osselait,8,YES
+0x036339,5720,,7,Marowak,Ossatueur,9,YES
+0x036341,5721,,9,Hitmonlee,Kicklee  ,9,
+0x03634B,5722,,10,Hitmonchan,Tygnon    ,10,
+0x036356,5723,,9,Lickitung,Excelangue,10,YES
+0x036360,5724,,7,Koffing,Smogo  ,7,
+0x036368,5725,,7,Weezing,Smogogo,7,
+0x036370,5726,,7,Rhyhorn,Rhinocorne,10,YES
+0x036378,5727,,6,Rhydon,Rhinoféros,10,YES
+0x03637F,5728,,7,Chansey,Leveinard,9,YES
+0x036387,5729,,7,Tangela,Saquedeneu,10,YES
+0x03638F,5730,,10,Kangaskhan,Kangourex ,10,
+0x03639A,5731,,6,Horsea,Hypotrempe,10,YES
+0x0363A1,5732,,6,Seadra,Hypocéan,8,YES
+0x0363A8,5733,,7,Goldeen,Poissirène,10,YES
+0x0363B0,5734,,7,Seaking,Poissoroy,9,YES
+0x0363B8,5735,,6,Staryu,Stari ,6,
+0x0363BF,5736,,7,Starmie,Staross,7,
+0x0363C7,5737,,7,Mr.Mime,M. Mime,7,
+0x0363CF,5170,,7,Scyther,Insécateur,10,YES
+0x0363D7,5738,,4,Jynx,Lippoutou,9,YES
+0x0363DC,5739,,9,Electabuz,Élektek,7,
+0x0363ED,5740,,6,Pinsir,Scarabrute,10,YES
+0x0363FB,5741,,8,Magikarp,Magicarpe,9,YES
+0x036404,5742,,8,Gyarados,Léviator,8,
+0x03640D,5743,,6,Lapras,Lokhlass,8,YES
+0x036414,5744,,5,Ditto,Métamorph,9,YES
+0x03641A,5745,,5,Eevee,Évoli,5,
+0x036420,5746,,8,Vaporeon,Aquali  ,8,
+0x036429,5747,,7,Jolteon,Voltali,7,
+0x036431,5171,,7,Flareon,Pyroli ,7,
+0x036441,5748,,7,Omanyte,Amonita,7,
+0x036449,5749,,7,Omastar,Amonistar,9,YES
+0x036451,5172,,6,Kabuto,Kabuto,6,
+0x036461,5750,,10,Aerodactyl,Ptéra,5,
+0x03646C,5751,,7,Snorlax,Ronflex,7,
+0x036474,5752,,8,Articuno,Artikodin,9,YES
+0x03647D,5753,,6,Zapdos,Électhor,8,YES
+0x036484,5754,,7,Moltres,Sulfura,7,
+0x03648C,5755,,7,Dratini,Minidraco,9,YES
+0x036494,5756,,9,Dragonair,Draco    ,9,
+0x03649E,5757,,9,Dragonite,Dracolosse,10,YES
+0x0364F0,4638,,18,Used a Max Potion!,Util. Potion Max !,18,
+0x03650D,4639,,13,Can't attack!,Pas d'attaque,13,
+0x03651B,4640,,12,Fell asleep!,S'est endormi!,14,YES
+0x036528,4646,dialogue_19_19,68,"I'm raising Pok@mon too! When they get strong, they can  protect me!",Vive la science ! Les PC échangent Pokémon et objets.,56,
+0x03656D,4658,raw,98,Technology is      incredible! You cannow store and      recall items and   Pok@mon as data viaPC!,La technologie est incroyable ! Le PC stocke et rappelle objets et Pokémon !,76,
+0x0365D0,4663,dialogue_19_19,45,You can use that PC in the corner over there.,Mes Pokémon sont épuisés...,29,
+0x0365FE,4665,dialogue_19_19,102,"0000000Ash,if you drive   your Pok@mon too   hard, they'll      dislike you.You    should take a rest.",Tu devrais faire\nune sieste.,30,
+0x036665,4676,dialogue_19_19,66,Oh good! You and   your Pok@mon are   looking great! Takecare now!,"Ah, bien !\nTon équipe et toi\navez la forme !\nSois prudent !",71,YES
+0x0366A8,4691,dialogue_19_19,74,"Gary's Sis:Pok@mon are living things! If they get tired, give them a rest!",SŒUR DE RÉGIS : Papy a une mission pour toi !,48,
+0x0366F3,4703,dialogue_19_19,106,"You know there's 2 kinds of caterpilarPok@mon? Caterpie  has no poison, but Weedle does. Watch out for it!",Tes Poké Balls\nsont drôlement\npratiques !,49,
+0x03675E,4715,dialogue_19_19,54,Coming up with nick names for my       Pok@mon is fun.,"Tout le journal,\npar cœur !",30,
+0x036795,4731,dialogue_19_19,84,"When you're using aPok@dex, it is     updated instantly  when you catch a   Pok@mon.","Moi aussi, j'adore les Pokémon !",32,
+0x0367EA,4741,dialogue_19_19,76,"If you press B whena Pok@mon is       evolving,that will cancel the process.","Moi aussi, je veux\nun vélo !",28,
+0x036837,4754,dialogue_19_19,27,Our Chairman loves Pok@mon!,Ton Pikachu est adorable !,29,YES
+0x036853,4755,dialogue_19_19,34,I heard Grimer livein toxic waste.,Je meurs de faim...,19,
+0x036876,4756,dialogue_19_19,33,"Sorry, Lt. Surge isout right now.",L'Océane a déjà\nlevé l'ancre ?,33,
+0x036898,4757,dialogue_19_19,35,A sleeping Pok@mon blocks the path.,Comment réveiller\nce dormeur ?,31,
+0x0368BC,4761,dialogue_19_19,52,Diglets dug this   cave that goes to  Viridian City.,Les Taupiqueur\nont creusé\njusqu'à Argenta !,55,YES
+0x0368F1,4774,raw,57,Restless Pok@mon spirits have been seen in Pok@mon Tower.,Des esprits hantent la Tour Pokémon.,36,
+0x03692B,4775,dialogue_19_19,36,It never hurts to  have extra items!,"Tous les jours,\non étudie ici\nles Pokémon.",50,YES
+0x036950,5043,pokedex_13x4,39,The bulb on  its back has a sweet aroma,Le bulbe sur son dos a un doux parfum,37,
+0x036978,5044,pokedex_13x4,49,It stays on  the move to  seek sunlightfor energy,Il cherche la lumière pour obtenir de l'énergie.,49,
+0x0369AA,5045,pokedex_13x4,51,It blows blueand white    flames when  it's enraged,Il crache du feu bleu et blanc en colère.,46,
+0x0369DE,5046,pokedex_13x4,52,It spits firethat's hot   enough to    melt boulders,Son feu peut faire fondre les rochers.,38,
+0x036A13,5047,pokedex_13x4,50,Its feet havesuction pads that help it climb trees,Ses ventouses lui servent à grimper aux arbres.,46,
+0x036A46,5049,pokedex_13x4,50,Its water-   proof wings  lets it fly  in the rain,Ses ailes étanches lui font braver la pluie.,48,
+0x036A79,5050,pokedex_13x4,47,It may stick out its stin-ger to poisonan enemy,Il sort son dard pour empoisonner ses ennemis.,51,YES
+0x036AA9,5052,pokedex_13x4,43,It constantlyflies around in search of prey,Il vole sans cesse à la recherche de proies,45,YES
+0x036AD5,5053,pokedex_13x4,51,"Very common, if you see itthere may be 40 more near","Très commun, il vit en groupes de quarante.",48,
+0x036B09,5054,pokedex_13x4,51,"Eats bugs in grassy areas,and can fly  very quickly",Il mange des insectes dans l'herbe et vole vite.,49,
+0x036B3D,5056,pokedex_13x4,51,"With its hugewings, it canfly without  ever resting",Ses ailes immenses le portent sans repos.,45,
+0x036B71,5058,pokedex_13x4,52,"When several get together,they could   cause a storm","Réunis, ils peuvent causer un orage.",45,
+0x036BA6,5060,pokedex_13x4,44,"If its claws break,they'llgrow back in a day",Ses griffes cassées repoussent en un jour.,47,YES
+0x036BD3,5062,pokedex_13x4,50,This Pok@mon prefers phys-ical attacks like biting,Il préfère les attaques au contact et les morsures.,52,YES
+0x036C06,5064,pokedex_13x4,51,It uses its  hefty bulk toexecute very strong moves,Son gabarit permet des attaques puissantes.,50,
+0x036C3A,5065,pokedex_13x4,48,"If it senses danger,it'll attack using its horns",S'il sent le danger il attaque avec ses cornes,49,YES
+0x036C6B,5066,pokedex_13x4,52,A timid Pok@-mon that willrun if it    senses people,"Timide, il fuit dès qu'il sent des humains.",51,
+0x036CA0,5067,pokedex_13x4,51,It's said 9  saints were  reincarnated as Ninetales,Neuf saints se seraient réincarnés en Feunard.,47,
+0x036CD4,5068,pokedex_13x4,47,It sings a   melody that  lulls the foeto sleep,Il chante une mélodie qui endort les ennemis,46,
+0x036D04,5069,pokedex_13x4,52,It will not  stop drainingits victim   once it bites,Il draine sans fin toute victime mordue.,46,
+0x036D39,5070,pokedex_13x4,49,It buries it-self in the  day& at nightsows seeds,Il s'enterre le jour et sème la nuit.,39,
+0x036D6B,5071,pokedex_13x4,43,It oozes nec-tar from its mouth to lureprey,Il suinte du nectar pour attirer ses proies.,46,YES
+0x036D97,5072,pokedex_13x4,52,The mushroom on its back  drains energyfrom Parasect,Le champignon dorsal absorbe son énergie.,47,
+0x036DCC,5074,pokedex_13x4,51,Lives in the shadows of   trees where  it eats bugs,"À l'ombre des arbres, il mange des insectes.",48,
+0x036E00,5075,pokedex_13x4,50,Lives undergr-ound where  it feeds on  plant roots,Il vit sous terre et mange des racines.,47,
+0x036E33,5077,pokedex_13x4,52,Loves shiny  things and   often wandersto find coins,Il erre pour trouver des pièces brillantes.,50,
+0x036E68,5079,pokedex_13x4,52,"Although veryadmired, it  is hard to   keep as a pet","Admiré, il reste difficile à élever.",46,
+0x036E9D,5080,pokedex_13x4,47,It swims verygracefully   using broad  flippers,Ses nageoires le font nager avec grâce.,37,
+0x036ECD,5082,pokedex_13x4,49,"Always angry,will chase   its prey tillits caught","Furieux, il poursuit sa proie sans relâche.",47,
+0x036EFF,5083,pokedex_13x4,48,"Very territo-rial, it willbark to repelintruders","Territorial, il chasse les intrus en aboyant.",47,
+0x036F30,5085,pokedex_13x4,51,It appears toprefer swimm-ing than try-ing to stand,Il préfère nager plutôt que marcher.,38,
+0x036F64,5087,pokedex_13x4,47,A strong swi-mmer that canbeat championswimmers,Ce puissant nageur bat même les champions.,49,YES
+0x036F94,5089,pokedex_13x4,51,It can read  minds and it will teleportif in danger,Il lit les pensées et se téléporte en danger.,46,
+0x036FC8,5091,pokedex_13x4,52,"It can memor-ize anything,and never forgets anything",Il mémorise tout et n'oublie jamais rien.,51,
+0x036FFD,5093,pokedex_13x4,52,The belt it  wears limits its incred-  ible strength,La ceinture qu'il porte limite sa force énorme,51,
+0x037032,5094,pokedex_13x4,52,It ensnares  tiny insects with vines   and eats them,Il piège des insectes avec des lianes et les mange,48,
+0x037067,5095,pokedex_13x4,44,When hungry  it swallows  anything thatmoves,"Affamé, il avale tout ce qui bouge.",36,
+0x037094,5096,pokedex_13x4,49,"Drifts in    shallow seas,will attack  using acid",Il dérive en mer et lance de l'acide.,37,
+0x0370C6,5098,pokedex_13x4,52,They ensnare prey using   their numer- ous tentacles,Ils piègent leurs proies avec leurs tentacules,49,
+0x0370FB,5099,pokedex_13x4,52,It rolls overany obstacle without      avoiding them,Il roule sur tout obstacle sans jamais les éviter,49,
+0x037130,5100,pokedex_13x4,47,Its hooves   are 10 times harder than  diamonds,Ses sabots sont 10 fois plus durs que les diamants,51,YES
+0x037160,5101,pokedex_13x4,48,"Very slow, ittakes 5 sec. for it to    feel pain",Il sent la douleur cinq secondes plus tard.,44,
+0x037191,5102,pokedex_13x4,49,The Shellder on its tail  eats scraps  left by it,Le Kokiyas sur sa queue mange les restes,45,
+0x0371C3,5103,pokedex_13x4,47,They appear  frequently   when sunspotsflare up,Les taches solaires le font apparaître.,50,YES
+0x0371F3,5105,pokedex_13x4,48,It prefers torun on its   highly devel-oped legs,Il préfère courir sur ses fortes pattes.,46,
+0x037224,5106,pokedex_13x4,52,It loves to  swim in a    frigid temp. of 14 degrees,Il adore nager dans une eau à 14 degrés.,46,
+0x037259,5108,pokedex_13x4,45,Thrives by   sucking up   polluted     sludge,Il prospère en aspirant les boues polluées,47,YES
+0x037287,5109,pokedex_13x4,50,"The shell canwithstand anyattack,no    matter what",Sa coquille résiste à toutes les attaques.,48,
+0x0372BA,5111,pokedex_13x4,48,"For protect- ion,it shootsspikes from  its shell",Il tire des pics de sa coquille pour se défendre.,51,YES
+0x0372EB,5113,pokedex_13x4,50,It has no    real shape   and appears  made of gas,Il n'a pas de forme et semble fait de gaz,45,
+0x03731E,5114,pokedex_13x4,50,The caves it makes are    used as homesby Digletts,Les grottes qu'il creuse abritent des Taupiqueur.,50,
+0x037351,5115,pokedex_13x4,51,It will use  hynosis when it locks eyeswith enemies,Il utilisera l'hypnose si on croise son regard,45,
+0x037385,5116,pokedex_13x4,48,"Its claw has up to 10,000 lbs of crush-ing power","Sa pince broie avec une force de 4,5 tonnes.",50,YES
+0x0373B6,5117,pokedex_13x4,47,Stores elect-ric energy   within its   own body,Il stocke de l'électricité dans son propre corps,51,YES
+0x0373E6,5118,pokedex_13x4,51,It's said    Exeggcute areborn from oneof its heads,On dit que Noeunoeuf naît d'une de ses têtes,48,
+0x03741A,5119,pokedex_13x4,48,It skillfullyweilds its   bone like a  boomerang,Il manie habilement son os comme un boomerang.,52,YES
+0x03744B,5121,pokedex_13x4,48,This Pok@mon destroys its opponents w/ its kicks,Ses coups de pied terrassent ses rivaux.,50,YES
+0x03747C,5122,pokedex_13x4,51,It punches infast volleys that cannot  even be seen,Il frappe si vite qu'on ne voit pas ses coups.,45,
+0x0374B0,5123,pokedex_13x4,48,Its tongue is7 ft. long   and can causeparalysis,Sa langue de 2m de long peut causer la paralysie,51,YES
+0x0374E1,5124,pokedex_13x4,52,Its prone to explosions   due to the   gas inside it,Son gaz interne peut le faire exploser.,48,
+0x037516,5125,pokedex_13x4,47,It grows by  absorbing gasdust and alsobacteria,"Gaz, poussière et bactéries le font grandir.",52,YES
+0x037546,5126,pokedex_13x4,52,Can swim backwards using  its wing-likefins and tail,Ses nageoires et sa queue le font reculer.,47,
+0x03757B,5128,pokedex_13x4,52,"During spawn-ing season,  they're seen goin up river","À la ponte, il remonte les rivières.",39,
+0x0375B0,5130,pokedex_13x4,52,It's thought to be commun-icating when its gem glows,Sa gemme brille quand il communique.,50,
+0x0375E5,5132,pokedex_13x4,50,It can createillusions of itself using its agility,Il crée des illusions de lui-même avec son agilité,50,
+0x037618,5133,pokedex_13x4,45,"Born in a volcano,its bodyis covered inflames","Né au volcan, son corps est couvert de flammes.",47,YES
+0x037646,5134,pokedex_13x4,46,It uses its  large pinsersto crush its enemies,Ses grandes pinces écrasent ses ennemis.,47,YES
+0x037675,5135,pokedex_13x4,49,Horribly weakand unrelia- ble. Is foundeverywhere,"Très faible et peu fiable, il vit partout.",51,YES
+0x0376A7,5136,pokedex_13x4,50,A gentle Pok@mon that can read the mindof a person,Un gentil Pokémon qui lit dans les pensées,46,
+0x0376DA,5137,pokedex_13x4,51,It can rearr-ange it's DNAto transform into its foe,Il change son ADN pour copier son ennemi.,46,
+0x03770E,5139,pokedex_13x4,48,It gathers   negative ionsto blast out lightning,Il capte des ions négatifs et lance des éclairs.,47,
+0x03773F,5141,pokedex_13x4,49,A programmed Pok@mon that can move in  cyberspace,"Programmé, il voyage dans le cyberespace.",51,YES
+0x037771,5142,pokedex_13x4,52,Its heavy    shell makes  it difficult to catch prey,Sa lourde coquille rend la capture de proies dure,50,
+0x0377A6,5143,pokedex_13x4,50,It cuts prey w/its claws  & drains its body fluids,Il tranche ses proies et aspire leurs fluides.,47,
+0x0377D9,5144,pokedex_13x4,48,It goes for  the enemy's  throat with  its fangs,Ses crocs visent la gorge de son ennemi.,46,
+0x03780A,5145,pokedex_13x4,45,Mystical birdsaid to app- ear during   storms,Oiseau mystique qui apparaît dans les tempêtes.,52,YES
+0x037838,5146,pokedex_13x4,48,Mystical birdwhose wings  make flashes of flames,Ses ailes font jaillir des gerbes de flammes.,47,
+0x037869,5148,pokedex_13x4,48,A rare marinePok@mon whoseI.Q. matches a human's,"Pokémon marin rare, son Q.I. égale le nôtre.",45,
+0x03789A,5149,pokedex_13x4,46,So rare that only a few   have ever    seen it,Si rare que très peu de gens l'ont vu.,42,
+0x0378C9,5150,pokedex_13x4,44,Volcanos are said to eruptwhen Entei   barks,Son cri ferait entrer les volcans en éruption.,51,YES
+0x0378F6,5152,pokedex_13x4,51,It races aro-und the worldto purify po-lluted water,Il parcourt le monde et purifie l'eau polluée.,47,
+0x03792A,5154,pokedex_13x4,52,Legends say  it swells theseas by caus-ing downpours,On dit que ses déluges gonflent les mers.,44,
+0x03795F,5156,pokedex_13x4,52,It has lived for millions of years in  Earth's ozone,Il vit depuis des millions d'années dans l'ozone.,47,
+0x037994,4151,dialogue_19_19,188,"No! After all that work to become     champ, it's over   already? Why did I lose? I never made mistakes raising myPok@mon!...Darn it!You're the league  champ, although I  hate to admit it.","RÉGIS :\nQuoi ? Déjà fini ?\nJ'ai tout donné,\nmais j'ai perdu...\nTant d'efforts...\nEt je perds ?\nMon entraînement\nétait parfait !\nBon... Tu es\nle Champion.\nJ'ai du mal\nà l'admettre...",224,YES
+0x037A51,4157,dialogue_19_19,95,"Once again, congra-tulations Ash! You put an end to Team Rocket, hopefully  for good this time.","JESSIE : Oui !\nSon nom : Kameiyu !\nIl est développeur\nchez Nanjing Tech,\nà Céladopole !",90,
+0x037AB1,4169,dialogue_19_19,42,You truly are a    remarkable trainer Ash!,"MIAOUSS : C'est exact, Miaouss !",35,
+0x037ADC,4171,dialogue_19_19,274,Eusine: Greetings! I've heard about   you Ash! Glad to   meet you! I've     searched the world for the greatest   Legendary Pok@mon  and finally found  them! They seem to want to see your   power for them-    selves! Allow me toshow you the power of the Legendary   Pok@mon!,"KAMEIYU : Sacha !\nTe voilà,\ncomme prévu !\nBattons-nous\nsans aucun regret !\nAlors, prêt ?",108,
+0x037BEF,4190,dialogue_19_19,56,"The cave is pitch  black, a Pok@mon   could light it up.","Cette grotte est\ntrès sombre.\nAvec Flash,\nun Pokémon peut\nl'éclairer.",87,YES
+0x03804B,4791,dialogue_19_19,16,Withdraw Deposit,Retirer  Déposer,15,
+0x03805C,6490,dialogue_19_19,17,<0A><B0A7><B0A8><B0A9><B0AA><B0AB><B0AC><B0AD><B0AE>,NANJING TECH. TOUS DROITS RÉSERVÉS.,35,YES
+0x03806F,4792,dialogue_19_19,16,Turned on the PC,Le PC s'allume...,17,YES
+0x038080,4793,dialogue_19_19,17,Turned off the PC,Le PC s'éteint...,17,
+0x038092,4794,dialogue_19_19,19,"Go ahead,it's yours",PROF. CHEN :\nCette Poké Ball\nabrite un Pokémon.\nIl est pour toi !,74,YES
+0x0380A6,4800,dialogue_19_19,30,"Ash,take good care of Pikachu.",PROF. CHEN :\nRapproche-toi\nde tes Pokémon.,53,YES
+0x0380C5,4811,dialogue_19_19,23,Hello! May I help  you?,Salut !\nJe peux t'aider ?,36,YES
+0x0380DD,6492,dialogue_19_19,15,0000<B0CE><B0CF><B0CE><B0D0><B0D1>!,Un combat suffit :\nnous voilà amis !,36,YES
+0x0380EE,4815,dialogue_19_19,14,"Good job, kid!",MAJOR BOB : Battu ! Prends le Badge Foudre et ceci !,54,YES
+0x0380FD,4820,dialogue_19_19,10,Thank you.,Merci !,7,
+0x038108,4825,dialogue_19_19,25,We hope to see you again!,Bienvenue !,11,
+0x038122,1665,dialogue_19_19,13,Got Squirtle!,Carapuce reçu !,15,YES
+0x038130,210,dialogue_19_19,23,0000000Heal    Leave   ,Soigner  Partir,14,
+0x038149,4826,dialogue_19_19,36,"Sorry, the Trading Center is closed.","Désolé, impossible de combattre ici pour le moment...",55,YES
+0x038173,4827,dialogue_19_19,32,"Sorry, the Cable   Club's closed",Même la machine\nd'échange est\nen panne...\nReviens plus tard.,75,YES
+0x038194,211,dialogue_19_19,16,Buy     Pass    ,Acheter  Annuler,15,
+0x0381A5,6502,dialogue_19_19,8,0<B0FE><B0CE><B0F1>!,Pas assez d'argent !,29,YES
+0x0381AF,213,dialogue_19_19,16,Yes     No      ,Oui     Non,7,
+0x0381C1,212,dialogue_19_19,16,Left    Right   ,Karaté  Taekwondo,16,
+0x0381D2,4832,dialogue_19_19,13,0Used HM CUT!,Sacha utilise\nCoupe !,26,YES
+0x0381E0,6503,dialogue_19_19,21,00000<B0B6><B0B7><B1A7><B1A8><B0F8><B1AC><B1AD><B1AE>,Sacha utilise Vol !,19,
+0x0381F6,6509,dialogue_19_19,17,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B1AF><B1B0><B1AE>,Sacha utilise Surf !,25,YES
+0x038208,6515,dialogue_19_19,17,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B0CA><B0E3><B1AE>,Sacha utilise Force !,26,YES
+0x03821A,6521,dialogue_19_19,21,<0A><B0EE><B1B1><B1B2><B1B3><B1B4><B1B5><B0EC><B1B6><B1B7><B0B2>,On peut sans doute\npousser ce rocher.,37,YES
+0x038230,4836,dialogue_19_19,23,This tree can be   cut!,Cet arbre peut être\ncoupé !,26,YES
+0x038445,313,dialogue_19_19,177," <B0C5><B1B4>!<B0D2><B0D3><B0C5><B0E4><B0E5><B0C0><B0C1><B0A1><B0A2><B0BC><B1BC><B1BD>!<B1BE><B1BF><B1C0><B1C1><B1C2><B1BE><B1C3><B1C4><B1C5>,<B0B8><B0EE><B1BC><B1BD><B1C6><B1C7><B1B6><B1C8><B0EA><B0C0><B0C1><B0A1><B0A2><B0BC><B1C9><B0C1>!<B0EE><B1C9><B0C1><B1B6><B1CA><B0EA><B0C0><B0C1>,<B1CB><B1A7><B1A8><B1CC><B0E7><B0F2><B1CD><B1CD>.<B1CE><B1C2><B0C2><B1CF><B1D0><B0EE><B0C0><B0C1><B0A1><B0A2><B0BC>!<B0B6><B0B7>,<B1D1><B0BA><B1D2><B1D3><B1CC><B0C5><B0BC><B1D4><B1D5>,<B1D6><B1D7><B1D8><B1D2><B1D9><B1DA>!","PROF. CHEN :\nBien le bonjour !\nBienvenue !\nVoici le monde\nmagique\ndes Pokémon !\nMon nom est Chen,\nle Prof Pokémon !\nDes Pokémon\nvivent partout.\nCertains sont\nnos compagnons.\nD'autres les font\ncombattre.\nMoi, je les étudie.\nSacha !\nTa quête commence !\nRêves et aventures\nt'attendent !",355,YES
+0x0384F8,319,dialogue_19_19,32,YO ASH! Gramps     isn't around!,"RÉGIS : Hé, Sacha !\nPépé n'est pas là !\nPour un Pokémon,\nj'ai rappliqué !",73,YES
+0x038519,330,dialogue_19_19,141,"Hey! Wait! Don't goout! It's unsafe!  Wild Pok@mon live  in tall grass! You need your own      Pok@mon for safety.I know! Here, come with me!",PROF. CHEN :\nNe sors pas !\nDes Pokémon rôdent\ndans les herbes.\nIl t'en faut un.\nSuis-moi !,105,
+0x0385A7,336,dialogue_19_19,46,Gary:Hey Gramps!   I'm fed up with    waiting!,RÉGIS : Pépé !\nTe voilà !,29,
+0x0385D6,343,dialogue_19_19,28,Hey! Gramps! What  about me?,RÉGIS : Pépé ! C'est pas juste ! Et moi ?,46,YES
+0x0385F3,349,dialogue_19_19,44,"Be patient Gary,   I'll give you one  later.","PROF. CHEN :\nPatience, Régis.\nTu l'auras bientôt.",57,YES
+0x038620,355,dialogue_19_19,46,"Humph! I'll get a  better Pok@mon thanyou,Ash!",RÉGIS : Pff ! J'aurai un meilleur Pokémon que toi !,55,YES
+0x03864F,360,dialogue_19_19,32,No way Ash! I want this Pok@mon!,RÉGIS : Non !\nIl est à moi !,33,YES
+0x038670,365,dialogue_19_19,25,Gary! What are you doing?,PROF. CHEN :\nRégis !\nQue fais-tu ?,51,YES
+0x03868A,370,dialogue_19_19,23,"Gramps,I want this one!","RÉGIS :\nPépé, je le veux !",37,YES
+0x0386A2,376,dialogue_19_19,114,"Oak:But, I...Oh,allright then. That   Pok@mon is yours. Iwas going to give  you one anyway...  Ash,come over here.","PROF. CHEN :\nBon, d'accord.\nIl est à toi.\nJe comptais déjà\nt'en donner un.\nSacha, viens ici !",113,
+0x038715,382,dialogue_19_19,46,"Oak:Ash, this is a Pok@mon I caught   earlier.",PROF. CHEN :\nJe l'ai capturé.\nIl craint encore\nles humains.,69,YES
+0x038744,402,dialogue_19_19,16,You can have it.,Pikachu reçu !,14,
+0x038755,404,dialogue_19_19,74,"Gary:Wait Ash!     Let's check out ourPok@mon! Come on,  I'll take you on!",RÉGIS : Sacha !\nTestons-les.\nJe te défie !,51,
+0x0387A0,410,dialogue_19_19,82,Okay! I'll make my Pok@mon fight to   toughen it up! Ash!Gramps! Smell you  later!,"RÉGIS : Ton Pokémon est fort ! Je vais entraîner le mien ailleurs. À plus, Sacha ! Salut, Papy !",101,YES
+0x0387F3,418,dialogue_19_19,110,"Hey! You came from Pallet Town? You   know ProfOak,right?His order came in, can you take it to him? Thank you.",Bourg Palette ? Porte la commande du Prof. Chen !,53,
+0x038862,6529,dialogue_19_19,29,"00000<B2CE><B1EE><B1EE>:<B0C5><B1CD><B1CD>,<B1F1><B1F1><B1C2><B0BC><B1EF>",Attends un peu. Écoute-moi.,30,YES
+0x038880,6532,dialogue_19_19,15,<0A><B2CE><B1EE><B1EE>:<B0C5><B2BD><B0C7>?,Tu veux quand même\ny aller ?,28,YES
+0x038891,1583,dialogue_19_19,43,Lt.Surge hid a     switch inside the  cans!,Tu peux entrer.,15,
+0x0388BD,1584,dialogue_19_19,32,"00000Oh,Ash! How is     Pikachu?",PROF. CHEN : Pikachu t'apprécie. Tu feras un bon Dresseur !,67,YES
+0x0388DE,1585,dialogue_19_19,55,He seems to like   you...Hm? you have something for me?,PROF. CHEN : Quoi ?\nC'est pour moi ?,35,
+0x038916,1593,dialogue_19_19,46,Ah! This is the    custom Pok@ball I  ordered!,Sacha remet\nle Colis Chen\nau Prof. Chen !,53,YES
+0x038945,424,dialogue_19_19,10,Thank you!,CHEN : Ma Poké Ball spéciale ! Merci. J'ai une mission.,55,YES
+0x038950,426,dialogue_19_19,42,Gary:Gramps! What  did you call me    for?,RÉGIS : Papy !\nMon Pokémon a\ngrandi ! Regarde !,56,YES
+0x03897B,439,dialogue_19_19,17,Received Pok@dex!,Pokédex obtenu !,16,
+0x03898D,440,dialogue_19_19,38,Gary:Okay Gramps!  Leave it all to me!,PROF. CHEN :\nMon rêve : finir\nle Pokédex complet.\nJe suis trop vieux.\nPrenez le relais !,94,YES
+0x0389B4,456,dialogue_19_19,145,"Ash, I hate to say it, but I don't    need you! I know!  I'll borrow a Town Map from my Sis!   I'll tell her not  to lend you one,   Ash! Hahaha!","RÉGIS : Papy,\nconfie-moi tout !\nDommage pour Sacha.\nJe prends la Carte\nchez ma sœur. Toi,\ntu ne l'auras pas !\nHa ha !",121,
+0x038A46,476,dialogue_19_19,71,"Gary's Sis:Grandpa asked you to run anerrand? Here,this  will help you!","SŒUR DE RÉGIS :\nPépé t'envoie\nen course ?\nTiens, ça t'aidera.",76,YES
+0x038A8E,482,dialogue_19_19,18,Received Town Map!,Carte obtenue !,15,
+0x038AA1,484,dialogue_19_19,76,"Old man:Ahhh! I'm  feeling much betternow! Hm? Oh! Sure, you can go through!","Quel mal de tête...\nJe te bloquais ?\nPour le Pokédex,\nachète\ndes Poké Balls !",92,YES
+0x038AEE,502,dialogue_19_19,20,00000000It's locked!,L'Arène est fermée à clé.,25,YES
+0x038B03,512,dialogue_19_19,184,"Gary:Hey Ash!You'regoing to the       Pok@mon League?    Forget it, you     probably don't haveany Badges! The    guard won't let youthrough! So,did    your Pok@mon get   any stronger?",RÉGIS : Sacha !\nTu vas à la Ligue ?\nPas de Badge ?\nPassage interdit !\nTes Pokémon\nont progressé ?,110,
+0x038BBC,518,dialogue_19_19,147,"I hear the Pok@mon League has many    tough trainers,I   have to figure out how to get past    them!You should    quit dawdling and  get a move on!","RÉGIS : La Ligue regorge de grands Dresseurs. Je passerai. Toi aussi, avance !",91,
+0x038C50,524,dialogue_19_19,27,Hey! You have a    Pikachu!,"Tu vises le titre ?\nAlors, bats-moi !",36,YES
+0x038C6C,530,dialogue_19_19,32,"I looked, but I cannot find one.","T'es fort, toi !",16,
+0x038C8D,537,dialogue_19_19,26,No! Caterpie can't cut it!,Impossible...,13,
+0x038CA8,543,dialogue_19_19,29,"Hey,wait up! What'sthe Hurry?","Toi aussi, t'es\nDresseur ? Alors,\nbattons-nous !",52,YES
+0x038CC6,548,dialogue_19_19,17,You're very good!,Tu es vraiment fort...,26,YES
+0x038CD8,553,dialogue_19_19,29,Hey!You scared the bugs away!,Ne te défile pas ! Viens te battre !,36,YES
+0x038CF6,554,dialogue_19_19,26,I'm looking for a  Weedle.,J'ai perdu.,11,
+0x038D11,559,dialogue_19_19,17,You're very good!,Tu refuses donc\nde nous suivre...,36,YES
+0x038D23,6543,dialogue_19_19,86,"0000000<B3DF><B3E0>:<B0EE><B3E1><B3E2><B3E3><B2A8><B1C0><B0C2><B1D1><B3E4><B2C9><B3D9><B0BC><B0A1><B0A2><B2DE><B2C5><B1BF><B2EF>,<B0C5><B2BD><B3E5><B0C6><B0DB><B3D1><B3D2><B2AC>...<B2C4><B2AA><B3E6><B2B8><B2CB><B0C5><B3DA><B3D4><B2AC>","De grands Dresseurs t'attendent. Sans Badge, passage interdit.",66,
+0x038D7A,596,dialogue_19_19,36,You're a trainer   right? Follow me!,Tu es Dresseur ?\nPierre cherche\nun adversaire.\nSuis-moi !,67,YES
+0x038D9F,601,dialogue_19_19,31,Brock's looking forchallengers.,"Si tu es prêt,\nva défier Pierre !",37,YES
+0x038DBF,607,dialogue_19_19,108,"Hey champ! Let me  give you a tip.    Brock uses Rock    Pok@mon, Electric  attacks are uselessagainst them!","Hé, Champion !\nLes Pokémon Sol\nde Pierre ignorent\nl'Électrik.\nDur pour Pikachu !",94,
+0x038E2C,613,dialogue_19_19,51,Wait! You're light years away from    facing Brock!,Défier Pierre ?\nTu es à dix mille\nannées-lumière !,54,YES
+0x038E60,624,dialogue_19_19,37,"Darn,Light years isdistance,not time!",Tu es fort. Pierre l'est encore plus !,38,YES
+0x038E86,634,dialogue_19_19,119,I'm Brock!I believein strong defense  and determination! Do you still wish  to face me? Fine   then! Show me your best!,"PIERRE : Je suis\nChampion d'Argenta.\nMes Pokémon Roche\nsont très solides !\nMême si je perds,\nje me battrai.\nEn garde !",124,YES
+0x038EFE,654,dialogue_19_19,74,"I took you for     granted.As proof ofyour victory,here'sthe BOULDERBADGE!",PIERRE : Bravo ! Voici le Badge Roche !,45,
+0x038F49,660,dialogue_19_19,56,"You can now use theHM Flash! Here,takethis with you too.",Badge Roche reçu !,18,
+0x038F82,661,dialogue_19_19,14,Recieved TM35!,PIERRE : Ce Badge renforce tes Pokémon. Flash marche hors combat. Tiens !,83,YES
+0x038F91,668,dialogue_19_19,56,It contains Harden.This raises your   Pokemon's defense.,CT35 reçue !,12,
+0x038FCA,675,dialogue_19_19,67,A TM can only be   used once.So choosewho you use it on  carefully.,PIERRE : Chaque CT\nsert une fois.\nChoisis bien !\nCT35 : Armure\nmonte la Défense.,93,YES
+0x03900E,697,dialogue_19_19,95,You seem to be verygifted as a        trainer.Go to the  GYM in Cerulean andtest your strength.,"PIERRE : Élevage ou combat, chacun sa voie. Pour progresser, va défier l'Arène d'Azuria !",105,YES
+0x03906E,707,dialogue_19_19,47,"Just as I thought, you're Champion    Material!",Je le savais ! Tu as l'étoffe d'un Champion !,48,YES
+0x03909E,718,dialogue_19_19,30,"You looked at me,  didn't you?",Hé ! Tu me fixais ?,19,
+0x0390BD,719,dialogue_19_19,12,You're mean!,"Arrête de fixer,\nou je te frappe !",36,YES
+0x0390CA,729,dialogue_19_19,35,Hey! I met you in  Viridian Forest!,Hé ! On s'est vus\ndans la Forêt\nde Jade !,47,YES
+0x0390EE,734,dialogue_19_19,18,You beat me again!,"Ici, les Pokémon\ndiffèrent de ceux\nde la forêt.",50,YES
+0x039101,741,dialogue_19_19,31,Are you a Pok@mon  Trainer too?,"Les shorts, c'est\npratique ! Essaie !",38,YES
+0x039121,747,dialogue_19_19,37,Are you storing    Pok@mon on the PC?,"Après six Pokémon, les suivants sont envoyés au PC.",52,YES
+0x039147,756,dialogue_19_19,31,You can fight my   new Pok@mon!,"Tu es Dresseur ?\nAlors, en garde !",36,YES
+0x039167,762,dialogue_19_19,43,Trained Pok@mon arestronger than wild ones.,Quelle blague...,16,
+0x039193,565,dialogue_19_19,30,Hey! You're don't  have shorts,Hé ! Pas de short ?,19,
+0x0391B2,570,dialogue_19_19,31,Even in winter I   wear shorts!,Encore perdu...,15,
+0x0391D2,575,dialogue_19_19,27,Do you like bug    Pok@mon?,Ma nouvelle prise\nva t'affronter !,35,YES
+0x0391EE,585,dialogue_19_19,38,Bug types evolve   faster than others.,T'es très fort !,16,
+0x039215,586,dialogue_19_19,23,Eek! Did you touch me!?,Aah ! Tu m'as touchée ?!,29,YES
+0x03922D,767,dialogue_19_19,35,Route 4 is at the  foot of Mt.Moon.,"Ah, je m'étais trompée...",29,
+0x039251,774,dialogue_19_19,38,"The look you gave  me,it's intriguing!",Ton regard...\nÇa me gêne !,31,
+0x039278,779,dialogue_19_19,45,Don't let people   see you to avoid   fights!,Pas de combat ?\nÉvite les regards !,38,
+0x0392A6,785,dialogue_19_19,62,Have I got a deal  for you! How about a Magikarp for just500$?,Bonjour l'ami !\nJ'ai une super\naffaire !\nUn Magicarpe :\njuste 500 $ !\nQu'en dis-tu ?,109,YES
+0x0392E5,5398,dialogue_19_19,10,Too bad...,Ah bon ? Dommage...,19,YES
+0x0392F0,790,dialogue_19_19,18,Recieved Magikarp!,Magicarpe reçu !,16,
+0x039303,791,dialogue_19_19,48,I saw suspicious   men this cave.What about you?,"Un homme suspect\nrôde dans le coin.\nEt toi, t'es qui ?",56,YES
+0x039334,796,dialogue_19_19,36,I'm sure they're   from Team Rocket!,On m'a bien eu !\nC'était un membre\nde la Team Rocket !,57,YES
+0x039359,801,dialogue_19_19,43,I'm waiting for my friends to find me here.,Quoi ? J'attends mes amis perdus dans la grotte !,54,YES
+0x039385,806,dialogue_19_19,43,I heard there are  very rare fossils  here.,Je suis venue\npour les fossiles\nrares cachés ici.,55,YES
+0x0393B1,811,dialogue_19_19,36,"We,Team Rocket,are Pok@mon gansters!","TEAM ROCKET :\nMafia Pokémon,\nforte et redoutée !",57,YES
+0x0393D6,816,dialogue_19_19,22,Darn it all! I blewit!,Tu me fais encore plus peur...,31,YES
+0x0393ED,821,dialogue_19_19,22,Mt.Moon's big isn'tit?,Cette grotte est immense !,28,YES
+0x039404,826,dialogue_19_19,27,How do you get out of here?,C'est immense... Où est la sortie ?,34,YES
+0x039420,831,dialogue_19_19,31,Did you come to    explore too?,Tu explores aussi ?,19,
+0x039440,836,dialogue_19_19,34,I came here to showoff my Pok@mon.,Mais où sont donc\nles Pokémon rares ?,38,YES
+0x039463,841,dialogue_19_19,19,Whoa!You scared me!,Oh ! Un gamin !\nTu m'as fait peur !,38,YES
+0x039477,846,dialogue_19_19,37,Kids like you      shouldn't be here!,Il fait trop sombre\npour un enfant !,35,
+0x03949D,851,dialogue_19_19,37,We're pulling a bigjob here!Get lost!,"On a du travail !\nRentre chez toi,\ngamin !",45,YES
+0x0394C3,856,dialogue_19_19,44,If you see a fossilgive it to me and  scram!,Pas mal ! Rejoins\nla Team Rocket !,35,
+0x0394F0,862,dialogue_19_19,35,Kids should leave  grown-ups alone!,"Fourrer ton nez\ndans les affaires\ndes adultes,\nc'est dangereux !",74,YES
+0x039514,867,dialogue_19_19,43,Pok@mon lived here long before people came.,Ça m'énerve !,13,
+0x039540,868,dialogue_19_19,43,Stop!I found these fossils! They're   mine!,Stop ! J'ai trouvé ces deux fossiles. Ils sont à moi !,54,YES
+0x03956C,873,dialogue_19_19,28,What! Don't sneak  up on me!,Ne me surprends pas\ncomme ça !,29,YES
+0x039589,878,dialogue_19_19,36,I have to find     stronger Pok@mon.,...,3,
+0x0395AE,881,dialogue_19_19,54,"Okay,I'll share!   We'll each take 1! No being greedy!","Bon, partageons :\nun fossile chacun.\nPas question\nde tout garder !",73,YES
+0x0395E5,887,dialogue_19_19,122,Then this is mine! On Cinnabar island there's a Pok@mon  research lab that  does research on   reviving fossilizedPok@mon!,"À Cramois'Île,\nun labo redonne\nvie aux Pokémon\ntirés de fossiles.",75,
+0x039660,910,dialogue_19_19,55,Jesse:Stop right   there!That fossil  is Team Rocket's!,TEAM ROCKET : Hop là ! Ce fossile est à la Team Rocket ! Rends-toi ou mange ta baffe !,86,YES
+0x039698,917,dialogue_19_19,44,James:Surrender nowor prepare to      fight!,SACHA :\nQui êtes-vous ?,34,
+0x0396C5,933,dialogue_19_19,32,Meowth: Meeouth!   That's right!,JESSIE :\nNous revoilà !,33,YES
+0x0396E6,939,dialogue_19_19,22,Jesse:A brat beat  us?,TEAM ROCKET : ??? Ce mioche a gagné ?,38,YES
+0x0396FD,941,dialogue_19_19,29,James:Such a dread-ful twerp!,TEAM ROCKET :\nLa Team Rocket...,36,YES
+0x03971B,947,dialogue_19_19,84,"Jesse&James:Team   Rocket,blast off atthe speed of light!Meouth:Hey!Wait formeeowth!",À la vitesse\nde la lumière...,35,
+0x039770,966,dialogue_19_19,119,"These people were  robbed, we believe it's Team Rocket's doing! Even our    Police force has   trouble with that  gang!",POLICIER : Ces gens\nont été volés.\nLe coupable ?\nLa Team Rocket !\nMême la police\npeine face à eux !,113,
+0x0397E8,972,dialogue_19_19,120,"Yo Champ!The LeaderMisty, is a pro whouses water Pok@mon!Try to zap them    with electric, or  you can use grass  types.","Hé, Champion !\nOndine utilise\ndes Pokémon Eau.\nPlante absorbe\nl'eau.\nÉlectrik paralyse !",114,
+0x039861,978,dialogue_19_19,19,I'm 1st!Let's do it,Ton adversaire ?\nC'est moi !,30,YES
+0x039875,982,dialogue_19_19,36,Misty won't lose tosomeone like you!,Ondine est forte. Elle ne perdra pas contre toi !,50,YES
+0x03989A,987,dialogue_19_19,34,I'm more than good enough for you!,Je peux te battre seule. Pas besoin d'Ondine !,48,YES
+0x0398BD,992,dialogue_19_19,19,You overwhelmed me.,J'ai perdu...,13,
+0x0398D1,5324,dialogue_19_19,101,Misty:Pro Trainers have a policy aboutPok@mon.Mine is an all-out offensive  approach! What's   yours?,ONDINE : Ma méthode\nest simple : miser\nsur le type Eau !\nÀ toi d'affronter\nla plus belle fille\ndu monde !,105,YES
+0x039937,998,dialogue_19_19,164,Misty: You're too  much! Here's the   Cascade Badge to   show you beat me!  Now you can use theCUT HM!And you can have TM11 too. It  teaches BubbleBeam!Use it well!,ONDINE : Battue...\nPrends le Badge\nCascade ! Coupe\nmarche hors combat.\nApprends la CT11\nBulles d'O\nà un Pokémon Eau !,132,
+0x0399DC,1026,dialogue_19_19,71,Yo Ash!You're stillstruggling along?  Me?I'm doing great!I'll show you!,"RÉGIS : Sacha ! Moi, j'ai de super Pokémon. Montre-moi les tiens !",68,
+0x039A24,1032,dialogue_19_19,161,"Okay,you won! Hey  guess what! I went to Bill's.You know he invented the PC system we use? You should go thank    him. Well,I better get rolling! Smell ya later!",RÉGIS : Léo m'a\nmontré ses Pokémon\nrares. Ce célèbre\ncollectionneur a\nenrichi mon Pokédex\net créé le stockage\nPC. Tu l'utilises ?\nRemercie-le !,146,
+0x039AC6,1061,dialogue_19_19,46,Beat us 5 trainers and win a prize!   I'm 1st!,Bats 5 Dresseurs !\nUn prix t'attend.\nTu peux gagner ?,54,YES
+0x039AF5,1066,dialogue_19_19,35,"I did my best, I   have no regrets.",Pas mal ! Tu peux tous nous battre ?,37,YES
+0x039B19,1075,dialogue_19_19,18,I'm 2nd! Let's go!,Je suis deuxième !\nLe vrai combat\ncommence !,48,YES
+0x039B2C,1080,dialogue_19_19,24,No.3! I won't be   easy!,Quatrième ! Tu veux te faire remarquer ?,49,YES
+0x039B45,1083,dialogue_19_19,19,I'm No.4!Tired Yet?,Troisième ! Tu vas\nen baver !,29,YES
+0x039B59,1095,dialogue_19_19,16,No.5! Get ready!,Je suis cinquième\net dernier !\nEn garde !,48,YES
+0x039B6A,1100,dialogue_19_19,27,Congrats!You earneda prize!,Bravo ! Le cadeau\npromis est à toi !,37,YES
+0x039B86,1105,dialogue_19_19,14,Got Moonstone!,Pierre Lune reçue !,19,YES
+0x039B95,1111,dialogue_19_19,62,"By the way, want tojoin TEAM ROCKET?  Fine! You'll regretthis!",La Team Rocket utilise les Pokémon pour étendre son territoire. Rejoins-nous !,90,YES
+0x039BD4,1118,dialogue_19_19,19,Arrgh!You are good!,Quel gâchis !\nTu aurais brillé\nchez la Team Rocket,57,YES
+0x039BE8,1125,dialogue_19_19,30,I saw you fight at the bridge!,Je t'ai vu combattre depuis les hautes herbes.,56,YES
+0x039C07,1130,dialogue_19_19,15,You are good...,T'es coriace...,15,
+0x039C17,1140,dialogue_19_19,74,I'm looking for a  good home for my   Charmander.Can you take care of him?,"Je l'élève mal.\nJe vais relâcher\nce Salamèche...\nSi tu t'en occupes,\nil est à toi.",89,YES
+0x039C62,1145,dialogue_19_19,26,"Oh,I'll release himthen...","Alors, je vais\nle relâcher...",33,YES
+0x039C7D,1150,dialogue_19_19,17,Take care of him.,C'est vrai ? Merci beaucoup !,29,YES
+0x039C8F,1157,dialogue_19_19,33,I'm still fired up after Mt.Moon!,Encore en forme après avoir franchi le Mont Sélénite ?,56,YES
+0x039CB1,1162,dialogue_19_19,14,You work hard!,Quelle force !,14,
+0x039CC0,1163,dialogue_19_19,31,Trainers come here to practice!,"Ici, les Dresseurs\ns'entraînent !",33,YES
+0x039CE0,1168,dialogue_19_19,17,You trained well!,Pas mal !,9,
+0x039CF2,1173,dialogue_19_19,37,Goin' to see Bill? Let's fight first!,Tu vas chez Léo ? Affronte-moi d'abord !,47,YES
+0x039D18,1178,dialogue_19_19,24,"Hi, My boyfriend iscool!","La Minijupe, c'est moi !",24,
+0x039D31,1183,dialogue_19_19,9,Ya got me,J'ai perdu...,13,YES
+0x039D3B,6553,raw,17,<B4D3><B0C5><B4D4>:<B1C2><B6C3><B4BA><B0C5><B0F8>,Prends-en soin !,16,
+0x039D4E,1188,dialogue_19_19,17,You're somethin'.,T'es coriace !,14,
+0x039D60,6554,raw,18,00<B1C2><B0CE><B1F9><B0C4><B0C5><B6C6><B1B4><B3D4>,Aide Salamèche !,16,
+0x039D74,1151,dialogue_19_19,15,Got Charmander!,Salamèche reçu !,16,YES
+0x039D84,1193,dialogue_19_19,35,I went to a party  on the S.S.ANNE!,Au bal de l'Océane\navec mon père !\nJaloux ?,46,YES
+0x039DA8,1200,dialogue_19_19,28,I saw trainers fromall over!,L'Océane est pleine de Dresseurs redoutables !,51,YES
+0x039DC5,1209,dialogue_19_19,31,I wish he was as   good as you!,Vive la minijupe !,18,
+0x039DE5,1216,dialogue_19_19,19,I'm off to see Bill,Tu veux passer ? Alors bats-moi !,35,YES
+0x039DF9,1217,dialogue_19_19,19,I got a girlfriend!,Je suis un Scout !,18,
+0x039E0D,1218,dialogue_19_19,19,She'll cheer me up.,Ha ha ha...,11,
+0x039E21,1219,dialogue_19_19,29,I knew I had to    fight you!,Je pressentais\nqu'on se battrait.,37,YES
+0x039E3F,1224,dialogue_19_19,19,I knew I'd lose too,Je pressentais\nque je perdrais...,37,YES
+0x039E53,1229,dialogue_19_19,37,I'm jealous of my  friend's Clefairy!,Mes amies ont\nde jolis Pokémon...\nC'est pas juste !,55,YES
+0x039E79,1236,dialogue_19_19,23,Do you have one    too?,"Du Mont Sélénite ?\nMoi, je veux\nun Mélofée...",51,YES
+0x039E91,1246,dialogue_19_19,160,Hiya!I'm a Pok@Mon!I'm not. I'm Bill! I messed up an exp-eriment and turned into a Pok@mon! Canyou help me out?Youjust go to my PC   and start the cell program!,"LÉO : Salut !\nMoi, Léo,\nle Pokémaniac !\nTu doutes ?\nUne expérience\nratée m'a fusionné\navec un Pokémon.\nAide-moi.\nJe prends place\nau Téléporteur.\nSur ce PC, lance\nla séparation !",224,YES
+0x039F32,5462,dialogue_19_19,12,Run Program.,Léo est sauvé !,15,YES
+0x039F3F,1252,dialogue_19_19,60,"Yeehah!Thanks bud!Ihave to thank you! Here, maybe this'lldo.","LÉO : Merci !\nTu viens voir\nma collection ?\nTiens, prends ça !",75,YES
+0x039F7C,1258,dialogue_19_19,15,Got S.S.Ticket!,Passe Bateau obtenu !,27,YES
+0x039F8C,1260,dialogue_19_19,104,"They invited me,   but I can't stand  fancy do's. So, whydon't you go? All  the passengers are trainers!","LÉO : L'Océane est\nà Carmin, pleine\nde Dresseurs.\nJ'ai une invitation\nmais je hais\nles fêtes.\nVas-y à ma place !",132,YES
+0x039FF5,1266,dialogue_19_19,9,Have fun!,"LÉO : Ma collection ! 150 espèces sont connues, peut-être plus. J'attends ici un Pokémon légendaire...",127,YES
+0x039FFF,1272,dialogue_19_19,60,What! I'm just an  innocent bystander!Don't you believe  me?,"Hé ! Défense d'entrer ! Moi, louche ? Je ne fais que passer.",68,YES
+0x03A03C,1282,dialogue_19_19,27,Ok! I'll leave     quietly!,Pitié ! Je ne recommencerai plus ! Je file...,55,YES
+0x03A058,1283,dialogue_19_19,47,"I'm on guard duty. Gee, I'm thirsty   though...",Je monte la garde.\nMais j'ai soif !\nPassage interdit !,56,YES
+0x03A088,1290,dialogue_19_19,36,"I've never seen youaround, you good?",Ta tête m'agace !,17,
+0x03A0AD,1291,dialogue_19_19,16,You're too good!,Tu me plais déjà davantage...,31,YES
+0x03A0BE,1294,dialogue_19_19,19,You want to battle?,Tu veux me tester ?,19,
+0x03A0D2,1299,dialogue_19_19,18,I didn't start it!,"Cette fois, tu m'as\ndonné une leçon !",36,YES
+0x03A0E5,1305,dialogue_19_19,17,"Me? Ok,I'll play!","Je suis mignonne, non ?",24,YES
+0x03A0F7,1306,dialogue_19_19,17,Just didn't work!,Je t'aime bien !,16,
+0x03A109,1307,dialogue_19_19,29,There aren't many  bugs here.,J'ai capturé\nun super Pokémon.\nViens te battre !,55,YES
+0x03A127,1314,dialogue_19_19,35,I'm going back to  Viridian Forest.,Je dois encore\nm'entraîner...,33,
+0x03A14B,1323,dialogue_19_19,29,Excuse me! I'm on  the phone!,Tu regardes où ?,16,
+0x03A169,1328,dialogue_19_19,19,(Whisper Whisper..),C'était un simple\nmalentendu.,30,YES
+0x03A17D,1335,dialogue_19_19,23,I just lost to somekid!,Je suis de mauvais\npoil !,25,YES
+0x03A195,1339,dialogue_19_19,17,I just can't win.,Ça m'énerve\nencore plus...,33,YES
+0x03A1A7,1349,dialogue_19_19,28,Welcome to the     S.S.Anne!,L'Océane accoste\nà Carmin sur Mer\nune fois par an.,54,YES
+0x03A1C4,1360,dialogue_19_19,33,"Excuse me, do you  have a ticket?",MATELOT : Bienvenue sur l'Océane ! Votre passe ?,51,YES
+0x03A1E6,1365,dialogue_19_19,19,"Ok, Welcome aboard!",Merci !\nBienvenue à bord !,37,YES
+0x03A1FA,1370,dialogue_19_19,27,My Pok@mon are my  freinds!,Je viens de Hoenn.,18,
+0x03A216,1373,dialogue_19_19,30,You should be nice to freinds!,Va donc à Hoenn\nun de ces jours !,36,YES
+0x03A235,1377,dialogue_19_19,28,I got Pok@mon from all over!,Les garçons d'ici sont tous timides.,37,YES
+0x03A252,1382,dialogue_19_19,24,Oh No! You hurt    them!,Les gamins comme\ntoi m'énervent !,35,YES
+0x03A26B,1386,dialogue_19_19,23,I love Pok@mon! Do you?,Ne sous-estime pas mes Pokémon !,32,YES
+0x03A283,1391,dialogue_19_19,18,Wow! You're great!,Je dois encore\nm'entraîner...,33,YES
+0x03A296,1395,dialogue_19_19,32,"You,pup! How dare  you barge in!",On se sent vraiment bien à Hoenn.,32,
+0x03A2B7,1396,dialogue_19_19,25,Humph! You rude    child!,Légendes de Johto :\ntu connais ?,31,YES
+0x03A2D1,1405,dialogue_19_19,25,My pride is at     stake!,Quel beau temps !,17,
+0x03A2EB,1410,dialogue_19_19,12,You sank me!,Je me suis bien amusé.,25,YES
+0x03A2F8,1411,dialogue_19_19,28,I like feisty kids like you!,Admire ma prise !,17,
+0x03A315,1416,dialogue_19_19,14,Argh! Lost it!,Zut...,6,
+0x03A324,1421,dialogue_19_19,29,I never saw you at the party!,J'adore l'air marin.,25,
+0x03A342,1426,dialogue_19_19,34,"Oh, I adore your   strong Pok@mon!",Je t'aime presque\nautant...,28,
+0x03A365,1433,dialogue_19_19,34,I'm kinda bored.Howabout a battle?,Salut !,7,
+0x03A388,1438,dialogue_19_19,11,Good fight!,Sacré Dresseur !,16,YES
+0x03A394,1439,dialogue_19_19,31,Us Sailors have    Pok@mon too!,Je bosse dur tous les jours.,29,
+0x03A3B4,1440,dialogue_19_19,19,"Ok, You're not bad.",C'est une blague ?!,19,
+0x03A3C8,1441,dialogue_19_19,37,"Matey, you walk theplank if you lose!","T'es qui, toi ?",15,
+0x03A3EE,1446,dialogue_19_19,23,Argh! Beaten by a  kid!,"Moi, qui suis-je ?",18,
+0x03A406,1457,dialogue_19_19,24,Ahoy! Are you sea  sick?,Bonne traversée !,17,
+0x03A41F,1458,dialogue_19_19,19,I was just careless,À quand le dîner ?,18,
+0x03A433,1465,dialogue_19_19,25,Hey matey! Let's   fight!,Je suis au régime !,19,
+0x03A44D,1466,dialogue_19_19,18,"Urf, I Feel Ill...",Et me voilà encore\ngros !,25,YES
+0x03A460,1471,dialogue_19_19,87,"Bonjour Ash! Were  you really invited?How's your Pok@Dex?I already have 40  kinds, pal!","RÉGIS : Sacha !\nToi aussi, invité ?\nMon Pokédex compte\nplus de 40 espèces.\nVoyons tes progrès.",95,YES
+0x03A4B8,1489,dialogue_19_19,75,There's an old man here who can teach CUT! It's really   usefull! Smell ya!,"RÉGIS : À bord,\nle maître de Coupe\na le mal de mer !\nVa le voir.\nÀ plus !",84,YES
+0x03A504,1507,dialogue_19_19,18,Urrp! I'm Seasick!,Beurk...\nJ'ai le mal\nde mer !,46,YES
+0x03A517,5463,dialogue_19_19,13,"(Rub,rub,rub)","Merci, ça va mieux ! Coupe ? Je suis épuisé... Apprends-la plutôt à un Pokémon.",89,YES
+0x03A525,1512,dialogue_19_19,18,The S.S.ANNE left.,L'Océane est partie.,26,YES
+0x03A538,1517,dialogue_19_19,28,This is no place   for kids!,Même tes Pokémon\nne suffisent pas :\nt'es trop jeune !,55,YES
+0x03A555,1522,dialogue_19_19,38,My Squirtle keeps  getting in trouble.,AGENT JENNY :\nCe Carapuce faisait\nn'importe quoi.\nJe l'ai capturé !,74,YES
+0x03A57C,1528,dialogue_19_19,95,"Hey Champ! Lt.Surgeloves electric Pok@mon,avoid birds andwater pok@mon! And beware of paralysis","Hé, Champion ! Major Bob, le Ricain Survolté, a la meilleure équipe Électrik d'Amérique ! Évite Eau et Vol !",126,YES
+0x03A5DC,1534,dialogue_19_19,50,"I'm sorry,but you  need a ticket to   come aboard.","Les passagers\nde l'Océane\nsont tous riches !\nNe traîne pas ici,\ngamin !",83,YES
+0x03A60F,1545,dialogue_19_19,10,Got Eevee!,Évoli reçu !,12,YES
+0x03A61A,1546,dialogue_19_19,20,000You surprised me!,Pas mal !,9,
+0x03A62F,1556,dialogue_19_19,124,"Whew! Thanks! Here,let me give ya thisCUT HM!Your Pok@moncan use it outside of battle to cut   down trees!        Got HM 01!",CS01 obtenue !,14,
+0x03A6AC,1562,dialogue_19_19,31,Lt.Surge was my CO.in the army!,Le Major Bob est\nmilitaire. Tu veux\nt'engager ?,49,YES
+0x03A6CC,1573,dialogue_19_19,28,There's a secret tothis GYM!,Tu crois pouvoir\npasser ?,27,
+0x03A6E9,1609,dialogue_19_19,91,"Electric Pok@mon   saved me in the    war! They zapped myenemies,just like  I'll do to you!",MAJOR BOB :\nTu oses me défier\nsi faible ?\nQuel cran ! Prends\ndonc ta leçon !,91,
+0x03A745,1633,dialogue_19_19,119,You're the real    deal kid!Here's theThunderbadge! That badge lets you use FLY any time kid!  And take this TM aswell!,CT24 reçue !,12,
+0x03A7BD,6556,dialogue_19_19,26,0000000<B7B4><B1C5>:<B5E6><B3EA><B1C2><B0C3><B0C7><B7C1><B5FB>,Je voyagerai l'an prochain.,28,YES
+0x03A7D8,6558,dialogue_19_19,27,"<0A><B7B4><B1C5>:<B1C0><B1D1><B3D3><B3EA><B7C2><B0F8>,<B7C3><B0CE><B0B2><B0F8>",Je suis trop vieux pour marcher loin.,37,YES
+0x03A7F4,6566,dialogue_19_19,18,"<0A><B5F7><B1A3>:<B0B6><B1DF>,<B2CA><B7C4><B5C1>!","Ne traîne pas ici, gamin !",26,YES
+0x03A807,6572,dialogue_19_19,25,"<0A><B5F7><B1A3>:<B1C2><B2DC><B0F8>,<B2D8><B7C5><B5C2><B3A2><B7C6><B6DB>",J'avais tort. Visite à ta guise.,37,YES
+0x03A821,1645,dialogue_19_19,104,This Squirtle I gotkeeps getting into mischief.I think heneeds a better     trainer. Would you like him?,AGENT JENNY : Le Badge Foudre ? Tu es fort ! Veux-tu ce Carapuce farceur ?,85,
+0x03A88A,1655,dialogue_19_19,26,Oh...What am I to  do now?,Qui veut Carapuce ?,19,
+0x03A8A5,1660,dialogue_19_19,24,Please treat him   well.,"Prends soin de lui,\ns'il te plaît !",34,YES
+0x03A8BE,6578,dialogue_19_19,19,0000000<B5F7><B1A3>:<B2EC><B7C3><B1D9>!,"Va-t'en, vite !",15,
+0x03A8D2,6579,dialogue_19_19,21,<0A><B5F7><B1A3>:<B2BF><B1F2><B1C2><B0AE><B1E7><B1EF><B0D7>?,"J'ai parlé, là ?",16,
+0x03A8E8,6581,dialogue_19_19,30,<0A><B7B4><B1C5>:<B1C2><B0AE><B0BA><B2CF><B7D0><B2F5><B0B8><B0C9><B0C5><B1D1><B2DA><B1BE>,Ma fille a ton âge.,19,
+0x03A907,6594,dialogue_19_19,19,<0A><B7B4><B1C5>:<B2B4><B1C2><B2CF><B7D1><B0BE>...,Épouse ma fille !,17,
+0x03A91B,1673,dialogue_19_19,19,"Win, Lose, or Draw!",Mes Pokémon sont invincibles !,32,YES
+0x03A92F,1678,dialogue_19_19,26,To live is to      gamble!,Enfin... seulement chez moi.,28,YES
+0x03A94A,1679,dialogue_19_19,12,No cheating!,J'ai sommeil...,15,YES
+0x03A957,1680,dialogue_19_19,25,Huh? That's not    right!,Pourquoi m'empêcher de dormir ?,30,YES
+0x03A971,1681,dialogue_19_19,29,"I'm new,but I thinkI can win!",On a quelque chose sur le visage ?,34,YES
+0x03A98F,1690,dialogue_19_19,19,My Pok@mon couldn't,"Oui, toi ! Arrête de nous dévisager !",38,YES
+0x03A9A3,1693,dialogue_19_19,26,I have never won   before.,Traite tes Pokémon avec amour.,30,YES
+0x03A9BE,1698,dialogue_19_19,18,I saw this coming.,"Pas mal, petit !",16,
+0x03A9D1,1699,dialogue_19_19,24,Fwahaha! I've neverlost!,"RÉGIS : À bord,\nle maître de Coupe\nest un vieux.\nIl a le mal\nde mer !\nVa voir. À plus !",112,YES
+0x03A9EA,1704,dialogue_19_19,17,Luck of the draw!,Tu m'as battu.,14,
+0x03A9F7,1705,dialogue_19_19,4,raw!,SACHA :\nJe vais vous masser\nle dos !,46,YES
+0x03A9FC,1715,dialogue_19_19,25,I'm the best in my class!,"Hé ! C'est quoi,\nces manières ?",33,YES
+0x03AA16,1719,dialogue_19_19,33,"Darn,I need to makethem stronger!","Bon, je laisse tomber.",26,
+0x03AA38,1720,dialogue_19_19,28,My Pok@mon should  be ready!,Comment peux-tu faire ça ?,29,YES
+0x03AA55,1721,dialogue_19_19,24,I should get betterones.,Je n'ai rien dit.,17,
+0x03AA6E,1722,dialogue_19_19,34,Competition! I can not get enough!,Tu ne passeras pas.,19,
+0x03AA91,1723,dialogue_19_19,15,I had a chance!,"Je n'ai rien vu. Allez, file !",32,YES
+0x03AAA1,1724,dialogue_19_19,24,Careful! I am on   fire!,Réglons ça aujourd'hui !,32,YES
+0x03AABA,1725,dialogue_19_19,17,I've burnt out...,Tu as eu\nde la chance...,34,YES
+0x03AACC,1731,dialogue_19_19,52,There's a huge     Pok@mon that sleepsback this way.,Tu es fichu !,13,
+0x03AB01,1732,dialogue_19_19,37,I think you need a Flute to wake him.,J'ai mal au ventre.\nPas de dispute\naujourd'hui.,50,YES
+0x03AB27,1743,dialogue_19_19,52,"A fainted Pok@mon  can't fight,but canstill use HMs.","D'après la rumeur,\nles Taupiqueur ont\ncreusé ce tunnel\njusqu'à Jadielle !",75,YES
+0x03AB5C,1754,dialogue_19_19,69,I'm Prof.Oaks Aide!I was sent to give you an HM05! Here  you are Ash!,Certains Pokémon apprennent Flash avec la CS05. Utile dans les grottes !,75,YES
+0x03ABA2,1761,dialogue_19_19,9,Got HM05!,CS05 obtenue !,14,YES
+0x03ABAC,1767,dialogue_19_19,47,You have Pok@Mon?  You're mine!You deceived me!,"Dis donc, tu es plutôt mignon !",34,
+0x03ABCB,1769,dialogue_19_19,16,You deceived me!,"Tu es fort, j'aime ça !",23,YES
+0x03ABDC,1770,dialogue_19_19,52,I'm taking Rock    Tunnel to go to    Lavender Town.,"On négocie ?\nTon Pikachu,\ndonne-le-moi !",52,
+0x03AC11,1783,dialogue_19_19,18,Are you going too?,J'avais tort.,13,
+0x03AC24,1784,dialogue_19_19,18,"Go,my bug Pok@mon!",Te revoir ici ? Quelle surprise !,36,YES
+0x03AC37,1787,dialogue_19_19,11,You bug me!,Encore plus fort !,18,YES
+0x03AC43,1788,dialogue_19_19,19,"Haha! Come on,dude!","Attention, ou ça va\nmal finir !",30,YES
+0x03AC57,1802,dialogue_19_19,24,Haha! You beat me  fair!,"Alors, comment vas-tu ? Ha ha...",36,YES
+0x03AC70,1803,dialogue_19_19,19,Great! I was bored!,Intéressant...,14,
+0x03AC84,1808,dialogue_19_19,18,You sure got guts!,"Cette fois, je suis\nfichu...",27,YES
+0x03AC97,1814,dialogue_19_19,33,Don't you dare     condescend me!,Un conseil : fuis !,19,
+0x03ACB9,1821,dialogue_19_19,19,No! You're to much!,Pas mal...,10,
+0x03ACCD,1822,dialogue_19_19,38,Who's that with    those cool Pok@mon?,Tous tes efforts\nsont vains.\nJe suis trop fort !,57,YES
+0x03ACF4,1831,dialogue_19_19,13,Keep walking!,Mais... C'est pas\npossible !,29,YES
+0x03AD02,1835,dialogue_19_19,27,Aren't you a littletoughie!,Encore toi !,12,
+0x03AD1E,5470,dialogue_19_19,10,Too tough!,Encore perdu...,15,YES
+0x03AD29,1836,dialogue_19_19,25,I got up early to  train!,Laisse-moi te voir.,19,
+0x03AD43,1837,dialogue_19_19,24,I need to train    more.,Tu aurais pu y aller mollo !,32,YES
+0x03AD5C,1838,dialogue_19_19,29,I've never won a   badge yet.,Tu as osé venir\ndans ce noir !,33,YES
+0x03AD7A,1852,dialogue_19_19,16,I blew it again.,Quel courage !,14,
+0x03AD8B,1857,dialogue_19_19,18,This cave is long!,J'ai perdu quelque chose.,25,YES
+0x03AD9E,1858,dialogue_19_19,17,Doh! You won kid!,Je dois le trouver.,19,YES
+0x03ADB0,1869,dialogue_19_19,23,I'll leave ya cryinkid!,"Moi, je n'ai pas peur du noir.",32,YES
+0x03ADC8,1859,dialogue_19_19,7,I give!,Tu n'es pas n'importe qui.,33,YES
+0x03ADD0,1860,dialogue_19_19,31,You have Pok@Mon!  Let's start!,J'ai vraiment très peur...,26,
+0x03ADF0,1861,dialogue_19_19,14,You play hard!,"Tu me protèges, d'accord ?",29,YES
+0x03ADFF,1866,dialogue_19_19,24,Give it your best  shot!,Que fais-tu ici ?,17,
+0x03AE18,5403,dialogue_19_19,11,Fired away!,Désolé...\nJe m'en mêle pas.,36,YES
+0x03AE24,1867,dialogue_19_19,30,You have a Pok@dex?I want one!,Je passe mes journées à travailler ici. Quel ennui !,69,YES
+0x03AE43,1868,dialogue_19_19,13,Thanks again!,LÉO : Merci...,14,YES
+0x03AE51,6602,dialogue_19_19,11,<B3B1><B2B5>:......,...,3,
+0x03B058,1879,dialogue_19_19,15,I'm so jealous!,"Demain, ça ira\nmieux... pas vrai ?",38,YES
+0x03B068,1883,dialogue_19_19,33,Hikers use twigs astrail markers.,Pas touche !,12,
+0x03B08A,1884,dialogue_19_19,18,I want to go home!,Je t'avais prévenu. Pas touche !,31,YES
+0x03B09D,1887,dialogue_19_19,18,Pok@mon fight! Go!,"La montagne, ça endurcit !",29,YES
+0x03B0B0,1888,dialogue_19_19,10,Game over!,Je m'en doutais !,17,YES
+0x03B0BB,1893,dialogue_19_19,15,I'll fight you!,Je cherche un petit ami.,23,YES
+0x03B0CB,1894,dialogue_19_19,19,I like tiny Pok@mon,Pas mon genre !,15,
+0x03B0DF,1895,dialogue_19_19,27,I like drawing     Pok@mon!,Tu veux savoir ?,16,
+0x03B0FB,1900,dialogue_19_19,27,"I'm an artist,not afighter.",Les Pokémon peuvent évoluer en gagnant des niveaux !,51,YES
+0x03B117,1905,dialogue_19_19,26,Maybe I'm lost in  here...,Les Pokémon Roche\nsont imbattables !,37,YES
+0x03B132,1906,dialogue_19_19,17,Which way is out?,Je me trompais ?,16,
+0x03B144,1907,dialogue_19_19,27,I came this far forPok@mon!,Je viens de rompre avec ma copine.,34,YES
+0x03B160,1908,dialogue_19_19,19,You looked harmless,Je suis de mauvaise humeur.,26,YES
+0x03B174,1909,dialogue_19_19,19,Eek!Don't scare me!,Tu m'as bousculé !,18,
+0x03B188,1912,dialogue_19_19,94,This Pok@mon needs a strong trainer totake care of it.   Would you take careof this Bulbasaur?,Bulbizarre va bien.\nIl lui faut un bon\nDresseur.\nTu le veux ?,69,
+0x03B1E7,1917,dialogue_19_19,23,Take good care of  him!,Ah bon ? Dommage...,19,
+0x03B1FF,1924,dialogue_19_19,14,Got Bulbasaur!,"Alors, prends soin\nde Bulbizarre !",34,YES
+0x03B20E,1929,dialogue_19_19,16,Oh...too bad... ,Bulbizarre reçu !,17,YES
+0x03B21F,1931,dialogue_19_19,19,It's too dark here!,"Désolé, je me suis trompé !",27,YES
+0x03B233,1932,dialogue_19_19,16,Can you beat me?,Ne te balade pas partout.,27,YES
+0x03B244,1933,dialogue_19_19,18,Oops! Out-muscled!,"Si ça s'écroule,\non est fichus !",34,YES
+0x03B257,1941,dialogue_19_19,15,Do you Cosplay?,Bonjour !,9,
+0x03B267,1942,dialogue_19_19,27,We dress as Pok@monfor fun!,Ravi d'avoir fait ta connaissance.,35,YES
+0x03B283,1949,dialogue_19_19,23,Wanna see my Pok@  mon?,Rien à négocier !,17,
+0x03B29B,1954,dialogue_19_19,18,Oh no! My Pok@mon!,"Bon, vas-y, parle.",18,
+0x03B2AE,1959,dialogue_19_19,19,That's a tough hike,J'adore distribuer des coups !,30,YES
+0x03B2C2,1964,dialogue_19_19,17,I'm not up to it!,Je ne recommencerai plus...,26,YES
+0x03B2D4,5866,dialogue_19_19,15,Ha-hahah-ah-ha!,Tu veux voir de quoi je suis capable ?,47,YES
+0x03B2E4,1969,dialogue_19_19,19,Haha-ha-choo! Snort,Impressionnant...,17,
+0x03B2F8,1974,dialogue_19_19,23,I love the mountainair!,Ma Défense est imbattable !,31,YES
+0x03B310,1983,dialogue_19_19,24,That cleared my    head!,Tu as percé\nma Défense ?!,32,YES
+0x03B329,1993,dialogue_19_19,37,People pay a lot   for Cubone skulls.,C'est bizarre...\nOù est donc passé\nM. Fuji ?,47,YES
+0x03B34F,1999,dialogue_19_19,64,I saw Cubone's mom die trying to get  away from Team     Rocket!,M. Fuji recueille\nici les Pokémon\nabandonnés.,49,
+0x03B390,2011,dialogue_19_19,49,This town's known  as the grave site  of Pok@mon.,"Pour de l'argent,\nla Team Rocket\nest prête à tout.",55,YES
+0x03B3C2,2030,dialogue_19_19,28,Did you come to payrespects?,Cette Tour apaise l'âme des Pokémon disparus.,47,YES
+0x03B3DF,6604,dialogue_19_19,11,<B0EC><B1EA><B0DB><B0EE><B0BF>?,Tu as réussi\nà trouver\ncet endroit ?,51,YES
+0x03B3EB,6605,dialogue_19_19,44,<0A><B2CF><B1DE>:<B1C2><B0F6><B0C2><B1F1><B1E7><B3C8><B0CD><B0A4><B2F5><B0F8><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1F2><B0FC><B0BC>,On raconte qu'un Pokémon légendaire est apparu par ici. Je suis venue voir.,76,YES
+0x03B418,2035,dialogue_19_19,14,Zapdos: Kree!!,ÉLECTHOR : ...,14,
+0x03B427,2036,dialogue_19_19,34,There are spirits  up to mischief!,EXORCISTE :\nUne âme erre\nplus haut...,50,YES
+0x03B44A,2041,dialogue_19_19,47,Growlith...(Sniff!)I can't stop...    crying...,Mon Mélofée est\nmort... Je pleure\nencore...,47,
+0x03B47A,2049,dialogue_19_19,62,Pok@mon Tower was  built in memory of Pok@mon that have  died.,Tu viens prier ?\nTu aimes beaucoup\nles Pokémon.,50,
+0x03B4B9,2069,dialogue_19_19,92,"Why are you here   Ash? You're Pok@monlook fine!But,I canat least make them faint! Let's go!",RÉGIS : Sacha ?\nIls sont en vie !\nJe peux les mettre\nK.O. quand même !,74,
+0x03B516,2075,dialogue_19_19,123,"How's your Pok@dex pal? I just caught a Cubone! Well, I  better get going!  I've got a lot to  accomplish, Smell  ya later!","RÉGIS : Doucement !\nJe t'avais ménagé.\nTon Pokédex ? J'ai\ntrouvé Osselait,\nmais pas Ossatueur.\nJe suis pressé.\nSalut !",121,
+0x03B592,2093,dialogue_19_19,53,A Silph Scope may  be able to identifywayward Ghosts!,Un Scope Sylphe\npourrait démasquer\nles Spectres...,53,
+0x03B5C8,2098,dialogue_19_19,31,Ghost: Get out...  Get...Out...,"Là-haut,\nles Pokémon\nsont terrifiés...",55,YES
+0x03B5E8,2103,dialogue_19_19,27,Such an adorable   Pok@mon!,Tu sais combien le poison est terrifiant ?,50,YES
+0x03B604,2106,dialogue_19_19,28,Don't be so mean toClefairy!,Le poison réduit\npeu à peu tes PV.,36,YES
+0x03B621,2112,dialogue_19_19,15,I love Nidoran!,Encore toi ?,12,
+0x03B631,2113,dialogue_19_19,27,That's my favorite Pok@mon!,Tu me colles !,14,
+0x03B64D,2114,dialogue_19_19,24,Meowth is so cute! Meow!,J'adore Miaouss...\nMiaou !,26,YES
+0x03B666,2118,dialogue_19_19,32,Pidgey and Rattata are cute too!,Miaouss porte chance !,27,
+0x03B687,2119,dialogue_19_19,43,We must look silly standing here like this.,Même un Pokémon ordinaire peut être unique.,45,YES
+0x03B6B3,2120,dialogue_19_19,37,Saffron's guard    won't let us pass!,"Comme tu es banal,\ntes Pokémon le sont\nforcément aussi !",55,YES
+0x03B6D9,2125,dialogue_19_19,26,You need a strategyto win!,Pas de chance aujourd'hui.,31,YES
+0x03B6F4,2126,dialogue_19_19,33,"Go with Grimer, and...and then...",Quelle malchance...,19,
+0x03B716,2127,dialogue_19_19,34,"School is fun, but so are Pok@mon.",Je suis encore jeune !,26,
+0x03B739,2128,dialogue_19_19,26,I'll just stay withschool.,Tu vois ? En pleine forme !,26,
+0x03B754,2137,dialogue_19_19,27,How are you with   Pok@mon?,Je ne supporte plus tous ces Tadmorv !,37,YES
+0x03B770,2146,dialogue_19_19,13,Ow! Meltdown!,Merci d'avoir maté\nces Tadmorv !,32,YES
+0x03B77E,2152,dialogue_19_19,19,I'm a gambling dude,Rien de plus beau\nque les flammes !,36,YES
+0x03B792,2158,dialogue_19_19,14,Came up short!,Je me suis un peu trop échauffé...,35,YES
+0x03B7A1,2159,dialogue_19_19,19,All right! Let's go,Regarde\nmon Mélofée !,32,YES
+0x03B7B5,2160,dialogue_19_19,18,Drat! You're good.,Tu n'as pas été hypnotisé ?,30,YES
+0x03B7C8,2166,dialogue_19_19,31,Welcome to Celadon Pok@mon Gym!,Héhé ! Cette Arène\nest terrible !\nY'a plein d'meufs !,57,YES
+0x03B7E8,2171,dialogue_19_19,12,You're mean!,"Pfff ! Erika va\ngagner, c'est sûr !",38,YES
+0x03B7F5,6607,dialogue_19_19,63,"00<B2CF><B1DE>:<B0DE><B8BB><B0DE><B8BB><B0BC><B1DB><B1DB><B2AB><B0C2><B0B8><B3EF><B0A4><B0FC><B0BC><B0F0><B7CD><B1B6><B5A2><B5A3><B5A4><B8BC><B0F8>,<B1C2><B0F6><B0FD><B0DB><B0F8>!",La mère d'Osselait\nfuyait. J'ai vu\nla Team Rocket\nla tuer !,66,YES
+0x03B835,2175,dialogue_19_19,27,You're not allowed in here!,Réservé aux filles.,19,
+0x03B851,2176,dialogue_19_19,19,I was getting bored,Que des femmes !\nQuel ennui mortel !,38,YES
+0x03B865,2181,dialogue_19_19,10,My makeup!,Quel ennui...,13,YES
+0x03B870,2182,dialogue_19_19,33,Grass Pok@mon are  easy to raise!,Les Pokémon Plante\ns'élèvent bien !,35,YES
+0x03B892,2187,dialogue_19_19,38,They also help makeflower arrangements,Tu es vraiment fort !,25,
+0x03B8B9,2188,dialogue_19_19,30,Don't underestimategirl power!,Tu m'observes ?,15,
+0x03B8D8,2189,dialogue_19_19,32,I didn't have my   best Pok@mon!,Tu ne matais pas ? Les voyeurs sont partout !,47,YES
+0x03B8F9,2196,dialogue_19_19,31,Aren't you the     peeping Tom?,Pas de Pokémon Insecte ou Feu ici !,43,YES
+0x03B919,2197,dialogue_19_19,30,"Sorry, we get a lotof gawkers.",C'est ça !,10,
+0x03B938,2198,dialogue_19_19,38,Don't bring fire orbug Pok@mon in here,Bienvenue à l'Arène\nde Céladopole !\nNe sous-estime pas\nles filles !,69,YES
+0x03B95F,2214,dialogue_19_19,8,Oh! You!,Pas mal !,9,YES
+0x03B968,2215,dialogue_19_19,17,Nice to meet you.,Qu'aimes-tu faire ?,19,YES
+0x03B97A,2220,dialogue_19_19,24,I have a blind datesoon.,J'ai un rendez-vous arrangé la semaine prochaine...,50,YES
+0x03B993,2226,dialogue_19_19,93,"Hello, I am Erika, leader of this gym.You wish to battle me? Very well, but I shall not lose.",ERIKA : Quel beau\ntemps ! Bienvenue\ndans mon Arène.\nJ'aime les fleurs.\nTu veux combattre ?\nJe ne perdrai pas !,114,YES
+0x03B9F1,2249,dialogue_19_19,102,I concede defeat.I confer to you the  Rainbow badge. You can use the HM     Strength outside ofbattle.,ERIKA : Bravo ! Voici le Badge Prisme. Il permet d'utiliser Force !,75,
+0x03BA58,2259,dialogue_19_19,46,My sister's so im- mature! She drives me nuts!,Je viens de Carmin sur Mer.,27,
+0x03BA87,2266,dialogue_19_19,46,I road uphill on   Cycling Road from  Fuchsia!,La Poké Flûte\német un son spécial\ninaudible à l'homme\nqui réveille\nun Pokémon endormi.,95,YES
+0x03BAB6,2273,dialogue_19_19,66,"I'm looking for a  good home for my   Eevee, would you   like him?","BEIBEI : Je sais tout, jeux vidéo compris ! Cet Évoli est pour toi !",71,YES
+0x03BAF9,2283,dialogue_19_19,33,There's a switch!  Let's push it.,Oh ? Un bouton secret derrière l'affiche ! Essayons !,67,YES
+0x03BB1B,2288,dialogue_19_19,29,You broke into our operation?,T'es qui ? Comment\nt'es entré ici ?,35,YES
+0x03BB39,2292,dialogue_19_19,29,You won't get away with this!,Tu sous-estimes\nla Team Rocket ?!,36,YES
+0x03BB57,2302,dialogue_19_19,33,Who are you? How'd you get here!?,TEAM ROCKET : Qui ose s'infiltrer ici ?,43,YES
+0x03BB79,5471,dialogue_19_19,12,Oww! Beaten!,Pas si vite !\nTu ne passeras pas.,38,YES
+0x03BB86,2307,dialogue_19_19,43,Do you really thinkyou can reach our  Boss?,Le chef dit qu'un\nScope Sylphe révèle\nles fantômes.,51,YES
+0x03BBB2,2314,dialogue_19_19,12,I surrender!,Tu te crois tout permis ?!,28,YES
+0x03BBBF,2315,dialogue_19_19,14,This won't do!,Tu viens faire quoi ici ?,24,YES
+0x03BBCE,2320,dialogue_19_19,43,I'll talk! Take theelevator to see my Boss!,D'accord. Tu peux y aller.,25,
+0x03BBFA,2325,dialogue_19_19,15,Intruder alert!,TEAM ROCKET : Intrus repéré !,34,YES
+0x03BC0A,2330,dialogue_19_19,38,I don't know where the Silph Scope is!,TEAM ROCKET :\nLe Scope Sylphe ?\nJe ne sais rien !,55,YES
+0x03BC31,2335,dialogue_19_19,26,We heard you were  coming!,Défier la Team Rocket est inutile !,47,YES
+0x03BC4C,2344,dialogue_19_19,13,What? I lost?,Le Boss a dérobé ce Scope à Nanjing Tech !,44,YES
+0x03BC5A,2349,dialogue_19_19,31,Stop meddling in   our affairs!,Tu tombes à pic !,17,
+0x03BC7A,2350,dialogue_19_19,33,The Silph Scope's  here somwhere.,Tu as du cran ?\nVa donc trouver\nnotre Boss !,50,YES
+0x03BC9C,2361,dialogue_19_19,10,"No, Why..?","Je ne sais rien, moi !",24,YES
+0x03BCA7,2367,dialogue_19_19,64,Hi! Would you care for some lemonade? It'll quench your  thirst!,100e client ! Eau Fraîche offerte !,36,
+0x03BCE8,2368,dialogue_19_19,13,Got Lemonade!,Eau Fraîche reçue !,19,YES
+0x03BCF6,2369,dialogue_19_19,35,My friend and I aretrading Pok@mon!,"XIAOHONG : C'est moi, la graphiste qui t'a dessiné !",55,YES
+0x03BD1A,2374,dialogue_19_19,36,Caught Pok@mon are given ID numbers.,"KAMEIYU : Le scénario, c'est moi ! Pikachu est mignon, non ?",70,YES
+0x03BD3F,2377,dialogue_19_19,37,My buddy's sending me her Kangaskhan!,WEI CUNFU : Je suis le programmeur. Enchanté !,48,YES
+0x03BD65,2378,dialogue_19_19,56,I heard you can seeghosts using Silph Co.'s Silph Scope!,"BOSS : La tâche est\nrude : les attraper\ntous ! Courage !\nUne fois ta quête\nachevée, préviens\nKameiyu.",103,YES
+0x03BD9E,5871,dialogue_19_19,18,Urrg...Awaa...graa,...,3,
+0x03BDB1,2388,dialogue_19_19,19,Huh?What am I doing,Qu'ai-je fait ?\nPardon... J'étais\npossédée !,48,YES
+0x03BDC5,2399,dialogue_19_19,20,"0Are you lost, brat?",Je ne sais rien !,17,
+0x03BDDA,5477,,7,Why...?,Hein..?,7,
+0x03BDE2,2401,dialogue_19_19,43,"So,I must say, I amimpressed you got  here!",GIOVANNI : Ha ha !\nBien joué.\nJe dirige ce QG\nde trafic Pokémon.\nTu vas le payer !,93,YES
+0x03BE0E,2418,dialogue_19_19,65,"Are you taking the gym challenge too? Here, this'll be   helpful!","XIAO LI : Tu m'as trouvé... Garde ça secret. Tiens, prends ça !",68,YES
+0x03BE50,2423,dialogue_19_19,13,Got HM 02 Fly,CS02 : Vol reçue !,18,YES
+0x03BE5E,2429,dialogue_19_19,130,"Jesse: Aha! I smella little brat!     James:Hold it rightthere, brat! Our   Boss is over here! Meowth: You better not disturb him!","JAMES : Cette fois, tu vas prendre cher !",44,
+0x03BEE1,2443,dialogue_19_19,75,"Like always...Team Rocket, Blast off  at the speed of     light!...Again...",JAMES :\nT'as pas honte ?,35,
+0x03BF2D,2453,dialogue_19_19,168,I see you raise    Pok@mon with utmostcare. A child like you would never    understand what I  hope to achieve. I shall step aside   this time! I hope  we meet again...,GIOVANNI :\nIm... impossible !\nTu tiens vraiment\nà tes Pokémon ?\nÇa me dépasse...\nJ'ai fort à faire.\nJe pars !,123,
+0x03BFD6,2473,dialogue_19_19,16,Got Silph Scope!,Scope Sylphe reçu !,19,YES
+0x03BFE7,5872,dialogue_19_19,16,Kekeke...Kwaaah!,Maudissons-le ensemble...,30,YES
+0x03BFF8,2479,dialogue_19_19,15,Hwa! I'm saved!,Hein ? Que m'est-il arrivé ?,27,YES
+0x03C008,2484,dialogue_19_19,19,Begone evil spirit!,Ton âme... Donne-la-moi !,33,YES
+0x03C01C,2489,dialogue_19_19,16,The spirit left.,Je suis épuisée...,18,YES
+0x03C02D,5873,dialogue_19_19,7,Kwaaah!,Ouh...\nUn Spectre...,32,YES
+0x03C035,2490,dialogue_19_19,25,We need the Silph  Scope!,Hein ? Qu'est-ce que c'est...,31,YES
+0x03C04F,5877,dialogue_19_19,9,Huhuhu...,Tu vas gagner ?,15,YES
+0x03C059,2491,dialogue_19_19,46,May the souls of   Pok@mon rest in    peace...,Hein ? Que m'est-il arrivé ?,27,
+0x03C088,5478,dialogue_19_19,12,Join...Us...,Bon sang...,11,
+0x03C096,2492,dialogue_19_19,46,Step in the magic  circle to heal yourPok@mon.,Tout tourne...\nSuis-je anémique ?,37,
+0x03C0C5,2500,dialogue_19_19,16,Ghost! Kwaaaaah!,Un zombie...,12,
+0x03C0D6,6616,dialogue_19_19,61,"<B5A2><B5A3><B5A4>:<B1C2><B0C2><B0B8><B0EE><B0BF><B0FD><B3DF><B0EE><B6F9><B6FC><B9A3><B0BC>,<B3C5><B3C6><B1C2><B0BC><B1EF><B0DE><B0C2><B0C3><B7EA><B0DB><B3C0><B1B3><B0BC><B2DD>!","Je garde\ncette affiche. Si\ntu me gênes, tu vas\nle regretter !",71,YES
+0x03C114,6634,dialogue_19_19,69,"<0A><B5A2><B5A3><B5A4>:<B0DE><B5E0>,<B0EE><B2DA><B0F9><B0C7><B0BC><B1EF><B5A2><B5A3><B5A4><B0BC><B9A4><B3BB><B1F9><B1B6><B2F4><B2F5><B0BC>!<B0C3><B1F3><B2EC><B0C9><B2CE><B1BE><B3CE><B9A5><B1F2><B3A9>!",Not' cachette va\nêtre découverte !\nJ'va prév'nir eul\nchef !,63,
+0x03C15A,2501,dialogue_19_19,15,Was I dreaming?,"Ça y est, j'ai repris mes esprits.",38,YES
+0x03C16A,2502,dialogue_19_19,18,Give me your soul!,Kang'er... Kang'er...,29,YES
+0x03C17D,2503,dialogue_19_19,16,I was possessed.,Je tremble...,13,
+0x03C18E,6643,dialogue_19_19,8,Zombies!,Quelle tristesse...,19,YES
+0x03C197,2504,dialogue_19_19,10,Huh? What?,Quelque chose est sorti de moi...,34,YES
+0x03C1A2,5878,dialogue_19_19,15,Urgah...Urff...,Hi hi... Hi hi...,17,YES
+0x03C1B2,2505,dialogue_19_19,35,I was controlled   by evil spirits.,Hi hi...\nQue m'arrive-t-il ?,38,YES
+0x03C1D6,5479,dialogue_19_19,19,Begone...intruders.,Partez... Quittez ce lieu !,28,YES
+0x03C1EA,2510,dialogue_19_19,52,The Silph Scope    identified the     Marowak ghost.,Le Scope Sylphe\na révélé la vraie\nnature du Spectre !,57,YES
+0x03C21F,2516,dialogue_19_19,109,The Ghost was the  restless soul of   Cubone's mother!   Her soul was calmedand she departed tothe afterlife.,SACHA : Le fantôme était en fait la douce mère d'Osselait...,70,
+0x03C28D,2524,dialogue_19_19,177,"Jessie: Stop right there!             Meowth: Grampa herewanted to complain,so we're setting   him straight.      James: So render   yourself invisible,or prepare to      fight!","JESSIE : Pas bouger ! Le vieux s'est plaint, alors on l'a enfermé !",73,
+0x03C33F,2540,dialogue_19_19,48,Looks like Team    Rocket's blasting  off again!,JAMES :\nTu vas voir !,32,
+0x03C370,2546,dialogue_19_19,179,Fuji:Heh? You came to save me? Thank  you. I came here tocalm the soul of   Cubone's mother. I think her spirit isat rest and moved  on. I must thank   you. Follow me to  my home.,M. FUJI :\nTu viens m'aider ?\nMerci.\nJe suis venu\napaiser l'âme\nde la mère\nd'Osselait.\nElle est en paix.\nRentrons.,161,
+0x03C424,2552,dialogue_19_19,63,"Here Ash, I think  this Pok@Flute willhelp you on your   quest.","M. FUJI :\nAime tes Pokémon,\nsinon ton Pokédex\nrestera incomplet.\nTiens, prends ceci.",95,YES
+0x03C464,2565,dialogue_19_19,46,The Pok@Flute will wake any sleeping  Pok@mon.,M. FUJI :\nLa Poké Flûte\nréveille un Pokémon\nqui dort.\nEssaie-la !,87,YES
+0x03C493,2575,dialogue_19_19,106,"Boy! I'm parched!  Huh?I can have thisdrink? Thanks! If  you want to go to  Saffron, you can goon through.",GARDE : J'ai soif.\nCette Eau Fraîche\nest pour moi ?\nMerci ! Safrania\nt'est ouverte !,91,
+0x03C4FE,2581,dialogue_19_19,29,What are you doing here kid!?,"Hé, gamin !\nNe traîne pas ici !",38,YES
+0x03C51C,2591,dialogue_19_19,36,Silph Co.will mergewith Team Rocket!,TEAM ROCKET :\nLe Boss convoite\nla Sylphe SARL !,54,YES
+0x03C541,2596,dialogue_19_19,12,Go home kid!,Je suis l'un des quatre frères Rocket !,46,YES
+0x03C54E,2597,dialogue_19_19,12,You're good.,"Contrôler Sylphe SARL, c'est vendre les Pokémon au prix fort !",63,YES
+0x03C55B,2602,dialogue_19_19,27,Kids aren't allowedin here!,Quel casse-pieds !,18,
+0x03C577,2603,dialogue_19_19,22,Why do you fight   us?,J'ai eu tort...,15,
+0x03C58E,2604,dialogue_19_19,23,That's far enough  kid!,Un individu suspect !,28,YES
+0x03C5A6,2605,dialogue_19_19,35,I work for Silph   and Team Rocket!,"TEAM ROCKET : T'es qui, toi ?",29,
+0x03C5CA,2610,dialogue_19_19,26,"Quit messing with  us,kid!",T'as réussi à venir jusqu'ici...,31,YES
+0x03C5E5,2615,dialogue_19_19,10,I give up!,Bravo ! Le bureau\ndu Président reste\ninaccessible.,51,YES
+0x03C5F0,2622,dialogue_19_19,29,I was a scientist  for Silph.,"Toi, je t'ai jamais vu ici !",27,
+0x03C60E,2624,dialogue_19_19,65,"Team Rocket said ifI helped them, theywould let me study Pok@mon!",Tu me crois fini ?\nJe t'empêcherai\nde gagner !,49,
+0x03C650,2638,dialogue_19_19,17,Intruder spotted!,La Team Rocket contrôle la Sylphe SARL !,44,YES
+0x03C662,2643,dialogue_19_19,12,Who are you?,Vive\nla Team Rocket !,35,YES
+0x03C66F,2644,dialogue_19_19,29,We have control of Silph Co.!,Encore toi ?\nTu viens semer\nle trouble ?,50,YES
+0x03C68D,2651,dialogue_19_19,30,Boss has been afterthis place!,Tu peux regarder...,19,
+0x03C6AC,2660,dialogue_19_19,34,My Pok@mon are my  loyal soldiers!,Tu veux quoi ?,14,
+0x03C6CF,2661,dialogue_19_19,27,Darn these weak    Pok@mon!,Sale morveux !,14,
+0x03C6EB,2662,dialogue_19_19,34,Show Team Rocket a little respect!,Le Boss est là. Rien à craindre !,36,YES
+0x03C70E,2667,dialogue_19_19,19,Disrespectful brat!,Employée de Sylphe SARL. Je suis aussi de la Team Rocket !,57,YES
+0x03C722,2668,dialogue_19_19,37,There shouldn't be any children here!,La Team Rocket contrôle la Sylphe SARL !,44,YES
+0x03C748,2673,dialogue_19_19,28,It's a long way to our boss!,"Me frappe pas ! Moi aussi, on m'a forcé...",46,YES
+0x03C765,2683,dialogue_19_19,121,"What kept you Ash? Haha! I guess Team Rocket slowed you  down! I saw you in Saffron,so I wantedto see if you got  better!",RÉGIS : Sacha ! Je savais que tu viendrais. La Team Rocket t'a ralenti ? Peu importe ! Montre tes progrès !,127,YES
+0x03C7DF,2689,dialogue_19_19,129,"Well,Ash!I'm movingon up,I'm going to the Pok@mon League to boot out the    Elite Four! Good   luck to ya Ash!    Smell ya later!","RÉGIS : Je file\nau Conseil des 4 !\nFais de ton mieux.\nÀ plus, Sacha !",72,
+0x03C861,2699,dialogue_19_19,36,I heard a kid was  wandering around.,"Moi, je compte\nparmi les quatre\nfrères Rocket !",53,YES
+0x03C886,2706,dialogue_19_19,9,Blast it!,Tant pis !\nMon cadet vengera\ncet affront !,51,YES
+0x03C890,2715,dialogue_19_19,19,You dare betray us?,Tu m'crois faible ?,19,
+0x03C8A4,2716,dialogue_19_19,12,You traitor!,Sous-estime-moi !,17,YES
+0x03C8B1,2717,dialogue_19_19,23,Oh ho! I smell a   rat!,On dit qu'un gamin rôde dans le coin !,38,YES
+0x03C8C9,2720,dialogue_19_19,27,You are a skilled  trainer!,Ne résiste pas\nà la Team Rocket...,38,YES
+0x03C8E5,2729,dialogue_19_19,114,Jessie: Stop right there twerp!       Jessie:Render your-self invisible or  prepare to fight!  Meowth:That's right,JAMES : Avorton !\nNotre Boss est\nen réunion !\nNe le dérange pas !,76,
+0x03C958,2748,dialogue_19_19,57,Team Rocket: Looks like Team Rocket's blasting off again!,SACHA :\nQui êtes-vous ?,34,
+0x03C992,2765,dialogue_19_19,147,Ash! We meet again!The President and Iare discussing a   vital proposition. Keep your nose out of grown up matters...or experience a world of pain!,"GIOVANNI : Sacha !\nEncore toi...\nLe PDG et moi\nparlons affaires.\nNe t'en mêle pas,\ngamin. Gare à toi !",114,
+0x03CA26,2771,dialogue_19_19,140,"Blast! You ruined  our plans for SilphBut, Team Rocket   will never fall!   Ash! All Pok@mon   exist for Team     Rocket! I shall    return!","GIOVANNI : Zut !\nLa Sylphe m'échappe\nmais la Team Rocket\nest éternelle !\nTous les Pokémon\nsont à nous !\nRetiens ça, Sacha.\nJe reviendrai !",148,YES
+0x03CAB3,2777,dialogue_19_19,51,Thank you for resc-uing us! We admire your courage.,SECRÉTAIRE : Merci ! Le PDG et moi te sommes reconnaissants.,72,YES
+0x03CAE7,2787,dialogue_19_19,19,The Pok@mon woke up,Ronflex s'éveille !,19,
+0x03CAFB,2788,dialogue_19_19,18,I got a bite here!,Ce coin est réputé pour la pêche.,33,YES
+0x03CB0E,2789,dialogue_19_19,17,Just a small fry!,Tu n'aimes pas pêcher ?,27,YES
+0x03CB20,2790,dialogue_19_19,24,Fishing's a waitinggame!,Plein de Pokémon vivent dans l'eau !,38,YES
+0x03CB39,2799,dialogue_19_19,18,That one got away!,Les Pokémon Eau sont les plus mignons !,47,YES
+0x03CB4C,2800,dialogue_19_19,17,You like fishing?,Les Pokémon Eau sont magnifiques !,37,YES
+0x03CB5E,5879,dialogue_19_19,5,Ouch!,"Tu les trouves moches, peut-être ?",38,YES
+0x03CB64,2801,dialogue_19_19,27,I would rather be  working!,Tu vois pas\nque je pêche ?,33,YES
+0x03CB80,2802,dialogue_19_19,16,It's not easy...,Laisse tomber...\nTous les poissons\nont fui !,47,YES
+0x03CB91,2803,dialogue_19_19,32,You never know whatyou'll catch!,J'ai une belle prise. Tu veux voir ?,44,YES
+0x03CBB2,5484,dialogue_19_19,8,Lost it!,L'Eau bat le Feu !,18,YES
+0x03CBBB,2808,dialogue_19_19,29,Electricity is my  specialty!,"Ici, mes Pokémon\nn'ont presque aucun\nrival !",45,YES
+0x03CBD9,2819,dialogue_19_19,27,Water conducts electricity.,Je me suis fait avoir...,27,
+0x03CBF5,2820,dialogue_19_19,19,Water calms my mind,Je ne demande rien.,19,
+0x03CC09,2825,dialogue_19_19,36,Pok@mon battles arerelaxing as well.,Je ne suis pas louche !,27,
+0x03CC2E,2826,dialogue_19_19,37,I saw a large Pok@-mon sleeping here!,Dégage !\nJe te connais pas !,38,YES
+0x03CC54,2827,dialogue_19_19,19,Snorlax love to nap,"Pardon, je t'avais mal jugé.",28,YES
+0x03CC68,2828,dialogue_19_19,31,Bird Watcher Vs.   Pok@mon Kid!,La vitesse avant tout !,25,
+0x03CC88,2829,dialogue_19_19,23,You beat me at Pok@mon.,"Même battu,\nje ne change pas !",37,YES
+0x03CCA0,2839,dialogue_19_19,23,"Sure,I'll play withyou!","Rien qu'à te voir,\nj'en salive !",32,YES
+0x03CCB8,2840,dialogue_19_19,17,You little brute!,J'avais tort...,15,
+0x03CCCA,2841,dialogue_19_19,29,I'm told I'm good  for a kid!,Quoi ?\nJe te plais pas ?,36,YES
+0x03CCE8,2846,dialogue_19_19,12,Ohh! I lost!,Tu as raison.,13,YES
+0x03CCF5,2847,dialogue_19_19,24,Your Badges are so cool!,"Toi, encore !",13,
+0x03CD0E,2848,dialogue_19_19,19,You're very strong!,C'est le destin !\nOn se revoit !,33,YES
+0x03CD22,2853,dialogue_19_19,22,Want to battle withme?,Arrête de tourner devant moi !,31,YES
+0x03CD39,2858,dialogue_19_19,18,It's over already?,J'ai exagéré...,15,
+0x03CD4C,2859,dialogue_19_19,32,I always go with   bird Pok@mon!,Je suis spécialiste\ndes Pokémon Vol.,35,YES
+0x03CD6D,2865,dialogue_19_19,19,I wish I could fly.,Tes Pokémon\nbattent les miens.,37,YES
+0x03CD81,2866,dialogue_19_19,26,The wind's blowing my way!,T'as battu l'aîné ?\nJe m'incline pas !,37,YES
+0x03CD9C,2871,dialogue_19_19,9,I'm beat.,Plus rien à dire.,17,YES
+0x03CDA6,2872,dialogue_19_19,22,What're you lookin'at?,Tu aimes la vitesse ? Suis-moi !,48,YES
+0x03CDBD,2873,dialogue_19_19,9,Get lost!,J'aurais pas dû insister.,28,YES
+0x03CDC7,2878,dialogue_19_19,33,My bird Pok@mon    want to fight!,"Envole-toi,\nmon Pokémon !",32,
+0x03CDE9,2883,dialogue_19_19,19,My bird combo lost?,Tout est fini...,16,
+0x03CDFD,2884,dialogue_19_19,24,My birds are the   best!,Tu es allé au Parc Safari ?,27,YES
+0x03CE16,5404,dialogue_19_19,7,Oh man!,Le Parc regorge\nde Pokémon rares...,38,YES
+0x03CE1E,2885,dialogue_19_19,28,My Pok@mon wish to meet you!,Le type Vol domine\nle type Insecte !,36,YES
+0x03CE3B,2893,dialogue_19_19,19,"Wow,You totally won","Ah, tu avais donc\ncompris !",28,YES
+0x03CE4F,2899,dialogue_19_19,25,My bird Pok@mon areready!,Tu m'as cherché !,17,
+0x03CE69,2900,dialogue_19_19,14,Not ready yet.,Ce n'est rien...,16,YES
+0x03CE78,2901,dialogue_19_19,18,"Sure, I'll fight! ",T'es trop mignon !,18,
+0x03D088,2907,dialogue_19_19,30,<B3E7><B8A7><B2B5>:<B0B9><B0BF><B0AE><B3F7><B0C8><B5C5><B6B2><B0BC><B0A1><B0A2>...,ORNITHOLOGUE :\nDes Pokémon rares\nvivent ici...,51,YES
+0x03D0A7,2912,dialogue_19_19,26,"Win,lose,it doesn'tmatter.",Ne pars pas ! Reste discuter avec moi !,38,YES
+0x03D0C2,2913,dialogue_19_19,16,"C'mon, Let's go!",Je vais t'apprendre les bonnes manières !,48,YES
+0x03D0D3,2914,dialogue_19_19,15,Arrg! Get lost!,J'adore les gens forts !,26,YES
+0x03D0E3,2915,dialogue_19_19,23,Can your Pok@mon   fly?,J'ai un Pokémon rare.,24,YES
+0x03D0FB,2916,dialogue_19_19,19,Best way to travel!,"Alors ? Pas mal, hein ?",25,YES
+0x03D10F,2917,dialogue_19_19,15,Do you use TMs?,Enchantée !\nÀ nous deux !,32,YES
+0x03D11F,5485,dialogue_19_19,11,"Aww,bummer!",Je m'incline !,14,YES
+0x03D12B,2926,dialogue_19_19,19,I use TMs I bought!,Aïe ! Tu m'as touchée !,28,YES
+0x03D13F,2928,dialogue_19_19,23,HMs are harder to  get.,Et si je tombais enceinte ?,29,YES
+0x03D157,2929,dialogue_19_19,19,I need to burn time,Ta tête m'agace !,17,
+0x03D16B,6645,dialogue_19_19,37,<B3E7><B8A7><B2B5>:<B6A9><B0AE><B6BA><B4D7><B4AB><B4AC><B0EC><B0E3><B0BC><B1C2><B0C5><B2B6><B0AE><B3F9><B3D0>,"ORNITHOLOGUE : Avec mes attaques en rafale, tu n'as aucune chance !",72,YES
+0x03D191,6650,dialogue_19_19,18,<0A><B3E7><B8A7><B2B5>:<B5B0><B1E7><B1BE><B1EF><B0F8>,ORNITHOLOGUE : J'ai encore parlé trop vite...,45,YES
+0x03D1A4,2934,dialogue_19_19,10,What? You!,Je m'y suis fait. Ça va.,25,YES
+0x03D1AF,2935,dialogue_19_19,19,Pok@mon fight? Cool,T'as vraiment pas l'air honnête !,34,YES
+0x03D1C3,2936,dialogue_19_19,11,Blown away!,"Tu es loyal, non ?",18,YES
+0x03D1CF,2937,dialogue_19_19,37,Have you heard of  legendary Pok@mon?,Tu es mon 52e petit ami.,23,
+0x03D1F5,2938,dialogue_19_19,25,There's 3 legendarybirds!,"Bon, je te laisse partir...",28,YES
+0x03D20F,2939,dialogue_19_19,26,You don't stand a  chance!,"T'as vu ma force ?\nAlors, dégage !",34,YES
+0x03D22A,2940,dialogue_19_19,16,Not good enough!,Bonne route ! Ha ha !,23,YES
+0x03D23B,2941,dialogue_19_19,15,"Oh,you're cute!",Pourquoi ce drôle de regard ?,30,YES
+0x03D24B,2946,dialogue_19_19,14,I forgive you!,"Dommage, j'ai déjà un petit ami...",34,YES
+0x03D25A,2947,dialogue_19_19,27,What's cool?TradingPok@mon!,Je suis un pro\ndes Pokémon Vol.,35,YES
+0x03D276,2965,dialogue_19_19,27,I trade with my    friends.,Je vais à la Ligue cette année !,32,YES
+0x03D292,2979,dialogue_19_19,74,Yo Champ! This GYM has invisible wallsYou have to find   the gaps in them.,"Hé, Champion !\nIci, les murs\nsont invisibles !\nRepère les trous !",75,YES
+0x03D2DD,2984,dialogue_19_19,16,Strategy is key!,Tu n'as rien\nà faire ici !,32,YES
+0x03D2EE,2985,dialogue_19_19,14,Good strategy!,Belle technique\nde ninja !,29,YES
+0x03D2FD,2986,dialogue_19_19,30,Can you beat my    techniques?,"La force brute ?\nÇa ne suffit pas !\nLa technique,\nvoilà le secret !",74,YES
+0x03D31C,2991,dialogue_19_19,36,I like poison and  sleep techniques.,"Apparemment,\nt'as compris.",32,
+0x03D341,2998,dialogue_19_19,27,I joined to become a ninja!,Le Champion de cette Arène est fort. Sois prudent.,57,YES
+0x03D35D,2999,dialogue_19_19,30,I'll keep training under Koga!,Je me suis inquiété pour rien...,31,YES
+0x03D37C,3004,dialogue_19_19,29,I study the way of the Ninja!,Tu as l'air\nsûr de toi !,31,YES
+0x03D39A,3005,dialogue_19_19,28,I still have a lot to learn.,Enfin un combat\nsérieux !\nDepuis le temps !,55,YES
+0x03D3B7,3012,dialogue_19_19,17,Stop right there!,Voyons si tu peux\npasser !,27,YES
+0x03D3C9,3017,dialogue_19_19,14,I'm impressed!,Tu as réussi...,15,YES
+0x03D3D8,3022,dialogue_19_19,45,Master Koga comes  from a long line ofninjas!,"Je rêvais de devenir ninja, alors j'ai rejoint cette Arène.",69,YES
+0x03D406,3025,dialogue_19_19,24,What do you descendfrom?,T'es très fort !,16,
+0x03D41F,3027,dialogue_19_19,51,I shall show you   true terror as a   ninja master!,KOGA : Un gamin\nose me défier ?\nLe poison tue.\nDécouvre son art !,75,YES
+0x03D453,3035,dialogue_19_19,73,The Soulbadge lets you use Surf out-  side of battle.    Congratulations.,KOGA : Bien joué ! Prends le Badge Âme. Tu peux utiliser Surf hors combat !,84,YES
+0x03D49D,3045,dialogue_19_19,81,"Welcome to the     Safari Zone! For   $500,you can catch all the Pok@mon youwant!",Bienvenue au Parc\nSafari ! Ici vivent\ndes Pokémon rares.\nEntrée : 500 $.\nÇa te dit ?,87,YES
+0x03D4EF,3056,dialogue_19_19,11,Come again!,À la prochaine !,16,YES
+0x03D4FB,3061,dialogue_19_19,16,That'll be $500!,Ça fera 500 $.\nBonne chance !,33,YES
+0x03D50C,3066,dialogue_19_19,44,Congratulations!Youfound the Secret   House!,Tu as trouvé\nla Cabane Secrète !\nVoici ton prix !,54,YES
+0x03D539,3075,dialogue_19_19,9,Got HM03!,CS03 obtenue !,14,YES
+0x03D543,3076,dialogue_19_19,62,HM03 is Surf! Pok@-mon can carry you  across water using Surf!,CS03 : Surf !\nUn Pokémon te porte\nsur l'eau.\nElle ne s'use pas !,76,YES
+0x03D582,3088,dialogue_19_19,11,Gold Teeth!,Dent d'Or obtenue !,19,YES
+0x03D58E,3089,dialogue_19_19,33,Hif fuff hefifoo!  Heff hee fwee!,Ma Dent d'Or ?\nOù est-elle donc ?\nJe l'ai peut-être\nperdue...\nau Parc Safari ?,92,YES
+0x03D5B0,3101,dialogue_19_19,105,(Ash gave the teethto the Warden).    Thanks kid! No one could understand a word I said. Here  take this!,"Mes Dents d'Or !\nMerci ! Secret :\nsans mon dentier,\nj'avais honte\nau bureau. Voici\nta récompense !",110,YES
+0x03D61A,3124,dialogue_19_19,9,Got HM04!,CS04 obtenue !,14,YES
+0x03D624,3125,dialogue_19_19,37,Strength lets Pok@-mon move boulders!,CS04 : Force !\nBouge les rochers !,38,YES
+0x03D64A,3138,dialogue_19_19,16,I love swimming!,"Allons, ne fais pas cette tête.",30,YES
+0x03D65B,3143,dialogue_19_19,11,Belly flop!,Sors avec moi !,15,YES
+0x03D667,3144,dialogue_19_19,27,What's beyond the  horizon?,Je ne t'ai jamais vu par ici.,30,YES
+0x03D683,3145,dialogue_19_19,14,I see islands!,Tu es le meilleur Dresseur que j'aie vu !,42,YES
+0x03D692,3150,dialogue_19_19,17,Swimming's great!,Encore un regard ?\nJe te frappe !,33,YES
+0x03D6A4,3158,dialogue_19_19,16,Sunburns aren't!,Je ne recommencerai plus !,25,YES
+0x03D6B5,3159,dialogue_19_19,25,"I swam here,but I'mtired.",Ha ha ha...,11,
+0x03D6CF,3160,dialogue_19_19,16,I'm exhausted...,Ce n'est rien.,14,
+0x03D6E0,3161,dialogue_19_19,31,These waters are   treacherous!,Tu ne passeras pas.,19,
+0x03D700,3162,dialogue_19_19,14,I got a cramp!,Je plaisantais !,16,YES
+0x03D70F,3163,dialogue_19_19,29,I look at the sea  to forget.,Tu m'as vraiment énervé !,27,
+0x03D72D,5880,dialogue_19_19,4,Ooh!,Ma flamme est éteinte...,29,YES
+0x03D732,3168,dialogue_19_19,19,"Oh,I love your ride",...,3,
+0x03D746,3169,dialogue_19_19,32,Must be fun to rideyour Pok@mon!,...,3,
+0x03D767,3174,dialogue_19_19,35,I have to warm up  before swimming!,Ne te moque pas\nde moi !,27,
+0x03D78B,3175,dialogue_19_19,14,All warmed up!,Désolé...,9,
+0x03D79A,3176,dialogue_19_19,24,The water's shallowhere.,Certains Pokémon Eau ont une Défense élevée.,45,YES
+0x03D7B3,5881,dialogue_19_19,6,Spash!,Même la Défense cède devant toi...,37,YES
+0x03D7BA,3177,dialogue_19_19,16,I love floating.,Tu vas comprendre !,19,YES
+0x03D7CB,3178,dialogue_19_19,53,00I have to thank youin some way! Maybe this will do!,"PRÉSIDENT :\nMerci, mon garçon !\nTu m'as sauvé !\nJuste à temps !\nJe ne l'oublierai !\nPrends ce cadeau !",113,YES
+0x03D801,3196,dialogue_19_19,27,I hear you're good!Show me!,Toujours pas d'excuses ?,30,YES
+0x03D81D,3197,dialogue_19_19,9,I give up,Les meilleurs combattants du pays sont ici !,48,YES
+0x03D827,6655,dialogue_19_19,21,<B5A2><B5A3><B5A4>:<B0B6><B7B2><B9E7><B1D1><B4D5><B0C7>!!,"TEAM ROCKET :\nDégage, morveux !",36,YES
+0x03D83E,3205,dialogue_19_19,76,Recieved MasterballThat will catch anyPok@mon without    fail! Use it wisely,Master Ball reçue !,19,
+0x03D88B,3210,dialogue_19_19,19,Our Master's a pro!,Tu viens défier notre dojo ?,31,YES
+0x03D89F,3215,dialogue_19_19,15,Judge! 1 point!,Seul le type Psy\nnous fait peur !,35,YES
+0x03D8AF,3219,dialogue_19_19,18,Nothing scares me!,"Tu serais fort ? Alors, aucune pitié !",45,YES
+0x03D8C2,3224,dialogue_19_19,29,Only psychic power scares us!,Notre Maître ?\nLe dieu du combat !\nTu veux le défier ?\nPrépare-toi !,70,YES
+0x03D8E0,5882,dialogue_19_19,7,Hoargh!,Les pierres ?\nMême pas peur !,34,YES
+0x03D8E8,3234,dialogue_19_19,19,"Ow,Stubbed fingers!",Seul le type Psy\nnous fait peur !,35,YES
+0x03D8FC,3238,dialogue_19_19,19,Take your shoes off,"Numéro 2 du dojo,\nc'est moi !\nTu nous défies ?\nImpardonnable !\nEn garde !",86,YES
+0x03D910,3247,dialogue_19_19,34,You wait 'til you  see our master!,Attends le Maître !\nTu vas dérouiller !,38,YES
+0x03D933,3252,dialogue_19_19,44,I am the Karate    Master! Expect no  mercy!,LE GRAND MAÎTRE :\nTu le regretteras !,38,
+0x03D960,3261,dialogue_19_19,108,"Indeed I have lost!As your trophy, I  will give you a    prized Fighting    Pok@mon! Whichever one you like!",J'ai perdu...\nÉpargne l'enseigne.\nChoisis ton prix :\nKicklee ou Tygnon ?,76,
+0x03D9CD,3280,dialogue_19_19,15,Got Hitmonchan!,Tygnon reçu !,13,
+0x03D9DD,3281,dialogue_19_19,14,Got Hitmonlee!,Kicklee reçu !,14,
+0x03D9EC,3287,dialogue_19_19,76,Yo Champ! Sabrina'sPok@mon are Psychictypes.Fighting Pok@mon have no chance!,"Hé, Champion !\nLes Pokémon Psy\nde Morgane ignorent\nle type Combat !",73,
+0x03DA39,3293,dialogue_19_19,31,Sabrina's young butvery strong!,"Morgane est jeune,\nmais dirige l'Arène\nde Safrania !",51,YES
+0x03DA59,3298,dialogue_19_19,25,I lost my concentr-ation!,Safrania avait deux\nArènes. L'Arène\nvoisine a perdu...,56,YES
+0x03DA73,3313,dialogue_19_19,26,Power alone isn't  enough!,La force seule\nne suffit pas !,34,YES
+0x03DA8E,3318,dialogue_19_19,48,Sabrina wiped out  the Karate Master  next door!,Comment ai-je pu perdre ?,27,
+0x03DABF,3323,dialogue_19_19,35,Does our unseen    power scare you?,"Le pouvoir Psy, c'est une force invisible !",49,YES
+0x03DAE3,3328,dialogue_19_19,24,I never foresaw    this!,Comment est-ce possible ?,29,YES
+0x03DAFC,3333,dialogue_19_19,37,"Sabrina is younger,but I respect her.",Morgane est encore\nplus jeune que moi.,38,YES
+0x03DB22,3338,dialogue_19_19,29,The one of strongerwill wins!,"Face à Morgane,\nil faut de grands\npouvoirs Psy !",52,YES
+0x03DB40,3345,dialogue_19_19,32,We're famous for   our psychics!,Le Pokémon reflète\nle caractère\nde son Dresseur.,54,YES
+0x03DB61,3352,dialogue_19_19,19,I foresaw this loss,Hmm...\nTu as donc compris.,38,YES
+0x03DB75,3358,dialogue_19_19,24,I can read your    mind!,Tu veux voir Morgane ?,28,YES
+0x03DB8E,3359,dialogue_19_19,38,You want Sabrina's Gym badge!I see it!,Je te laisse passer.,26,
+0x03DBB5,3360,dialogue_19_19,25,Our Pok@mon shall  fight!,Oh ? Apprendre\nles pouvoirs Psy\nne te tente pas ?,55,YES
+0x03DBCF,3365,dialogue_19_19,17,I lost after all!,"Si tu ne veux pas apprendre, tant pis...",44,YES
+0x03DBE1,3367,dialogue_19_19,86,"I had a vision of  your arrival! I    dislike fighting,  but I will show youmy powers!",MORGANE :\nJ'avais prédit\nta venue.\nJe suis médium\net hais le combat.\nVois mes pouvoirs !,114,YES
+0x03DC38,3373,dialogue_19_19,74,A loss is a loss.  You have earned theMarshbadge. Please take this TM too.,MORGANE : Le Badge Marais et la CT40 sont à toi ! Vague Psy inflige de gros dégâts psychiques.,94,YES
+0x03DC83,3379,dialogue_19_19,10,Got TM 40!,Badge Marais reçu !,19,YES
+0x03DC8E,3380,dialogue_19_19,27,That TM teaches    Psybeam.,CT40 reçue !,12,
+0x03DCAA,3381,dialogue_19_19,57,All people have    Psychic power. Theyjust don't know it.,MORGANE :\nEncore toi ? Pff !,37,
+0x03DCE4,5892,dialogue_19_19,6,Yowch!,Je crois que tu as compris !,28,YES
+0x03DCEB,3387,dialogue_19_19,27,I tried diving for Pok@mon.,Hein ? J'entends mal !,24,
+0x03DD07,3392,dialogue_19_19,31,You have to fish   for Pok@mon!,"Cette fois,\nj'ai bien entendu.",37,YES
+0x03DD27,3402,dialogue_19_19,27,Seafoam's a quiet  getaway.,Déjà allé aux Îles Écume ?,26,
+0x03DD43,3407,dialogue_19_19,8,Quit it!,On raconte qu'un Pokémon légendaire vivrait là...,51,YES
+0x03DD4C,3408,dialogue_19_19,17,Wait! Be careful!,Encore toi ?,12,
+0x03DD5E,3409,dialogue_19_19,24,Watch out for Tentacool!,Tu ne veux pas sortir avec moi ?,36,YES
+0x03DD77,3418,dialogue_19_19,16,Articuno: Gyaoo!,ARTIKODIN : ...,15,
+0x03DD88,3419,dialogue_19_19,15,Can't you swim?,T'es trop mignon !,18,YES
+0x03DD98,5492,dialogue_19_19,10,Torpedoed!,Ah bon ? Dommage...,19,YES
+0x03DDA3,3420,dialogue_19_19,23,Are you on vacationtoo?,Je suis plus beau que toi !,28,YES
+0x03DDBB,3421,dialogue_19_19,16,No mercy at all!,"En fait,\nt'es le plus beau !",38,YES
+0x03DDCC,3422,dialogue_19_19,28,Check out my buff  physique!,La mer est la source de toute vie.,42,YES
+0x03DDE9,3423,dialogue_19_19,34,I should buff my   Pok@mon up too!,J'ai compris !\nTu avais raison.,35,YES
+0x03DE0C,3424,dialogue_19_19,24,I rode my Pok@mon  here!,Où vas-tu ?,11,
+0x03DE25,5409,dialogue_19_19,6,Oh no!,Va où tu veux. Ça m'est égal.,30,YES
+0x03DE2C,3429,dialogue_19_19,29,My boyfriend gave  me pearls!,Cesse de me fixer !,19,
+0x03DE4A,3430,dialogue_19_19,28,They grew inside a Cloyster!,"Vas-y, regarde tant que tu veux.",31,YES
+0x03DE67,3439,dialogue_19_19,35,I'm swimming to    Cinnabar Island!,Que veux-tu ?,13,
+0x03DE8B,3440,dialogue_19_19,19,I'm so disappointed,"Finalement, fais comme tu veux.",33,YES
+0x03DE9F,3445,dialogue_19_19,31,Cinnabar has a lab for Pok@mon.,On joue ensemble ?,18,
+0x03DEBF,3454,dialogue_19_19,31,Cinnabar is a volc-anic island!,Désolé... Je sais que tu es occupé.,36,YES
+0x03DEDF,3460,dialogue_19_19,45,"Hi,I study Pok@mon!You have a fossil  for me?",Salut ! J'étudie les fossiles rares. T'aurais un fossile pour moi ?,67,YES
+0x03DF0D,6661,raw,109,"000<BAAB><B2EB>:<B3E9><B3EA>!<B0D8><B0D8><B0C5><B6F1><B0F8><B1C2>,<B0B8><B1C2><B3F2><B3C7><B0C3><B7D7><B9CD><B0BC><B0F0><B7CD><B6F1><B0F8><B1C2>!<B0EE><BAB5><B7AB><B1C2><B0CE><B1F9><B2E5><B0BC>...<B0E7><B0F8>!<B0EE><B6CE><B0C1><B0DE><B0CE><B0EC><B2E5><B0F8>!<B2AB><B0C4><B0C5><B0EE><B0BA><B1B4><B0D7>?",Salut ! Je suis scientifique. J'étudie les fossiles de Pokémon rares. Tu en as un pour moi ?,92,
+0x03DF7B,6665,,11,<0A><B2C1><B0DB><B1BE><B2DF><B0BD>,Dommage !,9,
+0x03DF87,3465,dialogue_19_19,56,Oh! That's a Helix Fossil! It is a    fossil of Omanyte!,Fossile Nautile !\nCelui d'Amonita !\nJe le ressusciterai\navec ma machine.\nConfie-le-moi !,91,YES
+0x03DFC0,3478,dialogue_19_19,55,My Resurrection    machine will give  Omanyte new life!,Amonita revit !,15,
+0x03DFF8,3487,dialogue_19_19,12,Got Omanyte!,Amonita reçu !,14,YES
+0x03E005,3488,dialogue_19_19,56,Oh! That's a Dome  Fossil! It is a    fossil of Kabuto! ,Fossile Dôme !\nIl contient Kabuto.\nJe le ressusciterai\navec ma machine.\nConfie-le-moi !,91,YES
+0x03E03E,3501,dialogue_19_19,55,My Resurrection    machine will give  Kabuto new life! ,Ma machine va\nréanimer Kabuto !,36,
+0x03E076,3506,dialogue_19_19,11,Got Kabuto!,Kabuto reçu !,13,YES
+0x03E082,3512,dialogue_19_19,12,Who're you!?,Je me croyais seul.,19,YES
+0x03E08F,3513,dialogue_19_19,25,I don't know about a key!,J'avais tort...,15,
+0x03E0A9,3514,dialogue_19_19,29,My Mentor used to  live here.,Le volcan a détruit ce laboratoire.,34,YES
+0x03E0C7,3519,dialogue_19_19,45,He discovered a NewPok@mon and named  it Mew.,Il doit encore y avoir des Pokémon rares ici...,50,YES
+0x03E0F5,3524,dialogue_19_19,37,We used Mew's DNA  to create a clone!,Tu fais quoi ici ?,18,
+0x03E11B,3525,dialogue_19_19,35,"We named the new   Pok@mon, Mewtwo.",Visite librement.,17,
+0x03E13F,3531,dialogue_19_19,70,Mewtwo is far too  powerful.We failed to curb its vicioustendencies...,Quelle imprudence !,19,
+0x03E186,3541,dialogue_19_19,19,This place is huge!,Zut !\nTu m'as trouvé !,35,YES
+0x03E19A,3542,dialogue_19_19,32,I wonder where my  partner went.,Épargne-moi !,13,
+0x03E1BB,3548,dialogue_19_19,68,Yo Champ! Blaine isa fire Pok@mon pro!Douse his spirits  with water!,Salut !\nChampion en herbe !\nAuguste maîtrise\nles Pokémon Feu !,74,YES
+0x03E200,3562,dialogue_19_19,50,I'll tell you how  to get to Blaine ifyou beat me!,"Les Pokémon Feu,\nj'adore ça !",31,
+0x03E233,3568,dialogue_19_19,37,These computers    operate the doors.,Je brûle...,11,
+0x03E259,3573,dialogue_19_19,32,"I'll win, I have   studied hard!",Le type Feu est\nle plus fort !,33,YES
+0x03E27A,3574,dialogue_19_19,17,Waah! My Studies!,J'ai encore tant\nà étudier...,31,YES
+0x03E28C,3580,dialogue_19_19,32,I just like using  fire Pok@mon!,Tu crois pouvoir passer ?,27,
+0x03E2AD,3585,dialogue_19_19,18,Too hot to handle!,Ha ha ! Tu peux passer.,26,YES
+0x03E2C0,3586,dialogue_19_19,25,Fire's weak againstwater!,Chacun a ses goûts.\nTu les connais ?,35,YES
+0x03E2DA,3592,dialogue_19_19,15,Fire melts ice!,Comment est-ce possible...,30,YES
+0x03E2EA,3593,dialogue_19_19,29,I know why Blaine'sa trainer!,J'ai vu beaucoup\nd'Arènes. Celle-ci\nest parfaite\npour un vol !,70,YES
+0x03E308,3606,dialogue_19_19,62,A fiery bird helpedBlaine off a mount-ain when he was    lost!,Quelle chaleur !,16,
+0x03E347,3616,dialogue_19_19,30,This is my favoritegym of all!,J'étais voleur. J'ai changé de vie.,38,YES
+0x03E366,3617,dialogue_19_19,15,Yowza! Too hot!,Ha ha ! Tu peux passer.,26,YES
+0x03E376,3619,dialogue_19_19,89,I am Cinnabar Gym  Leader Blaine! My  Pok@mon will incin-erate all those whochallenge me!,AUGUSTE : Je suis le fougueux Champion de Cramois'Île ! Admire mes Pokémon Feu !,100,YES
+0x03E3D0,3625,dialogue_19_19,73,I've burnt out! Youearned the Volcano Badge!             Congratulations!,AUGUSTE : Bravo !\nLe Badge Volcan\naugmente l'Attaque\nde tes Pokémon.,72,
+0x03E41A,3646,dialogue_19_19,24,I'm in a triathlon meet!,Mon équipe de Magicarpe est imbattable !,50,YES
+0x03E433,3651,dialogue_19_19,13,Man I'm beat!,Quelle défaite\ncuisante...,30,YES
+0x03E441,3657,dialogue_19_19,37,The sea cleanses   the body and soul!,Encore un peu :\nBourg Palette est\ntout près...,50,YES
+0x03E467,3672,dialogue_19_19,27,I like mountains   as well.,Bourg Palette ?\nC'est chez toi !,35,YES
+0x03E483,3684,dialogue_19_19,34,I caught all my    Pok@mon at sea!,"Rien qu'à te voir,\ntu m'énerves !",33,
+0x03E4A6,3685,dialogue_19_19,32,Where'd you catch  your Pok@Mon?,"Même battu, je ne changerai pas d'avis !",46,YES
+0x03E4C7,3690,dialogue_19_19,32,Ahh! Feel the sun  and the wind!,Tu te crois fort ?\nJe vais te casser\nles dents !,49,YES
+0x03E4E8,3699,dialogue_19_19,25,I'm sunburnt to a  crisp!,J'avais tort...,15,
+0x03E502,3700,dialogue_19_19,28,Swimming's great   exercise!,"Salut ! Ça te dit, un combat ?",30,YES
+0x03E51F,3705,dialogue_19_19,30,It sure wears me   out though.,C'est rageant...,16,
+0x03E53E,3708,dialogue_19_19,38,Rrrroar!I'm workingmyself into a rage!,Halte !\nTu restes ici !,34,
+0x03E565,3712,dialogue_19_19,26,Grr! I'm still not worthy!,Tu vises la Ligue ?\nQuel courage !\nN'aie pas peur.,53,YES
+0x03E580,3719,dialogue_19_19,51,Karate is the      ultimate form of   martial arts!,"DOMPTEUR : Sans PV, le Boss te bat ! KARATÉKA : Ma rage est au comble !",72,YES
+0x03E5B4,3724,dialogue_19_19,45,If my Pok@mon were as good at karate  as I...,KARATÉKA : Je dois\nprogresser...\nDOMPTEUR :\nJe les comprends !,75,YES
+0x03E5E2,3736,dialogue_19_19,47,Pok@mon and I make wonderful music    together!,DOMPTEUR : Je t'en prie... KARATÉKA : Viens !,45,
+0x03E612,3742,dialogue_19_19,45,Do you know the    identity of our GymLeader?,KARATÉKA : Si j'étais fort comme le Boss ! DOMPTEUR : On s'en va !,80,YES
+0x03E640,3747,dialogue_19_19,51,Heh! You must be   running out of     steam by now!,DOMPTEUR : Bats notre Boss et file à la Ligue ! GIOVANNI : Ha ha ! Encore toi...,89,YES
+0x03E674,3748,dialogue_19_19,49,You need power to  keep up with our   Gym Leader!,SACHA :\nTu diriges\nla Team Rocket\net l'Arène ?,69,YES
+0x03E6A6,3749,dialogue_19_19,37,Your Pok@mon will  cower at my power!,ROCKET : Tu nous as mis au chômage ! Impardonnable !,53,YES
+0x03E6CC,3750,dialogue_19_19,28,Wait! I was just   careless.,SACHA :\nQui êtes-vous ?,34,YES
+0x03E6E9,3751,dialogue_19_19,72,"Viridian Gym was   closed for a long  time, but now our  Leader is back!",Tu sais au moins\nqui je suis ?\nKARATÉKA : Un vrai\nDresseur remporte\nses victoires\navec élégance !,110,YES
+0x03E732,3775,dialogue_19_19,68,You can go onto thePok@mon League onlyby defeating our   Gym Leader!,"Le Boss va être furieux... TOPDRESSEUR : Moi, je suis un génie !",75,YES
+0x03E777,6667,dialogue_19_19,31,<B1CF><B1D0><B2D4>:<B0EE><B0BF><B0CE><B0C2><B0C5><B0EE><B6AD><B0B6><B1DE><B0EC><B0FC><B0BC>,"Ici, les gamins sont interdits !",35,YES
+0x03E797,6676,dialogue_19_19,148,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B2EA><B9CE><B3B8><B3B8>:<B0B8><B0EE><B0CE><B5CD><B2AB><B0C2><B5CE><B5CF><B2D6><B0F8>,Cramois'Île n'est plus très loin.,34,
+0x03E82C,6679,dialogue_19_19,38,<0A><B2EA><B9CE><B3B8><B3B8>:<B5CE><B5CF><B2D6><B2A5><B3CA><B1F9><B0AE><B5A2><B6DC><BAD9><B2F4><B0BC><B7AB><BADA>,Le volcan entre souvent en éruption à Cramois'Île.,52,YES
+0x03E853,6690,dialogue_19_19,32,<0A><B1CF><B1D0><B2D4>:<B0B8><B0EE><BADB><B1AD><B1C0><B0AE><B0E7><B0A1><B0A2><B0BC><B1CF><B1D0>,"Ici, on étudie\nchaque jour\nles Pokémon.",50,YES
+0x03E874,6691,dialogue_19_19,43,<0A><B0B6><B1DE>:<B1C2><B0B8><B6DB><B6CF><B6DC><B2F4><B2F5><B0BC><B5AB><B1B2><B1B4><B8B4><B0C2><B5C5><B6B2><B0BC><B5AB><B1B2>!,Ce fossile trouvé\nau Mont Sélénite\nsemble précieux !,55,YES
+0x03E8A0,3787,dialogue_19_19,179,"This is my hideout!I planned to resur-rect Team Rocket   here! But, you havecaught me again! Sobe it! I'm not     holding back! You  shall face Giovannithe greatest       trainer!","GIOVANNI : Ha ha ! Tu as trouvé ma cachette. Aucune pitié ! Je suis Giovanni, le plus puissant Dresseur !",114,
+0x03E954,3797,dialogue_19_19,351,"Ha! That was truly an intense fight!  You've earned the  Earth Badge! It is proof of your      mastery as a       Pok@mon trainer!   With it, you can   enter the Pok@mon  League! Having lostI cannot face my   underlings! Team   Rocket is finished forever! I will    dedicate my life tothe study of       Pok@mon! Let us    meet again someday!Farewell!",GIOVANNI :\nJ'ai perdu. Prends\nle Badge Terre.\nTu seras un grand\nDresseur !\nJe reprends\nmon entraînement.\nJe dissous\nla Team Rocket\npour le moment.\nÀ bientôt !,201,
+0x03EAB4,3831,dialogue_19_19,220,"Jessie:Hold it runtWe can't allow TeamRocket to lose likethis!              James: You've been quite a thorn in   our side, but Team Rocket will never  be defeated!       Meowth: Meowth!    We'll show you     who's boss!",JAMES : Un mauvais tour vous attend !,37,
+0x03EB91,6700,dialogue_19_19,143,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1CF><B1D0><B2D4>:<B5A2><B0AF><B2BD><B0C2><B0AE><B7E6><B7D9><B2AC>...,Même le type Feu a ses faiblesses...,36,
+0x03EC21,6706,dialogue_19_19,36,<0A><B1CF><B1D0><B2D4>:<B5A2><B0E7><B5F7><B9DB><B5DE><B2B6><B2B7><B2B8><B3A8><B2B2><BAE8><B0AF><B0C3><B2C9>,Le Feu craint l'Eau et domine la Glace.,38,YES
+0x03EC46,3837,dialogue_19_19,182,James: I can't     believe it! Team   Rocket defeated by this brat!         Jessie: You may    have won this time!But we'll be back! Meowth: Meowth! Youhaven't heard the  last of us!,JESSIE :\nPréservons le monde\nde la dévastation !,57,
+0x03ECFD,6713,dialogue_19_19,309,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B3FC><B3FD>:<B3E5><B0FC><B0BC><B4A1><B4A2>!<B0EE><B0BA><B3CA><B3CB><B1A4><B3CC><B0BC><B9EF><B4B3><B0C2><B5F1><B1C2><B0F6><B0CE><B2D7><B1A4>...,"Futur Champion ! Même moi, j'ignore qui est le Champion à Jadielle...",70,
+0x03F033,5178,dialogue_19_19,583,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000Take care of 'em,Tu es vraiment coriace...,29,
+0x03F27B,243,dialogue_19_19,114,"Mother: Right, All boys leave home    someday, It said soon TV.             PROF.OAK, next dooris looking for you.",MAMAN : C'est vrai.\nTous les garçons\npartent un jour.\nLa télé l'a dit !\nLe Prof te cherche.\nIl est à côté.,109,
+0x03F2EE,253,dialogue_19_19,227,"Hmm? Gary? Why are you here already? Isaid for you to    come by later...Ah,whatever! Just waitthere.Look,Ash! Do you see that ball  on the table? It's called a Pok@ball. It holds a Pok@mon inside.You may haveit! Go on,take it!","PROF. CHEN : Régis ? Déjà là ? Je t'avais dit d'attendre. Sacha, cette Poké Ball contient ton Pokémon. Prends-la !",144,
+0x03F3D2,286,dialogue_19_19,83,Welcome to our     Pok@mon Center! We heal your Pok@mon  back to perfect    health!,"Bienvenue !\nAu Centre Pokémon,\nnous soignons\ntes Pokémon !",70,
+0x03F426,259,dialogue_19_19,380,"Oak:Oh right! I    have a request of  you two.Here's my  new invention, the Pok@dex.It records data on Pok@mon    you've seen or     caught.Take them   with you! To make acomplete guide on  all Pok@mon in the world...That was mydream! But, I'm tooold! I can't do it!So,I want you two  to fulfill my dreamfor me! Get moving,you two! This is a great undertaking  in Pok@mon history!","PROF. CHEN :\nSacha, Régis !\nJ'ai une mission :\nle Pokédex recense\nchaque Pokémon vu.\nIls sont à vous !",112,
+0x03F5A3,292,dialogue_19_19,81,Old Man:Ouch!      Girl:I'm sorry my  grandfather injuredhis back and can't move.,Il dort ?\nAttendons un peu.,36,
+0x03F5F5,303,dialogue_19_19,48,You have Pok@mon!  Come on! Let's     battle'em!,Je vais te montrer\nmes talents !,32,

@@ -1,0 +1,5 @@
+root	seed	frames	captures	map_hashes	battles	stagnation_resets	route_offset	exterior_reached	building_seen	building_entered	interior_seen
+../mesen/route-seeds-seed2-corrected	2	22918	208	111	0	0	2	true	false	false	false
+../mesen/route-seeds-seed0-fixed	0	22918	147	42	0	3		true	true	true	true
+../mesen/route-seeds-seed3-corrected	3	22918	80	7	0	9	0	true	false	false	false
+../mesen/route-seeds-seed1-corrected	1	22918	86	5	0	9	2	true	true	false	false

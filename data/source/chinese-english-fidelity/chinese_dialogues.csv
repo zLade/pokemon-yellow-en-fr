@@ -1,0 +1,1944 @@
+entry_index,english_offset_hex,script_line,layout,source_length,alignment_method,alignment_confidence,pointer_references,chinese_record_indexes,chinese_offsets,chinese_text,english_storage,english_text,fidelity_status,review_note
+137,0x03082C,221,dialogue_intro_17_19,106,pointer_table,high,0x03018D,175,0x03082B,"
+你好!欢迎你光临宠物精灵的世界!大家都叫我大木博士,在这世界住着被称为宠物精灵的生物!",ascii,Hello there! Welcome to the world of Pok@mon! My name is OAK! People call me the Pok@mon PROF!,pending_semantic_review,
+646,0x0331EF,5303,dialogue_19_19,27,pointer_table,high,0x033149,937,0x0333BD,"
+女孩:能来到这里不简单",ascii,Are you good enoughfor me?,pending_semantic_review,
+647,0x03320B,5377,dialogue_19_19,24,pointer_table,high,0x03314B,938,0x0333D4,"
+女孩:之后就看你的",ascii,I never wanted to lose!,pending_semantic_review,
+648,0x033224,5308,dialogue_19_19,19,pointer_table,high,0x03314D,939,0x0333E7,"
+男孩:看来你也是来挑战联盟的了",ascii,I can see your good,pending_semantic_review,
+649,0x033238,5365,dialogue_19_19,26,pointer_table,high,0x03314F,940,0x033406,"
+男孩:你有机会夺取冠军啊",ascii,"I concede, you're better.",pending_semantic_review,
+650,0x033253,5396,dialogue_19_19,25,pointer_table,high,0x033159,945,0x033485,"
+训兽师:觉悟吧",ascii,Is Victory Road tootough?,pending_semantic_review,
+651,0x03326D,5397,dialogue_19_19,10,pointer_table,high,0x03315B,946,0x033494,"
+训兽师:我已经觉悟了!",ascii,Well done!,pending_semantic_review,
+652,0x033278,5313,dialogue_19_19,23,pointer_table,high,0x03315D,947,0x0334AA,"
+魔术师:为什么要来这里?",ascii,Come on! I'll whip you!,pending_semantic_review,
+653,0x033290,5382,dialogue_19_19,14,pointer_table,high,0x03315F,948,0x0334C2,"
+魔术师:你的目标的确伟大!",ascii,I got whipped.,pending_semantic_review,
+654,0x03329F,6091,dialogue_19_19,123,pointer_table,high,0x033143,934,0x03329E,"
+小茂:怎么了?小智在这里遇见你还真是偶然啊!你也去宠物精灵联盟啊?徽章也都收集齐了,干的不错嘛!不过在去联盟之前先和我比试一场吧!",graphical_codes,"<B0B6><B1EC>:<B2D0><B1E6><B0F8>?<B0B6><B0B7><B0B8><B0EE><B0BF><B4DA><B2CD><B0C5><B2BD><B1F5><B0C2><B9E3><B2AA><B2AC>!<B0C5><B0F6><B0C7><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF><B2AC>?<B3D1><B3D2><B0F6><B1C0><B6B7><B6B8><BDE5><B0F8>,<B5A5><B0BC><B0CE><B2DC><B1DC>!<B0CE><B3D4><B0B8><B0C7><B3CE><B3CF><B3E3><B3DD><B6E0><B0C9><B1C2><B2B2><B4A3><B1D1><B3B5><B0BE>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+655,0x03331B,6099,dialogue_19_19,121,pointer_table,high,0x033145,935,0x03331B,"
+小茂:我只是一时太大意了,可恶!不过你这样的水平想称霸精灵联盟...你还是多练习一下比较好!我多管闲事了啊,那我先走了!再会了...",graphical_codes,"<0A><B0B6><B1EC>:<B1C2><B2BE><B0C2><B1D1><B0F0><B6C6><B1BE><B4A5><B0F8>,<B0DE><B5E0>!<B0CE><B3D4><B0C5><B0EE><B2DA><B0BC><B5F7><B5DC><B1D7><B1C8><BBD4><B0A1><B0A2><B3CE><B3CF>...<B0C5><B2BD><B0C2><B0C8><B2C5><B2C6><B1D1><B0F9><B2B2><B3EB><B1B4>!<B1C2><B0C8><B3A4><B5C0><B1D5><B0F8><B2AC>,<B0B9><B1C2><B6E0><B7C3><B0F8>!<B0FB><B1F9><B0F8>...",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+656,0x033395,6108,dialogue_19_19,39,pointer_table,high,0x033147,936,0x033395,"
+守卫:啊!你拿的的确是联盟徽章!请通过吧!",graphical_codes,<0A><B3DF><B3E0>:<B2AC>!<B0C5><B0C6><B0BC><B0BC><B9DB><B0C2><B3CE><B3CF><B3D1><B3D2>!<B2D8><B3DA><B3D4><B0BE>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+657,0x0333BD,5314,dialogue_19_19,37,pointer_table,high,0x033155,943,0x033455,"
+魔术师:你知道什么是魔术吗?",ascii,You're gonna take on the Elite Four?,pending_semantic_review,
+658,0x0333E3,5319,dialogue_19_19,27,pointer_table,high,0x033157,944,0x033471,"
+魔术师:不可思议...",ascii,You should have no trouble.,pending_semantic_review,
+659,0x0333FF,5320,dialogue_19_19,37,pointer_table,high,0x033151,941,0x03341F,"
+空手道:你辛苦了,不过也到此为止",ascii,This is the final test for trainers!,pending_semantic_review,
+660,0x033425,5383,dialogue_19_19,16,pointer_table,high,0x033153,942,0x03343F,"
+空手道:我竟然输了...",ascii,I need to train.,pending_semantic_review,
+661,0x033436,5366,dialogue_19_19,24,pointer_table,high,0x033161,949,0x0334DC,"
+女孩:告诉你我要结婚了!",ascii,The Elite Four is next!,pending_semantic_review,
+662,0x03344F,5451,dialogue_19_19,13,pointer_table,high,0x033163,950,0x0334F4,"
+女孩:我不想嫁人了,你做我老公好吗?",ascii,Unbelievable!,pending_semantic_review,
+663,0x03345D,5321,dialogue_19_19,33,pointer_table,high,0x033169,953,0x03353F,"
+女孩:为什么我的精灵都不强呢?",ascii,I heard about a young prodigy.,pending_semantic_review,
+664,0x03347F,5349,dialogue_19_19,31,pointer_table,high,0x03316B,954,0x03355D,"
+女孩:是因为我没有用爱心吧...",ascii,You really beat Team Rocket?,pending_semantic_review,
+665,0x03349F,5322,dialogue_19_19,29,pointer_table,high,0x033165,951,0x033517,"
+男孩:我不会让你再前进的",ascii,Only the chosen canpass here!,pending_semantic_review,
+666,0x0334BD,5384,dialogue_19_19,19,pointer_table,high,0x033167,952,0x033530,"
+男孩:是天意啊",ascii,I don't believe it!,pending_semantic_review,
+667,0x0334D1,3853,dialogue_19_19,105,pointer_table,high,0x03316D,955,0x03357B,"
+裁判:未来的冠军,来到这里真不容易不过挑战四大天王的决胜规则就是将四人一一打败如果输了就从第一人从新打起!加油了!",ascii,"From here on, you face the Elite Fourone by one! If you win, a door opens to the next trainerGood luck!",pending_semantic_review,
+668,0x03353B,3863,dialogue_19_19,71,pointer_table,high,0x03316F,956,0x0335EB,"
+女孩:现在就开始四大天王的对战!朝最强努力吧!",ascii,"Here at the Pok@monLeague, you have toface the Elite Fourin succession.",pending_semantic_review,
+669,0x033583,3872,dialogue_19_19,128,pointer_table,high,0x033171,957,0x033618,"
+加纳:欢迎来到宠物精灵联盟!我是冰系四天王加纳!还没碰过害怕的东西,让我生气了就让你的精灵动弹不得!哈哈觉悟吧!",ascii,"Welcome,I'm Loreleiof the Elite Four! Your Pok@mon will be at my mercy whenthey're frozen solid! Hahaha! Are you ready?",pending_semantic_review,
+670,0x033604,3883,dialogue_19_19,89,pointer_table,high,0x033173,958,0x033684,"
+加纳:你到底是什么人物?...好吧,我输了就朝下一个房间前进吧",ascii,You're better than I thought! Go on ahead!This was justa taste of Pok@mon League power!,pending_semantic_review,
+671,0x03365E,3893,dialogue_19_19,133,pointer_table,high,0x033175,959,0x0336BE,"
+西巴:我是地系四天王西巴!不管是精灵或人只要战斗磨练都能变的很强,就靠这中磨练与我的精灵工生存!你是小智吧,来尝尝我们的超级力量吧!",ascii,"I am Bruno of the Elite Four! Throughrigorous training, people and Pok@mon can become strongerAsh! We will grind you with our power!",pending_semantic_review,
+672,0x0336E4,3902,dialogue_19_19,48,pointer_table,high,0x033177,960,0x03373E,"
+西巴:到底是怎么回事?我竟然输了...既然输了,我无话可说,你就前进吧!",ascii,My job is done! Go face your next challenge!,pending_semantic_review,
+673,0x033715,3910,dialogue_19_19,254,pointer_table,high,0x033179,961,0x033780,"
+菊子:我是鬼系四天王菊子,听说真新镇的大木博士相当疼你!大木博士以前是相当强的男人!现在看不出来了,光只是做宠物精灵图鉴是不够的!精灵是要用来战斗的!让我来教你真正的战斗吧!",ascii,"I am Agatha of the Elite Four! Oak's taken a lot of int-erest in you,child!That old duff was once tough and han-dsome! Now he just wants to fiddle with his Pok@dex, He's wrong! Pok@monare for fighting! Ash! I'll show you how a real trainer fights!",pending_semantic_review,
+674,0x033814,3926,dialogue_19_19,76,pointer_table,high,0x03317B,962,0x033828,"
+菊子:真了不起啊,是你胜了,大木博士真有眼光,我心服口服你就朝下一个房间去吧!",ascii,"I see what he sees in you now! I have nothing else to sayRun along now,child",pending_semantic_review,
+675,0x033861,3935,dialogue_19_19,146,pointer_table,high,0x03317D,963,0x033873,"
+瓦它诺:你是小智?我是龙系四天王菊子瓦它诺,你应该知道龙是神圣传说中的生物,很难抓但培育的好将是天下第一!一般的攻击对龙系是没用的!开始吧,我会让你夹着尾巴逃跑的!",ascii,I heard about you Ilead the Elite FourI am Lance the dra-gon tamer! Dragon'spowers are superiorReady to lose? YourLeague challenge ends with me!,pending_semantic_review,
+676,0x0338F4,3950,dialogue_19_19,180,pointer_table,high,0x03317F,964,0x033911,"
+瓦它诺:虽然难过但你的技术一流!我想说小智从今开始你是宠物精灵联盟的冠军!但你必须再与一人战斗不可!那位训练家就是...小茂!他比你早战胜我们四天王,所以你们要决出真正的冠军,去吧小智!",ascii,"I can't believe my dragons lost! You are the League Cha-mpion!...or,you would have been. Another trainer named Gary beat theElite Four before you! He is the realchampion!",pending_semantic_review,
+677,0x0339A9,3962,dialogue_19_19,158,pointer_table,high,0x033181,965,0x0339C2,"
+小茂:小智啊?你也来了?既然做为对手的你这么弱也没什么好竞争的!我在收集图鉴的同时也找到一些完美的精灵!告诉你吧,我就是世界最强的精灵训练师!!",ascii,"Hey Ash! I looked all over for power-ful Pokemon and assembled a strong team, now I'm the League Champion! I'm the strongest trainer in the world!",pending_semantic_review,
+678,0x033A48,3975,dialogue_19_19,310,pointer_table,high,0x033185,967,0x033AE9,"
+大木博士:堂堂正正的赢了!恭喜你小智,从你刚开始得到比卡丘开始到现在你真的变强了,应该说你长大了!小茂...真是可惜!听说你战胜四天王而飞奔到这里,但看到你到最后输了!你知道为什么会输吗?因为你忘了给予精灵们信任和感情!所以你再怎么努力也不可能站在高峰的!",ascii,"So,you won! Congra-tulations! You've grown so much sinceyou first left withPikachu, Ash! I'm disappointed Gary, I came when I heardyou became League Champion.But you already lost, do you understand why?You've forgotten totreat your Pok@mon with trust and lovewithout them,you'llnever become champ again.",pending_semantic_review,
+679,0x033B7F,4004,dialogue_19_19,126,pointer_table,high,0x033187,968,0x033BDD,"
+大木博士:小智,你能制霸宠物精灵联盟!不是你一个人的力量!是你与精灵之间巧妙的感情!小智你跟我来!",ascii,"Ash, you understandyour victory was not your own doing!The bond you share with your Pok@mon is marvelous! Come with me,Ash!",pending_semantic_review,
+680,0x033BFE,4016,dialogue_19_19,178,pointer_table,high,0x033189,969,0x033C3B,"
+大木博士:小智,你经过激烈的战斗!而如今成为联盟冠军!在此记录下小智的名字与精灵的名字吧!和我一起回家吧,你妈妈一定很想你",ascii,"Congratulations AshThis is the Pok@monHall of Fame! The League Champions and their Pok@mon are honored here! Congratulations,Ashyou and your Pok@-mon are Hall of Famers!",pending_semantic_review,
+681,0x033CB1,4028,dialogue_19_19,62,pointer_table,high,0x03318B,970,0x033CB1,"
+妈妈:听说华蓝市附近有个山洞发生异常,连精灵联盟的四天王加纳都去调查了...",ascii,"Ash,Lorelei was looking for you,shewent to Cerulean cave.",pending_semantic_review,
+682,0x033CF0,6114,dialogue_19_19,105,pointer_table,high,0x03318D,971,0x033CFA,"
+裁判:真是抱歉,四天王的加纳因为不在所以现在联盟暂停训练家挑战...加纳好像去华蓝市调查异变去了...",graphical_codes,"00000000000<B3FC><B3FD>:<B1F5><B0C2><B9FA><B9FB>,<B1E1><B1AD><B4F7><B0BC><B2FC><BDAB><B0E9><B0EA><B0CE><B0B8><B0AD><B0DF><B2F5><B0B8><B3CE><B3CF><B0EF><B3DB><B2DE><B2C5><B1BF><B3FB><B0F2>...<B2FC><BDAB><B1B4><B1B5><B0C7><B4CF><B4D0><B4D1><BDF6><BDAA><BCEC><B3D6><B0C7><B0F8>...",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+683,0x033D5B,5856,dialogue_19_19,11,pointer_table,high,0x03318F,972,0x033D5A,"
+超梦:......",ascii,MewTwo:....,pending_semantic_review,
+684,0x033D67,4036,dialogue_19_19,247,pointer_table,high,0x033191,973,0x033D67,"
+加纳:原来发生异变的原因就是这只超梦引起的.",ascii,"There you are Ash! It seems TeamRockethas appeared again,they've gone to Indigo Plateau. Oh!And I have some- thing for you as well, here's a passto go to Navel RockYou can get there by the S.S. Anne. I'll see you at Indigo Plateau Ash.",pending_semantic_review,
+685,0x033E5F,4047,dialogue_19_19,74,pointer_table,high,0x03319B,978,0x033EA4,"
+船员:那个是梦幻船票??那么请进!!欢迎再次来乘做铁达尼号!",ascii,"Hello, May I see your pass for NavelRock? ...Thank you sir!",pending_semantic_review,
+686,0x033EAA,4052,dialogue_19_19,63,pointer_table,high,0x03319D,979,0x033EDC,"
+凤凰:......",ascii,Ho-oh: Kwee!,pending_semantic_review,
+687,0x033EEA,4053,dialogue_19_19,13,pointer_table,high,0x03319F,980,0x033EE9,"
+路基亚:......",ascii,Lugia: Roar!!,pending_semantic_review,
+688,0x033EF8,4054,dialogue_19_19,76,pointer_table,high,0x0331A1,981,0x033EF8,"
+船员:怎么样,是场神奇的旅行吧.现在精灵联盟因为四天王的加纳又回来了,所以又开始接受新的冠军挑战了!",ascii,"Welcome to Navel Rock! If you'd liketo leave, just board the S.S.Anne.",pending_semantic_review,
+689,0x033F45,6119,dialogue_19_19,127,pointer_table,high,0x0331A3,982,0x033F59,"
+加纳:欢迎来到宠物精灵联盟!我是冰系四天王加纳!还没碰过害怕的东西,让我生气了就让你的精灵动弹不得!哈哈觉悟吧!",graphical_codes,"000000000000000000000<B2FC><BDAB>:<B0D2><B0D3><B0FC><B0DB><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B1C2><B0C2><BAE8><B0AF><B1E1><B1AD><B4F7><B2FC><BDAB>!<B2BD><B2B6><B8A4><B3D4><B3EE><B8AC><B0BC><B0D5><B0D6>,<B2CB><B1C2><B1C9><B4AA><B0F8><B2AB><B2CB><B0C5><B0BC><B0A1><B0A2><B0B2><BBF7><B0CE><B2C1>!<B3BC><B3BC><B5EB><BAB8><B0BE>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+690,0x033FC5,6127,dialogue_19_19,57,pointer_table,high,0x0331A5,983,0x033FC5,"
+加纳:你到底是什么人物?...好吧,我输了就朝下一个房间前进吧",graphical_codes,"<0A><B2FC><BDAB>:<B0C5><B0DB><B3D5><B0C2><B2AF><B1E6><B2B5><B0C1>?...<B1B4><B0BE>,<B1C2><B3F1><B0F8><B2AB><B3FE><B0F9><B1D1><B0BA><B9EA><BAF1><B3DD><B3DE><B0BE>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+691,0x033FFF,6133,dialogue_19_19,127,pointer_table,high,0x0331A7,984,0x033FFF,"
+西巴:我是地系四天王西巴!不管是精灵或人只要战斗磨练都能变的很强,就靠这中磨练与我的精灵工生存!你是小智吧,来尝尝我们的超级力量吧!",graphical_codes,"<0A><B0D6><BBC0>:<B1C2><B0C2><B3BB><B0AF><B1E1><B1AD><B4F7><B0D6><BBC0>!<B0CE><B3A4><B0C2><B0A1><B0A2><B1CB><B2B5><B2BE><B0C3><B0F2><B4B7><BDEC><B2C5><B1C0><B0EC><B3D6><B0BC><B3F7><B2C9>,<B2AB><BAC4><B0EE><B0DC><BDEC><B2C5><B2A1><B1C2><B0BC><B0A1><B0A2><B3B2><B1C9><B0A5>!<B0C5><B0C2><B0B6><B0B7><B0BE>,<B0FC><B7EA><B7EA><B1C2><B2EF><B0BC><B4E4><B8B2><B0E3><B3EC><B0BE>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+692,0x03407F,6141,dialogue_19_19,65,pointer_table,high,0x0331A9,985,0x03407F,"
+西巴:到底是怎么回事?我竟然输了...既然输了,我无话可说,你就前进吧!",graphical_codes,"<0A><B0D6><BBC0>:<B0DB><B3D5><B0C2><B2D0><B1E6><B2A3><B1D5>?<B1C2><B7D5><B2AA><B3F1><B0F8>...<B2A9><B2AA><B3F1><B0F8>,<B1C2><B3E6><B1EF><B0DE><B1E7>,<B0C5><B2AB><B3DD><B3DE><B0BE>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+693,0x0340C1,6146,dialogue_19_19,167,pointer_table,high,0x0331AB,986,0x0340C1,"
+菊子:我是鬼系四天王菊子,听说真新镇的大木博士相当疼你!大木博士以前是相当强的男人!现在看不出来了,光只是做宠物精灵图鉴是不够的!精灵是要用来战斗的!让我来教你真正的战斗吧!",graphical_codes,"<0A><BADE><B1DF>:<B1C2><B0C2><B7B2><B0AF><B1E1><B1AD><B4F7><BADE><B1DF>,<B1F1><B1E7><B1F5><B2D5><B2D6><B0BC><B1BE><B1C3><B1C4><B1C5><B0D0><B2C4><B5F2><B0C5>!<B1BE><B1C3><B1C4><B1C5><B0DF><B3DD><B0C2><B0D0><B2C4><B2C9><B0BC><B1DD><B2B5>!<B2F5><B0B8><B0FD><B0CE><B0A4><B0FC><B0F8>,<B0E4><B2BE><B0C2><B2B4><B0C0><B0C1><B0A1><B0A2><B2F1><B2F2><B0C2><B0CE><B0F1><B0BC>!<B0A1><B0A2><B0C2><B0C3><B1A8><B0FC><B0F2><B4B7><B0BC>!<B2CB><B1C2><B0FC><B7DB><B0C5><B1F5><B2BA><B0BC><B0F2><B4B7><B0BE>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+694,0x034169,6159,dialogue_19_19,157,pointer_table,high,0x0331AD,987,0x034169,"
+瓦它诺:你是小智?我是龙系四天王菊子瓦它诺,你应该知道龙是神圣传说中的生物,很难抓但培育的好将是天下第一!一般的攻击对龙系是没用的!开始吧,我会让你夹着尾巴逃跑的!",graphical_codes,"<0A><BAF4><B6A6><BBCF>:<B0C5><B0C2><B0B6><B0B7>?<B1C2><B0C2><B6D9><B0AF><B1E1><B1AD><B4F7><BADE><B1DF><BAF4><B6A6><BBCF>,<B0C5><B6B9><B3B3><B2D7><B1A4><B6D9><B0C2><B6DD><BCB3><B6F2><B1E7><B0DC><B0BC><B1C9><B0C1>,<B3F7><B4A7><B2C0><B3A8><B6A3><B6D8><B0BC><B1B4><B1D2><B0C2><B1AD><B0F9><B6A7><B1D1>!<B1D1><BAFD><B0BC><B4AB><B4AC><B0E7><B6D9><B0AF><B0C2><B2B6><B1A8><B0BC>!<B1D9><B1DA><B0BE>,<B1C2><B1F9><B2CB><B0C5><BCBB><B1C7><BBD0><BBC0><B3EF><B8B9><B0BC>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+695,0x034207,6171,dialogue_19_19,118,pointer_table,high,0x0331AF,988,0x034207,"
+瓦它诺:虽然难过但你的技术一流!不过要想成为真正的冠军就应该进入冠军的房间打败里面的训练师!!他比你早一步打败我们四天王!",graphical_codes,<0A><BAF4><B6A6><BBCF>:<B4A4><B2AA><B4A7><B3D4><B3A8><B0C5><B0BC><B4BF><B1AE><B1D1><B9D7>!<B0CE><B3D4><B0C3><B1D7><B2EA><B0EA><B1F5><B2BA><B0BC><B4A1><B4A2><B2AB><B6B9><B3B3><B3DE><B5BB><B4A1><B4A2><B0BC><B9EA><BAF1><B0CF><B6A2><B0BF><B4A8><B0BC><B2DE><B2C5><B2DF>!!<B1F0><B2B2><B0C5><B2BB><B1D1><B7D4><B0CF><B6A2><B1C2><B2EF><B1E1><B1AD><B4F7>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+696,0x03427E,4068,dialogue_19_19,368,pointer_table,high,0x0331B1,989,0x03427E,"
+小智:你们就是新的冠军?啊?难道你们是...",ascii,"Jesse: Long time nosee brat! Our boss has disbanded Team Rocket because of you! James: We plan to take over Indigo Plateau and make sure Team Rocket takes its place as true Pok@mon mast- ers. We can't allowa dreadful little twerp such as your-self stand in our way! Meowth:Hehe, you don't stand a chance against Meowth!",pending_semantic_review,
+697,0x0343EF,4074,dialogue_19_19,140,containing_offset,medium,,1001,0x0343BF,"
+小次郎:我们现在跟了新的老大,已经不是从前的我们了!!",ascii,"James: Again! We lost again to this twerp! Jesse&James: Looks like Team Rocket's blasting off again!Meowth:Hey,Wait forMeowth!",pending_semantic_review,
+698,0x03447C,6181,dialogue_19_19,241,pointer_table,high,0x0331D3,1006,0x0344B8,"
+大木博士:你又堂堂正正的赢了!恭喜你小智,从你刚开始得到比卡丘开始到现在你真的变强了,应该说你长大了!小智,你能制霸宠物精灵联盟!不是你一个人的力量!是你与精灵之间巧妙的感情!小智你跟我来!",graphical_codes,"0000000000000000000000000000000000000000000000000000000000000<B1BE><B1C3><B1C4><B1C5>:<B0C5><B5B0><BDF2><BDF2><B2BA><B2BA><B0BC><B3F5><B0F8>!<BBA6><B6EB><B0C5><B0B6><B0B7>,<B1FA><B0C5><B2BF><B1D9><B1DA><B2C1><B0DB><B2B2><B2C2><B2C3><B1D9><B1DA><B0DB><B2F5><B0B8><B0C5><B1F5><B0BC><B3D6><B2C9><B0F8>,<B6B9><B3B3><B1E7><B0C5><B2EB><B1BE><B0F8>!<B0B6><B0B7>,<B0C5><B0EC><B2E4><BBD4><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B0CE><B0C2><B0C5><B1D1><B0BA><B2B5><B0BC><B0E3><B3EC>!<B0C2><B0C5><B2A1><B0A1><B0A2><B3E3><BAF1><BDF5><B7FC><B0BC><B5EA><B7AB>!<B0B6><B0B7><B0C5><B2A2><B1C2><B0FC>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+699,0x03456E,6191,dialogue_19_19,117,pointer_table,high,0x0331D5,1007,0x03456E,"
+大木博士:小智,你经过激烈的战斗!而如今成为联盟冠军!在此记录下小智的名字与精灵的名字吧!和我一起回家吧,你妈妈一定很想你",graphical_codes,"<0A><B1BE><B1C3><B1C4><B1C5>:<B0B6><B0B7>,<B0C5><B2A5><B3D4><BAB4><BBC8><B0BC><B0F2><B4B7>!<B1CE><B1FE><B6C9><B2EA><B0EA><B3CE><B3CF><B4A1><B4A2>!<B0B8><BDE7><B2F8><B2F9><B0F9><B0B6><B0B7><B0BC><B3B1><B9B1><B2A1><B0A1><B0A2><B0BC><B3B1><B9B1><B0BE>!<B0C9><B1C2><B1D1><B0E8><B2A3><B1BF><B0BE>,<B0C5><B1DB><B1DB><B1D1><B2B1><B3F7><B1D7><B0C5>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+700,0x0345E4,6200,dialogue_19_19,113,pointer_table,high,0x0331D7,1008,0x0345E4,"
+妈妈:我听说你要去彩虹市的南晶科技开发部挑战名叫卡美优的训练师!听说他的精灵至今还没有被人打败过,你千万要小心啊...",graphical_codes,"<0A><B1DB><B1DB>:<B1C2><B1F1><B1E7><B0C5><B0C3><B0C7><B6CA><B8FD><B4D1><B0BC><B0A7><B0A8><BDE0><B4BF><B1D9><B2F4><B6C1><B3FB><B0F2><B3B1><B1C1><B2C2><B6A8><B8EE><B0BC><B2DE><B2C5><B2DF>!<B1F1><B1E7><B1F0><B0BC><B0A1><B0A2><BDFA><B6C9><B2BD><B2B6><B0AE><B1B6><B2B5><B0CF><B6A2><B3D4>,<B0C5><B8F9><B4B1><B0C3><B0B6><B0DD><B2AC>...",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+702,0x0346A1,4084,dialogue_19_19,151,pointer_table,high,0x0331DB,1010,0x0346A1,"
+卡美优:不错,你的实力在这个石英地区已经无人能敌了,但别忘了人外有人天外有天啊,在这个世界上还存在别的大陆...有机会的话一定要去宝石大陆看看,那里有这里所没有的精灵!!!那么你的精灵图鉴如果收集齐了的话再来找我吧!",ascii,"You're amazing! It seems you've earnedthe respect of the Legendary Pok@mon! If you can find allthe Pok@mon in Kanto, return and speak to me again!",pending_semantic_review,
+703,0x034739,4100,dialogue_19_19,104,pointer_table,high,0x0331DD,1011,0x03476F,"
+卡美优:有机会的话一定要去宝石大陆看看,那里有这里所没有的精灵!!!那么你的精灵图鉴如果收集齐了的话再来找我吧!",ascii,"You are a true Pok@maniac! You have earned this Pok@- mon's respect, it would like to come with you.",pending_semantic_review,
+704,0x0347A2,4110,dialogue_19_19,26,pointer_table,high,0x0331DF,1012,0x0347DB,"
+卡美优:你已经成功了收集石英地区所有的精灵,真了不起!好吧这只梦幻就送给你吧!恭喜你完成了精灵图鉴!!",ascii,Please take care of Mew!,pending_semantic_review,
+705,0x0347BD,4115,dialogue_19_19,13,pointer_table,high,0x0331E1,1013,0x03483D,"
+得到梦幻",ascii,Recieved Mew!,pending_semantic_review,
+706,0x0347CB,6206,dialogue_19_19,149,pointer_table,high,0x0331E3,1014,0x034847,"
+妈妈:你完成精灵图鉴了吗?",graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1DB><B1DB>:<B0C5><B3A6><B2EA><B0A1><B0A2><B2F1><B2F2><B0F8><B0D7>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+707,0x034862,4116,dialogue_19_19,16,pointer_table,high,0x0331E5,1015,0x034861,"
+裁判:你真是好样的!",ascii,Great job Champ!,pending_semantic_review,
+708,0x034873,4117,dialogue_19_19,19,pointer_table,high,0x0331E9,1017,0x034883,"
+卡美优:我认输!这样总行了吧!",ascii,Farewell traveller!,pending_semantic_review,
+709,0x034887,4118,dialogue_19_19,45,pointer_table,high,0x0331EB,1018,0x0348A0,"
+蓓蓓:你真的是很棒耶!",ascii,Take care of Eevee!,pending_semantic_review,
+710,0x0348B5,4119,dialogue_19_19,37,pointer_table,high,0x0331ED,1019,0x0348B6,"
+小李:再骚扰的话,本大爷要报警了...!",ascii,Your Pok@mon can fly you anywhere.,pending_semantic_review,
+711,0x034927,4130,dialogue_19_19,6,unaligned,low,,,,,graphical_codes,<B2C1><B0DB><B3E6>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+712,0x03492F,4131,dialogue_19_19,11,pointer_table,high,0x0348DF,1020,0x03492E,"
+得到精灵球",ascii,A Pok@ball!,pending_semantic_review,
+713,0x03493B,4132,dialogue_19_19,13,pointer_table,high,0x0348E1,1021,0x03493A,"
+得到超级球",ascii,A Great Ball!,pending_semantic_review,
+714,0x034949,4133,dialogue_19_19,9,pointer_table,high,0x0348E3,1022,0x034946,"
+得到超力球",ascii,UltraBall,pending_semantic_review,
+715,0x034953,6211,dialogue_19_19,10,pointer_table,high,0x0348E5,1023,0x034952,"
+得到大师球",graphical_codes,<B2C1><B0DB><B1BE><B2DF><B0BD>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+716,0x03495F,4134,dialogue_19_19,9,pointer_table,high,0x0348E7,1024,0x03495E,"
+得到伤药",ascii,A Potion!,pending_semantic_review,
+717,0x034969,5855,dialogue_19_19,9,pointer_table,high,0x0348E9,1025,0x034968,"
+得到好伤药",ascii,S.Potion!,pending_semantic_review,
+718,0x034973,4135,dialogue_19_19,13,pointer_table,high,0x0348EB,1026,0x034974,"
+得到超级伤药",ascii,A H.Potion!,pending_semantic_review,
+719,0x034981,6212,dialogue_19_19,14,pointer_table,high,0x0348ED,1027,0x034982,"
+得到最大伤药",graphical_codes,00<B2C1><B0DB><B3F2><B1BE><B9C7><BBB9>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+720,0x034990,4136,dialogue_19_19,12,pointer_table,high,0x0348EF,1028,0x034990,"
+得到解毒药",ascii,An Antidote!,pending_semantic_review,
+721,0x03499D,4137,dialogue_19_19,21,pointer_table,high,0x0348F1 0x0348F3,1029 1030,0x03499C 0x0349A8,"
+得到解麻药
+---
+
+得到睡醒药",ascii,A S.Heal!,pending_semantic_review,
+722,0x0349B3,5448,dialogue_19_19,11,pointer_table,high,0x0348F5,1031,0x0349B4,"
+得到冰冻药",ascii,Ice Heal!,pending_semantic_review,
+723,0x0349BF,6213,dialogue_19_19,12,pointer_table,high,0x0348F7,1032,0x0349C0,"
+得到烧伤药",graphical_codes,00<B2C1><B0DB><BAE7><B9C7><BBB9>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+724,0x0349CC,4138,dialogue_19_19,13,pointer_table,high,0x0348F9,1033,0x0349CC,"
+得到万能恢复",ascii,A Full Heal!,pending_semantic_review,
+725,0x0349DA,4139,dialogue_19_19,10,pointer_table,high,0x0348FB,1034,0x0349DA,"
+得到精神药",ascii,A Revive!,pending_semantic_review,
+726,0x0349E5,6214,dialogue_19_19,12,pointer_table,high,0x0348FD,1035,0x0349E6,"
+得到PP提升",graphical_codes,00<B2C1><B0DB>PP<B4C7><B4C8>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+727,0x0349F2,6215,dialogue_19_19,11,pointer_table,high,0x0348FF,1036,0x0349F2,"
+得到PP最大",graphical_codes,<0A><B2C1><B0DB>PP<B3F2><B1BE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+728,0x0349FF,4140,dialogue_19_19,13,pointer_table,high,0x034901,1037,0x0349FE,"
+得到神奇糖果",ascii,A Rare Candy!,pending_semantic_review,
+729,0x034A0D,4141,dialogue_19_19,11,pointer_table,high,0x034903,1038,0x034A0C,"
+得到火之石",ascii,Fire Stone!,pending_semantic_review,
+730,0x034A19,4142,dialogue_19_19,11,pointer_table,high,0x034905,1039,0x034A18,"
+得到水之石",ascii,Water Stone,pending_semantic_review,
+731,0x034A25,4143,dialogue_19_19,11,pointer_table,high,0x034907,1040,0x034A24,"
+得到雷之石",ascii,Thun.Stone!,pending_semantic_review,
+732,0x034A31,4144,dialogue_19_19,11,pointer_table,high,0x034909,1041,0x034A30,"
+得到叶之石",ascii,Leaf Stone!,pending_semantic_review,
+733,0x034A3D,4145,dialogue_19_19,11,pointer_table,high,0x03490B,1042,0x034A3C,"
+得到月之石",ascii,Moon Stone!,pending_semantic_review,
+734,0x034A49,6216,dialogue_19_19,8,pointer_table,high,0x03490D,1043,0x034A48,"
+得到包裹",graphical_codes,<B2C1><B0DB><B2E0><B2E1>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+735,0x034A52,6218,dialogue_19_19,13,pointer_table,high,0x03490F,1044,0x034A52,"
+得到精灵图鉴",graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B2F1><B2F2>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+736,0x034A60,6219,dialogue_19_19,9,pointer_table,high,0x034911,1045,0x034A60,"
+得到地图",graphical_codes,<0A><B2C1><B0DB><B3BB><B2F1>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+737,0x034A6A,6220,dialogue_19_19,13,pointer_table,high,0x034913,1046,0x034A6A,"
+得到菊石化石",graphical_codes,<0A><B2C1><B0DB><BADE><B1B2><B5AB><B1B2>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+738,0x034A78,6222,dialogue_19_19,13,pointer_table,high,0x034915,1047,0x034A78,"
+得到盔甲化石",graphical_codes,<0A><B2C1><B0DB><BADF><BBBE><B5AB><B1B2>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+739,0x034A86,6223,dialogue_19_19,9,pointer_table,high,0x034917,1048,0x034A86,"
+得到船票",graphical_codes,<0A><B2C1><B0DB><B6F6><B6F7>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+740,0x034A90,6224,dialogue_19_19,11,pointer_table,high,0x034919,1049,0x034A90,"
+得到矿泉水",graphical_codes,<0A><B2C1><B0DB><B8E9><B8EA><B5F7>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+741,0x034A9C,6225,dialogue_19_19,13,pointer_table,high,0x03491B,1050,0x034A9C,"
+得到精灵眼镜",graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B6EE><B8D1>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+742,0x034AAA,6226,dialogue_19_19,11,pointer_table,high,0x03491D,1051,0x034AAA,"
+得到精灵笛",graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B8DF>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+743,0x034AB6,6227,dialogue_19_19,9,pointer_table,high,0x03491F,1052,0x034AB6,"
+得到金牙",graphical_codes,<0A><B2C1><B0DB><B7BB><B9F9>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+744,0x034AC0,6228,dialogue_19_19,13,pointer_table,high,0x034921,1053,0x034AC0,"
+得到梦幻船票",graphical_codes,<0A><B2C1><B0DB><B1D6><B9ED><B6F6><B6F7>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+745,0x034ACE,6229,dialogue_19_19,11,pointer_table,high,0x034923,1054,0x034ACE,"
+得到居合斩",graphical_codes,<0A><B2C1><B0DB><B1A9><B1AA><B1AB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+746,0x034ADA,6230,dialogue_19_19,11,pointer_table,high,0x034925,1055,0x034ADA,"
+得到飞天术",graphical_codes,<0A><B2C1><B0DB><B1AC><B1AD><B1AE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+747,0x034C03,6231,dialogue_19_19,5,unaligned,low,,,,,graphical_codes,<B0D2><B0D3>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+748,0x034C09,6232,dialogue_19_19,35,pointer_table,high,0x034AEB,1056,0x034C09,"
+欢迎!到精灵中心可以恢复精灵的体力.",graphical_codes,<0A><B0D2><B0D3>!<B0DB><B0A1><B0A2><B0DC><B0DD><B0DE><B0DF><B0E0><B0E1><B0A1><B0A2><B0BC><B0E2><B0E3>.,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+749,0x034C2D,6238,dialogue_19_19,29,pointer_table,high,0x034AED,1057,0x034C2D,"
+您的精灵都精神了!!欢迎光临!!",graphical_codes,<0A><B7C5><B0BC><B0A1><B0A2><B1C0><B0A1><B6DD><B0F8>!!<B0D2><B0D3><B0E4><B0E5>!!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+750,0x034C4B,6244,dialogue_19_19,41,pointer_table,high,0x034AEF,1058,0x034C4B,"
+对不起,因为机能所限这里暂时不能够对战...",graphical_codes,"<0A><B0E7><B0CE><B0E8>,<B0E9><B0EA><B0EB><B0EC><B0AD><B0ED><B0EE><B0BF><B0EF><B0F0><B0CE><B0EC><B0F1><B0E7><B0F2>...",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+751,0x034C75,6249,dialogue_19_19,32,pointer_table,high,0x034AF1,1059,0x034C75,"
+交换机器也坏了...下次再来看看吧",graphical_codes,<0A><B0F3><B0F4><B0EB><B0F5><B0F6><B0F7><B0F8>...<B0F9><B0FA><B0FB><B0FC><B0FD><B0FD><B0BE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+752,0x034C96,6254,dialogue_19_19,15,pointer_table,high,0x034AF3,1060,0x034C96,"
+欢迎!买东西吗?",graphical_codes,<0A><B0D2><B0D3>!<B0D4><B0D5><B0D6><B0D7>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+753,0x034CA6,6256,dialogue_19_19,11,pointer_table,high,0x034AF5,1061,0x034CA6,"
+谢谢惠顾!!",graphical_codes,<0A><B0D8><B0D8><B0D9><B0DA>!!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+754,0x034CB3,5186,dialogue_19_19,84,pointer_table,high,0x034AF7,1062,0x034CB2,"
+我也在养育精灵!变强的话就不会让人欺负",ascii,Technology's great!You can now store and recall items and Pok@mon as data via PC!,pending_semantic_review,
+755,0x034D08,5200,dialogue_19_19,67,pointer_table,high,0x034B01,1067,0x034D55,"
+需要买抓精灵的精灵球时请到商店!",ascii,See those ledges? It's a bit scary but you can jump from them.,pending_semantic_review,
+756,0x034D3A,5211,dialogue_19_19,17,pointer_table,high,0x034AFF,1066,0x034D39,"
+精灵好好培养的话会很亲近的",ascii,jump from them.,pending_semantic_review,
+757,0x034D4C,5224,dialogue_19_19,85,pointer_table,high,0x034B03,1068,0x034D76,"
+在空中飞行有点害怕...但一下就能回到真新镇",ascii,"Hi! I work at the Pok@Mart. It's a convenient shop,youshould come and visit us.",pending_semantic_review,
+758,0x034DA2,5354,dialogue_19_19,66,pointer_table,high,0x034B07,1070,0x034DBD,"
+虫属性的精灵有两种类型,绿毛虫没有毒,独角虫有毒",ascii,"Using Pok@balls,youcan carry and use Pok@mon any time, anywhere!",pending_semantic_review,
+759,0x034DE5,5240,dialogue_19_19,56,pointer_table,high,0x034B09,1071,0x034DED,"
+我从没见过这家道场的首领",ascii,"This GYM is always closed, I wonder who the Leader is?",pending_semantic_review,
+760,0x034E1E,5367,dialogue_19_19,19,pointer_table,high,0x034B2B,1088,0x034FF2,"
+太好了,找到了龙骨",ascii,I like this museum.,pending_semantic_review,
+761,0x034E32,5368,dialogue_19_19,32,pointer_table,high,0x034B0F,1074,0x034E32,"
+伤药很好,当精灵没有体力时可以使用",ascii,My Dad loves Pok@mon too.,pending_semantic_review,
+762,0x034E55,6257,dialogue_19_19,23,pointer_table,high,0x034B11,1075,0x034E55,"
+小拉达很小但前牙很厉害",graphical_codes,<0A><B0B6><B8BB><B6E5><B3F7><B0B6><B3A8><B3DD><B9F9><B3F7><B3ED><B3EE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+763,0x034E6D,6262,dialogue_19_19,28,pointer_table,high,0x034B13,1076,0x034E6D,"
+常青森林是天然的迷宫,小心啊",graphical_codes,"<0A><B3CA><B3CB><B4D8><B4D9><B0C2><B1AD><B2AA><B0BC><B4D3><BDFE>,<B0B6><B0DD><B2AC>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+764,0x034E8B,5247,dialogue_19_19,44,pointer_table,high,0x034B15,1077,0x034E8A,"
+道路上经常会有小树吧?用精灵的技能可以砍断的",ascii,The HM Flash lightseven the darkest caves.,pending_semantic_review,
+765,0x034EB8,6267,dialogue_19_19,54,pointer_table,high,0x034B17,1078,0x034EB7,"
+有的精灵只在森林或者洞穴生活要得到更多的精灵就要多走走",graphical_codes,<B0AE><B0BC><B0A1><B0A2><B2BE><B0B8><B4D8><B4D9><B1CB><B9AB><B4FB><BDB8><B1C9><B4E0><B0C3><B2C1><B0DB><B2CC><B0C8><B0BC><B0A1><B0A2><B2AB><B0C3><B0C8><B7C3><B7C3>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+766,0x034EEF,6272,dialogue_19_19,40,pointer_table,high,0x034B19,1079,0x034EEF,"
+说起石山矿野很黑的,精灵用闪光术能看清吧",graphical_codes,"<0A><B1E7><B0E8><B1B2><B6DC><B8E9><B1F8><B3F7><B5AC><B0BC>,<B0A1><B0A2><B1A8><B4BE><B0E4><B1AE><B0EC><B0FD><B4C4><B0BE>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+767,0x034F18,5385,dialogue_19_19,31,pointer_table,high,0x034B77,1126,0x035524,"
+啊...游戏机很让人着迷啊...",ascii,Poliwrath is my best friend!,pending_semantic_review,
+768,0x034F38,5256,dialogue_19_19,45,pointer_table,high,0x034B1D,1081,0x034F46,"
+尼比市的捉虫少年和道馆的小刚不一样!!",ascii,Did you check out the Museum?,pending_semantic_review,
+769,0x034F66,4206,dialogue_19_19,24,pointer_table,high,0x034B1F,1082,0x034F6C,"
+不要让野生的精灵进入花坛",ascii,Welcome to Pewter City.,pending_semantic_review,
+770,0x034F7F,4216,dialogue_19_19,27,pointer_table,high,0x034B21,1083,0x034F86,"
+我的精灵是和别人交换的",ascii,This road leads to Route 3.,pending_semantic_review,
+771,0x034F9B,4221,dialogue_19_19,33,pointer_table,high,0x034B23,1084,0x034F9E,"
+有些精灵不听话...要是有徽章的话!",ascii,I heard Team Rocketis at Mt.Moon!,pending_semantic_review,
+772,0x034FBD,4228,dialogue_19_19,16,pointer_table,high,0x034B25,1085,0x034FC0,"
+小孩子需要50元,参观吗?",ascii,Tickets are 50$.,pending_semantic_review,
+773,0x034FCE,4233,dialogue_19_19,17,pointer_table,high,0x034B27,1086,0x034FD8,"
+好的,50元收下了!",ascii,Enjoy your visit!,pending_semantic_review,
+774,0x034FE0,6279,dialogue_19_19,6,pointer_table,high,0x034B29,1087,0x034FEA,"
+再来啊",graphical_codes,<B0FB><B0FC><B2AC>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+775,0x034FE7,4234,dialogue_19_19,38,pointer_table,high,0x034B2D,1089,0x035005,"
+这个月要去宇宙中",ascii,Team Rocket is always in the news!,pending_semantic_review,
+776,0x03500E,4235,dialogue_19_19,38,pointer_table,high,0x034B2F,1090,0x035017,"
+当精灵抓到很多带不了时使用电脑通信存放好",ascii,You can carry six Pok@mon at the most,pending_semantic_review,
+777,0x035035,4240,dialogue_19_19,18,pointer_table,high,0x034B31,1091,0x035041,"
+能带着的精灵是六只",ascii,See ya around kid!,pending_semantic_review,
+778,0x035048,4246,dialogue_19_19,46,pointer_table,high,0x034B33,1092,0x035055,"
+我很害怕...我经常在这里听到奇怪的声音",ascii,Only the Pok@mon champion is allowedin here!,pending_semantic_review,
+779,0x035077,6280,dialogue_19_19,68,pointer_table,high,0x034B35,1093,0x03507C,"
+太不幸了,这家人被偷了!是火箭队干的!即使是警察也拿火箭队没办法!",graphical_codes,"000000<B6C6><B0CE><B8E7><B0F8>,<B0EE><B1BF><B2B5><B1B6><B5EF><B0F8>!<B0C2><B5A2><B5A3><B5A4><B5A5><B0BC>!<B1D8><B1A7><B0C2><B5EC><B4B0><B0F6><B0C6><B5A2><B5A3><B5A4><B2B6><B2B7><B2B8>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+780,0x0350BD,4256,dialogue_19_19,24,pointer_table,high,0x034B37,1094,0x0350BC,"
+你也有精灵吗!好好磨练吧!",ascii,Welcome to Ceruleancity!,pending_semantic_review,
+781,0x0350D6,5291,dialogue_19_19,47,pointer_table,high,0x034B39,1095,0x0350D6,"
+啊...!在完成精灵图鉴吗?太好了",ascii,Girl:The life of a trainer is tough isn't it?,pending_semantic_review,
+782,0x035106,4261,dialogue_19_19,27,pointer_table,high,0x034B3D,1097,0x035107,"
+你好!骑自行车的心情你知道吗?",ascii,I care for injured Pok@mon.,pending_semantic_review,
+783,0x035122,6293,dialogue_19_19,22,pointer_table,high,0x034B3F,1098,0x035125,"
+我的自行车很漂亮哦",graphical_codes,0000<B1C2><B0BC><B2F3><B3A9><BCB2><B3F7><B9D3><B7EE><B2DD>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+784,0x03513A,4266,dialogue_19_19,25,pointer_table,high,0x034B41,1099,0x035139,"
+火箭队让精灵挖洞一定有什么事!",ascii,Why would they do this!?,pending_semantic_review,
+785,0x035154,5297,dialogue_19_19,51,pointer_table,high,0x034B43,1100,0x035158,"
+找不到被偷的东西就只有放弃了",ascii,"Those miserable Rockets! They stoleour ""Dig"" TM!",pending_semantic_review,
+786,0x035188,6298,dialogue_19_19,35,pointer_table,high,0x034B47,1102,0x03518E,"
+哎...最近没有发生什么事情...",graphical_codes,0000000<B8F3>...<B3F2><B0CD><B2B6><B0AE><B2F4><B1C9><B2AF><B1E6><B1D5><B7AB>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+787,0x0351AC,6303,dialogue_19_19,30,pointer_table,high,0x034B49,1103,0x0351AC,"
+我老是培育不好我的妙娃种子...",graphical_codes,<0A><B1C2><B2CE><B0C2><B6A3><B6D8><B0CE><B1B4><B1C2><B0BC><B7FC><BEA7><B6AD><B1DF>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+788,0x0351CB,6312,dialogue_19_19,26,pointer_table,high,0x034B4B,1104,0x0351CB,"
+让精灵进化图鉴可以增加...",graphical_codes,<0A><B2CB><B0A1><B0A2><B3DE><B5AB><B2F1><B2F2><B0DE><B0DF><B2FB><B2FC>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+789,0x0351E6,6317,dialogue_19_19,30,pointer_table,high,0x034B4D,1105,0x0351E6,"
+听说紫苑镇出现过幽灵精灵呢...",graphical_codes,<0A><B1F1><B1E7><BDE3><BDE4><B2D6><B0A4><B2F5><B3D4><B8BD><B0A2><B0A1><B0A2><B1EB>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+790,0x035206,5263,dialogue_19_19,56,pointer_table,high,0x034B4F,1106,0x035205,"
+这里是精灵的墓地,有名的城镇...精灵死的时候都会带到精灵塔",ascii,Pok@mon spirits have been seen in the Pok@mon Tower.,pending_semantic_review,
+791,0x03523F,5283,dialogue_19_19,57,pointer_table,high,0x034B51,1107,0x03523F,"
+最近幽灵塔里好象出现幽灵...好像是被火箭队杀害的精灵的幽灵...",ascii,I think they are spirits of Pok@mon the Rockets killed.,pending_semantic_review,
+792,0x035279,4276,dialogue_19_19,26,pointer_table,high,0x034B53,1108,0x03527D,"
+你相信有幽灵的存在吗?",ascii,Do you believe in Ghosts?,pending_semantic_review,
+793,0x035294,4280,dialogue_19_19,37,pointer_table,high,0x034B55,1109,0x035294,"
+我无法原谅火箭队!他们把逃亡中可拉可拉的妈妈抓了并杀害了!",ascii,May the souls of Pok@mon rest easy.,pending_semantic_review,
+794,0x0352BA,4281,dialogue_19_19,19,pointer_table,high,0x034B5D,1113,0x035355,"
+现在戒严中!!",ascii,Get out of the way!,pending_semantic_review,
+795,0x0352CE,6322,dialogue_19_19,21,pointer_table,high,0x034B57,1110,0x0352CE,"
+精灵塔有很多幽灵居住",graphical_codes,0<B0A1><B0A2><B8BE><B0AE><B3F7><B0C8><B8BD><B0A2><B1A9><B1C6>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+796,0x0352E4,6327,dialogue_19_19,80,pointer_table,high,0x034B59,1111,0x0352E4,"
+这个紫苑镇最有名的塔也是宠物精灵的墓园...人们将死亡的精灵带到这幽灵塔来祈求冥福",graphical_codes,<0A><B0EE><B0BA><BDE3><BDE4><B2D6><B3F2><B0AE><B3B1><B0BC><B8BE><B0F6><B0C2><B0C0><B0C1><B0A1><B0A2><B0BC><BEA8><B6FE>...<B2B5><B2EF><B1D2><B8C1><BEAA><B0BC><B0A1><B0A2><B8DD><B0DB><B0EE><B8BD><B0A2><B8BE><B0FC><B8C3><B9D2><BEAB><B6B4>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+797,0x035335,6337,dialogue_19_19,31,pointer_table,high,0x034B5B,1112,0x035335,"
+吉野老人可以安慰可拉可拉的灵魂",graphical_codes,<0A><B8B8><B1F8><B2CE><B2B5><B0DE><B0DF><B8BF><B8C0><B0DE><B8BB><B0DE><B8BB><B0BC><B0A2><B8C6>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+798,0x035355,4282,dialogue_19_19,26,pointer_table,high,0x034B5F,1114,0x035363,"
+这些火箭队的人太可恶了...",ascii,Silph Co. is very famous.,pending_semantic_review,
+799,0x035370,4283,dialogue_19_19,38,pointer_table,high,0x034B61,1115,0x03537E,"
+你要对抗火箭队?真了不起",ascii,The Rockets just came and took over!,pending_semantic_review,
+800,0x035397,4284,dialogue_19_19,29,pointer_table,high,0x034B63,1116,0x035397,"
+我看见了火箭队的老大进了大厦...",ascii,There's two gyms inthis city.,pending_semantic_review,
+801,0x0353B5,4293,dialogue_19_19,30,pointer_table,high,0x034B65,1117,0x0353B8,"
+我很崇拜你,我会为你加油的!",ascii,That group needs tobe stopped.,pending_semantic_review,
+802,0x0353D4,4301,dialogue_19_19,27,pointer_table,high,0x034B67,1118,0x0353D4,"
+我看过你的对战,你很厉害啊",ascii,I lost my money betting!,pending_semantic_review,
+803,0x0353F0,4302,dialogue_19_19,66,pointer_table,high,0x034B69,1119,0x0353EF,"
+你听过南晶开发部的卡美优吗?听说他的精灵都是神兽级别的哦...",ascii,They must have targeted Silph Co. for their Pok@mon products.,pending_semantic_review,
+804,0x035433,4307,dialogue_19_19,57,pointer_table,high,0x034B6B,1120,0x03542B,"
+欢迎!通过游戏积累硬币能得到喜欢的奖品,不过你好像没有硬币盒哦...",ascii,Welcome! You can exchange coins for prizes next door.,pending_semantic_review,
+805,0x03546D,4323,dialogue_19_19,24,pointer_table,high,0x034B6D,1121,0x03546C,"
+我太喜欢游戏了!都忘记时间了...",ascii,I'm having a great time!,pending_semantic_review,
+806,0x035486,4327,dialogue_19_19,36,pointer_table,high,0x034B6F,1122,0x03548C,"
+你也想玩吗?不行,你没有硬币盒",ascii,A man was guarding that poster there,pending_semantic_review,
+807,0x0354AB,6342,dialogue_19_19,53,pointer_table,high,0x034B71,1123,0x0354AA,"
+您可以用赢得的硬币盒换取精灵哦...不行,你没有硬币盒...",graphical_codes,"<B7C5><B0DE><B0DF><B1A8><B3F5><B2C1><B0BC><B4B6><BDBB><BEB2><B0F4><B0A3><B0A1><B0A2><B2DD>...<B0CE><B3A9>,<B0C5><B2B6><B0AE><B4B6><BDBB><BEB2>...",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+808,0x0354E1,4337,dialogue_19_19,30,pointer_table,high,0x034BF1,1187,0x035D11,"
+那家伙怎么消失了呢?!",ascii,Where'd that persongo?,pending_semantic_review,
+809,0x035500,4342,dialogue_19_19,27,pointer_table,high,0x034B75,1125,0x035500,"
+我的精灵没有体力时就到商店买药给他",ascii,My Pok@mon keep me company.,pending_semantic_review,
+810,0x03551C,4343,dialogue_19_19,28,pointer_table,high,0x034B73,1124,0x0354E1,"
+啊...游戏厅的下面好像有地下室",ascii,I got my Koffing inCinnabar!,pending_semantic_review,
+811,0x035539,6348,dialogue_19_19,28,pointer_table,high,0x034B79,1127,0x035540,"
+这里真是漂亮的地方啊",graphical_codes,00000000<B0EE><B0BF><B1F5><B0C2><B9D3><B7EE><B0BC><B3BB><B1E2><B2AC>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+812,0x035556,4352,dialogue_19_19,19,pointer_table,high,0x034B95,1141,0x0356D1,"
+我今天又胜了...哈哈",ascii,Thanks again kid!,pending_semantic_review,
+813,0x03556A,4357,dialogue_19_19,29,pointer_table,high,0x034B7D,1129,0x035569,"
+我想在这里盖大楼,但被精灵袭击了",ascii,We're careful aboutpollution!,pending_semantic_review,
+814,0x035588,4362,dialogue_19_19,19,pointer_table,high,0x034B8D,1137,0x035662,"
+听说石英高原的四天王很厉害",ascii,Have you met Bill?,pending_semantic_review,
+815,0x03559C,4372,dialogue_19_19,26,pointer_table,high,0x034B83,1132,0x0355B1,"
+会长说起精灵来就没完没了啊...",ascii,I just adore my Seel!,pending_semantic_review,
+816,0x0355B7,4377,dialogue_19_19,37,pointer_table,high,0x034B85,1133,0x0355D0,"
+你知道吗?臭泥是从海里的污泥出生的呢...",ascii,Hmph! My Pikachu isbetter than yours!,pending_semantic_review,
+817,0x0355DD,4392,dialogue_19_19,55,pointer_table,high,0x034B87,1134,0x0355F8,"
+狩猎区内有很多特别的精灵哟",ascii,"The Warden is old, but still active!",pending_semantic_review,
+818,0x035615,4399,dialogue_19_19,34,pointer_table,high,0x034B89,1135,0x035614,"
+奇怪,我的波波不知又飞到什么地方去了",ascii,Did you see the ship out there?,pending_semantic_review,
+819,0x035638,4400,dialogue_19_19,38,pointer_table,high,0x034B8B,1136,0x035639,"
+据说狩猎区有人曾经见过传说中的精灵呢...",ascii,You should raise your Pok@mon evenly,pending_semantic_review,
+820,0x03565F,4406,dialogue_19_19,37,pointer_table,high,0x034B8F,1138,0x03567E,"
+你有经常看电视吗?",ascii,The Warden knows a lot about Pok@mon!,pending_semantic_review,
+821,0x035685,4409,dialogue_19_19,36,pointer_table,high,0x034B91,1139,0x035691,"
+这个世上有多少种精灵呢?",ascii,I couldn't under- stand the warden.,pending_semantic_review,
+822,0x0356AA,4414,dialogue_19_19,36,pointer_table,high,0x034B93,1140,0x0356AA,"
+你想要打败这个训练道馆啊...还是放弃吧",ascii,"We nicknamed the Warden, Slowpoke.",pending_semantic_review,
+823,0x0356CF,4420,dialogue_19_19,34,pointer_table,high,0x034B97,1142,0x0356E6,"
+道场的老头很厉害",ascii,The Safari Zone hasrare Pok@mon.,pending_semantic_review,
+824,0x0356F2,4421,dialogue_19_19,44,pointer_table,high,0x034B99,1143,0x0356F8,"
+想不到吧,我们在这个小岛生活了好多年呢",ascii,Scientists conduct experiments in thathouse.,pending_semantic_review,
+825,0x03571F,4430,dialogue_19_19,19,pointer_table,high,0x034B9B,1144,0x03571F,"
+今天好虚啊...太累了...",ascii,Blaine's an odd man,pending_semantic_review,
+826,0x035733,4437,dialogue_19_19,37,pointer_table,high,0x034B9D,1145,0x035737,"
+火系精灵碰上水系就惨了!",ascii,You can stop evolu-tion by Pushing B.,pending_semantic_review,
+827,0x035759,4442,dialogue_19_19,38,pointer_table,high,0x034B9F,1146,0x035750,"
+欢迎带着珍贵精灵的客人来这里",ascii,We study Pok@mon fossils in this lab,pending_semantic_review,
+828,0x035780,4454,dialogue_19_19,34,pointer_table,high,0x034BA3,1148,0x035784,"
+我曾经在月见山找到的化石居然在这里复活了!!",ascii,Eevee can evolve to1 of 3 Pok@mon.,pending_semantic_review,
+829,0x0357A3,4469,dialogue_19_19,35,pointer_table,high,0x034BA5,1149,0x0357B0,"
+现在的技术真的很先进呢",ascii,People bring us Pok@mon to examine.,pending_semantic_review,
+830,0x0357C7,4474,dialogue_19_19,23,pointer_table,high,0x034BA7,1150,0x0357C8,"
+对了,伊布能进化的形态据说不只三种呢...",ascii,Dr.Fuji founded ourlab.,pending_semantic_review,
+831,0x0357DF,4485,dialogue_19_19,38,pointer_table,high,0x034BA9,1151,0x0357F0,"
+你好,未来的冠军...祝你好运!",ascii,Let me know if you find another fossil,pending_semantic_review,
+832,0x035806,4488,dialogue_19_19,29,pointer_table,high,0x034BAB,1152,0x03580D,"
+四天王都很厉害,你要小心啊...",ascii,Victory Road sure was tough!,pending_semantic_review,
+833,0x035824,4495,dialogue_19_19,40,pointer_table,high,0x034BAD,1153,0x03582B,"
+龙系的精灵很强...没有什么弱点...",ascii,This is the final challenge!,pending_semantic_review,
+834,0x03584D,4505,dialogue_19_19,38,pointer_table,high,0x034BAF,1154,0x03584D,"
+如果胜利的话,就可以进入下一个房间,加油啊",ascii,"If you lose, you have to start over.",pending_semantic_review,
+835,0x035874,4515,dialogue_19_19,31,pointer_table,high,0x034B45,1101,0x035176,"
+家里的爷爷想要交换精灵",ascii,Bill has lots of Pok@mon!,pending_semantic_review,
+836,0x0358AD,4520,dialogue_19_19,15,pointer_table,high,0x034BB5,1157,0x0358AC,"
+触动了一个开关!",ascii,Hit the button!,pending_semantic_review,
+837,0x0358BD,4525,dialogue_19_19,20,pointer_table,high,0x034BB7,1158,0x0358BD,"
+这么好的化石不要嘛?!",ascii,Go ahead and choose,pending_semantic_review,
+838,0x0358D2,6349,dialogue_19_19,34,pointer_table,high,0x034BB9,1159,0x0358D3,"
+使用怪兽的人不同,结果就有好有坏!",graphical_codes,"00<B1A7><B1A8><B0CA><B0CB><B0BC><B2B5><B0CE><B8CF>,<BCC6><B3F6><B2AB><B0AE><B1B4><B0AE><B0F7>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+839,0x0358F6,4535,dialogue_19_19,36,pointer_table,high,0x034BBB,1160,0x0358F5,"
+世上有很多人用怪兽作恶,那些混蛋就是火箭团!",ascii,No! Super Potions are all sold out!,pending_semantic_review,
+840,0x03591B,4541,dialogue_19_19,29,pointer_table,high,0x034BBD,1161,0x035921,"
+物价太高了,也没人出来管一管,唉!",ascii,This shop has many Antidotes.,pending_semantic_review,
+841,0x035939,4547,dialogue_19_19,49,pointer_table,high,0x034BBF,1162,0x035942,"
+即使相同等级的怪兽强度也不一样.",ascii,There's a Pok@mon Center in every town ahead.,pending_semantic_review,
+842,0x03596B,4559,dialogue_19_19,55,pointer_table,high,0x034BC3,1164,0x03597F,"
+等级越高怪兽越强,但怪兽根据类型也有不擅长作战的对手......",ascii,Pok@mon Centers heal your injured Pok@mon for free.,pending_semantic_review,
+843,0x0359A3,4572,dialogue_19_19,19,pointer_table,high,0x0331E7,1016,0x034875,"
+得到梦幻船票",ascii,Got Navel Rock Pass,pending_semantic_review,
+844,0x0359B7,6356,dialogue_19_19,38,pointer_table,high,0x034BC5,1165,0x0359BA,"
+不知什么时候草丛里会突然窜出精灵呢",graphical_codes,0000<B0CE><B2D7><B2AF><B1E6><B0F0><B7CD><B1FB><B1FC><B0BF><B1F9><B5B4><B2AA><BEBD><B0A4><B0A1><B0A2><B1EB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+845,0x0359DE,6361,dialogue_19_19,35,pointer_table,high,0x034BC7,1166,0x0359DE,"
+到大城市里去会认识很多优秀的训练师",graphical_codes,<0A><B0DB><B1BE><B3BA><B4D1><B0BF><B0C7><B1F9><B4BA><B0D1><B3F7><B0C8><B8EE><BEBE><B0BC><B2DE><B2C5><B2DF>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+846,0x035A02,6366,dialogue_19_19,36,pointer_table,high,0x034BC9,1167,0x035A02,"
+你去过金黄市吗,听说那里有很高的大楼",graphical_codes,"<0A><B0C5><B0C7><B3D4><B7BB><BAC2><B4D1><B0D7>,<B1F1><B1E7><B0B9><B0BF><B0AE><B3F7><B8AF><B0BC><B1BE><BEB4>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+847,0x035A27,6371,dialogue_19_19,55,pointer_table,high,0x034BCB,1168,0x035A27,"
+我也想拥有传说中的精灵,可是到底哪儿才有传说中的精灵呢?",graphical_codes,"<0A><B1C2><B0F6><B1D7><B6A9><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2>,<B0DE><B0C2><B0DB><B3D5><B4C2><B7D0><B1F2><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1EB>?",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+848,0x035A5F,6376,dialogue_19_19,63,pointer_table,high,0x034BCD,1169,0x035A5F,"
+看你的能力一定是训练师新手吧.告诉你要时刻关心自己的精灵状态哦!",graphical_codes,<0A><B0FD><B0C5><B0BC><B0EC><B0E3><B1D1><B2B1><B0C2><B2DE><B2C5><B2DF><B2D5><B1A3><B0BE>.<B2E6><B2E7><B0C5><B0C3><B0F0><B4E7><B0B3><B0DD><B2F3><BBA3><B0BC><B0A1><B0A2><BAF5><BAF6><B2DD>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+849,0x035A9F,6385,dialogue_19_19,42,pointer_table,high,0x034BCF,1170,0x035A9F,"
+有飞行系的精灵就能带我飞向远方的城市了...",graphical_codes,<0A><B0AE><B1AC><B3A9><B0AF><B0BC><B0A1><B0A2><B2AB><B0EC><B8DD><B1C2><B1AC><B3B7><B5CD><B1E2><B0BC><B3BA><B4D1><B0F8>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+850,0x035ACA,6390,dialogue_19_19,15,pointer_table,high,0x034BD1,1171,0x035ACA,"
+今天是个好天气",graphical_codes,<0A><B6C9><B1AD><B0C2><B0BA><B1B4><B1AD><B4AA>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+851,0x035ADA,6395,dialogue_19_19,29,pointer_table,high,0x034BD3,1172,0x035ADA,"
+心情不错,偷偷告诉你我恋爱了!",graphical_codes,"<0A><B0DD><B7AB><B0CE><B2DC>,<B5EF><B5EF><B2E6><B2E7><B0C5><B1C2><BEBF><B5DD><B0F8>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+852,0x035AF8,6402,dialogue_19_19,44,pointer_table,high,0x034BD5,1173,0x035AF8,"
+大海很宽阔啊,如果会冲浪术的话就能横渡大海了",graphical_codes,"<0A><B1BE><B6FC><B3F7><B5B6><B5B7><B2AC>,<B1FE><B3F6><B1F9><B1AF><B1B0><B1AE><B0BC><B1EF><B2AB><B0EC><BEC0><BEC1><B1BE><B6FC><B0F8>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+853,0x035B25,6407,dialogue_19_19,50,pointer_table,high,0x034BD7,1174,0x035B25,"
+你听过吗?在枯叶市上的铁达尼号上都是有钱的训练师呢",graphical_codes,<0A><B0C5><B1F1><B3D4><B0D7>?<B0B8><B6E1><B6E2><B4D1><B1E5><B0BC><B6E4><B6E5><B4B2><B6E6><B1E5><B1C0><B0C2><B0AE><B0FE><B0BC><B2DE><B2C5><B2DF><B1EB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+854,0x035B58,6412,dialogue_19_19,35,pointer_table,high,0x034BD9,1175,0x035B58,"
+在月见山上的晚上偶尔会有皮皮出现呢",graphical_codes,<0A><B0B8><B6CF><B2CD><B6DC><B1E5><B0BC><B2BC><B1E5><B9E3><BEC2><B1F9><B0AE><B6D3><B6D3><B0A4><B2F5><B1EB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+855,0x035B7C,6422,dialogue_19_19,46,pointer_table,high,0x034BDB,1176,0x035B7C,"
+宝石大陆你知道吗?我年轻时就是在宝石大陆修行呢",graphical_codes,<0A><B7B5><B1B2><B1BE><B7B6><B0C5><B2D7><B1A4><B0D7>?<B1C2><B3EA><B8B6><B0F0><B2AB><B0C2><B0B8><B7B5><B1B2><B1BE><B7B6><B4CE><B3A9><B1EB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+856,0x035BAB,6431,dialogue_19_19,35,pointer_table,high,0x034BDD,1177,0x035BAB,"
+在精灵体力低下的时候要赶紧使用伤药",graphical_codes,<0A><B0B8><B0A1><B0A2><B0E2><B0E3><BCDD><B0F9><B0BC><B0F0><B7CD><B0C3><B1F3><B1F4><B1A7><B1A8><B9C7><BBB9>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+857,0x035BCF,6436,dialogue_19_19,34,pointer_table,high,0x034BDF,1178,0x035BCF,"
+我不明白怎么照顾精灵,要加紧学习呢",graphical_codes,"<0A><B1C2><B0CE><B5E6><B5E5><B2D0><B1E6><B6CC><B0DA><B0A1><B0A2>,<B0C3><B2FC><B1F4><B4C3><B2C6><B1EB>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+858,0x035BF2,4573,dialogue_19_19,24,pointer_table,high,0x034BE1,1179,0x035BF2,"
+我的精灵老是不听我的话,如果有徽章就好了",ascii,I can't enter the city!,pending_semantic_review,
+859,0x035C0B,6447,dialogue_19_19,59,pointer_table,high,0x034BE3,1180,0x035C1B,"
+在这个地区最强的训练师是石英高原的四大天王",graphical_codes,00000000000000000<B0B8><B0EE><B0BA><B3BB><B7B8><B3F2><B2C9><B0BC><B2DE><B2C5><B2DF><B0C2><B1B2><B7FE><B8AF><B4EF><B0BC><B1E1><B1BE><B1AD><B4F7>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+860,0x035C48,4584,dialogue_19_19,30,pointer_table,high,0x034BE5,1181,0x035C47,"
+如果我有只像你的精灵这样听话的精灵就好了",ascii,Do you want to see my Pok@mon?,pending_semantic_review,
+861,0x035C67,6461,dialogue_19_19,31,pointer_table,high,0x034BE7,1182,0x035C71,"
+我想喝水...谁给我水?",graphical_codes,00000000000<B1C2><B1D7><B3C1><B5F7>...<B5F1><B0C4><B1C2><B5F7>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+862,0x035C87,6470,dialogue_19_19,21,pointer_table,high,0x034BE9,1183,0x035C87,"
+别动!叫你别动你还动?",graphical_codes,<0A><B2CA><B0B2>!<B1C1><B0C5><B2CA><B0B2><B0C5><B2BD><B0B2>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+863,0x035C9D,6481,dialogue_19_19,35,pointer_table,high,0x034BEB,1184,0x035C9D,"
+看你的样子一定是个了不起的训练师吧",graphical_codes,<0A><B0FD><B0C5><B0BC><B2DA><B1DF><B1D1><B2B1><B0C2><B0BA><B0F8><B0CE><B0E8><B0BC><B2DE><B2C5><B2DF><B0BE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+864,0x035CC1,4589,dialogue_19_19,76,pointer_table,high,0x034BEF,1186,0x035CE9,"
+不知道怎么回事,现在的人都不骑自行车了!",ascii,"Welcome! 1 bike forjust 1,000,000$!",pending_semantic_review,
+865,0x035D0E,4601,dialogue_19_19,32,pointer_table,high,0x034BF3,1188,0x035D27,"
+感觉到有一种神秘的力量.....",ascii,Ash's Pok@mon are fully healed!,pending_semantic_review,
+866,0x035D2F,4602,dialogue_19_19,18,pointer_table,high,0x034BF7,1190,0x035D52,"
+竟然是一把密码锁...",ascii,The door's locked!,pending_semantic_review,
+867,0x035D42,4612,dialogue_19_19,17,pointer_table,high,0x034BF5,1189,0x035D44,"
+得到一个密码",ascii,Found Key to Gym!,pending_semantic_review,
+868,0x035D54,4613,dialogue_19_19,16,pointer_table,high,0x034BF9,1191,0x035D67,"
+触动了一个机关...",ascii,Opened the door!,pending_semantic_review,
+869,0x035D65,4614,dialogue_19_19,53,pointer_table,high,0x034BFB,1192,0x035D7A,"
+你的徽章还没收集齐,还是请回吧!",ascii,You don't have all Eight Badges.,pending_semantic_review,
+870,0x035D9B,209,dialogue_19_19,16,pointer_table,high,0x034BFD,1193,0x035D9A,"
+参观    走人    ",ascii,Buy Leave,pending_semantic_review,
+871,0x035DAC,4620,dialogue_19_19,18,pointer_table,high,0x034BFF,1194,0x035DAC,"
+对不起,你的钱不够!",ascii,Not enough money.,pending_semantic_review,
+872,0x035DCC,227,dialogue_intro_17_19,180,pointer_table,high,0x03018F,176,0x03087F,"
+这生物被视为宠物,或使用于对战等等.而我是研究这宠物精灵的!",ascii,"This world is inhabited by creatures called Pok@mon! For some people, Pok@mon are pets.Others use them for fights. Myself...I study Pok@mon as a profession.",pending_semantic_review,
+873,0x035E82,233,dialogue_intro_17_19,129,pointer_table,high,0x030191,177,0x0308BA,"
+小智,一个将属于你的故事,梦想即将开始!",ascii,ASH! Your very own Pok@mon legend is about to unfold! A world of dreams & adventureswith Pok@mon awaits! Let's go!,pending_semantic_review,
+1013,0x036528,4646,dialogue_19_19,68,pointer_table,high,0x034AF9,1063,0x034CD9,"
+我相信科学的力量!现在电脑可以通信精灵和道具",ascii,"I'm raising Pok@mon too! When they get strong, they can protect me!",pending_semantic_review,
+1015,0x0365D0,4663,dialogue_19_19,45,pointer_table,high,0x034BC1,1163,0x035963,"
+我的怪兽力量都用尽了......",ascii,You can use that PC in the corner over there.,pending_semantic_review,
+1016,0x0365FE,4665,dialogue_19_19,102,pointer_table,high,0x034AFB,1064,0x034D06,"
+休息一下如何?",ascii,"Ash,if you drive your Pok@mon too hard, they'll dislike you.You should take a rest.",pending_semantic_review,
+1017,0x036665,4676,dialogue_19_19,66,pointer_table,high,0x034AFD,1065,0x034D15,"
+啊!你和精灵都很精神!小心去吧,保重!",ascii,Oh good! You and your Pok@mon are looking great! Takecare now!,pending_semantic_review,
+1018,0x0366A8,4691,dialogue_19_19,74,pointer_table,high,0x034BB1,1155,0x035877,"
+小茂姐姐:爷爷有任务交给你啊!",ascii,"Gary's Sis:Pok@mon are living things! If they get tired, give them a rest!",pending_semantic_review,
+1019,0x0366F3,4703,dialogue_19_19,106,pointer_table,high,0x034B05,1069,0x034DA1,"
+你的精灵球是很方便的东西啊",ascii,"You know there's 2 kinds of caterpilarPok@mon? Caterpie has no poison, but Weedle does. Watch out for it!",pending_semantic_review,
+1020,0x03675E,4715,dialogue_19_19,54,pointer_table,high,0x034B0B,1072,0x034E07,"
+啊!日记的内容我都记住了",ascii,Coming up with nick names for my Pok@mon is fun.,pending_semantic_review,
+1021,0x036795,4731,dialogue_19_19,84,pointer_table,high,0x034B0D,1073,0x034E20,"
+我也很喜欢精灵啊",ascii,"When you're using aPok@dex, it is updated instantly when you catch a Pok@mon.",pending_semantic_review,
+1022,0x0367EA,4741,dialogue_19_19,76,pointer_table,high,0x034B3B,1096,0x0350F5,"
+我也想要辆自行车",ascii,"If you press B whena Pok@mon is evolving,that will cancel the process.",pending_semantic_review,
+1023,0x036837,4754,dialogue_19_19,27,pointer_table,high,0x034B81,1131,0x03559D,"
+你的比卡丘很可爱呢",ascii,Our Chairman loves Pok@mon!,pending_semantic_review,
+1024,0x036853,4755,dialogue_19_19,34,pointer_table,high,0x034B7F,1130,0x03558A,"
+我的肚子好饿呀...",ascii,I heard Grimer livein toxic waste.,pending_semantic_review,
+1025,0x036876,4756,dialogue_19_19,33,pointer_table,high,0x034B7B,1128,0x035556,"
+铁达尼号出发了吗?",ascii,"Sorry, Lt. Surge isout right now.",pending_semantic_review,
+1026,0x036898,4757,dialogue_19_19,35,pointer_table,high,0x034BB3,1156,0x035895,"
+该怎么吧这家伙弄醒呢?",ascii,A sleeping Pok@mon blocks the path.,pending_semantic_review,
+1027,0x0368BC,4761,dialogue_19_19,52,pointer_table,high,0x034B1B,1080,0x034F18,"
+啊!这长长的洞穴!是地鼠挖的!听说都到尼比市了!",ascii,Diglets dug this cave that goes to Viridian City.,pending_semantic_review,
+1029,0x03692B,4775,dialogue_19_19,36,pointer_table,high,0x034BA1,1147,0x03576E,"
+这里每天进行精灵研究",ascii,It never hurts to have extra items!,pending_semantic_review,
+1113,0x037994,4151,dialogue_19_19,188,pointer_table,high,0x033183,966,0x033A4C,"
+小茂:怎么回事?真的结束了吗?尽了全力却还是输了!好不容易爬到这个地步...为什么我会输...我的培育方法不可能出错的...没办法,你是宠物联盟的新冠军...我真不太想承认",ascii,"No! After all that work to become champ, it's over already? Why did I lose? I never made mistakes raising myPok@mon!...Darn it!You're the league champ, although I hate to admit it.",pending_semantic_review,
+1114,0x037A51,4157,dialogue_19_19,95,unaligned,low,,,,,ascii,"Once again, congra-tulations Ash! You put an end to Team Rocket, hopefully for good this time.",unaligned_or_non_dialogue,
+1115,0x037AB1,4169,dialogue_19_19,42,unaligned,low,,,,,ascii,You truly are a remarkable trainer Ash!,unaligned_or_non_dialogue,
+1116,0x037ADC,4171,dialogue_19_19,274,pointer_table,high,0x0331D9,1009,0x034656,"
+卡美优:小智,我知道你一定会来的!这一战应该没有任何遗憾吧!!来吧,准备好了吗?",ascii,Eusine: Greetings! I've heard about you Ash! Glad to meet you! I've searched the world for the greatest Legendary Pok@mon and finally found them! They seem to want to see your power for them- selves! Allow me toshow you the power of the Legendary Pok@mon!,pending_semantic_review,
+1117,0x037BEF,4190,dialogue_19_19,56,pointer_table,high,0x034BED,1185,0x035CC1,"
+洞里太黑了,能掌握一些闪光的法术就好了!",ascii,"The cave is pitch black, a Pok@mon could light it up.",pending_semantic_review,
+1118,0x03804B,4791,dialogue_19_19,16,unaligned,low,,,,,ascii,Withdraw Deposit,unaligned_or_non_dialogue,
+1119,0x03805C,6490,dialogue_19_19,17,pointer_table,high,0x03801D,1195,0x03805C,"
+南晶公司版权所有",graphical_codes,<0A><B0A7><B0A8><B0A9><B0AA><B0AB><B0AC><B0AD><B0AE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1120,0x03806F,4792,dialogue_19_19,16,pointer_table,high,0x03801F,1196,0x03806E,"
+精灵系统启动...",ascii,Turned on the PC,pending_semantic_review,
+1121,0x038080,4793,dialogue_19_19,17,pointer_table,high,0x038021,1197,0x03807F,"
+精灵系统关闭...!",ascii,Turned off the PC,pending_semantic_review,
+1122,0x038092,4794,dialogue_19_19,19,pointer_table,high,0x038023,1198,0x038091,"
+喔...小智在那有个圆圆的球吧,那里有宠物精灵是要给你的!拿去吧!",ascii,"Go ahead,it's yours",pending_semantic_review,
+1123,0x0380A6,4800,dialogue_19_19,30,pointer_table,high,0x038025,1199,0x0380CF,"
+要多和怪兽亲近.",ascii,"Ash,take good care of Pikachu.",pending_semantic_review,
+1124,0x0380C5,4811,dialogue_19_19,23,pointer_table,high,0x038029,1201,0x0380ED,"
+欢迎!买东西吗?",ascii,Hello! May I help you?,pending_semantic_review,
+1125,0x0380DD,6492,dialogue_19_19,15,pointer_table,high,0x038027,1200,0x0380E0,"
+不打不相识!",graphical_codes,0000<B0CE><B0CF><B0CE><B0D0><B0D1>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1126,0x0380EE,4815,dialogue_19_19,14,pointer_table,high,0x03841F,1452,0x03AC16,"
+马其斯:我输了,那么这个橙色徽章拿去吧,还有这个是我的心意!",ascii,"Good job, kid!",pending_semantic_review,
+1127,0x0380FD,4820,dialogue_19_19,10,pointer_table,high,0x03802B,1202,0x0380FD,"
+谢谢惠顾",ascii,Thank you.,pending_semantic_review,
+1128,0x038108,4825,dialogue_19_19,25,pointer_table,high,0x03802F,1204,0x03812B,"
+欢迎光临!",ascii,We hope to see you again!,pending_semantic_review,
+1129,0x038122,1665,dialogue_19_19,13,pointer_table,high,0x038429,1457,0x03ACE3,"
+得到杰尼龟",ascii,Got Squirtle!,pending_semantic_review,
+1130,0x038130,210,dialogue_19_19,23,pointer_table,high,0x038031,1205,0x038136,"
+恢复    放弃    ",ascii,Heal Leave,pending_semantic_review,
+1131,0x038149,4826,dialogue_19_19,36,pointer_table,high,0x038033,1206,0x038148,"
+对不起,因为机能所限这里暂时不能够对战...",ascii,"Sorry, the Trading Center is closed.",pending_semantic_review,
+1132,0x038173,4827,dialogue_19_19,32,pointer_table,high,0x038035,1207,0x038172,"
+交换机器也坏了...下次再来看看吧",ascii,"Sorry, the Cable Club's closed",pending_semantic_review,
+1133,0x038194,211,dialogue_19_19,16,pointer_table,high,0x038037,1208,0x038193,"
+买      不买    ",ascii,Buy Pass,pending_semantic_review,
+1134,0x0381A5,6502,dialogue_19_19,8,pointer_table,high,0x038039,1209,0x0381A5,"
+钱不够!",graphical_codes,0<B0FE><B0CE><B0F1>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1135,0x0381AF,213,dialogue_19_19,16,pointer_table,high,0x03803B,1210,0x0381AE,"
+是      否      ",ascii,Yes No,pending_semantic_review,
+1136,0x0381C1,212,dialogue_19_19,16,pointer_table,high,0x03803D,1211,0x0381C0,"
+空手道  跆拳道  ",ascii,Left Right,pending_semantic_review,
+1137,0x0381D2,4832,dialogue_19_19,13,pointer_table,high,0x03803F,1212,0x0381D2,"
+小智使用了居合斩",ascii,Used HM CUT!,pending_semantic_review,
+1138,0x0381E0,6503,dialogue_19_19,21,pointer_table,high,0x038041,1213,0x0381E4,"
+小智使用了飞天术",graphical_codes,00000<B0B6><B0B7><B1A7><B1A8><B0F8><B1AC><B1AD><B1AE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1139,0x0381F6,6509,dialogue_19_19,17,pointer_table,high,0x038043,1214,0x0381F6,"
+小智使用了冲浪术",graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B1AF><B1B0><B1AE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1140,0x038208,6515,dialogue_19_19,17,pointer_table,high,0x038045,1215,0x038208,"
+小智使用了怪力术",graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B0CA><B0E3><B1AE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1141,0x03821A,6521,dialogue_19_19,21,pointer_table,high,0x038047,1216,0x03821A,"
+这块石头好像能被推动",graphical_codes,<0A><B0EE><B1B1><B1B2><B1B3><B1B4><B1B5><B0EC><B1B6><B1B7><B0B2>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1142,0x038230,4836,dialogue_19_19,23,pointer_table,high,0x038049,1217,0x038230,"
+这棵树苗好像能被斩断",ascii,This tree can be cut!,pending_semantic_review,
+1143,0x038445,313,dialogue_19_19,177,unaligned,low,,,,,graphical_codes," <B0C5><B1B4>!<B0D2><B0D3><B0C5><B0E4><B0E5><B0C0><B0C1><B0A1><B0A2><B0BC><B1BC><B1BD>!<B1BE><B1BF><B1C0><B1C1><B1C2><B1BE><B1C3><B1C4><B1C5>,<B0B8><B0EE><B1BC><B1BD><B1C6><B1C7><B1B6><B1C8><B0EA><B0C0><B0C1><B0A1><B0A2><B0BC><B1C9><B0C1>!<B0EE><B1C9><B0C1><B1B6><B1CA><B0EA><B0C0><B0C1>,<B1CB><B1A7><B1A8><B1CC><B0E7><B0F2><B1CD><B1CD>.<B1CE><B1C2><B0C2><B1CF><B1D0><B0EE><B0C0><B0C1><B0A1><B0A2><B0BC>!<B0B6><B0B7>,<B1D1><B0BA><B1D2><B1D3><B1CC><B0C5><B0BC><B1D4><B1D5>,<B1D6><B1D7><B1D8><B1D2><B1D9><B1DA>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1144,0x0384F8,319,dialogue_19_19,32,containing_offset,medium,,1218,0x0384F7,"
+ 妈妈:是嘛男孩子都是志在四方嘛!...嗯,电视上都是这么说的!对了,隔壁的大木博士在找你呢",ascii,YO ASH! Gramps isn't around!,pending_semantic_review,
+1145,0x038519,330,dialogue_19_19,141,containing_offset,medium,,1218,0x0384F7,"
+ 妈妈:是嘛男孩子都是志在四方嘛!...嗯,电视上都是这么说的!对了,隔壁的大木博士在找你呢",ascii,"Hey! Wait! Don't goout! It's unsafe! Wild Pok@mon live in tall grass! You need your own Pok@mon for safety.I know! Here, come with me!",pending_semantic_review,
+1146,0x0385A7,336,dialogue_19_19,46,containing_offset,medium,,1220,0x03859D,"
+ 大木:真是危险!野生精灵会从草丛中跳出来的!你如有宠物精灵是可与他对战...对了!跟我来一下吧!",ascii,Gary:Hey Gramps! I'm fed up with waiting!,pending_semantic_review,
+1147,0x0385D6,343,dialogue_19_19,28,containing_offset,medium,,1220,0x03859D,"
+ 大木:真是危险!野生精灵会从草丛中跳出来的!你如有宠物精灵是可与他对战...对了!跟我来一下吧!",ascii,Hey! Gramps! What about me?,pending_semantic_review,
+1148,0x0385F3,349,dialogue_19_19,44,containing_offset,medium,,1220,0x03859D,"
+ 大木:真是危险!野生精灵会从草丛中跳出来的!你如有宠物精灵是可与他对战...对了!跟我来一下吧!",ascii,"Be patient Gary, I'll give you one later.",pending_semantic_review,
+1149,0x038620,355,dialogue_19_19,46,containing_offset,medium,,1222,0x03860E,"
+ 大木:喔?小茂你已经来啦?我不是叫你稍后再来嘛...既然来啦就再等一下吧!喔...小智在那有个圆圆的球吧,那里有宠物精灵是要给你的!拿去吧!",ascii,"Humph! I'll get a better Pok@mon thanyou,Ash!",pending_semantic_review,
+1150,0x03864F,360,dialogue_19_19,32,containing_offset,medium,,1222,0x03860E,"
+ 大木:喔?小茂你已经来啦?我不是叫你稍后再来嘛...既然来啦就再等一下吧!喔...小智在那有个圆圆的球吧,那里有宠物精灵是要给你的!拿去吧!",ascii,No way Ash! I want this Pok@mon!,pending_semantic_review,
+1151,0x038670,365,dialogue_19_19,25,pointer_table,high,0x03825D,1227,0x038712,"
+大木:喂!什么!你在做什么!",ascii,Gary! What are you doing?,pending_semantic_review,
+1152,0x03868A,370,dialogue_19_19,23,pointer_table,high,0x03825F,1228,0x03872C,"
+小茂:爷爷!人家就是想要这个嘛!",ascii,"Gramps,I want this one!",pending_semantic_review,
+1153,0x0386A2,376,dialogue_19_19,114,pointer_table,high,0x038261,1229,0x03874B,"
+大木:真是拿你没办法,好吧!那个宠物精灵就给你吧!反正是早晚的是...小智,你来一下好吗?",ascii,"Oak:But, I...Oh,allright then. That Pok@mon is yours. Iwas going to give you one anyway... Ash,come over here.",pending_semantic_review,
+1154,0x038715,382,dialogue_19_19,46,pointer_table,high,0x038263,1230,0x03879E,"
+大木:这里还有一只是刚刚抓的.和人还不是能亲近的",ascii,"Oak:Ash, this is a Pok@mon I caught earlier.",pending_semantic_review,
+1155,0x038744,402,dialogue_19_19,16,pointer_table,high,0x038265,1231,0x0387CE,"
+得到比卡丘",ascii,You can have it.,pending_semantic_review,
+1156,0x038755,404,dialogue_19_19,74,pointer_table,high,0x038267,1232,0x0387DA,"
+小茂:刚得到精灵就当我的对手练习练习吧!",ascii,"Gary:Wait Ash! Let's check out ourPok@mon! Come on, I'll take you on!",pending_semantic_review,
+1157,0x0387A0,410,dialogue_19_19,82,pointer_table,high,0x038269,1233,0x038802,"
+小茂:这不是开玩笑吗,你的精灵这么强??好吧,那我就去找别的精灵对战!好让我的精灵更强!小智.爷爷,再见了!",ascii,Okay! I'll make my Pok@mon fight to toughen it up! Ash!Gramps! Smell you later!,pending_semantic_review,
+1158,0x0387F3,418,dialogue_19_19,110,pointer_table,high,0x038271,1237,0x0388C1,"
+店员:你是从真新镇来的吧?你知道大木博士吧.这是他要的东西,请转交给他!",ascii,"Hey! You came from Pallet Town? You know ProfOak,right?His order came in, can you take it to him? Thank you.",pending_semantic_review,
+1159,0x038862,6529,dialogue_19_19,29,pointer_table,high,0x03826B,1234,0x038866,"
+老爷爷:你等等,听听我的话",graphical_codes,"00000<B2CE><B1EE><B1EE>:<B0C5><B1CD><B1CD>,<B1F1><B1F1><B1C2><B0BC><B1EF>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1160,0x038880,6532,dialogue_19_19,15,pointer_table,high,0x03826D,1235,0x038880,"
+老爷爷:你还去?",graphical_codes,<0A><B2CE><B1EE><B1EE>:<B0C5><B2BD><B0C7>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1161,0x038891,1583,dialogue_19_19,43,pointer_table,high,0x038417,1448,0x03AB63,"
+士兵:请进",ascii,Lt.Surge hid a switch inside the cans!,pending_semantic_review,
+1162,0x0388BD,1584,dialogue_19_19,32,pointer_table,high,0x038273,1238,0x038906,"
+大木:嗨!小智,怎样啊?与我给你的精灵好像相处的不错哦,你有宠物精灵训练师的才能喔!",ascii,"Oh,Ash! How is Pikachu?",pending_semantic_review,
+1163,0x0388DE,1585,dialogue_19_19,55,pointer_table,high,0x038275,1239,0x038956,"
+大木:啊?有东西要交给我?",ascii,He seems to like you...Hm? you have something for me?,pending_semantic_review,
+1164,0x038916,1593,dialogue_19_19,46,pointer_table,high,0x038277,1240,0x03896F,"
+小智将包裹交给博士了!",ascii,Ah! This is the custom Pok@ball I ordered!,pending_semantic_review,
+1165,0x038945,424,dialogue_19_19,10,pointer_table,high,0x038279,1241,0x038986,"
+大木:这不就是我订的特制精灵球吗?谢谢你,对了!忘了告诉你有事要拜托你",ascii,Thank you!,pending_semantic_review,
+1166,0x038950,426,dialogue_19_19,42,pointer_table,high,0x03827B,1242,0x0389CA,"
+小茂:爷爷!我的精灵成长了!快来看啊",ascii,Gary:Gramps! What did you call me for?,pending_semantic_review,
+1167,0x03897B,439,dialogue_19_19,17,pointer_table,high,0x03827F,1244,0x038A8B,"
+得到图鉴",ascii,Received Pok@dex!,pending_semantic_review,
+1168,0x03898D,440,dialogue_19_19,38,pointer_table,high,0x038281,1245,0x038A95,"
+大木:我的梦想就是制作一本完整的图鉴,但我已经老了不行了!现在希望由你们替我完成梦想!这是能在宠物精灵历史留名的工作,你们该出发了!",ascii,Gary:Okay Gramps! Leave it all to me!,pending_semantic_review,
+1169,0x0389B4,456,dialogue_19_19,145,pointer_table,high,0x038283,1246,0x038B15,"
+小茂:爷爷!就交给我一个人就好了,小智真可惜没有你出场的份!对了我要去向姐姐借城镇地图去,我要叫他不要借给你,小智!哈哈,你去也没用的!",ascii,"Ash, I hate to say it, but I don't need you! I know! I'll borrow a Town Map from my Sis! I'll tell her not to lend you one, Ash! Hahaha!",pending_semantic_review,
+1170,0x038A46,476,dialogue_19_19,71,pointer_table,high,0x038285,1247,0x038B96,"
+小茂姐姐:爷爷有任务交给你啊,真辛苦,这个给你用吧",ascii,"Gary's Sis:Grandpa asked you to run anerrand? Here,this will help you!",pending_semantic_review,
+1171,0x038A8E,482,dialogue_19_19,18,pointer_table,high,0x038287,1248,0x038BC7,"
+得到地图",ascii,Received Town Map!,pending_semantic_review,
+1172,0x038AA1,484,dialogue_19_19,76,pointer_table,high,0x038289,1249,0x038BD1,"
+老爷爷:上次好像喝醉似的头好痛,什么?我妨碍了你,你在完成精灵图鉴啊?那么抓精灵需要精灵球,只要到附近的商店就能买到",ascii,"Old man:Ahhh! I'm feeling much betternow! Hm? Oh! Sure, you can go through!",pending_semantic_review,
+1173,0x038AEE,502,dialogue_19_19,20,pointer_table,high,0x03828B,1250,0x038C41,"
+常青道馆上了锁",ascii,It's locked!,pending_semantic_review,
+1174,0x038B03,512,dialogue_19_19,184,pointer_table,high,0x03828D,1251,0x038C51,"
+小茂:小智!你要去宠物精灵联盟啊?算了吧!反正我看你也没有徽章,把关的人不会让你过去的!还有你的精灵到底有没有变强啊?",ascii,"Gary:Hey Ash!You'regoing to the Pok@mon League? Forget it, you probably don't haveany Badges! The guard won't let youthrough! So,did your Pok@mon get any stronger?",pending_semantic_review,
+1175,0x038BBC,518,dialogue_19_19,147,pointer_table,high,0x03828F,1252,0x038CC2,"
+小茂:在宠物精灵联盟里尽是非常强劲的训兽师,不能不想办法通过那里,你也不能尽是停留在这里,想办法往前进吧!",ascii,"I hear the Pok@mon League has many tough trainers,I have to figure out how to get past them!You should quit dawdling and get a move on!",pending_semantic_review,
+1176,0x038C50,524,dialogue_19_19,27,pointer_table,high,0x03829B,1258,0x038DE5,"
+捉虫少年:以最强的训练家为目标你能赢的了我吗?",ascii,Hey! You have a Pikachu!,pending_semantic_review,
+1177,0x038C6C,530,dialogue_19_19,32,pointer_table,high,0x03829D,1259,0x038E13,"
+捉虫少年:你果然很强!",ascii,"I looked, but I cannot find one.",pending_semantic_review,
+1178,0x038C8D,537,dialogue_19_19,26,pointer_table,high,0x0382A1,1261,0x038E40,"
+捉虫少年:不可能...",ascii,No! Caterpie can't cut it!,pending_semantic_review,
+1179,0x038CA8,543,dialogue_19_19,29,pointer_table,high,0x038293,1254,0x038D7A,"
+捉虫少年:你也是训练师吧,让我们来较量一下!",ascii,"Hey,wait up! What'sthe Hurry?",pending_semantic_review,
+1180,0x038CC6,548,dialogue_19_19,17,pointer_table,high,0x038295,1255,0x038DA5,"
+捉虫少年:你真厉害...",ascii,You're very good!,pending_semantic_review,
+1181,0x038CD8,553,dialogue_19_19,29,pointer_table,high,0x038297,1256,0x038DBB,"
+捉虫少年:不要逃避,来吧!",ascii,Hey!You scared the bugs away!,pending_semantic_review,
+1182,0x038CF6,554,dialogue_19_19,26,pointer_table,high,0x038299,1257,0x038DD4,"
+捉虫少年:我输了",ascii,I'm looking for a Weedle.,pending_semantic_review,
+1183,0x038D11,559,dialogue_19_19,17,pointer_table,high,0x03841B,1450,0x03AB93,"
+绅士:不想加入吗...",ascii,You're very good!,pending_semantic_review,
+1184,0x038D23,6543,dialogue_19_19,86,pointer_table,high,0x038291,1253,0x038D29,"
+守卫:这扇门之后都是一些强劲的精灵训练家们,你还未拿到徽章啊...当然无法让你通过啊",graphical_codes,"0000000<B3DF><B3E0>:<B0EE><B3E1><B3E2><B3E3><B2A8><B1C0><B0C2><B1D1><B3E4><B2C9><B3D9><B0BC><B0A1><B0A2><B2DE><B2C5><B1BF><B2EF>,<B0C5><B2BD><B3E5><B0C6><B0DB><B3D1><B3D2><B2AC>...<B2C4><B2AA><B3E6><B2B8><B2CB><B0C5><B3DA><B3D4><B2AC>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1185,0x038D7A,596,dialogue_19_19,36,pointer_table,high,0x0382A3,1262,0x038E54,"
+男孩:你是精灵训练家吧?小刚正在找寻对手...来吧!",ascii,You're a trainer right? Follow me!,pending_semantic_review,
+1186,0x038D9F,601,dialogue_19_19,31,pointer_table,high,0x0382A5,1263,0x038E84,"
+男孩:你有战胜的自信的话就去挑战小刚吧!",ascii,Brock's looking forchallengers.,pending_semantic_review,
+1187,0x038DBF,607,dialogue_19_19,108,pointer_table,high,0x0382A7,1264,0x038EAC,"
+裁判:你要不要朝宠物精灵冠军试试啊?我虽不是训练家但我可给你一些意见,你的比卡丘想赢这道场满难的!小刚所使用的地面系精灵是不受电气攻击的影响!",ascii,"Hey champ! Let me give you a tip. Brock uses Rock Pok@mon, Electric attacks are uselessagainst them!",pending_semantic_review,
+1188,0x038E2C,613,dialogue_19_19,51,pointer_table,high,0x0382A9,1265,0x038F37,"
+侦察员:等等!小孩有什么事啊!找小刚挑战?一万光年以后吧!",ascii,Wait! You're light years away from facing Brock!,pending_semantic_review,
+1189,0x038E60,624,dialogue_19_19,37,pointer_table,high,0x0382AB,1266,0x038F6E,"
+侦察员:你很厉害但比不上小刚",ascii,"Darn,Light years isdistance,not time!",pending_semantic_review,
+1190,0x038E86,634,dialogue_19_19,119,pointer_table,high,0x0382AD,1267,0x038F8B,"
+小刚:你来了!我是尼比宠物精灵道馆的领袖小刚!我的坚硬石头也就是我的精灵!我所使用的精灵以石系居多!就算会输也要战斗,这就是训练家的宿命!来吧",ascii,I'm Brock!I believein strong defense and determination! Do you still wish to face me? Fine then! Show me your best!,pending_semantic_review,
+1191,0x038EFE,654,dialogue_19_19,74,pointer_table,high,0x0382AF,1268,0x039014,"
+小刚:哈哈,真厉害呢我给你宠物精灵联盟公认的灰色徽章!",ascii,"I took you for granted.As proof ofyour victory,here'sthe BOULDERBADGE!",pending_semantic_review,
+1192,0x038F49,660,dialogue_19_19,56,pointer_table,high,0x0382B1,1269,0x039049,"
+得到灰色徽章",ascii,"You can now use theHM Flash! Here,takethis with you too.",pending_semantic_review,
+1193,0x038F82,661,dialogue_19_19,14,pointer_table,high,0x0382B3,1270,0x039057,"
+小刚:有了灰色徽章你的精灵都将变强,持有闪光特技的精灵就算不战斗也能使用闪光!还有这个给你!",ascii,Recieved TM35!,pending_semantic_review,
+1194,0x038F91,668,dialogue_19_19,56,pointer_table,high,0x0382B5,1271,0x0390B1,"
+得到技能机器34!",ascii,It contains Harden.This raises your Pokemon's defense.,pending_semantic_review,
+1195,0x038FCA,675,dialogue_19_19,67,pointer_table,high,0x0382B7,1272,0x0390C2,"
+小刚:使用技能机器时精灵将马上记住特技,但特技就将丢弃!要让哪个精灵学习最好想清楚.特技35是变硬...被攻击时一直变硬...提升防御力!是一个有趣的特技!",ascii,A TM can only be used once.So choosewho you use it on carefully.,pending_semantic_review,
+1196,0x03900E,697,dialogue_19_19,95,pointer_table,high,0x0382B9,1273,0x039152,"
+小刚:在这世上什么人都有,有人养精灵有人利用精灵战斗,在这有训练宠物精灵养成的修行!如果你以训练家为目标的话你该去华蓝市的道场试试!",ascii,You seem to be verygifted as a trainer.Go to the GYM in Cerulean andtest your strength.,pending_semantic_review,
+1197,0x03906E,707,dialogue_19_19,47,pointer_table,high,0x0382BB,1274,0x0391D3,"
+裁判:真不愧是强手!就是这样一来朝宠物精灵联盟冠军前进!",ascii,"Just as I thought, you're Champion Material!",pending_semantic_review,
+1198,0x03909E,718,dialogue_19_19,30,pointer_table,high,0x0382BD,1275,0x03920A,"
+迷你裙:那边的人!你刚在看我吧!",ascii,"You looked at me, didn't you?",pending_semantic_review,
+1199,0x0390BD,719,dialogue_19_19,12,pointer_table,high,0x0382BF,1276,0x039229,"
+迷你裙:算了...不过你再继续看的话我会打人的喔!",ascii,You're mean!,pending_semantic_review,
+1200,0x0390CA,729,dialogue_19_19,35,pointer_table,high,0x0382C1,1277,0x039258,"
+捉虫少年:你不是在常青森林遇到的家伙吗?",ascii,Hey! I met you in Viridian Forest!,pending_semantic_review,
+1201,0x0390EE,734,dialogue_19_19,18,pointer_table,high,0x0382C3,1278,0x039280,"
+捉虫少年:在这附近可以抓到和森林不一样的精灵!",ascii,You beat me again!,pending_semantic_review,
+1202,0x039101,741,dialogue_19_19,31,pointer_table,high,0x0382C5,1279,0x0392AE,"
+谈判小子:穿短裤活动方便很好啊!你要不要穿穿看?",ascii,Are you a Pok@mon Trainer too?,pending_semantic_review,
+1203,0x039121,747,dialogue_19_19,37,pointer_table,high,0x0382C7,1280,0x0392DD,"
+谈判小子:你有用电脑通信吗?捕抓到的妖怪超过六个会自动记录到电脑中",ascii,Are you storing Pok@mon on the PC?,pending_semantic_review,
+1204,0x039147,756,dialogue_19_19,31,pointer_table,high,0x0382C9,1281,0x03931F,"
+捉虫少年:你是训练家?那就立刻跟我比一下!",ascii,You can fight my new Pok@mon!,pending_semantic_review,
+1205,0x039167,762,dialogue_19_19,43,pointer_table,high,0x0382CB,1282,0x039348,"
+捉虫少年:还真是搞笑...",ascii,Trained Pok@mon arestronger than wild ones.,pending_semantic_review,
+1206,0x039193,565,dialogue_19_19,30,pointer_table,high,0x0382D1,1285,0x0393AA,"
+谈判小子:什么嘛!没有穿短裤嘛",ascii,Hey! You're don't have shorts,pending_semantic_review,
+1207,0x0391B2,570,dialogue_19_19,31,pointer_table,high,0x0382D3,1286,0x0393C8,"
+谈判小子:输了输了...",ascii,Even in winter I wear shorts!,pending_semantic_review,
+1208,0x0391D2,575,dialogue_19_19,27,pointer_table,high,0x0382D5,1287,0x0393DE,"
+捉虫少年:用刚抓到的宠物精灵跟我打吧!",ascii,Do you like bug Pok@mon?,pending_semantic_review,
+1209,0x0391EE,585,dialogue_19_19,38,pointer_table,high,0x0382D7,1288,0x039404,"
+捉虫少年:你很厉害呢",ascii,Bug types evolve faster than others.,pending_semantic_review,
+1210,0x039215,586,dialogue_19_19,23,pointer_table,high,0x0382D9,1289,0x039419,"
+迷你裙:呀!你刚才有摸我身体吗?",ascii,Eek! Did you touch me!?,pending_semantic_review,
+1211,0x03922D,767,dialogue_19_19,35,pointer_table,high,0x0382DB,1290,0x039438,"
+迷你裙:原来是误会啊...",ascii,Route 4 is at the foot of Mt.Moon.,pending_semantic_review,
+1212,0x039251,774,dialogue_19_19,38,pointer_table,high,0x0382CD,1283,0x039360,"
+迷你裙:你的视线!真的很令人在意!",ascii,"The look you gave me,it's intriguing!",pending_semantic_review,
+1213,0x039278,779,dialogue_19_19,45,pointer_table,high,0x0382CF,1284,0x039381,"
+迷你裙:如果不想打架的话就不要让视力交会",ascii,Don't let people see you to avoid fights!,pending_semantic_review,
+1214,0x0392A6,785,dialogue_19_19,62,pointer_table,high,0x0382DD,1291,0x039450,"
+大爷:只告诉你一个好消息...!秘密的鲤鱼王只卖500元!你买不买?",ascii,Have I got a deal for you! How about a Magikarp for just500$?,pending_semantic_review,
+1215,0x0392E5,5398,dialogue_19_19,10,pointer_table,high,0x0382DF,1292,0x03948C,"
+是吗?真是可惜",ascii,Too bad...,pending_semantic_review,
+1216,0x0392F0,790,dialogue_19_19,18,pointer_table,high,0x0382E1,1293,0x03949B,"
+得到鲤鱼王",ascii,Recieved Magikarp!,pending_semantic_review,
+1217,0x039303,791,dialogue_19_19,48,pointer_table,high,0x0382E3,1294,0x0394A7,"
+捉虫少年:可疑男人在洞内徘徊你是...",ascii,I saw suspicious men this cave.What about you?,pending_semantic_review,
+1218,0x039334,796,dialogue_19_19,36,pointer_table,high,0x0382E5,1295,0x0394CB,"
+捉虫少年:被骗了,没错!我看到的家伙他是火箭队的人!",ascii,I'm sure they're from Team Rocket!,pending_semantic_review,
+1219,0x039359,801,dialogue_19_19,43,pointer_table,high,0x0382E7,1296,0x0394FD,"
+迷你裙:干嘛啊?我是在这里等洞里分散的朋友啦",ascii,I'm waiting for my friends to find me here.,pending_semantic_review,
+1220,0x039385,806,dialogue_19_19,43,pointer_table,high,0x0382E9,1297,0x039529,"
+迷你裙:我是听说这个洞里有很棒的化石才来的",ascii,I heard there are very rare fossils here.,pending_semantic_review,
+1221,0x0393B1,811,dialogue_19_19,36,pointer_table,high,0x0382EB,1298,0x039554,"
+火箭队:宠物精灵黑手党组织火箭队!是又恐怖又强的!",ascii,"We,Team Rocket,are Pok@mon gansters!",pending_semantic_review,
+1222,0x0393D6,816,dialogue_19_19,22,pointer_table,high,0x0382ED,1299,0x039585,"
+火箭队:你比我更恐怖...",ascii,Darn it all! I blewit!,pending_semantic_review,
+1223,0x0393ED,821,dialogue_19_19,22,pointer_table,high,0x0382F3,1302,0x0395D0,"
+迷你裙:洞隆里相当的宽阔呢",ascii,Mt.Moon's big isn'tit?,pending_semantic_review,
+1224,0x039404,826,dialogue_19_19,27,pointer_table,high,0x0382F5,1303,0x0395EB,"
+迷你裙:这么大哪边是出口都搞不清楚",ascii,How do you get out of here?,pending_semantic_review,
+1225,0x039420,831,dialogue_19_19,31,pointer_table,high,0x038303,1310,0x0396E3,"
+谈判小子:你也是来这里探险的吗?",ascii,Did you come to explore too?,pending_semantic_review,
+1226,0x039440,836,dialogue_19_19,34,pointer_table,high,0x038305,1311,0x039703,"
+谈判小子:到底哪里有珍奇的精灵呢?",ascii,I came here to showoff my Pok@mon.,pending_semantic_review,
+1227,0x039463,841,dialogue_19_19,19,pointer_table,high,0x0382FB,1306,0x039660,"
+大叔:原来是小孩子啊!吓我一跳",ascii,Whoa!You scared me!,pending_semantic_review,
+1228,0x039477,846,dialogue_19_19,37,pointer_table,high,0x0382FD,1307,0x03967E,"
+大叔:小孩子不可以到这么阴暗的地方闲逛!!",ascii,Kids like you shouldn't be here!,pending_semantic_review,
+1229,0x03949D,851,dialogue_19_19,37,pointer_table,high,0x0382F7,1304,0x03960E,"
+火箭队:我们正在做重要的工作!小孩子赶快回家!",ascii,We're pulling a bigjob here!Get lost!,pending_semantic_review,
+1230,0x0394C3,856,dialogue_19_19,44,pointer_table,high,0x0382F9,1305,0x03963B,"
+火箭队:蛮厉害的嘛,加入我们火箭队吧!",ascii,If you see a fossilgive it to me and scram!,pending_semantic_review,
+1231,0x0394F0,862,dialogue_19_19,35,pointer_table,high,0x0382FF,1308,0x0396A7,"
+火箭队:随便闯入大人的世界可是很危险的!",ascii,Kids should leave grown-ups alone!,pending_semantic_review,
+1232,0x039514,867,dialogue_19_19,43,pointer_table,high,0x038301,1309,0x0396CF,"
+火箭队:真令人生气!",ascii,Pok@mon lived here long before people came.,pending_semantic_review,
+1233,0x039540,868,dialogue_19_19,43,pointer_table,high,0x038307,1312,0x039725,"
+研究员:等一下!这化石是我发现的,两个都是我的!",ascii,Stop!I found these fossils! They're mine!,pending_semantic_review,
+1234,0x03956C,873,dialogue_19_19,28,pointer_table,high,0x0382EF,1300,0x03959D,"
+研究员:哇!什么啊!不要突然跟我说话!",ascii,What! Don't sneak up on me!,pending_semantic_review,
+1235,0x039589,878,dialogue_19_19,36,pointer_table,high,0x0382F1,1301,0x0395C1,"
+研究员:......",ascii,I have to find stronger Pok@mon.,pending_semantic_review,
+1236,0x0395AE,881,dialogue_19_19,54,pointer_table,high,0x038309,1313,0x039753,"
+研究员:好吧,就分你一个好了,我和你各拿一个化石,一个人独吞是不行的哟",ascii,"Okay,I'll share! We'll each take 1! No being greedy!",pending_semantic_review,
+1237,0x0395E5,887,dialogue_19_19,122,pointer_table,high,0x03830B,1314,0x039797,"
+研究员:听说离这里很远的红莲岛上有宠物精灵的研究所能让化石复活的研究...",ascii,Then this is mine! On Cinnabar island there's a Pok@mon research lab that does research on reviving fossilizedPok@mon!,pending_semantic_review,
+1238,0x039660,910,dialogue_19_19,55,pointer_table,high,0x03830D,1315,0x0397DF,"
+火箭队:等一下!化石是我们火箭队的东西!",ascii,Jesse:Stop right there!That fossil is Team Rocket's!,pending_semantic_review,
+1239,0x039698,917,dialogue_19_19,44,pointer_table,high,0x03830F,1316,0x039806,"
+小智:你们是?",ascii,James:Surrender nowor prepare to fight!,pending_semantic_review,
+1240,0x0396C5,933,dialogue_19_19,32,pointer_table,high,0x038311,1317,0x039814,"
+武藏:既然你诚心诚意的问了",ascii,Meowth: Meeouth! That's right!,pending_semantic_review,
+1241,0x0396E6,939,dialogue_19_19,22,pointer_table,high,0x038327,1328,0x03992D,"
+小次郎:没想到会输...",ascii,Jesse:A brat beat us?,pending_semantic_review,
+1242,0x0396FD,941,dialogue_19_19,29,pointer_table,high,0x038329,1329,0x039943,"
+武藏:好讨厌的感觉哟...",ascii,James:Such a dread-ful twerp!,pending_semantic_review,
+1243,0x03971B,947,dialogue_19_19,84,pointer_table,high,0x03832B,1330,0x03995B,"
+喵喵:喵...",ascii,"Jesse&James:Team Rocket,blast off atthe speed of light!Meouth:Hey!Wait formeeowth!",pending_semantic_review,
+1244,0x039770,966,dialogue_19_19,119,pointer_table,high,0x03832D,1331,0x039967,"
+警察:真是可怜!家里糟了小偷,我知道犯人是谁!是火箭队,警察也对他们很头疼呢!",ascii,"These people were robbed, we believe it's Team Rocket's doing! Even our Police force has trouble with that gang!",pending_semantic_review,
+1245,0x0397E8,972,dialogue_19_19,120,pointer_table,high,0x03832F,1332,0x0399B1,"
+裁判:未来的冠军给你一些建议吧!这里的馆长阿霞是使用水系的精灵!如果用植物系的怪物来吸取水份或用电系来使之麻痹也行",ascii,"Yo Champ!The LeaderMisty, is a pro whouses water Pok@mon!Try to zap them with electric, or you can use grass types.",pending_semantic_review,
+1246,0x039861,978,dialogue_19_19,19,pointer_table,high,0x038331,1333,0x039A22,"
+游泳男:你的对手是我",ascii,I'm 1st!Let's do it,pending_semantic_review,
+1247,0x039875,982,dialogue_19_19,36,pointer_table,high,0x038333,1334,0x039A37,"
+游泳男:阿霞会成为一位很强的训练家!才不会输给你呢!",ascii,Misty won't lose tosomeone like you!,pending_semantic_review,
+1248,0x03989A,987,dialogue_19_19,34,pointer_table,high,0x038335,1335,0x039A6A,"
+游泳女:对付你我就够了!用不着阿霞亲自动手!",ascii,I'm more than good enough for you!,pending_semantic_review,
+1249,0x0398BD,992,dialogue_19_19,19,pointer_table,high,0x038337,1336,0x039A95,"
+游泳女:失败了...",ascii,You overwhelmed me.,pending_semantic_review,
+1250,0x0398D1,5324,dialogue_19_19,101,pointer_table,high,0x038339,1337,0x039AA7,"
+小霞:你在培养精灵时有什么策略吗?我的策略就是让它成为水系的精灵!让我这个世界第一美少女来成为你的对手吧!",ascii,Misty:Pro Trainers have a policy aboutPok@mon.Mine is an all-out offensive approach! What's yours?,pending_semantic_review,
+1251,0x039937,998,dialogue_19_19,164,pointer_table,high,0x03833B,1338,0x039B0F,"
+小霞:是我输了?没办法!蓝色徽章就给你吧!拥有蓝色徽章就算不是在战斗中也能使用居合斩喔!特技11也送给你吧,特技11是泡沫光线让水系的精灵学吧!",ascii,Misty: You're too much! Here's the Cascade Badge to show you beat me! Now you can use theCUT HM!And you can have TM11 too. It teaches BubbleBeam!Use it well!,pending_semantic_review,
+1252,0x0399DC,1026,dialogue_19_19,71,pointer_table,high,0x03833D,1339,0x039B96,"
+小茂:嗨!小智,你还为那种事困惑啊?我都抓到又强又棒的精灵!什么什么?你抓了什么啊?让我看看嘛!",ascii,Yo Ash!You're stillstruggling along? Me?I'm doing great!I'll show you!,pending_semantic_review,
+1253,0x039A24,1032,dialogue_19_19,161,pointer_table,high,0x03833F,1340,0x039BF0,"
+小茂:嗨嗨,我到马沙家他给我看了许多珍贵的宠物精灵耶!托他的福,我的精灵图鉴又增加了好几页呢,总之马沙是一位有名的宠物精灵收集家!电脑通信的精灵保管系统也是他做的,如果你也有使用真应该去向他道谢呢",ascii,"Okay,you won! Hey guess what! I went to Bill's.You know he invented the PC system we use? You should go thank him. Well,I better get rolling! Smell ya later!",pending_semantic_review,
+1254,0x039AC6,1061,dialogue_19_19,46,pointer_table,high,0x038341,1341,0x039CAF,"
+捉虫少年:如果你能连续打败五人,将可得到丰富的奖品你能胜利吗?",ascii,Beat us 5 trainers and win a prize! I'm 1st!,pending_semantic_review,
+1255,0x039AF5,1066,dialogue_19_19,35,pointer_table,high,0x038343,1342,0x039CEC,"
+捉虫少年:不错,但你能全部胜过我们吗?",ascii,"I did my best, I have no regrets.",pending_semantic_review,
+1256,0x039B19,1075,dialogue_19_19,18,pointer_table,high,0x038345,1343,0x039D11,"
+迷你裙:第二人正是我!现在才是真正的战斗!",ascii,I'm 2nd! Let's go!,pending_semantic_review,
+1257,0x039B2C,1080,dialogue_19_19,24,pointer_table,high,0x03834D,1347,0x039D86,"
+迷你裙:我是第四人,你不就是为了引人注目才来的吗?",ascii,No.3! I won't be easy!,pending_semantic_review,
+1258,0x039B45,1083,dialogue_19_19,19,pointer_table,high,0x038349,1345,0x039D4D,"
+谈判小子:第三人登场!我不会给你太好过",ascii,I'm No.4!Tired Yet?,pending_semantic_review,
+1259,0x039B59,1095,dialogue_19_19,16,pointer_table,high,0x038351,1349,0x039DD0,"
+侦察员:我就是最后的第五人了!来吧!!",ascii,No.5! Get ready!,pending_semantic_review,
+1260,0x039B6A,1100,dialogue_19_19,27,pointer_table,high,0x038355,1351,0x039E11,"
+火箭队:太精彩了,按照约定这个礼物给你吧",ascii,Congrats!You earneda prize!,pending_semantic_review,
+1261,0x039B86,1105,dialogue_19_19,14,pointer_table,high,0x038357,1352,0x039E39,"
+得到月之石",ascii,Got Moonstone!,pending_semantic_review,
+1262,0x039B95,1111,dialogue_19_19,62,pointer_table,high,0x038359,1353,0x039E45,"
+火箭队:加入火箭队吧,我们是专门使用宠物精灵扩充地皮的集团",ascii,"By the way, want tojoin TEAM ROCKET? Fine! You'll regretthis!",pending_semantic_review,
+1263,0x039BD4,1118,dialogue_19_19,19,pointer_table,high,0x03835B,1354,0x039E7F,"
+火箭队:你还真是强劲!有这样的技术不加入火箭队太可惜了...",ascii,Arrgh!You are good!,pending_semantic_review,
+1264,0x039BE8,1125,dialogue_19_19,30,pointer_table,high,0x03835D,1355,0x039EB8,"
+侦察员:我在草堆里都看到了你的表现",ascii,I saw you fight at the bridge!,pending_semantic_review,
+1265,0x039C07,1130,dialogue_19_19,15,pointer_table,high,0x03835F,1356,0x039EDB,"
+侦察员:你狠...",ascii,You are good...,pending_semantic_review,
+1266,0x039C17,1140,dialogue_19_19,74,pointer_table,high,0x038361,1357,0x039EEB,"
+男孩:我不会培育宠物精灵,觉的它怪可怜的正想放生这只小火龙...如果你能好好照顾他的话,我就把它送给你如何?",ascii,I'm looking for a good home for my Charmander.Can you take care of him?,pending_semantic_review,
+1267,0x039C62,1145,dialogue_19_19,26,pointer_table,high,0x038363,1358,0x039F52,"
+是吗?那我只好放生了...",ascii,"Oh,I'll release himthen...",pending_semantic_review,
+1268,0x039C7D,1150,dialogue_19_19,17,pointer_table,high,0x038365,1359,0x039F6A,"
+真的?太谢谢你了!",ascii,Take care of him.,pending_semantic_review,
+1269,0x039C8F,1157,dialogue_19_19,33,pointer_table,high,0x038369,1361,0x039F88,"
+大叔:刚刚从观月山下来的还很有精神啊!",ascii,I'm still fired up after Mt.Moon!,pending_semantic_review,
+1270,0x039CB1,1162,dialogue_19_19,14,pointer_table,high,0x03836B,1362,0x039FAE,"
+大叔:厉害!",ascii,You work hard!,pending_semantic_review,
+1271,0x039CC0,1163,dialogue_19_19,31,pointer_table,high,0x03836D,1363,0x039FBA,"
+谈判小子:这片森林是附近的训练家训练的场所!",ascii,Trainers come here to practice!,pending_semantic_review,
+1272,0x039CE0,1168,dialogue_19_19,17,pointer_table,high,0x03836F,1364,0x039FE6,"
+谈判小子:做的不错嘛",ascii,You trained well!,pending_semantic_review,
+1273,0x039CF2,1173,dialogue_19_19,37,pointer_table,high,0x038371,1365,0x039FFB,"
+大叔:你要去马沙的小屋吗?那去之前先与我比试一下!",ascii,Goin' to see Bill? Let's fight first!,pending_semantic_review,
+1274,0x039D18,1178,dialogue_19_19,24,pointer_table,high,0x038379,1369,0x03A094,"
+迷你裙:我是迷你裙!",ascii,"Hi, My boyfriend iscool!",pending_semantic_review,
+1275,0x039D31,1183,dialogue_19_19,9,pointer_table,high,0x03837F,1372,0x03A0D2,"
+大叔:我输了...",ascii,Ya got me,pending_semantic_review,
+1277,0x039D4E,1188,dialogue_19_19,17,pointer_table,high,0x038373,1366,0x03A02C,"
+大叔:算你狠!",ascii,You're somethin'.,pending_semantic_review,
+1279,0x039D74,1151,dialogue_19_19,15,pointer_table,high,0x03834B 0x038367,1346 1360,0x039D73 0x039F7C,"
+谈判小子:有两下子
+---
+
+得到小火龙",ascii,Got Charmander!,pending_semantic_review,
+1280,0x039D84,1193,dialogue_19_19,35,pointer_table,high,0x038375,1367,0x03A03A,"
+谈判小子:枯叶港的铁达尼号的舞会,我和爸爸去过!羡慕吧",ascii,I went to a party on the S.S.ANNE!,pending_semantic_review,
+1281,0x039DA8,1200,dialogue_19_19,28,pointer_table,high,0x03834F 0x038377,1348 1368,0x039DB7 0x03A06F,"
+迷你裙:我今后就关注你吧
+---
+
+铁达尼号上可是有很多厉害的训练师哦!",ascii,I saw trainers fromall over!,pending_semantic_review,
+1282,0x039DC5,1209,dialogue_19_19,31,pointer_table,high,0x03837B,1370,0x03A0A8,"
+迷你裙:喜欢迷你裙!",ascii,I wish he was as good as you!,pending_semantic_review,
+1283,0x039DE5,1216,dialogue_19_19,19,pointer_table,high,0x038353 0x03837D,1350 1371,0x039DF4 0x03A0BC,"
+侦察员:你是第一个打败我们的
+---
+
+大叔:想过去,先打败我",ascii,I'm off to see Bill,pending_semantic_review,
+1284,0x039DF9,1217,dialogue_19_19,19,pointer_table,high,0x038381,1373,0x03A0E2,"
+侦察员:我是侦察员",ascii,I got a girlfriend!,pending_semantic_review,
+1285,0x039E0D,1218,dialogue_19_19,19,pointer_table,high,0x038383,1374,0x03A0F5,"
+侦察员:哈哈哈...",ascii,She'll cheer me up.,pending_semantic_review,
+1286,0x039E21,1219,dialogue_19_19,29,pointer_table,high,0x038385,1375,0x03A107,"
+谈判小子:我有预感,你会与我战斗",ascii,I knew I had to fight you!,pending_semantic_review,
+1287,0x039E3F,1224,dialogue_19_19,19,pointer_table,high,0x038387,1376,0x03A127,"
+谈判小子:我有预感会输...",ascii,I knew I'd lose too,pending_semantic_review,
+1288,0x039E53,1229,dialogue_19_19,37,pointer_table,high,0x038389,1377,0x03A141,"
+迷你裙:朋友们都拥有可爱的精灵...可恨",ascii,I'm jealous of my friend's Clefairy!,pending_semantic_review,
+1289,0x039E79,1236,dialogue_19_19,23,pointer_table,high,0x03838B,1378,0x03A167,"
+迷你裙:从观月山来的吗?我想要皮皮...",ascii,Do you have one too?,pending_semantic_review,
+1290,0x039E91,1246,dialogue_19_19,160,pointer_table,high,0x03838D,1379,0x03A18C,"
+马沙:大家好,我是马沙!大家都叫我精灵迷!你那是什么眼神?不相信的样子...我是实验失败才和精灵粘在一起的你能救我吗?我要进入传送机里,分离程序就拜托你了!对,就是那部电脑!",ascii,Hiya!I'm a Pok@Mon!I'm not. I'm Bill! I messed up an exp-eriment and turned into a Pok@mon! Canyou help me out?Youjust go to my PC and start the cell program!,pending_semantic_review,
+1291,0x039F32,5462,dialogue_19_19,12,pointer_table,high,0x03838F,1380,0x03A22F,"
+马沙获救了",ascii,Run Program.,pending_semantic_review,
+1292,0x039F3F,1252,dialogue_19_19,60,pointer_table,high,0x038391,1381,0x03A23B,"
+马沙:谢谢你,你是来看我的收集品的是吗?对了这是给你的谢礼",ascii,"Yeehah!Thanks bud!Ihave to thank you! Here, maybe this'lldo.",pending_semantic_review,
+1293,0x039F7C,1258,dialogue_19_19,15,pointer_table,high,0x038393,1382,0x03A274,"
+得到船票",ascii,Got S.S.Ticket!,pending_semantic_review,
+1294,0x039F8C,1260,dialogue_19_19,104,pointer_table,high,0x038395,1383,0x03A27E,"
+马沙:现在枯叶市枯叶港来了一搜铁达尼号听说也来了许多训练家呢,我有一张船票但我不喜欢派对,你去玩玩吧",ascii,"They invited me, but I can't stand fancy do's. So, whydon't you go? All the passengers are trainers!",pending_semantic_review,
+1295,0x039FF5,1266,dialogue_19_19,9,pointer_table,high,0x038397,1384,0x03A2E1,"
+马沙:对了,给你看一下我的收藏品吧.传说现在被发现的精灵种类在这个世界上有150种之多,但实际数量可能要比这还多,我一直在这个海边就是要等传说中的精灵出现...",ascii,Have fun!,pending_semantic_review,
+1296,0x039FFF,1272,dialogue_19_19,60,pointer_table,high,0x038399,1385,0x03A378,"
+火箭队:喂!不可以随便进入别人的花园!...我?我只是一个过路人,可不是一个奇怪的人!什么?我很可疑?",ascii,What! I'm just an innocent bystander!Don't you believe me?,pending_semantic_review,
+1297,0x03A03C,1282,dialogue_19_19,27,pointer_table,high,0x03839B,1386,0x03A3D5,"
+火箭队:我再也不敢了...饶了我吧!那么...我就闪人了...拜拜!",ascii,Ok! I'll leave quietly!,pending_semantic_review,
+1298,0x03A058,1283,dialogue_19_19,47,pointer_table,high,0x03839D,1387,0x03A40F,"
+警卫:我是尽责的警卫,好渴喔!喂喂!现在这里是禁止通行!",ascii,"I'm on guard duty. Gee, I'm thirsty though...",pending_semantic_review,
+1299,0x03A088,1290,dialogue_19_19,36,pointer_table,high,0x03839F,1388,0x03A444,"
+捉虫少年:我看你不惯!",ascii,"I've never seen youaround, you good?",pending_semantic_review,
+1300,0x03A0AD,1291,dialogue_19_19,16,pointer_table,high,0x0383A1,1389,0x03A45A,"
+捉虫少年:现在看你顺眼了...",ascii,You're too good!,pending_semantic_review,
+1301,0x03A0BE,1294,dialogue_19_19,19,pointer_table,high,0x0383A3,1390,0x03A476,"
+侦察员:想见识一下吗?",ascii,You want to battle?,pending_semantic_review,
+1302,0x03A0D2,1299,dialogue_19_19,18,pointer_table,high,0x0383A5,1391,0x03A48C,"
+侦察员:反而让我见识了!",ascii,I didn't start it!,pending_semantic_review,
+1303,0x03A0E5,1305,dialogue_19_19,17,pointer_table,high,0x0383A7,1392,0x03A4A4,"
+女孩:我长的可爱吧",ascii,"Me? Ok,I'll play!",pending_semantic_review,
+1304,0x03A0F7,1306,dialogue_19_19,17,pointer_table,high,0x0383A9,1393,0x03A4B7,"
+女孩:我喜欢你!",ascii,Just didn't work!,pending_semantic_review,
+1305,0x03A109,1307,dialogue_19_19,29,pointer_table,high,0x0383AB,1394,0x03A4C7,"
+捉虫少年:我捉到好精灵了,比试一下吧",ascii,There aren't many bugs here.,pending_semantic_review,
+1306,0x03A127,1314,dialogue_19_19,35,pointer_table,high,0x0383AD,1395,0x03A4EB,"
+捉虫少年:还是欠缺训练...",ascii,I'm going back to Viridian Forest.,pending_semantic_review,
+1307,0x03A14B,1323,dialogue_19_19,29,pointer_table,high,0x0383AF,1396,0x03A505,"
+女孩:你在看哪里?",ascii,Excuse me! I'm on the phone!,pending_semantic_review,
+1308,0x03A169,1328,dialogue_19_19,19,pointer_table,high,0x0383B1,1397,0x03A517,"
+女孩:是个误会",ascii,(Whisper Whisper..),pending_semantic_review,
+1309,0x03A17D,1335,dialogue_19_19,23,pointer_table,high,0x0383B3,1398,0x03A526,"
+侦察员:现在我的心情不好!",ascii,I just lost to somekid!,pending_semantic_review,
+1310,0x03A195,1339,dialogue_19_19,17,pointer_table,high,0x0383B5,1399,0x03A540,"
+侦察员:心情更糟了...",ascii,I just can't win.,pending_semantic_review,
+1311,0x03A1A7,1349,dialogue_19_19,28,pointer_table,high,0x0383B9,1401,0x03A57B,"
+船员:铁达尼号一年才进一次枯叶港",ascii,Welcome to the S.S.Anne!,pending_semantic_review,
+1312,0x03A1C4,1360,dialogue_19_19,33,pointer_table,high,0x0383BB,1402,0x03A59C,"
+船员:欢迎来到铁达尼号!请等一等,客人你的票呢?",ascii,"Excuse me, do you have a ticket?",pending_semantic_review,
+1313,0x03A1E6,1365,dialogue_19_19,19,pointer_table,high,0x0383BD,1403,0x03A5CA,"
+船员:谢谢,欢迎你上船!",ascii,"Ok, Welcome aboard!",pending_semantic_review,
+1314,0x03A1FA,1370,dialogue_19_19,27,pointer_table,high,0x0383C3,1406,0x03A62F,"
+绅士:我是从宝石大陆来的",ascii,My Pok@mon are my freinds!,pending_semantic_review,
+1315,0x03A216,1373,dialogue_19_19,30,pointer_table,high,0x0383C5,1407,0x03A648,"
+绅士:有空一定要去宝石大陆看看哦",ascii,You should be nice to freinds!,pending_semantic_review,
+1316,0x03A235,1377,dialogue_19_19,28,pointer_table,high,0x0383C7,1408,0x03A669,"
+迷你裙:这里的男孩都很害羞呢",ascii,I got Pok@mon from all over!,pending_semantic_review,
+1317,0x03A252,1382,dialogue_19_19,24,pointer_table,high,0x0383C9,1409,0x03A686,"
+迷你裙:讨厌你这种小孩子!",ascii,Oh No! You hurt them!,pending_semantic_review,
+1318,0x03A26B,1386,dialogue_19_19,23,pointer_table,high,0x0383DB,1418,0x03A75E,"
+谈判小子:你别小看我的精灵",ascii,I love Pok@mon! Do you?,pending_semantic_review,
+1319,0x03A283,1391,dialogue_19_19,18,pointer_table,high,0x0383DD,1419,0x03A779,"
+谈判小子:还欠缺修炼啊",ascii,Wow! You're great!,pending_semantic_review,
+1320,0x03A296,1395,dialogue_19_19,32,pointer_table,high,0x0383CB,1410,0x03A6A0,"
+绅士:来到这个方元地区还真是舒服",ascii,"You,pup! How dare you barge in!",pending_semantic_review,
+1321,0x03A2B7,1396,dialogue_19_19,25,pointer_table,high,0x0383CD,1411,0x03A6C1,"
+绅士:你听说过还有金银地区的传说吗?",ascii,Humph! You rude child!,pending_semantic_review,
+1322,0x03A2D1,1405,dialogue_19_19,25,pointer_table,high,0x0383D3,1414,0x03A711,"
+水手:今天天气好啊",ascii,My pride is at stake!,pending_semantic_review,
+1323,0x03A2EB,1410,dialogue_19_19,12,pointer_table,high,0x0383D5,1415,0x03A724,"
+水手:我玩的很开心",ascii,You sank me!,pending_semantic_review,
+1324,0x03A2F8,1411,dialogue_19_19,28,pointer_table,high,0x0383CF,1412,0x03A6E5,"
+大胖子:看我钓上的好货色吧!",ascii,I like feisty kids like you!,pending_semantic_review,
+1325,0x03A315,1416,dialogue_19_19,14,pointer_table,high,0x0383D1,1413,0x03A701,"
+大胖子:可恶...",ascii,Argh! Lost it!,pending_semantic_review,
+1326,0x03A324,1421,dialogue_19_19,29,pointer_table,high,0x0383DF,1420,0x03A790,"
+迷你裙:我喜欢大海的感觉",ascii,I never saw you at the party!,pending_semantic_review,
+1327,0x03A342,1426,dialogue_19_19,34,pointer_table,high,0x0383E1,1421,0x03A7A9,"
+迷你裙:就像喜欢你一样...",ascii,"Oh, I adore your strong Pok@mon!",pending_semantic_review,
+1328,0x03A365,1433,dialogue_19_19,34,pointer_table,high,0x0383EB,1426,0x03A821,"
+双胞胎:你好啊!",ascii,I'm kinda bored.Howabout a battle?,pending_semantic_review,
+1329,0x03A388,1438,dialogue_19_19,11,pointer_table,high,0x0383ED,1427,0x03A831,"
+水手:我明白了,你是伟大的训练师",ascii,Good fight!,pending_semantic_review,
+1330,0x03A394,1439,dialogue_19_19,31,pointer_table,high,0x0383D7,1416,0x03A737,"
+水手:天天都努力工作",ascii,Us Sailors have Pok@mon too!,pending_semantic_review,
+1331,0x03A3B4,1440,dialogue_19_19,19,pointer_table,high,0x0383D9,1417,0x03A74C,"
+水手:有没有搞错?",ascii,"Ok, You're not bad.",pending_semantic_review,
+1332,0x03A3C8,1441,dialogue_19_19,37,pointer_table,high,0x0383EF,1428,0x03A851,"
+水手:你是谁?",ascii,"Matey, you walk theplank if you lose!",pending_semantic_review,
+1333,0x03A3EE,1446,dialogue_19_19,23,pointer_table,high,0x0383F1,1429,0x03A85F,"
+水手:我又是谁??",ascii,Argh! Beaten by a kid!,pending_semantic_review,
+1334,0x03A406,1457,dialogue_19_19,24,pointer_table,high,0x0383F3,1430,0x03A870,"
+水手:出海愉快!",ascii,Ahoy! Are you sea sick?,pending_semantic_review,
+1335,0x03A41F,1458,dialogue_19_19,19,pointer_table,high,0x0383F5,1431,0x03A880,"
+水手:晚饭什么时候开始?",ascii,I was just careless,pending_semantic_review,
+1336,0x03A433,1465,dialogue_19_19,25,pointer_table,high,0x0383F7,1432,0x03A898,"
+大胖子:我正在减肥!",ascii,Hey matey! Let's fight!,pending_semantic_review,
+1337,0x03A44D,1466,dialogue_19_19,18,pointer_table,high,0x0383F9,1433,0x03A8AC,"
+大胖子:不过现在又胖了!",ascii,"Urf, I Feel Ill...",pending_semantic_review,
+1338,0x03A460,1471,dialogue_19_19,87,pointer_table,high,0x038403,1438,0x03A91B,"
+小茂:小智真没想到会在这里见到你!你也受到了邀请啊?图鉴又增加了吗?我可是收集到四十多种了!让我看看你有没有进步吧!!",ascii,"Bonjour Ash! Were you really invited?How's your Pok@Dex?I already have 40 kinds, pal!",pending_semantic_review,
+1339,0x03A4B8,1489,dialogue_19_19,75,pointer_table,high,0x038405,1439,0x03A98C,"
+小茂:听说居合斩的名人也在船上,看了一下竟然是会晕船的老头!你也去看看吧,再会了!",ascii,There's an old man here who can teach CUT! It's really usefull! Smell ya!,pending_semantic_review,
+1340,0x03A504,1507,dialogue_19_19,18,pointer_table,high,0x038407,1440,0x03A9DB,"
+名人:晕船,不行了...好难过",ascii,Urrp! I'm Seasick!,pending_semantic_review,
+1341,0x03A517,5463,dialogue_19_19,13,pointer_table,high,0x03840B,1442,0x03AA08,"
+名人:嗯,好多了...谢谢你!什么你想看我的居合斩?如果我的身体好点的话就可以表演给你看...对了,这个给你吧!只要教你的精灵那你就随时都可看到居合斩了!",ascii,"(Rub,rub,rub)",pending_semantic_review,
+1342,0x03A525,1512,dialogue_19_19,18,pointer_table,high,0x0383C1,1405,0x03A61C,"
+船员:船已经出发了",ascii,The S.S.ANNE left.,pending_semantic_review,
+1343,0x03A538,1517,dialogue_19_19,28,pointer_table,high,0x038411,1445,0x03AB0C,"
+水手:就算你的精灵有多强都不可能是你这种小孩该来的!",ascii,This is no place for kids!,pending_semantic_review,
+1344,0x03A555,1522,dialogue_19_19,38,pointer_table,high,0x0383B7,1400,0x03A556,"
+女警君莎:抓到最近老是恶作剧的杰尼龟",ascii,My Squirtle keeps getting in trouble.,pending_semantic_review,
+1345,0x03A57C,1528,dialogue_19_19,95,pointer_table,high,0x03840F,1444,0x03AAA9,"
+裁判:为来的冠军!马其斯少佐的外号叫闪电美国!使用电系精灵可称的上美国第一!飞行类和水类是不适用的...",ascii,"Hey Champ! Lt.Surgeloves electric Pok@mon,avoid birds andwater pok@mon! And beware of paralysis",pending_semantic_review,
+1346,0x03A5DC,1534,dialogue_19_19,50,pointer_table,high,0x0383BF,1404,0x03A5E1,"
+船员:小鬼,这艘铁达尼号上的客人都是有钱人,你别到这里闲逛!!",ascii,"I'm sorry,but you need a ticket to come aboard.",pending_semantic_review,
+1347,0x03A60F,1545,dialogue_19_19,10,pointer_table,high,0x03AF44,1584,0x03BE08,"
+得到依布",ascii,Got Eevee!,pending_semantic_review,
+1348,0x03A61A,1546,dialogue_19_19,20,pointer_table,high,0x038413,1446,0x03AB40,"
+水手:有两下子",ascii,You surprised me!,pending_semantic_review,
+1349,0x03A62F,1556,dialogue_19_19,124,pointer_table,high,0x03840D,1443,0x03AA97,"
+得到特技01居合斩",ascii,"Whew! Thanks! Here,let me give ya thisCUT HM!Your Pok@moncan use it outside of battle to cut down trees! Got HM 01!",pending_semantic_review,
+1350,0x03A6AC,1562,dialogue_19_19,31,pointer_table,high,0x038419,1449,0x03AB6E,"
+绅士:马其斯少佐是军人,你也想加入吗?",ascii,Lt.Surge was my CO.in the army!,pending_semantic_review,
+1351,0x03A6CC,1573,dialogue_19_19,28,pointer_table,high,0x038415,1447,0x03AB4F,"
+士兵:能过我这关吗?",ascii,There's a secret tothis GYM!,pending_semantic_review,
+1352,0x03A6E9,1609,dialogue_19_19,91,pointer_table,high,0x03841D,1451,0x03ABA7,"
+马其斯:哦?宝贝你要挑战啊?哈哈!就凭你那微弱的力量!就想与我挑战?真是有胆量?精灵做的不是这么简单的!让你尝尝苦头!",ascii,"Electric Pok@mon saved me in the war! They zapped myenemies,just like I'll do to you!",pending_semantic_review,
+1353,0x03A745,1633,dialogue_19_19,119,pointer_table,high,0x038421,1453,0x03AC50,"
+得到技能24",ascii,You're the real deal kid!Here's theThunderbadge! That badge lets you use FLY any time kid! And take this TM aswell!,pending_semantic_review,
+1354,0x03A7BD,6556,dialogue_19_19,26,pointer_table,high,0x0383E3,1422,0x03A7C3,"
+绅士:明年我要去旅游",graphical_codes,0000000<B7B4><B1C5>:<B5E6><B3EA><B1C2><B0C3><B0C7><B7C1><B5FB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1355,0x03A7D8,6558,dialogue_19_19,27,pointer_table,high,0x0383E5,1423,0x03A7D8,"
+绅士:都一把年纪了,走不动了",graphical_codes,"<0A><B7B4><B1C5>:<B1C0><B1D1><B3D3><B3EA><B7C2><B0F8>,<B7C3><B0CE><B0B2><B0F8>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1356,0x03A7F4,6566,dialogue_19_19,18,pointer_table,high,0x0383E7,1424,0x03A7F4,"
+水手:小子,别乱逛!",graphical_codes,"<0A><B5F7><B1A3>:<B0B6><B1DF>,<B2CA><B7C4><B5C1>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1357,0x03A807,6572,dialogue_19_19,25,pointer_table,high,0x0383E9,1425,0x03A807,"
+水手:我错了,请您随便参观",graphical_codes,"<0A><B5F7><B1A3>:<B1C2><B2DC><B0F8>,<B2D8><B7C5><B5C2><B3A2><B7C6><B6DB>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1358,0x03A821,1645,dialogue_19_19,104,pointer_table,high,0x038423,1454,0x03AC5C,"
+女警君莎:那是橙色徽章?你可能是厉害的训练家!!抓到最近老是恶作剧的杰尼龟给你好吗?",ascii,This Squirtle I gotkeeps getting into mischief.I think heneeds a better trainer. Would you like him?,pending_semantic_review,
+1359,0x03A88A,1655,dialogue_19_19,26,pointer_table,high,0x038425,1455,0x03ACAD,"
+是吗?谁能领养这只杰尼龟呢...",ascii,Oh...What am I to do now?,pending_semantic_review,
+1360,0x03A8A5,1660,dialogue_19_19,24,pointer_table,high,0x038427,1456,0x03ACCB,"
+拜托了,要好好照顾它哦!",ascii,Please treat him well.,pending_semantic_review,
+1361,0x03A8BE,6578,dialogue_19_19,19,pointer_table,high,0x0383FB,1434,0x03A8C4,"
+水手:快走开!",graphical_codes,0000000<B5F7><B1A3>:<B2EC><B7C3><B1D9>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1362,0x03A8D2,6579,dialogue_19_19,21,pointer_table,high,0x0383FD,1435,0x03A8D2,"
+水手:刚才我有说话吗?",graphical_codes,<0A><B5F7><B1A3>:<B2BF><B1F2><B1C2><B0AE><B1E7><B1EF><B0D7>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1363,0x03A8E8,6581,dialogue_19_19,30,pointer_table,high,0x0383FF,1436,0x03A8E8,"
+绅士:我有个女儿现在和你一样大",graphical_codes,<0A><B7B4><B1C5>:<B1C2><B0AE><B0BA><B2CF><B7D0><B2F5><B0B8><B0C9><B0C5><B1D1><B2DA><B1BE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1364,0x03A907,6594,dialogue_19_19,19,pointer_table,high,0x038401,1437,0x03A907,"
+绅士:做我女婿吧...",graphical_codes,<0A><B7B4><B1C5>:<B2B4><B1C2><B2CF><B7D1><B0BE>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1365,0x03A91B,1673,dialogue_19_19,19,pointer_table,high,0x038439,1465,0x03ADD9,"
+老爷爷:我的精灵是无敌的!",ascii,"Win, Lose, or Draw!",pending_semantic_review,
+1366,0x03A92F,1678,dialogue_19_19,26,pointer_table,high,0x03843B,1466,0x03ADF3,"
+老爷爷:在我家是无敌的...",ascii,To live is to gamble!,pending_semantic_review,
+1367,0x03A94A,1679,dialogue_19_19,12,pointer_table,high,0x038431,1461,0x03AD71,"
+谈判小子:我困了...",ascii,No cheating!,pending_semantic_review,
+1368,0x03A957,1680,dialogue_19_19,25,pointer_table,high,0x038433,1462,0x03AD85,"
+谈判小子:干嘛打扰我休息?",ascii,Huh? That's not right!,pending_semantic_review,
+1369,0x03A971,1681,dialogue_19_19,29,pointer_table,high,0x03843D,1467,0x03AE0D,"
+双胞胎:我们脸上有东西吗?",ascii,"I'm new,but I thinkI can win!",pending_semantic_review,
+1370,0x03A98F,1690,dialogue_19_19,19,pointer_table,high,0x03843F,1468,0x03AE27,"
+双胞胎:说你呢,你还看!!",ascii,My Pok@mon couldn't,pending_semantic_review,
+1371,0x03A9A3,1693,dialogue_19_19,26,containing_offset,medium,,1439,0x03A98C,"
+小茂:听说居合斩的名人也在船上,看了一下竟然是会晕船的老头!你也去看看吧,再会了!",ascii,I have never won before.,pending_semantic_review,
+1372,0x03A9BE,1698,dialogue_19_19,18,containing_offset,medium,,1439,0x03A98C,"
+小茂:听说居合斩的名人也在船上,看了一下竟然是会晕船的老头!你也去看看吧,再会了!",ascii,I saw this coming.,pending_semantic_review,
+1373,0x03A9D1,1699,dialogue_19_19,24,containing_offset,medium,,1439,0x03A98C,"
+小茂:听说居合斩的名人也在船上,看了一下竟然是会晕船的老头!你也去看看吧,再会了!",ascii,Fwahaha! I've neverlost!,pending_semantic_review,
+1374,0x03A9EA,1704,dialogue_19_19,17,containing_offset,medium,,1440,0x03A9DB,"
+名人:晕船,不行了...好难过",ascii,Luck of the draw!,pending_semantic_review,
+1375,0x03A9F7,1705,dialogue_19_19,4,pointer_table,high,0x038409,1441,0x03A9F6,"
+小智:我帮你拍拍!",ascii,raw!,pending_semantic_review,
+1376,0x03A9FC,1715,dialogue_19_19,25,pointer_table,high,0x038435,1463,0x03AD9F,"
+谈判小子:你怎么这么没有礼貌?",ascii,I'm the best in my class!,pending_semantic_review,
+1377,0x03AA16,1719,dialogue_19_19,33,pointer_table,high,0x038437,1464,0x03ADBD,"
+谈判小子:算了,我不和你计较",ascii,"Darn,I need to makethem stronger!",pending_semantic_review,
+1378,0x03AA38,1720,dialogue_19_19,28,containing_offset,medium,,1442,0x03AA08,"
+名人:嗯,好多了...谢谢你!什么你想看我的居合斩?如果我的身体好点的话就可以表演给你看...对了,这个给你吧!只要教你的精灵那你就随时都可看到居合斩了!",ascii,My Pok@mon should be ready!,pending_semantic_review,
+1379,0x03AA55,1721,dialogue_19_19,24,containing_offset,medium,,1442,0x03AA08,"
+名人:嗯,好多了...谢谢你!什么你想看我的居合斩?如果我的身体好点的话就可以表演给你看...对了,这个给你吧!只要教你的精灵那你就随时都可看到居合斩了!",ascii,I should get betterones.,pending_semantic_review,
+1380,0x03AA6E,1722,dialogue_19_19,34,containing_offset,medium,,1442,0x03AA08,"
+名人:嗯,好多了...谢谢你!什么你想看我的居合斩?如果我的身体好点的话就可以表演给你看...对了,这个给你吧!只要教你的精灵那你就随时都可看到居合斩了!",ascii,Competition! I can not get enough!,pending_semantic_review,
+1381,0x03AA91,1723,dialogue_19_19,15,containing_offset,medium,,1442,0x03AA08,"
+名人:嗯,好多了...谢谢你!什么你想看我的居合斩?如果我的身体好点的话就可以表演给你看...对了,这个给你吧!只要教你的精灵那你就随时都可看到居合斩了!",ascii,I had a chance!,pending_semantic_review,
+1382,0x03AAA1,1724,dialogue_19_19,24,containing_offset,medium,,1443,0x03AA97,"
+得到特技01居合斩",ascii,Careful! I am on fire!,pending_semantic_review,
+1383,0x03AABA,1725,dialogue_19_19,17,containing_offset,medium,,1444,0x03AAA9,"
+裁判:为来的冠军!马其斯少佐的外号叫闪电美国!使用电系精灵可称的上美国第一!飞行类和水类是不适用的...",ascii,I've burnt out...,pending_semantic_review,
+1384,0x03AACC,1731,dialogue_19_19,52,pointer_table,high,0x03AE74,1480,0x03B154,"
+谈判小子:你完蛋了!",ascii,There's a huge Pok@mon that sleepsback this way.,pending_semantic_review,
+1385,0x03AB01,1732,dialogue_19_19,37,pointer_table,high,0x03AE76,1481,0x03B168,"
+谈判小子:今天肚子疼,不和你计较",ascii,I think you need a Flute to wake him.,pending_semantic_review,
+1386,0x03AB27,1743,dialogue_19_19,52,pointer_table,high,0x03842B,1458,0x03ACEF,"
+爷爷:听说这个是地鼠挖的山洞,好像能通到常青市的样子",ascii,"A fainted Pok@mon can't fight,but canstill use HMs.",pending_semantic_review,
+1387,0x03AB5C,1754,dialogue_19_19,69,pointer_table,high,0x03842D,1459,0x03AD23,"
+男孩:这个秘传技05你应该用的上,让能学闪光的精灵学会后可以照亮山洞",ascii,I'm Prof.Oaks Aide!I was sent to give you an HM05! Here you are Ash!,pending_semantic_review,
+1388,0x03ABA2,1761,dialogue_19_19,9,pointer_table,high,0x03842F,1460,0x03AD65,"
+得到特技05",ascii,Got HM05!,pending_semantic_review,
+1389,0x03ABAC,1767,dialogue_19_19,47,pointer_table,high,0x03AE80,1486,0x03B21F,"
+女孩:你还长的蛮英俊的嘛",ascii,You have Pok@Mon? You're mine!You deceived me!,pending_semantic_review,
+1390,0x03ABCB,1769,dialogue_19_19,16,pointer_table,high,0x03AE82,1487,0x03B238,"
+女孩:有实力我欣赏",ascii,You deceived me!,pending_semantic_review,
+1391,0x03ABDC,1770,dialogue_19_19,52,pointer_table,high,0x03AE88,1490,0x03B270,"
+谈判小子:我们商量一下,把你的比卡丘让给我吧",ascii,I'm taking Rock Tunnel to go to Lavender Town.,pending_semantic_review,
+1392,0x03AC11,1783,dialogue_19_19,18,pointer_table,high,0x03AE8A,1491,0x03B29C,"
+谈判小子:我知道错了",ascii,Are you going too?,pending_semantic_review,
+1393,0x03AC24,1784,dialogue_19_19,18,pointer_table,high,0x03AE94,1496,0x03B30F,"
+捉虫少年:没想到又见到你了",ascii,"Go,my bug Pok@mon!",pending_semantic_review,
+1394,0x03AC37,1787,dialogue_19_19,11,pointer_table,high,0x03AE96,1497,0x03B32A,"
+捉虫少年:你的实力又提升了呢",ascii,You bug me!,pending_semantic_review,
+1395,0x03AC43,1788,dialogue_19_19,19,pointer_table,high,0x03AE9C,1500,0x03B37D,"
+大叔:小心我对你不客气!",ascii,"Haha! Come on,dude!",pending_semantic_review,
+1396,0x03AC57,1802,dialogue_19_19,24,pointer_table,high,0x03AE9E,1501,0x03B395,"
+大叔:您好吗?哈哈...",ascii,Haha! You beat me fair!,pending_semantic_review,
+1397,0x03AC70,1803,dialogue_19_19,19,pointer_table,high,0x03AE90,1494,0x03B2EB,"
+大叔:有意思...",ascii,Great! I was bored!,pending_semantic_review,
+1398,0x03AC84,1808,dialogue_19_19,18,pointer_table,high,0x03AE92,1495,0x03B2FB,"
+大叔:这回完蛋了...",ascii,You sure got guts!,pending_semantic_review,
+1399,0x03AC97,1814,dialogue_19_19,33,pointer_table,high,0x03AE98,1498,0x03B347,"
+谈判小子:别说我没忠告你,快逃吧",ascii,Don't you dare condescend me!,pending_semantic_review,
+1400,0x03ACB9,1821,dialogue_19_19,19,pointer_table,high,0x03AE9A,1499,0x03B367,"
+谈判小子:有两下子...",ascii,No! You're to much!,pending_semantic_review,
+1401,0x03ACCD,1822,dialogue_19_19,38,pointer_table,high,0x03AE8C,1492,0x03B2B1,"
+谈判小子:再怎么努力也不是我的对手!",ascii,Who's that with those cool Pok@mon?,pending_semantic_review,
+1402,0x03ACF4,1831,dialogue_19_19,13,pointer_table,high,0x03AE8E,1493,0x03B2D5,"
+谈判小子:怎么可能呢?",ascii,Keep walking!,pending_semantic_review,
+1403,0x03AD02,1835,dialogue_19_19,27,pointer_table,high,0x03AE84,1488,0x03B24B,"
+大胖子:有碰见你了",ascii,Aren't you a littletoughie!,pending_semantic_review,
+1404,0x03AD1E,5470,dialogue_19_19,10,pointer_table,high,0x03AE86,1489,0x03B25E,"
+大胖子:又输了...",ascii,Too tough!,pending_semantic_review,
+1405,0x03AD29,1836,dialogue_19_19,25,pointer_table,high,0x03AEA0,1502,0x03B3AA,"
+女孩:让姐姐看看你",ascii,I got up early to train!,pending_semantic_review,
+1406,0x03AD43,1837,dialogue_19_19,24,pointer_table,high,0x03AEA2,1503,0x03B3BD,"
+女孩:不要不给面子吧!",ascii,I need to train more.,pending_semantic_review,
+1407,0x03AD5C,1838,dialogue_19_19,29,pointer_table,high,0x03AEAA,1507,0x03B427,"
+职员:这么暗你也敢来",ascii,I've never won a badge yet.,pending_semantic_review,
+1408,0x03AD7A,1852,dialogue_19_19,16,pointer_table,high,0x03AEAC,1508,0x03B43C,"
+职员:佩服你的勇气",ascii,I blew it again.,pending_semantic_review,
+1409,0x03AD8B,1857,dialogue_19_19,18,pointer_table,high,0x03AEAE,1509,0x03B44F,"
+职员:我的东西掉了",ascii,This cave is long!,pending_semantic_review,
+1410,0x03AD9E,1858,dialogue_19_19,17,pointer_table,high,0x03AEB0,1510,0x03B462,"
+职员:一定要找出来",ascii,Doh! You won kid!,pending_semantic_review,
+1411,0x03ADB0,1869,dialogue_19_19,23,pointer_table,high,0x03AEB6,1513,0x03B49C,"
+职员:我不怕黑暗",ascii,I'll leave ya cryinkid!,pending_semantic_review,
+1412,0x03ADC8,1859,dialogue_19_19,7,pointer_table,high,0x03AEB8,1514,0x03B4AD,"
+职员:你也不是等闲之辈",ascii,I give!,pending_semantic_review,
+1413,0x03ADD0,1860,dialogue_19_19,31,pointer_table,high,0x03AEB2,1511,0x03B475,"
+女孩:人家好害怕哦",ascii,You have Pok@Mon! Let's start!,pending_semantic_review,
+1414,0x03ADF0,1861,dialogue_19_19,14,pointer_table,high,0x03AEB4,1512,0x03B488,"
+女孩:你保护我好吗?",ascii,You play hard!,pending_semantic_review,
+1415,0x03ADFF,1866,dialogue_19_19,24,pointer_table,high,0x03AED2,1527,0x03B5CB,"
+大叔:你在这里干什么??",ascii,Give it your best shot!,pending_semantic_review,
+1416,0x03AE18,5403,dialogue_19_19,11,pointer_table,high,0x03AED4,1528,0x03B5E2,"
+大叔:对不起,好象我管不着",ascii,Fired away!,pending_semantic_review,
+1417,0x03AE24,1867,dialogue_19_19,30,pointer_table,high,0x03AED6,1529,0x03B5FC,"
+职员:整天都无聊的在干活",ascii,You have a Pok@dex?I want one!,pending_semantic_review,
+1418,0x03AE43,1868,dialogue_19_19,13,pointer_table,high,0x038441,1469,0x03AE3F,"
+马沙:谢谢......",ascii,Thanks again!,pending_semantic_review,
+1419,0x03AE51,6602,dialogue_19_19,11,pointer_table,high,0x038443,1470,0x03AE50,"
+名人:......",graphical_codes,<B3B1><B2B5>:......,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1420,0x03B058,1879,dialogue_19_19,15,pointer_table,high,0x03AED8,1530,0x03B615,"
+职员:明天该轻松了吧",ascii,I'm so jealous!,pending_semantic_review,
+1421,0x03B068,1883,dialogue_19_19,33,pointer_table,high,0x03AEDE,1533,0x03B650,"
+女孩:你可别乱摸我哦",ascii,Hikers use twigs astrail markers.,pending_semantic_review,
+1422,0x03B08A,1884,dialogue_19_19,18,pointer_table,high,0x03AEE0,1534,0x03B665,"
+女孩:都叫你别乱摸了!!",ascii,I want to go home!,pending_semantic_review,
+1423,0x03B09D,1887,dialogue_19_19,18,pointer_table,high,0x03AEBA,1515,0x03B4C4,"
+大叔:山里才能锻炼身体",ascii,Pok@mon fight! Go!,pending_semantic_review,
+1424,0x03B0B0,1888,dialogue_19_19,10,pointer_table,high,0x03AEBC,1516,0x03B4DB,"
+大叔:果然是这样",ascii,Game over!,pending_semantic_review,
+1425,0x03B0BB,1893,dialogue_19_19,15,pointer_table,high,0x03AECE,1525,0x03B59F,"
+女孩:我想找个男朋友",ascii,I'll fight you!,pending_semantic_review,
+1426,0x03B0CB,1894,dialogue_19_19,19,pointer_table,high,0x03AED0,1526,0x03B5B4,"
+女孩:你呀,不合我胃口!",ascii,I like tiny Pok@mon,pending_semantic_review,
+1427,0x03B0DF,1895,dialogue_19_19,27,pointer_table,high,0x03AECA,1523,0x03B56C,"
+大叔:你想知道吗",ascii,I like drawing Pok@mon!,pending_semantic_review,
+1428,0x03B0FB,1900,dialogue_19_19,27,pointer_table,high,0x03AECC,1524,0x03B57D,"
+大叔:精灵会随着等级提高而进化的!",ascii,"I'm an artist,not afighter.",pending_semantic_review,
+1429,0x03B117,1905,dialogue_19_19,26,pointer_table,high,0x03AEC6,1521,0x03B538,"
+大叔:我觉得石头类的精灵是最强的!",ascii,Maybe I'm lost in here...,pending_semantic_review,
+1430,0x03B132,1906,dialogue_19_19,17,pointer_table,high,0x03AEC8,1522,0x03B55A,"
+大叔:我想错了吗?",ascii,Which way is out?,pending_semantic_review,
+1431,0x03B144,1907,dialogue_19_19,27,pointer_table,high,0x03AEDA,1531,0x03B62A,"
+男孩:刚和女朋友分手了",ascii,I came this far forPok@mon!,pending_semantic_review,
+1432,0x03B160,1908,dialogue_19_19,19,pointer_table,high,0x03AEDC,1532,0x03B641,"
+男孩:心情不好",ascii,You looked harmless,pending_semantic_review,
+1433,0x03B174,1909,dialogue_19_19,19,pointer_table,high,0x03AEE2,1535,0x03B67C,"
+男孩:你碰到我了",ascii,Eek!Don't scare me!,pending_semantic_review,
+1434,0x03B188,1912,dialogue_19_19,94,pointer_table,high,0x03AE78,1482,0x03B188,"
+我终于明白了好好照顾宠物精灵,妙蛙种子很有精神,其实精灵也在找训练师,你能不能帮我照顾这只妙蛙种子呢?",ascii,This Pok@mon needs a strong trainer totake care of it. Would you take careof this Bulbasaur?,pending_semantic_review,
+1435,0x03B1E7,1917,dialogue_19_19,23,pointer_table,high,0x03AE7A,1483,0x03B1EC,"
+是吗?那真是太可惜了...",ascii,Take good care of him!,pending_semantic_review,
+1436,0x03B1FF,1924,dialogue_19_19,14,pointer_table,high,0x03AE7C,1484,0x03B204,"
+那拜托你了!",ascii,Got Bulbasaur!,pending_semantic_review,
+1437,0x03B20E,1929,dialogue_19_19,16,pointer_table,high,0x03AE7E,1485,0x03B211,"
+得到妙蛙种子",ascii,Oh...too bad...,pending_semantic_review,
+1438,0x03B21F,1931,dialogue_19_19,19,pointer_table,high,0x03AEE4,1536,0x03B68D,"
+男孩:是误会,对不起",ascii,It's too dark here!,pending_semantic_review,
+1439,0x03B233,1932,dialogue_19_19,16,pointer_table,high,0x03AEC2,1519,0x03B50B,"
+大叔:别乱走动",ascii,Can you beat me?,pending_semantic_review,
+1440,0x03B244,1933,dialogue_19_19,18,pointer_table,high,0x03AEC4,1520,0x03B51A,"
+大叔:小心山塌下来,我们都完了",ascii,Oops! Out-muscled!,pending_semantic_review,
+1441,0x03B257,1941,dialogue_19_19,15,pointer_table,high,0x03AEBE,1517,0x03B4EC,"
+大叔:你好!",ascii,Do you Cosplay?,pending_semantic_review,
+1442,0x03B267,1942,dialogue_19_19,27,pointer_table,high,0x03AEC0,1518,0x03B4F8,"
+大叔:认识你很高兴",ascii,We dress as Pok@monfor fun!,pending_semantic_review,
+1443,0x03B283,1949,dialogue_19_19,23,pointer_table,high,0x03AEE6,1537,0x03B6A1,"
+谈判小子:和你没得商量!",ascii,Wanna see my Pok@ mon?,pending_semantic_review,
+1444,0x03B29B,1954,dialogue_19_19,18,pointer_table,high,0x03AEE8,1538,0x03B6B9,"
+谈判小子:你想说什么都可以",ascii,Oh no! My Pok@mon!,pending_semantic_review,
+1445,0x03B2AE,1959,dialogue_19_19,19,pointer_table,high,0x03AEEA,1539,0x03B6D4,"
+女孩:我最爱打人了",ascii,That's a tough hike,pending_semantic_review,
+1446,0x03B2C2,1964,dialogue_19_19,17,pointer_table,high,0x03AEEC,1540,0x03B6E7,"
+女孩:我下次不敢了...",ascii,I'm not up to it!,pending_semantic_review,
+1447,0x03B2D4,5866,dialogue_19_19,15,pointer_table,high,0x03AEEE,1541,0x03B6FD,"
+叔叔:你想知道我的厉害吗?",ascii,Ha-hahah-ah-ha!,pending_semantic_review,
+1448,0x03B2E4,1969,dialogue_19_19,19,pointer_table,high,0x03AEF0,1542,0x03B717,"
+叔叔:我知道你的厉害了...",ascii,Haha-ha-choo! Snort,pending_semantic_review,
+1449,0x03B2F8,1974,dialogue_19_19,23,pointer_table,high,0x03AEF2,1543,0x03B731,"
+叔叔:我的防御力是最强的",ascii,I love the mountainair!,pending_semantic_review,
+1450,0x03B310,1983,dialogue_19_19,24,pointer_table,high,0x03AEF4,1544,0x03B74A,"
+叔叔:这么强的防御你都破了??",ascii,That cleared my head!,pending_semantic_review,
+1451,0x03B329,1993,dialogue_19_19,37,pointer_table,high,0x03AEF6,1545,0x03B767,"
+男孩:奇怪?吉野老人不在跑哪去了?",ascii,People pay a lot for Cubone skulls.,pending_semantic_review,
+1452,0x03B34F,1999,dialogue_19_19,64,pointer_table,high,0x03AEF8,1546,0x03B788,"
+女孩:这里是吉野老爷爷的家,他人很好哦,照顾那些被丢弃回不了家的精灵们",ascii,I saw Cubone's mom die trying to get away from Team Rocket!,pending_semantic_review,
+1453,0x03B390,2011,dialogue_19_19,49,pointer_table,high,0x03AEFA,1547,0x03B7CD,"
+商人:火箭队的混蛋们为了钱什么都干的出来",ascii,This town's known as the grave site of Pok@mon.,pending_semantic_review,
+1454,0x03B3C2,2030,dialogue_19_19,28,pointer_table,high,0x03AEFE,1549,0x03B835,"
+修女:幽灵塔是为了安慰死去的精灵之灵而盖的",ascii,Did you come to payrespects?,pending_semantic_review,
+1455,0x03B3DF,6604,dialogue_19_19,11,pointer_table,high,0x03AEA4,1504,0x03B3D3,"
+女孩:你居然能找到这里?",graphical_codes,<B0EC><B1EA><B0DB><B0EE><B0BF>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1456,0x03B3EB,6605,dialogue_19_19,44,pointer_table,high,0x03AEA6,1505,0x03B3EB,"
+女孩:我也是听说附近出现了传说中的精灵才来的",graphical_codes,<0A><B2CF><B1DE>:<B1C2><B0F6><B0C2><B1F1><B1E7><B3C8><B0CD><B0A4><B2F5><B0F8><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1F2><B0FC><B0BC>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1457,0x03B418,2035,dialogue_19_19,14,pointer_table,high,0x03AEA8,1506,0x03B418,"
+闪电鸟:......",ascii,Zapdos: Kree!!,pending_semantic_review,
+1458,0x03B427,2036,dialogue_19_19,34,pointer_table,high,0x03AF00,1550,0x03B860,"
+修女:我是祈祷师!我感觉到上面有迷凸的灵魂...",ascii,There are spirits up to mischief!,pending_semantic_review,
+1459,0x03B44A,2041,dialogue_19_19,47,pointer_table,high,0x03AF02,1551,0x03B88D,"
+女孩:对已死去的皮皮一直无法忘怀...糟糕又哭了...",ascii,Growlith...(Sniff!)I can't stop... crying...,pending_semantic_review,
+1460,0x03B47A,2049,dialogue_19_19,62,pointer_table,high,0x03AF04,1552,0x03B8BE,"
+女孩:你也是来参拜的吗?真是一位对精灵用情很深的男孩",ascii,Pok@mon Tower was built in memory of Pok@mon that have died.,pending_semantic_review,
+1461,0x03B4B9,2069,dialogue_19_19,92,pointer_table,high,0x03AF06,1553,0x03B8F2,"
+小茂:小智?你怎么也到这里来了,你的精灵死了吗?混蛋不是还活着吗!!小心我把你打的不能站起来!",ascii,"Why are you here Ash? You're Pok@monlook fine!But,I canat least make them faint! Let's go!",pending_semantic_review,
+1462,0x03B516,2075,dialogue_19_19,123,pointer_table,high,0x03AF08,1554,0x03B94B,"
+小茂:王八蛋!你对我这么狠!枉我对你这么手下留情!!对了,宠物精灵图鉴怎样了?我发现可拉可拉了但没有发现进化后的嘎拉嘎拉!在这附近一定没有那我要走了!我和你不同我可是个大忙人啊...再见了",ascii,"How's your Pok@dex pal? I just caught a Cubone! Well, I better get going! I've got a lot to accomplish, Smell ya later!",pending_semantic_review,
+1463,0x03B592,2093,dialogue_19_19,53,pointer_table,high,0x03AF0A,1555,0x03B9FD,"
+修女:我们也不知道幽灵的真正身份...如果有幽灵眼镜的话说不定就能知道了...",ascii,A Silph Scope may be able to identifywayward Ghosts!,pending_semantic_review,
+1464,0x03B5C8,2098,dialogue_19_19,31,pointer_table,high,0x03AF0C,1556,0x03BA46,"
+上面阴森森的...精灵们都很害怕...",ascii,Ghost: Get out... Get...Out...,pending_semantic_review,
+1465,0x03B5E8,2103,dialogue_19_19,27,pointer_table,high,0x03AF1A,1563,0x03BB03,"
+少年:知道毒的恐怖吗?",ascii,Such an adorable Pok@mon!,pending_semantic_review,
+1466,0x03B604,2106,dialogue_19_19,28,pointer_table,high,0x03AF1C,1564,0x03BB19,"
+少年:他会让你的体力慢慢减少的",ascii,Don't be so mean toClefairy!,pending_semantic_review,
+1467,0x03B621,2112,dialogue_19_19,15,pointer_table,high,0x03AF1E,1565,0x03BB38,"
+迷你裙:怎么又见到你了?",ascii,I love Nidoran!,pending_semantic_review,
+1468,0x03B631,2113,dialogue_19_19,27,pointer_table,high,0x03AF20,1566,0x03BB50,"
+迷你裙:你真是阴魂不散啊",ascii,That's my favorite Pok@mon!,pending_semantic_review,
+1469,0x03B64D,2114,dialogue_19_19,24,pointer_table,high,0x03AF22,1567,0x03BB69,"
+迷你裙:我爱喵喵...喵",ascii,Meowth is so cute! Meow!,pending_semantic_review,
+1470,0x03B666,2118,dialogue_19_19,32,pointer_table,high,0x03AF24,1568,0x03BB7F,"
+迷你裙:招财猫能带来好运!",ascii,Pidgey and Rattata are cute too!,pending_semantic_review,
+1471,0x03B687,2119,dialogue_19_19,43,pointer_table,high,0x03AF26,1569,0x03BB99,"
+迷你裙:普通的精灵才不普通",ascii,We must look silly standing here like this.,pending_semantic_review,
+1472,0x03B6B3,2120,dialogue_19_19,37,pointer_table,high,0x03AF28,1570,0x03BBB4,"
+迷你裙:像你这种普通的训练师训练的精灵一定普通!",ascii,Saffron's guard won't let us pass!,pending_semantic_review,
+1473,0x03B6D9,2125,dialogue_19_19,26,pointer_table,high,0x03AF2E,1573,0x03BC16,"
+职员:今天运气不好",ascii,You need a strategyto win!,pending_semantic_review,
+1474,0x03B6F4,2126,dialogue_19_19,33,pointer_table,high,0x03AF30,1574,0x03BC29,"
+职员:真是运气不好啊",ascii,"Go with Grimer, and...and then...",pending_semantic_review,
+1475,0x03B716,2127,dialogue_19_19,34,pointer_table,high,0x03AF2A,1571,0x03BBE4,"
+老爷爷:我还年轻呢",ascii,"School is fun, but so are Pok@mon.",pending_semantic_review,
+1476,0x03B739,2128,dialogue_19_19,26,pointer_table,high,0x03AF2C,1572,0x03BBF7,"
+老爷爷:如何?看到我的活力了吧!",ascii,I'll just stay withschool.,pending_semantic_review,
+1477,0x03B754,2137,dialogue_19_19,27,pointer_table,high,0x03AF16,1561,0x03BAC2,"
+职员:我无法忍受我的臭泥军团",ascii,How are you with Pok@mon?,pending_semantic_review,
+1478,0x03B770,2146,dialogue_19_19,13,pointer_table,high,0x03AF18,1562,0x03BADF,"
+职员:谢谢你帮我教训了这堆臭泥军团!",ascii,Ow! Meltdown!,pending_semantic_review,
+1479,0x03B77E,2152,dialogue_19_19,19,pointer_table,high,0x03AF12,1559,0x03BA97,"
+老爷爷:火焰是最美的",ascii,I'm a gambling dude,pending_semantic_review,
+1480,0x03B792,2158,dialogue_19_19,14,pointer_table,high,0x03AF14,1560,0x03BAAC,"
+老爷爷:有点过火了...",ascii,Came up short!,pending_semantic_review,
+1481,0x03B7A1,2159,dialogue_19_19,19,pointer_table,high,0x03AF0E,1557,0x03BA68,"
+迷你裙:看看我的皮皮吧",ascii,All right! Let's go,pending_semantic_review,
+1482,0x03B7B5,2160,dialogue_19_19,18,pointer_table,high,0x03AF10,1558,0x03BA7F,"
+迷你裙:你没被吹眠吧...",ascii,Drat! You're good.,pending_semantic_review,
+1483,0x03B7C8,2166,dialogue_19_19,31,pointer_table,high,0x03AF4A,1587,0x03BE5E,"
+裁判:哈哈哈,这个道馆好啊,都是女生!",ascii,Welcome to Celadon Pok@mon Gym!,pending_semantic_review,
+1484,0x03B7E8,2171,dialogue_19_19,12,pointer_table,high,0x03AF4E,1589,0x03BEA5,"
+水手:你一定会被佳丽亚打败的!",ascii,You're mean!,pending_semantic_review,
+1485,0x03B7F5,6607,dialogue_19_19,63,pointer_table,high,0x03AEFC,1548,0x03B7F6,"
+女孩:可拉可拉的妈妈就是在逃出来的时候被火箭队杀了,我也看到了!",graphical_codes,"00<B2CF><B1DE>:<B0DE><B8BB><B0DE><B8BB><B0BC><B1DB><B1DB><B2AB><B0C2><B0B8><B3EF><B0A4><B0FC><B0BC><B0F0><B7CD><B1B6><B5A2><B5A3><B5A4><B8BC><B0F8>,<B1C2><B0F6><B0FD><B0DB><B0F8>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1486,0x03B835,2175,dialogue_19_19,27,pointer_table,high,0x03AF4C,1588,0x03BE82,"
+女生:喂!这里是只有女孩才能进入的!",ascii,You're not allowed in here!,pending_semantic_review,
+1487,0x03B851,2176,dialogue_19_19,19,pointer_table,high,0x03AF50,1590,0x03BEC3,"
+大姐姐:呀!这里都是女人真是无聊死了!",ascii,I was getting bored,pending_semantic_review,
+1488,0x03B865,2181,dialogue_19_19,10,pointer_table,high,0x03AF52,1591,0x03BEE8,"
+大姐姐:真无聊",ascii,My makeup!,pending_semantic_review,
+1489,0x03B870,2182,dialogue_19_19,33,pointer_table,high,0x03AF54,1592,0x03BEF7,"
+大姐姐:看,这是我的宠物精灵!草系的好处就是养起来很轻松!",ascii,Grass Pok@mon are easy to raise!,pending_semantic_review,
+1490,0x03B892,2187,dialogue_19_19,38,pointer_table,high,0x03AF56,1593,0x03BF2F,"
+大姐姐:你真强",ascii,They also help makeflower arrangements,pending_semantic_review,
+1491,0x03B8B9,2188,dialogue_19_19,30,pointer_table,high,0x03AF58,1594,0x03BF3E,"
+女孩:你在看我!?",ascii,Don't underestimategirl power!,pending_semantic_review,
+1492,0x03B8D8,2189,dialogue_19_19,32,pointer_table,high,0x03AF5A,1595,0x03BF4F,"
+女孩:你真的没有偷看吗?最近有很多这种人哦!",ascii,I didn't have my best Pok@mon!,pending_semantic_review,
+1493,0x03B8F9,2196,dialogue_19_19,31,pointer_table,high,0x03AF5C,1596,0x03BF7A,"
+迷你裙:喂,虫系和火系的精灵别带到这里来!",ascii,Aren't you the peeping Tom?,pending_semantic_review,
+1494,0x03B919,2197,dialogue_19_19,30,pointer_table,high,0x03AF5E,1597,0x03BFA3,"
+迷你裙:就是它!",ascii,"Sorry, we get a lotof gawkers.",pending_semantic_review,
+1495,0x03B938,2198,dialogue_19_19,38,pointer_table,high,0x03AF60,1598,0x03BFB3,"
+女孩:欢迎来到彩虹道场!不要以为这里都是女孩子就大意了喔!",ascii,Don't bring fire orbug Pok@mon in here,pending_semantic_review,
+1496,0x03B95F,2214,dialogue_19_19,8,pointer_table,high,0x03AF62,1599,0x03BFEC,"
+女孩:还蛮行的!",ascii,Oh! You!,pending_semantic_review,
+1497,0x03B968,2215,dialogue_19_19,17,pointer_table,high,0x03AF64,1600,0x03BFFC,"
+大姐姐:你的兴趣是?",ascii,Nice to meet you.,pending_semantic_review,
+1498,0x03B97A,2220,dialogue_19_19,24,pointer_table,high,0x03AF66,1601,0x03C010,"
+大姐姐:下个礼拜要相亲...",ascii,I have a blind datesoon.,pending_semantic_review,
+1499,0x03B993,2226,dialogue_19_19,93,pointer_table,high,0x03AF68,1602,0x03C02A,"
+佳丽亚:今天天气真好!欢迎光临我是彩虹道场的佳丽亚!兴趣是插花哎呀!讨厌,你是来比赛的吗?我是不会输的!",ascii,"Hello, I am Erika, leader of this gym.You wish to battle me? Very well, but I shall not lose.",pending_semantic_review,
+1500,0x03B9F1,2249,dialogue_19_19,102,pointer_table,high,0x03AF6A,1603,0x03C08D,"
+佳丽亚:真是强啊!这个彩虹徽章就奉送给您吧,有了这个徽章就能使用怪力术了!",ascii,I concede defeat.I confer to you the Rainbow badge. You can use the HM Strength outside ofbattle.,pending_semantic_review,
+1501,0x03BA58,2259,dialogue_19_19,46,pointer_table,high,0x03AF34,1576,0x03BC8F,"
+阿姨:我是从枯叶市来的",ascii,My sister's so im- mature! She drives me nuts!,pending_semantic_review,
+1502,0x03BA87,2266,dialogue_19_19,46,pointer_table,high,0x03AF32,1575,0x03BC3E,"
+大叔:宠物精灵之笛之所以可以叫醒睡着的宠物精灵是因为它可以发出人听不到的特殊声音",ascii,I road uphill on Cycling Road from Fuchsia!,pending_semantic_review,
+1503,0x03BAB6,2273,dialogue_19_19,66,pointer_table,high,0x03AF42,1583,0x03BDC6,"
+蓓蓓:没有我不知道的事,就连电玩里的世界也一样!这只依布就送给你吧!",ascii,"I'm looking for a good home for my Eevee, would you like him?",pending_semantic_review,
+1504,0x03BAF9,2283,dialogue_19_19,33,pointer_table,high,0x03AF70,1606,0x03C15A,"
+啊?在海报的后面有秘密按钮!按按看吧!",ascii,There's a switch! Let's push it.,pending_semantic_review,
+1505,0x03BB1B,2288,dialogue_19_19,29,pointer_table,high,0x03AF72,1607,0x03C17F,"
+火箭队:你是什么人?如何进到这里来的?",ascii,You broke into our operation?,pending_semantic_review,
+1506,0x03BB39,2292,dialogue_19_19,29,pointer_table,high,0x03AF74,1608,0x03C1A4,"
+火箭队:可恶...你竟然小看我们火箭队!",ascii,You won't get away with this!,pending_semantic_review,
+1507,0x03BB57,2302,dialogue_19_19,33,pointer_table,high,0x03AF76,1609,0x03C1C9,"
+火箭队:悄悄潜入火箭队的是什么家伙?",ascii,Who are you? How'd you get here!?,pending_semantic_review,
+1508,0x03BB79,5471,dialogue_19_19,12,pointer_table,high,0x03AF78,1610,0x03C1ED,"
+火箭队:混蛋别想轻松的向前进!",ascii,Oww! Beaten!,pending_semantic_review,
+1509,0x03BB86,2307,dialogue_19_19,43,pointer_table,high,0x03AF7A,1611,0x03C20B,"
+火箭队:老大说过使用精灵眼镜可看到平时看不到的幽灵...",ascii,Do you really thinkyou can reach our Boss?,pending_semantic_review,
+1510,0x03BBB2,2314,dialogue_19_19,12,pointer_table,high,0x03AF7C,1612,0x03C241,"
+火箭队:你太嚣张了!!",ascii,I surrender!,pending_semantic_review,
+1511,0x03BBBF,2315,dialogue_19_19,14,pointer_table,high,0x03AF7E,1613,0x03C256,"
+火箭队:你到这里的目的是什么",ascii,This won't do!,pending_semantic_review,
+1512,0x03BBCE,2320,dialogue_19_19,43,pointer_table,high,0x03AF80,1614,0x03C273,"
+火箭队:我明白了,请走好",ascii,I'll talk! Take theelevator to see my Boss!,pending_semantic_review,
+1513,0x03BBFA,2325,dialogue_19_19,15,pointer_table,high,0x03AF82,1615,0x03C28B,"
+火箭队:发现侵入者!",ascii,Intruder alert!,pending_semantic_review,
+1514,0x03BC0A,2330,dialogue_19_19,38,pointer_table,high,0x03AF84,1616,0x03C29F,"
+火箭队:在找精灵眼镜吗?我不知道",ascii,I don't know where the Silph Scope is!,pending_semantic_review,
+1515,0x03BC31,2335,dialogue_19_19,26,pointer_table,high,0x03AF86,1617,0x03C2BF,"
+火箭队:跟火箭队作对没有前途的!",ascii,We heard you were coming!,pending_semantic_review,
+1516,0x03BC4C,2344,dialogue_19_19,13,pointer_table,high,0x03AF88,1618,0x03C2DF,"
+火箭队:精灵眼镜不就是老大在南晶开发部中偷的东西!",ascii,What? I lost?,pending_semantic_review,
+1517,0x03BC5A,2349,dialogue_19_19,31,pointer_table,high,0x03AF8E,1621,0x03C33D,"
+大姐头:来的正好!",ascii,Stop meddling in our affairs!,pending_semantic_review,
+1518,0x03BC7A,2350,dialogue_19_19,33,pointer_table,high,0x03AF90,1622,0x03C34F,"
+火箭队:有胆就尽管去找我们老大!!",ascii,The Silph Scope's here somwhere.,pending_semantic_review,
+1519,0x03BC9C,2361,dialogue_19_19,10,pointer_table,high,0x03AF8C,1620,0x03C329,"
+火箭队:真的不知道!",ascii,"No, Why..?",pending_semantic_review,
+1520,0x03BCA7,2367,dialogue_19_19,64,pointer_table,high,0x03AF36,1577,0x03BCA6,"
+营业员:您是我们这里新开店的一百位幸运顾客,本店特别送您一支矿泉水做纪念!!",ascii,Hi! Would you care for some lemonade? It'll quench your thirst!,pending_semantic_review,
+1521,0x03BCE8,2368,dialogue_19_19,13,pointer_table,high,0x03AF38,1578,0x03BCF0,"
+得到矿泉水",ascii,Got Lemonade!,pending_semantic_review,
+1522,0x03BCF6,2369,dialogue_19_19,35,pointer_table,high,0x03AF3A,1579,0x03BCFC,"
+小红:我是绘图师,画你的人就是我喔!",ascii,My friend and I aretrading Pok@mon!,pending_semantic_review,
+1523,0x03BD1A,2374,dialogue_19_19,36,pointer_table,high,0x03AF3C,1580,0x03BD1F,"
+卡美优:我是写剧本的...比卡丘很可爱吧!",ascii,Caught Pok@mon are given ID numbers.,pending_semantic_review,
+1524,0x03BD3F,2377,dialogue_19_19,37,pointer_table,high,0x03AF3E,1581,0x03BD46,"
+魏村夫:我吗?我是程序师,多多关照!",ascii,My buddy's sending me her Kangaskhan!,pending_semantic_review,
+1525,0x03BD65,2378,dialogue_19_19,56,pointer_table,high,0x03AF40,1582,0x03BD68,"
+BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油吧!如果全部集全的话就去告诉卡美优吧!",ascii,I heard you can seeghosts using Silph Co.'s Silph Scope!,pending_semantic_review,
+1526,0x03BD9E,5871,dialogue_19_19,18,pointer_table,high,0x03AFBA,1643,0x03C601,"
+修女:......",ascii,Urrg...Awaa...graa,pending_semantic_review,
+1527,0x03BDB1,2388,dialogue_19_19,19,pointer_table,high,0x03AFBC,1644,0x03C60E,"
+修女:啊?我做了什么?对不起!被邪恶的力量附身而暴乱...",ascii,Huh?What am I doing,pending_semantic_review,
+1528,0x03BDC5,2399,dialogue_19_19,20,pointer_table,high,0x03AF8A,1619,0x03C311,"
+火箭队:我什么都不知道!",ascii,"Are you lost, brat?",pending_semantic_review,
+1530,0x03BDE2,2401,dialogue_19_19,43,pointer_table,high,0x03AFB4,1640,0x03C514,"
+老大:哈哈!你真有办法能到这里!这是将世界上的宠物用来交易的火箭队总部,我就是火箭队的老大,我的名字叫沙奇!!想反抗我只有自讨苦吃",ascii,"So,I must say, I amimpressed you got here!",pending_semantic_review,
+1531,0x03BE0E,2418,dialogue_19_19,65,pointer_table,high,0x03AF46,1585,0x03BE12,"
+小李:被你发现了...我的事千万不要告诉任何人,这个给你拜托了!",ascii,"Are you taking the gym challenge too? Here, this'll be helpful!",pending_semantic_review,
+1532,0x03BE50,2423,dialogue_19_19,13,pointer_table,high,0x03AF48,1586,0x03BE4E,"
+得到特技02飞天",ascii,Got HM 02 Fly,pending_semantic_review,
+1533,0x03BE5E,2429,dialogue_19_19,130,pointer_table,high,0x03AF92,1623,0x03C370,"
+火箭队:好大的胆子还敢到这里来捣乱!!",ascii,"Jesse: Aha! I smella little brat! James:Hold it rightthere, brat! Our Boss is over here! Meowth: You better not disturb him!",pending_semantic_review,
+1534,0x03BEE1,2443,dialogue_19_19,75,containing_offset,medium,,1590,0x03BEC3,"
+大姐姐:呀!这里都是女人真是无聊死了!",ascii,"Like always...Team Rocket, Blast off at the speed of light!...Again...",pending_semantic_review,
+1535,0x03BF2D,2453,dialogue_19_19,168,pointer_table,high,0x03AFB6,1641,0x03C591,"
+老大:怎...怎么可能?你相当珍惜和爱护宠物精灵啊,我是无法理解...正好我还有要事就不奉陪了!(老大隐掉)",ascii,I see you raise Pok@mon with utmostcare. A child like you would never understand what I hope to achieve. I shall step aside this time! I hope we meet again...,pending_semantic_review,
+1536,0x03BFD6,2473,dialogue_19_19,16,pointer_table,high,0x03AFB8,1642,0x03C5F3,"
+得到精灵眼镜",ascii,Got Silph Scope!,pending_semantic_review,
+1537,0x03BFE7,5872,dialogue_19_19,16,pointer_table,high,0x03AFBE,1645,0x03C643,"
+修女:一起诅咒吧...",ascii,Kekeke...Kwaaah!,pending_semantic_review,
+1538,0x03BFF8,2479,dialogue_19_19,15,pointer_table,high,0x03AFC0,1646,0x03C657,"
+修女:啊?我是怎么了?",ascii,Hwa! I'm saved!,pending_semantic_review,
+1539,0x03C008,2484,dialogue_19_19,19,pointer_table,high,0x03AFCA,1651,0x03C6B7,"
+修女:把灵魂交...出来!",ascii,Begone evil spirit!,pending_semantic_review,
+1540,0x03C01C,2489,dialogue_19_19,16,pointer_table,high,0x03AFCC,1652,0x03C6CE,"
+修女:我是累了...",ascii,The spirit left.,pending_semantic_review,
+1541,0x03C02D,5873,dialogue_19_19,7,pointer_table,high,0x03AFC6,1649,0x03C691,"
+神婆:呜呜...幽灵...",ascii,Kwaaah!,pending_semantic_review,
+1542,0x03C035,2490,dialogue_19_19,25,pointer_table,high,0x03AFC8,1650,0x03C6A6,"
+神婆:啊?这是...",ascii,We need the Silph Scope!,pending_semantic_review,
+1543,0x03C04F,5877,dialogue_19_19,9,pointer_table,high,0x03AFC2,1647,0x03C66C,"
+修女:你能赢吗?",ascii,Huhuhu...,pending_semantic_review,
+1544,0x03C059,2491,dialogue_19_19,46,pointer_table,high,0x03AFC4,1648,0x03C67C,"
+修女:啊?我是怎么了?",ascii,May the souls of Pok@mon rest in peace...,pending_semantic_review,
+1545,0x03C088,5478,dialogue_19_19,12,pointer_table,high,0x03AFCE,1653,0x03C6E0,"
+神婆:可恶...",ascii,Join...Us...,pending_semantic_review,
+1546,0x03C096,2492,dialogue_19_19,46,pointer_table,high,0x03AFD0,1654,0x03C6EE,"
+神婆:晕晕的,我难道贫血吗?",ascii,Step in the magic circle to heal yourPok@mon.,pending_semantic_review,
+1547,0x03C0C5,2500,dialogue_19_19,16,pointer_table,high,0x03AFD2,1655,0x03C709,"
+修女:僵尸啊...",ascii,Ghost! Kwaaaaah!,pending_semantic_review,
+1548,0x03C0D6,6616,dialogue_19_19,61,pointer_table,high,0x03AF6C,1604,0x03C0D5,"
+火箭队:我是在这里看守这张海报的,妨碍我的话可是要尝到苦头的哦!",graphical_codes,"<B5A2><B5A3><B5A4>:<B1C2><B0C2><B0B8><B0EE><B0BF><B0FD><B3DF><B0EE><B6F9><B6FC><B9A3><B0BC>,<B3C5><B3C6><B1C2><B0BC><B1EF><B0DE><B0C2><B0C3><B7EA><B0DB><B3C0><B1B3><B0BC><B2DD>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1549,0x03C114,6634,dialogue_19_19,69,pointer_table,high,0x03AF6E,1605,0x03C114,"
+火箭队:可恶,这样下去的话火箭队的基地会被发现的!要赶快和老大联络才行!",graphical_codes,"<0A><B5A2><B5A3><B5A4>:<B0DE><B5E0>,<B0EE><B2DA><B0F9><B0C7><B0BC><B1EF><B5A2><B5A3><B5A4><B0BC><B9A4><B3BB><B1F9><B1B6><B2F4><B2F5><B0BC>!<B0C3><B1F3><B2EC><B0C9><B2CE><B1BE><B3CE><B9A5><B1F2><B3A9>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1550,0x03C15A,2501,dialogue_19_19,15,pointer_table,high,0x03AFD4,1656,0x03C719,"
+修女:我的意识恢复了",ascii,Was I dreaming?,pending_semantic_review,
+1551,0x03C16A,2502,dialogue_19_19,18,pointer_table,high,0x03AFD6,1657,0x03C72E,"
+修女:康儿...康儿...",ascii,Give me your soul!,pending_semantic_review,
+1552,0x03C17D,2503,dialogue_19_19,16,pointer_table,high,0x03AFD8,1658,0x03C743,"
+修女:颤抖了...",ascii,I was possessed.,pending_semantic_review,
+1553,0x03C18E,6643,dialogue_19_19,8,pointer_table,high,0x03AFDE,1661,0x03C785,"
+修女:伤心啊...",ascii,Zombies!,pending_semantic_review,
+1554,0x03C197,2504,dialogue_19_19,10,pointer_table,high,0x03AFE0,1662,0x03C795,"
+修女:有什么从我身体里飞出...",ascii,Huh? What?,pending_semantic_review,
+1555,0x03C1A2,5878,dialogue_19_19,15,pointer_table,high,0x03AFDA,1659,0x03C753,"
+神婆:嘻嘻...嘻嘻...",ascii,Urgah...Urff...,pending_semantic_review,
+1556,0x03C1B2,2505,dialogue_19_19,35,pointer_table,high,0x03AFDC,1660,0x03C768,"
+神婆:嘻嘻...我到底是怎么了?",ascii,I was controlled by evil spirits.,pending_semantic_review,
+1557,0x03C1D6,5479,dialogue_19_19,19,pointer_table,high,0x03AFE2,1663,0x03C7B3,"
+离开!离开这里!...",ascii,Begone...intruders.,pending_semantic_review,
+1558,0x03C1EA,2510,dialogue_19_19,52,pointer_table,high,0x03AFE4,1664,0x03C7C6,"
+使用精灵眼镜看穿幽灵的真正身份!",ascii,The Silph Scope identified the Marowak ghost.,pending_semantic_review,
+1559,0x03C21F,2516,dialogue_19_19,109,pointer_table,high,0x03AFE6,1665,0x03C7E7,"
+小智:原来幽灵的真正身份是温柔的可拉可拉的妈妈...",ascii,The Ghost was the restless soul of Cubone's mother! Her soul was calmedand she departed tothe afterlife.,pending_semantic_review,
+1560,0x03C28D,2524,dialogue_19_19,177,pointer_table,high,0x03AFE8,1666,0x03C819,"
+火箭队:这个吉野老头真难缠!不打败我们是救不了吉野老头的!",ascii,"Jessie: Stop right there! Meowth: Grampa herewanted to complain,so we're setting him straight. James: So render yourself invisible,or prepare to fight!",pending_semantic_review,
+1561,0x03C33F,2540,dialogue_19_19,48,containing_offset,medium,,1621,0x03C33D,"
+大姐头:来的正好!",ascii,Looks like Team Rocket's blasting off again!,pending_semantic_review,
+1562,0x03C370,2546,dialogue_19_19,179,pointer_table,high,0x03B008,1682,0x03C9B0,"
+吉野:你是来救我的吗?谢谢你...我是来告诫可拉可拉的母亲嘎拉嘎拉之灵而来的,看样子嘎拉嘎拉到天国去了!真要感谢你们特地来这!那现在跟我一起回家",ascii,Fuji:Heh? You came to save me? Thank you. I came here tocalm the soul of Cubone's mother. I think her spirit isat rest and moved on. I must thank you. Follow me to my home.,pending_semantic_review,
+1563,0x03C424,2552,dialogue_19_19,63,pointer_table,high,0x03B00A,1683,0x03CA3A,"
+吉野:小智在完成精灵图鉴的时候如果不对精灵们付出爱心想完成是很困难的...也不知该如何帮助你,这给你吧!",ascii,"Here Ash, I think this Pok@Flute willhelp you on your quest.",pending_semantic_review,
+1564,0x03C464,2565,dialogue_19_19,46,pointer_table,high,0x03B00C,1684,0x03CA9E,"
+吉野:吹起宠物精灵笛就算是熟睡的精灵也会跳起,遇到睡着的精灵使用看看吧!",ascii,The Pok@Flute will wake any sleeping Pok@mon.,pending_semantic_review,
+1565,0x03C493,2575,dialogue_19_19,106,pointer_table,high,0x03CEFA,1776,0x03D7CD,"
+守卫:好渴啊...想喝水...什么?这个矿泉水真的要送给我??好吧为了答谢你就特别的放你过去吧...",ascii,"Boy! I'm parched! Huh?I can have thisdrink? Thanks! If you want to go to Saffron, you can goon through.",pending_semantic_review,
+1566,0x03C4FE,2581,dialogue_19_19,29,pointer_table,high,0x03CEFE,1778,0x03D83D,"
+火箭队:在那边的小鬼别到这里徘徊!!",ascii,What are you doing here kid!?,pending_semantic_review,
+1567,0x03C51C,2591,dialogue_19_19,36,pointer_table,high,0x03CF00,1779,0x03D860,"
+火箭队:老大想侵占这栋新力公司...",ascii,Silph Co.will mergewith Team Rocket!,pending_semantic_review,
+1568,0x03C541,2596,dialogue_19_19,12,pointer_table,high,0x03CF02,1780,0x03D882,"
+火箭队:我就是火箭队四兄弟之一!",ascii,Go home kid!,pending_semantic_review,
+1569,0x03C54E,2597,dialogue_19_19,12,pointer_table,high,0x03CF04,1781,0x03D8A2,"
+火箭队:如果控制了新力就能把宠物精灵卖个好价钱!",ascii,You're good.,pending_semantic_review,
+1570,0x03C55B,2602,dialogue_19_19,27,pointer_table,high,0x03CF06,1782,0x03D8D2,"
+火箭队:妨碍我的家伙,太可恶了!!",ascii,Kids aren't allowedin here!,pending_semantic_review,
+1571,0x03C577,2603,dialogue_19_19,22,pointer_table,high,0x03CF08,1783,0x03D8F2,"
+火箭队:我错了...",ascii,Why do you fight us?,pending_semantic_review,
+1572,0x03C58E,2604,dialogue_19_19,23,pointer_table,high,0x03CF0A,1784,0x03D904,"
+火箭队:发现可疑的家伙!!",ascii,That's far enough kid!,pending_semantic_review,
+1573,0x03C5A6,2605,dialogue_19_19,35,pointer_table,high,0x03CF0C,1785,0x03D91D,"
+火箭队:你到底是什么人?",ascii,I work for Silph and Team Rocket!,pending_semantic_review,
+1574,0x03C5CA,2610,dialogue_19_19,26,pointer_table,high,0x03CF16,1790,0x03D9A5,"
+火箭队:能来到这里你还真有办法...",ascii,"Quit messing with us,kid!",pending_semantic_review,
+1575,0x03C5E5,2615,dialogue_19_19,10,pointer_table,high,0x03CF18,1791,0x03D9C7,"
+火箭队:我真要夸奖你能顺利到这来,但社长室可没这么容易让你过去",ascii,I give up!,pending_semantic_review,
+1576,0x03C5F0,2622,dialogue_19_19,29,pointer_table,high,0x03CF12,1788,0x03D964,"
+火箭队:没见过的家伙",ascii,I was a scientist for Silph.,pending_semantic_review,
+1577,0x03C60E,2624,dialogue_19_19,65,pointer_table,high,0x03CF14,1789,0x03D979,"
+火箭队:打倒我你就满足了吗?我是不会让你赢的",ascii,"Team Rocket said ifI helped them, theywould let me study Pok@mon!",pending_semantic_review,
+1578,0x03C650,2638,dialogue_19_19,17,pointer_table,high,0x03CF1A,1792,0x03DA05,"
+火箭队:这个新力公司被我们火箭队占据了!!",ascii,Intruder spotted!,pending_semantic_review,
+1579,0x03C662,2643,dialogue_19_19,12,pointer_table,high,0x03CF1C,1793,0x03DA2E,"
+火箭队:火箭队万岁!",ascii,Who are you?,pending_semantic_review,
+1580,0x03C66F,2644,dialogue_19_19,29,pointer_table,high,0x03CF0E,1786,0x03D935,"
+火箭队:又是你在这里捣乱!?",ascii,We have control of Silph Co.!,pending_semantic_review,
+1581,0x03C68D,2651,dialogue_19_19,30,pointer_table,high,0x03CF10,1787,0x03D950,"
+火箭队:请随便看...",ascii,Boss has been afterthis place!,pending_semantic_review,
+1582,0x03C6AC,2660,dialogue_19_19,34,pointer_table,high,0x03CF1E,1794,0x03DA42,"
+火箭队:你想干什么?",ascii,My Pok@mon are my loyal soldiers!,pending_semantic_review,
+1583,0x03C6CF,2661,dialogue_19_19,27,pointer_table,high,0x03CF20,1795,0x03DA56,"
+火箭队:可恶的家伙",ascii,Darn these weak Pok@mon!,pending_semantic_review,
+1584,0x03C6EB,2662,dialogue_19_19,34,pointer_table,high,0x03CF26,1798,0x03DAA3,"
+大姐头:老大已经在这里我们就没有什么好害怕的!!",ascii,Show Team Rocket a little respect!,pending_semantic_review,
+1585,0x03C70E,2667,dialogue_19_19,19,pointer_table,high,0x03CF28,1799,0x03DAD2,"
+大姐头:我是新力的社员同时也是火箭队的一员",ascii,Disrespectful brat!,pending_semantic_review,
+1586,0x03C722,2668,dialogue_19_19,37,pointer_table,high,0x03CF22,1796,0x03DA69,"
+火箭队:新力已经是我们的了",ascii,There shouldn't be any children here!,pending_semantic_review,
+1587,0x03C748,2673,dialogue_19_19,28,pointer_table,high,0x03CF24,1797,0x03DA84,"
+火箭队:别打我,我也是被逼的...",ascii,It's a long way to our boss!,pending_semantic_review,
+1588,0x03C765,2683,dialogue_19_19,121,pointer_table,high,0x03CF36,1806,0x03DBB1,"
+小茂:等你很久了小智!!我就知道在这等你会出现的!好像被火箭队为难了!反正与我无关!!让我看看你底有没有变强!",ascii,"What kept you Ash? Haha! I guess Team Rocket slowed you down! I saw you in Saffron,so I wantedto see if you got better!",pending_semantic_review,
+1589,0x03C7DF,2689,dialogue_19_19,129,pointer_table,high,0x03CF38,1807,0x03DC19,"
+小茂:开玩笑...那小智我先走了...我还要去精灵联盟挑战最强的四天王啊!!小智你也要加油喔!再见了!!",ascii,"Well,Ash!I'm movingon up,I'm going to the Pok@mon League to boot out the Elite Four! Good luck to ya Ash! Smell ya later!",pending_semantic_review,
+1590,0x03C861,2699,dialogue_19_19,36,pointer_table,high,0x03CF2A,1800,0x03DAFD,"
+火箭队:我也是火箭队四兄弟其中之一!",ascii,I heard a kid was wandering around.,pending_semantic_review,
+1591,0x03C886,2706,dialogue_19_19,9,pointer_table,high,0x03CF2C,1801,0x03DB21,"
+火箭队:算了,我弟弟会为我报仇的!",ascii,Blast it!,pending_semantic_review,
+1592,0x03C890,2715,dialogue_19_19,19,pointer_table,high,0x03CF32,1804,0x03DB88,"
+火箭队:你敢小看我?",ascii,You dare betray us?,pending_semantic_review,
+1593,0x03C8A4,2716,dialogue_19_19,12,pointer_table,high,0x03CF34,1805,0x03DB9C,"
+火箭队:小看就小看吧",ascii,You traitor!,pending_semantic_review,
+1594,0x03C8B1,2717,dialogue_19_19,23,pointer_table,high,0x03CF2E,1802,0x03DB42,"
+火箭队:刚刚有消息说有小孩在这附近徘徊!",ascii,Oh ho! I smell a rat!,pending_semantic_review,
+1595,0x03C8C9,2720,dialogue_19_19,27,pointer_table,high,0x03CF30,1803,0x03DB6A,"
+火箭队:不要反抗火箭队的好...",ascii,You are a skilled trainer!,pending_semantic_review,
+1596,0x03C8E5,2729,dialogue_19_19,114,pointer_table,high,0x03CF3A,1808,0x03DC77,"
+火箭队:等等!老大在谈重要的事不能让你去打扰!",ascii,Jessie: Stop right there twerp! Jessie:Render your-self invisible or prepare to fight! Meowth:That's right,pending_semantic_review,
+1597,0x03C958,2748,dialogue_19_19,57,pointer_table,high,0x03CF3C,1809,0x03DCA4,"
+小智:你们是?",ascii,Team Rocket: Looks like Team Rocket's blasting off again!,pending_semantic_review,
+1598,0x03C992,2765,dialogue_19_19,147,pointer_table,high,0x03CF5A,1824,0x03DE09,"
+老大:哦?小智啊?又见面了...我现在在和新力的社员谈工作的事情.大人的世界小孩千万别插嘴!不然会很难看的!",ascii,Ash! We meet again!The President and Iare discussing a vital proposition. Keep your nose out of grown up matters...or experience a world of pain!,pending_semantic_review,
+1599,0x03CA26,2771,dialogue_19_19,140,pointer_table,high,0x03CF5C,1825,0x03DE6E,"
+老大:混蛋!没办法只好暂时放弃新力!我们火箭队是不灭的!所有的怪兽是为我们火箭队而存在的!小智你千万不要忘了!我先走了!!",ascii,"Blast! You ruined our plans for SilphBut, Team Rocket will never fall! Ash! All Pok@mon exist for Team Rocket! I shall return!",pending_semantic_review,
+1600,0x03CAB3,2777,dialogue_19_19,51,pointer_table,high,0x03CF5E,1826,0x03DEE2,"
+秘书:呀真是谢谢你的相救!我和社长充满感激啊!",ascii,Thank you for resc-uing us! We admire your courage.,pending_semantic_review,
+1601,0x03CAE7,2787,dialogue_19_19,19,pointer_table,high,0x03B00E,1685,0x03CAE5,"
+使用精灵笛唤醒睡着的卡比兽",ascii,The Pok@mon woke up,pending_semantic_review,
+1602,0x03CAFB,2788,dialogue_19_19,18,pointer_table,high,0x03B010,1686,0x03CB01,"
+钓鱼者:这里是有名的钓鱼区",ascii,I got a bite here!,pending_semantic_review,
+1603,0x03CB0E,2789,dialogue_19_19,17,pointer_table,high,0x03B012,1687,0x03CB1C,"
+钓鱼者:你不喜欢钓鱼吗?",ascii,Just a small fry!,pending_semantic_review,
+1604,0x03CB20,2790,dialogue_19_19,24,pointer_table,high,0x03B014,1688,0x03CB34,"
+钓鱼者:水上也有很多精灵哦",ascii,Fishing's a waitinggame!,pending_semantic_review,
+1605,0x03CB39,2799,dialogue_19_19,18,pointer_table,high,0x03B016,1689,0x03CB4F,"
+钓鱼者:水系精灵最可爱!",ascii,That one got away!,pending_semantic_review,
+1606,0x03CB4C,2800,dialogue_19_19,17,pointer_table,high,0x03B028,1698,0x03CC3F,"
+女孩:水系精灵好漂亮",ascii,You like fishing?,pending_semantic_review,
+1607,0x03CB5E,5879,dialogue_19_19,5,pointer_table,high,0x03B02A,1699,0x03CC54,"
+女孩:你不喜欢吗?",ascii,Ouch!,pending_semantic_review,
+1608,0x03CB64,2801,dialogue_19_19,27,pointer_table,high,0x03B018,1690,0x03CB67,"
+钓鱼者:你看不到我在钓鱼吗?",ascii,I would rather be working!,pending_semantic_review,
+1609,0x03CB80,2802,dialogue_19_19,16,pointer_table,high,0x03B01A,1691,0x03CB83,"
+钓鱼者:算了...鱼都让你吓跑了",ascii,It's not easy...,pending_semantic_review,
+1610,0x03CB91,2803,dialogue_19_19,32,pointer_table,high,0x03B01C,1692,0x03CBA1,"
+钓鱼者:我有好动西,要看吗",ascii,You never know whatyou'll catch!,pending_semantic_review,
+1611,0x03CBB2,5484,dialogue_19_19,8,pointer_table,high,0x03B01E,1693,0x03CBBB,"
+钓鱼者:水系精灵克火系的哦",ascii,Lost it!,pending_semantic_review,
+1612,0x03CBBB,2808,dialogue_19_19,29,pointer_table,high,0x03B020,1694,0x03CBD6,"
+电气团:在这里我的精灵难碰敌手",ascii,Electricity is my specialty!,pending_semantic_review,
+1613,0x03CBD9,2819,dialogue_19_19,27,pointer_table,high,0x03B022,1695,0x03CBF5,"
+电气团:居然栽跟头了...",ascii,Water conducts electricity.,pending_semantic_review,
+1614,0x03CBF5,2820,dialogue_19_19,19,pointer_table,high,0x03B024,1696,0x03CC0D,"
+侦察员:我什么要求都没有",ascii,Water calms my mind,pending_semantic_review,
+1615,0x03CC09,2825,dialogue_19_19,36,pointer_table,high,0x03B026,1697,0x03CC26,"
+侦察员:我不是可疑的人哪",ascii,Pok@mon battles arerelaxing as well.,pending_semantic_review,
+1616,0x03CC2E,2826,dialogue_19_19,37,pointer_table,high,0x03B030,1702,0x03CC99,"
+女孩:随便的人走开",ascii,I saw a large Pok@-mon sleeping here!,pending_semantic_review,
+1617,0x03CC54,2827,dialogue_19_19,19,pointer_table,high,0x03B032,1703,0x03CCAC,"
+女孩:对不起,误会你了",ascii,Snorlax love to nap,pending_semantic_review,
+1618,0x03CC68,2828,dialogue_19_19,31,pointer_table,high,0x03B02C,1700,0x03CC66,"
+捉鸟人:速度才是一切",ascii,Bird Watcher Vs. Pok@mon Kid!,pending_semantic_review,
+1619,0x03CC88,2829,dialogue_19_19,23,pointer_table,high,0x03B02E,1701,0x03CC7B,"
+捉鸟人:失败了我的想法也不变!",ascii,You beat me at Pok@mon.,pending_semantic_review,
+1620,0x03CCA0,2839,dialogue_19_19,23,pointer_table,high,0x03B034,1704,0x03CCC2,"
+大姐姐:你的样子让我的口水都流出来了",ascii,"Sure,I'll play withyou!",pending_semantic_review,
+1621,0x03CCB8,2840,dialogue_19_19,17,pointer_table,high,0x03B036,1705,0x03CCE7,"
+大姐姐:我知错了...",ascii,You little brute!,pending_semantic_review,
+1622,0x03CCCA,2841,dialogue_19_19,29,pointer_table,high,0x03B038,1706,0x03CCFB,"
+大姐姐:你说什么,我没有魅力吗?",ascii,I'm told I'm good for a kid!,pending_semantic_review,
+1623,0x03CCE8,2846,dialogue_19_19,12,pointer_table,high,0x03B03A,1707,0x03CD1A,"
+大姐姐:你说的是对的",ascii,Ohh! I lost!,pending_semantic_review,
+1624,0x03CCF5,2847,dialogue_19_19,24,pointer_table,high,0x03B03C,1708,0x03CD2F,"
+女孩:又是你!!",ascii,Your Badges are so cool!,pending_semantic_review,
+1625,0x03CD0E,2848,dialogue_19_19,19,pointer_table,high,0x03B03E,1709,0x03CD3E,"
+女孩:我们还真有缘啊",ascii,You're very strong!,pending_semantic_review,
+1626,0x03CD22,2853,dialogue_19_19,22,pointer_table,high,0x03B040,1710,0x03CD53,"
+女孩:别在我眼前走来走去",ascii,Want to battle withme?,pending_semantic_review,
+1627,0x03CD39,2858,dialogue_19_19,18,pointer_table,high,0x03B042,1711,0x03CD6C,"
+女孩:我不该欺人太甚",ascii,It's over already?,pending_semantic_review,
+1628,0x03CD4C,2859,dialogue_19_19,32,pointer_table,high,0x03B044,1712,0x03CD81,"
+捉鸟人:我是鸟类训练专家",ascii,I always go with bird Pok@mon!,pending_semantic_review,
+1629,0x03CD6D,2865,dialogue_19_19,19,pointer_table,high,0x03B046,1713,0x03CD9A,"
+捉鸟人:你的精灵的确比我强",ascii,I wish I could fly.,pending_semantic_review,
+1630,0x03CD81,2866,dialogue_19_19,26,pointer_table,high,0x03B048,1714,0x03CDB5,"
+捉鸟人:别以为打败了我大哥我就服你!!",ascii,The wind's blowing my way!,pending_semantic_review,
+1631,0x03CD9C,2871,dialogue_19_19,9,pointer_table,high,0x03B04A,1715,0x03CDDA,"
+捉鸟人:我无话可说了",ascii,I'm beat.,pending_semantic_review,
+1632,0x03CDA6,2872,dialogue_19_19,22,pointer_table,high,0x03B04C,1716,0x03CDEF,"
+暴走族:你喜欢速度吗?一起来吧",ascii,What're you lookin'at?,pending_semantic_review,
+1633,0x03CDBD,2873,dialogue_19_19,9,pointer_table,high,0x03B04E,1717,0x03CE0D,"
+暴走族:不该强人所难的",ascii,Get lost!,pending_semantic_review,
+1634,0x03CDC7,2878,dialogue_19_19,33,pointer_table,high,0x03B050,1718,0x03CE24,"
+捉鸟人:飞吧!我的精灵!!",ascii,My bird Pok@mon want to fight!,pending_semantic_review,
+1635,0x03CDE9,2883,dialogue_19_19,19,pointer_table,high,0x03B052,1719,0x03CE3C,"
+捉鸟人:什么都完了...",ascii,My bird combo lost?,pending_semantic_review,
+1636,0x03CDFD,2884,dialogue_19_19,24,pointer_table,high,0x03B054,1720,0x03CE52,"
+捉鸟人:你去过狩猎区吗",ascii,My birds are the best!,pending_semantic_review,
+1637,0x03CE16,5404,dialogue_19_19,7,pointer_table,high,0x03B056,1721,0x03CE69,"
+捉鸟人:那里有很多珍贵的精灵...",ascii,Oh man!,pending_semantic_review,
+1638,0x03CE1E,2885,dialogue_19_19,28,pointer_table,high,0x03CE8E,1722,0x03D0A7,"
+大婶婶:鸟类精灵是虫系精灵的克星!",ascii,My Pok@mon wish to meet you!,pending_semantic_review,
+1639,0x03CE3B,2893,dialogue_19_19,19,pointer_table,high,0x03CE90,1723,0x03D0C9,"
+大婶婶:原来你懂这个道理啊",ascii,"Wow,You totally won",pending_semantic_review,
+1640,0x03CE4F,2899,dialogue_19_19,25,pointer_table,high,0x03CE92,1724,0x03D0E4,"
+捉鸟人:你得罪我了",ascii,My bird Pok@mon areready!,pending_semantic_review,
+1641,0x03CE69,2900,dialogue_19_19,14,pointer_table,high,0x03CE94,1725,0x03D0F7,"
+捉鸟人:没事...",ascii,Not ready yet.,pending_semantic_review,
+1642,0x03CE78,2901,dialogue_19_19,18,pointer_table,high,0x03CEA2,1732,0x03D1A4,"
+大姐姐:好可爱的样子哦",ascii,"Sure, I'll fight!",pending_semantic_review,
+1643,0x03D088,2907,dialogue_19_19,30,unaligned,low,,,,,graphical_codes,<B3E7><B8A7><B2B5>:<B0B9><B0BF><B0AE><B3F7><B0C8><B5C5><B6B2><B0BC><B0A1><B0A2>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1644,0x03D0A7,2912,dialogue_19_19,26,pointer_table,high,0x03CEA4,1733,0x03D1BB,"
+大姐姐:不要走吧,陪姐姐我说说话嘛",ascii,"Win,lose,it doesn'tmatter.",pending_semantic_review,
+1645,0x03D0C2,2913,dialogue_19_19,16,pointer_table,high,0x03CE96,1726,0x03D107,"
+暴走族:老子要教训你",ascii,"C'mon, Let's go!",pending_semantic_review,
+1646,0x03D0D3,2914,dialogue_19_19,15,pointer_table,high,0x03CE98,1727,0x03D11C,"
+暴走族:我最喜欢有实力的人!",ascii,Arrg! Get lost!,pending_semantic_review,
+1647,0x03D0E3,2915,dialogue_19_19,23,pointer_table,high,0x03CE9A,1728,0x03D138,"
+捉鸟人:我有只珍贵的精灵",ascii,Can your Pok@mon fly?,pending_semantic_review,
+1648,0x03D0FB,2916,dialogue_19_19,19,pointer_table,high,0x03CE9C,1729,0x03D151,"
+捉鸟人:怎么样?不错吧...",ascii,Best way to travel!,pending_semantic_review,
+1649,0x03D10F,2917,dialogue_19_19,15,pointer_table,high,0x03CEA6,1734,0x03D1DD,"
+女孩:请多关照",ascii,Do you use TMs?,pending_semantic_review,
+1650,0x03D11F,5485,dialogue_19_19,11,pointer_table,high,0x03CEA8,1735,0x03D1EC,"
+女孩:输的心服口服",ascii,"Aww,bummer!",pending_semantic_review,
+1651,0x03D12B,2926,dialogue_19_19,19,pointer_table,high,0x03CEB2,1740,0x03D266,"
+女孩:糟了,你碰了我一下!",ascii,I use TMs I bought!,pending_semantic_review,
+1652,0x03D13F,2928,dialogue_19_19,23,pointer_table,high,0x03CEB4,1741,0x03D27F,"
+女孩:要是怀孕了怎么办...",ascii,HMs are harder to get.,pending_semantic_review,
+1653,0x03D157,2929,dialogue_19_19,19,pointer_table,high,0x03CEAA,1736,0x03D1FF,"
+暴走族:偶看你不惯!",ascii,I need to burn time,pending_semantic_review,
+1654,0x03D16B,6645,dialogue_19_19,37,pointer_table,high,0x03CE9E,1730,0x03D16A,"
+捉鸟人:拥有连续攻击能力的我你没有胜算",graphical_codes,<B3E7><B8A7><B2B5>:<B6A9><B0AE><B6BA><B4D7><B4AB><B4AC><B0EC><B0E3><B0BC><B1C2><B0C5><B2B6><B0AE><B3F9><B3D0>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1655,0x03D191,6650,dialogue_19_19,18,pointer_table,high,0x03CEA0,1731,0x03D191,"
+捉鸟人:又说大话了",graphical_codes,<0A><B3E7><B8A7><B2B5>:<B5B0><B1E7><B1BE><B1EF><B0F8>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1656,0x03D1A4,2934,dialogue_19_19,10,pointer_table,high,0x03CEAC,1737,0x03D213,"
+暴走族:现在看惯了,没事",ascii,What? You!,pending_semantic_review,
+1657,0x03D1AF,2935,dialogue_19_19,19,pointer_table,high,0x03CEAE,1738,0x03D22B,"
+暴走族:看你的样子一定不像好人!!",ascii,Pok@mon fight? Cool,pending_semantic_review,
+1658,0x03D1C3,2936,dialogue_19_19,11,pointer_table,high,0x03CEB0,1739,0x03D24C,"
+暴走族:你应该很讲义气吧!",ascii,Blown away!,pending_semantic_review,
+1659,0x03D1CF,2937,dialogue_19_19,37,pointer_table,high,0x03CEB6,1742,0x03D299,"
+大姐姐:你是我第五十二任男朋友",ascii,Have you heard of legendary Pok@mon?,pending_semantic_review,
+1660,0x03D1F5,2938,dialogue_19_19,25,pointer_table,high,0x03CEB8,1743,0x03D2B8,"
+大姐姐:算了,放过你吧...",ascii,There's 3 legendarybirds!,pending_semantic_review,
+1661,0x03D20F,2939,dialogue_19_19,26,pointer_table,high,0x03CEBA,1744,0x03D2D1,"
+捉鸟人:明白我的力量还不滚",ascii,You don't stand a chance!,pending_semantic_review,
+1662,0x03D22A,2940,dialogue_19_19,16,pointer_table,high,0x03CEBC,1745,0x03D2EC,"
+捉鸟人:请您慢走,哈哈",ascii,Not good enough!,pending_semantic_review,
+1663,0x03D23B,2941,dialogue_19_19,15,pointer_table,high,0x03CEC2,1748,0x03D33C,"
+女孩:谁叫你这么看人家的?",ascii,"Oh,you're cute!",pending_semantic_review,
+1664,0x03D24B,2946,dialogue_19_19,14,pointer_table,high,0x03CEC4,1749,0x03D356,"
+女孩:可惜我有男朋友了...",ascii,I forgive you!,pending_semantic_review,
+1665,0x03D25A,2947,dialogue_19_19,27,pointer_table,high,0x03CEBE,1746,0x03D302,"
+捉鸟人:我是专业捉鸟人",ascii,What's cool?TradingPok@mon!,pending_semantic_review,
+1666,0x03D276,2965,dialogue_19_19,27,pointer_table,high,0x03CEC0,1747,0x03D319,"
+捉鸟人:今年我要参加精灵联盟大赛啊",ascii,I trade with my friends.,pending_semantic_review,
+1667,0x03D292,2979,dialogue_19_19,74,pointer_table,high,0x03CEC6,1750,0x03D370,"
+裁判:浅红道馆是栋有机关的房子.用眼睛是看不到墙的",ascii,Yo Champ! This GYM has invisible wallsYou have to find the gaps in them.,pending_semantic_review,
+1668,0x03D2DD,2984,dialogue_19_19,16,pointer_table,high,0x03CEC8,1751,0x03D3A2,"
+忍者:这里不是你能来的!",ascii,Strategy is key!,pending_semantic_review,
+1669,0x03D2EE,2985,dialogue_19_19,14,pointer_table,high,0x03CECA,1752,0x03D3BA,"
+忍者:你的忍术很厉害!",ascii,Good strategy!,pending_semantic_review,
+1670,0x03D2FD,2986,dialogue_19_19,30,pointer_table,high,0x03CECC,1753,0x03D3D0,"
+忍者:光只是力量强是没用的!你知道吗?最强的是技术!!",ascii,Can you beat my techniques?,pending_semantic_review,
+1671,0x03D31C,2991,dialogue_19_19,36,pointer_table,high,0x03CECE,1754,0x03D403,"
+忍者:看来你已明白了",ascii,I like poison and sleep techniques.,pending_semantic_review,
+1672,0x03D341,2998,dialogue_19_19,27,pointer_table,high,0x03CEDC,1761,0x03D4B1,"
+忍者:这个道馆的首领很厉害,你最好小心",ascii,I joined to become a ninja!,pending_semantic_review,
+1673,0x03D35D,2999,dialogue_19_19,30,pointer_table,high,0x03CEDE,1762,0x03D4D7,"
+忍者:看来是我多心了...",ascii,I'll keep training under Koga!,pending_semantic_review,
+1674,0x03D37C,3004,dialogue_19_19,29,pointer_table,high,0x03CED8,1759,0x03D480,"
+忍者:你看来很有自信啊!",ascii,I study the way of the Ninja!,pending_semantic_review,
+1675,0x03D39A,3005,dialogue_19_19,28,pointer_table,high,0x03CEDA,1760,0x03D498,"
+忍者:我很久没这么认真了",ascii,I still have a lot to learn.,pending_semantic_review,
+1676,0x03D3B7,3012,dialogue_19_19,17,pointer_table,high,0x03CED4,1757,0x03D456,"
+忍者:看你能过我这关吗?",ascii,Stop right there!,pending_semantic_review,
+1677,0x03D3C9,3017,dialogue_19_19,14,pointer_table,high,0x03CED6,1758,0x03D46E,"
+忍者:你过关了...",ascii,I'm impressed!,pending_semantic_review,
+1678,0x03D3D8,3022,dialogue_19_19,45,pointer_table,high,0x03CED0,1755,0x03D418,"
+忍者:我对忍者充满幻想才进入这个浅红道馆的",ascii,Master Koga comes from a long line ofninjas!,pending_semantic_review,
+1679,0x03D406,3025,dialogue_19_19,24,pointer_table,high,0x03CED2,1756,0x03D443,"
+忍者:你的确很强大",ascii,What do you descendfrom?,pending_semantic_review,
+1680,0x03D41F,3027,dialogue_19_19,51,pointer_table,high,0x03CEE0,1763,0x03D4EF,"
+乔:你这种小子就想向我挑战?自讨苦吃!!中了毒就只有死路一条!!让你知道毒的艺术!!",ascii,I shall show you true terror as a ninja master!,pending_semantic_review,
+1681,0x03D453,3035,dialogue_19_19,73,pointer_table,high,0x03CEE2,1764,0x03D53D,"
+乔:你小子有一套,那么这个浅红徽章就交给你了,有了浅红徽章就能在大海中使用冲浪术了!",ascii,The Soulbadge lets you use Surf out- side of battle. Congratulations.,pending_semantic_review,
+1682,0x03D49D,3045,dialogue_19_19,81,pointer_table,high,0x03CEE4,1765,0x03D58F,"
+服务员:欢迎来到狩猎场!在这广大的狩猎广场有很多特有的宠物精灵,一次500元!要进去吗?",ascii,"Welcome to the Safari Zone! For $500,you can catch all the Pok@mon youwant!",pending_semantic_review,
+1683,0x03D4EF,3056,dialogue_19_19,11,pointer_table,high,0x03CEE6,1766,0x03D5E1,"
+是嘛!那下次再来啊!",ascii,Come again!,pending_semantic_review,
+1684,0x03D4FB,3061,dialogue_19_19,16,pointer_table,high,0x03CEE8,1767,0x03D5F5,"
+那么请进收您500元!祝您好运!!",ascii,That'll be $500!,pending_semantic_review,
+1685,0x03D50C,3066,dialogue_19_19,44,pointer_table,high,0x03CEEA,1768,0x03D613,"
+男孩:这里是最深处平时都没有人会来,我就送件礼物给你吧!",ascii,Congratulations!Youfound the Secret House!,pending_semantic_review,
+1686,0x03D539,3075,dialogue_19_19,9,pointer_table,high,0x03CEEC,1769,0x03D64A,"
+得到特技03冲浪术",ascii,Got HM03!,pending_semantic_review,
+1687,0x03D543,3076,dialogue_19_19,62,pointer_table,high,0x03CEEE,1770,0x03D65C,"
+男孩:特技03是冲浪术,你可以坐在宠物精灵身上通过水面!而且这个技能机器是用后也不会消失的!能拿到这么好的奖品你还真是幸运!",ascii,HM03 is Surf! Pok@-mon can carry you across water using Surf!,pending_semantic_review,
+1688,0x03D582,3088,dialogue_19_19,11,pointer_table,high,0x03CEF0,1771,0x03D6D3,"
+得到金牙",ascii,Gold Teeth!,pending_semantic_review,
+1689,0x03D58E,3089,dialogue_19_19,33,pointer_table,high,0x03CEF2,1772,0x03D6DD,"
+园长:哎呀我的金牙不知道到哪里去了...不会掉到狩猎区去了吧...",ascii,Hif fuff hefifoo! Heff hee fwee!,pending_semantic_review,
+1690,0x03D5B0,3101,dialogue_19_19,105,pointer_table,high,0x03CEF4,1773,0x03D71A,"
+园长:那个是我的金牙!!抱歉真是谢谢你的帮助!不要对任何人说哦,我的假牙丢了连办公室都不敢去露脸呢!为了谢谢你给你个好东西!",ascii,(Ash gave the teethto the Warden). Thanks kid! No one could understand a word I said. Here take this!,pending_semantic_review,
+1691,0x03D61A,3124,dialogue_19_19,9,pointer_table,high,0x03CEF6,1774,0x03D791,"
+得到秘传04怪力术",ascii,Got HM04!,pending_semantic_review,
+1692,0x03D624,3125,dialogue_19_19,37,pointer_table,high,0x03CEF8,1775,0x03D7A3,"
+园长:秘传04是怪力术,能推开挡路的大石头!!",ascii,Strength lets Pok@-mon move boulders!,pending_semantic_review,
+1693,0x03D64A,3138,dialogue_19_19,16,pointer_table,high,0x03CFD4,1885,0x03E6A3,"
+游泳女:不要愁眉苦脸的",ascii,I love swimming!,pending_semantic_review,
+1694,0x03D65B,3143,dialogue_19_19,11,pointer_table,high,0x03CFD6,1886,0x03E6BA,"
+游泳女:和我约会吧",ascii,Belly flop!,pending_semantic_review,
+1695,0x03D667,3144,dialogue_19_19,27,pointer_table,high,0x03CFAC,1865,0x03E4C9,"
+游泳男:没见过的面孔",ascii,What's beyond the horizon?,pending_semantic_review,
+1696,0x03D683,3145,dialogue_19_19,14,pointer_table,high,0x03CFAE,1866,0x03E4DE,"
+游泳男:你是我见过最强的训练师",ascii,I see islands!,pending_semantic_review,
+1697,0x03D692,3150,dialogue_19_19,17,pointer_table,high,0x03CFD8,1887,0x03E6CD,"
+游泳女:再看我揍你!",ascii,Swimming's great!,pending_semantic_review,
+1698,0x03D6A4,3158,dialogue_19_19,16,pointer_table,high,0x03CFDA,1888,0x03E6E1,"
+游泳女:我不敢了!",ascii,Sunburns aren't!,pending_semantic_review,
+1699,0x03D6B5,3159,dialogue_19_19,25,pointer_table,high,0x03CFB4,1869,0x03E52F,"
+游泳男:哈哈哈...",ascii,"I swam here,but I'mtired.",pending_semantic_review,
+1700,0x03D6CF,3160,dialogue_19_19,16,pointer_table,high,0x03CFB6,1870,0x03E541,"
+游泳男:没什么",ascii,I'm exhausted...,pending_semantic_review,
+1701,0x03D6E0,3161,dialogue_19_19,31,pointer_table,high,0x03CFB0,1867,0x03E4FD,"
+游泳男:说什么也不能让你过去",ascii,These waters are treacherous!,pending_semantic_review,
+1702,0x03D700,3162,dialogue_19_19,14,pointer_table,high,0x03CFB2,1868,0x03E51A,"
+游泳男:和你开玩笑的",ascii,I got a cramp!,pending_semantic_review,
+1703,0x03D70F,3163,dialogue_19_19,29,pointer_table,high,0x03CFB8,1871,0x03E550,"
+游泳男:你惹火了我!",ascii,I look at the sea to forget.,pending_semantic_review,
+1704,0x03D72D,5880,dialogue_19_19,4,pointer_table,high,0x03CFBA,1872,0x03E564,"
+游泳男:我的火灭了...",ascii,Ooh!,pending_semantic_review,
+1705,0x03D732,3168,dialogue_19_19,19,pointer_table,high,0x03CFDC,1889,0x03E6F3,"
+游泳女",ascii,"Oh,I love your ride",pending_semantic_review,
+1706,0x03D746,3169,dialogue_19_19,32,pointer_table,high,0x03CFDE,1890,0x03E6FB,"
+游泳女",ascii,Must be fun to rideyour Pok@mon!,pending_semantic_review,
+1707,0x03D767,3174,dialogue_19_19,35,pointer_table,high,0x03CFCC,1881,0x03E634,"
+游泳男:不要和我开玩笑",ascii,I have to warm up before swimming!,pending_semantic_review,
+1708,0x03D78B,3175,dialogue_19_19,14,pointer_table,high,0x03CFCE,1882,0x03E64B,"
+游泳男:对不起...",ascii,All warmed up!,pending_semantic_review,
+1709,0x03D79A,3176,dialogue_19_19,24,pointer_table,high,0x03CFD0,1883,0x03E65D,"
+游泳男:水系精灵也有防御力高的哦",ascii,The water's shallowhere.,pending_semantic_review,
+1710,0x03D7B3,5881,dialogue_19_19,6,pointer_table,high,0x03CFD2,1884,0x03E67E,"
+游泳男:不错,高防御你都有办法对付...",ascii,Spash!,pending_semantic_review,
+1711,0x03D7BA,3177,dialogue_19_19,16,pointer_table,high,0x03CFEE,1898,0x03E7AA,"
+游泳男:我怎么都要让你知道...",ascii,I love floating.,pending_semantic_review,
+1712,0x03D7CB,3178,dialogue_19_19,53,pointer_table,high,0x03CF60,1827,0x03DF0F,"
+社长:少年!谢谢你救了我,在我最需要帮助的时候救了我!这恩情我不会忘的...对了!这礼物可不能忘了!就给你这个好吗?",ascii,I have to thank youin some way! Maybe this will do!,pending_semantic_review,
+1713,0x03D801,3196,dialogue_19_19,27,pointer_table,high,0x03CF64,1829,0x03DF87,"
+空手道:还不想说道歉吗?",ascii,I hear you're good!Show me!,pending_semantic_review,
+1714,0x03D81D,3197,dialogue_19_19,9,pointer_table,high,0x03CF66,1830,0x03DF9F,"
+空手道:这里是全国格斗家所聚集的道馆啊!",ascii,I give up,pending_semantic_review,
+1715,0x03D827,6655,dialogue_19_19,21,pointer_table,high,0x03CEFC,1777,0x03D826,"
+火箭队:小鬼滚一边去!!",graphical_codes,<B5A2><B5A3><B5A4>:<B0B6><B7B2><B9E7><B1D1><B4D5><B0C7>!!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1716,0x03D83E,3205,dialogue_19_19,76,pointer_table,high,0x03CF62,1828,0x03DF7B,"
+得到大师球",ascii,Recieved MasterballThat will catch anyPok@mon without fail! Use it wisely,pending_semantic_review,
+1717,0x03D88B,3210,dialogue_19_19,19,pointer_table,high,0x03CF70,1835,0x03E05B,"
+跆拳道:你想踢馆啊?",ascii,Our Master's a pro!,pending_semantic_review,
+1718,0x03D89F,3215,dialogue_19_19,15,pointer_table,high,0x03CF72,1836,0x03E06F,"
+空手道:格斗家害怕的是超能力",ascii,Judge! 1 point!,pending_semantic_review,
+1719,0x03D8AF,3219,dialogue_19_19,18,pointer_table,high,0x03CF68,1831,0x03DFC7,"
+跆拳道:听说你很强,那我就不客气了!!",ascii,Nothing scares me!,pending_semantic_review,
+1720,0x03D8C2,3224,dialogue_19_19,29,pointer_table,high,0x03CF6A,1832,0x03DFEB,"
+空手道:大当家是格斗家之神,想挑战你要有相当的觉悟啊!",ascii,Only psychic power scares us!,pending_semantic_review,
+1721,0x03D8E0,5882,dialogue_19_19,7,pointer_table,high,0x03CF6C,1833,0x03E020,"
+空手道:硬的东西一点都不可怕!",ascii,Hoargh!,pending_semantic_review,
+1722,0x03D8E8,3234,dialogue_19_19,19,pointer_table,high,0x03CF6E,1834,0x03E03E,"
+空手道:格斗家害怕的是超能力",ascii,"Ow,Stubbed fingers!",pending_semantic_review,
+1723,0x03D8FC,3238,dialogue_19_19,19,pointer_table,high,0x03CF74,1837,0x03E08C,"
+二当家:我是这个道馆的二当家,你想踢馆!那不能饶恕你!!看招",ascii,Take your shoes off,pending_semantic_review,
+1724,0x03D910,3247,dialogue_19_19,34,pointer_table,high,0x03CF76,1838,0x03E0C5,"
+二当家:看大当家怎么对付你!!",ascii,You wait 'til you see our master!,pending_semantic_review,
+1725,0x03D933,3252,dialogue_19_19,44,pointer_table,high,0x03CF78,1839,0x03E0E2,"
+大当家:我是这个道馆的大当家,你会后悔的!",ascii,I am the Karate Master! Expect no mercy!,pending_semantic_review,
+1726,0x03D960,3261,dialogue_19_19,108,pointer_table,high,0x03CF7A,1840,0x03E10B,"
+大当家:我输了...你千万别摘我的招牌,不如我送给你我最珍贵的怪兽吧...你是喜欢空手道还是跆拳道??",ascii,"Indeed I have lost!As your trophy, I will give you a prized Fighting Pok@mon! Whichever one you like!",pending_semantic_review,
+1727,0x03D9CD,3280,dialogue_19_19,15,pointer_table,high,0x03CF7C,1841,0x03E169,"
+得到艾比郎",ascii,Got Hitmonchan!,pending_semantic_review,
+1728,0x03D9DD,3281,dialogue_19_19,14,containing_offset,medium,,1791,0x03D9C7,"
+火箭队:我真要夸奖你能顺利到这来,但社长室可没这么容易让你过去",ascii,Got Hitmonlee!,pending_semantic_review,
+1729,0x03D9EC,3287,dialogue_19_19,76,pointer_table,high,0x03CF7E,1842,0x03E175,"
+裁判:未来的冠军!娜梅的精灵是使用超能力的...格斗系的攻击是没用的!",ascii,Yo Champ! Sabrina'sPok@mon are Psychictypes.Fighting Pok@mon have no chance!,pending_semantic_review,
+1730,0x03DA39,3293,dialogue_19_19,31,pointer_table,high,0x03CF80,1843,0x03E1B7,"
+超能力:娜梅年纪轻轻就掌管这个金黄道馆实力不容小看!",ascii,Sabrina's young butvery strong!,pending_semantic_review,
+1731,0x03DA59,3298,dialogue_19_19,25,pointer_table,high,0x03CF82,1844,0x03E1EB,"
+超能力:告诉你吧,曾经金黄市有两个道馆,隔壁的道馆在比赛中输了...",ascii,I lost my concentr-ation!,pending_semantic_review,
+1732,0x03DA73,3313,dialogue_19_19,26,pointer_table,high,0x03CF84,1845,0x03E22B,"
+精神师:你知道吗?精灵只靠力量是不会赢的!",ascii,Power alone isn't enough!,pending_semantic_review,
+1733,0x03DA8E,3318,dialogue_19_19,48,pointer_table,high,0x03CF86,1846,0x03E254,"
+超能力:我怎么会输呢?",ascii,Sabrina wiped out the Karate Master next door!,pending_semantic_review,
+1734,0x03DABF,3323,dialogue_19_19,35,pointer_table,high,0x03CF88,1847,0x03E26A,"
+精神师:使用看不到的力量就是使用不超能力!",ascii,Does our unseen power scare you?,pending_semantic_review,
+1735,0x03DAE3,3328,dialogue_19_19,24,pointer_table,high,0x03CF8A,1848,0x03E294,"
+超能力:有这样的事?",ascii,I never foresaw this!,pending_semantic_review,
+1736,0x03DAFC,3333,dialogue_19_19,37,pointer_table,high,0x03CF8C,1849,0x03E2A8,"
+超能力:娜梅比我还年轻啊...",ascii,"Sabrina is younger,but I respect her.",pending_semantic_review,
+1737,0x03DB22,3338,dialogue_19_19,29,pointer_table,high,0x03CF8E,1850,0x03E2C4,"
+超能力:想赢娜梅的话必须要有强大的念力!",ascii,The one of strongerwill wins!,pending_semantic_review,
+1738,0x03DB40,3345,dialogue_19_19,32,pointer_table,high,0x03CF90,1851,0x03E2EC,"
+超能力:精灵性格会像主人你知道吗?",ascii,We're famous for our psychics!,pending_semantic_review,
+1739,0x03DB61,3352,dialogue_19_19,19,pointer_table,high,0x03CF92,1852,0x03E30E,"
+超能力:嗯...看来你明白啊",ascii,I foresaw this loss,pending_semantic_review,
+1740,0x03DB75,3358,dialogue_19_19,24,pointer_table,high,0x03CF98,1855,0x03E35D,"
+超能力:你想见娜梅吧",ascii,I can read your mind!,pending_semantic_review,
+1741,0x03DB8E,3359,dialogue_19_19,38,pointer_table,high,0x03CF9A,1856,0x03E372,"
+超能力:我不会阻止你的",ascii,You want Sabrina's Gym badge!I see it!,pending_semantic_review,
+1742,0x03DBB5,3360,dialogue_19_19,25,pointer_table,high,0x03CF94,1853,0x03E328,"
+精神师:哦,你不想学超能力吗?",ascii,Our Pok@mon shall fight!,pending_semantic_review,
+1743,0x03DBCF,3365,dialogue_19_19,17,pointer_table,high,0x03CF96,1854,0x03E345,"
+超能力:不想学就算了...",ascii,I lost after all!,pending_semantic_review,
+1744,0x03DBE1,3367,dialogue_19_19,86,pointer_table,high,0x03CF9C,1857,0x03E389,"
+娜梅:我有预感你会来,我是超能力少女,我不喜欢战斗,不过我可以让你看看我的厉害!",ascii,"I had a vision of your arrival! I dislike fighting, but I will show youmy powers!",pending_semantic_review,
+1745,0x03DC38,3373,dialogue_19_19,74,pointer_table,high,0x03CF9E,1858,0x03E3D6,"
+娜梅:好吧金色徽章就给你吧!还有技能机器40也拿去吧.技能机器40是精神波动!强大的念力使对方受到巨大的伤害",ascii,A loss is a loss. You have earned theMarshbadge. Please take this TM too.,pending_semantic_review,
+1746,0x03DC83,3379,dialogue_19_19,10,pointer_table,high,0x03CFA0,1859,0x03E43C,"
+得到金色徽章",ascii,Got TM 40!,pending_semantic_review,
+1747,0x03DC8E,3380,dialogue_19_19,27,pointer_table,high,0x03CFA2,1860,0x03E44A,"
+得到技能机器40",ascii,That TM teaches Psybeam.,pending_semantic_review,
+1748,0x03DCAA,3381,dialogue_19_19,57,containing_offset,medium,,1809,0x03DCA4,"
+小智:你们是?",ascii,All people have Psychic power. Theyjust don't know it.,pending_semantic_review,
+1749,0x03DCE4,5892,dialogue_19_19,6,pointer_table,high,0x03CFF0,1899,0x03E7C8,"
+游泳男:我想你已经知道了!",ascii,Yowch!,pending_semantic_review,
+1750,0x03DCEB,3387,dialogue_19_19,27,pointer_table,high,0x03CFF2,1900,0x03E7E2,"
+滑雪男:什么我耳朵不好!",ascii,I tried diving for Pok@mon.,pending_semantic_review,
+1751,0x03DD07,3392,dialogue_19_19,31,pointer_table,high,0x03CFF4,1901,0x03E7FA,"
+滑雪男:现在听到了",ascii,You have to fish for Pok@mon!,pending_semantic_review,
+1752,0x03DD27,3402,dialogue_19_19,27,pointer_table,high,0x03CFE2,1892,0x03E712,"
+滑雪女:你到过双子岛吗?",ascii,Seafoam's a quiet getaway.,pending_semantic_review,
+1753,0x03DD43,3407,dialogue_19_19,8,pointer_table,high,0x03CFE4,1893,0x03E72A,"
+滑雪女:传说里面有传说中的精灵...",ascii,Quit it!,pending_semantic_review,
+1754,0x03DD4C,3408,dialogue_19_19,17,pointer_table,high,0x03CFE6,1894,0x03E74C,"
+成熟姐姐:又是你?",ascii,Wait! Be careful!,pending_semantic_review,
+1755,0x03DD5E,3409,dialogue_19_19,24,pointer_table,high,0x03CFE8,1895,0x03E75E,"
+成熟姐姐:如何,不想和我约会吗",ascii,Watch out for Tentacool!,pending_semantic_review,
+1756,0x03DD77,3418,dialogue_19_19,16,pointer_table,high,0x03CFE0,1891,0x03E703,"
+急冻鸟:......",ascii,Articuno: Gyaoo!,pending_semantic_review,
+1757,0x03DD88,3419,dialogue_19_19,15,pointer_table,high,0x03CFEA,1896,0x03E77C,"
+游泳女:好可爱的样子",ascii,Can't you swim?,pending_semantic_review,
+1758,0x03DD98,5492,dialogue_19_19,10,pointer_table,high,0x03CFEC,1897,0x03E791,"
+游泳女:是吗?太可惜了...",ascii,Torpedoed!,pending_semantic_review,
+1759,0x03DDA3,3420,dialogue_19_19,23,pointer_table,high,0x03CFC8,1879,0x03E600,"
+游泳男:我比你长的帅!",ascii,Are you on vacationtoo?,pending_semantic_review,
+1760,0x03DDBB,3421,dialogue_19_19,16,pointer_table,high,0x03CFCA,1880,0x03E616,"
+游泳男:原来你长的比我还帅啊!",ascii,No mercy at all!,pending_semantic_review,
+1761,0x03DDCC,3422,dialogue_19_19,28,pointer_table,high,0x03CFA8,1863,0x03E48C,"
+游泳男:大海是所有生命的源泉",ascii,Check out my buff physique!,pending_semantic_review,
+1762,0x03DDE9,3423,dialogue_19_19,34,pointer_table,high,0x03CFAA,1864,0x03E4A9,"
+游泳男:我明白了!你说的都是对的",ascii,I should buff my Pok@mon up too!,pending_semantic_review,
+1763,0x03DE0C,3424,dialogue_19_19,24,pointer_table,high,0x03CFC4,1877,0x03E5D0,"
+游泳女:你要去哪里?",ascii,I rode my Pok@mon here!,pending_semantic_review,
+1764,0x03DE25,5409,dialogue_19_19,6,pointer_table,high,0x03CFC6,1878,0x03E5E4,"
+游泳女:你去哪里我管不着...",ascii,Oh no!,pending_semantic_review,
+1765,0x03DE2C,3429,dialogue_19_19,29,pointer_table,high,0x03CFBC,1873,0x03E57A,"
+游泳女:不要盯着人家看!",ascii,My boyfriend gave me pearls!,pending_semantic_review,
+1766,0x03DE4A,3430,dialogue_19_19,28,pointer_table,high,0x03CFBE,1874,0x03E592,"
+游泳女:请随便看",ascii,They grew inside a Cloyster!,pending_semantic_review,
+1767,0x03DE67,3439,dialogue_19_19,35,pointer_table,high,0x03CFC0,1875,0x03E5A3,"
+游泳女:你想干什么?",ascii,I'm swimming to Cinnabar Island!,pending_semantic_review,
+1768,0x03DE8B,3440,dialogue_19_19,19,pointer_table,high,0x03CFC2,1876,0x03E5B7,"
+游泳女:想干什么都可以啦",ascii,I'm so disappointed,pending_semantic_review,
+1769,0x03DE9F,3445,dialogue_19_19,31,pointer_table,high,0x03CFA4,1861,0x03E45A,"
+游泳男:和我一起玩吧!",ascii,Cinnabar has a lab for Pok@mon.,pending_semantic_review,
+1770,0x03DEBF,3454,dialogue_19_19,31,pointer_table,high,0x03CFA6,1862,0x03E470,"
+游泳男:对不起,我知道你很忙",ascii,Cinnabar is a volc-anic island!,pending_semantic_review,
+1771,0x03DEDF,3460,dialogue_19_19,45,pointer_table,high,0x03CFFE,1906,0x03E8A0,"
+博士:我一直都在研究珍贵的化石你有不错的化石吗?",ascii,"Hi,I study Pok@mon!You have a fossil for me?",pending_semantic_review,
+1774,0x03DF87,3465,dialogue_19_19,56,pointer_table,high,0x03D000,1907,0x03E8D0,"
+博士:啊?这个是古代菊石兽的化石!!如果使用我的再生机器一定可以让他复活!!把化石交给我吧",ascii,Oh! That's a Helix Fossil! It is a fossil of Omanyte!,pending_semantic_review,
+1775,0x03DFC0,3478,dialogue_19_19,55,pointer_table,high,0x03D002,1908,0x03E926,"
+再生机器再生出菊石兽",ascii,My Resurrection machine will give Omanyte new life!,pending_semantic_review,
+1776,0x03DFF8,3487,dialogue_19_19,12,pointer_table,high,0x03D004,1909,0x03E93C,"
+得到菊石兽",ascii,Got Omanyte!,pending_semantic_review,
+1777,0x03E005,3488,dialogue_19_19,56,pointer_table,high,0x03D006,1910,0x03E948,"
+博士:啊?这个是古代化石盔的化石!!如果使用我的再生机器一定可以让他复活!!把化石交给我吧",ascii,Oh! That's a Dome Fossil! It is a fossil of Kabuto!,pending_semantic_review,
+1778,0x03E03E,3501,dialogue_19_19,55,pointer_table,high,0x03D008,1911,0x03E99E,"
+再生机器再生出化石盔",ascii,My Resurrection machine will give Kabuto new life!,pending_semantic_review,
+1779,0x03E076,3506,dialogue_19_19,11,pointer_table,high,0x03D00A,1912,0x03E9B4,"
+得到化石盔",ascii,Got Kabuto!,pending_semantic_review,
+1780,0x03E082,3512,dialogue_19_19,12,pointer_table,high,0x03D00C,1913,0x03E9C0,"
+小偷:这种地方没想到还有人",ascii,Who're you!?,pending_semantic_review,
+1781,0x03E08F,3513,dialogue_19_19,25,pointer_table,high,0x03D00E,1914,0x03E9DB,"
+小偷:我知道错了...",ascii,I don't know about a key!,pending_semantic_review,
+1782,0x03E0A9,3514,dialogue_19_19,29,pointer_table,high,0x03D014,1917,0x03EA15,"
+研究员:这个研究所被火山给毁了",ascii,My Mentor used to live here.,pending_semantic_review,
+1783,0x03E0C7,3519,dialogue_19_19,45,pointer_table,high,0x03D016,1918,0x03EA34,"
+研究员:这里面应该有珍稀的精灵...",ascii,He discovered a NewPok@mon and named it Mew.,pending_semantic_review,
+1784,0x03E0F5,3524,dialogue_19_19,37,pointer_table,high,0x03D010,1915,0x03E9EF,"
+研究员:你来干什么",ascii,We used Mew's DNA to create a clone!,pending_semantic_review,
+1785,0x03E11B,3525,dialogue_19_19,35,pointer_table,high,0x03D012,1916,0x03EA02,"
+研究员:请随便参观",ascii,"We named the new Pok@mon, Mewtwo.",pending_semantic_review,
+1786,0x03E13F,3531,dialogue_19_19,70,pointer_table,high,0x03D01E,1922,0x03EA9A,"
+研究员:真不小心...",ascii,Mewtwo is far too powerful.We failed to curb its vicioustendencies...,pending_semantic_review,
+1787,0x03E186,3541,dialogue_19_19,19,pointer_table,high,0x03D018,1919,0x03EA56,"
+小偷:糟了!被发现了",ascii,This place is huge!,pending_semantic_review,
+1788,0x03E19A,3542,dialogue_19_19,32,pointer_table,high,0x03D01A,1920,0x03EA6A,"
+小偷:放过我吧",ascii,I wonder where my partner went.,pending_semantic_review,
+1789,0x03E1BB,3548,dialogue_19_19,68,pointer_table,high,0x03D020,1923,0x03EAAE,"
+裁判:未来的冠军!热情的阿桂是炎系的行家",ascii,Yo Champ! Blaine isa fire Pok@mon pro!Douse his spirits with water!,pending_semantic_review,
+1790,0x03E200,3562,dialogue_19_19,50,pointer_table,high,0x03D02E,1930,0x03EB71,"
+研究员:反正就是喜欢炎系的精灵!",ascii,I'll tell you how to get to Blaine ifyou beat me!,pending_semantic_review,
+1791,0x03E233,3568,dialogue_19_19,37,pointer_table,high,0x03D030,1931,0x03EB91,"
+研究员:烧起来了...",ascii,These computers operate the doors.,pending_semantic_review,
+1792,0x03E259,3573,dialogue_19_19,32,pointer_table,high,0x03D02A,1928,0x03EB3E,"
+研究员:火系是最强的!!",ascii,"I'll win, I have studied hard!",pending_semantic_review,
+1793,0x03E27A,3574,dialogue_19_19,17,pointer_table,high,0x03D02C,1929,0x03EB55,"
+研究员:还需要多做点研究...",ascii,Waah! My Studies!,pending_semantic_review,
+1794,0x03E28C,3580,dialogue_19_19,32,pointer_table,high,0x03D026,1926,0x03EB0F,"
+研究员:能过我这关吗?",ascii,I just like using fire Pok@mon!,pending_semantic_review,
+1795,0x03E2AD,3585,dialogue_19_19,18,pointer_table,high,0x03D028,1927,0x03EB25,"
+研究员:哈哈你可以过去了",ascii,Too hot to handle!,pending_semantic_review,
+1796,0x03E2C0,3586,dialogue_19_19,25,pointer_table,high,0x03D032,1932,0x03EBA5,"
+研究员:你知道精灵喜欢什么吗?",ascii,Fire's weak againstwater!,pending_semantic_review,
+1797,0x03E2DA,3592,dialogue_19_19,15,pointer_table,high,0x03D034,1933,0x03EBC3,"
+研究员:怎么会...",ascii,Fire melts ice!,pending_semantic_review,
+1798,0x03E2EA,3593,dialogue_19_19,29,pointer_table,high,0x03D036,1934,0x03EBD5,"
+小偷:去过许多道馆这个道馆最适合偷了",ascii,I know why Blaine'sa trainer!,pending_semantic_review,
+1799,0x03E308,3606,dialogue_19_19,62,pointer_table,high,0x03D038,1935,0x03EBFA,"
+小偷:好热",ascii,A fiery bird helpedBlaine off a mount-ain when he was lost!,pending_semantic_review,
+1800,0x03E347,3616,dialogue_19_19,30,pointer_table,high,0x03D022,1924,0x03EAD6,"
+小偷:以前我是小偷,如今金盆洗手了",ascii,This is my favoritegym of all!,pending_semantic_review,
+1801,0x03E366,3617,dialogue_19_19,15,pointer_table,high,0x03D024,1925,0x03EAF8,"
+小偷:哈哈你可以过去了",ascii,Yowza! Too hot!,pending_semantic_review,
+1802,0x03E376,3619,dialogue_19_19,89,pointer_table,high,0x03D03E,1938,0x03EC46,"
+阿桂:我是热情的男子汉!!这个火焰之岛红莲岛道馆的馆主就是我!!看看我的火焰精灵的厉害!",ascii,I am Cinnabar Gym Leader Blaine! My Pok@mon will incin-erate all those whochallenge me!,pending_semantic_review,
+1803,0x03E3D0,3625,dialogue_19_19,73,pointer_table,high,0x03D040,1939,0x03EC9A,"
+阿桂:哈哈你更适合拥有红色徽章!我输的心服口服...红色徽章能提高你所有精灵的攻击力",ascii,I've burnt out! Youearned the Volcano Badge! Congratulations!,pending_semantic_review,
+1804,0x03E41A,3646,dialogue_19_19,24,pointer_table,high,0x03D052,1948,0x03EDC6,"
+游泳男:我的鲤鱼王队伍天下无双!",ascii,I'm in a triathlon meet!,pending_semantic_review,
+1805,0x03E433,3651,dialogue_19_19,13,pointer_table,high,0x03D054,1949,0x03EDE6,"
+游泳男:真糟糕...大败了",ascii,Man I'm beat!,pending_semantic_review,
+1806,0x03E441,3657,dialogue_19_19,37,pointer_table,high,0x03D04A,1944,0x03ED67,"
+游泳男:再过去就是真新镇了...",ascii,The sea cleanses the body and soul!,pending_semantic_review,
+1807,0x03E467,3672,dialogue_19_19,27,pointer_table,high,0x03D04C,1945,0x03ED85,"
+游泳男:你的家就在真新镇啊",ascii,I like mountains as well.,pending_semantic_review,
+1808,0x03E483,3684,dialogue_19_19,34,pointer_table,high,0x03D042,1940,0x03ECEB,"
+游泳男:我看见你的样子就不爽",ascii,I caught all my Pok@mon at sea!,pending_semantic_review,
+1809,0x03E4A6,3685,dialogue_19_19,32,pointer_table,high,0x03D044,1941,0x03ED08,"
+游泳男:别以为你打败我就会改口!!",ascii,Where'd you catch your Pok@Mon?,pending_semantic_review,
+1810,0x03E4C7,3690,dialogue_19_19,32,pointer_table,high,0x03D046,1942,0x03ED29,"
+游泳男:不自量力的家伙,看我打的你满地找牙!!",ascii,Ahh! Feel the sun and the wind!,pending_semantic_review,
+1811,0x03E4E8,3699,dialogue_19_19,25,pointer_table,high,0x03D048,1943,0x03ED55,"
+游泳男:我错了...",ascii,I'm sunburnt to a crisp!,pending_semantic_review,
+1812,0x03E502,3700,dialogue_19_19,28,pointer_table,high,0x03D04E,1946,0x03EDA0,"
+游泳女:你好,比试一?",ascii,Swimming's great exercise!,pending_semantic_review,
+1813,0x03E51F,3705,dialogue_19_19,30,pointer_table,high,0x03D050,1947,0x03EDB5,"
+游泳女:真不甘心",ascii,It sure wears me out though.,pending_semantic_review,
+1814,0x03E53E,3708,dialogue_19_19,38,pointer_table,high,0x03D058,1951,0x03EE33,"
+空手道:我不会让你再前进的!",ascii,Rrrroar!I'm workingmyself into a rage!,pending_semantic_review,
+1815,0x03E565,3712,dialogue_19_19,26,pointer_table,high,0x03D05A,1952,0x03EE4F,"
+空手道:目标是精灵联盟啊!有志气的小孩!训兽师:不要怕",ascii,Grr! I'm still not worthy!,pending_semantic_review,
+1816,0x03E580,3719,dialogue_19_19,51,pointer_table,high,0x03D060,1955,0x03EED6,"
+训兽师:没有体力是不能赢老大的!空手道:我的愤怒已到最高点!",ascii,Karate is the ultimate form of martial arts!,pending_semantic_review,
+1817,0x03E5B4,3724,dialogue_19_19,45,pointer_table,high,0x03D062,1956,0x03EF10,"
+空手道:练习还不够啊...训兽师:我与精灵之间的沟通是最在行的!",ascii,If my Pok@mon were as good at karate as I...,pending_semantic_review,
+1818,0x03E5E2,3736,dialogue_19_19,47,pointer_table,high,0x03D05C,1953,0x03EE83,"
+训兽师:请...空手道:来吧!!",ascii,Pok@mon and I make wonderful music together!,pending_semantic_review,
+1819,0x03E612,3742,dialogue_19_19,45,pointer_table,high,0x03D05E,1954,0x03EE9E,"
+空手道:如果我能像老大那么强就好了!训兽师:差不多该走了!",ascii,Do you know the identity of our GymLeader?,pending_semantic_review,
+1820,0x03E640,3747,dialogue_19_19,51,pointer_table,high,0x03D068,1959,0x03EFC0,"
+训兽师:如果你能胜我们老大的话就能朝精灵联盟前进!老大:哈哈,又见面了...",ascii,Heh! You must be running out of steam by now!,pending_semantic_review,
+1821,0x03E674,3748,dialogue_19_19,49,pointer_table,high,0x03D06A,1960,0x03F007,"
+小智:火箭队的老大??难道你是这个道馆的主人?",ascii,You need power to keep up with our Gym Leader!,pending_semantic_review,
+1822,0x03E6A6,3749,dialogue_19_19,37,pointer_table,high,0x03D070,1963,0x03F145,"
+火箭队:等等!你居然害我们失业了我们不会饶恕你的!!",ascii,Your Pok@mon will cower at my power!,pending_semantic_review,
+1823,0x03E6CC,3750,dialogue_19_19,28,pointer_table,high,0x03D072,1964,0x03F177,"
+小智:你们是?",ascii,Wait! I was just careless.,pending_semantic_review,
+1824,0x03E6E9,3751,dialogue_19_19,72,pointer_table,high,0x03D064,1957,0x03EF4C,"
+训兽师:该死!你知道我是谁吗?空手道:真正强的训练家连赢的方法都很漂亮!",ascii,"Viridian Gym was closed for a long time, but now our Leader is back!",pending_semantic_review,
+1825,0x03E732,3775,dialogue_19_19,68,pointer_table,high,0x03D066,1958,0x03EF91,"
+空手道:我输了,老大会生气的...训兽师:我是天才!",ascii,You can go onto thePok@mon League onlyby defeating our Gym Leader!,pending_semantic_review,
+1826,0x03E777,6667,dialogue_19_19,31,pointer_table,high,0x03D01C,1921,0x03EA79,"
+研究员:这里不是你这种小孩能来的",graphical_codes,<B1CF><B1D0><B2D4>:<B0EE><B0BF><B0CE><B0C2><B0C5><B0EE><B6AD><B0B6><B1DE><B0EC><B0FC><B0BC>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1827,0x03E797,6676,dialogue_19_19,148,pointer_table,high,0x03CFF6,1902,0x03E80D,"
+成熟姐姐:在这不远就是红莲镇了",graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B2EA><B9CE><B3B8><B3B8>:<B0B8><B0EE><B0CE><B5CD><B2AB><B0C2><B5CE><B5CF><B2D6><B0F8>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1828,0x03E82C,6679,dialogue_19_19,38,pointer_table,high,0x03CFF8,1903,0x03E82C,"
+成熟姐姐:红莲镇经常会有火山爆发的情况",graphical_codes,<0A><B2EA><B9CE><B3B8><B3B8>:<B5CE><B5CF><B2D6><B2A5><B3CA><B1F9><B0AE><B5A2><B6DC><BAD9><B2F4><B0BC><B7AB><BADA>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1829,0x03E853,6690,dialogue_19_19,32,pointer_table,high,0x03CFFA,1904,0x03E853,"
+研究员:在这每天都有对精灵的研究",graphical_codes,<0A><B1CF><B1D0><B2D4>:<B0B8><B0EE><BADB><B1AD><B1C0><B0AE><B0E7><B0A1><B0A2><B0BC><B1CF><B1D0>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1830,0x03E874,6691,dialogue_19_19,43,pointer_table,high,0x03CFFC,1905,0x03E874,"
+小孩:我在观月山发现的化石好象是珍贵的化石!",graphical_codes,<0A><B0B6><B1DE>:<B1C2><B0B8><B6DB><B6CF><B6DC><B2F4><B2F5><B0BC><B5AB><B1B2><B1B4><B8B4><B0C2><B5C5><B6B2><B0BC><B5AB><B1B2>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1831,0x03E8A0,3787,dialogue_19_19,179,pointer_table,high,0x03D06C,1961,0x03F033,"
+老大:哈哈,这里是我藏身的地方!既然被你发现那就没办法了.我可不会手下留情的!再让你尝尝最强的训练师我沙奇的厉害!!",ascii,"This is my hideout!I planned to resur-rect Team Rocket here! But, you havecaught me again! Sobe it! I'm not holding back! You shall face Giovannithe greatest trainer!",pending_semantic_review,
+1832,0x03E954,3797,dialogue_19_19,351,pointer_table,high,0x03D06E,1962,0x03F0A2,"
+老大:虽然不想承认但我还是输了,按照约定这个黑色徽章就交给你了,你一定能成为一位厉害的训练家.我想从今起重新开始我的精灵修行之旅!想暂时解散火箭队!有缘的话我们再见吧!",ascii,"Ha! That was truly an intense fight! You've earned the Earth Badge! It is proof of your mastery as a Pok@mon trainer! With it, you can enter the Pok@mon League! Having lostI cannot face my underlings! Team Rocket is finished forever! I will dedicate my life tothe study of Pok@mon! Let us meet again someday!Farewell!",pending_semantic_review,
+1833,0x03EAB4,3831,dialogue_19_19,220,pointer_table,high,0x03D076,1966,0x03F1A0,"
+小次郎:那我就大发慈悲的告诉你们!",ascii,"Jessie:Hold it runtWe can't allow TeamRocket to lose likethis! James: You've been quite a thorn in our side, but Team Rocket will never be defeated! Meowth: Meowth! We'll show you who's boss!",pending_semantic_review,
+1834,0x03EB91,6700,dialogue_19_19,143,pointer_table,high,0x03D03A,1936,0x03EC05,"
+研究员:火系还是有弱点啊...",graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1CF><B1D0><B2D4>:<B5A2><B0AF><B2BD><B0C2><B0AE><B7E6><B7D9><B2AC>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1835,0x03EC21,6706,dialogue_19_19,36,pointer_table,high,0x03D03C,1937,0x03EC21,"
+研究员:火对水确实没办法但比冰系要强",graphical_codes,<0A><B1CF><B1D0><B2D4>:<B5A2><B0E7><B5F7><B9DB><B5DE><B2B6><B2B7><B2B8><B3A8><B2B2><BAE8><B0AF><B0C3><B2C9>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1836,0x03EC46,3837,dialogue_19_19,182,pointer_table,high,0x03D078,1967,0x03F1C2,"
+武藏:为了防止世界被破坏",ascii,James: I can't believe it! Team Rocket defeated by this brat! Jessie: You may have won this time!But we'll be back! Meowth: Meowth! Youhaven't heard the last of us!,pending_semantic_review,
+1837,0x03ECFD,6713,dialogue_19_19,309,pointer_table,high,0x03D056,1950,0x03EDFE,"
+裁判:未来的冠军!这个常青道馆的首领是谁我也不知道...",graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B3FC><B3FD>:<B3E5><B0FC><B0BC><B4A1><B4A2>!<B0EE><B0BA><B3CA><B3CB><B1A4><B3CC><B0BC><B9EF><B4B3><B0C2><B5F1><B1C2><B0F6><B0CE><B2D7><B1A4>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1838,0x03F033,5178,dialogue_19_19,583,pointer_table,high,0x03D074,1965,0x03F185,"
+武藏:既然你诚心诚意的问了",ascii,Take care of 'em,pending_semantic_review,
+1839,0x03F27B,243,dialogue_19_19,114,unaligned,low,,,,,ascii,"Mother: Right, All boys leave home someday, It said soon TV. PROF.OAK, next dooris looking for you.",unaligned_or_non_dialogue,
+1840,0x03F2EE,253,dialogue_19_19,227,unaligned,low,,,,,ascii,"Hmm? Gary? Why are you here already? Isaid for you to come by later...Ah,whatever! Just waitthere.Look,Ash! Do you see that ball on the table? It's called a Pok@ball. It holds a Pok@mon inside.You may haveit! Go on,take it!",unaligned_or_non_dialogue,
+1841,0x03F3D2,286,dialogue_19_19,83,pointer_table,high,0x03802D,1203,0x038107,"
+欢迎!到精灵中心可以恢复精灵的体力.",ascii,Welcome to our Pok@mon Center! We heal your Pok@mon back to perfect health!,pending_semantic_review,
+1842,0x03F426,259,dialogue_19_19,380,pointer_table,high,0x03827D,1243,0x0389ED,"
+大木:小茂啊,正好我有事要麻烦你们,桌上的东西是我做的宠物精灵图鉴,可自动将发现的精灵资料记录起来并增加页数,是一本方便的资料图鉴啊!小智小茂!这就交给你们保管了!",ascii,"Oak:Oh right! I have a request of you two.Here's my new invention, the Pok@dex.It records data on Pok@mon you've seen or caught.Take them with you! To make acomplete guide on all Pok@mon in the world...That was mydream! But, I'm tooold! I can't do it!So,I want you two to fulfill my dreamfor me! Get moving,you two! This is a great undertaking in Pok@mon history!",pending_semantic_review,
+1843,0x03F5A3,292,dialogue_19_19,81,pointer_table,high,0x03826F,1236,0x038890,"
+女孩:老爷爷怎在这睡着了?真没办法!只好等到睡醒了",ascii,Old Man:Ouch! Girl:I'm sorry my grandfather injuredhis back and can't move.,pending_semantic_review,
+1844,0x03F5F5,303,dialogue_19_19,48,pointer_table,high,0x03829F,1260,0x038E29,"
+捉虫少年:让你见识一下",ascii,You have Pok@mon! Come on! Let's battle'em!,pending_semantic_review,
