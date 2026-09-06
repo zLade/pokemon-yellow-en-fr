@@ -1,0 +1,65 @@
+# ROMs, dumps and emulator states
+*.nes
+*.nes.*
+*.gb
+*.gbc
+*.rom
+*.bin
+*.cdl
+*.deb
+*.sav
+*.srm
+*.state
+*.state*
+*.fm2
+*.fm3
+
+# Executables, archives and extracted binary assets
+*.exe
+*.dll
+*.jar
+*.chm
+*.zip
+*.7z
+*.rar
+*.chr
+*.bmp
+*.png
+
+# Generated patches are ignored except curated releases
+*.ips
+*.bps
+!/releases/**/*.ips
+!/releases/**/*.bps
+
+# Legacy/local release output; curated patches live under /releases/.
+/dist/
+
+# Generated outputs; one pinned semantic extraction is versioned deliberately
+/build/**
+!/build/chinese-english-fidelity/
+!/build/chinese-english-fidelity/extraction/
+!/build/chinese-english-fidelity/extraction/**
+/outputs/
+
+# Caches and local tooling
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+/.agents/
+/.codex/
+*.log
+*.tmp
+
+# Derived graphics; keep documentation only
+/graphics/**
+!/graphics/chr_modular/
+!/graphics/chr_modular/README.md
+
+# Local scratch and OS files
+/NUL
+Thumbs.db
+.DS_Store

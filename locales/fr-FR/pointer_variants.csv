@@ -1,0 +1,6 @@
+main_offset_hex,pointer_reference_hex,chinese_text,fr_text,review_status,fidelity_comment
+0x0302FA,0x03006B,中剧毒了, est intoxiqué !,reviewed,État d'intoxication grave distinct du recul; formulation française complète sur la seconde ligne réservée au statut.
+0x0302FA,0x03006D,害怕了, a peur !,reviewed,État de peur ou recul distinct de l'intoxication; espace initial structurel après le nom dynamique.
+0x031A15,0x031971,可以捕捉精灵的球,CapturePokémon,reviewed,Description de la Poké Ball rendue sur deux lignes de sept colonnes.
+0x031A15,0x031973,比精灵球效果要好的球,Mieux  qu'une PokéB.,reviewed,Super Ball distincte; grille 7x3 et troisième ligne confirmées par la sonde contrôlée du renderer.
+0x031A15,0x031975,比超级球效果要好的球,Mieux  qu'une SuperB.,reviewed,Hyper Ball distincte; grille 7x3 et troisième ligne confirmées par la sonde contrôlée du renderer.

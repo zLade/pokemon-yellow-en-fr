@@ -1,0 +1,39 @@
+﻿id,cle_stable,scope,createur_ou_cameo,role_source,texte_chinois_source,texte_francais_actuel,statut
+D0056,MAIN:0x0345E4,creator_mention,Kameiyu,Avertissement,"妈妈:我听说你要去彩虹市的南晶科技开发部挑战名叫卡美优的训练师!听说他的精灵至今还没有被人打败过,你千万要小心啊...","MAMAN : Kameiyu, chez Nanjing Tech à Céladopole, aurait des Pokémon invaincus. Tu vas le défier ? Prudence...",restauré dans la version française
+D0057,MAIN:0x0346A1,creator_story_dialogue,Kameiyu,Boss secret,"卡美优:不错,你的实力在这个石英地区已经无人能敌了,但别忘了人外有人天外有天啊,在这个世界上还存在别的大陆...有机会的话一定要去宝石大陆看看,那里有这里所没有的精灵!!!那么你的精灵图鉴如果收集齐了的话再来找我吧!","KAMEIYU : Bravo ! Tu es sans rival à Kanto. Pourtant, il y a plus fort ailleurs. Hoenn a d'autres Pokémon. Finis ton Pokédex. Reviens.",restauré dans la version française
+D0058,MAIN:0x034739,creator_story_dialogue,Kameiyu,Boss secret,"卡美优:有机会的话一定要去宝石大陆看看,那里有这里所没有的精灵!!!那么你的精灵图鉴如果收集齐了的话再来找我吧!","KAMEIYU : Hoenn a d'autres Pokémon. Finis ton Pokédex, puis reviens.",restauré dans la version française
+D0059,MAIN:0x0347A2,creator_story_dialogue,Kameiyu,Don de Mew,"卡美优:你已经成功了收集石英地区所有的精灵,真了不起!好吧这只梦幻就送给你吧!恭喜你完成了精灵图鉴!!",KAMEIYU : Bravo ! Le Pokédex de Kanto est complet. Ce Mew est à toi !,restauré dans la version française
+D0063,MAIN:0x034873,creator_story_dialogue,Kameiyu,Après-combat,卡美优:我认输!这样总行了吧!,"KAMEIYU : D'accord, je m'avoue vaincu ! Content ?",restauré dans la version française
+D0064,MAIN:0x034887,creator_story_dialogue,Beibei,Compliment,蓓蓓:你真的是很棒耶!,BEIBEI : Tu es vraiment formidable !,restauré dans la version française
+D0065,MAIN:0x0348B5,creator_story_dialogue,Xiao Li,Avertissement,"小李:再骚扰的话,本大爷要报警了...!","XIAO LI : Arrête !
+Ou j'appelle
+la police !",restauré dans la version française
+D0158,MAIN:0x0353F0,creator_mention,Kameiyu,Rumeur,你听过南晶开发部的卡美优吗?听说他的精灵都是神兽级别的哦...,"Kameiyu, de Nanjing Tech, aurait des Pokémon légendaires...",restauré dans la version française
+D0245,MAIN:0x037A51,creator_mention,Kameiyu,Annonce,武藏:对!!他就在彩虹市的南晶科技开发部!!名字叫卡美优!,"JESSIE : Oui !
+Son nom : Kameiyu !
+Il est développeur
+chez Nanjing Tech,
+à Céladopole !",restauré dans la version française
+D0247,MAIN:0x037ADC,creator_story_dialogue,Kameiyu,Défi secret,"卡美优:小智,我知道你一定会来的!这一战应该没有任何遗憾吧!!来吧,准备好了吗?","KAMEIYU : Sacha !
+Te voilà,
+comme prévu !
+Battons-nous
+sans aucun regret !
+Alors, prêt ?",restauré dans la version française
+D0632,MAIN:0x03BAB6,creator_story_dialogue,Beibei,Don d'Évoli,"蓓蓓:没有我不知道的事,就连电玩里的世界也一样!这只依布就送给你吧!","BEIBEI : Je sais tout, jeux vidéo compris ! Cet Évoli est pour toi !",restauré dans la version française
+D0651,MAIN:0x03BCF6,developer_office,Xiaohong,Graphiste,"小红:我是绘图师,画你的人就是我喔!","XIAOHONG : C'est moi, la graphiste qui t'a dessiné !",restauré dans la version française
+D0652,MAIN:0x03BD1A,developer_office,Kameiyu,Scénariste,卡美优:我是写剧本的...比卡丘很可爱吧!,"KAMEIYU : Le scénario, c'est moi ! Pikachu est mignon, non ?",restauré dans la version française
+D0653,MAIN:0x03BD3F,developer_office,Wei Cunfu,Programmeur,"魏村夫:我吗?我是程序师,多多关照!",WEI CUNFU : Je suis le programmeur. Enchanté !,restauré dans la version française
+D0654,MAIN:0x03BD65,developer_office,BOSS,Responsable,"BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油吧!如果全部集全的话就去告诉卡美优吧!","BOSS : La tâche est
+rude : les attraper
+tous ! Courage !
+Une fois ta quête
+achevée, préviens
+Kameiyu.",restauré dans la version française
+D0659,MAIN:0x03BE0E,creator_story_dialogue,Xiao Li,Don secret,"小李:被你发现了...我的事千万不要告诉任何人,这个给你拜托了!","XIAO LI : Tu m'as trouvé... Garde ça secret. Tiens, prends ça !",restauré dans la version française
+D0993,RESTORED:0x0331D1,creator_mention,Kameiyu,Avertissement,"小次郎:尽管你的实力非常强,但是碰上我们新老大卡美优的精灵只有落败的份!哈哈哈","JAMES : Tu es fort.
+Pourtant,
+notre nouveau chef,
+Kameiyu, te battra
+avec ses Pokémon !
+Ha ha !",restauré dans la version française

@@ -1,0 +1,925 @@
+#!/usr/bin/env python3
+"""Validate the mapper 163 cartridge contract used by the translated ROM."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+from dataclasses import dataclass
+from pathlib import Path
+
+try:
+    from .title_screen_tools import (
+        ENGLISH_TITLE_CREDITS,
+        JAUNE_TILES,
+        MENU_FR_TILES,
+        MENU_TILE_IDS,
+        SAVING_SCREEN_CHR_FILE,
+        STATUS_SCREEN_CHR_FILE,
+        TITLE_LOGO_TILE_IDS,
+        TITLE_PT0_FILE,
+        TITLE_PT1_FILE,
+        patch_french_bottom_title_label,
+        patch_french_saving_screen_label,
+        patch_french_status_screen_labels,
+        patch_title_credits,
+    )
+    from .french_font import (
+        ASCII_FONT_OFFSET,
+        extract_ascii_font,
+        french_font_tiles,
+    )
+    from .move_label_graphics import (
+        DEFAULT_EXCLUDED_EVEN_SLOTS,
+        GRAPHIC_ATLAS_OFFSET,
+        GRAPHIC_ATLAS_SLOT_SIZE,
+        IncompleteMoveLabelPatch,
+        MoveLabelError,
+        ascii_text_encoder,
+        french_text_encoder,
+        graphic_code,
+        load_move_label_csv,
+        patch_move_labels,
+        read_move_records,
+    )
+except ImportError:  # Direct ``python tools/validate_mapper163.py`` use.
+    from title_screen_tools import (
+        ENGLISH_TITLE_CREDITS,
+        JAUNE_TILES,
+        MENU_FR_TILES,
+        MENU_TILE_IDS,
+        SAVING_SCREEN_CHR_FILE,
+        STATUS_SCREEN_CHR_FILE,
+        TITLE_LOGO_TILE_IDS,
+        TITLE_PT0_FILE,
+        TITLE_PT1_FILE,
+        patch_french_bottom_title_label,
+        patch_french_saving_screen_label,
+        patch_french_status_screen_labels,
+        patch_title_credits,
+    )
+    from french_font import (
+        ASCII_FONT_OFFSET,
+        extract_ascii_font,
+        french_font_tiles,
+    )
+    from move_label_graphics import (
+        DEFAULT_EXCLUDED_EVEN_SLOTS,
+        GRAPHIC_ATLAS_OFFSET,
+        GRAPHIC_ATLAS_SLOT_SIZE,
+        IncompleteMoveLabelPatch,
+        MoveLabelError,
+        ascii_text_encoder,
+        french_text_encoder,
+        graphic_code,
+        load_move_label_csv,
+        patch_move_labels,
+        read_move_records,
+    )
+
+
+INES_HEADER_SIZE = 16
+PRG_SIZE = 2 * 1024 * 1024
+MAPPER = 163
+PRG_BANK_SIZE = 0x8000
+ROOT = Path(__file__).resolve().parent.parent
+PAIR8_START = INES_HEADER_SIZE + 8 * PRG_BANK_SIZE
+PAIR8_END = PAIR8_START + PRG_BANK_SIZE
+RESET_STUB_OFFSET = 0x1FFFF7
+RESET_STUB = bytes.fromhex(
+    # LDA #$04 / STA $5300 / LDA #$00 / STA $5000 / STA $5200 /
+    # JMP ($FFFC)
+    "A9048D0053A9008D00508D00526CFCFF"
+)
+EXPECTED_VECTORS = bytes.fromhex("F9FFC0FFF9FF")
+PLAYER_MENU_PT0_FILE = 0x0288D5
+PLAYER_MENU_PT0_SIZE = 0x1000
+PLAYER_MENU_PT0_SHA256 = (
+    "8b56d2126e60574cf0c2a4ce75319cd4"
+    "83ccbe5b51a726ffd560de039f4cc3fd"
+)
+BATTLE_MENU_CHR_START_LOW_OFFSET = 0x02321B
+BATTLE_MENU_CHR_START_LOW_EXPECTED = 0x20
+BATTLE_MESSAGE_CLEAR_WIDTH_OFFSET = 0x0231C1
+BATTLE_MESSAGE_CLEAR_WIDTH_EXPECTED = 0x19
+BATTLE_TEXT_CONTROL_HOOK_OFFSET = 0x020986
+BATTLE_TEXT_CONTROL_HOOK_EXPECTED = bytes.fromhex("4C33F4")
+BATTLE_TEXT_CONTROL_CAVE_OFFSET = 0x027443
+BATTLE_TEXT_CONTROL_CAVE_EXPECTED = bytes.fromhex(
+    "C90DF007C90AF0064C7A894CC989"
+    "A50FC923B0F7A50E29E0186944850E"
+    "A50F6900850FC84C6989"
+)
+STATUS_ALREADY_SKIP_OFFSET = 0x02480D
+STATUS_ALREADY_SKIP_EXPECTED = bytes.fromhex("4C0CC8")
+TRANSLATION_BASE_SHA256 = (
+    "d5c308b5862ccbe4647d4255a11bb0f1"
+    "cb6817c4b107feac112509d658a9943b"
+)
+DOJO_DEPUTY_SPRITE_START = 0x1CA271
+DOJO_DEPUTY_SPRITE_END = 0x1CA47C
+DOJO_DEPUTY_SPRITE_SHA256 = (
+    "abb3b8cb27f8d383412c1620bcb23d11996afbc3aa73aa17"
+    "2af6062057ee9dd6"
+)
+PLAYER_MENU_FR_TILE_IDS = {
+    0x25, 0x29, 0x2B, 0x2F, 0x26, 0x2A, 0x2C, 0x30,
+    0x31, 0x33, 0x35, 0x32, 0x34, 0x36,
+    0x4C, 0x4E, 0x5B, 0x4D, 0x4F, 0x5C,
+    0x5D, 0x7B, 0x7D, 0x84, 0x5E, 0x7C, 0x7E, 0x85,
+}
+
+
+class MoveLabelCertificationError(ValueError):
+    """The live two-line move records do not match their reviewed CSV."""
+
+
+@dataclass(frozen=True)
+class MoveLabelCertification:
+    catalogue: Path | None
+    requested_count: int
+    used_even_slots: tuple[int, ...]
+    allowed_pair8_offsets: frozenset[int]
+    changed_pair8_offsets: frozenset[int]
+
+
+def default_move_label_catalogue(profile: str) -> Path:
+    return ROOT / "locales" / profile / "move_labels_two_line.csv"
+
+
+def resolve_move_label_catalogue(
+    profile: str,
+    configured: str | Path | None,
+) -> Path | None:
+    """Resolve an explicit catalogue, or the profile-local reviewed default."""
+    if configured is not None:
+        candidate = Path(configured)
+        return candidate if candidate.is_absolute() else ROOT / candidate
+    default = default_move_label_catalogue(profile)
+    return default if default.is_file() else None
+
+
+def certify_move_label_graphics(
+    *,
+    base: bytes,
+    candidate: bytes,
+    profile: str,
+    catalogue: str | Path | None,
+) -> MoveLabelCertification:
+    """Prove pair 8 and every live graphical move payload are declarative."""
+    if profile not in {"en-US", "fr-FR"}:
+        raise MoveLabelCertificationError(
+            f"profil de noms d'attaques non certifié: {profile}"
+        )
+    if len(base) != len(candidate):
+        raise MoveLabelCertificationError(
+            "tailles base/candidat différentes pour la certification graphique"
+        )
+    catalogue_path = Path(catalogue) if catalogue is not None else None
+    if catalogue_path is None:
+        specs = ()
+    else:
+        if not catalogue_path.is_file():
+            raise MoveLabelCertificationError(
+                f"catalogue de noms d'attaques absent: {catalogue_path}"
+            )
+        encoder = ascii_text_encoder if profile == "en-US" else french_text_encoder
+        try:
+            specs = load_move_label_csv(catalogue_path, encoder=encoder)
+        except MoveLabelError as exc:
+            raise MoveLabelCertificationError(str(exc)) from exc
+
+    pair8_changes = frozenset(
+        offset
+        for offset in changed_offsets(base, candidate)
+        if PAIR8_START <= offset < PAIR8_END
+    )
+    if not specs:
+        if pair8_changes:
+            preview = ", ".join(
+                f"0x{offset:06X}" for offset in sorted(pair8_changes)[:8]
+            )
+            raise MoveLabelCertificationError(
+                "modifications banque 8 sans catalogue certifié: " + preview
+            )
+        return MoveLabelCertification(
+            catalogue=catalogue_path,
+            requested_count=0,
+            used_even_slots=(),
+            allowed_pair8_offsets=frozenset(),
+            changed_pair8_offsets=frozenset(),
+        )
+
+    try:
+        live_records = read_move_records(candidate)
+    except MoveLabelError as exc:
+        raise MoveLabelCertificationError(str(exc)) from exc
+    selected_indexes = {spec.move_index for spec in specs}
+    overlaps: list[tuple[int, int]] = []
+    for selected in live_records:
+        if selected.move_index not in selected_indexes:
+            continue
+        selected_start = selected.target
+        selected_end = selected.target + len(selected.payload)
+        for other in live_records:
+            if other.move_index == selected.move_index:
+                continue
+            other_start = other.target
+            other_end = other.target + len(other.payload)
+            if max(selected_start, other_start) < min(selected_end, other_end):
+                pair = tuple(sorted((selected.move_index, other.move_index)))
+                if pair not in overlaps:
+                    overlaps.append(pair)
+    if overlaps:
+        preview = ", ".join(
+            f"{left:03d}/{right:03d}" for left, right in sorted(overlaps)[:8]
+        )
+        raise MoveLabelCertificationError(
+            "payloads d'attaques graphiques chevauchants: " + preview
+        )
+
+    try:
+        result = patch_move_labels(candidate, base, specs, require_all=True)
+    except IncompleteMoveLabelPatch as exc:
+        raise MoveLabelCertificationError(str(exc)) from exc
+    except MoveLabelError as exc:
+        raise MoveLabelCertificationError(str(exc)) from exc
+
+    report = result.report
+    if result.rom != candidate:
+        differences = changed_offsets(candidate, result.rom)
+        preview = ", ".join(
+            f"0x{offset:06X}" for offset in sorted(differences)[:8]
+        )
+        raise MoveLabelCertificationError(
+            "composites/payloads d'attaques non idempotents: " + preview
+        )
+    if not report.complete or report.applied_count != len(specs):
+        raise MoveLabelCertificationError(
+            f"composites incomplets: {report.applied_count}/{len(specs)}"
+        )
+    if (
+        report.candidate_target_count != 177
+        or report.candidate_unique_target_count != 177
+    ):
+        raise MoveLabelCertificationError(
+            "table des attaques sans 177 cibles vivantes distinctes"
+        )
+    if report.pool_mode != "source":
+        raise MoveLabelCertificationError(
+            f"pool graphique non certifié: {report.pool_mode}"
+        )
+    if set(report.excluded_even_slots) != set(DEFAULT_EXCLUDED_EVEN_SLOTS):
+        raise MoveLabelCertificationError(
+            "liste des cellules graphiques exclues non canonique"
+        )
+    used_slots = report.used_even_slots
+    if len(used_slots) != len(set(used_slots)) or any(slot % 2 for slot in used_slots):
+        raise MoveLabelCertificationError(
+            "cellules graphiques d'attaques dupliquées ou impaires"
+        )
+    forbidden = sorted(set(used_slots) & set(DEFAULT_EXCLUDED_EVEN_SLOTS))
+    if forbidden:
+        raise MoveLabelCertificationError(
+            "cellules graphiques exclues utilisées: "
+            + ", ".join(str(slot) for slot in forbidden)
+        )
+
+    records = {record.move_index: record for record in live_records}
+    entries = {entry.move_index: entry for entry in report.entries}
+    for spec in specs:
+        entry = entries[spec.move_index]
+        expected_payload = b"".join(
+            graphic_code(slot) for slot in entry.code_slots
+        ) + b"\x0D"
+        record = records[spec.move_index]
+        if entry.status != "applied" or record.payload != expected_payload:
+            raise MoveLabelCertificationError(
+                f"payload graphique attaque {spec.move_index:03d} inattendu"
+            )
+        if record.graphical_slots != entry.code_slots:
+            raise MoveLabelCertificationError(
+                f"codes graphiques attaque {spec.move_index:03d} inattendus"
+            )
+
+    allowed_pair8: set[int] = set()
+    for slot in used_slots:
+        start = GRAPHIC_ATLAS_OFFSET + slot * GRAPHIC_ATLAS_SLOT_SIZE
+        end = start + 2 * GRAPHIC_ATLAS_SLOT_SIZE
+        if not PAIR8_START <= start < end <= PAIR8_END:
+            raise MoveLabelCertificationError(
+                f"cellule graphique {slot} hors banque 8"
+            )
+        allowed_pair8.update(range(start, end))
+    unexpected = sorted(pair8_changes - allowed_pair8)
+    if unexpected:
+        preview = ", ".join(f"0x{offset:06X}" for offset in unexpected[:8])
+        if len(unexpected) > 8:
+            preview += ", ..."
+        raise MoveLabelCertificationError(
+            "modifications banque 8 hors cellules d'attaques certifiées: "
+            + preview
+        )
+
+    return MoveLabelCertification(
+        catalogue=catalogue_path,
+        requested_count=len(specs),
+        used_even_slots=used_slots,
+        allowed_pair8_offsets=frozenset(allowed_pair8),
+        changed_pair8_offsets=pair8_changes,
+    )
+
+
+def sha256(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def parse_header(data: bytes) -> dict[str, int | bool]:
+    if len(data) < INES_HEADER_SIZE or data[:4] != b"NES\x1A":
+        raise ValueError("en-tete iNES absent")
+    header = data[:INES_HEADER_SIZE]
+    return {
+        "mapper": (header[6] >> 4) | (header[7] & 0xF0),
+        "prg_size": header[4] * 0x4000,
+        "chr_size": header[5] * 0x2000,
+        "vertical": bool(header[6] & 0x01),
+        "battery": bool(header[6] & 0x02),
+        "trainer": bool(header[6] & 0x04),
+        "four_screen": bool(header[6] & 0x08),
+        "nes2": (header[7] & 0x0C) == 0x08,
+        "region_byte": header[9] & 0x01,
+    }
+
+
+def changed_pairs(base: bytes, candidate: bytes) -> dict[int, int]:
+    counts: dict[int, int] = {}
+    for offset, (left, right) in enumerate(zip(base, candidate)):
+        if left == right:
+            continue
+        pair = -1 if offset < INES_HEADER_SIZE else (
+            offset - INES_HEADER_SIZE
+        ) // PRG_BANK_SIZE
+        counts[pair] = counts.get(pair, 0) + 1
+    return counts
+
+
+def changed_offsets(base: bytes, candidate: bytes) -> set[int]:
+    return {
+        offset
+        for offset, (left, right) in enumerate(zip(base, candidate))
+        if left != right
+    }
+
+
+def validate(args: argparse.Namespace) -> int:
+    rom_path = Path(args.rom)
+    base_path = Path(args.base_rom)
+    rom = rom_path.read_bytes()
+    base = base_path.read_bytes()
+    failures: list[str] = []
+    base_hash = sha256(base)
+    if base_hash != TRANSLATION_BASE_SHA256:
+        failures.append(
+            "base anglaise non canonique: "
+            f"{base_hash} au lieu de {TRANSLATION_BASE_SHA256}"
+        )
+
+    try:
+        info = parse_header(rom)
+    except ValueError as exc:
+        print(f"Validation mapper 163: ECHEC ({exc})")
+        return 1
+
+    expected_length = INES_HEADER_SIZE + PRG_SIZE
+    if len(rom) != expected_length:
+        failures.append(
+            f"taille ROM {len(rom)} au lieu de {expected_length}"
+        )
+    if info["mapper"] != MAPPER:
+        failures.append(f"mapper {info['mapper']} au lieu de {MAPPER}")
+    if info["prg_size"] != PRG_SIZE:
+        failures.append(f"PRG {info['prg_size']} au lieu de {PRG_SIZE}")
+    if info["chr_size"] != 0:
+        failures.append("CHR-ROM non nulle; cette carte doit utiliser CHR-RAM")
+    if not info["vertical"]:
+        failures.append("mirroring vertical absent")
+    if not info["battery"]:
+        failures.append("bit batterie/save-RAM absent")
+    if info["trainer"]:
+        failures.append("trainer iNES inattendu")
+    if info["four_screen"]:
+        failures.append("mirroring four-screen inattendu")
+    if info["nes2"]:
+        failures.append("header NES 2.0 inattendu; la base est iNES 1.0")
+
+    if len(base) != len(rom):
+        failures.append(
+            f"taille base differente: {len(base)} au lieu de {len(rom)}"
+        )
+    elif base[:INES_HEADER_SIZE] != rom[:INES_HEADER_SIZE]:
+        failures.append("header modifie par rapport a la base anglaise")
+
+    stub = rom[RESET_STUB_OFFSET:RESET_STUB_OFFSET + len(RESET_STUB)]
+    if stub != RESET_STUB:
+        failures.append(
+            "trampoline RESET mapper 163 modifie: "
+            f"{stub.hex()} au lieu de {RESET_STUB.hex()}"
+        )
+    if rom[-6:] != EXPECTED_VECTORS:
+        failures.append(
+            "vecteurs NMI/RESET/IRQ modifies: "
+            f"{rom[-6:].hex()} au lieu de {EXPECTED_VECTORS.hex()}"
+        )
+
+    same_size = len(base) == len(rom)
+    pairs = changed_pairs(base, rom) if same_size else {}
+    all_changed_offsets = changed_offsets(base, rom) if same_size else set()
+    move_label_catalogue = resolve_move_label_catalogue(
+        "fr-FR",
+        getattr(args, "move_labels_csv", None),
+    )
+    try:
+        move_label_certification = certify_move_label_graphics(
+            base=base,
+            candidate=rom,
+            profile="fr-FR",
+            catalogue=move_label_catalogue,
+        )
+    except (MoveLabelCertificationError, OSError) as exc:
+        failures.append(f"noms d'attaques graphiques: {exc}")
+        move_label_certification = MoveLabelCertification(
+            catalogue=move_label_catalogue,
+            requested_count=0,
+            used_even_slots=(),
+            allowed_pair8_offsets=frozenset(),
+            changed_pair8_offsets=frozenset(),
+        )
+    expected_changed_pairs = {4, 5, 6, 7, 14, 15, 57}
+    if move_label_certification.changed_pair8_offsets:
+        expected_changed_pairs.add(8)
+    unexpected_pairs = sorted(set(pairs) - expected_changed_pairs)
+    if unexpected_pairs:
+        failures.append(
+            "modifications hors banques traduction/titre/menu joueur: "
+            + ", ".join(str(item) for item in unexpected_pairs)
+        )
+    missing_pairs = sorted(expected_changed_pairs - set(pairs))
+    if missing_pairs:
+        failures.append(
+            "banque(s) de traduction/graphismes non modifiee(s): "
+            + ", ".join(str(item) for item in missing_pairs)
+        )
+
+    bank4_start = INES_HEADER_SIZE + 4 * PRG_BANK_SIZE
+    bank4_end = bank4_start + PRG_BANK_SIZE
+    bank4_changed_offsets = {
+        offset
+        for offset in all_changed_offsets
+        if bank4_start <= offset < bank4_end
+    }
+    allowed_bank4_offsets = {
+        BATTLE_MENU_CHR_START_LOW_OFFSET,
+        BATTLE_MESSAGE_CLEAR_WIDTH_OFFSET,
+        *(
+            BATTLE_TEXT_CONTROL_HOOK_OFFSET + index
+            for index, value in enumerate(
+                BATTLE_TEXT_CONTROL_HOOK_EXPECTED
+            )
+            if base[BATTLE_TEXT_CONTROL_HOOK_OFFSET + index] != value
+        ),
+        *(
+            BATTLE_TEXT_CONTROL_CAVE_OFFSET + index
+            for index, value in enumerate(
+                BATTLE_TEXT_CONTROL_CAVE_EXPECTED
+            )
+            if base[BATTLE_TEXT_CONTROL_CAVE_OFFSET + index] != value
+        ),
+        *(
+            STATUS_ALREADY_SKIP_OFFSET + index
+            for index, value in enumerate(STATUS_ALREADY_SKIP_EXPECTED)
+            if base[STATUS_ALREADY_SKIP_OFFSET + index] != value
+        ),
+    }
+    if bank4_changed_offsets != allowed_bank4_offsets:
+        failures.append(
+            "modifications banque 4 hors menu/hook texte combat: "
+            + ", ".join(
+                f"0x{offset:06X}" for offset in sorted(bank4_changed_offsets)
+            )
+        )
+    if rom[BATTLE_MENU_CHR_START_LOW_OFFSET] != (
+        BATTLE_MENU_CHR_START_LOW_EXPECTED
+    ):
+        failures.append(
+            "départ CHR du menu combat inattendu: "
+            f"0x{rom[BATTLE_MENU_CHR_START_LOW_OFFSET]:02X} au lieu de "
+            f"0x{BATTLE_MENU_CHR_START_LOW_EXPECTED:02X}"
+        )
+    if rom[BATTLE_MESSAGE_CLEAR_WIDTH_OFFSET] != (
+        BATTLE_MESSAGE_CLEAR_WIDTH_EXPECTED
+    ):
+        failures.append(
+            "largeur d'effacement combat inattendue: "
+            f"0x{rom[BATTLE_MESSAGE_CLEAR_WIDTH_OFFSET]:02X} au lieu de "
+            f"0x{BATTLE_MESSAGE_CLEAR_WIDTH_EXPECTED:02X}"
+        )
+    hook_end = (
+        BATTLE_TEXT_CONTROL_HOOK_OFFSET
+        + len(BATTLE_TEXT_CONTROL_HOOK_EXPECTED)
+    )
+    cave_end = (
+        BATTLE_TEXT_CONTROL_CAVE_OFFSET
+        + len(BATTLE_TEXT_CONTROL_CAVE_EXPECTED)
+    )
+    if rom[
+        BATTLE_TEXT_CONTROL_HOOK_OFFSET:hook_end
+    ] != BATTLE_TEXT_CONTROL_HOOK_EXPECTED:
+        failures.append("hook retour ligne du texte combat non conforme")
+    if rom[
+        BATTLE_TEXT_CONTROL_CAVE_OFFSET:cave_end
+    ] != BATTLE_TEXT_CONTROL_CAVE_EXPECTED:
+        failures.append("cave retour ligne du texte combat non conforme")
+    status_skip_end = (
+        STATUS_ALREADY_SKIP_OFFSET + len(STATUS_ALREADY_SKIP_EXPECTED)
+    )
+    if rom[
+        STATUS_ALREADY_SKIP_OFFSET:status_skip_end
+    ] != STATUS_ALREADY_SKIP_EXPECTED:
+        failures.append("saut du second statut already non conforme")
+
+    dojo_deputy_sprite_hash = sha256(
+        rom[DOJO_DEPUTY_SPRITE_START:DOJO_DEPUTY_SPRITE_END]
+    )
+    if dojo_deputy_sprite_hash != DOJO_DEPUTY_SPRITE_SHA256:
+        failures.append(
+            "sprite du numéro 2 du dojo non conforme à la ROM chinoise: "
+            f"{dojo_deputy_sprite_hash} au lieu de "
+            f"{DOJO_DEPUTY_SPRITE_SHA256}"
+        )
+    bank57_start = INES_HEADER_SIZE + 57 * PRG_BANK_SIZE
+    bank57_end = bank57_start + PRG_BANK_SIZE
+    bank57_changed_offsets = {
+        offset
+        for offset in all_changed_offsets
+        if bank57_start <= offset < bank57_end
+    }
+    allowed_bank57_offsets = set(
+        range(DOJO_DEPUTY_SPRITE_START, DOJO_DEPUTY_SPRITE_END)
+    )
+    unexpected_bank57_offsets = sorted(
+        bank57_changed_offsets - allowed_bank57_offsets
+    )
+    if unexpected_bank57_offsets:
+        failures.append(
+            "modifications banque 57 hors sprite du numéro 2 du dojo: "
+            + ", ".join(
+                f"0x{offset:06X}" for offset in unexpected_bank57_offsets[:8]
+            )
+        )
+
+    allowed_player_menu_offsets = {
+        PLAYER_MENU_PT0_FILE + tile_id * 16 + byte_index
+        for tile_id in PLAYER_MENU_FR_TILE_IDS
+        for byte_index in range(16)
+    }
+    secondary_screen_reference = bytearray(base)
+    patch_french_status_screen_labels(secondary_screen_reference)
+    patch_french_saving_screen_label(secondary_screen_reference)
+    allowed_secondary_screen_offsets = {
+        offset
+        for offset in range(SAVING_SCREEN_CHR_FILE, STATUS_SCREEN_CHR_FILE + 0x1000)
+        if secondary_screen_reference[offset] != base[offset]
+    }
+    allowed_bank5_offsets = (
+        allowed_player_menu_offsets | allowed_secondary_screen_offsets
+    )
+    bank5_start = INES_HEADER_SIZE + 5 * PRG_BANK_SIZE
+    bank5_end = bank5_start + PRG_BANK_SIZE
+    bank5_changed_offsets = {
+        offset
+        for offset in all_changed_offsets
+        if bank5_start <= offset < bank5_end
+    }
+    unexpected_bank5_offsets = sorted(
+        bank5_changed_offsets - allowed_bank5_offsets
+    )
+    if unexpected_bank5_offsets:
+        preview = ", ".join(
+            f"0x{offset:06X}" for offset in unexpected_bank5_offsets[:8]
+        )
+        if len(unexpected_bank5_offsets) > 8:
+            preview += ", ..."
+        failures.append(
+            "modifications banque 5 hors menus français attendus: " + preview
+        )
+
+    wrong_secondary_offsets = sorted(
+        offset
+        for offset in allowed_secondary_screen_offsets
+        if rom[offset] != secondary_screen_reference[offset]
+    )
+    if wrong_secondary_offsets:
+        preview = ", ".join(
+            f"0x{offset:06X}" for offset in wrong_secondary_offsets[:8]
+        )
+        if len(wrong_secondary_offsets) > 8:
+            preview += ", ..."
+        failures.append(
+            "graphismes fiche joueur/sauvegarde inattendus: " + preview
+        )
+
+    if args.title_logo == "english":
+        expected_logo_tiles = {
+            TITLE_PT0_FILE + tile_id * 16: base[
+                TITLE_PT0_FILE + tile_id * 16
+                : TITLE_PT0_FILE + (tile_id + 1) * 16
+            ]
+            for tile_id in TITLE_LOGO_TILE_IDS
+        }
+        title_logo_label = "YELLOW anglais"
+    else:
+        expected_logo_tiles = {
+            TITLE_PT0_FILE + tile_id * 16: tile
+            for tile_id, tile in zip(
+                TITLE_LOGO_TILE_IDS,
+                JAUNE_TILES,
+                strict=True,
+            )
+        }
+        title_logo_label = "JAUNE français"
+
+    expected_title_tiles = {
+        **expected_logo_tiles,
+        **{
+            TITLE_PT1_FILE + tile_id * 16: tile
+            for tile_id, tile in zip(
+                MENU_TILE_IDS,
+                MENU_FR_TILES,
+                strict=True,
+            )
+        },
+    }
+    allowed_bank14_offsets = {
+        offset + byte_index
+        for offset in expected_title_tiles
+        for byte_index in range(16)
+    }
+    bottom_title_reference = bytearray(base)
+    patch_french_bottom_title_label(bottom_title_reference)
+    bottom_title_offsets = {
+        offset
+        for offset in range(
+            INES_HEADER_SIZE + 14 * PRG_BANK_SIZE,
+            INES_HEADER_SIZE + 15 * PRG_BANK_SIZE,
+        )
+        if bottom_title_reference[offset] != base[offset]
+    }
+    allowed_bank14_offsets |= bottom_title_offsets
+    for offset in sorted(bottom_title_offsets):
+        if rom[offset] != bottom_title_reference[offset]:
+            failures.append(
+                f"octet petit libellé JAUNE 0x{offset:06X} inattendu"
+            )
+    bank14_start = INES_HEADER_SIZE + 14 * PRG_BANK_SIZE
+    bank14_end = bank14_start + PRG_BANK_SIZE
+    if args.title_credits_mode == "shared":
+        credits_reference = bytearray(base)
+        patch_title_credits(credits_reference, args.title_credits)
+        credit_offsets = {
+            offset
+            for offset in range(bank14_start, bank14_end)
+            if credits_reference[offset] != base[offset]
+        }
+        allowed_bank14_offsets |= credit_offsets
+        for offset in sorted(credit_offsets):
+            if rom[offset] != credits_reference[offset]:
+                failures.append(
+                    f"octet crédits titre 0x{offset:06X} inattendu"
+                )
+    bank14_changed_offsets = {
+        offset
+        for offset in all_changed_offsets
+        if bank14_start <= offset < bank14_end
+    }
+    unexpected_bank14_offsets = sorted(
+        bank14_changed_offsets - allowed_bank14_offsets
+    )
+    if unexpected_bank14_offsets:
+        preview = ", ".join(
+            f"0x{offset:06X}"
+            for offset in unexpected_bank14_offsets[:8]
+        )
+        if len(unexpected_bank14_offsets) > 8:
+            preview += ", ..."
+        failures.append(
+            "modifications banque 14 hors tuiles titre/menu: " + preview
+        )
+
+    expected_french_font_tiles = french_font_tiles(
+        extract_ascii_font(base)
+    )
+    expected_font_offsets = {
+        ASCII_FONT_OFFSET + (code - 0x20) * 16: tile
+        for code, tile in expected_french_font_tiles.items()
+    }
+    allowed_bank15_offsets = {
+        offset + byte_index
+        for offset in expected_font_offsets
+        for byte_index in range(16)
+    }
+    bank15_start = INES_HEADER_SIZE + 15 * PRG_BANK_SIZE
+    bank15_end = bank15_start + PRG_BANK_SIZE
+    bank15_changed_offsets = {
+        offset
+        for offset in all_changed_offsets
+        if bank15_start <= offset < bank15_end
+    }
+    unexpected_bank15_offsets = sorted(
+        bank15_changed_offsets - allowed_bank15_offsets
+    )
+    if unexpected_bank15_offsets:
+        preview = ", ".join(
+            f"0x{offset:06X}"
+            for offset in unexpected_bank15_offsets[:8]
+        )
+        if len(unexpected_bank15_offsets) > 8:
+            preview += ", ..."
+        failures.append(
+            "modifications banque 15 hors glyphes français: " + preview
+        )
+
+    for offset, expected_tile in expected_font_offsets.items():
+        actual_tile = rom[offset : offset + 16]
+        if actual_tile != expected_tile:
+            failures.append(
+                f"glyphe français 0x{offset:06X} inattendu: "
+                f"{sha256(actual_tile)} au lieu de {sha256(expected_tile)}"
+            )
+
+    wrong_title_tiles = []
+    for offset, expected_tile in expected_title_tiles.items():
+        actual_tile = rom[offset:offset + 16]
+        if actual_tile != expected_tile:
+            wrong_title_tiles.append(
+                (offset, sha256(actual_tile), sha256(expected_tile))
+            )
+    for offset, actual_hash, expected_hash in wrong_title_tiles:
+        failures.append(
+            f"tuile titre/menu 0x{offset:06X} inattendue: "
+            f"{actual_hash} au lieu de {expected_hash}"
+        )
+
+    title_graphics_block = b"".join(
+        rom[offset:offset + 16]
+        for offset in sorted(expected_title_tiles)
+    )
+    expected_title_graphics_block = b"".join(
+        expected_title_tiles[offset]
+        for offset in sorted(expected_title_tiles)
+    )
+    title_graphics_hash = sha256(title_graphics_block)
+    expected_title_graphics_hash = sha256(
+        expected_title_graphics_block
+    )
+
+    player_menu_pt0 = rom[
+        PLAYER_MENU_PT0_FILE
+        : PLAYER_MENU_PT0_FILE + PLAYER_MENU_PT0_SIZE
+    ]
+    player_menu_pt0_hash = sha256(player_menu_pt0)
+    if player_menu_pt0_hash != PLAYER_MENU_PT0_SHA256:
+        failures.append(
+            "CHR menu joueur inattendu: "
+            f"{player_menu_pt0_hash} au lieu de {PLAYER_MENU_PT0_SHA256}"
+        )
+
+    print("Validation cartouche mapper 163")
+    print(f"- ROM : {rom_path.resolve()}")
+    print(f"- SHA-256 : {sha256(rom)}")
+    print(
+        f"- Header : mapper={info['mapper']} PRG={info['prg_size']} "
+        f"CHR-ROM={info['chr_size']} vertical={info['vertical']} "
+        f"batterie={info['battery']}"
+    )
+    print(
+        "- Modele : 64 banques PRG commutables de 32 Kio, "
+        "CHR-RAM 8 Kio"
+    )
+    print(
+        "- Region header : "
+        + ("PAL" if info["region_byte"] else "NTSC")
+        + " (Mesen DB classe la ROM chinoise source en Dendy)"
+    )
+    print(
+        "- Banques modifiees vs base : "
+        + ", ".join(f"{pair}={count}" for pair, count in sorted(pairs.items()))
+    )
+    print(
+        "- Sprite chinois du numéro 2 du dojo : "
+        f"SHA-256={dojo_deputy_sprite_hash}"
+    )
+    print(
+        "- Noms d'attaques graphiques banque 8 : "
+        f"{move_label_certification.requested_count} composites, "
+        f"{len(move_label_certification.used_even_slots)} cellules, "
+        f"{len(move_label_certification.changed_pair8_offsets)} octets modifiés"
+    )
+    print(
+        "- Extension CHR menu combat banque 4 : "
+        f"0x{BATTLE_MENU_CHR_START_LOW_OFFSET:06X}=0x"
+        f"{rom[BATTLE_MENU_CHR_START_LOW_OFFSET]:02X}"
+    )
+    print(
+        "- Effacement fenêtre combat banque 4 : "
+        f"{rom[BATTLE_MESSAGE_CLEAR_WIDTH_OFFSET]} cases"
+    )
+    print(
+        "- Retour ligne texte combat banque 4 : "
+        f"hook 0x{BATTLE_TEXT_CONTROL_HOOK_OFFSET:06X}, "
+        f"cave {len(BATTLE_TEXT_CONTROL_CAVE_EXPECTED)} octets"
+    )
+    print(
+        "- Statut déjà présent banque 4 : "
+        f"saut 0x{STATUS_ALREADY_SKIP_OFFSET:06X}"
+    )
+    print(
+        "- Graphismes menus joueur/fiche/sauvegarde banque 5 : "
+        f"{len(bank5_changed_offsets)} octets modifies, "
+        f"CHR PT0 SHA-256={player_menu_pt0_hash}"
+    )
+    print(
+        "- Graphismes titre/menu banque 14 : "
+        f"{len(bank14_changed_offsets)} octets modifies, "
+        f"bloc cible SHA-256={title_graphics_hash}"
+    )
+    print(f"- Logo titre attendu : {title_logo_label}")
+    print(
+        "- Police française banque 15 : "
+        f"{len(bank15_changed_offsets)} octets modifiés, "
+        f"{len(expected_font_offsets)} glyphes vérifiés"
+    )
+    print(
+        "- Trampoline RESET $5300/$5000/$5200 : "
+        + ("OK" if stub == RESET_STUB else "ECHEC")
+    )
+    print(
+        "- Vecteurs NMI/RESET/IRQ : "
+        + ("OK" if rom[-6:] == EXPECTED_VECTORS else "ECHEC")
+    )
+
+    if failures:
+        print("- Resultat : ECHEC")
+        for failure in failures:
+            print(f"  - {failure}")
+        return 1
+    print("- Resultat : OK")
+    return 0
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Valide le contrat materiel iNES mapper 163."
+    )
+    parser.add_argument(
+        "--rom",
+        default="Pokemon_Jaune_FR_repacked_title.nes",
+    )
+    parser.add_argument(
+        "--base-rom",
+        default="Pokemon Yellow English 9-23-2015.nes",
+    )
+    parser.add_argument(
+        "--title-logo",
+        choices=("english", "french"),
+        default="english",
+        help=(
+            "logo attendu: YELLOW anglais (défaut) ou JAUNE français"
+        ),
+    )
+    parser.add_argument(
+        "--title-credits-mode",
+        choices=("original", "shared"),
+        default="shared",
+        help=(
+            "ligne d'origine ou crédits communs FR/EN "
+            "(défaut: shared)"
+        ),
+    )
+    parser.add_argument(
+        "--title-credits",
+        default=ENGLISH_TITLE_CREDITS,
+        help="texte attendu dans la ligne de crédits commune",
+    )
+    parser.add_argument(
+        "--move-labels-csv",
+        type=Path,
+        help=(
+            "catalogue explicite des noms d'attaques sur deux lignes; "
+            "par défaut locales/fr-FR/move_labels_two_line.csv s'il existe"
+        ),
+    )
+    return parser
+
+
+if __name__ == "__main__":
+    raise SystemExit(validate(build_parser().parse_args()))

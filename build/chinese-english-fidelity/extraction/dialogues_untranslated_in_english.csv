@@ -1,0 +1,414 @@
+pointer_reference_hex,chinese_record_index,chinese_offset_hex,chinese_text,english_offset_hex,english_storage,english_text,english_translation_status,french_source_offset_hex,french_text,present_in_french,pointer_redirected_for_french
+0x033143,934,0x03329E,"
+小茂:怎么了?小智在这里遇见你还真是偶然啊!你也去宠物精灵联盟啊?徽章也都收集齐了,干的不错嘛!不过在去联盟之前先和我比试一场吧!",0x03329F,graphical_codes,"<B0B6><B1EC>:<B2D0><B1E6><B0F8>?<B0B6><B0B7><B0B8><B0EE><B0BF><B4DA><B2CD><B0C5><B2BD><B1F5><B0C2><B9E3><B2AA><B2AC>!<B0C5><B0F6><B0C7><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF><B2AC>?<B3D1><B3D2><B0F6><B1C0><B6B7><B6B8><BDE5><B0F8>,<B5A5><B0BC><B0CE><B2DC><B1DC>!<B0CE><B3D4><B0B8><B0C7><B3CE><B3CF><B3E3><B3DD><B6E0><B0C9><B1C2><B2B2><B4A3><B1D1><B3B5><B0BE>!",not_translated_in_english,0x03329F,"RÉGIS : Tiens,
+Sacha !
+Quelle surprise !
+Tu vas à la Ligue ?
+Tous tes Badges !
+Pas mal ! Bats-moi.",yes,no
+0x033145,935,0x03331B,"
+小茂:我只是一时太大意了,可恶!不过你这样的水平想称霸精灵联盟...你还是多练习一下比较好!我多管闲事了啊,那我先走了!再会了...",0x03331B,graphical_codes,"<0A><B0B6><B1EC>:<B1C2><B2BE><B0C2><B1D1><B0F0><B6C6><B1BE><B4A5><B0F8>,<B0DE><B5E0>!<B0CE><B3D4><B0C5><B0EE><B2DA><B0BC><B5F7><B5DC><B1D7><B1C8><BBD4><B0A1><B0A2><B3CE><B3CF>...<B0C5><B2BD><B0C2><B0C8><B2C5><B2C6><B1D1><B0F9><B2B2><B3EB><B1B4>!<B1C2><B0C8><B3A4><B5C0><B1D5><B0F8><B2AC>,<B0B9><B1C2><B6E0><B7C3><B0F8>!<B0FB><B1F9><B0F8>...",not_translated_in_english,0x03331B,"RÉGIS : Zut !
+J'étais distrait.
+À ce niveau, jamais
+tu ne gagneras
+la Ligue.
+Entraîne-toi !
+Je trace. À plus !",yes,no
+0x033147,936,0x033395,"
+守卫:啊!你拿的的确是联盟徽章!请通过吧!",0x033395,graphical_codes,<0A><B3DF><B3E0>:<B2AC>!<B0C5><B0C6><B0BC><B0BC><B9DB><B0C2><B3CE><B3CF><B3D1><B3D2>!<B2D8><B3DA><B3D4><B0BE>!,not_translated_in_english,0x033395,"GARDE : Oh !
+Tes Badges de Ligue
+sont authentiques !
+Tu peux passer !",yes,no
+0x03318D,971,0x033CFA,"
+裁判:真是抱歉,四天王的加纳因为不在所以现在联盟暂停训练家挑战...加纳好像去华蓝市调查异变去了...",0x033CF0,graphical_codes,"00000000000<B3FC><B3FD>:<B1F5><B0C2><B9FA><B9FB>,<B1E1><B1AD><B4F7><B0BC><B2FC><BDAB><B0E9><B0EA><B0CE><B0B8><B0AD><B0DF><B2F5><B0B8><B3CE><B3CF><B0EF><B3DB><B2DE><B2C5><B1BF><B3FB><B0F2>...<B2FC><BDAB><B1B4><B1B5><B0C7><B4CF><B4D0><B4D1><BDF6><BDAA><BCEC><B3D6><B0C7><B0F8>...",not_translated_in_english,0x033CF0,"ARBITRE :
+Désolé.
+Olga est absente,
+alors la Ligue
+suspend les défis.
+Elle enquête
+à Azuria...",yes,no
+0x0331A3,982,0x033F59,"
+加纳:欢迎来到宠物精灵联盟!我是冰系四天王加纳!还没碰过害怕的东西,让我生气了就让你的精灵动弹不得!哈哈觉悟吧!",0x033F45,graphical_codes,"000000000000000000000<B2FC><BDAB>:<B0D2><B0D3><B0FC><B0DB><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B1C2><B0C2><BAE8><B0AF><B1E1><B1AD><B4F7><B2FC><BDAB>!<B2BD><B2B6><B8A4><B3D4><B3EE><B8AC><B0BC><B0D5><B0D6>,<B2CB><B1C2><B1C9><B4AA><B0F8><B2AB><B2CB><B0C5><B0BC><B0A1><B0A2><B0B2><BBF7><B0CE><B2C1>!<B3BC><B3BC><B5EB><BAB8><B0BE>!",not_translated_in_english,0x033F45,"OLGA : Bienvenue !
+Je zuis OLGA,
+du Conzeil des 4 !
+Ma glaze va figer
+toute ton équipe !
+Ach ! Z'est parti !",yes,no
+0x0331A5,983,0x033FC5,"
+加纳:你到底是什么人物?...好吧,我输了就朝下一个房间前进吧",0x033FC5,graphical_codes,"<0A><B2FC><BDAB>:<B0C5><B0DB><B3D5><B0C2><B2AF><B1E6><B2B5><B0C1>?...<B1B4><B0BE>,<B1C2><B3F1><B0F8><B2AB><B3FE><B0F9><B1D1><B0BA><B9EA><BAF1><B3DD><B3DE><B0BE>",not_translated_in_english,0x033FC5,"OLGA : Tu es fort.
+Z'est bien.
+J'ai perdu.
+Passe à la suite !",yes,no
+0x0331A7,984,0x033FFF,"
+西巴:我是地系四天王西巴!不管是精灵或人只要战斗磨练都能变的很强,就靠这中磨练与我的精灵工生存!你是小智吧,来尝尝我们的超级力量吧!",0x033FFF,graphical_codes,"<0A><B0D6><BBC0>:<B1C2><B0C2><B3BB><B0AF><B1E1><B1AD><B4F7><B0D6><BBC0>!<B0CE><B3A4><B0C2><B0A1><B0A2><B1CB><B2B5><B2BE><B0C3><B0F2><B4B7><BDEC><B2C5><B1C0><B0EC><B3D6><B0BC><B3F7><B2C9>,<B2AB><BAC4><B0EE><B0DC><BDEC><B2C5><B2A1><B1C2><B0BC><B0A1><B0A2><B3B2><B1C9><B0A5>!<B0C5><B0C2><B0B6><B0B7><B0BE>,<B0FC><B7EA><B7EA><B1C2><B2EF><B0BC><B4E4><B8B2><B0E3><B3EC><B0BE>!",not_translated_in_english,0x033FFF,"ALDO : Je suis ALDO
+du Conseil des 4 !
+Mes Pokémon et moi,
+on adore la muscu !
+Sacha, en garde !
+À table !",yes,no
+0x0331A9,985,0x03407F,"
+西巴:到底是怎么回事?我竟然输了...既然输了,我无话可说,你就前进吧!",0x03407F,graphical_codes,"<0A><B0D6><BBC0>:<B0DB><B3D5><B0C2><B2D0><B1E6><B2A3><B1D5>?<B1C2><B7D5><B2AA><B3F1><B0F8>...<B2A9><B2AA><B3F1><B0F8>,<B1C2><B3E6><B1EF><B0DE><B1E7>,<B0C5><B2AB><B3DD><B3DE><B0BE>!",not_translated_in_english,0x03407F,"ALDO : Perdu...
+Bien joué !
+La suite t'attend.",yes,no
+0x0331AB,986,0x0340C1,"
+菊子:我是鬼系四天王菊子,听说真新镇的大木博士相当疼你!大木博士以前是相当强的男人!现在看不出来了,光只是做宠物精灵图鉴是不够的!精灵是要用来战斗的!让我来教你真正的战斗吧!",0x0340C1,graphical_codes,"<0A><BADE><B1DF>:<B1C2><B0C2><B7B2><B0AF><B1E1><B1AD><B4F7><BADE><B1DF>,<B1F1><B1E7><B1F5><B2D5><B2D6><B0BC><B1BE><B1C3><B1C4><B1C5><B0D0><B2C4><B5F2><B0C5>!<B1BE><B1C3><B1C4><B1C5><B0DF><B3DD><B0C2><B0D0><B2C4><B2C9><B0BC><B1DD><B2B5>!<B2F5><B0B8><B0FD><B0CE><B0A4><B0FC><B0F8>,<B0E4><B2BE><B0C2><B2B4><B0C0><B0C1><B0A1><B0A2><B2F1><B2F2><B0C2><B0CE><B0F1><B0BC>!<B0A1><B0A2><B0C2><B0C3><B1A8><B0FC><B0F2><B4B7><B0BC>!<B2CB><B1C2><B0FC><B7DB><B0C5><B1F5><B2BA><B0BC><B0F2><B4B7><B0BE>!",not_translated_in_english,0x0340C1,"AGATHA :
+Conseil des 4 !
+CHEN mise sur toi.
+Ce vieux machin
+était fort et beau.
+Mais le Pokédex
+ne suffit pas :
+les Pokémon
+servent au combat !
+Montre-moi
+ce que tu vaux !",yes,no
+0x0331AD,987,0x034169,"
+瓦它诺:你是小智?我是龙系四天王菊子瓦它诺,你应该知道龙是神圣传说中的生物,很难抓但培育的好将是天下第一!一般的攻击对龙系是没用的!开始吧,我会让你夹着尾巴逃跑的!",0x034169,graphical_codes,"<0A><BAF4><B6A6><BBCF>:<B0C5><B0C2><B0B6><B0B7>?<B1C2><B0C2><B6D9><B0AF><B1E1><B1AD><B4F7><BADE><B1DF><BAF4><B6A6><BBCF>,<B0C5><B6B9><B3B3><B2D7><B1A4><B6D9><B0C2><B6DD><BCB3><B6F2><B1E7><B0DC><B0BC><B1C9><B0C1>,<B3F7><B4A7><B2C0><B3A8><B6A3><B6D8><B0BC><B1B4><B1D2><B0C2><B1AD><B0F9><B6A7><B1D1>!<B1D1><BAFD><B0BC><B4AB><B4AC><B0E7><B6D9><B0AF><B0C2><B2B6><B1A8><B0BC>!<B1D9><B1DA><B0BE>,<B1C2><B1F9><B2CB><B0C5><BCBB><B1C7><BBD0><BBC0><B3EF><B8B9><B0BC>!",not_translated_in_english,0x034169,"PETER :
+Je dirige
+le Conseil des 4 !
+Les dragons sont
+des êtres sacrés.
+Durs à capturer,
+ils sont presque
+invincibles !
+Le glas sonne...
+Tu vas perdre !",yes,no
+0x0331AF,988,0x034207,"
+瓦它诺:虽然难过但你的技术一流!不过要想成为真正的冠军就应该进入冠军的房间打败里面的训练师!!他比你早一步打败我们四天王!",0x034207,graphical_codes,<0A><BAF4><B6A6><BBCF>:<B4A4><B2AA><B4A7><B3D4><B3A8><B0C5><B0BC><B4BF><B1AE><B1D1><B9D7>!<B0CE><B3D4><B0C3><B1D7><B2EA><B0EA><B1F5><B2BA><B0BC><B4A1><B4A2><B2AB><B6B9><B3B3><B3DE><B5BB><B4A1><B4A2><B0BC><B9EA><BAF1><B0CF><B6A2><B0BF><B4A8><B0BC><B2DE><B2C5><B2DF>!!<B1F0><B2B2><B0C5><B2BB><B1D1><B7D4><B0CF><B6A2><B1C2><B2EF><B1E1><B1AD><B4F7>!,not_translated_in_english,0x034207,"PETER : Bien joué !
+Mais pour être
+le vrai Champion,
+bats le Dresseur
+qui nous a vaincus.
+Il t'attend
+dans la salle
+suivante !",yes,no
+0x0331D3,1006,0x0344B8,"
+大木博士:你又堂堂正正的赢了!恭喜你小智,从你刚开始得到比卡丘开始到现在你真的变强了,应该说你长大了!小智,你能制霸宠物精灵联盟!不是你一个人的力量!是你与精灵之间巧妙的感情!小智你跟我来!",0x03447C,graphical_codes,"0000000000000000000000000000000000000000000000000000000000000<B1BE><B1C3><B1C4><B1C5>:<B0C5><B5B0><BDF2><BDF2><B2BA><B2BA><B0BC><B3F5><B0F8>!<BBA6><B6EB><B0C5><B0B6><B0B7>,<B1FA><B0C5><B2BF><B1D9><B1DA><B2C1><B0DB><B2B2><B2C2><B2C3><B1D9><B1DA><B0DB><B2F5><B0B8><B0C5><B1F5><B0BC><B3D6><B2C9><B0F8>,<B6B9><B3B3><B1E7><B0C5><B2EB><B1BE><B0F8>!<B0B6><B0B7>,<B0C5><B0EC><B2E4><BBD4><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B0CE><B0C2><B0C5><B1D1><B0BA><B2B5><B0BC><B0E3><B3EC>!<B0C2><B0C5><B2A1><B0A1><B0A2><B3E3><BAF1><BDF5><B7FC><B0BC><B5EA><B7AB>!<B0B6><B0B7><B0C5><B2A2><B1C2><B0FC>!",not_translated_in_english,0x03447C,"PROF. CHEN : Bravo,
+Sacha !
+Avec Pikachu,
+tu as tant grandi !
+Grâce au lien noué
+avec tes Pokémon,
+tu as gagné !
+Suis-moi !",yes,no
+0x0331D5,1007,0x03456E,"
+大木博士:小智,你经过激烈的战斗!而如今成为联盟冠军!在此记录下小智的名字与精灵的名字吧!和我一起回家吧,你妈妈一定很想你",0x03456E,graphical_codes,"<0A><B1BE><B1C3><B1C4><B1C5>:<B0B6><B0B7>,<B0C5><B2A5><B3D4><BAB4><BBC8><B0BC><B0F2><B4B7>!<B1CE><B1FE><B6C9><B2EA><B0EA><B3CE><B3CF><B4A1><B4A2>!<B0B8><BDE7><B2F8><B2F9><B0F9><B0B6><B0B7><B0BC><B3B1><B9B1><B2A1><B0A1><B0A2><B0BC><B3B1><B9B1><B0BE>!<B0C9><B1C2><B1D1><B0E8><B2A3><B1BF><B0BE>,<B0C5><B1DB><B1DB><B1D1><B2B1><B3F7><B1D7><B0C5>",not_translated_in_english,0x03456E,"PROF. CHEN : Bravo,
+Sacha !
+Te voilà Champion
+de la Ligue !
+Notons vos noms.
+Puis rentrons :
+ta mère t'attend.",yes,no
+0x0331D7,1008,0x0345E4,"
+妈妈:我听说你要去彩虹市的南晶科技开发部挑战名叫卡美优的训练师!听说他的精灵至今还没有被人打败过,你千万要小心啊...",0x0345E4,graphical_codes,"<0A><B1DB><B1DB>:<B1C2><B1F1><B1E7><B0C5><B0C3><B0C7><B6CA><B8FD><B4D1><B0BC><B0A7><B0A8><BDE0><B4BF><B1D9><B2F4><B6C1><B3FB><B0F2><B3B1><B1C1><B2C2><B6A8><B8EE><B0BC><B2DE><B2C5><B2DF>!<B1F1><B1E7><B1F0><B0BC><B0A1><B0A2><BDFA><B6C9><B2BD><B2B6><B0AE><B1B6><B2B5><B0CF><B6A2><B3D4>,<B0C5><B8F9><B4B1><B0C3><B0B6><B0DD><B2AC>...",not_translated_in_english,0x0345E4,"MAMAN : Kameiyu, chez Nanjing Tech à Céladopole, aurait des Pokémon invaincus. Tu vas le défier ? Prudence...",yes,no
+0x0331E3,1014,0x034847,"
+妈妈:你完成精灵图鉴了吗?",0x0347CB,graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1DB><B1DB>:<B0C5><B3A6><B2EA><B0A1><B0A2><B2F1><B2F2><B0F8><B0D7>?,not_translated_in_english,0x0347CB,"MAMAN :
+Tu as terminé
+le Pokédex ?",yes,no
+0x0348E5,1023,0x034952,"
+得到大师球",0x034953,graphical_codes,<B2C1><B0DB><B1BE><B2DF><B0BD>,not_translated_in_english,0x034953,Master Ball reçue !,yes,no
+0x0348ED,1027,0x034982,"
+得到最大伤药",0x034981,graphical_codes,00<B2C1><B0DB><B3F2><B1BE><B9C7><BBB9>,not_translated_in_english,0x034981,Potion Max reçue !,yes,no
+0x0348F7,1032,0x0349C0,"
+得到烧伤药",0x0349BF,graphical_codes,00<B2C1><B0DB><BAE7><B9C7><BBB9>,not_translated_in_english,0x0349BF,Anti-Brûle reçu !,yes,no
+0x0348FD,1035,0x0349E6,"
+得到PP提升",0x0349E5,graphical_codes,00<B2C1><B0DB>PP<B4C7><B4C8>,not_translated_in_english,0x0349E5,Huile reçue !,yes,no
+0x0348FF,1036,0x0349F2,"
+得到PP最大",0x0349F2,graphical_codes,<0A><B2C1><B0DB>PP<B3F2><B1BE>,not_translated_in_english,0x0349F2,Huile Max reçue !,yes,no
+0x03490D,1043,0x034A48,"
+得到包裹",0x034A49,graphical_codes,<B2C1><B0DB><B2E0><B2E1>,not_translated_in_english,0x034A49,Colis Chen reçu !,yes,no
+0x03490F,1044,0x034A52,"
+得到精灵图鉴",0x034A52,graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B2F1><B2F2>,not_translated_in_english,0x034A52,Pokédex reçu !,yes,no
+0x034911,1045,0x034A60,"
+得到地图",0x034A60,graphical_codes,<0A><B2C1><B0DB><B3BB><B2F1>,not_translated_in_english,0x034A60,Carte reçue !,yes,no
+0x034913,1046,0x034A6A,"
+得到菊石化石",0x034A6A,graphical_codes,<0A><B2C1><B0DB><BADE><B1B2><B5AB><B1B2>,not_translated_in_english,0x034A6A,Nautile reçu !,yes,no
+0x034915,1047,0x034A78,"
+得到盔甲化石",0x034A78,graphical_codes,<0A><B2C1><B0DB><BADF><BBBE><B5AB><B1B2>,not_translated_in_english,0x034A78,Fossile Dôme reçu !,yes,no
+0x034917,1048,0x034A86,"
+得到船票",0x034A86,graphical_codes,<0A><B2C1><B0DB><B6F6><B6F7>,not_translated_in_english,0x034A86,Passe Bateau reçu !,yes,no
+0x034919,1049,0x034A90,"
+得到矿泉水",0x034A90,graphical_codes,<0A><B2C1><B0DB><B8E9><B8EA><B5F7>,not_translated_in_english,0x034A90,Eau Fraîche reçue !,yes,no
+0x03491B,1050,0x034A9C,"
+得到精灵眼镜",0x034A9C,graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B6EE><B8D1>,not_translated_in_english,0x034A9C,Scope Sylphe reçu !,yes,no
+0x03491D,1051,0x034AAA,"
+得到精灵笛",0x034AAA,graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B8DF>,not_translated_in_english,0x034AAA,Poké Flûte reçue !,yes,no
+0x03491F,1052,0x034AB6,"
+得到金牙",0x034AB6,graphical_codes,<0A><B2C1><B0DB><B7BB><B9F9>,not_translated_in_english,0x034AB6,Dent d'Or reçue !,yes,no
+0x034921,1053,0x034AC0,"
+得到梦幻船票",0x034AC0,graphical_codes,<0A><B2C1><B0DB><B1D6><B9ED><B6F6><B6F7>,not_translated_in_english,0x034AC0,"Ticket Mystik
+reçu !",yes,no
+0x034923,1054,0x034ACE,"
+得到居合斩",0x034ACE,graphical_codes,<0A><B2C1><B0DB><B1A9><B1AA><B1AB>,not_translated_in_english,0x034ACE,CS01 : Coupe !,yes,no
+0x034925,1055,0x034ADA,"
+得到飞天术",0x034ADA,graphical_codes,<0A><B2C1><B0DB><B1AC><B1AD><B1AE>,not_translated_in_english,0x034ADA,CS02 : Vol !,yes,no
+0x034AEB,1056,0x034C09,"
+欢迎!到精灵中心可以恢复精灵的体力.",0x034C09,graphical_codes,<0A><B0D2><B0D3>!<B0DB><B0A1><B0A2><B0DC><B0DD><B0DE><B0DF><B0E0><B0E1><B0A1><B0A2><B0BC><B0E2><B0E3>.,not_translated_in_english,0x034C09,"Bienvenue !
+Au Centre Pokémon,
+nous soignons tous
+les Pokémon !",yes,no
+0x034AED,1057,0x034C2D,"
+您的精灵都精神了!!欢迎光临!!",0x034C2D,graphical_codes,<0A><B7C5><B0BC><B0A1><B0A2><B1C0><B0A1><B6DD><B0F8>!!<B0D2><B0D3><B0E4><B0E5>!!,not_translated_in_english,0x034C2D,"Merci !
+Toute ton équipe
+a la super pêche !
+À bientôt !",yes,no
+0x034AEF,1058,0x034C4B,"
+对不起,因为机能所限这里暂时不能够对战...",0x034C4B,graphical_codes,"<0A><B0E7><B0CE><B0E8>,<B0E9><B0EA><B0EB><B0EC><B0AD><B0ED><B0EE><B0BF><B0EF><B0F0><B0CE><B0EC><B0F1><B0E7><B0F2>...",not_translated_in_english,0x034C4B,"Désolé, les combats
+ne sont pas encore
+disponibles ici...",yes,no
+0x034AF1,1059,0x034C75,"
+交换机器也坏了...下次再来看看吧",0x034C75,graphical_codes,<0A><B0F3><B0F4><B0EB><B0F5><B0F6><B0F7><B0F8>...<B0F9><B0FA><B0FB><B0FC><B0FD><B0FD><B0BE>,not_translated_in_english,0x034C75,"La machine de Troc
+est aussi en panne.
+Reviens plus tard.",yes,no
+0x034AF3,1060,0x034C96,"
+欢迎!买东西吗?",0x034C96,graphical_codes,<0A><B0D2><B0D3>!<B0D4><B0D5><B0D6><B0D7>?,not_translated_in_english,0x034C96,"Salut !
+Je peux t'aider ?",yes,no
+0x034AF5,1061,0x034CA6,"
+谢谢惠顾!!",0x034CA6,graphical_codes,<0A><B0D8><B0D8><B0D9><B0DA>!!,not_translated_in_english,0x034CA6,"Merci !
+À bientôt !",yes,no
+0x034B11,1075,0x034E55,"
+小拉达很小但前牙很厉害",0x034E55,graphical_codes,<0A><B0B6><B8BB><B6E5><B3F7><B0B6><B3A8><B3DD><B9F9><B3F7><B3ED><B3EE>,not_translated_in_english,0x034E55,"Rattata est petit,
+mais ses crocs
+sont redoutables !",yes,no
+0x034B13,1076,0x034E6D,"
+常青森林是天然的迷宫,小心啊",0x034E6D,graphical_codes,"<0A><B3CA><B3CB><B4D8><B4D9><B0C2><B1AD><B2AA><B0BC><B4D3><BDFE>,<B0B6><B0DD><B2AC>",not_translated_in_english,0x034E6D,"La Forêt de Jade
+est un vrai
+labyrinthe.
+Sois prudent !",yes,no
+0x034B17,1078,0x034EB7,"
+有的精灵只在森林或者洞穴生活要得到更多的精灵就要多走走",0x034EB8,graphical_codes,<B0AE><B0BC><B0A1><B0A2><B2BE><B0B8><B4D8><B4D9><B1CB><B9AB><B4FB><BDB8><B1C9><B4E0><B0C3><B2C1><B0DB><B2CC><B0C8><B0BC><B0A1><B0A2><B2AB><B0C3><B0C8><B7C3><B7C3>,not_translated_in_english,0x034EB8,"Certains Pokémon
+vivent seulement
+dans les forêts
+ou les grottes.
+Explore partout
+pour les trouver !",yes,no
+0x034B19,1079,0x034EEF,"
+说起石山矿野很黑的,精灵用闪光术能看清吧",0x034EEF,graphical_codes,"<0A><B1E7><B0E8><B1B2><B6DC><B8E9><B1F8><B3F7><B5AC><B0BC>,<B0A1><B0A2><B1A8><B4BE><B0E4><B1AE><B0EC><B0FD><B4C4><B0BE>",not_translated_in_english,0x034EEF,"Cette grotte est
+très sombre.
+Avec Flash,
+un Pokémon peut
+l'éclairer.",yes,no
+0x034B29,1087,0x034FEA,"
+再来啊",0x034FE0,graphical_codes,<B0FB><B0FC><B2AC>,not_translated_in_english,0x034FE0,À bientôt !,yes,no
+0x034B35,1093,0x03507C,"
+太不幸了,这家人被偷了!是火箭队干的!即使是警察也拿火箭队没办法!",0x035077,graphical_codes,"000000<B6C6><B0CE><B8E7><B0F8>,<B0EE><B1BF><B2B5><B1B6><B5EF><B0F8>!<B0C2><B5A2><B5A3><B5A4><B5A5><B0BC>!<B1D8><B1A7><B0C2><B5EC><B4B0><B0F6><B0C6><B5A2><B5A3><B5A4><B2B6><B2B7><B2B8>!",not_translated_in_english,0x035077,"Ces pauvres gens
+ont été volés.
+L'odieuse
+Team Rocket
+est derrière tout
+ça. Même la police
+a du mal à lutter !",yes,no
+0x034B3F,1098,0x035125,"
+我的自行车很漂亮哦",0x035122,graphical_codes,0000<B1C2><B0BC><B2F3><B3A9><BCB2><B3F7><B9D3><B7EE><B2DD>,not_translated_in_english,0x035122,Mon vélo est magnifique !,yes,no
+0x034B47,1102,0x03518E,"
+哎...最近没有发生什么事情...",0x035188,graphical_codes,0000000<B8F3>...<B3F2><B0CD><B2B6><B0AE><B2F4><B1C9><B2AF><B1E6><B1D5><B7AB>...,not_translated_in_english,0x035188,"Pff... Rien de neuf
+ces temps-ci...",yes,no
+0x034B49,1103,0x0351AC,"
+我老是培育不好我的妙娃种子...",0x0351AC,graphical_codes,<0A><B1C2><B2CE><B0C2><B6A3><B6D8><B0CE><B1B4><B1C2><B0BC><B7FC><BEA7><B6AD><B1DF>...,not_translated_in_english,0x0351AC,"Je n'arrive pas
+à bien élever
+mon Bulbizarre...",yes,no
+0x034B4B,1104,0x0351CB,"
+让精灵进化图鉴可以增加...",0x0351CB,graphical_codes,<0A><B2CB><B0A1><B0A2><B3DE><B5AB><B2F1><B2F2><B0DE><B0DF><B2FB><B2FC>...,not_translated_in_english,0x0351CB,"Fais évoluer
+tes Pokémon :
+le Pokédex avance !",yes,no
+0x034B4D,1105,0x0351E6,"
+听说紫苑镇出现过幽灵精灵呢...",0x0351E6,graphical_codes,<0A><B1F1><B1E7><BDE3><BDE4><B2D6><B0A4><B2F5><B3D4><B8BD><B0A2><B0A1><B0A2><B1EB>...,not_translated_in_english,0x0351E6,"Des Pokémon Spectre
+seraient apparus
+à Lavanville...",yes,no
+0x034B57,1110,0x0352CE,"
+精灵塔有很多幽灵居住",0x0352CE,graphical_codes,0<B0A1><B0A2><B8BE><B0AE><B3F7><B0C8><B8BD><B0A2><B1A9><B1C6>,not_translated_in_english,0x0352CE,"La Tour Pokémon
+abrite beaucoup
+de Spectres.",yes,no
+0x034B59,1111,0x0352E4,"
+这个紫苑镇最有名的塔也是宠物精灵的墓园...人们将死亡的精灵带到这幽灵塔来祈求冥福",0x0352E4,graphical_codes,<0A><B0EE><B0BA><BDE3><BDE4><B2D6><B3F2><B0AE><B3B1><B0BC><B8BE><B0F6><B0C2><B0C0><B0C1><B0A1><B0A2><B0BC><BEA8><B6FE>...<B2B5><B2EF><B1D2><B8C1><BEAA><B0BC><B0A1><B0A2><B8DD><B0DB><B0EE><B8BD><B0A2><B8BE><B0FC><B8C3><B9D2><BEAB><B6B4>,not_translated_in_english,0x0352E4,"Ici reposent
+les Pokémon.
+La Tour est un lieu
+de recueillement.",yes,no
+0x034B5B,1112,0x035335,"
+吉野老人可以安慰可拉可拉的灵魂",0x035335,graphical_codes,<0A><B8B8><B1F8><B2CE><B2B5><B0DE><B0DF><B8BF><B8C0><B0DE><B8BB><B0DE><B8BB><B0BC><B0A2><B8C6>,not_translated_in_english,0x035335,"M. Fuji peut
+apaiser l'âme
+d'Osselait.",yes,no
+0x034B71,1123,0x0354AA,"
+您可以用赢得的硬币盒换取精灵哦...不行,你没有硬币盒...",0x0354AB,graphical_codes,"<B7C5><B0DE><B0DF><B1A8><B3F5><B2C1><B0BC><B4B6><BDBB><BEB2><B0F4><B0A3><B0A1><B0A2><B2DD>...<B0CE><B3A9>,<B0C5><B2B6><B0AE><B4B6><BDBB><BEB2>...",not_translated_in_english,0x0354AB,"Échange tes jetons
+contre des Pokémon.
+Sans Boîte Jeton,
+impossible !",yes,no
+0x034B79,1127,0x035540,"
+这里真是漂亮的地方啊",0x035539,graphical_codes,00000000<B0EE><B0BF><B1F5><B0C2><B9D3><B7EE><B0BC><B3BB><B1E2><B2AC>,not_translated_in_english,0x035539,Quel bel endroit !,yes,no
+0x034BB9,1159,0x0358D3,"
+使用怪兽的人不同,结果就有好有坏!",0x0358D2,graphical_codes,"00<B1A7><B1A8><B0CA><B0CB><B0BC><B2B5><B0CE><B8CF>,<BCC6><B3F6><B2AB><B0AE><B1B4><B0AE><B0F7>!",not_translated_in_english,0x0358D2,"Selon le Dresseur, les Pokémon servent le bien ou le mal !",yes,no
+0x034BC5,1165,0x0359BA,"
+不知什么时候草丛里会突然窜出精灵呢",0x0359B7,graphical_codes,0000<B0CE><B2D7><B2AF><B1E6><B0F0><B7CD><B1FB><B1FC><B0BF><B1F9><B5B4><B2AA><BEBD><B0A4><B0A1><B0A2><B1EB>,not_translated_in_english,0x0359B7,"Un Pokémon surgit
+parfois des herbes,
+sans prévenir.",yes,no
+0x034BC7,1166,0x0359DE,"
+到大城市里去会认识很多优秀的训练师",0x0359DE,graphical_codes,<0A><B0DB><B1BE><B3BA><B4D1><B0BF><B0C7><B1F9><B4BA><B0D1><B3F7><B0C8><B8EE><BEBE><B0BC><B2DE><B2C5><B2DF>,not_translated_in_english,0x0359DE,"Dans les grandes
+villes, tu verras
+d'excellents
+Dresseurs.",yes,no
+0x034BC9,1167,0x035A02,"
+你去过金黄市吗,听说那里有很高的大楼",0x035A02,graphical_codes,"<0A><B0C5><B0C7><B3D4><B7BB><BAC2><B4D1><B0D7>,<B1F1><B1E7><B0B9><B0BF><B0AE><B3F7><B8AF><B0BC><B1BE><BEB4>",not_translated_in_english,0x035A02,"Tu es déjà allé
+à Safrania ?
+Ses immeubles
+seraient immenses !",yes,no
+0x034BCB,1168,0x035A27,"
+我也想拥有传说中的精灵,可是到底哪儿才有传说中的精灵呢?",0x035A27,graphical_codes,"<0A><B1C2><B0F6><B1D7><B6A9><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2>,<B0DE><B0C2><B0DB><B3D5><B4C2><B7D0><B1F2><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1EB>?",not_translated_in_english,0x035A27,"J'aimerais avoir
+un Pokémon
+légendaire...
+Où en trouver ?",yes,no
+0x034BCD,1169,0x035A5F,"
+看你的能力一定是训练师新手吧.告诉你要时刻关心自己的精灵状态哦!",0x035A5F,graphical_codes,<0A><B0FD><B0C5><B0BC><B0EC><B0E3><B1D1><B2B1><B0C2><B2DE><B2C5><B2DF><B2D5><B1A3><B0BE>.<B2E6><B2E7><B0C5><B0C3><B0F0><B4E7><B0B3><B0DD><B2F3><BBA3><B0BC><B0A1><B0A2><BAF5><BAF6><B2DD>!,not_translated_in_english,0x035A5F,"Tu débutes, non ?
+Surveille toujours
+l'état de l'équipe.",yes,no
+0x034BCF,1170,0x035A9F,"
+有飞行系的精灵就能带我飞向远方的城市了...",0x035A9F,graphical_codes,<0A><B0AE><B1AC><B3A9><B0AF><B0BC><B0A1><B0A2><B2AB><B0EC><B8DD><B1C2><B1AC><B3B7><B5CD><B1E2><B0BC><B3BA><B4D1><B0F8>...,not_translated_in_english,0x035A9F,"Grâce à Vol,
+un Pokémon t'emmène
+au loin.",yes,no
+0x034BD1,1171,0x035ACA,"
+今天是个好天气",0x035ACA,graphical_codes,<0A><B6C9><B1AD><B0C2><B0BA><B1B4><B1AD><B4AA>,not_translated_in_english,0x035ACA,"Il fait beau
+aujourd'hui !",yes,no
+0x034BD3,1172,0x035ADA,"
+心情不错,偷偷告诉你我恋爱了!",0x035ADA,graphical_codes,"<0A><B0DD><B7AB><B0CE><B2DC>,<B5EF><B5EF><B2E6><B2E7><B0C5><B1C2><BEBF><B5DD><B0F8>!",not_translated_in_english,0x035ADA,"Je suis ravie !
+Entre nous...
+je suis amoureuse !",yes,no
+0x034BD5,1173,0x035AF8,"
+大海很宽阔啊,如果会冲浪术的话就能横渡大海了",0x035AF8,graphical_codes,"<0A><B1BE><B6FC><B3F7><B5B6><B5B7><B2AC>,<B1FE><B3F6><B1F9><B1AF><B1B0><B1AE><B0BC><B1EF><B2AB><B0EC><BEC0><BEC1><B1BE><B6FC><B0F8>",not_translated_in_english,0x035AF8,"La mer est immense.
+Avec Surf,
+traverse-la !",yes,no
+0x034BD7,1174,0x035B25,"
+你听过吗?在枯叶市上的铁达尼号上都是有钱的训练师呢",0x035B25,graphical_codes,<0A><B0C5><B1F1><B3D4><B0D7>?<B0B8><B6E1><B6E2><B4D1><B1E5><B0BC><B6E4><B6E5><B4B2><B6E6><B1E5><B1C0><B0C2><B0AE><B0FE><B0BC><B2DE><B2C5><B2DF><B1EB>,not_translated_in_english,0x035B25,"Tu connais
+l'Océane,
+à Carmin sur Mer ?
+Ce paquebot de luxe
+accueille de riches
+Dresseurs.",yes,no
+0x034BD9,1175,0x035B58,"
+在月见山上的晚上偶尔会有皮皮出现呢",0x035B58,graphical_codes,<0A><B0B8><B6CF><B2CD><B6DC><B1E5><B0BC><B2BC><B1E5><B9E3><BEC2><B1F9><B0AE><B6D3><B6D3><B0A4><B2F5><B1EB>,not_translated_in_english,0x035B58,"La nuit,
+on peut parfois
+voir des Mélofée
+au Mont Sélénite.",yes,no
+0x034BDB,1176,0x035B7C,"
+宝石大陆你知道吗?我年轻时就是在宝石大陆修行呢",0x035B7C,graphical_codes,<0A><B7B5><B1B2><B1BE><B7B6><B0C5><B2D7><B1A4><B0D7>?<B1C2><B3EA><B8B6><B0F0><B2AB><B0C2><B0B8><B7B5><B1B2><B1BE><B7B6><B4CE><B3A9><B1EB>,not_translated_in_english,0x035B7C,"Tu connais Hoenn ?
+Je m'y entraînais
+dans ma jeunesse.",yes,no
+0x034BDD,1177,0x035BAB,"
+在精灵体力低下的时候要赶紧使用伤药",0x035BAB,graphical_codes,<0A><B0B8><B0A1><B0A2><B0E2><B0E3><BCDD><B0F9><B0BC><B0F0><B7CD><B0C3><B1F3><B1F4><B1A7><B1A8><B9C7><BBB9>,not_translated_in_english,0x035BAB,"Quand un Pokémon
+a peu de PV,
+utilise vite
+une Potion !",yes,no
+0x034BDF,1178,0x035BCF,"
+我不明白怎么照顾精灵,要加紧学习呢",0x035BCF,graphical_codes,"<0A><B1C2><B0CE><B5E6><B5E5><B2D0><B1E6><B6CC><B0DA><B0A1><B0A2>,<B0C3><B2FC><B1F4><B4C3><B2C6><B1EB>",not_translated_in_english,0x035BCF,"Je ne sais pas
+bien m'occuper
+des Pokémon.
+Il me reste tant
+à apprendre !",yes,no
+0x034BE3,1180,0x035C1B,"
+在这个地区最强的训练师是石英高原的四大天王",0x035C0B,graphical_codes,00000000000000000<B0B8><B0EE><B0BA><B3BB><B7B8><B3F2><B2C9><B0BC><B2DE><B2C5><B2DF><B0C2><B1B2><B7FE><B8AF><B4EF><B0BC><B1E1><B1BE><B1AD><B4F7>,not_translated_in_english,0x035C0B,"Le Conseil des 4
+réunit l'élite
+des Dresseurs
+de la région.
+Il siège
+au Plateau Indigo.",yes,no
+0x034BE7,1182,0x035C71,"
+我想喝水...谁给我水?",0x035C67,graphical_codes,00000000000<B1C2><B1D7><B3C1><B5F7>...<B5F1><B0C4><B1C2><B5F7>?,not_translated_in_english,0x035C67,"J'ai soif...
+Qui a de l'eau
+pour moi ?",yes,no
+0x034BE9,1183,0x035C87,"
+别动!叫你别动你还动?",0x035C87,graphical_codes,<0A><B2CA><B0B2>!<B1C1><B0C5><B2CA><B0B2><B0C5><B2BD><B0B2>?,not_translated_in_english,0x035C87,"Ne bouge pas !
+Je l'ai déjà dit...
+Tu bouges encore ?!",yes,no
+0x034BEB,1184,0x035C9D,"
+看你的样子一定是个了不起的训练师吧",0x035C9D,graphical_codes,<0A><B0FD><B0C5><B0BC><B2DA><B1DF><B1D1><B2B1><B0C2><B0BA><B0F8><B0CE><B0E8><B0BC><B2DE><B2C5><B2DF><B0BE>,not_translated_in_english,0x035C9D,"À te voir,
+tu dois être
+un sacré Dresseur !",yes,no
+0x03801D,1195,0x03805C,"
+南晶公司版权所有",0x03805C,graphical_codes,<0A><B0A7><B0A8><B0A9><B0AA><B0AB><B0AC><B0AD><B0AE>,not_translated_in_english,0x03805C,NANJING TECH. TOUS DROITS RÉSERVÉS.,yes,no
+0x038027,1200,0x0380E0,"
+不打不相识!",0x0380DD,graphical_codes,0000<B0CE><B0CF><B0CE><B0D0><B0D1>!,not_translated_in_english,0x0380DD,"Un combat suffit :
+nous voilà amis !",yes,no
+0x038039,1209,0x0381A5,"
+钱不够!",0x0381A5,graphical_codes,0<B0FE><B0CE><B0F1>!,not_translated_in_english,0x0381A5,Pas assez d'argent !,yes,no
+0x038041,1213,0x0381E4,"
+小智使用了飞天术",0x0381E0,graphical_codes,00000<B0B6><B0B7><B1A7><B1A8><B0F8><B1AC><B1AD><B1AE>,not_translated_in_english,0x0381E0,Sacha utilise Vol !,yes,no
+0x038043,1214,0x0381F6,"
+小智使用了冲浪术",0x0381F6,graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B1AF><B1B0><B1AE>,not_translated_in_english,0x0381F6,Sacha utilise Surf !,yes,no
+0x038045,1215,0x038208,"
+小智使用了怪力术",0x038208,graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B0CA><B0E3><B1AE>,not_translated_in_english,0x038208,Sacha utilise Force !,yes,no
+0x038047,1216,0x03821A,"
+这块石头好像能被推动",0x03821A,graphical_codes,<0A><B0EE><B1B1><B1B2><B1B3><B1B4><B1B5><B0EC><B1B6><B1B7><B0B2>,not_translated_in_english,0x03821A,"On peut sans doute
+pousser ce rocher.",yes,no
+0x03826B,1234,0x038866,"
+老爷爷:你等等,听听我的话",0x038862,graphical_codes,"00000<B2CE><B1EE><B1EE>:<B0C5><B1CD><B1CD>,<B1F1><B1F1><B1C2><B0BC><B1EF>",not_translated_in_english,0x038862,Attends un peu. Écoute-moi.,yes,no
+0x03826D,1235,0x038880,"
+老爷爷:你还去?",0x038880,graphical_codes,<0A><B2CE><B1EE><B1EE>:<B0C5><B2BD><B0C7>?,not_translated_in_english,0x038880,"Tu veux quand même
+y aller ?",yes,no
+0x038291,1253,0x038D29,"
+守卫:这扇门之后都是一些强劲的精灵训练家们,你还未拿到徽章啊...当然无法让你通过啊",0x038D23,graphical_codes,"0000000<B3DF><B3E0>:<B0EE><B3E1><B3E2><B3E3><B2A8><B1C0><B0C2><B1D1><B3E4><B2C9><B3D9><B0BC><B0A1><B0A2><B2DE><B2C5><B1BF><B2EF>,<B0C5><B2BD><B3E5><B0C6><B0DB><B3D1><B3D2><B2AC>...<B2C4><B2AA><B3E6><B2B8><B2CB><B0C5><B3DA><B3D4><B2AC>",not_translated_in_english,0x038D23,"De grands Dresseurs t'attendent. Sans Badge, passage interdit.",yes,no
+0x038347,1344,0x039D3A,"
+迷你裙:我承认你了",0x039D3B,graphical_codes,<B4D3><B0C5><B4D4>:<B1C2><B6C3><B4BA><B0C5><B0F8>,not_translated_in_english,0x039AF5,Pas mal ! Tu peux tous nous battre ?,yes,yes
+0x0383E3,1422,0x03A7C3,"
+绅士:明年我要去旅游",0x03A7BD,graphical_codes,0000000<B7B4><B1C5>:<B5E6><B3EA><B1C2><B0C3><B0C7><B7C1><B5FB>,not_translated_in_english,0x03A7BD,Je voyagerai l'an prochain.,yes,no
+0x0383E5,1423,0x03A7D8,"
+绅士:都一把年纪了,走不动了",0x03A7D8,graphical_codes,"<0A><B7B4><B1C5>:<B1C0><B1D1><B3D3><B3EA><B7C2><B0F8>,<B7C3><B0CE><B0B2><B0F8>",not_translated_in_english,0x03A7D8,Je suis trop vieux pour marcher loin.,yes,no
+0x0383E7,1424,0x03A7F4,"
+水手:小子,别乱逛!",0x03A7F4,graphical_codes,"<0A><B5F7><B1A3>:<B0B6><B1DF>,<B2CA><B7C4><B5C1>!",not_translated_in_english,0x03A7F4,"Ne traîne pas ici, gamin !",yes,no
+0x0383E9,1425,0x03A807,"
+水手:我错了,请您随便参观",0x03A807,graphical_codes,"<0A><B5F7><B1A3>:<B1C2><B2DC><B0F8>,<B2D8><B7C5><B5C2><B3A2><B7C6><B6DB>",not_translated_in_english,0x03A807,J'avais tort. Visite à ta guise.,yes,no
+0x0383FB,1434,0x03A8C4,"
+水手:快走开!",0x03A8BE,graphical_codes,0000000<B5F7><B1A3>:<B2EC><B7C3><B1D9>!,not_translated_in_english,0x03A8BE,"Va-t'en, vite !",yes,no
+0x0383FD,1435,0x03A8D2,"
+水手:刚才我有说话吗?",0x03A8D2,graphical_codes,<0A><B5F7><B1A3>:<B2BF><B1F2><B1C2><B0AE><B1E7><B1EF><B0D7>?,not_translated_in_english,0x03A8D2,"J'ai parlé, là ?",yes,no
+0x0383FF,1436,0x03A8E8,"
+绅士:我有个女儿现在和你一样大",0x03A8E8,graphical_codes,<0A><B7B4><B1C5>:<B1C2><B0AE><B0BA><B2CF><B7D0><B2F5><B0B8><B0C9><B0C5><B1D1><B2DA><B1BE>,not_translated_in_english,0x03A8E8,Ma fille a ton âge.,yes,no
+0x038401,1437,0x03A907,"
+绅士:做我女婿吧...",0x03A907,graphical_codes,<0A><B7B4><B1C5>:<B2B4><B1C2><B2CF><B7D1><B0BE>...,not_translated_in_english,0x03A907,Épouse ma fille !,yes,no
+0x038443,1470,0x03AE50,"
+名人:......",0x03AE51,graphical_codes,<B3B1><B2B5>:......,not_translated_in_english,0x03AE51,...,yes,no
+0x03AEA4,1504,0x03B3D3,"
+女孩:你居然能找到这里?",0x03B3DF,graphical_codes,<B0EC><B1EA><B0DB><B0EE><B0BF>?,not_translated_in_english,0x03B3DF,"Tu as réussi
+à trouver
+cet endroit ?",yes,no
+0x03AEA6,1505,0x03B3EB,"
+女孩:我也是听说附近出现了传说中的精灵才来的",0x03B3EB,graphical_codes,<0A><B2CF><B1DE>:<B1C2><B0F6><B0C2><B1F1><B1E7><B3C8><B0CD><B0A4><B2F5><B0F8><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1F2><B0FC><B0BC>,not_translated_in_english,0x03B3EB,On raconte qu'un Pokémon légendaire est apparu par ici. Je suis venue voir.,yes,no
+0x03AEFC,1548,0x03B7F6,"
+女孩:可拉可拉的妈妈就是在逃出来的时候被火箭队杀了,我也看到了!",0x03B7F5,graphical_codes,"00<B2CF><B1DE>:<B0DE><B8BB><B0DE><B8BB><B0BC><B1DB><B1DB><B2AB><B0C2><B0B8><B3EF><B0A4><B0FC><B0BC><B0F0><B7CD><B1B6><B5A2><B5A3><B5A4><B8BC><B0F8>,<B1C2><B0F6><B0FD><B0DB><B0F8>!",not_translated_in_english,0x03B7F5,"La mère d'Osselait
+fuyait. J'ai vu
+la Team Rocket
+la tuer !",yes,no
+0x03AF6C,1604,0x03C0D5,"
+火箭队:我是在这里看守这张海报的,妨碍我的话可是要尝到苦头的哦!",0x03C0D6,graphical_codes,"<B5A2><B5A3><B5A4>:<B1C2><B0C2><B0B8><B0EE><B0BF><B0FD><B3DF><B0EE><B6F9><B6FC><B9A3><B0BC>,<B3C5><B3C6><B1C2><B0BC><B1EF><B0DE><B0C2><B0C3><B7EA><B0DB><B3C0><B1B3><B0BC><B2DD>!",not_translated_in_english,0x03C0D6,"Je garde
+cette affiche. Si
+tu me gênes, tu vas
+le regretter !",yes,no
+0x03AF6E,1605,0x03C114,"
+火箭队:可恶,这样下去的话火箭队的基地会被发现的!要赶快和老大联络才行!",0x03C114,graphical_codes,"<0A><B5A2><B5A3><B5A4>:<B0DE><B5E0>,<B0EE><B2DA><B0F9><B0C7><B0BC><B1EF><B5A2><B5A3><B5A4><B0BC><B9A4><B3BB><B1F9><B1B6><B2F4><B2F5><B0BC>!<B0C3><B1F3><B2EC><B0C9><B2CE><B1BE><B3CE><B9A5><B1F2><B3A9>!",not_translated_in_english,0x03C114,"Not' cachette va
+être découverte !
+J'va prév'nir eul
+chef !",yes,no
+0x03CE9E,1730,0x03D16A,"
+捉鸟人:拥有连续攻击能力的我你没有胜算",0x03D16B,graphical_codes,<B3E7><B8A7><B2B5>:<B6A9><B0AE><B6BA><B4D7><B4AB><B4AC><B0EC><B0E3><B0BC><B1C2><B0C5><B2B6><B0AE><B3F9><B3D0>,not_translated_in_english,0x03D16B,"ORNITHOLOGUE : Avec mes attaques en rafale, tu n'as aucune chance !",yes,no
+0x03CEA0,1731,0x03D191,"
+捉鸟人:又说大话了",0x03D191,graphical_codes,<0A><B3E7><B8A7><B2B5>:<B5B0><B1E7><B1BE><B1EF><B0F8>,not_translated_in_english,0x03D191,ORNITHOLOGUE : J'ai encore parlé trop vite...,yes,no
+0x03CEFC,1777,0x03D826,"
+火箭队:小鬼滚一边去!!",0x03D827,graphical_codes,<B5A2><B5A3><B5A4>:<B0B6><B7B2><B9E7><B1D1><B4D5><B0C7>!!,not_translated_in_english,0x03D827,"TEAM ROCKET :
+Dégage, morveux !",yes,no
+0x03CFF6,1902,0x03E80D,"
+成熟姐姐:在这不远就是红莲镇了",0x03E797,graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B2EA><B9CE><B3B8><B3B8>:<B0B8><B0EE><B0CE><B5CD><B2AB><B0C2><B5CE><B5CF><B2D6><B0F8>,not_translated_in_english,0x03E797,Cramois'Île n'est plus très loin.,yes,no
+0x03CFF8,1903,0x03E82C,"
+成熟姐姐:红莲镇经常会有火山爆发的情况",0x03E82C,graphical_codes,<0A><B2EA><B9CE><B3B8><B3B8>:<B5CE><B5CF><B2D6><B2A5><B3CA><B1F9><B0AE><B5A2><B6DC><BAD9><B2F4><B0BC><B7AB><BADA>,not_translated_in_english,0x03E82C,Le volcan entre souvent en éruption à Cramois'Île.,yes,no
+0x03CFFA,1904,0x03E853,"
+研究员:在这每天都有对精灵的研究",0x03E853,graphical_codes,<0A><B1CF><B1D0><B2D4>:<B0B8><B0EE><BADB><B1AD><B1C0><B0AE><B0E7><B0A1><B0A2><B0BC><B1CF><B1D0>,not_translated_in_english,0x03E853,"Ici, on étudie
+chaque jour
+les Pokémon.",yes,no
+0x03CFFC,1905,0x03E874,"
+小孩:我在观月山发现的化石好象是珍贵的化石!",0x03E874,graphical_codes,<0A><B0B6><B1DE>:<B1C2><B0B8><B6DB><B6CF><B6DC><B2F4><B2F5><B0BC><B5AB><B1B2><B1B4><B8B4><B0C2><B5C5><B6B2><B0BC><B5AB><B1B2>!,not_translated_in_english,0x03E874,"Ce fossile trouvé
+au Mont Sélénite
+semble précieux !",yes,no
+0x03D01C,1921,0x03EA79,"
+研究员:这里不是你这种小孩能来的",0x03E777,graphical_codes,<B1CF><B1D0><B2D4>:<B0EE><B0BF><B0CE><B0C2><B0C5><B0EE><B6AD><B0B6><B1DE><B0EC><B0FC><B0BC>,not_translated_in_english,0x03E777,"Ici, les gamins sont interdits !",yes,no
+0x03D03A,1936,0x03EC05,"
+研究员:火系还是有弱点啊...",0x03EB91,graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1CF><B1D0><B2D4>:<B5A2><B0AF><B2BD><B0C2><B0AE><B7E6><B7D9><B2AC>...,not_translated_in_english,0x03EB91,Même le type Feu a ses faiblesses...,yes,no
+0x03D03C,1937,0x03EC21,"
+研究员:火对水确实没办法但比冰系要强",0x03EC21,graphical_codes,<0A><B1CF><B1D0><B2D4>:<B5A2><B0E7><B5F7><B9DB><B5DE><B2B6><B2B7><B2B8><B3A8><B2B2><BAE8><B0AF><B0C3><B2C9>,not_translated_in_english,0x03EC21,Le Feu craint l'Eau et domine la Glace.,yes,no
+0x03D056,1950,0x03EDFE,"
+裁判:未来的冠军!这个常青道馆的首领是谁我也不知道...",0x03ECFD,graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B3FC><B3FD>:<B3E5><B0FC><B0BC><B4A1><B4A2>!<B0EE><B0BA><B3CA><B3CB><B1A4><B3CC><B0BC><B9EF><B4B3><B0C2><B5F1><B1C2><B0F6><B0CE><B2D7><B1A4>...,not_translated_in_english,0x03ECFD,"Futur Champion ! Même moi, j'ignore qui est le Champion à Jadielle...",yes,no

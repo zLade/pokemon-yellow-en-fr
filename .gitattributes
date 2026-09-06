@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.ips binary
+*.bps binary
+*.chr binary
+*.bmp binary
+*.bin binary
+*.nes binary
+*.cdl binary
