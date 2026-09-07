@@ -1,7 +1,7 @@
 # Pokémon Yellow NES — English & French
 
 English and French translations of **Lei Dian Huang Bi Ka Qiu Chuan Shuo
-(NJ046)**, an unofficial Famicom game using mapper 163.
+(NJ046)**, an unofficial Famicom game using mapper 163. Based on the work of romhacking community and Lugia2009.
 
 ## Downloads
 
