@@ -105,15 +105,18 @@ class EnglishRepositoryMetadataTests(unittest.TestCase):
 
     def test_french_reference_patch_calls_and_line_numbers_are_unchanged(self) -> None:
         tree = ast.parse((ROOT / "script.py").read_text(encoding="utf-8-sig"))
+        # ast.dump omits empty fields on newer Python releases. Hash the
+        # actual literal arguments instead, keeping keywords and line numbers.
         calls = [
-            (node.lineno, ast.dump(node, include_attributes=False))
+            [node.lineno, [ast.literal_eval(arg) for arg in node.args],
+             [[item.arg, ast.literal_eval(item.value)] for item in node.keywords]]
             for node in ast.walk(tree)
             if isinstance(node, ast.Call) and isinstance(node.func, ast.Name)
             and node.func.id == "p"
         ]
         self.assertEqual(len(calls), 1844)
         self.assertEqual(digest(calls),
-                         "d7cf673c5270ae27f815cec98e57eb182075693ab897bdafc78e198164719485")
+                         "aa4e5f9c60d96450cd89d70341f2fa2321e7722dc58f6c7977084ca2cfc224a5")
 
     def test_published_derivative_hashes_match_tracked_inputs(self) -> None:
         summary = json.loads((SOURCE / "summary.json").read_text(encoding="utf-8"))
