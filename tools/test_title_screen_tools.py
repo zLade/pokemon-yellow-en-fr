@@ -97,9 +97,9 @@ def target_block(rom: bytes, source_name: str) -> bytes:
 class PlayerMenuGraphicsTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        if not all((ROM_DIR / name).is_file() for name in ("yellow.nes", "Pokemon Yellow English 9-23-2015.nes")):
+        if not all((ROM_DIR / name).is_file() for name in ("Pokemon Yellow English 9-23-2015.nes", "Pokemon Yellow English 9-23-2015.nes")):
             raise unittest.SkipTest("ROMs sources absentes")
-        cls.base = (ROM_DIR / "yellow.nes").read_bytes()
+        cls.base = (ROM_DIR / "Pokemon Yellow English 9-23-2015.nes").read_bytes()
 
     def patched_rom(self) -> bytes:
         candidate = bytearray(self.base)
@@ -167,7 +167,7 @@ class PlayerMenuGraphicsTests(unittest.TestCase):
 class SecondaryMenuGraphicsTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        if not all((ROM_DIR / name).is_file() for name in ("yellow.nes", "Pokemon Yellow English 9-23-2015.nes")):
+        if not all((ROM_DIR / name).is_file() for name in ("Pokemon Yellow English 9-23-2015.nes", "Pokemon Yellow English 9-23-2015.nes")):
             raise unittest.SkipTest("ROMs sources absentes")
         cls.base = (
             ROM_DIR / "Pokemon Yellow English 9-23-2015.nes"
@@ -296,7 +296,7 @@ class SecondaryMenuGraphicsTests(unittest.TestCase):
 class TitleAndLoadMenuGraphicsTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        if not all((ROM_DIR / name).is_file() for name in ("yellow.nes", "Pokemon Yellow English 9-23-2015.nes")):
+        if not all((ROM_DIR / name).is_file() for name in ("Pokemon Yellow English 9-23-2015.nes", "Pokemon Yellow English 9-23-2015.nes")):
             raise unittest.SkipTest("ROMs sources absentes")
         cls.base = (
             ROM_DIR / "Pokemon Yellow English 9-23-2015.nes"

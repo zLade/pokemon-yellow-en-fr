@@ -26,19 +26,17 @@ from tools.dialogue_layout import format_game_text
 from tools.move_label_graphics import load_move_label_csv, french_text_encoder
 
 CATALOGUE = ROOT / "traduction/catalogue.csv"
-VERSION = "2.0.11"
+VERSION = "2.0.12"
 DEFAULT_ROMS = {
     "english": ROOT / core.TRANSLATION_BASE_ROM,
-    "yellow": ROOT / "yellow.nes",
     "chinese": ROOT / core.CHINESE_ROM,
 }
 SOURCE_HASHES = {
     "english": "d5c308b5862ccbe4647d4255a11bb0f1cb6817c4b107feac112509d658a9943b",
-    "yellow": "69520103102677b33b47c15fae804dc1a742347a9ee1b02a9195e795eb6e431b",
     "chinese": "450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed",
 }
 ROM_HASH = "efc7ba0837a65d06e0658348d3debaa1194b9cf03b59492a1a8d4dfab346327e"
-IPS_HASH = "f8e020f322bc8d9447216d099955bd16c65cf6191e3c00b76b7cfe6bfd8f6c57"
+IPS_HASH = "cda7966b1767538a8712cc3506269b22db8b3650e13847c32bdf64511f3d0667"
 PITCH_START = 0x01B0A9
 PITCH_BEFORE = bytes.fromhex(
     "9a2dc66408b26013ca854407cd96633204d9b08965422203e6cbb199826c584432211101"
@@ -162,7 +160,7 @@ def build(args: argparse.Namespace) -> dict:
             "--rom", str(pre_pitch), "--base-rom", str(inputs["english"]), "--title-logo", "french"])
         require(mapper.validate(mapper_args) == 0, "Contrat mapper 163 invalide")
         final = apply_pitch(rom)
-        ips = core.make_ips(data["yellow"], final)
+        ips = core.make_ips(data["chinese"], final)
         output = stage / "output"
         output.mkdir()
         rom_path = output / "Pokemon_Jaune_NJ046_FR.nes"
@@ -170,7 +168,7 @@ def build(args: argparse.Namespace) -> dict:
         rom_path.write_bytes(final)
         ips_path.write_bytes(ips)
         records, truncate = core.parse_ips(ips_path)
-        require(core.apply_ips(data["yellow"], records, truncate) == final, "Aller-retour IPS incorrect")
+        require(core.apply_ips(data["chinese"], records, truncate) == final, "Aller-retour IPS incorrect")
         manifest = pointers.build_manifest(rom_path=rom_path, csv_path=CATALOGUE, input_rom_path=inputs["english"])
         commitment = pointers.canonical_inventory_commitment(manifest["records"])
         expected = json.loads((ROOT / "data/validation/pointer_commitment.json").read_text())
@@ -184,15 +182,16 @@ def build(args: argparse.Namespace) -> dict:
         errors += bank_errors
         require(not errors, "\n".join(errors))
         if args.verify_release:
-            require(sha(final) == ROM_HASH and sha(ips) == IPS_HASH, "Différence avec la release 2.0.11")
-            published = ROOT / "releases/fr/2.0.11/Pokemon_Jaune_NJ046_FR_v2.0.11.ips"
+            require(sha(final) == ROM_HASH and sha(ips) == IPS_HASH, "Différence avec la release 2.0.12")
+            published = ROOT / "releases/fr/2.0.12/Pokemon_Jaune_NJ046_FR_v2.0.12.ips"
             require(ips == published.read_bytes(), "IPS publié différent")
         require(before == {str(path.relative_to(ROOT)): sha(path.read_bytes()) for path in source_files},
                 "Une source a changé pendant la compilation")
         require(all(path.read_bytes() == data[key] for key, path in inputs.items()), "Une ROM source a changé")
         report.update({"rom_sha256": sha(final), "ips_sha256": sha(ips), "pointeurs": commitment,
                        "banques": bank_report, "sources_sha256": before,
-                       "roms_sources_sha256": SOURCE_HASHES, "determinisme": "PASS",
+                       "roms_sources_sha256": SOURCE_HASHES, "base_ips": "chinese",
+                       "base_ips_sha256": SOURCE_HASHES["chinese"], "determinisme": "PASS",
                        "mapper163_avant_correction_musicale": "PASS", "correction_musicale": "PASS",
                        "ips": "PASS", "limites_dynamiques": "PASS", "release_exacte": args.verify_release})
         (output / "pointer_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -212,7 +211,7 @@ def main(argv=None) -> int:
     commands.add_parser("check", help="Contrôles du catalogue sans ROM")
     command = commands.add_parser("build", help="Compiler et contrôler les ROM et IPS")
     command.add_argument("--output-dir", type=Path, default=ROOT / "build/fr")
-    command.add_argument("--verify-release", action="store_true", help="Exiger les octets exacts de la 2.0.11")
+    command.add_argument("--verify-release", action="store_true", help="Exiger les octets exacts de la 2.0.12")
     for name, path in DEFAULT_ROMS.items():
         command.add_argument(f"--{name}", type=Path, default=path)
     args = parser.parse_args(argv)

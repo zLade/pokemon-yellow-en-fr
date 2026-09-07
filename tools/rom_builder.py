@@ -49,7 +49,6 @@ ROOT = Path(__file__).resolve().parent.parent
 
 CHINESE_ROM = "Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes"
 ENGLISH_IPS = "Pokemon Yellow English 9-23-2015.ips"
-CANONICAL_ENGLISH_ROM = "yellow.nes"
 TRANSLATION_BASE_ROM = "Pokemon Yellow English 9-23-2015.nes"
 TRANSLATION_BASE_SHA256 = (
     "d5c308b5862ccbe4647d4255a11bb0f1"

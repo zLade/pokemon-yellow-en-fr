@@ -1,5 +1,12 @@
 # Historique des versions françaises
 
+## Français 2.0.12
+
+- IPS final applicable directement à la ROM chinoise originale NJ046.
+- ROM obtenue strictement identique à la 2.0.11.
+- Compilation à partir de deux ROMs : source chinoise et base technique anglaise de 2015.
+
+
 Ce fichier recense les évolutions visibles de la branche française. Aucune ROM
 complète n'est distribuée.
 
@@ -9,7 +16,7 @@ complète n'est distribuée.
 - Conservation byte à byte de tous les textes, graphismes et mécanismes de la
   version française 2.0.10 hors des 69 octets musicaux attendus.
 - Nouveau patch IPS combiné applicable directement à la base canonique
-  `yellow.nes`.
+  la précédente base intermédiaire.
 - Démarrage Mesen 2.2.1 Dendy et manifeste 1 916/1 916 : PASS.
 - Cible finale SHA-256
   `efc7ba0837a65d06e0658348d3debaa1194b9cf03b59492a1a8d4dfab346327e`.

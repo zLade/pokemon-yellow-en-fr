@@ -2,16 +2,18 @@
 
 Traduction française du jeu Famicom non officiel **Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046)**. Cette branche `fr` contient les sources françaises ; la version anglaise se trouve sur [la branche en](https://github.com/zLade/pokemon-yellow-en-fr/tree/en).
 
-Release de référence : **2.0.11**, avec correction de la hauteur musicale, sur **mapper 163**. Aucune ROM complète n'est distribuée. Voir [la notice](NOTICE.md) pour les éléments tiers et [CHANGELOG.md](CHANGELOG.md) pour les versions.
+Release de référence : **2.0.12**, avec correction de la hauteur musicale, sur **mapper 163**. Aucune ROM complète n'est distribuée. Voir [la notice](NOTICE.md) pour les éléments tiers et [CHANGELOG.md](CHANGELOG.md) pour les versions.
 
 ## Jouer
 
-Appliquer le [patch IPS français 2.0.11](releases/fr/2.0.11/Pokemon_Jaune_NJ046_FR_v2.0.11.ips) à une copie propre de `yellow.nes` avec un outil IPS. Il ne s'applique pas à Pokémon Jaune sur Game Boy.
+Appliquer le [patch IPS français 2.0.12](releases/fr/2.0.12/Pokemon_Jaune_NJ046_FR_v2.0.12.ips) à une copie propre de la ROM chinoise originale `Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes` avec un outil IPS. Il ne s'applique pas à Pokémon Jaune sur Game Boy.
 
-- Entrée : 2 097 168 octets, SHA-256 `69520103102677b33b47c15fae804dc1a742347a9ee1b02a9195e795eb6e431b`.
+- Entrée : 2 097 168 octets, SHA-256 `450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed`.
 - Résultat : SHA-256 `efc7ba0837a65d06e0658348d3debaa1194b9cf03b59492a1a8d4dfab346327e`.
 
-Utiliser un émulateur compatible mapper 163, par exemple Mesen 2.2.1. Les détails du patch figurent dans [le dossier de release](releases/fr/2.0.11/README.md).
+Utiliser un émulateur compatible mapper 163, par exemple Mesen 2.2.1. Les détails du patch figurent dans [le dossier de release](releases/fr/2.0.12/README.md).
+
+La 2.0.12 change uniquement la base du patch : la ROM obtenue est identique à la 2.0.11. Ne pas appliquer ce nouvel IPS sur une traduction anglaise ou une ROM déjà patchée. Un IPS ne vérifie pas lui-même la bonne ROM de départ : contrôler son SHA-256.
 
 ## Sources de traduction
 
@@ -49,30 +51,29 @@ python tools/validate_branch_separation.py --language fr
 
 Les tests exigeant une ROM locale sont explicitement ignorés si elle est absente. GitHub Actions vérifie les sources, les tests sans ROM et l'empreinte du patch publié.
 
-Avec les trois ROMs disponibles, `NJ046_VERIFY_RELEASE=1` active aussi le test d'intégration de reconstruction exacte ; sous PowerShell, définir `$env:NJ046_VERIFY_RELEASE = '1'` avant de lancer les tests. `POKEMON_FINAL_ROM_UNDER_TEST` permet de désigner une ROM compilée pour le test de conservation des fins de banques.
+Avec les deux ROMs disponibles, `NJ046_VERIFY_RELEASE=1` active aussi le test d'intégration de reconstruction exacte ; sous PowerShell, définir `$env:NJ046_VERIFY_RELEASE = '1'` avant de lancer les tests. `POKEMON_FINAL_ROM_UNDER_TEST` permet de désigner une ROM compilée pour le test de conservation des fins de banques.
 
 ## Compiler
 
-Fournir les trois images suivantes, ignorées par Git. La compilation vérifie taille et SHA-256, pas seulement les noms.
+Fournir les deux images suivantes, ignorées par Git. La compilation vérifie taille et SHA-256, pas seulement les noms.
 
 | Nom à la racine | SHA-256 |
 | --- | --- |
 | `Pokemon Yellow English 9-23-2015.nes` | `d5c308b5862ccbe4647d4255a11bb0f1cb6817c4b107feac112509d658a9943b` |
-| `yellow.nes` | `69520103102677b33b47c15fae804dc1a742347a9ee1b02a9195e795eb6e431b` |
 | `Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes` | `450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed` |
 
 ```bash
 python build.py build
 ```
 
-La base anglaise de 2015 sert au repack, l'image chinoise au sprite restauré du dojo et `yellow.nes` à la création de l'IPS. Les options `--english`, `--chinese` et `--yellow` acceptent d'autres emplacements.
+La base anglaise de 2015 reste une référence technique interne pour le repack. L'image chinoise fournit le sprite restauré du dojo et sert de base au patch IPS final. Les options `--english` et `--chinese` acceptent d'autres emplacements. Pour appliquer le patch publié, seule la ROM chinoise est nécessaire.
 
 Les résultats sont dans `build/fr/` : ROM, IPS, rapport et manifeste des pointeurs. Une destination non vide est refusée ; choisir un nouveau dossier, par exemple `--output-dir build/essai-2`. Les ROMs sources et le patch publié ne sont pas modifiés.
 
 Pour reproduire exactement les octets de la release :
 
 ```bash
-python build.py build --verify-release --output-dir build/verification-2.0.11
+python build.py build --verify-release --output-dir build/verification-2.0.12
 ```
 
 Omettre `--verify-release` après une modification de traduction : le résultat peut différer de la release tout en passant les contrôles de sécurité.
@@ -97,7 +98,7 @@ Chaque sonde décrit ses conditions et son marqueur de réussite dans son code ;
 - `data/source/` : extraction chinoise et correspondance des glyphes en lecture seule.
 - `data/validation/` : structure attendue, propriété des pointeurs et indices graphiques, sans deuxième copie des traductions.
 - `tools/` : moteur, contrôles, tests et diagnostics ciblés.
-- `releases/fr/2.0.11/` : patch courant, version et empreintes.
+- `releases/fr/2.0.12/` : patch courant, version et empreintes.
 - `build/` : résultats locaux générés, non suivis par Git.
 
 Le point d'entrée public est `build.py`. Les versions antérieures restent accessibles dans l'historique Git.

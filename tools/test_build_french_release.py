@@ -110,7 +110,7 @@ class FrenchBuildTests(unittest.TestCase):
 
 @unittest.skipUnless(os.environ.get("NJ046_VERIFY_RELEASE") == "1" and
                      all(path.is_file() for path in builder.DEFAULT_ROMS.values()),
-                     "Intégration : définir NJ046_VERIFY_RELEASE=1 et fournir les trois ROMs")
+                     "Intégration : définir NJ046_VERIFY_RELEASE=1 et fournir les deux ROMs")
 class FrenchReleaseIntegrationTests(unittest.TestCase):
     def test_exact_release_and_protected_second_build(self):
         parent = builder.ROOT / "build"
