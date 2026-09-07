@@ -1,5 +1,12 @@
 # Changelog
 
+## English Fidelity 2.0.3
+
+- Final IPS applies directly to the original Chinese NJ046 ROM.
+- Resulting ROM is byte-identical to 2.0.2.
+- Title reconstruction uses the 2015 technical base and a guarded 187-byte delta; no additional intermediate ROM is required.
+
+
 This file records user-facing changes to the English branch. Complete ROM
 images are never distributed.
 
@@ -23,7 +30,7 @@ images are never distributed.
 - Added the corrected NES pitch table.
 - Preserved every English 2.0.1 localization, graphics and runtime byte outside
   the expected 69-byte musical change set.
-- Published a combined IPS patch for the canonical clean `yellow.nes` base.
+- Published a combined IPS patch for the canonical clean the previous intermediate base base.
 - Passed the 1,912/1,912 pointer manifest and Mesen 2.2.1 Dendy boot probe.
 - Final target SHA-256:
   `703662c3739884513bf6493b748743eff0933b2479dc21644433699891f9d0f3`.

@@ -24,7 +24,7 @@ jobs:
       - name: Validate language separation and ROM exclusion
         run: python tools/validate_branch_separation.py --language en
       - name: Verify published patch checksums
-        working-directory: releases/en/2.0.2
+        working-directory: releases/en/2.0.3
         run: sha256sum -c SHA256SUMS
       - name: Validate translation inputs
         run: python build.py check

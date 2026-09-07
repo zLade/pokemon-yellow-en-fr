@@ -264,10 +264,9 @@ FRENCH_RELEASE_PROFILE = ReleaseProfile(
         "d5c308b5862ccbe4647d4255a11bb0f1"
         "cb6817c4b107feac112509d658a9943b"
     ),
-    canonical_ips_base_filename="yellow.nes",
+    canonical_ips_base_filename="Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes",
     canonical_ips_base_sha256=(
-        "69520103102677b33b47c15fae804dc1"
-        "a742347a9ee1b02a9195e795eb6e431b"
+        "450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed"
     ),
     artifacts=ReleaseArtifacts(
         rom="Pokemon_Jaune_FR_repacked_title.nes",
@@ -295,10 +294,9 @@ ENGLISH_RELEASE_PROFILE = ReleaseProfile(
         "d5c308b5862ccbe4647d4255a11bb0f1"
         "cb6817c4b107feac112509d658a9943b"
     ),
-    canonical_ips_base_filename="yellow.nes",
+    canonical_ips_base_filename="Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes",
     canonical_ips_base_sha256=(
-        "69520103102677b33b47c15fae804dc1"
-        "a742347a9ee1b02a9195e795eb6e431b"
+        "450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed"
     ),
     artifacts=ReleaseArtifacts(
         rom="Pokemon_Yellow_NJ046_EN_v2.0.0.nes",

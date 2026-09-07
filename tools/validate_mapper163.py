@@ -898,7 +898,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--title-reference-rom",
-        default="yellow.nes",
+        default="Pokemon Yellow English 9-23-2015.nes",
         help="Canonical ROM providing YELLOW VERSION",
     )
     parser.add_argument(

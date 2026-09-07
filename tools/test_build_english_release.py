@@ -48,15 +48,15 @@ class SourceTests(unittest.TestCase):
             path = Path(temporary) / "input.nes"
             path.write_bytes(b"test")
             with patch.object(builder, "ROM_SIZE", 4), patch.dict(
-                builder.EXPECTED_ROM_SHA256, {"yellow": builder.sha256(b"test")}
+                builder.EXPECTED_ROM_SHA256, {"chinese": builder.sha256(b"test")}
             ):
-                self.assertEqual(builder.read_source_rom(path, "yellow"), b"test")
+                self.assertEqual(builder.read_source_rom(path, "chinese"), b"test")
                 path.write_bytes(b"fail")
                 with self.assertRaises(builder.BuildError):
-                    builder.read_source_rom(path, "yellow")
+                    builder.read_source_rom(path, "chinese")
                 path.write_bytes(b"short")
                 with self.assertRaises(builder.BuildError):
-                    builder.read_source_rom(path, "yellow")
+                    builder.read_source_rom(path, "chinese")
 
     def test_release_pin_is_explicit(self):
         self.assertFalse(builder.build_parser().parse_args(["build"]).verify_release)
@@ -262,7 +262,7 @@ class LocalIntegrationTests(unittest.TestCase):
 
 @unittest.skipUnless(os.environ.get("NJ046_VERIFY_RELEASE") == "1"
                      and all(p.is_file() for p in builder.DEFAULT_ROMS.values()),
-                     "Exact release test requires NJ046_VERIFY_RELEASE=1 and all three source ROMs")
+                     "Exact release test requires NJ046_VERIFY_RELEASE=1 and both source ROMs")
 class ExactReleaseIntegrationTests(unittest.TestCase):
     def test_published_release_rom_and_ips(self):
         parent = builder.ROOT / "build"
@@ -274,7 +274,7 @@ class ExactReleaseIntegrationTests(unittest.TestCase):
             self.assertEqual(report["outputs"][builder.ROM_FILENAME]["sha256"], builder.RELEASE_ROM_SHA256)
             self.assertEqual(report["outputs"][builder.IPS_FILENAME]["sha256"], builder.RELEASE_IPS_SHA256)
             self.assertEqual(report["release_verification"], "PASS")
-            published = builder.ROOT / "releases" / "en" / "2.0.2" / "Pokemon_Yellow_NJ046_EN_v2.0.2.ips"
+            published = builder.ROOT / "releases" / "en" / "2.0.3" / "Pokemon_Yellow_NJ046_EN_v2.0.3.ips"
             self.assertEqual((output / builder.IPS_FILENAME).read_bytes(), published.read_bytes())
 
 

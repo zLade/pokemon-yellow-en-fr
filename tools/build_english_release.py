@@ -2,7 +2,7 @@
 """Local English builder. Static/byte checks are not emulator validation.
 
 Run ``python build.py check`` without ROMs, or ``python build.py build``.
-Only --verify-release pins the output to the published 2.0.2 bytes.
+Only --verify-release pins the output to the published 2.0.3 bytes.
 Outputs must be in an ignored directory inside this checkout; existing
 nonempty directories are never replaced. No release files are modified.
 """
@@ -25,7 +25,7 @@ if str(ROOT) not in sys.path:
 from tools import validate_english_catalog as catalog
 from tools.move_label_graphics import load_move_label_csv
 
-VERSION = "2.0.2"
+VERSION = "2.0.3"
 ROM_FILENAME = "Pokemon_Yellow_NJ046_EN.nes"
 IPS_FILENAME = "Pokemon_Yellow_NJ046_EN.ips"
 REPORT_FILENAME = "build_report.json"
@@ -45,16 +45,14 @@ DATA_INPUTS = {
 }
 DEFAULT_ROMS = {
     "english_2015": ROOT / "Pokemon Yellow English 9-23-2015.nes",
-    "yellow": ROOT / "yellow.nes",
     "chinese": ROOT / "Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes",
 }
 EXPECTED_ROM_SHA256 = {
     "english_2015": "d5c308b5862ccbe4647d4255a11bb0f1cb6817c4b107feac112509d658a9943b",
-    "yellow": "69520103102677b33b47c15fae804dc1a742347a9ee1b02a9195e795eb6e431b",
     "chinese": "450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed",
 }
 RELEASE_ROM_SHA256 = "703662c3739884513bf6493b748743eff0933b2479dc21644433699891f9d0f3"
-RELEASE_IPS_SHA256 = "954a6ce8d97dcdb4f7d059683b69ebb83d2d082923c674c5c285cd8b26289172"
+RELEASE_IPS_SHA256 = "6f42637770fd4fc4971ef90d156d6f5959bb88e546122e2747b6b34c8cd168da"
 ROM_SIZE = 2097168
 
 # Retained local build/validator closure, independent of the caller's imports.
@@ -94,7 +92,7 @@ EXPECTED_MOVE_INDICES = frozenset({
     166, 168, 172, 173,
 })
 
-# Source representation of the published 2.0.1 -> 2.0.2 pitch correction.
+# Source representation of the published 2.0.1 -> 2.0.3 pitch correction.
 # Offsets include the 16-byte iNES header. 80 bytes, 69 actual changes.
 # Recovered and byte-verified against both tracked release IPS targets.
 PITCH_START = 0x01B0A9
@@ -140,7 +138,7 @@ def read_source_rom(path: Path, label: str) -> bytes:
 
 def verify_release(rom: bytes, ips: bytes) -> None:
     if sha256(rom) != RELEASE_ROM_SHA256 or sha256(ips) != RELEASE_IPS_SHA256:
-        raise BuildError("Output differs from published 2.0.2; omit --verify-release for edited sources")
+        raise BuildError("Output differs from published 2.0.3; omit --verify-release for edited sources")
 
 
 def run_git(*args: str) -> subprocess.CompletedProcess:
@@ -261,7 +259,7 @@ def build(args: argparse.Namespace) -> dict[str, object]:
     from tools.title_screen_tools import patch_english_yellow_title
 
     rom_paths = {"english_2015": args.english_2015_rom.resolve(),
-                 "yellow": args.yellow_rom.resolve(), "chinese": args.chinese_rom.resolve()}
+                 "chinese": args.chinese_rom.resolve()}
     inputs = [*rom_paths.values(), *DATA_INPUTS.values(), *source_paths()]
     destination = safe_destination(args.output_dir, inputs)
     before = input_records(inputs)
@@ -294,10 +292,10 @@ def build(args: argparse.Namespace) -> dict[str, object]:
         budget_check = budget.validate_budget(first / "allocation.csv", first / "bank_budget.csv",
                                               DATA_INPUTS["budget_policy"])
         title = bytearray(raw)
-        patch_english_yellow_title(title, roms["yellow"], "LUIGA2009, ZLADE, CHPEXO")
+        patch_english_yellow_title(title, roms["english_2015"], "LUIGA2009, ZLADE, CHPEXO")
         dojo = restore(bytes(title), roms["chinese"])
         final = apply_pitch(dojo)
-        ips = core.make_ips(roms["yellow"], final)
+        ips = core.make_ips(roms["chinese"], final)
         if args.verify_release:
             verify_release(final, ips)
         staged = work / "publish"
@@ -307,7 +305,7 @@ def build(args: argparse.Namespace) -> dict[str, object]:
         patch_path = staged / IPS_FILENAME
         patch_path.write_bytes(ips)
         records, truncate = core.parse_ips(patch_path)
-        if core.apply_ips(roms["yellow"], records, truncate) != final:
+        if core.apply_ips(roms["chinese"], records, truncate) != final:
             raise BuildError("IPS round-trip mismatch")
         glyph_check = glyphs.validate_glyph_residue(
             candidate=final, base=roms["english_2015"],
@@ -327,7 +325,8 @@ def build(args: argparse.Namespace) -> dict[str, object]:
             "schema": "nj046-en-local-build/v1", "result": "PASS",
             "runtime_validation": "NOT RUN", "hardware_validation": "NOT RUN",
             "release_verification": "PASS" if args.verify_release else "NOT REQUESTED",
-            "release_reference": VERSION, "inputs": before, "source_inputs_unchanged": True,
+            "release_reference": VERSION, "ips_base": "chinese",
+            "ips_base_sha256": EXPECTED_ROM_SHA256["chinese"], "inputs": before, "source_inputs_unchanged": True,
             "stages": {"core_sha256": sha256(raw), "title_sha256": sha256(bytes(title)),
                        "dojo_sha256": sha256(dojo), "pitch_changed_bytes": 69},
             "checks": {"source_rom_hashes": "PASS", "catalogue": static, "core_exact_rebuild": "PASS",
@@ -355,10 +354,9 @@ def build_parser() -> argparse.ArgumentParser:
     commands.add_parser("check", help="ROM-free catalogue, variant and graphical-label validation")
     command = commands.add_parser("build", help="Build into a new/empty ignored directory")
     command.add_argument("--verify-release", action="store_true",
-                         help="Require exact published 2.0.2 ROM and IPS hashes")
+                         help="Require exact published 2.0.3 ROM and IPS hashes")
     command.add_argument("--output-dir", type=Path, default=ROOT / "build" / "en")
     command.add_argument("--english-2015-rom", type=Path, default=DEFAULT_ROMS["english_2015"])
-    command.add_argument("--yellow-rom", type=Path, default=DEFAULT_ROMS["yellow"])
     command.add_argument("--chinese-rom", type=Path, default=DEFAULT_ROMS["chinese"])
     return parser
 

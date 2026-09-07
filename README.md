@@ -5,16 +5,18 @@ Ka Qiu Chuan Shuo (NJ046)** from Chinese into natural English. The Chinese
 game is the source of meaning; the 2015 English ROM supplies the technical
 build base, not the translation authority.
 
-Current game release: **English Fidelity 2.0.2**. This is the **en** branch.
+Current game release: **English Fidelity 2.0.3**. This is the **en** branch.
 The [French project](https://github.com/zLade/pokemon-yellow-en-fr/tree/fr)
 is maintained separately and is not required to work on this translation.
 
 ## Play the translation
 
-Apply the [2.0.2 IPS patch](releases/en/2.0.2/Pokemon_Yellow_NJ046_EN_v2.0.2.ips)
-to your own clean NES `yellow.nes`, matching the base hash in the
-[release instructions](releases/en/2.0.2/README.md). This is **not** the Game
+Apply the [2.0.3 IPS patch](releases/en/2.0.3/Pokemon_Yellow_NJ046_EN_v2.0.3.ips)
+to the original Chinese NES ROM `Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes`, matching the base hash in the
+[release instructions](releases/en/2.0.3/README.md). This is **not** the Game
 Boy game. No ROM images are distributed.
+
+Version 2.0.3 changes only the patch base: the resulting ROM is identical to 2.0.2. Do not apply this IPS to an English translation or an already patched ROM. IPS does not verify the input identity: check its SHA-256 first. Only the Chinese ROM is needed to apply the published patch; the other images below are internal build references.
 
 ## Help with the translation
 
@@ -98,15 +100,14 @@ overflow or uncleared letters. Never attach ROMs to an issue or pull request.
 
 ## Build an edited ROM
 
-Supply these three NES images privately. Default filenames are at the repository
+Supply these two NES images privately. Default filenames are at the repository
 root; exact hashes are also in [data/source-inputs.sha256](data/source-inputs.sha256).
-All three expected images are 2,097,168 bytes.
+Both expected images are 2,097,168 bytes.
 
 | Default filename | Purpose | SHA-256 |
 | --- | --- | --- |
 | `Pokemon Yellow English 9-23-2015.nes` | Technical build base | `d5c308b5862ccbe4647d4255a11bb0f1cb6817c4b107feac112509d658a9943b` |
-| `yellow.nes` | Title graphics and IPS application base | `69520103102677b33b47c15fae804dc1a742347a9ee1b02a9195e795eb6e431b` |
-| `Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes` | Original Chinese dojo graphics | `450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed` |
+| `Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes` | Final IPS application base and original dojo graphics | `450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed` |
 
 ```sh
 python build.py build --output-dir build/my-translation
@@ -117,7 +118,7 @@ populated output directories or overwrite source inputs. It produces
 `Pokemon_Yellow_NJ046_EN.nes`, `Pokemon_Yellow_NJ046_EN.ips`, `build_report.json`
 and `pointer_manifest.json`. These local outputs are ignored by Git.
 
-To store ROMs elsewhere, pass `--english-2015-rom PATH`, `--yellow-rom PATH`
+To store ROMs elsewhere, pass `--english-2015-rom PATH`
 and `--chinese-rom PATH`. Quote paths containing spaces. Use a new output name
 for a second build, or remove only your previous generated output first.
 
@@ -129,7 +130,7 @@ glyph preservation, deterministic rebuilding and the IPS round trip.
 To reproduce the unchanged published release byte for byte:
 
 ```sh
-python build.py build --verify-release --output-dir build/reproduce-2.0.2
+python build.py build --verify-release --output-dir build/reproduce-2.0.3
 ```
 
 Omit `--verify-release` for intentional translation changes: their output hash
@@ -183,7 +184,7 @@ not a translation table to commit.
 | `data/source/` | Pinned Chinese records and glyph-to-Unicode map, used to verify source context. Do not edit during routine translation work. |
 | `data/validation/` | Reviewed source decisions, pointer ownership, shared storage, cameo names, neutral graphics and bank-space limits. These are safeguards, not another translation. |
 | `tools/` | Build implementation, regression tests and optional emulator probes. Contributors normally use `build.py` instead. |
-| `releases/en/2.0.2/` | Published IPS, version, application instructions and checksum. |
+| `releases/en/2.0.3/` | Published IPS, version, application instructions and checksum. |
 | `build/` | Ignored generated files and local test evidence; never translation inputs. |
 
 The Chinese extraction is hash-pinned; its original HZK16 extraction tools are

@@ -107,13 +107,13 @@ class IpsRoundtripTests(unittest.TestCase):
             make_ips(b"", bytes(0x1000000))
 
     @unittest.skipUnless(
-        (ROM_DIR / "yellow.nes").is_file()
+        (ROM_DIR / "Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes").is_file()
         and (ROM_DIR / FINAL_ROM).is_file()
         and (ROM_DIR / FINAL_IPS).is_file(),
         "artefacts IPS courants absents",
     )
     def test_current_release_patch_is_byte_identical_and_roundtrips(self) -> None:
-        original = (ROM_DIR / "yellow.nes").read_bytes()
+        original = (ROM_DIR / "Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes").read_bytes()
         modified = (ROM_DIR / FINAL_ROM).read_bytes()
         expected_patch = (ROM_DIR / FINAL_IPS).read_bytes()
         actual_patch, _, _ = self.roundtrip(original, modified)

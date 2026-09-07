@@ -65,7 +65,6 @@ from tools.restoration_topology import (
 
 CHINESE_ROM = "Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes"
 ENGLISH_IPS = "Pokemon Yellow English 9-23-2015.ips"
-CANONICAL_ENGLISH_ROM = "yellow.nes"
 TRANSLATION_BASE_ROM = "Pokemon Yellow English 9-23-2015.nes"
 TRANSLATION_BASE_SHA256 = (
     "d5c308b5862ccbe4647d4255a11bb0f1"
@@ -2927,29 +2926,6 @@ def write_bank_budget_report(
             )
 
 
-def command_check(args: argparse.Namespace) -> int:
-    chinese = read_bytes(args.chinese_rom)
-    canonical = read_bytes(args.english_rom)
-    ips_data = read_bytes(args.english_ips)
-    records, truncate = parse_ips(args.english_ips)
-    rebuilt = apply_ips(chinese, records, truncate)
-
-    print("English IPS provenance check")
-    print(f'- Chinese ROM: {args.chinese_rom} ({len(chinese)} bytes, sha256 {sha256(chinese)})')
-    print(
-        f"- English IPS         : {args.english_ips} ({len(records)} records, "
-        f"sha256 {sha256(ips_data)})"
-    )
-    print(f'- Canonical target: {args.english_rom} ({len(canonical)} bytes, sha256 {sha256(canonical)})')
-    print(f'- Reconstruction: {len(rebuilt)} bytes, sha256 {sha256(rebuilt)}')
-    print(f"- Exact reconstruction : {'YES' if rebuilt == canonical else 'NO'}")
-
-    if args.write_yellow:
-        target = ROOT / args.write_yellow
-        target.write_bytes(rebuilt)
-        print(f"- Reconstruction written : {target}")
-
-    return 0 if rebuilt == canonical else 1
 
 
 def command_check_ips(args: argparse.Namespace) -> int:
@@ -4636,25 +4612,11 @@ def build_parser() -> argparse.ArgumentParser:
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
-    check = sub.add_parser(
-        "check",
-        help="Verify that the English IPS rebuilds its canonical yellow.nes target.",
-    )
-    check.add_argument("--chinese-rom", default=CHINESE_ROM)
-    check.add_argument("--english-ips", default=ENGLISH_IPS)
-    check.add_argument(
-        "--english-rom",
-        default=CANONICAL_ENGLISH_ROM,
-        help="Expected canonical target of the English IPS (default: yellow.nes).",
-    )
-    check.add_argument("--write-yellow", default="", help="Optional: write the rebuilt ROM.")
-    check.set_defaults(func=command_check)
-
     check_ips = sub.add_parser(
         "check-ips",
         help="Apply an IPS to its base and compare it byte for byte with the target ROM.",
     )
-    check_ips.add_argument("--base-rom", default=CANONICAL_ENGLISH_ROM)
+    check_ips.add_argument("--base-rom", default=CHINESE_ROM)
     check_ips.add_argument("--ips", default=FINAL_IPS)
     check_ips.add_argument("--target-rom", default=FINAL_ROM)
     check_ips.set_defaults(func=command_check_ips)

@@ -1,4 +1,4 @@
--- Exact title probe for the canonical yellow.nes YELLOW VERSION screen and
+-- Exact title probe for the reviewed YELLOW VERSION screen and
 -- the personalized English 2.0 credit row.
 local outputDirectory = os.getenv("POKEMON_YELLOW_MESEN_OUTPUT")
 if outputDirectory == nil or outputDirectory == "" then

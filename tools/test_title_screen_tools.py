@@ -72,7 +72,7 @@ def target_block(rom: bytes, source_name: str) -> bytes:
 
 @unittest.skipUnless(
     (ROM_DIR / "Pokemon Yellow English 9-23-2015.nes").is_file()
-    and (ROM_DIR / "yellow.nes").is_file(), "canonical title ROMs absent",
+    , "canonical title ROM absent",
 )
 class TitleAndLoadMenuGraphicsTests(unittest.TestCase):
     @classmethod
@@ -83,7 +83,7 @@ class TitleAndLoadMenuGraphicsTests(unittest.TestCase):
 
 
     def test_yellow_version_title_and_credits_are_reproducible(self) -> None:
-        yellow = (ROM_DIR / "yellow.nes").read_bytes()
+        yellow = (ROM_DIR / "Pokemon Yellow English 9-23-2015.nes").read_bytes()
         first = bytearray(self.base)
         graphics.patch_english_yellow_title(first, yellow)
         second = bytearray(self.base)
@@ -93,7 +93,7 @@ class TitleAndLoadMenuGraphicsTests(unittest.TestCase):
             graphics.TITLE_PT1_FILE
             + graphics.TITLE_MENU_CURSOR_TILE_ID * 16
         )
-        cursor = yellow[cursor_offset : cursor_offset + 16]
+        cursor = bytes.fromhex("001c2241415f2e1c00001c363e1e0c00")
         self.assertNotEqual(cursor, bytes(16))
         self.assertEqual(first[cursor_offset : cursor_offset + 16], cursor)
         self.assertEqual(

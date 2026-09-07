@@ -32,11 +32,8 @@ ENGLISH_ROM_SHA256 = (
     "cb6817c4b107feac112509d658a9943b"
 )
 FRENCH_ROM = ROM_DIR / "Pokemon_Jaune_FR.nes"
-ENGLISH_BASE_ROM = ROM_DIR / "yellow.nes"
-ENGLISH_BASE_ROM_SHA256 = (
-    "69520103102677b33b47c15fae804dc"
-    "1a742347a9ee1b02a9195e795eb6e431b"
-)
+ENGLISH_BASE_ROM = ENGLISH_ROM
+ENGLISH_BASE_ROM_SHA256 = ENGLISH_ROM_SHA256
 ENGLISH_TITLE_CREDITS = "LUIGA2009, ZLADE, CHPEXO"
 PATCHED_TITLE_ROM = ROM_DIR / "Pokemon_Jaune_FR_title.nes"
 PATCHED_TITLE_IPS = ROM_DIR / "Pokemon_Jaune_FR_title.ips"
@@ -107,7 +104,7 @@ TITLE_CREDIT_FONT_3X5 = {
     "Z": ("1111", "0001", "0010", "0100", "1000", "1111"),
 }
 
-# Exact 5-row glyph shapes observed in yellow.nes' original
+# Exact 5-row glyph shapes observed in 2015 English reference' original
 # ``LUGIA2009,CHPEXO`` credit.  These are deliberately kept separate from the
 # fallback alphabet above: the English release composes its credits from this
 # original title font, preserving the same chunky proportions and color.
@@ -136,12 +133,12 @@ ORIGINAL_TITLE_CREDIT_GLYPHS = {
 
 def english_title_changed_offsets(
     source: bytes,
-    yellow_reference: bytes,
+    title_reference: bytes,
     credits: str = ENGLISH_TITLE_CREDITS,
 ) -> set[int]:
     """Return the exact bank-14 bytes owned by the English title profile."""
     patched = bytearray(source)
-    patch_english_yellow_title(patched, yellow_reference, credits)
+    patch_english_yellow_title(patched, title_reference, credits)
     return {
         offset
         for offset, (before, after) in enumerate(zip(source, patched))
@@ -609,30 +606,67 @@ def title_credit_tiles(text: str) -> list[bytes]:
 
 def patch_english_yellow_title(
     rom: bytearray,
-    yellow_reference: bytes,
+    title_reference: bytes,
     credits: str = ENGLISH_TITLE_CREDITS,
 ) -> None:
-    """Install the true English title graphics and a reproducible credit row."""
-    if len(yellow_reference) != len(rom):
-        raise ValueError(
-            f'Incompatible yellow.nes English ROM: {len(yellow_reference)} bytes instead of {len(rom)}'
-        )
-    reference_hash = hashlib.sha256(yellow_reference).hexdigest()
-    if reference_hash != ENGLISH_BASE_ROM_SHA256:
-        raise ValueError(
-            "Noncanonical yellow.nes reference: "
-            f"{reference_hash} instead of {ENGLISH_BASE_ROM_SHA256}"
-        )
-
-    # The raw PT1/PT0 source ranges overlap by design.  Copy only the bytes
-    # where the current 2015 title differs from the canonical yellow.nes;
-    # copying either complete range would overwrite the other physical half.
+    """Reconstruct the reviewed title from the canonical 2015 technical base."""
+    if len(title_reference) != len(rom) or hashlib.sha256(title_reference).hexdigest() != ENGLISH_ROM_SHA256:
+        raise ValueError("Noncanonical 2015 English title reference")
+    # Exactly 187 reviewed title bytes; offsets include the iNES header.
+    # Keeping the small guarded delta avoids a separate intermediate ROM.
+    corrections = (
+        (0x070A5C, "c0c0c0c0c0", "dec6ded8de"),
+        (0x070A64, "80c0c0c0c0", "9cc6ced8de"),
+        (0x070B0C, "0000000000", "f7b5b5b5f3"),
+        (0x070B14, "0000000000", "63b5b5b563"),
+        (0x070B1C, "0000000000", "beb6be86bc"),
+        (0x070B24, "0000000000", "1cb6be863c"),
+        (0x070B30, "0f00", "cf40"),
+        (0x070B38, "0f00", "cf40"),
+        (0x070D9C, "ffffffffffff", "c3993c3c99c3"),
+        (0x070DA4, "ff", "c3"),
+        (0x070DA9, "ff", "c3"),
+        (0x070DBC, "ffffffffffff", "1899c3e7e7c3"),
+        (0x070DC4, "ff", "18"),
+        (0x070DC9, "ff", "c3"),
+        (0x070DCC, "ffffffffffff", "019f879f9d01"),
+        (0x070DD4, "ff", "01"),
+        (0x070DD9, "ff", "01"),
+        (0x070DDC, "ffffffffffff", "0f9f9f9f9d01"),
+        (0x070DE4, "ff", "0f"),
+        (0x070DE9, "ff", "01"),
+        (0x070DEC, "ffffffffffff", "183c24248199"),
+        (0x070DF4, "ff", "18"),
+        (0x070DF9, "ff", "99"),
+        (0x07150C, "535252572223", "020202010101"),
+        (0x071513, "ffacadada8dd5477", "0705050502020203"),
+        (0x07151C, "635456635156", "9a92923a121b"),
+        (0x071523, "f79caba99caea9ff", "ff656d6dc5eda4bf"),
+        (0x07152C, "495555555549", "444a4a4a4a64"),
+        (0x071533, "ffb6aaaaaaaab6ff", "efbbb5b5b5b59bfe"),
+        (0x07153C, "20a0a0606020", "a8a8a8f85050"),
+        (0x071543, "f8d858589898d8", "fc54545404aca8"),
+        (0x0715A5, "0101010101", "0000000000"),
+        (0x0715AC, "171515171575", "535252572223"),
+        (0x0715B3, "7fe8eaeae8ea8aff", "ffacadada8dd5477"),
+        (0x0715BC, "5456", "6354"),
+        (0x0715BF, "555574", "635156"),
+        (0x0715C3, "ffaba9", "f79cab"),
+        (0x0715C7, "aaaa8b", "9caea9"),
+        (0x0715CC, "989090b89098", "495555555549"),
+        (0x0715D3, "fc666e6e466e66fc", "ffb6aaaaaaaab6ff"),
+        (0x0715DC, "000000000000", "20a0a0606020"),
+        (0x0715E3, "0000000000000000", "f0d050509090d0f0"),
+    )
+    rebuilt = bytearray(title_reference)
+    for offset, before_hex, after_hex in corrections:
+        before, after = bytes.fromhex(before_hex), bytes.fromhex(after_hex)
+        if rebuilt[offset:offset + len(before)] != before:
+            raise ValueError(f"Unexpected title bytes at {offset:06X}")
+        rebuilt[offset:offset + len(after)] = after
     title_start = min(TITLE_PT1_FILE, TITLE_PT0_FILE)
     title_end = max(TITLE_PT1_FILE + 0x1000, TITLE_PT0_FILE + 0x1000)
-    for offset in range(title_start, title_end):
-        if rom[offset] != yellow_reference[offset]:
-            rom[offset] = yellow_reference[offset]
-
+    rom[title_start:title_end] = rebuilt[title_start:title_end]
     patch_title_credits(rom, credits)
 
 
@@ -932,7 +966,7 @@ def command_patch_jaune(args: argparse.Namespace) -> None:
 
 def command_patch_english_title(args: argparse.Namespace) -> None:
     rom_path = Path(args.rom)
-    yellow_path = Path(args.yellow_rom)
+    reference_path = Path(args.title_reference_rom)
     base_path = Path(args.base_rom)
     out_rom_path = Path(args.out_rom)
     out_ips_path = Path(args.out_ips)
@@ -941,7 +975,7 @@ def command_patch_english_title(args: argparse.Namespace) -> None:
     source = read_file(rom_path)
     base = read_file(base_path)
     rom = bytearray(source)
-    patch_english_yellow_title(rom, read_file(yellow_path), args.credits)
+    patch_english_yellow_title(rom, read_file(reference_path), args.credits)
     patched = bytes(rom)
 
     out_rom_path.parent.mkdir(parents=True, exist_ok=True)
@@ -954,7 +988,7 @@ def command_patch_english_title(args: argparse.Namespace) -> None:
             (
                 "Pokemon Yellow NES - true English title",
                 f"Source ROM SHA-256: {hashlib.sha256(source).hexdigest()}",
-                f"yellow.nes SHA-256: {hashlib.sha256(read_file(yellow_path)).hexdigest()}",
+                f"2015 English reference SHA-256: {hashlib.sha256(read_file(reference_path)).hexdigest()}",
                 f"Credits: {args.credits.upper()}",
                 f"Output ROM SHA-256: {hashlib.sha256(patched).hexdigest()}",
                 "Title legend: YELLOW VERSION",
@@ -1132,10 +1166,10 @@ def build_parser() -> argparse.ArgumentParser:
 
     patch_english_title = sub.add_parser(
         "patch-english-title",
-        help="restore the original yellow.nes title and add credits",
+        help="restore the original 2015 English reference title and add credits",
     )
     patch_english_title.add_argument("--rom", required=True)
-    patch_english_title.add_argument("--yellow-rom", default=str(ENGLISH_BASE_ROM))
+    patch_english_title.add_argument("--title-reference-rom", default=str(ENGLISH_BASE_ROM))
     patch_english_title.add_argument("--base-rom", default=str(ENGLISH_ROM))
     patch_english_title.add_argument("--credits", default=ENGLISH_TITLE_CREDITS)
     patch_english_title.add_argument("--out-rom", required=True)
