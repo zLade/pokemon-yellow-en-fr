@@ -9,10 +9,7 @@ from tools.validate_branch_separation import PROFILES, validate
 
 class BranchSeparationTests(unittest.TestCase):
     def fixture(self, language: str) -> set[str]:
-        return set(PROFILES[language]["required"]) | {"README.md", "script.py"}
-
-    def test_french_layout_passes(self) -> None:
-        self.assertEqual(validate("fr", self.fixture("fr")), [])
+        return set(PROFILES[language]["required"]) | {"README.md"}
 
     def test_english_layout_passes(self) -> None:
         self.assertEqual(validate("en", self.fixture("en")), [])

@@ -1,78 +1,188 @@
-# NJ046 English Fidelity 2.0.2
+# Pokemon Yellow NJ046 - English translation
 
-> Canonical branch: **`en` (English only)**
-> French release branch: **`fr`**
+This project translates the unofficial Famicom/NES game **Lei Dian Huang Bi
+Ka Qiu Chuan Shuo (NJ046)** from Chinese into natural English. The Chinese
+game is the source of meaning; the 2015 English ROM supplies the technical
+build base, not the translation authority.
 
-This branch develops a faithful English localization of the Famicom game
-`Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046)`.
+Current game release: **English Fidelity 2.0.2**. This is the **en** branch.
+The [French project](https://github.com/zLade/pokemon-yellow-en-fr/tree/fr)
+is maintained separately and is not required to work on this translation.
 
-## Translation policy
+## Play the translation
 
-- The Chinese ROM and the pinned Unicode extraction are the semantic source
-  of record.
-- Official English Red/Blue/Yellow wording and terminology are preferred when
-  the NJ046 scene is clearly imitating those games and the meaning matches.
-- The English anime is a secondary reference for anime-specific material.
-- NJ046-specific names, cameos, locations and plot details are preserved.
-- The 2015 English ROM is a technical build base and comparison source, not an
-  editorial authority.
-- French 2.0 is retained only as a secondary gloss and structural
-  non-regression reference.
+Apply the [2.0.2 IPS patch](releases/en/2.0.2/Pokemon_Yellow_NJ046_EN_v2.0.2.ips)
+to your own clean NES `yellow.nes`, matching the base hash in the
+[release instructions](releases/en/2.0.2/README.md). This is **not** the Game
+Boy game. No ROM images are distributed.
 
-## Repository layout
+## Help with the translation
 
-- `locales/en-US/catalog.csv`: canonical corpus with 1,844 main records and
-  85 restored records;
-- `locales/en-US/review_batches/`: source-review decisions;
-- `locales/en-US/ENGLISH_REVIEW_SHEET.csv`: generated CSV table for
-  human review;
-- `data/source/chinese-english-fidelity/`: pinned Chinese extraction and
-  alignment evidence;
-- `tools/build_english_release.py`: deterministic English release builder;
-- `tools/run-mesen-english-regression-suite.ps1`: English Mesen runtime suite;
-- `releases/en/2.0.2/`: current patch-only English release;
-- `docs/en/`: active English documentation.
+You can help by checking the Chinese meaning, improving English wording,
+or reporting on-screen problems. You do not need ROMs to edit the text and
+run the static checks.
 
-Project maintenance rules are in [`CONTRIBUTING.md`](CONTRIBUTING.md), release
-history in [`CHANGELOG.md`](CHANGELOG.md), and third-party scope in
-[`NOTICE.md`](NOTICE.md).
+### 1. Get the project
 
-The review table in `locales/en-US/ENGLISH_REVIEW_SHEET.csv` contains all
-1,929 records and editable human-review status columns.
-
-The French source corpus and French non-regression tools remain in this
-branch only where the English build consumes them as pinned technical input.
-They are not the active English documentation. The maintained French project
-and its releases live on `fr`.
-
-## Quick validation
-
-After restoring the input ROMs with the hashes listed in
-`data/source-inputs.sha256`:
+Install Git and Python 3.12 or later. No additional Python packages are needed.
+Fork the repository if you plan to submit a pull request, then clone your fork
+with `--branch en`. To inspect the upstream project directly:
 
 ```sh
-python3 tools/validate_branch_separation.py --language en
-python3 tools/validate_english_catalog.py
-python3 -m unittest tools.test_validate_english_catalog \
-  tools.test_validate_english_repacked \
-  tools.test_validate_mapper163_profiles
+git clone --branch en --single-branch https://github.com/zLade/pokemon-yellow-en-fr.git
+cd pokemon-yellow-en-fr
 ```
 
-The complete release command and its additional build inputs are documented
-in [`docs/en/BUILD_AND_RELEASE.md`](docs/en/BUILD_AND_RELEASE.md).
+Run the commands below from this directory. Keep a real Git checkout: the
+build safety checks need Git metadata, which a downloaded ZIP does not include.
 
-## Current release
+### 2. Find and edit a message
 
-The credited English target has SHA-256
-`703662c3739884513bf6493b748743eff0933b2479dc21644433699891f9d0f3`.
-It uses mapper 163, the true `YELLOW VERSION` title from canonical
-`yellow.nes`, and the title credits `LUIGA2009, ZLADE, CHPEXO`.
+All editable translation text is in **[translation/](translation/)**:
 
-Release 2.0.2 includes the completed source review, natural battle and
-move-learning wording, two-line long-move labels and the verified interactive
-move-forgetting cursor, plus the corrected NES pitch table. Its independent release gates cover IPS integrity,
-mapper 163, all 1,912 expected pointers and 101 dynamic-layout scenarios.
+| File | Use |
+| --- | --- |
+| [catalog.csv](translation/catalog.csv) | Main catalogue: compare `chinese_text` and edit `english_v2`. Contains 1,844 MAIN and 85 RESTORED records. |
+| [pointer_variants.csv](translation/pointer_variants.csv) | Context-specific `english_v2` for Chinese messages merged by the old English translation. |
+| [move_labels_two_line.csv](translation/move_labels_two_line.csv) | Graphical attack names: `full_name` is the name; `line_1` and `line_2` control its display. |
 
-Only IPS/BPS patches are distributed. No complete ROM is tracked. Hardware
-testing on a physical mapper-163 cartridge remains **NOT TESTED**. Editorial
-status remains: **AI-assisted full source review; human playthrough pending**.
+For most changes, edit only `english_v2` in `catalog.csv`. Search by Chinese
+text, current English text or `stable_key`. `english_2015` is a comparison
+with the older translation and can contain mistakes. Menus, names and
+descriptions are included; not every record is spoken dialogue.
+
+Save CSV files as UTF-8 with the existing headers and row order. Use an editor
+that preserves quoted commas, line breaks and leading/trailing spaces. Keep
+identifiers, offsets, pointer references and layout fields unchanged for a
+wording-only contribution. Lengths are calculated automatically.
+
+Check `pointer_variants.csv` when the main row has variants. A primary variant
+must match its MAIN row exactly: update both `english_v2` values if changing
+that shared wording. Secondary variants keep their own contextual meaning.
+The validator reports a mismatch; do not change pointer references to bypass it.
+
+Translation rules:
+
+- Follow the Chinese meaning and preserve NJ046-specific names, story and cameos.
+- Prefer official English Red/Blue/Yellow terminology when the scene and meaning match.
+- Keep full words when they fit. Use established abbreviations when necessary;
+  split graphical move names at readable word boundaries where supported.
+- Preserve control codes, placeholders and significant spaces. Some fragments
+  are joined to Pokemon or trainer names at runtime.
+- Keep comments and editorial notes in English. Do not add a second review
+  spreadsheet, exported catalogue or JSON copy of the same translation.
+
+### 3. Check your change
+
+```sh
+python build.py check
+python -m unittest discover -s tools -p "test_*.py"
+```
+
+`check` validates all three translation tables, including graphical labels.
+Tests needing local ROMs or fixtures are skipped when those inputs are absent.
+Fix reported encoding or layout errors; do not weaken the checks to accept an
+overflow. Static checks do not establish that a sentence is natural or that
+every interactive screen works correctly.
+
+### 4. Submit a correction or bug report
+
+Open a pull request against **en**, with focused edits and a short explanation
+of the original Chinese meaning, your English wording and the checks performed.
+Include the stable key when available. Say clearly if you could not test in-game.
+
+For a display bug, include the release version, emulator, location, steps to
+reproduce, actual/expected text and a screenshot if possible. Test long inserted
+names, both yes/no choices, cursor movement and the following text box to catch
+overflow or uncleared letters. Never attach ROMs to an issue or pull request.
+
+## Build an edited ROM
+
+Supply these three NES images privately. Default filenames are at the repository
+root; exact hashes are also in [data/source-inputs.sha256](data/source-inputs.sha256).
+All three expected images are 2,097,168 bytes.
+
+| Default filename | Purpose | SHA-256 |
+| --- | --- | --- |
+| `Pokemon Yellow English 9-23-2015.nes` | Technical build base | `d5c308b5862ccbe4647d4255a11bb0f1cb6817c4b107feac112509d658a9943b` |
+| `yellow.nes` | Title graphics and IPS application base | `69520103102677b33b47c15fae804dc1a742347a9ee1b02a9195e795eb6e431b` |
+| `Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes` | Original Chinese dojo graphics | `450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed` |
+
+```sh
+python build.py build --output-dir build/my-translation
+```
+
+Choose a new or empty directory under `build/`. The builder refuses to replace
+populated output directories or overwrite source inputs. It produces
+`Pokemon_Yellow_NJ046_EN.nes`, `Pokemon_Yellow_NJ046_EN.ips`, `build_report.json`
+and `pointer_manifest.json`. These local outputs are ignored by Git.
+
+To store ROMs elsewhere, pass `--english-2015-rom PATH`, `--yellow-rom PATH`
+and `--chinese-rom PATH`. Quote paths containing spaces. Use a new output name
+for a second build, or remove only your previous generated output first.
+
+The builder encodes and repacks the translation tables, renders graphical move
+names, adds the credited title, restores the Chinese dojo graphics and applies
+the corrected pitch table. It then checks pointers, space budgets, font and
+glyph preservation, deterministic rebuilding and the IPS round trip.
+
+To reproduce the unchanged published release byte for byte:
+
+```sh
+python build.py build --verify-release --output-dir build/reproduce-2.0.2
+```
+
+Omit `--verify-release` for intentional translation changes: their output hash
+should differ. A local build does not update the published patch. New releases
+must be reviewed and versioned separately.
+
+## Verification and emulator checks
+
+CI runs the ROM-free tests on Python 3.12 and 3.14 and verifies the release
+patch checksum. Tests skipped for absent local inputs are not passes. To
+include the exact-release integration test locally, set the environment
+variable `NJ046_VERIFY_RELEASE=1` before running the unit tests; use it only
+with unchanged release translation inputs.
+
+The builder verifies all 1,912 expected pointers, restored text ownership,
+graphical move labels, space budgets, the English font and battle controls,
+glyph residue and IPS reconstruction. Generated reports identify the candidate
+ROM by hash; they are evidence, not another source of editable text.
+
+For on-screen verification, use an emulator supporting mapper 163. Check
+battle openings and endings, long names and attacks, shopping, inventory,
+move learning, both choices in prompts, cancellation and consecutive messages.
+Look for clipped text, missing cursors and uncleared punctuation.
+
+Advanced testers can use `tools/run-mesen-english-regression-suite.ps1` for
+scripted Mesen checks. Inspect its parameters and supply Mesen and the required
+local fixtures first. ROMs, recordings and emulator evidence are not included
+in this repository. The suite is separate from ROM-free CI; a normal build
+records runtime and hardware validation as **NOT RUN**.
+
+## What the other files are for
+
+| Location | Role |
+| --- | --- |
+| `translation/` | The three editable translation tables. Start here. |
+| `data/source/` | Pinned Chinese records and glyph-to-Unicode map, used to verify source context. Do not edit during routine translation work. |
+| `data/validation/` | Reviewed source decisions, pointer ownership, shared storage, cameo names, neutral graphics and bank-space limits. These are safeguards, not another translation. |
+| `tools/` | Build implementation, regression tests and optional emulator probes. Contributors normally use `build.py` instead. |
+| `releases/en/2.0.2/` | Published IPS, version, application instructions and checksum. |
+| `build/` | Ignored generated files and local test evidence; never translation inputs. |
+
+The Chinese extraction is hash-pinned; its original HZK16 extraction tools are
+not included. Replacing source records or technical ownership rules requires a
+separate provenance review. Keep ROMs, saves, recordings and local reports out
+of commits. Earlier project revisions remain available in Git history.
+
+## Status and credits
+
+The translation has had an AI-assisted source review. A complete human
+playthrough and testing on a physical mapper-163 cartridge remain pending.
+Build reports explicitly distinguish byte-level checks from emulator/hardware
+testing. See [verification](#verification-and-emulator-checks) and the
+[changelog](CHANGELOG.md).
+
+The game title credits **LUIGA2009, ZLADE, CHPEXO**. Third-party material and
+distribution scope are described in [NOTICE.md](NOTICE.md).

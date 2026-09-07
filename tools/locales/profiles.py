@@ -288,8 +288,8 @@ ENGLISH_RELEASE_PROFILE = ReleaseProfile(
     key="en",
     version="2.0.0",
     text=ENGLISH_TEXT_PROFILE,
-    catalogue_path="locales/en-US/catalog.csv",
-    restoration_catalogue="locales/en-US/catalog.csv",
+    catalogue_path="translation/catalog.csv",
+    restoration_catalogue="translation/catalog.csv",
     base_rom_filename="Pokemon Yellow English 9-23-2015.nes",
     base_rom_sha256=(
         "d5c308b5862ccbe4647d4255a11bb0f1"

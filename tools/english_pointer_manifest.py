@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from rom_traduction_assistant import (  # noqa: E402
+from tools.rom_builder import (  # noqa: E402
     reviewed_text_prefix_len,
     offset_for_cpu_addr,
     pair_for_offset,
@@ -37,10 +37,10 @@ DEFAULT_ROM = (
     / "2.0.0"
     / "Pokemon_Yellow_NJ046_EN_v2.0.0.nes"
 )
-DEFAULT_CATALOGUE = ROOT / "locales" / "en-US" / "catalog.csv"
-DEFAULT_VARIANTS = ROOT / "locales" / "en-US" / "pointer_variants.csv"
-DEFAULT_INVENTORY = ROOT / "data" / "source" / "structural_pointer_inventory.json"
-DEFAULT_MOVE_LABELS = ROOT / "locales" / "en-US" / "move_labels_two_line.csv"
+DEFAULT_CATALOGUE = ROOT / "translation" / "catalog.csv"
+DEFAULT_VARIANTS = ROOT / "translation" / "pointer_variants.csv"
+DEFAULT_INVENTORY = ROOT / "data" / "validation" / "structural_pointer_inventory.json"
+DEFAULT_MOVE_LABELS = ROOT / "translation" / "move_labels_two_line.csv"
 EXPECTED_REFERENCES = 1912
 EXPECTED_SECONDARY_VARIANTS = 4
 TM_ITEM_POINTER_REFERENCES = frozenset(range(0x0319BF, 0x031A0F, 2))

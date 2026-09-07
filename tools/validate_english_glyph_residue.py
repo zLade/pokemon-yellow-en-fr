@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from rom_traduction_assistant import (  # noqa: E402
+from tools.rom_builder import (  # noqa: E402
     STRUCTURED_GLYPH_RECORD_COUNT,
     TRANSLATION_BASE_SHA256,
     verified_structured_glyph_records,
@@ -34,8 +34,8 @@ DEFAULT_ROM = (
     "Pokemon_Yellow_NJ046_EN_v2.0.0.nes"
 )
 DEFAULT_BASE = ROOT / "Pokemon Yellow English 9-23-2015.nes"
-DEFAULT_CATALOGUE = ROOT / "locales" / "en-US" / "catalog.csv"
-DEFAULT_NEUTRAL = ROOT / "locales" / "en-US" / "neutral_glyph_records.csv"
+DEFAULT_CATALOGUE = ROOT / "translation" / "catalog.csv"
+DEFAULT_NEUTRAL = ROOT / "data" / "validation" / "neutral_glyph_records.csv"
 EXPECTED_NEUTRAL_INDICES = frozenset(range(32, 50))
 
 

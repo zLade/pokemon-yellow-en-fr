@@ -5,13 +5,16 @@ images are never distributed.
 
 ## Repository tooling — 2026-09-07
 
-- Standardized CSV headers, source-review annotations and batch metadata in English.
-- Translated inherited tool help, diagnostics, reports, comments and documentation.
-- Updated CSV consumers and spreadsheet exports to use the same English schema.
-- Added ROM-free regression checks for metadata, lossless exports and unchanged
-  dialogue payloads and pointer selections.
-- Preserved Chinese and French reference text and all released IPS/BPS patches.
-  The game release remains English Fidelity 2.0.2.
+- Made the README the single contributor and build guide.
+- Removed redundant navigation pages and unused legacy patch/save utilities.
+- Consolidated editable translation inputs under `translation/`.
+- Added `python build.py check` and `python build.py build` as the entry points.
+- Removed obsolete French inputs, duplicate review exports and superseded tools.
+- Kept technical source evidence and validation rules separate from translation text.
+- Simplified the contributor guides; the published game version remains 2.0.2.
+- Kept headers, editorial annotations, tool messages and documentation in English.
+- Added source and ownership regression checks without pinning editable wording.
+- Verified that the cleanup reproduces the existing 2.0.2 ROM and IPS exactly.
 
 ## English Fidelity 2.0.2 — 2026-08-26
 

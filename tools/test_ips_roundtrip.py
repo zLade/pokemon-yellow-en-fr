@@ -13,7 +13,7 @@ from pathlib import Path
 ROM_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROM_DIR))
 
-from rom_traduction_assistant import (  # noqa: E402
+from tools.rom_builder import (  # noqa: E402
     FINAL_IPS,
     FINAL_ROM,
     apply_ips,
@@ -103,7 +103,7 @@ class IpsRoundtripTests(unittest.TestCase):
         self.assertEqual(records[0].data, b"\x00\xA5")
 
     def test_changed_target_size_must_fit_the_24_bit_footer(self) -> None:
-        with self.assertRaisesRegex(ValueError, "limite 24 bits"):
+        with self.assertRaisesRegex(ValueError, "24-bit limit"):
             make_ips(b"", bytes(0x1000000))
 
     @unittest.skipUnless(

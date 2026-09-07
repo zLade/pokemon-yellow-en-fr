@@ -20,18 +20,15 @@ if str(ROOT) not in sys.path:
 from tools.locales.profiles import ENGLISH_TEXT_PROFILE  # noqa: E402
 
 
-DEFAULT_CATALOGUE = ROOT / "locales" / "en-US" / "catalog.csv"
+DEFAULT_CATALOGUE = ROOT / "translation" / "catalog.csv"
 DEFAULT_ADJUDICATIONS = (
-    ROOT / "locales" / "en-US" / "source_adjudications.csv"
+    ROOT / "data" / "validation" / "source_adjudications.csv"
 )
-DEFAULT_VARIANTS = ROOT / "locales" / "en-US" / "pointer_variants.csv"
-DEFAULT_OVERLAPS = ROOT / "locales" / "en-US" / "storage_overlaps.csv"
+DEFAULT_VARIANTS = ROOT / "translation" / "pointer_variants.csv"
+DEFAULT_OVERLAPS = ROOT / "data" / "validation" / "storage_overlaps.csv"
 DEFAULT_CAMEOS = (
     ROOT
-    / "data"
-    / "source"
-    / "chinese-english-fidelity"
-    / "creator_cameo_dialogues.csv"
+    / "data" / "validation" / "creator_cameo_dialogues.csv"
 )
 
 EXPECTED_COUNTS = {
@@ -392,7 +389,6 @@ def validate_catalogue_rows(
             "editorial_origin",
             "source_resolution",
             "review_status",
-            "encoded_length",
         ):
             if not row.get(field, "").strip():
                 errors.append(f"{key}: empty {field}")

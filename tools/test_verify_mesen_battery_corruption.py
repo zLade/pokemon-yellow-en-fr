@@ -25,36 +25,23 @@ from tools.verify_mesen_battery_corruption import (
 )
 
 
-FINAL_ROM_SHA256 = (
-    "1fefecbfa7084d19abfa5a89c389e75f4c0a307dee3b0bf41fde49a7ebf62d5b"
-)
-REAL_FINAL_RUNS = {
-    "Dendy": ROOT
-    / "build/runtime-proof-final-1fefecbf-battery-dendy"
-    / "run-20260809T160623Z-656bc1c8",
-    "Ntsc": ROOT
-    / "build/runtime-proof-final-1fefecbf-battery-ntsc"
-    / "run-20260809T160700Z-fbdf742f",
-    "Pal": ROOT
-    / "build/runtime-proof-final-1fefecbf-battery-pal"
-    / "run-20260809T160736Z-13cd0523",
-}
 
 
 class BatteryCorruptionEvidenceTests(unittest.TestCase):
-    def test_real_final_evidence_passes_all_three_regions(self) -> None:
-        rom_path = ROOT / "Pokemon_Jaune_FR_repacked_title.nes"
-        for expected_region, run_dir in REAL_FINAL_RUNS.items():
-            with self.subTest(region=expected_region):
-                report, errors = verify_run(run_dir, rom_path)
-                self.assertEqual(errors, [])
-                self.assertEqual(report["result"], "PASS")
-                self.assertEqual(report["region"], expected_region)
-                self.assertEqual(report["rom_sha256"], FINAL_ROM_SHA256)
-                self.assertEqual(len(report["phases"]), 5)
-                stored_path = run_dir.parent / "verification.json"
-                stored = json.loads(stored_path.read_text(encoding="utf-8"))
-                self.assertEqual(stored, report)
+    def test_synthetic_evidence_passes_all_three_regions(self):
+        for region in ("Dendy", "Ntsc", "Pal"):
+            with self.subTest(region=region):
+                run_dir, rom_path, temporary = self._fixture(region)
+                try:
+                    report, errors = verify_run(run_dir, rom_path)
+                    self.assertEqual(errors, [])
+                    self.assertEqual(report["result"], "PASS")
+                    self.assertEqual(report["region"], region)
+                    self.assertEqual(report["rom_sha256"], sha256_path(rom_path))
+                    self.assertEqual(len(report["phases"]), 5)
+                finally:
+                    temporary.cleanup()
+
 
     def test_corruption_probe_observes_without_memory_injection(self) -> None:
         source = (
@@ -95,11 +82,12 @@ class BatteryCorruptionEvidenceTests(unittest.TestCase):
         marker: str,
         script: str,
         rom_hash: str,
+        region: str = "Dendy",
     ) -> None:
         phase = run_dir / slug
         phase.mkdir(parents=True)
         extra = " memoryInjection=false" if slug.endswith("corrupt") else ""
-        stdout = f"{marker} region=Dendy{extra}\n".encode()
+        stdout = f"{marker} region={region}{extra}\n".encode()
         stderr = b""
         (phase / "mesen.stdout.txt").write_bytes(stdout)
         (phase / "mesen.stderr.txt").write_bytes(stderr)
@@ -110,8 +98,8 @@ class BatteryCorruptionEvidenceTests(unittest.TestCase):
             f"ROM SHA-256 before: {rom_hash}",
             f"ROM SHA-256 after: {rom_hash}",
             "iNES mapper: 163",
-            "Region: Dendy",
-            "Expected effective region: Dendy",
+            f"Region: {region}",
+            f"Expected effective region: {region}",
             "Strict hardware profile: True",
             "Full NES debug-stop profile: True",
             f"Expected marker: {marker}",
@@ -132,7 +120,7 @@ class BatteryCorruptionEvidenceTests(unittest.TestCase):
             encoding="utf-8",
         )
 
-    def _fixture(self) -> tuple[Path, Path, tempfile.TemporaryDirectory]:
+    def _fixture(self, region="Dendy") -> tuple[Path, Path, tempfile.TemporaryDirectory]:
         temporary = tempfile.TemporaryDirectory()
         base = Path(temporary.name)
         run_dir = base / "run"
@@ -141,7 +129,7 @@ class BatteryCorruptionEvidenceTests(unittest.TestCase):
         rom_path.write_bytes(b"NES\x1a" + bytes(64))
         rom_hash = sha256_path(rom_path)
         for slug, (marker, script) in PHASES.items():
-            self._write_phase(run_dir, slug, marker, script, rom_hash)
+            self._write_phase(run_dir, slug, marker, script, rom_hash, region)
 
         baseline = bytearray(SAVE_SIZE)
         baseline[SAVE_MAGIC_OFFSET : SAVE_MAGIC_OFFSET + 4] = SAVE_MAGIC
@@ -180,7 +168,7 @@ class BatteryCorruptionEvidenceTests(unittest.TestCase):
             f"ROM SHA-256: {rom_hash}",
             "iNES mapper: 163",
             f"Battery/save-RAM bytes: {SAVE_SIZE}",
-            "Region: Dendy",
+            f"Region: {region}",
             "Strict hardware profile: True",
             "Full NES debug-stop profile: True",
             f"Created save SHA-256 before reload: {sha256_bytes(baseline)}",

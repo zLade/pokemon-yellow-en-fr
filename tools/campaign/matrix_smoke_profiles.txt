@@ -1,3 +1,0 @@
-# smoke validation list
-tools/campaign/matrix_smoke_profile_a.txt
-tools/campaign/matrix_smoke_profile_b.txt

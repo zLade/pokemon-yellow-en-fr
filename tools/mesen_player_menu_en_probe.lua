@@ -15,4 +15,4 @@ end
 
 local directory = scriptDirectory()
 local separator = directory:find("\\", 1, true) and "\\" or "/"
-dofile(directory .. separator .. "mesen_player_menu_french_probe.lua")
+dofile(directory .. separator .. "mesen_player_menu_probe.lua")

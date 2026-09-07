@@ -20,7 +20,7 @@ DEFAULT_BUDGET = (
     ROOT / "build" / "private" / "en" / "2.0.0" /
     "english_bank_budget.csv"
 )
-DEFAULT_POLICY = ROOT / "locales" / "en-US" / "bank_budget_policy.json"
+DEFAULT_POLICY = ROOT / "data" / "validation" / "bank_budget_policy.json"
 
 
 class EnglishBankBudgetError(RuntimeError):

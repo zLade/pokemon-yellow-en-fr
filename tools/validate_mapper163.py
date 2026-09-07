@@ -141,7 +141,7 @@ class MoveLabelCertification:
 
 
 def default_move_label_catalogue(profile: str) -> Path:
-    return ROOT / "locales" / profile / "move_labels_two_line.csv"
+    return ROOT / "translation" / "move_labels_two_line.csv"
 
 
 def resolve_move_label_catalogue(

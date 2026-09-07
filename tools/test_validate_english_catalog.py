@@ -70,6 +70,20 @@ def catalogue_rows() -> list[dict[str, str]]:
 
 
 class ValidateEnglishCatalogTests(unittest.TestCase):
+    def test_computed_length_is_optional_for_editable_catalogues(self) -> None:
+        rows = catalogue_rows()
+        for row in rows:
+            row.pop("encoded_length")
+        rows[0]["english_v2"] = "Hello again"
+        by_key, _ = validate_catalogue_rows(rows)
+        self.assertEqual(by_key[rows[0]["stable_key"]]["english_v2"], "Hello again")
+
+    def test_optional_declared_length_still_detects_mismatch(self) -> None:
+        rows = catalogue_rows()
+        rows[0]["encoded_length"] = "999"
+        with self.assertRaisesRegex(EnglishCatalogueError, "encoded_length 999"):
+            validate_catalogue_rows(rows)
+
     def test_complete_synthetic_catalogue_passes(self) -> None:
         by_key, counts = validate_catalogue_rows(catalogue_rows())
         self.assertEqual(len(by_key), 1929)

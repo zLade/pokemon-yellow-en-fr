@@ -3,10 +3,11 @@
 
 from __future__ import annotations
 
+import csv
 import dataclasses
 import unittest
+from pathlib import Path
 
-from tools.chinese_dialogue_restorations import RESTORED_DIALOGUES
 from tools.restoration_topology import (
     BAD_ENGLISH_POINTER_COUNT,
     COLLAPSED_ENGLISH_POINTER_COUNT,
@@ -38,11 +39,24 @@ class RestorationTopologyTests(unittest.TestCase):
             },
         )
 
-    def test_current_french_catalogue_covers_neutral_topology_exactly(self) -> None:
-        self.assertEqual(set(RESTORED_DIALOGUES), set(RESTORATION_REFERENCES))
+    def test_current_english_catalogue_covers_neutral_topology_exactly(self) -> None:
+        path = Path(__file__).resolve().parent.parent / "translation/catalog.csv"
+        with path.open(encoding="utf-8-sig", newline="") as handle:
+            rows = [
+                row for row in csv.DictReader(handle)
+                if row["record_type"] == "RESTORED"
+            ]
+        self.assertEqual(len(rows), 85)
+        restorations = {
+            int(row["source_offset_or_pointer"], 16): row["english_v2"]
+            for row in rows
+        }
+        self.assertEqual(len(restorations), len(rows), "duplicate restoration keys")
+        self.assertTrue(all(text.strip() for text in restorations.values()))
+        self.assertEqual(set(restorations), set(RESTORATION_REFERENCES))
         validate_restoration_catalogue(
-            RESTORED_DIALOGUES,
-            label="French restorations",
+            restorations,
+            label="English restorations",
         )
 
     def test_four_miswired_targets_are_exact_and_locale_free(self) -> None:

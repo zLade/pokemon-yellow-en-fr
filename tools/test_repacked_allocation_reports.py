@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from rom_traduction_assistant import (
+from tools.rom_builder import (
     FreeSpan,
     allocation_report_rows,
     write_allocation_report,

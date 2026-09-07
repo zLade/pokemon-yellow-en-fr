@@ -26,7 +26,7 @@ TOOLS = Path(__file__).resolve().parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from rom_traduction_assistant import (  # noqa: E402
+from tools.rom_builder import (  # noqa: E402
     BATTLE_TEXT_CONTROL_CAVE_OFFSET,
     BATTLE_TEXT_CONTROL_CAVE_PATCH,
     BATTLE_TEXT_CONTROL_CAVE_SOURCE,
@@ -62,9 +62,9 @@ DEFAULT_ROM = (
     / "Pokemon_Yellow_NJ046_EN_v2.0.0.nes"
 )
 DEFAULT_BASE = ROOT / "Pokemon Yellow English 9-23-2015.nes"
-DEFAULT_CATALOGUE = ROOT / "locales" / "en-US" / "catalog.csv"
-DEFAULT_VARIANTS = ROOT / "locales" / "en-US" / "pointer_variants.csv"
-DEFAULT_MOVE_LABELS = ROOT / "locales" / "en-US" / "move_labels_two_line.csv"
+DEFAULT_CATALOGUE = ROOT / "translation" / "catalog.csv"
+DEFAULT_VARIANTS = ROOT / "translation" / "pointer_variants.csv"
+DEFAULT_MOVE_LABELS = ROOT / "translation" / "move_labels_two_line.csv"
 
 ASCII_FONT_OFFSET = 0x078210
 ASCII_FONT_SIZE = 96 * 16
@@ -199,7 +199,7 @@ def builder_arguments(
 ) -> tuple[str, ...]:
     return (
         sys.executable,
-        str(ROOT / "rom_traduction_assistant.py"),
+        str(ROOT / "tools/rom_builder.py"),
         "build-repacked",
         "--profile",
         "en-US",

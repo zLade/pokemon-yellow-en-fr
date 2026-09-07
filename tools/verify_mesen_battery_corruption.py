@@ -392,7 +392,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--rom",
         type=Path,
-        default=ROOT / "Pokemon_Jaune_FR_repacked_title.nes",
+        default=ROOT / "build/en/Pokemon_Yellow_EN.nes",
     )
     parser.add_argument("--output", type=Path)
     return parser

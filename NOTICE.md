@@ -11,6 +11,6 @@ unofficial Famicom game NJ046.
 - No blanket license is granted over third-party text, graphics or patch
   payloads. A separate license may later be chosen for original tooling only.
 
-Release directories contain IPS/BPS transformations and verification hashes.
+Release directories contain IPS transformations and verification hashes.
 Users must supply their own legally obtained input image matching the exact
 documented SHA-256.

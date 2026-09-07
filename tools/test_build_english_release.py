@@ -1,548 +1,281 @@
-#!/usr/bin/env python3
-"""Synthetic, ROM-free tests for the English release orchestrator."""
-
+"""ROM-free tests and local builds; exact release requires NJ046_VERIFY_RELEASE=1."""
 from __future__ import annotations
 
 import csv
-import hashlib
+import json
+import os
+from pathlib import Path
 import subprocess
 import sys
 import tempfile
+from types import SimpleNamespace
 import unittest
-from pathlib import Path
 from unittest.mock import patch
 
-from tools.build_english_release import (
-    CHINESE_BPS_FILENAME,
-    ENGLISH_BPS_FILENAME,
-    EXPECTED_CATALOG_COUNTS,
-    EXPECTED_FRENCH_NON_REGRESSION_SHA256,
-    EXPECTED_MESEN_SHA256,
-    EXPECTED_MESEN_SCENARIOS,
-    EXPECTED_ROM_SHA256,
-    EXPECTED_ROUTE1_INPUT_SHA256,
-    EXPECTED_RUNTIME_REGIONS,
-    EXPECTED_RUNTIME_STEPS_PER_REGION,
-    IPS_FILENAME,
-    ROM_FILENAME,
-    VALIDATION_LIMITS,
-    EnglishReleaseError,
-    _copy_evidence_tree,
-    _documentation,
-    assert_no_complete_images,
-    assert_portable_text_tree,
-    assistant_build_arguments,
-    create_verified_ips,
-    publish_transactionally,
-    normalize_log_paths,
-    validate_catalogue,
-    validate_mesen_evidence,
-    write_sha256sums,
-)
+from tools import build_english_release as builder
 
 
-CATALOG_FIELDS = (
-    "stable_key",
-    "record_type",
-    "category",
-    "chinese_text",
-    "english_v2",
-    "editorial_origin",
-    "source_resolution",
-    "review_status",
-    "compression",
-    "compression_justification",
-)
-
-
-def write_reviewed_catalogue(path: Path, *, pending_first: bool = False) -> None:
-    rows: list[dict[str, str]] = []
-    for index in range(1844):
-        if index < 967:
-            category = "In-game dialogue"
-        elif index < 970:
-            category = "Introduction"
-        elif index < 1129:
-            category = "Pokédex"
-        else:
-            category = "Ordinary text"
-        rows.append(
-            {
-                "stable_key": f"MAIN:0x{index:06X}",
-                "record_type": "MAIN",
-                "category": category,
-                "chinese_text": f"中文{index}",
-                "english_v2": f"Reviewed {index}",
-                "editorial_origin": "chinese_source_review",
-                "source_resolution": "pointer_table",
-                "review_status": "approved",
-                "compression": "",
-                "compression_justification": "",
-            }
-        )
-    for index in range(85):
-        rows.append(
-            {
-                "stable_key": f"RESTORED:0x{index:06X}",
-                "record_type": "RESTORED",
-                "category": "Restored dialogue",
-                "chinese_text": f"恢复{index}",
-                "english_v2": f"Restored {index}",
-                "editorial_origin": "chinese_source_review",
-                "source_resolution": "restored_pointer",
-                "review_status": "approved",
-                "compression": "",
-                "compression_justification": "",
-            }
-        )
-    if pending_first:
-        rows[0]["review_status"] = "pending"
+def write_rows(path, rows):
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=CATALOG_FIELDS)
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
 
 
-def write_runtime_evidence(root: Path, rom_hash: str) -> None:
-    runtime_lines = [
-        "Suite: NJ046 English Fidelity 2.0 runtime",
-        f"Candidate SHA-256: {rom_hash}",
-        "Regions: " + ",".join(EXPECTED_RUNTIME_REGIONS),
-    ]
-    step_names = [
-        f"{region}/{name}"
-        for region in EXPECTED_RUNTIME_REGIONS
-        for name in EXPECTED_RUNTIME_STEPS_PER_REGION
-    ]
-    runtime_lines.append(f"Executed steps: {len(step_names)}")
-    runtime_lines.extend(
-        f"Step {index:02d}: PASS | {name} | 1.0s"
-        for index, name in enumerate(step_names, start=1)
-    )
-    runtime_lines.append("Result: PASS")
-    (root / "english_runtime_manifest.txt").write_text(
-        "\n".join(runtime_lines) + "\n", encoding="utf-8"
-    )
+class PitchTests(unittest.TestCase):
+    def test_exact_guarded_delta(self):
+        self.assertEqual(len(builder.PITCH_BEFORE), 80)
+        self.assertEqual(len(builder.PITCH_AFTER), 80)
+        original = bytes(builder.PITCH_START) + builder.PITCH_BEFORE + b"tail"
+        result = builder.apply_pitch(original)
+        self.assertEqual(len(result), len(original))
+        self.assertEqual(sum(a != b for a, b in zip(original, result)), 69)
+        self.assertEqual(result[:builder.PITCH_START], original[:builder.PITCH_START])
+        self.assertEqual(result[builder.PITCH_START + 80:], b"tail")
+        self.assertEqual(result[builder.PITCH_START:builder.PITCH_START + 80], builder.PITCH_AFTER)
+        with self.assertRaises(builder.BuildError):
+            builder.apply_pitch(result)
 
-    for region in EXPECTED_RUNTIME_REGIONS:
-        region_root = root / region.casefold()
-        for scenario_name, (
-            script_name,
-            expected_marker,
-            input_policy,
-        ) in EXPECTED_MESEN_SCENARIOS.items():
-            scenario = region_root / scenario_name
-            scenario.mkdir(parents=True)
-            script_hash = hashlib.sha256(
-                Path(__file__).with_name(script_name).read_bytes()
-            ).hexdigest()
-            if input_policy == "critical":
-                input_hash = "a" * 64
-                input_path = "critical-restoration-targets.tsv"
-            elif input_policy == "route1":
-                input_hash = EXPECTED_ROUTE1_INPUT_SHA256
-                input_path = "route1.inputs.bin"
-            else:
-                input_hash = ""
-                input_path = ""
-            (scenario / "mesen_run_manifest.txt").write_text(
-                "\n".join(
-                    (
-                        f"Mesen executable SHA-256: {EXPECTED_MESEN_SHA256}",
-                        f"ROM SHA-256 before: {rom_hash}",
-                        f"ROM SHA-256 after: {rom_hash}",
-                        "iNES mapper: 163",
-                        f"Region: {region}",
-                        f"Expected effective region: {region}",
-                        "Strict hardware profile: True",
-                        "Full NES debug-stop profile: True",
-                        f"Lua scenario: tools/{script_name}",
-                        f"Lua scenario SHA-256 before: {script_hash}",
-                        f"Lua scenario SHA-256 after: {script_hash}",
-                        f"Scenario input: {input_path}",
-                        f"Scenario input SHA-256 before: {input_hash}",
-                        f"Scenario input SHA-256 after: {input_hash}",
-                        f"Expected marker: {expected_marker}",
-                        "Expected marker observed: True",
-                        "Timed out: False",
-                        "Result: PASS",
-                    )
-                )
-                + "\n",
-                encoding="utf-8",
-            )
-        (region_root / "battery_persistence_manifest.txt").write_text(
-            "\n".join(
-                (
-                    f"ROM SHA-256: {rom_hash}",
-                    "iNES mapper: 163",
-                    f"Region: {region}",
-                    "Strict hardware profile: True",
-                    "Full NES debug-stop profile: True",
-                    "Primary corruption restored from valid backup: true",
-                    "Primary-corrupt CONT equals valid resumed room: true",
-                    "Backup-corrupt CONT equals fresh fallback: true",
-                    "Corruption scenarios use memory injection: false",
-                    "Result: PASS",
-                )
-            )
-            + "\n",
-            encoding="utf-8",
-        )
+    def test_wrong_and_short_inputs(self):
+        for candidate in (b"", bytes(builder.PITCH_START + 80)):
+            with self.assertRaises(builder.BuildError):
+                builder.apply_pitch(candidate)
 
 
-class EnglishReleaseWrapperTests(unittest.TestCase):
-    def test_rom_source_hashes_are_exactly_pinned(self) -> None:
-        self.assertEqual(
-            EXPECTED_ROM_SHA256,
-            {
-                "chinese_nj046": (
-                    "450d40c0d648f8651ac6b42f1c094921cb2202ed420194e6"
-                    "5271e2f7b40c65ed"
-                ),
-                "english_2015": (
-                    "d5c308b5862ccbe4647d4255a11bb0f1cb6817c4b107feac"
-                    "112509d658a9943b"
-                ),
-                "yellow_canonical": (
-                    "69520103102677b33b47c15fae804dc1a742347a9ee1b02a"
-                    "9195e795eb6e431b"
-                ),
-            },
-        )
-
-    def test_french_non_regression_goldens_are_pinned_and_built(self) -> None:
-        self.assertEqual(
-            EXPECTED_FRENCH_NON_REGRESSION_SHA256["final_rom"],
-            "1fefecbfa7084d19abfa5a89c389e75f4c0a307dee3b0bf41fde49a7ebf62d5b",
-        )
-        source = Path(__file__).with_name("build_english_release.py").read_text(
-            encoding="utf-8"
-        )
-        self.assertIn("self.verify_french_non_regression()", source)
-        self.assertIn("french_non_regression.json", source)
-
-    def test_builder_uses_the_declared_english_profile_and_one_catalogue(self) -> None:
-        args = assistant_build_arguments(
-            assistant=Path("assistant.py"),
-            catalog=Path("catalog.csv"),
-            pointer_variants=Path("pointer_variants.csv"),
-            english_rom=Path("english.nes"),
-            output_rom=Path("target.nes"),
-            output_ips=Path("build.ips"),
-            allocation_csv=Path("allocation.csv"),
-        )
-        strings = [str(value) for value in args]
-        self.assertEqual(strings[:4], ["assistant.py", "build-repacked", "--profile", "en-US"])
-        self.assertEqual(strings[strings.index("--csv") + 1], "catalog.csv")
-        self.assertEqual(
-            strings[strings.index("--restorations-csv") + 1],
-            "catalog.csv",
-        )
-        self.assertEqual(
-            strings[strings.index("--pointer-variants-csv") + 1],
-            "pointer_variants.csv",
-        )
-        self.assertEqual(
-            strings[strings.index("--allocation-output") + 1],
-            "allocation.csv",
-        )
-        self.assertIn("--bank-budget-output", strings)
-        self.assertIn("--fixed-overflow-output", strings)
-
-    def test_release_wrapper_runs_english_static_gates_it_publishes(self) -> None:
-        source = (
-            Path(__file__).with_name("build_english_release.py")
-            .read_text(encoding="utf-8")
-        )
-        for tool in (
-            "validate_english_catalog.py",
-            "validate_english_repacked.py",
-            "validate_mapper163.py",
-            "validate_english_bank_budget.py",
-            "validate_english_glyph_residue.py",
-            "validate_english_runtime_text_reads.py",
-            "prepare_critical_restoration_runtime.py",
-            "english_pointer_manifest.py",
-        ):
-            with self.subTest(tool=tool):
-                self.assertIn(tool, source)
-        self.assertIn(
-            '"tools.validate_english_runtime_text_reads"',
-            source,
-        )
-
-    def test_final_wrapper_requires_complete_external_patcher_matrix(self) -> None:
-        source = Path(__file__).with_name("build_english_release.py").read_text(
-            encoding="utf-8"
-        )
-        self.assertIn("if not all(external):", source)
-        self.assertIn("The final release requires Lunar IPS", source)
-
-    def test_internal_ips_generator_round_trips_synthetic_bytes(self) -> None:
+class SourceTests(unittest.TestCase):
+    def test_source_hash_and_size(self):
         with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            base = root / "base.dat"
-            target = root / "target.dat"
-            patch = root / "target.ips"
-            base.write_bytes(bytes(range(256)) * 2)
-            changed = bytearray(base.read_bytes())
-            changed[7:14] = b"ENGLISH"
-            changed[-1] ^= 0xFF
-            target.write_bytes(changed)
-            digest = create_verified_ips(base, target, patch)
-            self.assertTrue(patch.read_bytes().startswith(b"PATCH"))
-            self.assertTrue(patch.read_bytes().endswith(b"EOF"))
-            self.assertEqual(digest, hashlib.sha256(patch.read_bytes()).hexdigest())
-
-    def test_direct_script_bootstraps_project_root_for_lazy_import(self) -> None:
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            base = root / "base.dat"
-            target = root / "target.dat"
-            patch = root / "target.ips"
-            base.write_bytes(bytes(range(64)))
-            changed = bytearray(base.read_bytes())
-            changed[17:21] = b"EN2!"
-            target.write_bytes(changed)
-            wrapper = Path(__file__).with_name("build_english_release.py").resolve()
-            code = (
-                "import runpy\n"
-                f"namespace = runpy.run_path({str(wrapper)!r})\n"
-                "from pathlib import Path\n"
-                f"namespace['create_verified_ips'](Path({str(base)!r}), "
-                f"Path({str(target)!r}), Path({str(patch)!r}))\n"
-            )
-            process = subprocess.run(
-                [sys.executable, "-I", "-c", code],
-                cwd=root,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                text=True,
-                check=False,
-            )
-            self.assertEqual(process.returncode, 0, process.stdout)
-            self.assertTrue(patch.is_file())
-
-    def test_catalogue_gate_accepts_only_complete_reviewed_1929_rows(self) -> None:
-        with tempfile.TemporaryDirectory() as temporary:
-            catalog = Path(temporary) / "catalog.csv"
-            write_reviewed_catalogue(catalog)
-            summary = validate_catalogue(catalog)
-            self.assertEqual(summary.as_dict(), dict(EXPECTED_CATALOG_COUNTS))
-
-            write_reviewed_catalogue(catalog, pending_first=True)
-            with self.assertRaisesRegex(EnglishReleaseError, "unreviewed"):
-                validate_catalogue(catalog)
-
-    def test_mesen_gate_binds_every_strict_region_run_to_target_hash(self) -> None:
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            target_hash = "ab" * 32
-            write_runtime_evidence(root, target_hash)
-            summary = validate_mesen_evidence(root, target_hash)
-            self.assertEqual(summary["result"], "PASS")
-            self.assertEqual(summary["scenario_manifests"], 48)
-            self.assertEqual(summary["battery_manifests"], 3)
-
-            first = next(root.rglob("mesen_run_manifest.txt"))
-            first.write_text(
-                first.read_text(encoding="utf-8").replace(
-                    target_hash, "cd" * 32, 1
-                ),
-                encoding="utf-8",
-            )
-            with self.assertRaisesRegex(EnglishReleaseError, "different ROM SHA"):
-                validate_mesen_evidence(root, target_hash)
-
-            first.write_text(
-                first.read_text(encoding="utf-8").replace(
-                    "cd" * 32, target_hash, 1
-                ),
-                encoding="utf-8",
-            )
-            title_manifest = next(
-                path
-                for path in root.rglob("mesen_run_manifest.txt")
-                if path.parent.name == "06-title-and-new-load"
-            )
-            title_manifest.write_text(
-                title_manifest.read_text(encoding="utf-8").replace(
-                    "Expected marker: TITLE_YELLOW_VERSION_PASS",
-                    "Expected marker: GENERIC_PASS",
-                ),
-                encoding="utf-8",
-            )
-            with self.assertRaisesRegex(EnglishReleaseError, "marker"):
-                validate_mesen_evidence(root, target_hash)
-
-    def test_patch_only_scan_rejects_extension_and_disguised_ines_magic(self) -> None:
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            (root / CHINESE_BPS_FILENAME).write_bytes(b"BPS1fixture")
-            (root / IPS_FILENAME).write_bytes(b"PATCHEOF")
-            (root / "README.md").write_text("patch only\n", encoding="utf-8")
-            assert_no_complete_images(root)
-
-            forbidden = root / "complete.nes"
-            forbidden.write_bytes(b"not even a real ROM")
-            with self.assertRaisesRegex(EnglishReleaseError, "Complete ROM image"):
-                assert_no_complete_images(root)
-            forbidden.unlink()
-
-            disguised = root / "innocent.txt"
-            disguised.write_bytes(b"NES\x1a" + b"\0" * 32)
-            with self.assertRaisesRegex(EnglishReleaseError, "Complete ROM image"):
-                assert_no_complete_images(root)
-
-    def test_private_evidence_accepts_small_snapshots_but_rejects_roms(self) -> None:
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            source = root / "source"
-            destination = root / "destination"
-            source.mkdir()
-            (source / "palette.bin").write_bytes(b"\0" * 32)
-            (source / "battery.sav").write_bytes(b"\0" * 8192)
-            _copy_evidence_tree(source, destination)
-            self.assertEqual((destination / "palette.bin").stat().st_size, 32)
-            self.assertEqual((destination / "battery.sav").stat().st_size, 8192)
-
-            (source / "headerless-rom.bin").write_bytes(b"\0" * (8192 + 1))
-            with self.assertRaisesRegex(EnglishReleaseError, "Complete ROM image"):
-                _copy_evidence_tree(source, destination)
-            (source / "headerless-rom.bin").unlink()
-
-            (source / "disguised.bin").write_bytes(b"NES\x1a" + b"\0" * 28)
-            with self.assertRaisesRegex(EnglishReleaseError, "Complete ROM image"):
-                _copy_evidence_tree(source, destination)
-
-    def test_bundle_text_scan_rejects_local_absolute_paths(self) -> None:
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            report = root / "report.json"
-            report.write_text(
-                '{"source": "C:\\\\Users\\\\alice\\\\private.nes"}\n',
-                encoding="utf-8",
-            )
-            with self.assertRaisesRegex(EnglishReleaseError, "Absolute path"):
-                assert_portable_text_tree(root)
-            report.write_text('{"source": "$ROOT/yellow.nes"}\n', encoding="utf-8")
-            assert_portable_text_tree(root)
-
-    def test_log_paths_use_portable_placeholders(self) -> None:
-        original = (
-            "/workspace/project/file.csv\n"
-            "C:\\Users\\alice\\Desktop\\rom.nes\n"
-            "/mnt/c/Users/alice/private/rom.nes\n"
-        )
-        normalized = normalize_log_paths(original, {"/workspace/project": "$ROOT"})
-        self.assertIn("$ROOT/file.csv", normalized)
-        self.assertNotIn("alice", normalized)
-        self.assertNotIn("/mnt/c/Users", normalized)
-        self.assertNotIn("C:\\Users", normalized)
-
-    def test_transactional_promotion_refuses_existing_and_moves_both(self) -> None:
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            private_stage = root / "private-stage"
-            dist_stage = root / "dist-stage"
-            private_destination = root / "private" / "2.0.0"
-            dist_destination = root / "dist" / "2.0.0"
-            private_stage.mkdir()
-            dist_stage.mkdir()
-            (private_stage / "private.txt").write_text("private", encoding="utf-8")
-            (dist_stage / "patch.bps").write_bytes(b"BPS1fixture")
-            publish_transactionally(
-                private_stage,
-                private_destination,
-                dist_stage,
-                dist_destination,
-            )
-            self.assertTrue((private_destination / "private.txt").is_file())
-            self.assertTrue((dist_destination / "patch.bps").is_file())
-
-            another_private = root / "another-private"
-            another_dist = root / "another-dist"
-            another_private.mkdir()
-            another_dist.mkdir()
-            with self.assertRaisesRegex(EnglishReleaseError, "already exists"):
-                publish_transactionally(
-                    another_private,
-                    private_destination,
-                    another_dist,
-                    root / "fresh-dist",
-                )
-
-    def test_second_promotion_failure_rolls_the_private_directory_back(self) -> None:
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            private_stage = root / "private-stage"
-            dist_stage = root / "dist-stage"
-            private_destination = root / "private" / "2.0.0"
-            dist_destination = root / "dist" / "2.0.0"
-            private_stage.mkdir()
-            dist_stage.mkdir()
-            (private_stage / "target.dat").write_bytes(b"private")
-            (dist_stage / "target.bps").write_bytes(b"BPS1fixture")
-
-            import tools.build_english_release as module
-
-            real_replace = module.os.replace
-            calls = 0
-
-            def fail_second(source: Path | str, destination: Path | str) -> None:
-                nonlocal calls
-                calls += 1
-                if calls == 2:
-                    raise OSError("simulated dist promotion failure")
-                real_replace(source, destination)
-
-            with patch(
-                "tools.build_english_release.os.replace",
-                side_effect=fail_second,
+            path = Path(temporary) / "input.nes"
+            path.write_bytes(b"test")
+            with patch.object(builder, "ROM_SIZE", 4), patch.dict(
+                builder.EXPECTED_ROM_SHA256, {"yellow": builder.sha256(b"test")}
             ):
-                with self.assertRaisesRegex(OSError, "simulated"):
-                    publish_transactionally(
-                        private_stage,
-                        private_destination,
-                        dist_stage,
-                        dist_destination,
-                    )
-            self.assertTrue(private_stage.is_dir())
-            self.assertTrue(dist_stage.is_dir())
-            self.assertFalse(private_destination.exists())
-            self.assertFalse(dist_destination.exists())
+                self.assertEqual(builder.read_source_rom(path, "yellow"), b"test")
+                path.write_bytes(b"fail")
+                with self.assertRaises(builder.BuildError):
+                    builder.read_source_rom(path, "yellow")
+                path.write_bytes(b"short")
+                with self.assertRaises(builder.BuildError):
+                    builder.read_source_rom(path, "yellow")
 
-    def test_documentation_states_exact_limits_and_no_rom_is_an_output(self) -> None:
-        target_hash = "a" * 64
-        documents = _documentation(
-            target_hash,
-            external_patcher_status="not_run_no_complete_pinned_external_tool_matrix",
-        )
-        joined = "\n".join(documents.values())
-        self.assertIn(VALIDATION_LIMITS["hardware_validation"], joined)
-        self.assertIn(VALIDATION_LIMITS["ram_quirk"], joined)
-        self.assertIn(VALIDATION_LIMITS["harmlessness"], joined)
-        self.assertIn(VALIDATION_LIMITS["editorial_status"], joined)
-        self.assertIn("HZK16", joined)
-        self.assertIn("No complete ROM is included", joined)
-        self.assertIn(ROM_FILENAME, joined)
-        self.assertIn(CHINESE_BPS_FILENAME, joined)
-        self.assertIn(ENGLISH_BPS_FILENAME, joined)
+    def test_release_pin_is_explicit(self):
+        self.assertFalse(builder.build_parser().parse_args(["build"]).verify_release)
+        self.assertTrue(builder.build_parser().parse_args(["build", "--verify-release"]).verify_release)
+        with self.assertRaises(builder.BuildError):
+            builder.verify_release(b"edited rom", b"edited ips")
 
-    def test_checksums_cover_every_file_but_not_themselves(self) -> None:
+    def test_check_uses_only_default_static_inputs(self):
+        with patch.object(builder.catalog, "validate_all", return_value={"result": "PASS"}) as validate:
+            with patch.object(builder, "read_source_rom", side_effect=AssertionError("ROM read")):
+                report = builder.check()
+                self.assertEqual(report["result"], "PASS")
+                self.assertEqual(report["move_labels"]["records"], 114)
+        validate.assert_called_once_with(*[builder.DATA_INPUTS[key] for key in
+                                          ("catalogue", "adjudications", "variants", "overlaps", "cameos")])
+
+    def test_real_rom_free_check(self):
+        self.assertEqual(builder.check()["result"], "PASS")
+
+    def test_explicit_core_inputs_and_outputs(self):
+        args = builder.core_command(Path("english.nes"), Path("output"))
+        self.assertEqual(args[args.index("--profile") + 1], "en-US")
+        self.assertEqual(args[args.index("--move-labels-csv") + 1], str(builder.DATA_INPUTS["move_labels"]))
+        self.assertEqual(args[args.index("--csv") + 1], str(builder.DATA_INPUTS["catalogue"]))
+        self.assertIn("--bank-budget-output", args)
+
+    def test_input_records_detect_edits(self):
         with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            (root / "a.txt").write_text("a", encoding="utf-8")
-            nested = root / "review"
-            nested.mkdir()
-            (nested / "b.csv").write_text("b\n", encoding="utf-8")
-            write_sha256sums(root)
-            lines = (root / "SHA256SUMS").read_text(encoding="utf-8").splitlines()
-            self.assertEqual(len(lines), 2)
-            self.assertTrue(any(line.endswith("  a.txt") for line in lines))
-            self.assertTrue(any(line.endswith("  review/b.csv") for line in lines))
-            self.assertFalse(any(line.endswith("SHA256SUMS") for line in lines))
+            path = Path(temporary) / "source.csv"
+            path.write_bytes(b"before")
+            first = builder.input_records([path])
+            self.assertEqual(first, builder.input_records([path, path]))
+            path.write_bytes(b"after")
+            self.assertNotEqual(first, builder.input_records([path]))
+
+    def test_provenance_is_explicit_and_ignores_ambient_imports(self):
+        paths = builder.source_paths()
+        self.assertEqual(len(paths), len(set(paths)))
+        self.assertTrue(all(path.is_file() for path in paths))
+        expected = builder.input_records(paths)
+        unrelated = SimpleNamespace(__file__=str(builder.ROOT / "tools" / "deleted_unrelated.py"))
+        with patch.dict(sys.modules, {"tools.unrelated_module": unrelated}):
+            self.assertEqual(builder.source_paths(), paths)
+            self.assertEqual(builder.input_records(builder.source_paths()), expected)
+
+
+class MoveLabelChecks(unittest.TestCase):
+    def test_current_indices_and_edited_wording_are_valid(self):
+        self.assertEqual(len(builder.EXPECTED_MOVE_INDICES), 114)
+        rows = builder.read_rows(builder.DATA_INPUTS["move_labels"])
+        rows[0]["line_1"] = "Edited"
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "moves.csv"
+            write_rows(path, rows)
+            self.assertEqual(builder.check_move_labels(path)["records"], 114)
+
+    def test_missing_file_is_not_silently_skipped_by_check(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            with patch.dict(builder.DATA_INPUTS, {"move_labels": Path(temporary) / "missing.csv"}):
+                with self.assertRaises(OSError):
+                    builder.check()
+
+    def test_invalid_labels_and_ownership_are_rejected(self):
+        for problem in ("missing", "duplicate", "wrong_index", "long", "non_ascii"):
+            with self.subTest(problem=problem), tempfile.TemporaryDirectory() as temporary:
+                rows = builder.read_rows(builder.DATA_INPUTS["move_labels"])
+                if problem == "missing":
+                    rows.pop()
+                elif problem == "duplicate":
+                    rows[1]["move_index"] = rows[0]["move_index"]
+                elif problem == "wrong_index":
+                    rows[0]["move_index"] = "0"
+                elif problem == "long":
+                    rows[0]["line_1"] = "123456789"
+                else:
+                    rows[0]["line_1"] = "\u2603"
+                path = Path(temporary) / "moves.csv"
+                write_rows(path, rows)
+                with self.assertRaises((ValueError, RuntimeError)):
+                    builder.check_move_labels(path)
+
+
+class SafetyTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        self.root = Path(self.temporary.name).resolve()
+        self.root_patch = patch.object(builder, "ROOT", self.root)
+        self.root_patch.start()
+        self.addCleanup(self.root_patch.stop)
+        self.git_patch = patch.object(builder, "run_git", side_effect=lambda *a:
+                                      subprocess.CompletedProcess(a, 0, b"", b""))
+        self.git_patch.start()
+        self.addCleanup(self.git_patch.stop)
+
+    def test_empty_destination_allowed_nonempty_preserved(self):
+        out = self.root / "build" / "en"
+        self.assertEqual(builder.safe_destination(out, []), out)
+        out.mkdir(parents=True)
+        self.assertEqual(builder.safe_destination(out, []), out)
+        sentinel = out / "keep.txt"
+        sentinel.write_text("keep")
+        with self.assertRaises(builder.BuildError):
+            builder.safe_destination(out, [])
+        self.assertEqual(sentinel.read_text(), "keep")
+
+    def test_source_overlap_root_escape_and_metadata_rejected(self):
+        for out, inputs in ((self.root, []), (self.root.parent / "outside", []),
+                            (self.root / ".git" / "out", []),
+                            (self.root / "source", [self.root / "source" / "input.nes"])):
+            with self.subTest(out=out), self.assertRaises(builder.BuildError):
+                builder.safe_destination(out, inputs)
+
+    def test_unignored_or_tracked_rejected(self):
+        out = self.root / "releases" / "new"
+        with patch.object(builder, "run_git", return_value=subprocess.CompletedProcess([], 1, b"", b"")):
+            with self.assertRaises(builder.BuildError):
+                builder.safe_destination(out, [])
+        with patch.object(builder, "run_git", return_value=subprocess.CompletedProcess([], 0, b"tracked\0", b"")):
+            with self.assertRaises(builder.BuildError):
+                builder.safe_destination(out, [])
+        with patch.object(builder, "run_git", side_effect=lambda *a:
+                          subprocess.CompletedProcess(a, int(a[0] == "check-ignore"), b"", b"")):
+            with self.assertRaisesRegex(builder.BuildError, "must be ignored"):
+                builder.safe_destination(out, [])
+
+    def test_staging_directory_must_be_ignored(self):
+        replies = [subprocess.CompletedProcess([], code, b"", b"") for code in (0, 0, 1)]
+        with patch.object(builder, "run_git", side_effect=replies):
+            with self.assertRaisesRegex(builder.BuildError, "temporary build"):
+                builder.safe_destination(self.root / "outputs", [])
+
+    def test_existing_file_destination_is_preserved(self):
+        target = self.root / "output"
+        target.write_text("source")
+        with self.assertRaises(builder.BuildError):
+            builder.safe_destination(target, [])
+        self.assertEqual(target.read_text(), "source")
+
+    def test_link_rejected(self):
+        link = self.root / "link"
+        try:
+            link.symlink_to(self.root, target_is_directory=True)
+        except OSError:
+            self.skipTest("Creating symlinks is not permitted")
+        with self.assertRaises(builder.BuildError):
+            builder.safe_destination(link / "output", [])
+
+
+@unittest.skipUnless(all(p.is_file() for p in builder.DEFAULT_ROMS.values()),
+                     "Optional integration requires all three local source ROMs")
+class LocalIntegrationTests(unittest.TestCase):
+    def test_edited_catalog_changes_output_and_failed_build_does_not_publish(self):
+        parent = builder.ROOT / "build"
+        parent.mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(prefix="en-edited-test-", dir=parent) as temporary:
+            work = Path(temporary)
+            baseline_args = builder.build_parser().parse_args(["build", "--output-dir", str(work / "baseline")])
+            baseline = builder.build(baseline_args)
+            rows = builder.read_rows(builder.DATA_INPUTS["catalogue"])
+            row = next(row for row in rows if row["stable_key"] == "MAIN:0x037BEF")
+            choices = ("It's pitch-dark. I wish I had Flash!", "It's pitch-dark. I wish I knew Flash!")
+            row["english_v2"] = next(text for text in choices if text != row["english_v2"])
+            edited = work / "catalog.csv"
+            write_rows(edited, rows)
+            with patch.dict(builder.DATA_INPUTS, {"catalogue": edited}):
+                args = builder.build_parser().parse_args(["build", "--output-dir", str(work / "edited")])
+                report = builder.build(args)
+                self.assertNotEqual(report["outputs"], baseline["outputs"])
+                self.assertEqual(report["checks"]["pointers"]["pointer_records"], 1912)
+                args.output_dir = work / "failed-core"
+                with patch.object(builder, "build_core", side_effect=builder.BuildError("injected failure")):
+                    with self.assertRaisesRegex(builder.BuildError, "injected failure"):
+                        builder.build(args)
+                self.assertFalse(args.output_dir.exists())
+                self.assertEqual(list(work.glob(".en-build-*")), [])
+
+    def test_normal_build_is_deterministic_and_preserves_inputs(self):
+        parent = builder.ROOT / "build"
+        parent.mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(prefix="en-builder-test-", dir=parent) as temporary:
+            work = Path(temporary)
+            before = builder.input_records(list(builder.DEFAULT_ROMS.values()))
+            reports = []
+            for number in (1, 2):
+                output = work / str(number)
+                argv = ["build", "--output-dir", str(output)]
+                report = builder.build(builder.build_parser().parse_args(argv))
+                reports.append(report)
+                for name in (builder.ROM_FILENAME, builder.IPS_FILENAME):
+                    self.assertEqual(report["outputs"][name]["sha256"], builder.sha256((output / name).read_bytes()))
+                self.assertEqual(report["checks"]["pointers"]["pointer_records"], 1912)
+                self.assertEqual(report["checks"]["move_labels"], 114)
+                self.assertEqual(report["runtime_validation"], "NOT RUN")
+                self.assertEqual(json.loads((output / builder.REPORT_FILENAME).read_text(encoding="utf-8")), report)
+                with self.assertRaises(builder.BuildError):
+                    builder.build(builder.build_parser().parse_args(argv))
+            self.assertEqual(reports[0], reports[1])
+            self.assertEqual(reports[0]["release_verification"], "NOT REQUESTED")
+            self.assertEqual(reports[1]["release_verification"], "NOT REQUESTED")
+            self.assertEqual(before, builder.input_records(list(builder.DEFAULT_ROMS.values())))
+
+
+@unittest.skipUnless(os.environ.get("NJ046_VERIFY_RELEASE") == "1"
+                     and all(p.is_file() for p in builder.DEFAULT_ROMS.values()),
+                     "Exact release test requires NJ046_VERIFY_RELEASE=1 and all three source ROMs")
+class ExactReleaseIntegrationTests(unittest.TestCase):
+    def test_published_release_rom_and_ips(self):
+        parent = builder.ROOT / "build"
+        parent.mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(prefix="en-release-test-", dir=parent) as temporary:
+            output = Path(temporary) / "release"
+            args = builder.build_parser().parse_args(["build", "--verify-release", "--output-dir", str(output)])
+            report = builder.build(args)
+            self.assertEqual(report["outputs"][builder.ROM_FILENAME]["sha256"], builder.RELEASE_ROM_SHA256)
+            self.assertEqual(report["outputs"][builder.IPS_FILENAME]["sha256"], builder.RELEASE_IPS_SHA256)
+            self.assertEqual(report["release_verification"], "PASS")
+            published = builder.ROOT / "releases" / "en" / "2.0.2" / "Pokemon_Yellow_NJ046_EN_v2.0.2.ips"
+            self.assertEqual((output / builder.IPS_FILENAME).read_bytes(), published.read_bytes())
 
 
 if __name__ == "__main__":
