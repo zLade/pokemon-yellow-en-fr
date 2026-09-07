@@ -1,36 +1,26 @@
-# Pokémon Yellow NES — English & Français
+# Pokémon Yellow NES — English & French
 
-Traductions anglaise et française de **Lei Dian Huang Bi Ka Qiu Chuan Shuo
-(NJ046)**, un jeu non officiel pour Famicom utilisant le mapper 163.
+English and French translations of **Lei Dian Huang Bi Ka Qiu Chuan Shuo
+(NJ046)**, an unofficial Famicom game using mapper 163.
 
-English and French translations of the unofficial Famicom game NJ046.
+## Downloads
 
-## Téléchargements / Downloads
-
-| Version | Patch et instructions | Sources |
+| Version | Patch and instructions | Source code |
 |---|---|---|
-| Français 2.0.11 | [Release FR](https://github.com/zLade/pokemon-yellow-en-fr/releases/tag/fr-v2.0.11) | [Branche fr](https://github.com/zLade/pokemon-yellow-en-fr/tree/fr) |
-| English 2.0.2 | [Release EN](https://github.com/zLade/pokemon-yellow-en-fr/releases/tag/en-v2.0.2) | [Branch en](https://github.com/zLade/pokemon-yellow-en-fr/tree/en) |
-
-Les releases contiennent les patchs IPS, les instructions et les sommes de
-contrôle. Aucune ROM complète n'est distribuée. Chaque utilisateur doit
-fournir sa ROM d'origine correspondant à l'empreinte indiquée dans la release.
+| French 2.0.11 | [French release](https://github.com/zLade/pokemon-yellow-en-fr/releases/tag/fr-v2.0.11) | [fr branch](https://github.com/zLade/pokemon-yellow-en-fr/tree/fr) |
+| English 2.0.2 | [English release](https://github.com/zLade/pokemon-yellow-en-fr/releases/tag/en-v2.0.2) | [en branch](https://github.com/zLade/pokemon-yellow-en-fr/tree/en) |
 
 Releases contain IPS patches, instructions and checksums. No complete ROM is
-distributed. Supply your own original ROM matching the documented checksum.
+distributed. Supply your own original ROM matching the checksum documented
+in the release instructions.
 
-## Développement / Development
+## Development
 
-La branche `main` présente le projet. Les branches `fr` et `en` contiennent
-chacune les sources, outils, tests, données de traduction et documentation de
-leur version. Consultez leur README pour les commandes de validation et de
-construction, CONTRIBUTING pour contribuer et NOTICE pour les éléments tiers.
-
-The `main` branch is the project overview. Select `fr` or `en` for the
+The `main` branch provides this project overview. Select `fr` or `en` for the
 corresponding source code, tools, tests, translation data and documentation.
-Build instructions are in each branch's README.
+Each branch's README explains how to build and validate that version.
+See CONTRIBUTING for contribution guidelines and NOTICE for third-party scope.
 
-Le projet n'est affilié ni à Nintendo, ni à Game Freak, ni à The Pokémon
-Company. Les noms, personnages et autres éléments tiers appartiennent à leurs
-ayants droit respectifs. Les crédits sont conservés dans les versions du jeu
-et leur documentation.
+The project is not affiliated with Nintendo, Game Freak or The Pokémon
+Company. Names, characters and other third-party material belong to their
+respective owners. Credits are retained in the game releases and documentation.
