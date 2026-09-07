@@ -80,9 +80,9 @@ def _source_calls(data: bytes, path: Path) -> dict[int, SourceCall]:
         if not isinstance(offset, int) or not isinstance(text, str):
             continue
         if node.end_lineno is None or node.end_col_offset is None:
-            raise ValueError(f"{path}:{node.lineno}: position AST incomplète")
+            raise ValueError(f"{path}:{node.lineno}: incomplete AST position")
         if offset in calls:
-            raise ValueError(f"offset source en double: 0x{offset:06X}")
+            raise ValueError(f"duplicate source offset: 0x{offset:06X}")
         calls[offset] = SourceCall(
             offset=offset,
             start=line_starts[node.lineno - 1] + node.col_offset,
@@ -181,13 +181,13 @@ def canonicalized_source(
     effective_entries = parse_patch_entries(path)
     if len(raw_entries) != EXPECTED_ENTRY_COUNT:
         raise ValueError(
-            f"{len(raw_entries)} entrées source, "
-            f"{EXPECTED_ENTRY_COUNT} attendues"
+            f"{len(raw_entries)} source entries, "
+            f"{EXPECTED_ENTRY_COUNT} expected"
         )
     if len(effective_entries) != EXPECTED_ENTRY_COUNT:
         raise ValueError(
-            f"{len(effective_entries)} entrées effectives, "
-            f"{EXPECTED_ENTRY_COUNT} attendues"
+            f"{len(effective_entries)} effective entries, "
+            f"{EXPECTED_ENTRY_COUNT} expected"
         )
     raw_by_offset = {entry.offset: entry for entry in raw_entries}
     effective_by_offset = {entry.offset: entry for entry in effective_entries}
@@ -197,12 +197,12 @@ def canonicalized_source(
         or len(source_calls) != EXPECTED_ENTRY_COUNT
     ):
         raise ValueError(
-            f"les {EXPECTED_ENTRY_COUNT} offsets doivent être uniques"
+            f"the {EXPECTED_ENTRY_COUNT} offsets must be unique"
         )
     if not (
         set(raw_by_offset) == set(effective_by_offset) == set(source_calls)
     ):
-        raise ValueError("les ensembles d'offsets source/effectifs divergent")
+        raise ValueError("source/effective offset sets differ")
 
     report = audit(path)
     summary = report["summary"]
@@ -212,7 +212,7 @@ def canonicalized_source(
     }
     if ambiguous != EXPECTED_AMBIGUOUS_OFFSETS:
         raise ValueError(
-            "ambiguïtés inattendues: "
+            "unexpected ambiguities: "
             + ", ".join(f"0x{offset:06X}" for offset in sorted(ambiguous))
         )
 
@@ -220,7 +220,7 @@ def canonicalized_source(
     for record in report["records"]:
         if record["encoded_bytes_before"] != record["encoded_bytes_after"]:
             raise ValueError(
-                f"{record['offset_hex']}: correction non isométrique"
+                f"{record['offset_hex']}: correction changes encoded length"
             )
         if record["effective_text_before"] != record["corrected_text"]:
             corrections[int(record["offset"])] = str(
@@ -328,11 +328,11 @@ def canonicalized_source(
             and desired_layout != raw.layout
         ):
             raise ValueError(
-                f"0x{offset:06X}: changement de layout non autorisé"
+                f"0x{offset:06X}: unauthorized layout change"
             )
         if raw.layout == "pokedex_13x4" and desired_layout != raw.layout:
             raise ValueError(
-                f"0x{offset:06X}: layout Pokédex modifié"
+                f"0x{offset:06X}: Pokédex layout changed"
             )
 
         rendered = _render_call(
@@ -356,7 +356,7 @@ def canonicalized_source(
 
     updated_calls = _source_calls(updated, path)
     if set(updated_calls) != set(source_calls):
-        raise ValueError("la réécriture a modifié les offsets")
+        raise ValueError("the rewrite changed the offsets")
 
     return updated, {
         "entries": len(raw_entries),
@@ -371,13 +371,13 @@ def canonicalized_source(
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Canonise les accents et dialogues effectifs de script.py."
+        description="Canonicalize accents and effective dialogues in script.py."
     )
     parser.add_argument("--script", default=PATCH_SCRIPT)
     parser.add_argument(
         "--write",
         action="store_true",
-        help="écrit la source; sans cette option, effectue un contrôle à blanc",
+        help="write the source; otherwise perform a dry run",
     )
     args = parser.parse_args()
 
@@ -388,24 +388,24 @@ def main() -> int:
     original = path.read_bytes()
     changed = updated != original
     print(
-        "Canonisation accents/dialogues: "
-        f"{summary['entries']} entrées, "
-        f"{summary['accent_rewrites']} corrections accentuelles, "
-        f"{summary['dialogue_rewrites']} dialogues rendus explicites, "
-        f"{summary['field_dialogue_rewrites']} dialogues terrain classés, "
-        f"{summary['field_padding_rewrites']} préfixes terrain retirés, "
-        f"{summary['readability_rewrites']} découpages rendus lisibles, "
-        f"{summary['rewritten_calls']} appels réécrits"
+        "Accent/dialogue canonicalization: "
+        f"{summary['entries']} entries, "
+        f"{summary['accent_rewrites']} accent corrections, "
+        f"{summary['dialogue_rewrites']} dialogues made explicit, "
+        f"{summary['field_dialogue_rewrites']} classified field dialogues, "
+        f"{summary['field_padding_rewrites']} field prefixes removed, "
+        f"{summary['readability_rewrites']} readable text splits, "
+        f"{summary['rewritten_calls']} rewritten calls"
     )
     if args.write and changed:
         path.write_bytes(updated)
-        print(f"Source mise à jour: {path}")
+        print(f"Source updated: {path}")
     elif args.write:
-        print("Source déjà canonique")
+        print("Source already canonical")
     else:
         print(
-            "Contrôle à blanc: "
-            + ("des changements sont requis" if changed else "aucun changement")
+            "Dry run: "
+            + ("changes required" if changed else "no changes")
         )
     return 0
 

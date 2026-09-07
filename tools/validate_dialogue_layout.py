@@ -63,27 +63,27 @@ from tools.french_font import encode_game_text  # noqa: E402
 # that renderer.  Keeping the list exact makes any new unclassified candidate
 # fail validation instead of silently escaping the dialogue audit.
 NON_DIALOGUE_BOUNDARY_EXEMPTIONS = {
-    0x030392: "message_combat",
-    0x0304C2: "message_combat",
-    0x0304CF: "message_combat",
-    0x0304DB: "message_combat",
-    0x0304F1: "message_combat",
-    0x0304FB: "message_combat",
-    0x030505: "message_combat",
-    0x03050F: "message_combat",
-    0x030519: "message_combat",
-    0x030541: "message_combat",
-    0x030555: "message_combat",
-    0x0306FE: "message_combat",
-    0x030744: "message_combat",
-    0x0307B9: "message_combat",
-    0x0307C4: "message_combat",
-    0x0307CF: "message_combat",
-    0x031AE8: "interface_objet",
-    0x031B29: "interface_objet",
-    0x031B54: "interface_objet",
-    0x031B67: "interface_objet",
-    0x031B7A: "interface_objet",
+    0x030392: "battle_message",
+    0x0304C2: "battle_message",
+    0x0304CF: "battle_message",
+    0x0304DB: "battle_message",
+    0x0304F1: "battle_message",
+    0x0304FB: "battle_message",
+    0x030505: "battle_message",
+    0x03050F: "battle_message",
+    0x030519: "battle_message",
+    0x030541: "battle_message",
+    0x030555: "battle_message",
+    0x0306FE: "battle_message",
+    0x030744: "battle_message",
+    0x0307B9: "battle_message",
+    0x0307C4: "battle_message",
+    0x0307CF: "battle_message",
+    0x031AE8: "item_interface",
+    0x031B29: "item_interface",
+    0x031B54: "item_interface",
+    0x031B67: "item_interface",
+    0x031B7A: "item_interface",
 }
 
 INTRO_DIALOGUE_OFFSETS = frozenset(
@@ -115,7 +115,7 @@ def validate_live_pointer_ownership(
     errors: list[str] = []
     original = read_bytes(TRANSLATION_BASE_ROM)
     if sha256(original) != TRANSLATION_BASE_SHA256:
-        return {}, ["ROM anglaise canonique absente ou modifiée"]
+        return {}, ["canonical English ROM missing or modified"]
 
     glyph_records = verified_all_graphical_text_records(original)
     glyph_by_start = structured_glyph_record_map(glyph_records)
@@ -159,7 +159,7 @@ def validate_live_pointer_ownership(
     )
     if skipped_verified:
         errors.append(
-            "conflit de pointeurs vérifiés: "
+            "verified pointer conflict: "
             + repr(skipped_verified[:5])
         )
     field_pointer_entries = verified_field_dialogue_pointer_entries(
@@ -171,7 +171,7 @@ def validate_live_pointer_ownership(
     )
     if skipped_field:
         errors.append(
-            "conflit de pointeurs terrain vérifiés: "
+            "verified field pointer conflict: "
             + repr(skipped_field[:5])
         )
     pointer_entries = remove_verified_non_dialogue_pointer_refs(
@@ -195,18 +195,18 @@ def validate_live_pointer_ownership(
         != VERIFIED_FIELD_DIALOGUE_POINTER_SLOT_COUNT
     ):
         errors.append(
-            f"{field_pointer_slots} slots terrain après redirection, "
-            f"{VERIFIED_FIELD_DIALOGUE_POINTER_SLOT_COUNT} attendus"
+            f"{field_pointer_slots} field slots after redirection, "
+            f"{VERIFIED_FIELD_DIALOGUE_POINTER_SLOT_COUNT} expected"
         )
     if (
         len(field_pointer_entries)
         != VERIFIED_FIELD_DIALOGUE_TARGET_COUNT_AFTER_REDIRECTS
     ):
         errors.append(
-            f"{len(field_pointer_entries)} cibles terrain après "
+            f"{len(field_pointer_entries)} field targets after "
             f"redirection, "
             f"{VERIFIED_FIELD_DIALOGUE_TARGET_COUNT_AFTER_REDIRECTS} "
-            "attendues"
+            "expected"
         )
 
     row_pointer_refs = assign_pointer_targets_to_rows(
@@ -245,8 +245,8 @@ def validate_live_pointer_ownership(
             field_owner_rows.add(row.offset)
             if row.layout != DIALOGUE_LAYOUT:
                 errors.append(
-                    f"0x{row.offset:06X}: propriétaire de la cible terrain "
-                    f"0x{target:06X} sans layout {DIALOGUE_LAYOUT}"
+                    f"0x{row.offset:06X}: owner of field target "
+                    f"0x{target:06X} without layout {DIALOGUE_LAYOUT}"
                 )
 
         if row.layout != DIALOGUE_LAYOUT:
@@ -266,7 +266,7 @@ def validate_live_pointer_ownership(
                 for target, refs in targets
             ):
                 errors.append(
-                    f"0x{row.offset:06X}: sous-message sans pointeur exact"
+                    f"0x{row.offset:06X}: submessage without exact pointer"
                 )
 
         source_prefix = reviewed_text_prefix_len(
@@ -282,7 +282,7 @@ def validate_live_pointer_ownership(
                 safe_prefix_targets += 1
                 continue
             errors.append(
-                f"0x{row.offset:06X}: pointeur intérieur non déclaré "
+                f"0x{row.offset:06X}: undeclared interior pointer "
                 f"0x{target:06X} (+{target - row.offset})"
             )
 
@@ -304,16 +304,16 @@ def validate_live_pointer_ownership(
     )
     for target in unowned_field_targets:
         errors.append(
-            f"cible terrain sans ligne de traduction: 0x{target:06X}"
+            f"field target without translation row: 0x{target:06X}"
         )
     for target, owners in sorted(multiply_owned_field_targets.items()):
         errors.append(
-            f"cible terrain 0x{target:06X} possédée par "
+            f"field target 0x{target:06X} owned by "
             + ", ".join(f"0x{owner:06X}" for owner in owners)
         )
     for offset in non_field_common_rows:
         errors.append(
-            f"0x{offset:06X}: layout terrain sans cible terrain vérifiée"
+            f"0x{offset:06X}: field layout without verified field target"
         )
 
     return {
@@ -353,11 +353,11 @@ def validate(
         for entry in migrated_entries
     }
     if len(raw_by_offset) != len(raw_entries):
-        errors.append("offset(s) en double dans le script brut")
+        errors.append("duplicate offset(s) in raw script")
     if len(migrated_by_offset) != len(migrated_entries):
-        errors.append("offset(s) en double après migration")
+        errors.append("duplicate offset(s) after migration")
     if set(raw_by_offset) != set(migrated_by_offset):
-        errors.append("la migration a changé l'ensemble des offsets")
+        errors.append("migration changed the set of offsets")
 
     intro_layout_offsets = {
         entry.offset
@@ -371,7 +371,7 @@ def validate(
     }
     if intro_layout_offsets != INTRO_DIALOGUE_OFFSETS:
         errors.append(
-            "ensemble des dialogues d'introduction inattendu: "
+            "unexpected introduction dialogue set: "
             + repr(
                 {
                     "missing": sorted(
@@ -385,7 +385,7 @@ def validate(
         )
     if raw_layout_offsets != EXPECTED_RAW_LAYOUT_OFFSETS:
         errors.append(
-            "ensemble des layouts raw inattendu: "
+            "unexpected raw layout set: "
             + repr(
                 {
                     "missing": sorted(
@@ -404,7 +404,7 @@ def validate(
     )
     for offset in missing_inventory_offsets:
         errors.append(
-            f"dialogue inventorié absent du script: 0x{offset:06X}"
+            f"inventoried dialogue missing from script: 0x{offset:06X}"
         )
 
     explicit_revisions = 0
@@ -422,8 +422,8 @@ def validate(
             RAW_LAYOUT,
         }:
             errors.append(
-                f"0x{offset:06X}: inventaire historique sans "
-                "classification de renderer"
+                f"0x{offset:06X}: historical inventory without "
+                "renderer classification"
             )
             continue
         if entry.layout == RAW_LAYOUT:
@@ -435,15 +435,15 @@ def validate(
             expected = str(record["semantic_text_proposed"]).lstrip("0")
             if entry.text != expected:
                 errors.append(
-                    f"0x{offset:06X}: texte sémantique différent "
-                    "de l'inventaire"
+                    f"0x{offset:06X}: semantic text differs "
+                    "from the inventory"
                 )
         for repair in record["artificial_hyphenations"]:
             source_form = str(repair["source_form"])
             reconstruction = str(repair["semantic_reconstruction"])
             if source_form in entry.text:
                 errors.append(
-                    f"0x{offset:06X}: césure artificielle restante "
+                    f"0x{offset:06X}: remaining artificial hyphenation "
                     f"{source_form!r}"
                 )
             if (
@@ -451,7 +451,7 @@ def validate(
                 and reconstruction not in entry.text
             ):
                 errors.append(
-                    f"0x{offset:06X}: reconstruction absente "
+                    f"0x{offset:06X}: missing reconstruction "
                     f"{reconstruction!r}"
                 )
             artificial_hyphenations_removed += 1
@@ -482,7 +482,7 @@ def validate(
             continue
         if encoded != b"".join(lines):
             errors.append(
-                f"0x{entry.offset:06X}: divergence wrapper/lignes"
+                f"0x{entry.offset:06X}: wrapper/lines mismatch"
             )
         semantic_text = b" ".join(
             encode_game_text(unit)
@@ -495,20 +495,20 @@ def validate(
         if visible_reflow != semantic_text:
             word_split_boundaries += 1
             errors.append(
-                f"0x{entry.offset:06X}: césure ou perte de mot au reflow"
+                f"0x{entry.offset:06X}: word split or loss during reflow"
             )
         for line_index, line in enumerate(lines):
             width = dialogue_line_width(line_index, entry.layout)
             is_last = line_index == len(lines) - 1
             if len(line) > width:
                 errors.append(
-                    f"0x{entry.offset:06X}: ligne {line_index + 1} "
-                    f"trop longue ({len(line)} > {width})"
+                    f"0x{entry.offset:06X}: line {line_index + 1} "
+                    f"too long ({len(line)} > {width})"
                 )
             if not is_last and len(line) != width:
                 errors.append(
-                    f"0x{entry.offset:06X}: ligne complète "
-                    f"{line_index + 1} non paddée"
+                    f"0x{entry.offset:06X}: full line "
+                    f"{line_index + 1} not padded"
                 )
         physical_lines += len(lines)
         # The ordinary renderer waits after every physical 19-column slice.
@@ -542,12 +542,12 @@ def validate(
     )
     for offset in unknown_candidates:
         errors.append(
-            f"0x{offset:06X}: frontière lexicale non marquée "
+            f"0x{offset:06X}: unmarked lexical boundary "
             f"{unmarked_candidates[offset]!r}"
         )
     for offset in stale_exemptions:
         errors.append(
-            f"0x{offset:06X}: exemption non-dialogue devenue obsolète"
+            f"0x{offset:06X}: stale non-dialogue exemption"
         )
 
     pointer_report, pointer_errors = validate_live_pointer_ownership(
@@ -603,7 +603,7 @@ def validate(
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "Valide les dialogues terrain 19/19 et introduction 17/19."
+            "Validate 19/19 field and 17/19 introduction dialogues."
         )
     )
     parser.add_argument("--script", default=PATCH_SCRIPT)
@@ -625,38 +625,38 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    print("Validation mise en page dialogues 19/19 + intro 17/19")
+    print("Dialogue layout validation 19/19 + intro 17/19")
     print(
-        "- Dialogues terrain 19/19 : "
+        "- Field dialogues 19/19 : "
         f"{report['common_19x19_dialogue_rows']}"
     )
     print(
-        "- Dialogues d'introduction 17/19 : "
+        "- Introduction dialogues 17/19 : "
         f"{report['intro_17x19_dialogue_rows']}"
     )
     print(
-        "- Frontières fautives de l'inventaire historique : "
+        "- Faulty boundaries in the historical inventory : "
         f"{report['historical_inventory_faulty_boundaries']}"
     )
     print(
-        "- Frontières légitimes de l'inventaire historique : "
+        "- Legitimate boundaries in the historical inventory : "
         f"{report['historical_inventory_legitimate_boundaries']}"
     )
     print(
-        "- Césures artificielles retirées : "
+        "- Artificial hyphenations removed : "
         f"{report['removed_artificial_hyphenations']}"
     )
     print(
-        "- Césures de mot après reflow : "
+        "- Word splits after reflow : "
         f"{report['word_split_boundaries']}"
     )
-    print(f"- Rapport : {output}")
-    print(f"- Résultat : {report['result']}")
+    print(f"- Report: {output}")
+    print(f"- Result: {report['result']}")
     if errors:
         for error in errors[:40]:
             print(f"  {error}")
         if len(errors) > 40:
-            print(f"  ... et {len(errors) - 40} de plus")
+            print(f"  ... and {len(errors) - 40} more")
     return 1 if errors else 0
 
 

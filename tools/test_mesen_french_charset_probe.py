@@ -46,10 +46,10 @@ def lua_hex_constant(source: str, name: str) -> str:
         flags=re.DOTALL,
     )
     if match is None:
-        raise AssertionError(f"constante Lua absente : {name}")
+        raise AssertionError(f"Missing Lua constant : {name}")
     chunks = re.findall(r'"([0-9a-fA-F]+)"', match.group(1))
     if not chunks:
-        raise AssertionError(f"constante Lua hexadécimale vide : {name}")
+        raise AssertionError(f"Empty hexadecimal Lua constant: {name}")
     return "".join(chunks).lower()
 
 

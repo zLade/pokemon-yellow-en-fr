@@ -57,7 +57,7 @@ def _literal_records(data: bytes, path: Path) -> dict[int, tuple[str, str]]:
             if keyword.arg == "layout":
                 layout = ast.literal_eval(keyword.value)
         if offset in records:
-            raise ValueError(f"offset en double: 0x{offset:06X}")
+            raise ValueError(f"duplicate offset: 0x{offset:06X}")
         records[offset] = (text, layout)
     return records
 
@@ -86,13 +86,13 @@ def migrated_source(
     )
     raw_by_offset = {entry.offset: entry for entry in raw_entries}
     if len(raw_by_offset) != len(raw_entries):
-        raise ValueError("le script contient des offsets en double")
+        raise ValueError("the script contains duplicate offsets")
 
     report = build_report(rom, script, csv_file)
     records = report["records"]
     if len(records) != KANTO_COUNT:
         raise ValueError(
-            f"{len(records)} descriptions accessibles, {KANTO_COUNT} attendues"
+            f"{len(records)} accessible descriptions, {KANTO_COUNT} expected"
         )
 
     target_offsets: set[int] = set()
@@ -104,7 +104,7 @@ def migrated_source(
         offset = int(str(record["description_offset"]), 16)
         if offset in target_offsets:
             raise ValueError(
-                f"pointeur Pokédex accessible en double: 0x{offset:06X}"
+                f"duplicate accessible Pokédex pointer: 0x{offset:06X}"
             )
         target_offsets.add(offset)
         desired = str(record["proposed_fr"])
@@ -114,11 +114,11 @@ def migrated_source(
         call = source_calls.get(offset)
         if current is None or call is None:
             raise ValueError(
-                f"description Pokédex absente à 0x{offset:06X}"
+                f"Pokédex description missing at 0x{offset:06X}"
             )
         if current.text != str(record["current_fr"]):
             raise ValueError(
-                f"rapport périmé à 0x{offset:06X}: texte source divergent"
+                f"stale report at 0x{offset:06X}: source text mismatch"
             )
 
         needs_content = current.text != desired
@@ -136,7 +136,7 @@ def migrated_source(
 
     if len(target_offsets) != KANTO_COUNT:
         raise ValueError(
-            f"{len(target_offsets)} offsets uniques, {KANTO_COUNT} attendus"
+            f"{len(target_offsets)} unique offsets, {KANTO_COUNT} expected"
         )
 
     updated = original
@@ -148,7 +148,7 @@ def migrated_source(
         text, layout = updated_records[offset]
         if layout != POKEDEX_LAYOUT:
             raise ValueError(
-                f"layout final absent à 0x{offset:06X}"
+                f"final layout missing at 0x{offset:06X}"
             )
         wrap_pokedex_lines(text)
 
@@ -162,7 +162,7 @@ def migrated_source(
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Migre les 151 descriptions Kanto au format Pokédex 13×4."
+        description="Migrate the 151 Kanto descriptions to the Pokédex 13×4 format."
     )
     parser.add_argument("--script", default=PATCH_SCRIPT)
     parser.add_argument("--rom", default=str(DEFAULT_ROM))
@@ -170,7 +170,7 @@ def main() -> int:
     parser.add_argument(
         "--write",
         action="store_true",
-        help="écrit script.py; sans cette option, effectue un contrôle à blanc",
+        help="write script.py; without this option, perform a dry run",
     )
     args = parser.parse_args()
 
@@ -180,21 +180,21 @@ def main() -> int:
     updated, summary = migrated_source(script, args.rom, args.csv)
     changed = updated != script.read_bytes()
     print(
-        "Migration Pokédex Kanto: "
+        "Kanto Pokédex migration: "
         f"{summary['accessible_descriptions']} descriptions, "
-        f"{summary['content_changes']} contenus corrigés, "
-        f"{summary['layout_changes']} layouts ajoutés, "
-        f"{summary['rewritten_calls']} appels réécrits"
+        f"{summary['content_changes']} content corrections, "
+        f"{summary['layout_changes']} layouts added, "
+        f"{summary['rewritten_calls']} calls rewritten"
     )
     if args.write and changed:
         script.write_bytes(updated)
-        print(f"Source mise à jour: {script}")
+        print(f"Source updated: {script}")
     elif args.write:
-        print("Source déjà migrée")
+        print("Source already migrated")
     else:
         print(
-            "Contrôle à blanc: "
-            + ("des changements sont requis" if changed else "aucun changement")
+            "Dry run: "
+            + ("changes are required" if changed else "no changes")
         )
     return 0
 

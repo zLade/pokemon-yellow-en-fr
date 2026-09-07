@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tests de la réécriture AST offset→texte."""
+"""Tests for AST-based offset-to-text rewriting."""
 
 from __future__ import annotations
 

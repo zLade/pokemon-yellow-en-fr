@@ -94,62 +94,62 @@ CHINESE_DIALOGUE_POINTER_RANGES: tuple[tuple[int, int], ...] = (
 # Conservative, manually reviewed set of severe semantic divergences.  It
 # intentionally excludes merely abbreviated or stylistically adapted lines.
 REVIEWED_LARGE_DIALOGUE_DIVERGENCES: dict[int, tuple[str, str]] = {
-    937: ("semantic_replacement", "L'arrivée difficile devient un défi."),
-    949: ("semantic_replacement", "L'annonce d'un mariage disparaît."),
-    950: ("semantic_replacement", "La demande en mariage disparaît."),
-    969: ("major_omission", "Le retour chez la mère de Sacha disparaît."),
-    973: ("story_rewrite", "Mewtwo est remplacé par une nouvelle quête Rocket."),
-    981: ("story_rewrite", "La réouverture de la Ligue disparaît."),
-    1003: ("story_rewrite", "Kamiyu/Nanjing Tech disparaît."),
-    1004: ("semantic_replacement", "La confirmation de Miaouss est remplacée."),
-    1009: ("wrong_character_and_story", "Kamiyu devient Eusine."),
-    1011: ("story_rewrite", "Le voyage et le Pokédex deviennent un don."),
-    1017: ("semantic_replacement", "L'aveu de défaite devient un adieu."),
-    1018: ("semantic_replacement", "Le compliment devient une consigne."),
-    1019: ("semantic_replacement", "La menace d'appeler la police disparaît."),
-    1062: ("swapped_dialogue", "Échangé avec le dialogue scientifique suivant."),
-    1063: ("swapped_dialogue", "Échangé avec le dialogue d'élevage précédent."),
-    1066: ("broken_pointer_or_fragment", "Remplacé par un fragment puis un panneau."),
-    1077: ("wrong_ability", "Coupe est remplacé par Flash."),
-    1109: ("major_omission", "Le meurtre de la mère d'Osselait disparaît."),
-    1119: ("story_rewrite", "Kamiyu/Nanjing Tech est remplacé par Sylphe."),
-    1236: ("story_rewrite", "Le vieillard endormi devient blessé au dos."),
-    1240: ("sequence_shift", "La remise du colis devient son identification."),
-    1241: ("major_omission", "La demande du Prof. Chen disparaît."),
-    1242: ("semantic_replacement", "Régis ne parle plus de son Pokémon."),
-    1245: ("sequence_shift", "Le rêve de Chen est attribué à Régis."),
-    1269: ("sequence_shift", "Le Badge Roche devient l'usage de Flash."),
-    1270: ("sequence_shift", "L'explication du badge devient la CT35."),
-    1271: ("sequence_shift", "La réception de la CT devient sa description."),
-    1305: ("semantic_replacement", "L'invitation Rocket devient un ordre fossile."),
-    1316: ("sequence_shift", "La question de Sacha devient la devise de James."),
-    1317: ("sequence_shift", "Le début de la devise devient la fin de Miaouss."),
-    1345: ("wrong_order", "Le troisième dresseur devient le quatrième."),
-    1346: ("wrong_pointer", "La réplique devient l'obtention de Salamèche."),
-    1347: ("wrong_order", "Le quatrième dresseur devient le troisième."),
-    1348: ("wrong_pointer", "Le suivi de Sacha devient un autre dialogue."),
-    1350: ("wrong_pointer", "La victoire sur les cinq devient le départ vers Léo."),
-    1384: ("major_omission", "La collection et les 150 espèces disparaissent."),
-    1406: ("world_lore_removed", "L'origine du continent de Hoenn disparaît."),
-    1410: ("semantic_replacement", "Le confort à Hoenn devient une insulte."),
-    1411: ("world_lore_removed", "La légende de Johto disparaît."),
-    1441: ("broken_sequence", "Le massage de Sacha devient le fragment raw."),
-    1442: ("sequence_shift", "Le don de Coupe devient seulement le massage."),
-    1453: ("sequence_shift", "La CT24 devient tout le discours du Badge Foudre."),
-    1483: ("branch_inversion", "Le refus devient l'acceptation."),
-    1484: ("branch_inversion", "L'acceptation devient l'obtention."),
-    1485: ("branch_inversion", "L'obtention devient le refus."),
-    1579: ("developer_cameo_removed", "Le graphiste est remplacé."),
-    1580: ("developer_cameo_removed", "Le scénariste est remplacé."),
-    1581: ("developer_cameo_removed", "Le programmeur est remplacé."),
-    1582: ("developer_cameo_removed", "Le message du boss est remplacé."),
-    1640: ("major_omission", "L'identité et le but du chef Rocket disparaissent."),
-    1859: ("sequence_shift", "Le Badge Marais devient la CT40."),
-    1860: ("sequence_shift", "La CT40 devient sa description."),
-    1963: ("semantic_replacement", "La vengeance des Rockets licenciés disparaît."),
-    1964: ("sequence_shift", "La question de Sacha devient une défaite."),
-    1973: ("semantic_replacement", "L'agacement de Morgane devient une leçon psy."),
-    1974: ("semantic_replacement", "Le reproche devient une consigne de soin."),
+    937: ("semantic_replacement", "The difficult arrival becomes a challenge."),
+    949: ("semantic_replacement", "The wedding announcement is omitted."),
+    950: ("semantic_replacement", "The marriage proposal is omitted."),
+    969: ("major_omission", "Returning to Ash's mother is omitted."),
+    973: ("story_rewrite", "Mewtwo is replaced by a new Rocket quest."),
+    981: ("story_rewrite", "The reopening of the League is omitted."),
+    1003: ("story_rewrite", "Kamiyu/Nanjing Tech is omitted."),
+    1004: ("semantic_replacement", "Meowth's confirmation is replaced."),
+    1009: ("wrong_character_and_story", "Kamiyu becomes Eusine."),
+    1011: ("story_rewrite", "The journey and the Pokédex become a gift."),
+    1017: ("semantic_replacement", "The admission of defeat becomes a farewell."),
+    1018: ("semantic_replacement", "The compliment becomes an instruction."),
+    1019: ("semantic_replacement", "The threat to call the police is omitted."),
+    1062: ("swapped_dialogue", "Swapped with the following scientist dialogue."),
+    1063: ("swapped_dialogue", "Swapped with the preceding breeding dialogue."),
+    1066: ("broken_pointer_or_fragment", "Replaced by a fragment, then a sign."),
+    1077: ("wrong_ability", "Cut is replaced by Flash."),
+    1109: ("major_omission", "The killing of Cubone's mother is omitted."),
+    1119: ("story_rewrite", "Kamiyu/Nanjing Tech is replaced by Silph Co."),
+    1236: ("story_rewrite", "The sleeping old man instead has a back injury."),
+    1240: ("sequence_shift", "Handing over the parcel becomes identifying it."),
+    1241: ("major_omission", "Professor Oak's request is omitted."),
+    1242: ("semantic_replacement", "Gary no longer talks about his Pokémon."),
+    1245: ("sequence_shift", "Oak's dream is attributed to Gary."),
+    1269: ("sequence_shift", "The Boulder Badge becomes the use of Flash."),
+    1270: ("sequence_shift", "The badge explanation becomes TM35."),
+    1271: ("sequence_shift", "Receiving the TM becomes its description."),
+    1305: ("semantic_replacement", "The Rocket invitation becomes an order about fossils."),
+    1316: ("sequence_shift", "Ash's question becomes James's motto."),
+    1317: ("sequence_shift", "The start of the motto becomes Meowth's closing line."),
+    1345: ("wrong_order", "The third trainer becomes the fourth."),
+    1346: ("wrong_pointer", "The line becomes a message about receiving Charmander."),
+    1347: ("wrong_order", "The fourth trainer becomes the third."),
+    1348: ("wrong_pointer", "Ash's follow-up becomes another dialogue."),
+    1350: ("wrong_pointer", "Defeating all five trainers becomes leaving for Bill's house."),
+    1384: ("major_omission", "The collection and the 150 species are omitted."),
+    1406: ("world_lore_removed", "The origin in the Hoenn region is omitted."),
+    1410: ("semantic_replacement", "Comfort in Hoenn becomes an insult."),
+    1411: ("world_lore_removed", "The Johto legend is omitted."),
+    1441: ("broken_sequence", "Ash's massage becomes the raw fragment."),
+    1442: ("sequence_shift", "The gift of Cut becomes just the massage."),
+    1453: ("sequence_shift", "TM24 becomes the entire Thunder Badge speech."),
+    1483: ("branch_inversion", "Refusal becomes acceptance."),
+    1484: ("branch_inversion", "Acceptance becomes receipt."),
+    1485: ("branch_inversion", "Receipt becomes refusal."),
+    1579: ("developer_cameo_removed", "The graphic artist is replaced."),
+    1580: ("developer_cameo_removed", "The writer is replaced."),
+    1581: ("developer_cameo_removed", "The programmer is replaced."),
+    1582: ("developer_cameo_removed", "The boss's message is replaced."),
+    1640: ("major_omission", "The Rocket leader's identity and goal are omitted."),
+    1859: ("sequence_shift", "The Marsh Badge becomes TM40."),
+    1860: ("sequence_shift", "TM40 becomes its description."),
+    1963: ("semantic_replacement", "The dismissed Rockets seeking revenge are omitted."),
+    1964: ("sequence_shift", "Ash's question becomes a defeat."),
+    1973: ("semantic_replacement", "Sabrina's annoyance becomes a lesson about psychic powers."),
+    1974: ("semantic_replacement", "The reproach becomes a healing instruction."),
 }
 
 
@@ -180,7 +180,7 @@ def read_checked(path: Path, expected_hash: str, label: str) -> bytes:
     actual = sha256(data)
     if actual != expected_hash:
         raise ValueError(
-            f"{label} non canonique: {actual} au lieu de {expected_hash}"
+            f"non-canonical {label}: {actual} instead of {expected_hash}"
         )
     return data
 
@@ -201,7 +201,7 @@ def source_glyph_bitmap(rom: bytes, code: int) -> bytes:
     start = FONT_BASE_OFFSET + block * 64
     raw = rom[start:start + 64]
     if len(raw) != 64:
-        raise ValueError(f"bloc de glyphe {code} hors ROM")
+        raise ValueError(f"glyph block {code} outside ROM")
 
     plane_offset = bitplane * 8
     bitmap = bytearray()
@@ -223,7 +223,7 @@ def build_glyph_map(
     hzk16: bytes,
 ) -> dict[int, str]:
     if len(hzk16) % 32:
-        raise ValueError("taille HZK16 non multiple de 32")
+        raise ValueError("HZK16 size is not a multiple of 32")
     bitmap_to_index = {
         hzk16[offset:offset + 32]: offset // 32
         for offset in range(0, len(hzk16), 32)
@@ -239,7 +239,7 @@ def build_glyph_map(
             result[code] = hzk_character(index)
     if unresolved != set(CONTEXTUAL_GLYPH_MAP):
         raise ValueError(
-            "glyphes sans correspondance HZK16 inattendus: "
+            "unexpected glyphs without an HZK16 match: "
             f"{sorted(unresolved)}"
         )
     result.update(CONTEXTUAL_GLYPH_MAP)
@@ -259,7 +259,7 @@ def decode_source_record(
         value = data[cursor]
         if 0xB0 <= value <= 0xBF:
             if cursor + 1 >= end:
-                raise ValueError(f"code glyphique tronqué à 0x{cursor:06X}")
+                raise ValueError(f"truncated glyph code at 0x{cursor:06X}")
             code = glyph_slot(value, data[cursor + 1])
             text = glyph_map.get(code, f"<GLYPH_{code:04d}>")
             if text.startswith("<GLYPH_"):
@@ -303,8 +303,8 @@ def source_records(
     )
     if summary != expected:
         raise ValueError(
-            "inventaire chinois non canonique: "
-            f"{summary!r} au lieu de {expected!r}"
+            "non-canonical Chinese inventory: "
+            f"{summary!r} instead of {expected!r}"
         )
 
     result: list[ChineseRecord] = []
@@ -381,7 +381,7 @@ def pointer_index(
             previous = by_reference.setdefault(reference, target)
             if previous != target:
                 raise ValueError(
-                    f"pointeur 0x{reference:06X} à deux cibles"
+                    f"pointer 0x{reference:06X} has two targets"
                 )
     return by_reference
 
@@ -396,7 +396,7 @@ def chinese_owner(
         if record.start <= target <= record.end
     ]
     if len(owners) > 1:
-        raise ValueError(f"cible chinoise 0x{target:06X} ambiguë")
+        raise ValueError(f"ambiguous Chinese target 0x{target:06X}")
     return owners[0] if owners else None
 
 
@@ -632,8 +632,8 @@ def write_alignment(
                 else "unaligned_or_non_dialogue"
             )
             note = (
-                "La ROM anglaise conserve des codes graphiques; "
-                "ce texte n'est pas une chaîne anglaise lisible."
+                "The English ROM retains graphical codes; "
+                "this text is not a readable English string."
                 if english_graphical
                 else ""
             )
@@ -750,7 +750,7 @@ def write_pointer_alignment(
                         else "unresolved_alignment"
                     ),
                     "review_note": (
-                        "La cible anglaise conserve des codes graphiques."
+                        "The English target retains graphical codes."
                         if english_graphical
                         else ""
                     ),
@@ -799,7 +799,7 @@ def refs_by_target(entries: dict[int, list[int]]) -> dict[int, int]:
             previous = result.setdefault(reference, target)
             if previous != target:
                 raise ValueError(
-                    f"pointeur 0x{reference:06X} à deux cibles terrain"
+                    f"pointer 0x{reference:06X} has two field targets"
                 )
     return result
 
@@ -1054,8 +1054,8 @@ def write_dialogues_absent_from_english_and_french(
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "Extrait les textes chinois NJ046 et les aligne avec le patch "
-            "anglais canonique."
+            "Extract Chinese NJ046 text and align it with the canonical "
+            "English patch."
         )
     )
     parser.add_argument("--chinese-rom", default=CHINESE_ROM)
@@ -1099,12 +1099,12 @@ def main() -> int:
     chinese = read_checked(
         chinese_path,
         CHINESE_ROM_SHA256,
-        "ROM chinoise",
+        "Chinese ROM",
     )
     english = read_checked(
         english_path,
         TRANSLATION_BASE_SHA256,
-        "ROM anglaise",
+        "English ROM",
     )
     french = french_path.read_bytes()
     hzk16 = read_checked(hzk_path, HZK16_SHA256, "HZK16")
@@ -1208,27 +1208,27 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    print("Extraction chinois/anglais NJ046")
-    print(f"- Records chinois : {summary['chinese_records']}")
+    print("NJ046 Chinese/English extraction")
+    print(f"- Chinese records: {summary['chinese_records']}")
     print(
-        "- Occurrences glyphiques : "
+        "- Glyph occurrences: "
         f"{summary['chinese_glyph_occurrences']}"
     )
     print(
-        "- Codes Unicode résolus : "
+        "- Resolved Unicode codes: "
         f"{summary['resolved_chinese_codes']}/"
         f"{summary['unique_chinese_codes']}"
     )
     print(
-        "- Entrées anglaises alignées : "
+        "- Aligned English entries: "
         f"{summary['aligned_entries']}/"
         f"{summary['english_entries']}"
     )
     print(
-        "- Résidus graphiques anglais : "
+        "- English graphical residuals: "
         f"{summary['english_graphical_residual_entries']}"
     )
-    print(f"- Sortie : {output}")
+    print(f"- Output: {output}")
     return 0
 
 

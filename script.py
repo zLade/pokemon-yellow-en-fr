@@ -1,40 +1,40 @@
 #!/usr/bin/env python3
 """
-==========================================================
- POKEMON JAUNE (Bootleg NES NJ046) - ADAPTATION FRANCAISE
- Source maitresse des textes traduits
-==========================================================
+POKEMON YELLOW NES (NJ046) — French reference corpus.
 
-PIPELINE RECOMMANDE:
+This corpus is retained for structural comparison and French non-regression
+tests. The English build uses locales/en-US/catalog.csv, not these payloads.
+
+Reference workflow:
   python3 rom_traduction_assistant.py dump-script
   python3 rom_traduction_assistant.py build-repacked
   python3 tools/title_screen_tools.py patch-french-graphics
 
-La commande directe `python3 script.py` est volontairement bloquee: l'ancien
-patch historique a taille fixe pouvait tronquer silencieusement les textes.
-L'artefact livre doit etre construit par le pipeline repacke, puis recevoir
-les graphismes francais.
+Direct execution is disabled: the historical fixed-width writer could silently
+truncate text. Build deliverables through the repacked pipeline instead.
 
-COMMENT EDITER:
-  Chaque traduction est un appel p(0xOFFSET, "texte francais")
-  Les dialogues sémantiques peuvent déclarer layout="dialogue_19_19" :
-  le builder place alors chaque mot entier dans les lignes de 17 puis 19
-  colonnes, sans coupure entre deux bulles.
-  Les descriptions peuvent déclarer layout="pokedex_13x4" pour tenir sur
-  quatre lignes de 13 colonnes sans couper les mots.
-  - Le build repacke reloge les dialogues et met leurs pointeurs a jour.
-  - Les vrais libelles fixes doivent toujours tenir dans leur zone source.
-  - 0x0d = saut de ligne dans le jeu (separe les blocs ASCII)
-  - À Â É Î Ç à â ç è é ê î ï ô ù û ont un glyphe dédié
-  - œ/Œ restent encodés oe/OE sur deux colonnes pour préserver A-Z/a-z
-  - Les '0' en debut de chaine = octets 0x30 de padding du jeu original
-  - NE PAS modifier les offsets sauf si vous savez ce que vous faites
+Each p(0xOFFSET, "French text") call records a translation at a source offset.
+The dialogue_19_19 layout wraps whole words without splitting between pages.
+The introduction uses 17 columns on its first line, then 19 columns.
+The pokedex_13x4 layout uses four lines of thirteen columns.
+Repacking relocates dialogue and updates its pointers. Fixed labels must fit
+their source storage. Byte 0x0D separates in-game ASCII blocks.
+French accents have dedicated glyphs; ligatures use the two-column oe/OE
+fallback to preserve ASCII letters. Leading zeroes represent original 0x30
+padding. Do not change offsets without checking the pointer topology.
 
-CONTRAINTES:
-  - Respecter les largeurs de ligne visibles propres a chaque dialogue.
-  - Tous les accents français employés par la traduction sont pris en charge.
-  - Valider toute modification avec les audits, validate_repacked.py,
-    validate_mapper163.py et la suite Mesen Dendy/NTSC/PAL.
+Preserve visible line widths and validate changes with the text audits,
+validate_repacked.py, validate_mapper163.py and the Dendy/NTSC/PAL Mesen suite.
+
+
+
+
+
+
+
+
+
+
 """
 
 import os, sys
@@ -58,7 +58,7 @@ ROM_OUTPUT = os.path.join(SCRIPT_DIR, "Pokemon_Jaune_FR.nes")
 IPS_OUTPUT = os.path.join(SCRIPT_DIR, "Pokemon_Jaune_FR.ips")
 
 # ============================================================
-# MOTEUR DE PATCH (ne pas modifier)
+# PATCH ENGINE (do not edit)
 # ============================================================
 if not os.path.exists(ROM_INPUT):
     print(f"ERREUR: ROM introuvable: {ROM_INPUT}")
@@ -73,15 +73,15 @@ patch_count = 0
 warnings = []
 
 def p(offset, fr_text, layout=""):
-    """Patch le texte a l'offset donne.
-    Lit la longueur originale depuis la ROM (ASCII contigu),
-    puis ecrit le texte FR padde/tronque a cette longueur.
-
-    ``layout`` est lu par rom_traduction_assistant.py. Le chemin historique
-    direct reste bloqué et ne doit jamais servir à produire la ROM livrée.
     """
+Historical fixed-width writer for the text at the given offset.
+Reads the original contiguous ASCII length and pads or truncates French text.
+The translation assistant reads the layout argument. Direct execution remains
+disabled and must never be used to produce a release ROM.
+
+"""
     global patch_count
-    # Mesure la longueur du texte ASCII original a cet offset
+    # Measure the original ASCII text length at this offset
     length = 0
     while offset + length < len(rom) and 0x20 <= rom[offset + length] <= 0x7E:
         length += 1
@@ -92,7 +92,7 @@ def p(offset, fr_text, layout=""):
     if len(fr) > length:
         warnings.append(f"TRONQUE 0x{offset:06X}: '{fr_text[:30]}...' ({len(fr)} > {length})")
         fr = fr[:length]
-    fr = fr.ljust(length)  # Padding avec espaces
+    fr = fr.ljust(length)  # Pad with spaces
     rom[offset:offset+length] = fr
     patch_count += 1
 
@@ -100,15 +100,15 @@ def p(offset, fr_text, layout=""):
 # ############################################################
 # ############################################################
 # ##                                                        ##
-# ##          DEBUT DES TRADUCTIONS                         ##
-# ##    (editez les textes FR ci-dessous a votre guise)     ##
+# ##          TRANSLATION CORPUS                           ##
+# ##    (French reference text for non-regression tests)   ##
 # ##                                                        ##
 # ############################################################
 # ############################################################
 
 
 # ============================================================
-# 1. TEXTE DE COMBAT / SYSTEME
+# 1. BATTLE / SYSTEM TEXT
 # ============================================================
 
 p(0x0301D7, "0000000000Apparaît!")
@@ -160,7 +160,7 @@ p(0x030ADB, "Battu    ")
 p(0x030AE5, "Util. Lutte!  ")
 
 # ============================================================
-# 2. MENU DE COMBAT
+# 2. BATTLE MENU
 # ============================================================
 
 p(0x030588, "Att. ")      # Fight
@@ -169,7 +169,7 @@ p(0x030594, "PKMN")       # PKMN
 p(0x030599, " Fu")        # Run
 
 # ============================================================
-# 3. INTERFACE COMBAT
+# 3. BATTLE INTERFACE
 # ============================================================
 
 p(0x0305E8, "Envoi ")
@@ -185,11 +185,11 @@ p(0x030765, "Perdu")         # Lost
 p(0x03076B, "00Dresseur")    # Trainer
 
 # ============================================================
-# 4. BOITES PC
+# 4. PC BOXES
 # ============================================================
 
 p(0x0307E1, "Bte 1")
-p(0x0307E9, "Bte 2")   # Note: offset dans le bloc "00Box 2"
+p(0x0307E9, "Bte 2")   # Note: offset within the "00Box 2" block
 p(0x0307F1, "Bte 3")
 p(0x0307F9, "Bte 4")
 p(0x030801, "Bte 5")
@@ -198,7 +198,7 @@ p(0x030811, "Bte 7")
 p(0x030819, "Bte 8")
 
 # ============================================================
-# 5. BOUTIQUE / COMMERCE
+# 5. SHOP / TRADING
 # ============================================================
 
 p(0x0308D3, "0Boutique   ")      # Item Shop
@@ -213,11 +213,11 @@ p(0x0381C1, "Karaté  Taekwondo", layout="dialogue_19_19")   # Left Right
 p(0x0381AF, "Oui     Non", layout="dialogue_19_19")  # Yes No
 
 # ============================================================
-# 6. INTRO PROF CHEN
+# 6. PROFESSOR OAK INTRODUCTION
 # ============================================================
 
-# L'introduction utilise un renderer distinct : 17 colonnes sur sa toute
-# première ligne, puis 19. Les dialogues du jeu utilisent 19 colonnes partout.
+# The introduction uses a separate renderer: 17 columns on the very
+# first line, then 19. In-game dialogue uses 19 columns throughout.
 p(
     0x03082C,
     "PROF. CHEN :\nBien le bonjour !\nBienvenue !\nVoici le monde\ndes Pokémon !\nMoi, c'est Chen,\nle Prof Pokémon !\nIci vivent\ndes créatures\nappelées Pokémon !",
@@ -237,7 +237,7 @@ p(
 )
 
 # ============================================================
-# 7. MAISON / MAMAN
+# 7. HOME / MOM
 # ============================================================
 
 p(
@@ -247,7 +247,7 @@ p(
 )
 
 # ============================================================
-# 8. LABO PROF CHEN / DEPART
+# 8. PROFESSOR OAK LAB / DEPARTURE
 # ============================================================
 
 p(
@@ -307,7 +307,7 @@ p(
 )
 
 # ============================================================
-# 9. BOURG PALETTE / RIVAL
+# 9. PALLET TOWN / RIVAL
 # ============================================================
 
 p(
@@ -506,7 +506,7 @@ p(
 )
 
 # ============================================================
-# 10. RIVAL REGIS (rencontres)
+# 10. RIVAL GARY ENCOUNTERS
 # ============================================================
 
 p(
@@ -537,7 +537,7 @@ p(
 p(0x038C8D, "Impossible...", layout="dialogue_19_19")
 
 # ============================================================
-# 11. FORET DE JADE / ROUTE 1-3
+# 11. VIRIDIAN FOREST / ROUTES 1–3
 # ============================================================
 
 p(0x038CA8, (
@@ -590,7 +590,7 @@ p(
 )
 
 # ============================================================
-# 12. ARENE ARGENTA (Pierre/Brock)
+# 12. PEWTER GYM (Brock)
 # ============================================================
 
 p(
@@ -711,7 +711,7 @@ p(
 )
 
 # ============================================================
-# 13. ROUTE 4 / MT SELENITE
+# 13. ROUTE 4 / MT. MOON
 # ============================================================
 
 p(0x0330C1, "Mont Sélénite")
@@ -904,7 +904,7 @@ p(0x0395E5,
   layout="dialogue_19_19")
 
 # ============================================================
-# 14. JESSIE & JAMES (Mt Selenite)
+# 14. JESSIE & JAMES (Mt. Moon)
 # ============================================================
 
 p(0x039660, (
@@ -960,7 +960,7 @@ p(
 )
 
 # ============================================================
-# 15. AZURIA / ARENE ONDINE
+# 15. CERULEAN CITY / MISTY GYM
 # ============================================================
 
 p(
@@ -1055,7 +1055,7 @@ p(
 )
 
 # ============================================================
-# 16. PONT PEPITE / ROUTE 24-25
+# 16. NUGGET BRIDGE / ROUTES 24–25
 # ============================================================
 
 p(
@@ -1134,7 +1134,7 @@ p(
 )
 
 # ============================================================
-# 17. SALAMECHE / ROUTE 24
+# 17. CHARMANDER / ROUTE 24
 # ============================================================
 
 p(
@@ -1151,7 +1151,7 @@ p(0x039C7D, "C'est vrai ? Merci beaucoup !", layout="dialogue_19_19")
 p(0x039D74, "Salamèche reçu !", layout="dialogue_19_19")
 
 # ============================================================
-# 18. ROUTES DIVERSES
+# 18. MISCELLANEOUS ROUTES
 # ============================================================
 
 p(0x039C8F, (
@@ -1240,7 +1240,7 @@ p(
 )
 
 # ============================================================
-# 19. BILL / LEO
+# 19. BILL
 # ============================================================
 
 p(
@@ -1276,7 +1276,7 @@ p(0x039FFF, (
             ), layout="dialogue_19_19")
 
 # ============================================================
-# 20. S.S.ANNE / CARMIN SUR MER
+# 20. S.S. ANNE / VERMILION CITY
 # ============================================================
 
 p(0x03A03C, "Pitié ! Je ne recommencerai plus ! Je file...", layout="dialogue_19_19")
@@ -1550,7 +1550,7 @@ p(
 )
 
 # ============================================================
-# 21. ARENE CARMIN (MajorBob/Lt.Surge)
+# 21. VERMILION GYM (Lt. Surge)
 # ============================================================
 
 p(
@@ -1639,7 +1639,7 @@ p(
 )
 
 # ============================================================
-# 22. CARAPUCE CADEAU
+# 22. SQUIRTLE GIFT
 # ============================================================
 
 p(
@@ -1667,7 +1667,7 @@ p(0x038122, (
             ), layout="dialogue_19_19")
 
 # ============================================================
-# 23. CASINO CELADON / JOUEURS
+# 23. CELADON GAME CORNER / GAMBLERS
 # ============================================================
 
 p(0x03A91B, (
@@ -1725,7 +1725,7 @@ p(0x03AAA1, "Réglons ça aujourd'hui !", layout="dialogue_19_19")
 p(0x03AABA, "Tu as eu\nde la chance...", layout="dialogue_19_19")
 
 # ============================================================
-# 24. ROUTES / SNORLAX / AIDE CHEN
+# 24. ROUTES / SNORLAX / OAK AIDE
 # ============================================================
 
 p(0x03AACC, "Tu es fichu !", layout="dialogue_19_19")
@@ -1761,11 +1761,11 @@ p(
 p(0x03ABA2, "CS05 obtenue !", layout="dialogue_19_19")
 
 # ============================================================
-# 25. TUNNEL ROCHE / DRESSEURS DIVERS
+# 25. ROCK TUNNEL / MISCELLANEOUS TRAINERS
 # ============================================================
 
 p(0x03ABAC, "Dis donc, tu es plutôt mignon !", layout="dialogue_19_19")
-# Réplique d'après-combat, appelée par un second pointeur du même record.
+# Post-battle line called through a second pointer to the same record.
 p(0x03ABCB, "Tu es fort, j'aime ça !", layout="dialogue_19_19")
 p(0x03ABDC, (
                 (
@@ -1873,7 +1873,7 @@ p(0x03ADB0, (
             ), layout="dialogue_19_19")
 
 # ============================================================
-# 26. LAVANVILLE / TOUR POKEMON
+# 26. LAVENDER TOWN / POKEMON TOWER
 # ============================================================
 
 p(0x03B058, (
@@ -1908,7 +1908,7 @@ p(0x03B144, "Je viens de rompre avec ma copine.", layout="dialogue_19_19")
 p(0x03B160, "Je suis de mauvaise humeur.", layout="dialogue_19_19")
 p(0x03B174, "Tu m'as bousculé !", layout="dialogue_19_19")
 
-# Bulbizarre cadeau
+# Bulbasaur gift
 p(
     0x03B188,
     "Bulbizarre va bien.\nIl lui faut un bon\nDresseur.\nTu le veux ?",
@@ -2160,7 +2160,7 @@ p(0x03B7A1, "Regarde\nmon Mélofée !", layout="dialogue_19_19")
 p(0x03B7B5, "Tu n'as pas été hypnotisé ?", layout="dialogue_19_19")
 
 # ============================================================
-# 27. ARENE CELADOPOLIS (Erika)
+# 27. CELADON GYM (Erika)
 # ============================================================
 
 p(0x03B7C8, (
@@ -2253,7 +2253,7 @@ p(
 )
 
 # ============================================================
-# 28. PISTE CYCLABLE / EVOLI
+# 28. CYCLING ROAD / EEVEE
 # ============================================================
 
 p(
@@ -2277,7 +2277,7 @@ p(0x03BAB6, (
             ), layout="dialogue_19_19")
 
 # ============================================================
-# 29. REPAIRE TEAM ROCKET / SYLPHE SARL
+# 29. TEAM ROCKET HIDEOUT / SILPH CO.
 # ============================================================
 
 p(
@@ -2423,7 +2423,7 @@ p(
 p(0x03BE50, "CS02 : Vol reçue !", layout="dialogue_19_19")
 
 # ============================================================
-# 30. JESSIE & JAMES (Sylphe)
+# 30. JESSIE & JAMES (Silph Co.)
 # ============================================================
 
 p(
@@ -2447,7 +2447,7 @@ p(
 )
 
 # ============================================================
-# 31. GIOVANNI (Sylphe)
+# 31. GIOVANNI (Silph Co.)
 # ============================================================
 
 p(
@@ -2473,7 +2473,7 @@ p(
 p(0x03BFD6, "Scope Sylphe reçu !", layout="dialogue_19_19")
 
 # ============================================================
-# 32. TOUR POKEMON (Fantomes/Fuji)
+# 32. POKEMON TOWER (Ghosts/Fuji)
 # ============================================================
 
 p(
@@ -2569,7 +2569,7 @@ p(
 )
 
 # ============================================================
-# 33. GARDE SAFRANIA / SYLPHE SARL (suite)
+# 33. SAFFRON GUARD / SILPH CO. (continued)
 # ============================================================
 
 p(
@@ -2677,7 +2677,7 @@ p(
 )
 
 # ============================================================
-# 34. RIVAL A SYLPHE
+# 34. RIVAL AT SILPH CO.
 # ============================================================
 
 p(
@@ -2693,7 +2693,7 @@ p(
 )
 
 # ============================================================
-# 35. SBIRES ROCKET (Sylphe suite)
+# 35. ROCKET GRUNTS (Silph Co., continued)
 # ============================================================
 
 p(0x03C861, (
@@ -2759,7 +2759,7 @@ p(
 )
 
 # ============================================================
-# 36. GIOVANNI (Sylphe - boss fight)
+# 36. GIOVANNI (Silph Co. boss fight)
 # ============================================================
 
 p(
@@ -2781,7 +2781,7 @@ p(
 )
 
 # ============================================================
-# 37. PECHE / ROUTES AQUATIQUES
+# 37. FISHING / WATER ROUTES
 # ============================================================
 
 p(0x03CAE7, "Ronflex s'éveille !", layout="dialogue_19_19")
@@ -2901,7 +2901,7 @@ p(0x03CE69, "Ce n'est rien...", layout="dialogue_19_19")
 p(0x03CE78, "T'es trop mignon !", layout="dialogue_19_19")
 
 # ============================================================
-# 38. ROUTES DIVERSES (suite)
+# 38. MISCELLANEOUS ROUTES (continued)
 # ============================================================
 
 p(
@@ -2973,7 +2973,7 @@ p(
 )
 
 # ============================================================
-# 39. ARENE PARMANIE (Koga)
+# 39. FUCHSIA GYM (Koga)
 # ============================================================
 
 p(
@@ -3039,7 +3039,7 @@ p(
 )
 
 # ============================================================
-# 40. PARC SAFARI
+# 40. SAFARI ZONE
 # ============================================================
 
 p(
@@ -3132,7 +3132,7 @@ p(0x03D624, (
             ), layout="dialogue_19_19")
 
 # ============================================================
-# 41. ROUTES AQUATIQUES / ILES
+# 41. WATER ROUTES / ISLANDS
 # ============================================================
 
 p(0x03D64A, (
@@ -3199,7 +3199,7 @@ p(0x03D81D, (
             ), layout="dialogue_19_19")
 
 # ============================================================
-# 42. DOJO / KARATE
+# 42. FIGHTING DOJO
 # ============================================================
 
 p(
@@ -3281,7 +3281,7 @@ p(0x03D9CD, "Tygnon reçu !", layout="dialogue_19_19")
 p(0x03D9DD, "Kicklee reçu !", layout="dialogue_19_19")
 
 # ============================================================
-# 43. ARENE SAFRANIA (Morgane/Sabrina)
+# 43. SAFFRON GYM (Sabrina)
 # ============================================================
 
 p(
@@ -3381,7 +3381,7 @@ p(0x03DC8E, "CT40 reçue !", layout="dialogue_19_19")
 p(0x03DCAA, "MORGANE :\nEncore toi ? Pff !", layout="dialogue_19_19")
 
 # ============================================================
-# 44. ILES ECUME / CRAMOIS'ILE
+# 44. SEAFOAM ISLANDS / CINNABAR ISLAND
 # ============================================================
 
 p(0x03DCEB, (
@@ -3454,7 +3454,7 @@ p(0x03DE9F, (
 p(0x03DEBF, "Désolé... Je sais que tu es occupé.", layout="dialogue_19_19")
 
 # ============================================================
-# 45. LABO CRAMOIS'ILE / FOSSILES
+# 45. CINNABAR LAB / FOSSILS
 # ============================================================
 
 p(
@@ -3506,7 +3506,7 @@ p(
 p(0x03E076, "Kabuto reçu !", layout="dialogue_19_19")
 
 # ============================================================
-# 46. MANOIR POKEMON (Cramois'ile)
+# 46. POKEMON MANSION (Cinnabar Island)
 # ============================================================
 
 p(0x03E082, "Je me croyais seul.", layout="dialogue_19_19")
@@ -3542,7 +3542,7 @@ p(0x03E186, "Zut !\nTu m'as trouvé !", layout="dialogue_19_19")
 p(0x03E19A, "Épargne-moi !", layout="dialogue_19_19")
 
 # ============================================================
-# 47. ARENE CRAMOIS'ILE (Auguste/Blaine)
+# 47. CINNABAR GYM (Blaine)
 # ============================================================
 
 p(0x03E1BB,
@@ -3640,7 +3640,7 @@ p(
 )
 
 # ============================================================
-# 48. ROUTES MARITIMES (nageurs/surfeurs)
+# 48. SEA ROUTES (swimmers/surfers)
 # ============================================================
 
 p(0x03E41A, (
@@ -3736,7 +3736,7 @@ p(0x03E5B4, (
 p(0x03E5E2, "DOMPTEUR : Je t'en prie... KARATÉKA : Viens !", layout="dialogue_19_19")
 
 # ============================================================
-# 49. ARENE JADIELLE (Giovanni)
+# 49. VIRIDIAN GYM (Giovanni)
 # ============================================================
 
 p(
@@ -3847,7 +3847,7 @@ p(0x03EC46,
   layout="dialogue_19_19")
 
 # ============================================================
-# 51. CONSEIL DES 4 / LIGUE POKEMON
+# 51. ELITE FOUR / POKEMON LEAGUE
 # ============================================================
 
 p(
@@ -4022,7 +4022,7 @@ p(0x033BFE,
   layout="dialogue_19_19")
 
 # ============================================================
-# 52. POST-GAME / LEGENDAIRES
+# 52. POST-GAME / LEGENDARY POKEMON
 # ============================================================
 
 p(
@@ -4126,7 +4126,7 @@ p(0x0348B5, (
                 )
             ), layout="dialogue_19_19")
 
-# Objets ramasses
+# Picked-up items
 p(0x034927, "Rien obtenu.", layout="dialogue_19_19")
 p(0x03492F, "Poké Ball reçue !", layout="dialogue_19_19")
 p(0x03493B, "Super Ball reçue !", layout="dialogue_19_19")
@@ -4200,7 +4200,7 @@ p(
 )
 
 # ============================================================
-# 54. PNJ VILLES (complement)
+# 54. ADDITIONAL TOWN NPCS
 # ============================================================
 
 p(0x034F66, (
@@ -4622,7 +4622,7 @@ p(0x035DAC, (
                 "assez d'argent !"
             ), layout="dialogue_19_19")
 
-# Messages systeme
+# System messages
 p(0x035F05, "veut combattre!")
 p(0x035F15, "est paralysé!")
 p(0x035F23, "Super efficace! ")
@@ -4640,7 +4640,7 @@ p(0x03650D, "Pas d'attaque")
 p(0x03651B, "S'est endormi!")
 
 # ============================================================
-# 55. TEXTES PNJ COMPLEMENTAIRES
+# 55. ADDITIONAL NPC TEXT
 # ============================================================
 
 p(
@@ -4785,7 +4785,7 @@ p(0x03692B, (
             ), layout="dialogue_19_19")
 
 # ============================================================
-# 56. SYSTEME PC
+# 56. PC SYSTEM
 # ============================================================
 
 p(0x03804B, "Retirer  Déposer", layout="dialogue_19_19")
@@ -4839,7 +4839,7 @@ p(0x038230, (
             ), layout="dialogue_19_19")
 
 # ============================================================
-# 57. NOMS DE CAPACITES
+# 57. MOVE NAMES
 # ============================================================
 
 p(0x03117D, "Repli")
@@ -4857,7 +4857,7 @@ p(0x031530, "Jackpot")
 p(0x031538, "Bluff")
 
 # ============================================================
-# 58. NOMS D'OBJETS
+# 58. ITEM NAMES
 # ============================================================
 
 p(0x0316EE, "SprBall ")
@@ -4876,7 +4876,7 @@ p(0x031815, "Surf CS")
 p(0x03181D, "ForceC")
 p(0x031824, "Flash CS")
 
-# Descriptions d'objets
+# Item descriptions
 p(0x031A15, "Capturer Pokémon")
 p(0x031A24, "Capture Pokémon100%")
 p(0x031A37, "Évol. Pokémon Feu ")
@@ -4906,7 +4906,7 @@ p(0x031C27, "Clé Arène Cram")
 p(0x031C4F, "Caïd Rocket=")
 
 # ============================================================
-# 59. NOMS DE DRESSEURS
+# 59. TRAINER NAMES
 # ============================================================
 
 p(0x031E6A, "Régis")      # Gary
@@ -5157,7 +5157,7 @@ p(0x03795F, "Il vit depuis des millions d'années dans l'ozone.",
   layout="pokedex_13x4")
 
 # ============================================================
-# 62. NOMS POKEMON (noms FR officiels)
+# 62. POKEMON NAMES (official French names)
 # ============================================================
 
 p(0x036036, "Papilusion")
@@ -5172,15 +5172,15 @@ p(0x036431, "Pyroli ")
 p(0x036451, "Kabuto")
 
 # ============================================================
-# 63. PADDING / DIVERS
+# 63. PADDING / MISCELLANEOUS
 # ============================================================
 
 p(0x03F033, "Tu es vraiment coriace...", layout="dialogue_19_19")
 
 
 # ============================================================
-# 64. CORRECTIF - TEXTES MANQUANTS
-#     (19 textes perdus lors de la consolidation)
+# 64. FIX: MISSING TEXT
+#     (19 texts lost during consolidation)
 # ============================================================
 
 p(
@@ -5206,8 +5206,8 @@ p(
     ),
     layout="dialogue_19_19",
 )
-# Le patch anglais envoyait ce panneau de Route 1 dans la fin du dialogue
-# précédent. Il possède désormais sa traduction et son allocation propres.
+# The English patch pointed this Route 1 sign into the end of the previous
+# dialogue. It now has its own translation and allocation.
 p(
     0x034D3A,
     (
@@ -5343,7 +5343,7 @@ p(0x0398D1,
   layout="dialogue_19_19")
 
 # ============================================================
-# 65. CORRECTIF 2 - DERNIERS OUBLIS
+# 65. FIX 2: REMAINING OMISSIONS
 # ============================================================
 
 p(0x03347F, (
@@ -5390,7 +5390,7 @@ p(0x034F18, (
             ), layout="dialogue_19_19")
 
 # ============================================================
-# 66. CORRECTIF 3 - ULTIMES OUBLIS
+# 66. FIX 3: FINAL OMISSIONS
 # ============================================================
 
 p(0x033253, "Prépare-toi !", layout="dialogue_19_19")
@@ -5409,11 +5409,11 @@ p(
 p(0x03DE25, "Va où tu veux. Ça m'est égal.", layout="dialogue_19_19")
 
 # ============================================================
-# 67. CORRECTIF 4 - AUDIT FINAL MINUTIEUX
-#     39 textes + 1 objet caches dans padding
+# 67. FIX 4: DETAILED FINAL AUDIT
+#     39 text records and one item hidden in padding
 # ============================================================
 
-# -- Combat --
+# -- Battle --
 p(0x0302E4, "00Raté!")
 p(0x0303BC, "000000Chute")
 p(0x030403, "Quoi?")
@@ -5428,7 +5428,7 @@ p(0x030618, "00PUI :")
 p(0x0306C0, "Preci.  ")
 p(0x03081F, "00Équipe plei")
 
-# -- Liste CS (menu CS/HM) --
+# -- HM list (HM menu) --
 p(0x033060, "Coupe")     # Cut
 p(0x033064, "Vol")       # Fly
 # 0x033068 Surf = identique FR
@@ -5440,25 +5440,25 @@ p(0x033086, "CS03")      # HM03
 p(0x03308B, "CS04")      # HM04
 p(0x033090, "CS05")      # HM05
 
-# -- Capacite --
+# -- Move --
 p(0x03129D, "0000Abîme  ")   # Fissure
 
-# -- Objet --
-p(0x030F8E, "PierrPla")     # LeafSton (dans le bloc padding)
+# -- Item --
+p(0x030F8E, "PierrPla")     # LeafSton (inside the padding block)
 p(0x0349B3, "Antigel reçu !", layout="dialogue_19_19")  # Ice Heal
 
-# -- Dialogue Ligue --
+# -- League dialogue --
 p(0x03344F, "Finalement, non... Tu veux m'épouser ?", layout="dialogue_19_19")  # Unbelievable!
 
-# -- Noms Pokemon (starters, ecran choix) --
+# -- Pokemon names (starter selection screen) --
 p(0x035FCD, "Bulbizarre")   # Bulbasaur (9 car -> 10 = tronque a 9)
 p(0x035FD7, "Herbizarre")   # Ivysaur
 p(0x035FDF, "Florizarre")   # Venusaur
-p(0x035FE8, "Salamèche ")   # Charmander; è rendu e par le charset
+p(0x035FE8, "Salamèche ")   # Charmander; the charset renders e-grave as e
 p(0x035FF3, "Reptincel ")   # Charmeleon
 p(0x035FFE, "Dracaufeu")    # Charizard
 
-# -- Dialogues PNJ divers --
+# -- Miscellaneous NPC dialogue --
 p(0x039F32, "Léo est sauvé !", layout="dialogue_19_19")  # Run Program.
 p(0x03A517, (
                 (
@@ -5496,11 +5496,11 @@ p(0x03DD98, (
             ), layout="dialogue_19_19")     # Torpedoed!
 
 # ============================================================
-# 68. CORRECTIF 5 - METHODE INEDITE (bigrammes/frequences)
-#     133 noms courts: capacites, objets, dresseurs, TM->CT
+# 68. FIX 5: BIGRAM/FREQUENCY ANALYSIS
+#     133 short names: moves, items, trainers, French TM labels
 # ============================================================
 
-# -- Classes de dresseurs --
+# -- Trainer classes --
 p(0x031EDD, "Deputy")       # 二当家, Fighting Dojo deputy
 p(0x031EF3, "Kinésiste")    # Psychic
 p(0x031EFB, "Fillette")     # Lass
@@ -5513,7 +5513,7 @@ p(0x031F48, "Gentleman")    # Gentleman
 p(0x031F60, "Marin ")       # Sailor
 p(0x031F9F, "Prof")         # Teacher, classe officielle Gen 2
 p(0x031FB3, "Exorciste")    # Channeler
-p(0x031FBD, "Pêcheur  ")    # Fisherman; ê rendu e par le charset
+p(0x031FBD, "Pêcheur  ")    # Fisherman; the charset renders e-circumflex as e
 p(0x031FC7, "Rocker")       # Rocker (identique)
 p(0x031FCE, "Ornithologue")  # Bird Keeper (11 car -> tronque)
 p(0x031FDA, "Motard")       # Biker
@@ -5521,7 +5521,7 @@ p(0x031FE0, "Ninja")        # Ninja (identique)
 p(0x032008, "Pokémaniac")   # Pokémaniac
 p(0x032013, "Pillard")      # Burglar
 
-# -- Noms d'objets --
+# -- Item names --
 p(0x031737, "AntiPa")       # P.Heal -> Anti-Paralysie
 p(0x03173E, "0Réveil")      # S.Heal -> Réveil
 p(0x031746, "Antigel ")     # Ice Heal
@@ -5542,7 +5542,7 @@ p(0x0317DA, "Limonade")     # Lemonade
 p(0x0317E3, "Scope Sylphe") # Silph Scope
 p(0x0317EE, "Poké Flûte")   # Poké Flute
 
-# -- Descriptions d'objets --
+# -- Item descriptions --
 p(0x031A0F, "Vide ")        # Empty
 p(0x031AC1, "Guérit Somml")  # Cures sleep
 p(0x031ADC, "Guérit Brulr")  # Cures Burn
@@ -5554,7 +5554,7 @@ p(0x031C61, "Jumelles")     # Twins
 p(0x031C67, "Pokéfan>")     # Pokéfan
 
 # -- Secret Key --
-p(0x030F83, "Clé Secrète")  # Secret Key (dans padding)
+p(0x030F83, "Clé Secrète")  # Secret Key (inside padding)
 
 # -- TM 01-40 -> CT 01-40 --
 p(0x03182D, "CT 01 ")
@@ -5598,7 +5598,7 @@ p(0x031955, "CT 38 ")
 p(0x03195D, "CT 39 ")
 p(0x031965, "CT 40 ")
 
-# -- Noms de capacites --
+# -- Move names --
 p(0x031126, "Éruption")      # Erupt
 p(0x03112C, "Feu Follet")    # Wisp
 p(0x031131, "Écume")         # Bubble
@@ -5606,13 +5606,13 @@ p(0x031177, "Claquoir")      # Clamp
 p(0x031196, "Étincelle")     # Spark
 p(0x0311BC, "Fatal-Foudre")  # Thunder
 p(0x0311CD, "Vol-Vie")       # Absorb, nom officiel R/B et O/A/C
-p(0x0311E7, "Fou.")          # Whip, fragment sans pointeur propre
-p(0x0311FF, "Bomb")          # Bomb, fragment sans pointeur propre
+p(0x0311E7, "Fou.")          # Whip, fragment without its own pointer
+p(0x0311FF, "Bomb")          # Bomb, fragment without its own pointer
 p(0x031224, "Spore")        # Spore (identique)
 p(0x03127D, "Tunnel")        # Dig
-p(0x031286, "Mas.")          # Club, fragment sans pointeur propre
-p(0x0312BC, "Tomb")          # Tomb, fragment sans pointeur propre
-p(0x0312F2, "Corn")          # Horn, fragment sans pointeur propre
+p(0x031286, "Mas.")          # Club, fragment without its own pointer
+p(0x0312BC, "Tomb")          # Tomb, fragment without its own pointer
+p(0x0312F2, "Corn")          # Horn, fragment without its own pointer
 p(0x0312FC, "Halo")         # Glow (4 car)
 p(0x03132B, "Détritus")      # Sludge
 p(0x031368, "Vendetta")      # Revenge
@@ -5621,22 +5621,22 @@ p(0x0313BE, "Tornade")       # Gust
 p(0x0313D8, "Vol")          # Fly
 p(0x0313E3, "Rebond")       # Bounce
 p(0x03144A, "Repos")         # Rest
-p(0x03145D, "Yoga")          # Mind, fragment sans pointeur propre
+p(0x03145D, "Yoga")          # Mind, fragment without its own pointer
 p(0x03146F, "Étonnement")    # Astonish
 p(0x031496, "Ouragan")      # Twister
 p(0x0314D2, "Morsure")       # Bite
 p(0x0314D7, "Mâchouille")    # Crunch
-p(0x0314F1, "Queu")          # Tail, fragment sans pointeur propre
+p(0x0314F1, "Queu")          # Tail, fragment without its own pointer
 p(0x031523, "Écras'Face")    # Pound
 p(0x031541, "Coupe")         # Cut
 p(0x031545, "Météores")     # Swift
 p(0x03154B, "Écrasement")    # Stomp
 p(0x031584, "Explosion")     # Explode
 p(0x03159C, "Berceuse")      # Sing
-p(0x0315A6, "Bise")          # Kiss, fragment sans pointeur propre
+p(0x0315A6, "Bise")          # Kiss, fragment without its own pointer
 p(0x0315B9, "Rugissement")   # Growl
 p(0x0315BF, "Gonflette")     # Bulk-up
-p(0x0315DC, "Fou.")          # Whip, fragment sans pointeur propre
+p(0x0315DC, "Fou.")          # Whip, fragment without its own pointer
 p(0x0315E1, "Charme")        # Charm
 p(0x0315FB, "Soin")          # Recover
 p(0x03160A, "Hurlement")     # Roar
@@ -5644,9 +5644,9 @@ p(0x031624, "Riposte")       # Counter
 p(0x03162C, "Force")         # Strength
 
 # ============================================================
-# 69. NOMS DE POKEMON (table principale 0x035FC0-0x0364F0)
-#     105 noms traduits en noms FR officiels
-#     ATTENTION: tronques a la taille du nom EN original
+# 69. POKEMON NAMES (main table 0x035FC0-0x0364F0)
+#     105 names translated to their official French names
+#     WARNING: truncated to the original English name length
 #     Corrigez manuellement si le nom affiche est coupe
 # ============================================================
 
@@ -5687,7 +5687,7 @@ p(0x03619D, "Akwakwak")     # Golduck
 p(0x0361A5, "Férosinge")    # Mankey
 p(0x0361AC, "Colossinge")   # Primeape
 p(0x0361C8, "Ptitard")      # Poliwag
-p(0x0361D0, "Têtarte  ")    # Poliwhirl; ê rendu e par le charset
+p(0x0361D0, "Têtarte  ")    # Poliwhirl; the charset renders e-circumflex as e
 p(0x0361DA, "Tartard  ")    # Poliwrath
 p(0x0361FA, "Machoc")       # Machop
 p(0x036201, "Machopeur")    # Machoke
@@ -5757,7 +5757,7 @@ p(0x036494, "Draco    ")    # Dragonair
 p(0x03649E, "Dracolosse")   # Dragonite
 
 # ============================================================
-# 70. TABLE CT DOUBLON (0x031CB2-0x031DEA)
+# 70. DUPLICATE TM TABLE (0x031CB2–0x031DEA)
 #     Deuxieme copie de TM 01-40 trouvee via le patch IPS EN
 # ============================================================
 
@@ -5803,7 +5803,7 @@ p(0x031DE2, "CT 39 ")
 p(0x031DEA, "CT 40 ")
 
 # ============================================================
-# 71. CORRECTIF 6 - RESTES ANGLAIS DETECTES PAR AUDIT
+# 71. FIX 6: ENGLISH LEFTOVERS FOUND BY AUDIT
 # ============================================================
 
 p(0x03069F, "Att.")        # Attack
@@ -5812,10 +5812,10 @@ p(0x0316E9, "Rien")        # None
 
 
 # ============================================================
-# 72. AUDIT EXHAUSTIF - LIBELLES ASCII RESTES EN ANGLAIS
+# 72. COMPLETE AUDIT: ASCII LABELS STILL IN ENGLISH
 # ============================================================
 
-# Combat, statistiques et boutique.
+# Battle, stats and shop.
 p(0x0301EB, "Vas-y! ")      # Go!
 p(0x0303A1, " Monte")       # Rose
 p(0x030417, "Ouah! ")       # Wow!
@@ -5831,7 +5831,7 @@ p(0x0307DA, "Envoi ")       # Send
 p(0x0308E1, "Ach")          # Buy
 p(0x0308E5, "Vnd")          # Sel
 
-# Capacites: noms complets lorsque la largeur d'affichage le permet.
+# Moves: full names wherever the display width allows them.
 p(0x0310FB, "Flammèche")     # Ember
 p(0x031313, "Purédpois")     # Smog
 p(0x031318, "Acide")         # Acid
@@ -5843,7 +5843,7 @@ p(0x031462, "Hâte")          # Agility
 p(0x03146A, "Léchouille")    # Lick
 p(0x0315D0, "Armure")        # Harden
 
-# Classes de dresseurs et noms officiels.
+# Trainer classes and official names.
 p(0x031C36, "Clément")       # Will
 p(0x031C70, "Canon")         # Beauty
 p(0x031C77, "Médium")        # Medium
@@ -5851,7 +5851,7 @@ p(0x031C7E, "Pokéfan=")       # Pok@Fan=
 p(0x032161, "Skieuse")       # Skier
 p(0x032167, "Surfer")        # Boarder, classe officielle Gen 2
 
-# Objet et noms de Pokémon differents en francais.
+# Item and Pokemon names that differ in French.
 p(0x034969, "Super Potion\nreçue !", layout="dialogue_19_19")
 p(
     0x033D5B,
@@ -5862,7 +5862,7 @@ p(0x03627F, "Magnéti")       # Magnemite
 p(0x036289, "Magnéton")      # Magneton
 p(0x036314, "Électrode")     # Electrode
 
-# Interjections et bruitages de dialogues.
+# Dialogue interjections and sound effects.
 p(0x03B2D4, (
                 (
                     "Tu veux voir de quoi je suis capable ?"
@@ -5891,8 +5891,8 @@ p(0x03D8E0, (
             ), layout="dialogue_19_19")
 p(0x03DCE4, "Je crois que tu as compris !", layout="dialogue_19_19")
 
-# Records graphiques de la table des capacités. Le pipeline repacké remplace
-# explicitement ces libellés double-octet par les noms français officiels.
+# Graphical move-table records. The repacked pipeline explicitly replaces
+# these two-byte labels with the official French names.
 p(0x031101, "Roue de Feu")        # Flame Wheel
 p(0x031108, "Poing de Feu")       # Fire Punch
 p(0x03110F, "Lance-Flamme")       # Flamethrower
@@ -5924,12 +5924,12 @@ p(0x031212, "Siffl'Herbe")        # Grass Whistle
 p(0x03121B, "Poudre Dodo")        # Sleep Powder
 p(0x03122A, "Para-Spore")         # Stun Spore
 p(0x031231, "Poudreuse")          # Powder Snow
-p(0x031241, "Brise Glacée")       # Arctic Breeze (capacité custom)
+p(0x031241, "Brise Glacée")       # Arctic Breeze (custom move)
 p(0x031248, "Poing-Glace")        # Ice Punch
 p(0x031264, "Glaciation")         # Sheer Cold
 p(0x031281, "Massd'Os")           # Bone Club
 p(0x03128B, "Séisme")             # Earthquake
-p(0x031292, "0000Osmerang")       # Bonemerang; pointeur après padding
+p(0x031292, "0000Osmerang")       # Bonemerang; pointer after padding
 p(0x0312A9, "Jet de Sable")       # Sand Attack
 p(0x0312B0, "Jet-Pierres")        # Rock Throw
 p(0x0312B7, "Tomberoche")         # Rock Tomb
@@ -5942,11 +5942,11 @@ p(0x0312E6, "Rayon Signal")       # Signal Beam
 p(0x0312ED, "Mégacorne")          # Megahorn
 p(0x0312F7, "Lumi-Queue")         # Tail Glow
 p(0x031301, "Sécrétion")          # String Shot
-p(0x031308, "0000Dard-Venin")     # Poison Sting; pointeur après padding
+p(0x031308, "0000Dard-Venin")     # Poison Sting; pointer after padding
 p(0x03131D, "Queue-Poison")       # Poison Tail
 p(0x031324, "Crochet Venin")      # Poison Fang
 p(0x031332, "Bomb-Beurk")         # Sludge Bomb
-p(0x031339, "0000Gaz Toxik")      # Poison Gas; pointeur après padding
+p(0x031339, "0000Gaz Toxik")      # Poison Gas; pointer after padding
 p(0x031353, "Éclate-Roc")         # Rock Smash
 p(0x03135A, "Poing-Karaté")       # Karate Chop
 p(0x031361, "Double Pied")        # Double Kick
@@ -5999,7 +5999,7 @@ p(0x031574, "Ultralaser")         # Hyper Beam
 p(0x03157B, "Destruction")        # Self-Destruct
 p(0x03158C, "Guillotine")         # Guillotine
 p(0x031595, "Empal'Korne")        # Horn Drill
-p(0x0315A1, "Grobisou")           # Lovely Kiss (Love Kiss dans le bootleg)
+p(0x0315A1, "Grobisou")           # Lovely Kiss (Love Kiss in the bootleg)
 p(0x0315AB, "Ultrason")           # Supersonic
 p(0x0315B2, "Danse-Lames")        # Swords Dance
 p(0x0315C7, "Boul'Armure")        # Defense Curl
@@ -6009,7 +6009,7 @@ p(0x0315F4, "Reflet")             # Double Team
 p(0x03160F, "Cyclone")            # Whirlwind
 p(0x03163B, "Poudre Toxik")       # Poison Powder
 
-# Noms de lieux graphiques, harmonisés avec Rouge/Bleu français.
+# Graphical location names aligned with French Red/Blue.
 p(0x03216F, "Plateau Indigo")     # Indigo Plateau
 p(0x033095, "Bourg Palette")      # Pallet Town
 p(0x0330A0, "Jadielle")           # Viridian City
@@ -6025,7 +6025,7 @@ p(0x03310D, "Parmanie")           # Fuchsia City
 p(0x033118, "Cramois'Île")        # Cinnabar Island
 p(0x033123, "Route Victoire")     # Victory Road
 
-# Textes graphiques système et messages d'effets de combat.
+# Graphical system text and battle-effect messages.
 p(0x0301C4, "(c) Nanjing - tous droits réservés.")
 p(0x0301F0, "sauvage")
 p(0x030381, "subit des dégâts du poison grave !")
@@ -6080,14 +6080,14 @@ p(0x0307B9, "ne peut pas être empoisonné !")
 p(0x0307C4, "ne peut pas être brûlé !")
 p(0x0307CF, "ne peut pas être gelé !")
 
-# Libellés graphiques de la liste des capacités de terrain.
+# Graphical field-move list labels.
 p(0x031C87, "CS Coupe")
 p(0x031C91, "CS Vol")
 p(0x031C99, "CS Surf")
 p(0x031CA1, "CS Force")
 p(0x031CA9, "CS Flash")
 
-# Dialogues graphiques de la Ligue et du post-game (records 204 à 220).
+# Graphical League and post-game dialogue (records 204 through 220).
 p(0x03329F,
   "RÉGIS : Tiens,\n"
   "Sacha !\n"
@@ -6486,7 +6486,7 @@ p(0x035C9D,
   ),
   layout="dialogue_19_19")
 
-# Textes graphiques système et dialogues tardifs restés en chinois/anglais.
+# Graphical system text and late dialogue still in Chinese/English.
 p(0x03805C, "NANJING TECH. TOUS DROITS RÉSERVÉS.",
   layout="dialogue_19_19")
 p(0x0380DD, (
@@ -6720,21 +6720,21 @@ p(0x03ECFD,
 # ############################################################
 # ############################################################
 # ##                                                        ##
-# ##          FIN DES TRADUCTIONS                           ##
+# ##          END OF TRANSLATION CORPUS                    ##
 # ##                                                        ##
 # ############################################################
 # ############################################################
 
 
 # ============================================================
-# ECRITURE DES FICHIERS (ne pas modifier)
+# OUTPUT FILES (do not edit)
 # ============================================================
 
-# Ecrire la ROM traduite
+# Write the translated ROM
 with open(ROM_OUTPUT, 'wb') as f:
     f.write(rom)
 
-# Creer le patch IPS
+# Create the IPS patch
 ips = bytearray(b'PATCH')
 i = 0
 while i < len(orig):
@@ -6765,7 +6765,7 @@ with open(IPS_OUTPUT, 'wb') as f:
     f.write(ips)
 
 # ============================================================
-# RAPPORT
+# REPORT
 # ============================================================
 
 changes = sum(1 for a, b in zip(orig, rom) if a != b)

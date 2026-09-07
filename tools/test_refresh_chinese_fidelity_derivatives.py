@@ -150,21 +150,21 @@ class FidelityDerivativeRefreshTests(unittest.TestCase):
             encoding="utf-8-sig",
         ) as handle:
             review_by_key = {
-                row["cle_stable"]: row for row in csv.DictReader(handle)
+                row["stable_key"]: row for row in csv.DictReader(handle)
             }
         self.assertEqual(len(cameos), 17)
         self.assertEqual(self.summary["creator_cameo_dialogues"], 17)
         for row in cameos:
-            with self.subTest(stable_key=row["cle_stable"]):
-                review = review_by_key[row["cle_stable"]]
+            with self.subTest(stable_key=row["stable_key"]):
+                review = review_by_key[row["stable_key"]]
                 self.assertEqual(row["id"], review["id"])
                 self.assertEqual(
-                    row["texte_chinois_source"],
-                    review["texte_chinois_source"],
+                    row["chinese_text"],
+                    review["chinese_text"],
                 )
                 self.assertEqual(
-                    row["texte_francais_actuel"],
-                    review["texte_francais"],
+                    row["french_reference_text"],
+                    review["french_reference_text"],
                 )
 
     def test_restored_inventory_keeps_all_source_and_target_texts(self) -> None:
@@ -176,29 +176,29 @@ class FidelityDerivativeRefreshTests(unittest.TestCase):
             encoding="utf-8-sig",
         ) as handle:
             review_by_key = {
-                row["cle_stable"]: row
+                row["stable_key"]: row
                 for row in csv.DictReader(handle)
-                if row["cle_stable"].startswith("RESTORED:")
+                if row["stable_key"].startswith("RESTORED:")
             }
         self.assertEqual(len(restored), EXPECTED_RESTORATIONS)
         self.assertEqual(
             set(review_by_key),
-            {row["cle_stable"] for row in restored},
+            {row["stable_key"] for row in restored},
         )
         for row in restored:
-            with self.subTest(stable_key=row["cle_stable"]):
-                review = review_by_key[row["cle_stable"]]
+            with self.subTest(stable_key=row["stable_key"]):
+                review = review_by_key[row["stable_key"]]
                 self.assertEqual(
-                    row["texte_chinois_source"],
-                    review["texte_chinois_source"],
+                    row["chinese_text"],
+                    review["chinese_text"],
                 )
                 self.assertEqual(
-                    row["traduction_anglaise_rom_anglaise"],
-                    review["traduction_anglaise_rom_anglaise"],
+                    row["english_2015"],
+                    review["english_2015"],
                 )
                 self.assertEqual(
-                    row["texte_francais_actuel"],
-                    review["texte_francais"],
+                    row["french_reference_text"],
+                    review["french_reference_text"],
                 )
 
     def test_english_removal_inventory_survives_french_restoration(self) -> None:
@@ -232,11 +232,11 @@ class FidelityDerivativeRefreshTests(unittest.TestCase):
                     row["pointer_reference_hex"]
                 ]
                 self.assertEqual(
-                    restored["texte_chinois_source"],
+                    restored["chinese_text"],
                     row["chinese_text"].lstrip("\n"),
                 )
                 self.assertTrue(
-                    restored["traduction_anglaise_rom_anglaise"].startswith(
+                    restored["english_2015"].startswith(
                         "ABSENT"
                     )
                 )
@@ -295,7 +295,7 @@ class FidelityDerivativeRefreshTests(unittest.TestCase):
             target.write_bytes(original + b"stale\n")
             with self.assertRaisesRegex(
                 ValueError,
-                "dérivé publié périmé.*dialogues_absent_from_french",
+                "Stale published derivative.*dialogues_absent_from_french",
             ):
                 verify_published_refresh(
                     source_extraction_directory=self.refresh_directory,
@@ -317,7 +317,7 @@ class FidelityDerivativeRefreshTests(unittest.TestCase):
         payload = bytearray(records.read_bytes())
         payload[-2] ^= 1
         records.write_bytes(payload)
-        with self.assertRaisesRegex(ValueError, "records.*non canonique"):
+        with self.assertRaisesRegex(ValueError, "non-canonical.*records"):
             build_refresh(
                 source_extraction_directory=source,
                 output_directory=self.temporary_path / "rejected-source-output",
@@ -332,7 +332,7 @@ class FidelityDerivativeRefreshTests(unittest.TestCase):
         output = self.temporary_path / "rejected-rom-output"
         with self.assertRaisesRegex(
             ValueError,
-            "restaurations françaises non publiables",
+            "French restorations are not publishable",
         ):
             build_refresh(
                 source_extraction_directory=DEFAULT_EXTRACTION_DIRECTORY,
@@ -350,12 +350,12 @@ class FidelityDerivativeRefreshTests(unittest.TestCase):
         ) as handle:
             rows = list(csv.DictReader(handle))
             fields = list(rows[0])
-        rows[0]["texte_francais"] += " périmé"
+        rows[0]["french_reference_text"] += " stale"
         with stale_review.open("w", newline="", encoding="utf-8-sig") as handle:
             writer = csv.DictWriter(handle, fieldnames=fields)
             writer.writeheader()
             writer.writerows(rows)
-        with self.assertRaisesRegex(ValueError, "table de relecture périmée"):
+        with self.assertRaisesRegex(ValueError, "Stale review table"):
             build_refresh(
                 source_extraction_directory=DEFAULT_EXTRACTION_DIRECTORY,
                 output_directory=self.temporary_path / "rejected-review-output",

@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Audit qualite plus agressif pour la traduction FR.
+Additional quality audit for the French reference translation.
 
-Le but est de trouver des suspects que les controles taille/pointeurs ne voient pas:
-  - caracteres qui seraient remplaces par '?';
-  - restes d'anglais a fort signal;
-  - fragments de traduction tronquee;
-  - mots probablement colles;
-  - repetitions de lettres improbables;
-  - termes Pokemon importants incoherents.
+Finds issues that storage and pointer checks do not detect: unsupported
+characters, likely English leftovers, truncated translation fragments,
+joined words, implausible repeated letters and inconsistent Pokemon terms.
+
+
+
+
 """
 
 from __future__ import annotations
@@ -66,46 +66,46 @@ def text_rule(
     )
 
 
-# Règles vérifiables pour les artefacts à fort signal déjà rencontrés dans
-# cette traduction. Une règle ne dépend pas du numéro de ligne de script.py :
-# les offsets ROM sont l'identité stable des textes.
+# Testable rules for high-signal artifacts already found in this
+# translation. Rules do not depend on script.py line numbers:
+# ROM offsets provide stable text identity.
 TEXT_RULES = (
-    # Anglicismes courts que le détecteur par mots ignorait jusqu'ici.
+    # Short English leftovers missed by the previous word-based detector.
     text_rule(
         "english_balls",
         3,
         "english_leak",
         r"^\s*Balls\s*$",
-        "libelle anglais 'Balls' (attendu: Poké Balls ou libelle FR)",
+        "English label 'Balls' (expected: Poké Balls or a French label)",
     ),
     text_rule(
-        "mixed_oui_no",
+        "mixed_yes_no",
         3,
         "english_leak",
         r"\bOui\s+No\b",
-        "libelle bilingue 'Oui No' (attendu: Oui Non)",
+        "bilingual label 'Oui No' (expected: Oui Non)",
     ),
     text_rule(
         "article_ball",
         3,
         "english_leak",
         r"\b(?:la|cette|une|un)\s+ball(?:!|\b)",
-        "anglicisme 'ball' après un article français",
+        "anglicism 'ball' after a French article",
     ),
     text_rule(
         "pokeball_gender",
         2,
         "grammar",
         r"\bUn\s+Pok[ée]\s*ball\b",
-        "genre incorrect: 'Une Poké Ball'",
+        "incorrect gender: 'Une Poké Ball'",
     ),
-    # Noms officiels et contresens localisés.
+    # Official names and localized mistranslations.
     text_rule(
         "misty_wrong_hm",
         3,
         "official_term",
         r"\bCS\s+Surf\b",
-        "Ondine doit remettre Coupe et la CT11/Bulles d'O, pas Surf",
+        "Ondine must give Coupe and CT11/Bulles d'O, not Surf",
         0x039937,
     ),
     text_rule(
@@ -113,7 +113,7 @@ TEXT_RULES = (
         3,
         "official_term",
         r"\bPsyko\b",
-        "Psybeam doit être traduit par Rafale Psy",
+        "Psybeam must be translated as Rafale Psy",
         0x03DC8E,
     ),
     text_rule(
@@ -121,7 +121,7 @@ TEXT_RULES = (
         2,
         "official_term",
         r"Badge\s+Arc-en-Ciel",
-        "nom officiel français: Badge Prisme",
+        "official French name: Badge Prisme",
         0x03B9F1,
     ),
     text_rule(
@@ -129,7 +129,7 @@ TEXT_RULES = (
         2,
         "official_term",
         r"badge\s+Ar[eè]ne\s+de\s+Morgane",
-        "nom officiel français: Badge Marais",
+        "official French name: Badge Marais",
         0x03DB8E,
     ),
     text_rule(
@@ -137,7 +137,7 @@ TEXT_RULES = (
         2,
         "official_term",
         r"\bBlopAtq\b",
-        "nom officiel de Fake Out: Bluff",
+        "official French name for Fake Out: Bluff",
         0x031538,
     ),
     text_rule(
@@ -145,7 +145,7 @@ TEXT_RULES = (
         2,
         "official_term",
         r"\bVit\.E\b",
-        "nom officiel de Swift: Météores",
+        "official French name for Swift: Météores",
         0x031545,
     ),
     text_rule(
@@ -153,16 +153,16 @@ TEXT_RULES = (
         2,
         "official_term",
         r"\bMaxElixr\b",
-        "MaxEther ne doit pas devenir Max Élixir (attendu: Huile Max)",
+        "MaxEther must not become Max Élixir (expected: Huile Max)",
         0x03176F,
     ),
-    # Contresens connus qu'un simple lexique ne peut pas découvrir.
+    # Known mistranslations that a simple lexicon cannot detect.
     text_rule(
         "eusine_rewrite",
         3,
         "semantic_mismatch",
         r"Suicune|Je\s+serai\s+ici\s+[aà]\s+l'attendre",
-        "dialogue d'Eusine détourné: la source parle des Pokémon légendaires qui testent Sacha",
+        "Eusine dialogue rewritten: the source describes legendary Pokémon testing Sacha",
         0x037ADC,
     ),
     text_rule(
@@ -170,7 +170,7 @@ TEXT_RULES = (
         3,
         "semantic_mismatch",
         r"billet\s+pour\s+le\s+S\.?S\.?\s*Anne",
-        "la source demande d'aller remercier Léo; elle ne donne pas ce billet",
+        "the source asks the player to thank Léo; it does not give this ticket",
         0x039A24,
     ),
     text_rule(
@@ -178,7 +178,7 @@ TEXT_RULES = (
         3,
         "semantic_mismatch",
         r"J'en\s+ai\s+d[eé]j[aà]\s+2|J'accumule",
-        "le rival doit parler du garde et demander si les Pokémon sont plus forts",
+        "the rival must mention the guard and ask whether the Pokémon are stronger",
         0x038B03,
     ),
     text_rule(
@@ -186,7 +186,7 @@ TEXT_RULES = (
         3,
         "semantic_mismatch",
         r"d[eé]teste\s+devoir\s+[eê]tre\s+sournois",
-        "contresens absent de la source",
+        "mistranslation absent from the source",
         0x038BBC,
     ),
     text_rule(
@@ -194,7 +194,7 @@ TEXT_RULES = (
         2,
         "truncated_or_extra",
         r"Mewtwo\s*$",
-        "Mewtwo parasite répété en fin de phrase",
+        "extraneous Mewtwo repeated at the end of the sentence",
         0x03E13F,
     ),
     text_rule(
@@ -202,7 +202,7 @@ TEXT_RULES = (
         3,
         "semantic_mismatch",
         r"Zut\.\s*$",
-        "la fin où le rival reconnaît Sacha comme Champion est absente",
+        "the ending where the rival acknowledges Sacha as Champion is missing",
         0x037994,
     ),
     text_rule(
@@ -210,7 +210,7 @@ TEXT_RULES = (
         3,
         "semantic_mismatch",
         r"force\s+est\s+remarquable[!.]?\s*$",
-        "la fin du défi de Giovanni est absente",
+        "the ending of Giovanni's challenge is missing",
         0x03E8A0,
     ),
     text_rule(
@@ -218,7 +218,7 @@ TEXT_RULES = (
         2,
         "grammar",
         r"est\s+capture!\s*$",
-        "accord attendu: est capturé !",
+        "expected agreement: est capturé !",
         0x03024E,
     ),
     text_rule(
@@ -226,14 +226,14 @@ TEXT_RULES = (
         2,
         "grammar",
         r"^\s*R[eé]veille\s*$",
-        "formulation attendue: Se réveille !",
+        "expected wording: Se réveille !",
         0x03070B,
     ),
 )
 
 
-# Fragments finaux suffisamment caractéristiques pour être signalés partout,
-# sans assimiler des termes valides comme Vol, Surf, Route ou Continue à des
+# Distinctive final fragments that can be flagged anywhere without
+# mistaking valid French terms such as Vol, Surf, Route or Continue for
 # troncatures.
 TRUNCATED_ENDINGS = {
     "abando": "abandonne",
@@ -245,126 +245,126 @@ TRUNCATED_ENDINGS = {
     "gami": "gamin",
     "irrespct": "irrespectueux",
     "pokém": "Pokémon",
-    "tempe": "tempête/température (texte à relire)",
+    "tempe": "tempête/température (text to review)",
 }
 
 
 KNOWN_CLIPPED_TEXTS = {
     0x030479: (
         re.compile(r"Quelle\s+att\?\s*$", re.I),
-        "libellé coupé: 'Quelle attaque ?'",
+        "truncated label: 'Quelle attaque ?'",
     ),
     0x036D6B: (
         re.compile(r"\bpour\s+att\s*$", re.I),
-        "description coupée avant 'attirer ses proies'",
+        "description truncated before 'attirer ses proies'",
     ),
     0x037618: (
         re.compile(r"\bcorps\s+est\s+couve\s*$", re.I),
-        "description coupée: 'son corps est couvert'",
+        "truncated description: 'son corps est couvert'",
     ),
     0x033D67: (
         re.compile(r"\bet\s*$", re.I),
-        "conclusion coupée après 'Plateau Indigo et'",
+        "conclusion truncated after 'Plateau Indigo et'",
     ),
     0x035500: (
         re.compile(r"\bcie\s*$", re.I),
-        "fin coupée: 'me tiennent compagnie'",
+        "truncated ending: 'me tiennent compagnie'",
     ),
     0x035556: (
         re.compile(r"\bgami\s*$", re.I),
-        "fin coupée: 'gamin'",
+        "truncated ending: 'gamin'",
     ),
     0x0355B7: (
         re.compile(r"\bti\s*$", re.I),
-        "fin coupée: 'le tien'",
+        "truncated ending: 'le tien'",
     ),
     0x035685: (
         re.compile(r"\bga\s*$", re.I),
-        "fin coupée: 'gardien'",
+        "truncated ending: 'gardien'",
     ),
     0x039463: (
         re.compile(r"Tu\s+m'as\s+fait\s*$", re.I),
-        "fin coupée: 'Tu m'as fait peur !'",
+        "truncated ending: 'Tu m'as fait peur !'",
     ),
     0x039477: (
         re.compile(r"devraient\s+pas\s+[eê]tre\s*$", re.I),
-        "phrase coupée avant 'ici'",
+        "sentence truncated before 'ici'",
     ),
     0x039B2C: (
         re.compile(r"\bfaci\s*$", re.I),
-        "fin coupée: 'facile'",
+        "truncated ending: 'facile'",
     ),
     0x039B59: (
         re.compile(r"Tiens-toi\s*$", re.I),
-        "fin coupée: 'Tiens-toi prêt !'",
+        "truncated ending: 'Tiens-toi prêt !'",
     ),
     0x03A0D2: (
         re.compile(r"C'est\s+pas\s+moi\s+qui\s*$", re.I),
-        "phrase coupée",
+        "truncated sentence",
     ),
     0x03A525: (
         re.compile(r"Le\s+S\.?S\.?\s*ANNE\s+est\s*$", re.I),
-        "phrase coupée avant 'parti'",
+        "sentence truncated before 'parti'",
     ),
     0x03AC24: (
         re.compile(r"Pok[eé]\s+Insect\s*$", re.I),
-        "nom et phrase coupés: Pokémon Insecte",
+        "truncated name and sentence: Pokémon Insecte",
     ),
     0x03ACB9: (
         re.compile(r"\bfor\s*$", re.I),
-        "fin coupée: 'fort'",
+        "truncated ending: 'fort'",
     ),
     0x03AD8B: (
         re.compile(r"Cette\s+grotte\s+est\s*$", re.I),
-        "phrase coupée",
+        "truncated sentence",
     ),
     0x03ADC8: (
         re.compile(r"\babando\s*$", re.I),
-        "fin coupée: 'J'abandonne !'",
+        "truncated ending: 'J'abandonne !'",
     ),
     0x03CAE7: (
         re.compile(r"Le\s+Pok[eé]mon\s+s'est\s*$", re.I),
-        "phrase coupée avant 'réveillé'",
+        "sentence truncated before 'réveillé'",
     ),
     0x03CBF5: (
         re.compile(r"\bespri\s*$", re.I),
-        "fin coupée: 'esprit'",
+        "truncated ending: 'esprit'",
     ),
     0x03CDFD: (
         re.compile(r"Mes\s+oiseaux\s+sont\s+les\s+!\s*$", re.I),
-        "mot manquant avant le point d'exclamation",
+        "missing word before the exclamation mark",
     ),
     0x03D6B5: (
         re.compile(r"je\s+suis\s+c\s*$", re.I),
-        "fin coupée: 'je suis crevé'",
+        "truncated ending: 'je suis crevé'",
     ),
     0x03D732: (
         re.compile(r"\bta\s+mont\s*$", re.I),
-        "fin de phrase coupée",
+        "truncated sentence ending",
     ),
     0x03D88B: (
         re.compile(r"Notre\s+ma[iî]tre\s+est\s*$", re.I),
-        "phrase coupée",
+        "truncated sentence",
     ),
     0x03D8AF: (
         re.compile(r"Rien\s+ne\s+me\s+fait\s*$", re.I),
-        "phrase coupée",
+        "truncated sentence",
     ),
     0x03DB61: (
         re.compile(r"J'avais\s+pr[eé]vu\s+cette\s*$", re.I),
-        "phrase coupée",
+        "truncated sentence",
     ),
     0x03DE0C: (
         re.compile(r"mon\s+Pok[eé]m\s*$", re.I),
-        "fin coupée: Pokémon",
+        "truncated ending: Pokémon",
     ),
     0x03E186: (
         re.compile(r"Cet\s+endroit\s+est\s*$", re.I),
-        "phrase coupée",
+        "truncated sentence",
     ),
     0x03E2DA: (
         re.compile(r"Le\s+Feu\s+fond\s+la\s*$", re.I),
-        "phrase coupée: 'Le Feu fait fondre la Glace !'",
+        "truncated sentence: 'Le Feu fait fondre la Glace !'",
     ),
 }
 
@@ -446,20 +446,20 @@ RARE_DOUBLE_ALLOWLIST = {
 SOUND_ALLOWLIST = {"aaaah", "kwaaah", "rrrroar"}
 
 BAD_FRAGMENT_PATTERNS = [
-    (re.compile(r"\binter\b", re.I), "fragment_inter", "inter -> interrupteur ?"),
-    (re.compile(r"\bobte\b|\bobt\b", re.I), "fragment_obtenu", "obte/obt tronque"),
-    (re.compile(r"\bmig\b", re.I), "fragment_mignon", "mig tronque"),
+    (re.compile(r"\binter\b", re.I), "fragment_switch", "inter -> interrupteur ?"),
+    (re.compile(r"\bobte\b|\bobt\b", re.I), "fragment_obtained", "truncated obte/obt"),
+    (re.compile(r"\bmig\b", re.I), "fragment_cute", "truncated mig"),
     (re.compile(r"dressessont", re.I), "glue_known", "dresses sont"),
     (re.compile(r"dresseurspour", re.I), "glue_known", "dresseurs pour"),
     (re.compile(r"poursoigner", re.I), "glue_known", "pour soigner"),
     (re.compile(r"pourcapturer", re.I), "glue_known", "pour capturer"),
     (re.compile(r"pokemonfeu|pokémonfeu", re.I), "glue_known", "Pokemon Feu"),
     (re.compile(r"tu capturer", re.I), "bad_phrase", "tu peux capturer ?"),
-    (re.compile(r"\bmembr\b", re.I), "fragment_membre", "membre tronque"),
-    (re.compile(r"de-\s* vore|de-\s*vore", re.I), "fragment_vore", "devore tout ?"),
+    (re.compile(r"\bmembr\b", re.I), "fragment_member", "truncated membre"),
+    (re.compile(r"de-\s* vore|de-\s*vore", re.I), "fragment_devour", "devore tout ?"),
     (re.compile(r"voletres", re.I), "glue_known", "vole tres ?"),
     (re.compile(r"\bpeude\b", re.I), "glue_known", "peu de"),
-    (re.compile(r"autres att(?!endent)", re.I), "fragment_attaques", "autres attaques ?"),
+    (re.compile(r"autres att(?!endent)", re.I), "fragment_attacks", "autres attaques ?"),
     (re.compile(r"estdifficile", re.I), "glue_known", "est difficile"),
     (re.compile(r"capture deproies", re.I), "glue_known", "capture de proies"),
     (re.compile(r"\btepermets\b", re.I), "glue_known", "te permet"),
@@ -480,10 +480,10 @@ CRITICAL_TERM_RULES = [
     ("Gym", re.compile(r"ar[eè]ne|gym|badge", re.I), "term_gym"),
 ]
 
-# Ces traductions remplacent légitimement le nom générique « Pokémon » de la
-# source par un sujet déjà explicite (« il », une partie du corps ou la
-# description de l'espèce). L'exception reste liée à l'offset : elle ne
-# désactive jamais le contrôle terminologique ailleurs.
+# These translations legitimately replace the generic Pokemon name in the
+# source with an already explicit subject (a pronoun, body part or species
+# description). Each exception remains offset-specific and never disables
+# terminology checks elsewhere.
 CRITICAL_TERM_OFFSET_ALLOWLIST = {
     "term_pokemon": frozenset(
         {
@@ -614,7 +614,7 @@ def audit_rows(rows: list[Row]) -> list[dict[str, str | int]]:
                 row,
                 3,
                 "encoding_loss",
-                "un caractere deviendra '?' en ROM",
+                "a character will become '?' in the ROM",
                 "encoding_loss",
             )
 
@@ -656,7 +656,7 @@ def audit_rows(rows: list[Row]) -> list[dict[str, str | int]]:
                         row,
                         2,
                         "truncated_ending",
-                        f"fin suspecte '{final_word.group(1)}' (attendu: {expected})",
+                        f"suspicious ending '{final_word.group(1)}' (expected: {expected})",
                         f"ending_{final_token}",
                     )
 
@@ -684,7 +684,7 @@ def audit_rows(rows: list[Row]) -> list[dict[str, str | int]]:
                     row,
                     2,
                     "english_leak",
-                    f"mot anglais suspect: {token}",
+                    f"suspicious English word: {token}",
                     f"english_word_{token}",
                 )
 
@@ -708,7 +708,7 @@ def audit_rows(rows: list[Row]) -> list[dict[str, str | int]]:
                     row,
                     2,
                     "triple_letter",
-                    f"repetition suspecte: {token}",
+                    f"suspicious repetition: {token}",
                     "triple_letter",
                 )
             if (
@@ -721,7 +721,7 @@ def audit_rows(rows: list[Row]) -> list[dict[str, str | int]]:
                     row,
                     1,
                     "rare_double",
-                    f"double lettre rare: {token}",
+                    f"rare double letter: {token}",
                     "rare_double",
                 )
             if len(token) > 17 and token not in NAME_WHITELIST:
@@ -730,7 +730,7 @@ def audit_rows(rows: list[Row]) -> list[dict[str, str | int]]:
                     row,
                     1,
                     "long_word",
-                    f"mot tres long: {token}",
+                    f"very long word: {token}",
                     "long_word",
                 )
 
@@ -747,7 +747,7 @@ def audit_rows(rows: list[Row]) -> list[dict[str, str | int]]:
                     row,
                     2,
                     category,
-                    f"terme source '{source_marker}' absent ou incoherent",
+                    f"source term '{source_marker}' missing or inconsistent",
                     category,
                 )
 
@@ -792,9 +792,9 @@ def command_audit(args: argparse.Namespace) -> int:
     medium = sum(1 for issue in issues if int(issue["severity"]) == 2)
     low = sum(1 for issue in issues if int(issue["severity"]) <= 1)
 
-    print("Audit qualite ambitieux")
-    print(f"- Lignes analysees : {len(rows)}")
-    print(f"- Suspects : {len(issues)} ({high} forts, {medium} moyens, {low} faibles)")
+    print("Ambitious quality audit")
+    print(f"- Rows analyzed : {len(rows)}")
+    print(f"- Suspects: {len(issues)} ({high} high, {medium} medium, {low} low)")
     print(f"- CSV : {output}")
     for category, count in counts.most_common():
         print(f"  {category}: {count}")
@@ -808,7 +808,7 @@ def command_audit(args: argparse.Namespace) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Audit qualite agressif des textes FR.")
+    parser = argparse.ArgumentParser(description="Aggressive quality audit of French texts.")
     parser.add_argument("--csv", default="traduction_base.csv")
     parser.add_argument("--output", default="audit_qualite_ambitieux.csv")
     parser.add_argument("--preview", type=int, default=40)

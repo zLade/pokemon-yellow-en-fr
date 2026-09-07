@@ -44,7 +44,7 @@ ENGLISH_GRAPHIC_FONT_SLOT_COUNT = 868
 # Their indices are deliberately explicit so a parser/order change fails
 # loudly instead of silently widening the exception.
 REVIEWED_LANGUAGE_NEUTRAL_GLYPH_RECORDS: dict[int, str] = {
-    index: "pictogramme de type sans contenu linguistique"
+    index: "type pictogram with no linguistic content"
     for index in range(32, 50)
 }
 
@@ -53,59 +53,59 @@ REVIEWED_LANGUAGE_NEUTRAL_GLYPH_RECORDS: dict[int, str] = {
 # patch.  The adjacent B597/B599 graphics already render ``Mist``/``Ball``;
 # the 177-entry move-name table skips the redundant ASCII record.
 REVIEWED_ASCII_REMAINDERS: dict[int, tuple[str, str, str]] = {
-    0x030628: ("Type:", "invariant_fr", "libelle identique en francais"),
-    0x031161: ("Surf", "invariant_fr", "nom officiel identique"),
+    0x030628: ("Type:", "invariant_fr", "identical label in French"),
+    0x031161: ("Surf", "invariant_fr", "identical official name"),
     0x031410: (
         "Ball",
         "dead_unreferenced_english_patch_residue",
         (
-            "residu redondant du patch anglais: B597/B599 rend deja "
-            "Mist/Ball et la table des 177 capacites saute ce record"
+            "redundant English patch residue: B597/B599 already render "
+            "Mist/Ball and the 177-move table skips this record"
         ),
     ),
-    0x0315EE: ("Flash", "invariant_fr", "nom officiel identique"),
-    0x031603: ("Encore", "invariant_fr", "nom officiel identique"),
-    0x03172B: ("000Antidote", "invariant_fr", "objet identique"),
-    0x0317AD: ("Pok@dex", "invariant_fr", "Pokédex encode avec @"),
-    0x031ED0: ("Eusine", "proper_name", "nom propre identique"),
-    0x031ED8: ("Sage", "invariant_fr", "classe identique"),
-    0x033068: ("Surf", "invariant_fr", "nom officiel identique"),
-    0x033076: ("Flash", "invariant_fr", "nom officiel identique"),
-    0x036071: ("Rattata", "pokemon_name", "nom officiel identique"),
-    0x036097: ("Arbok", "pokemon_name", "nom officiel identique"),
-    0x03609D: ("Pikachu", "pokemon_name", "nom officiel identique"),
-    0x0360A5: ("Raichu", "pokemon_name", "nom officiel identique"),
-    0x0360C0: ("Nidoran=", "pokemon_name", "nom officiel identique"),
-    0x0360D3: ("Nidoqueen", "pokemon_name", "nom officiel identique"),
-    0x0360DD: ("Nidoran>", "pokemon_name", "nom officiel identique"),
-    0x0360F0: ("Nidoking", "pokemon_name", "nom officiel identique"),
-    0x036156: ("Paras", "pokemon_name", "nom officiel identique"),
-    0x03615C: ("Parasect", "pokemon_name", "nom officiel identique"),
-    0x03618D: ("Persian", "pokemon_name", "nom officiel identique"),
-    0x0361E4: ("Abra", "pokemon_name", "nom officiel identique"),
-    0x0361E9: ("Kadabra", "pokemon_name", "nom officiel identique"),
-    0x0361F1: ("Alakazam", "pokemon_name", "nom officiel identique"),
-    0x036232: ("Tentacool", "pokemon_name", "nom officiel identique"),
-    0x03623C: ("Tentacruel", "pokemon_name", "nom officiel identique"),
-    0x03625E: ("Ponyta", "pokemon_name", "nom officiel identique"),
-    0x03629D: ("Doduo", "pokemon_name", "nom officiel identique"),
-    0x0362A3: ("Dodrio", "pokemon_name", "nom officiel identique"),
-    0x0362EA: ("Onix", "pokemon_name", "nom officiel identique"),
-    0x0362FD: ("Krabby", "pokemon_name", "nom officiel identique"),
-    0x0363E6: ("Magmar", "pokemon_name", "nom officiel identique"),
-    0x0363F4: ("Tauros", "pokemon_name", "nom officiel identique"),
-    0x036439: ("Porygon", "pokemon_name", "nom officiel identique"),
-    0x036458: ("Kabutops", "pokemon_name", "nom officiel identique"),
-    0x0364A8: ("Mewtwo", "pokemon_name", "nom officiel identique"),
-    0x0364AF: ("Mew", "pokemon_name", "nom officiel identique"),
-    0x0364B3: ("Raikou", "pokemon_name", "nom officiel identique"),
-    0x0364BA: ("Entei", "pokemon_name", "nom officiel identique"),
-    0x0364C0: ("Suicune", "pokemon_name", "nom officiel identique"),
-    0x0364C8: ("Lugia", "pokemon_name", "nom officiel identique"),
-    0x0364CE: ("Ho-Oh", "pokemon_name", "nom officiel identique"),
-    0x0364D4: ("Kyogre", "pokemon_name", "nom officiel identique"),
-    0x0364DB: ("Groudon", "pokemon_name", "nom officiel identique"),
-    0x0364E3: ("Rayquaza", "pokemon_name", "nom officiel identique"),
+    0x0315EE: ("Flash", "invariant_fr", "identical official name"),
+    0x031603: ("Encore", "invariant_fr", "identical official name"),
+    0x03172B: ("000Antidote", "invariant_fr", "identical item"),
+    0x0317AD: ("Pok@dex", "invariant_fr", "Pokédex encoded with @"),
+    0x031ED0: ("Eusine", "proper_name", "identical proper name"),
+    0x031ED8: ("Sage", "invariant_fr", "identical class"),
+    0x033068: ("Surf", "invariant_fr", "identical official name"),
+    0x033076: ("Flash", "invariant_fr", "identical official name"),
+    0x036071: ("Rattata", "pokemon_name", "identical official name"),
+    0x036097: ("Arbok", "pokemon_name", "identical official name"),
+    0x03609D: ("Pikachu", "pokemon_name", "identical official name"),
+    0x0360A5: ("Raichu", "pokemon_name", "identical official name"),
+    0x0360C0: ("Nidoran=", "pokemon_name", "identical official name"),
+    0x0360D3: ("Nidoqueen", "pokemon_name", "identical official name"),
+    0x0360DD: ("Nidoran>", "pokemon_name", "identical official name"),
+    0x0360F0: ("Nidoking", "pokemon_name", "identical official name"),
+    0x036156: ("Paras", "pokemon_name", "identical official name"),
+    0x03615C: ("Parasect", "pokemon_name", "identical official name"),
+    0x03618D: ("Persian", "pokemon_name", "identical official name"),
+    0x0361E4: ("Abra", "pokemon_name", "identical official name"),
+    0x0361E9: ("Kadabra", "pokemon_name", "identical official name"),
+    0x0361F1: ("Alakazam", "pokemon_name", "identical official name"),
+    0x036232: ("Tentacool", "pokemon_name", "identical official name"),
+    0x03623C: ("Tentacruel", "pokemon_name", "identical official name"),
+    0x03625E: ("Ponyta", "pokemon_name", "identical official name"),
+    0x03629D: ("Doduo", "pokemon_name", "identical official name"),
+    0x0362A3: ("Dodrio", "pokemon_name", "identical official name"),
+    0x0362EA: ("Onix", "pokemon_name", "identical official name"),
+    0x0362FD: ("Krabby", "pokemon_name", "identical official name"),
+    0x0363E6: ("Magmar", "pokemon_name", "identical official name"),
+    0x0363F4: ("Tauros", "pokemon_name", "identical official name"),
+    0x036439: ("Porygon", "pokemon_name", "identical official name"),
+    0x036458: ("Kabutops", "pokemon_name", "identical official name"),
+    0x0364A8: ("Mewtwo", "pokemon_name", "identical official name"),
+    0x0364AF: ("Mew", "pokemon_name", "identical official name"),
+    0x0364B3: ("Raikou", "pokemon_name", "identical official name"),
+    0x0364BA: ("Entei", "pokemon_name", "identical official name"),
+    0x0364C0: ("Suicune", "pokemon_name", "identical official name"),
+    0x0364C8: ("Lugia", "pokemon_name", "identical official name"),
+    0x0364CE: ("Ho-Oh", "pokemon_name", "identical official name"),
+    0x0364D4: ("Kyogre", "pokemon_name", "identical official name"),
+    0x0364DB: ("Groudon", "pokemon_name", "identical official name"),
+    0x0364E3: ("Rayquaza", "pokemon_name", "identical official name"),
 }
 
 
@@ -211,7 +211,7 @@ def validate_csv_sync(
     expected = expected_csv_rows(english)
     if len(actual) != len(expected):
         errors.append(
-            f"CSV/script: {len(actual)} lignes au lieu de {len(expected)}"
+            f"CSV/script: {len(actual)} rows instead of {len(expected)}"
         )
         return errors
 
@@ -232,8 +232,8 @@ def validate_csv_sync(
         for field in fields:
             if (actual_row.get(field) or "") != expected_row[field]:
                 errors.append(
-                    f"CSV ligne {index} champ {field}: "
-                    f"{actual_row.get(field)!r} au lieu de "
+                    f"CSV row {index} field {field}: "
+                    f"{actual_row.get(field)!r} instead of "
                     f"{expected_row[field]!r}"
                 )
                 break
@@ -266,18 +266,18 @@ def audit(args: argparse.Namespace) -> int:
     english_hash = sha256(english)
     if english_hash != TRANSLATION_BASE_SHA256:
         errors.append(
-            "ROM anglaise non canonique: "
-            f"{english_hash} au lieu de {TRANSLATION_BASE_SHA256}"
+            "non-canonical English ROM: "
+            f"{english_hash} instead of {TRANSLATION_BASE_SHA256}"
         )
     if len(chinese) != len(english):
         errors.append(
-            "taille ROM chinoise differente de la base anglaise: "
-            f"{len(chinese)} au lieu de {len(english)}"
+            "Chinese ROM size differs from English base: "
+            f"{len(chinese)} instead of {len(english)}"
         )
     if len(candidate) != len(english):
         errors.append(
-            "taille ROM candidate differente de la base anglaise: "
-            f"{len(candidate)} au lieu de {len(english)}"
+            "candidate ROM size differs from English base: "
+            f"{len(candidate)} instead of {len(english)}"
         )
 
     glyph_records = verified_all_graphical_text_records(english)
@@ -333,7 +333,7 @@ def audit(args: argparse.Namespace) -> int:
         }
         if reviewed is None:
             row["classification"] = "UNREVIEWED"
-            row["reason"] = "run ASCII lexical hors script/allowlist"
+            row["reason"] = "lexical ASCII run outside script/allowlist"
             unknown_rows.append(row)
             continue
 
@@ -341,7 +341,7 @@ def audit(args: argparse.Namespace) -> int:
         if text != expected_text:
             errors.append(
                 f"allowlist ASCII 0x{start:06X}: {text!r} "
-                f"au lieu de {expected_text!r}"
+                f"instead of {expected_text!r}"
             )
         seen_reviewed.add(start)
         refs = raw_pointer_refs(english, start)
@@ -357,11 +357,11 @@ def audit(args: argparse.Namespace) -> int:
     )
     for offset in sorted(missing_allowlist):
         errors.append(
-            f"allowlist ASCII non observee: 0x{offset:06X}"
+            f"ASCII allowlist entry not observed: 0x{offset:06X}"
         )
     for row in unknown_rows:
         errors.append(
-            f"ASCII non classe {row['offset_hex']}: "
+            f"unclassified ASCII {row['offset_hex']}: "
             f"{row['source']!r}"
         )
 
@@ -403,8 +403,8 @@ def audit(args: argparse.Namespace) -> int:
         reviewed_neutral = bool(neutral_reason)
         if translation_declared and reviewed_neutral:
             errors.append(
-                f"record graphique {record_index} 0x{start:06X}: "
-                "à la fois traduit et déclaré linguistiquement neutre"
+                f"graphical record {record_index} 0x{start:06X}: "
+                "both translated and declared language-neutral"
             )
         if translation_declared:
             language_status = "translated_fr"
@@ -488,14 +488,14 @@ def audit(args: argparse.Namespace) -> int:
 
     if mutated_untranslated_glyph_records:
         errors.append(
-            f"{mutated_untranslated_glyph_records} record(s) "
-            "graphique(s) modifie(s) sans traduction declaree "
-            "dans la ROM candidate"
+            f"{mutated_untranslated_glyph_records} "
+            "graphical record(s) modified without declared translation "
+            "in the candidate ROM"
         )
     if untranslated_language_glyph_records:
         errors.append(
-            f"{untranslated_language_glyph_records} record(s) "
-            "graphique(s) à contenu linguistique sans traduction française"
+            f"{untranslated_language_glyph_records} "
+            "language-bearing graphical record(s) without French translation"
         )
 
     english_orphans = sum(
@@ -509,76 +509,76 @@ def audit(args: argparse.Namespace) -> int:
         if classification
         == "dead_unreferenced_english_patch_residue"
     )
-    print("Audit exhaustif de couverture traduction")
-    print(f"- Entrees script/CSV : {len(translated_ranges)}")
-    print(f"- Restes ASCII classes : {len(reviewed_rows)}")
-    print(f"- Restes ASCII inconnus : {len(unknown_rows)}")
-    print(f"- Fragments anglais orphelins connus : {english_orphans}")
+    print("Exhaustive translation coverage audit")
+    print(f"- Script/CSV entries : {len(translated_ranges)}")
+    print(f"- Classified ASCII remainders : {len(reviewed_rows)}")
+    print(f"- Unknown ASCII remainders : {len(unknown_rows)}")
+    print(f"- Known orphaned English fragments : {english_orphans}")
     print(
-        "- Residus morts du patch anglais : "
+        "- Dead English patch residues : "
         f"{dead_english_patch_residues}"
     )
     print(
-        "- Records graphiques déclarés traduits en français : "
+        "- Graphical records declared translated into French : "
         f"{translated_glyph_records}"
     )
     print(
-        "- Records graphiques non traduits préservés : "
+        "- Untranslated graphical records preserved : "
         f"{len(glyph_records) - translated_glyph_records}"
     )
     print(
-        "- Records graphiques neutres relus (pictogrammes) : "
+        "- Reviewed neutral graphical records (pictograms) : "
         f"{reviewed_neutral_glyph_records}"
     )
     print(
-        "- Records graphiques linguistiques encore non traduits : "
+        "- Language-bearing graphical records still untranslated : "
         f"{untranslated_language_glyph_records}"
     )
     print(
-        "- Records aux codes inchangés depuis la ROM chinoise : "
+        "- Records with codes unchanged from the Chinese ROM : "
         f"{unchanged_from_chinese}"
     )
     print(
-        "- Records aux codes modifiés par le patch anglais : "
+        "- Records with codes modified by the English patch : "
         f"{len(glyph_records) - unchanged_from_chinese}"
     )
     print(
-        "- Records entièrement rendus par la police graphique anglaise : "
+        "- Records fully rendered by the English graphical font : "
         f"{fully_english_graphic_records}"
     )
     print(
-        "- Records mêlant graphismes anglais et glyphes source : "
+        "- Records mixing English graphics and source glyphs : "
         f"{mixed_graphic_records}"
     )
     print(
-        "- Occurrences pointant encore vers la police source chinoise : "
+        "- Occurrences still pointing to the Chinese source font : "
         f"{source_graphic_codes}"
     )
     print(
-        "- Records graphiques modifiés sans déclaration : "
+        "- Graphical records modified without declaration : "
         f"{mutated_untranslated_glyph_records}"
     )
-    print(f"- Rapport ASCII : {ascii_report}")
-    print(f"- Rapport glyphes : {glyph_report}")
+    print(f"- ASCII report : {ascii_report}")
+    print(f"- Glyph report : {glyph_report}")
 
     if errors:
-        print(f"- Resultat : ECHEC ({len(errors)} erreur(s))")
+        print(f"- Result: FAIL ({len(errors)} error(s))")
         for error in errors[:40]:
             print(f"  {error}")
         if len(errors) > 40:
-            print(f"  ... et {len(errors) - 40} de plus")
+            print(f"  ... and {len(errors) - 40} more")
         return 1
 
     print(
-        "- Resultat inventaire : OK "
-        "(la qualification d'accessibilité en jeu reste distincte)"
+        "- Inventory result : OK "
+        "(in-game accessibility qualification remains separate)"
     )
     return 0
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Audite la couverture texte ASCII et glyphique."
+        description="Audit ASCII and glyph text coverage."
     )
     parser.add_argument("--rom", default=FINAL_ROM)
     parser.add_argument("--csv", default="traduction_base.csv")

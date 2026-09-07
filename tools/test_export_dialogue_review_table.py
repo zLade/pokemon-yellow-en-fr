@@ -112,7 +112,7 @@ class ExportDialogueReviewTableTests(unittest.TestCase):
         self.assertEqual(row.chinese_text, "得到解麻药")
         self.assertEqual(
             row.english_intermediate,
-            "TEXTE MUTUALISÉ — texte affiché : A S.Heal!",
+            "SHARED TEXT — displayed text: A S.Heal!",
         )
         unchanged = next(
             item for item in self.rows
@@ -124,25 +124,25 @@ class ExportDialogueReviewTableTests(unittest.TestCase):
         rows = {row.stable_key: row for row in self.rows}
         self.assertEqual(
             rows["MAIN:0x039660"].translation_history,
-            "adapté d'après Pokémon Jaune (FR)",
+            "adapted from French Pokemon Yellow",
         )
         self.assertEqual(
             rows["MAIN:0x0396C5"].translation_history,
-            "adapté d'après la devise française de l'anime",
+            "adapted from the French anime motto",
         )
         self.assertEqual(
             rows["MAIN:0x035206"].translation_history,
-            "adapté d'après les dialogues officiels R/B/J (FR)",
+            "adapted from official French R/B/Y dialogue",
         )
         self.assertEqual(
             rows["RESTORED:0x03AFB0"].translation_history,
-            "restauré d'après le chinois + adapté d'après "
-            "Pokémon Jaune (FR)",
+            "restored from the Chinese source + adapted from "
+            "French Pokemon Yellow",
         )
         self.assertEqual(
             rows["RESTORED:0x03AF96"].translation_history,
-            "restauré d'après le chinois + adapté d'après "
-            "la devise française de l'anime",
+            "restored from the Chinese source + adapted from "
+            "the French anime motto",
         )
 
     def test_colons_inside_sentences_are_not_mistaken_for_speakers(self) -> None:
@@ -150,7 +150,7 @@ class ExportDialogueReviewTableTests(unittest.TestCase):
         for public_id in {"D0256", "D0367", "D0450", "D0528", "D0932"}:
             with self.subTest(public_id=public_id):
                 self.assertEqual(rows[public_id].speaker, "")
-        self.assertEqual(rows["D0301"].speaker, "SŒUR DE RÉGIS")
+        self.assertEqual(rows["D0301"].speaker, "GARY'S SISTER")
 
 
 if __name__ == "__main__":

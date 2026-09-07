@@ -129,7 +129,7 @@ class ChineseEnglishFidelityTests(unittest.TestCase):
             target = decoded_pointer_target(french, reference)
             self.assertIsNotNone(
                 target,
-                f"slot non restauré : 0x{reference:06X}",
+                f"slot not restored: 0x{reference:06X}",
             )
             expected = format_game_text(
                 RESTORED_DIALOGUES[reference],
@@ -146,7 +146,7 @@ class ChineseEnglishFidelityTests(unittest.TestCase):
             target = decoded_pointer_target(french, reference)
             self.assertIsNotNone(
                 target,
-                f"slot non restauré : 0x{reference:06X}",
+                f"slot not restored: 0x{reference:06X}",
             )
             expected = format_game_text(text, DIALOGUE_LAYOUT)
             assert target is not None

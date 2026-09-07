@@ -30,7 +30,7 @@ from tools.french_font import FRENCH_GLYPH_LABELS  # noqa: E402
 
 
 WORD_CHARS = "A-Za-zÀ-ÖØ-öø-ÿŒœ"
-STATUS_RANK = {"certain": 0, "contextuel": 1, "ambigu": 2}
+STATUS_RANK = {"certain": 0, "contextual": 1, "ambiguous": 2}
 
 
 def _pairs(raw: str) -> dict[str, str]:
@@ -279,8 +279,8 @@ CONTEXTUAL_WORDS = frozenset(
 )
 
 
-# Homographes revus qui doivent rester non accentués à un emplacement précis.
-# Les règles lexicales générales restent actives partout ailleurs.
+# Reviewed homographs that must remain unaccented at specific offsets.
+# General lexical rules remain active everywhere else.
 WORD_REPLACEMENT_EXCLUSIONS: dict[int, frozenset[str]] = {
     0x0397E8: frozenset({"paralyse"}),
 }
@@ -338,82 +338,82 @@ A_GRAVE_ALL_OFFSETS = frozenset(
 
 # Exact phrase corrections avoid changing valid homographs in the same text.
 CONTEXT_PHRASE_RULES: dict[int, tuple[tuple[str, str, str], ...]] = {
-    0x033715: (("a toi", "à toi", "préposition"),),
-    0x03427E: (("a cause", "à cause", "locution prépositive"),),
-    0x03A4B8: (("A plus", "À plus", "locution"),),
-    0x03C765: (("vu a Safrania", "vu à Safrania", "lieu"),),
-    0x03DA8E: (("a cote", "à côté", "locution de lieu"),),
-    0x03E308: (("Auguste a descendre", "Auguste à descendre", "infinitif"),),
-    # Où / ou.
-    0x0354E1: (("Ou est", "Où est", "adverbe interrogatif"),),
-    0x036DCC: (("arbres ou il", "arbres où il", "adverbe relatif"),),
-    0x03B132: (("Ou est", "Où est", "adverbe interrogatif"),),
-    0x03E19A: (("ou est", "où est", "adverbe interrogatif"),),
+    0x033715: (("a toi", "à toi", "preposition"),),
+    0x03427E: (("a cause", "à cause", "prepositional phrase"),),
+    0x03A4B8: (("A plus", "À plus", "phrase"),),
+    0x03C765: (("vu a Safrania", "vu à Safrania", "location"),),
+    0x03DA8E: (("a cote", "à côté", "locative phrase"),),
+    0x03E308: (("Auguste a descendre", "Auguste à descendre", "infinitive"),),
+    # French where/or homographs.
+    0x0354E1: (("Ou est", "Où est", "interrogative adverb"),),
+    0x036DCC: (("arbres ou il", "arbres où il", "relative adverb"),),
+    0x03B132: (("Ou est", "Où est", "interrogative adverb"),),
+    0x03E19A: (("ou est", "où est", "interrogative adverb"),),
     0x03E308: (
-        ("Auguste a descendre", "Auguste à descendre", "infinitif"),
-        ("montagne ou il", "montagne où il", "adverbe relatif"),
+        ("Auguste a descendre", "Auguste à descendre", "infinitive"),
+        ("montagne ou il", "montagne où il", "relative adverb"),
     ),
-    0x03E4A6: (("Ou as-tu", "Où as-tu", "adverbe interrogatif"),),
-    # Là / la.
-    0x035615: (("la-bas", "là-bas", "adverbe de lieu"),),
-    0x0356F2: (("la-dedans", "là-dedans", "adverbe de lieu"),),
-    0x0365D0: (("la-bas", "là-bas", "adverbe de lieu"),),
-    0x0384F8: (("pas la!", "pas là!", "adverbe de lieu"),),
-    0x03868A: (("celui-la", "celui-là", "démonstratif"),),
-    0x03AACC: (("la-bas", "là-bas", "adverbe de lieu"),),
-    0x03C861: (("par la.", "par là.", "adverbe de lieu"),),
-    0x03D3B7: (("Halte-la!", "Halte-là!", "locution"),),
+    0x03E4A6: (("Ou as-tu", "Où as-tu", "interrogative adverb"),),
+    # French there/article homographs.
+    0x035615: (("la-bas", "là-bas", "adverb of place"),),
+    0x0356F2: (("la-dedans", "là-dedans", "adverb of place"),),
+    0x0365D0: (("la-bas", "là-bas", "adverb of place"),),
+    0x0384F8: (("pas la!", "pas là!", "adverb of place"),),
+    0x03868A: (("celui-la", "celui-là", "demonstrative"),),
+    0x03AACC: (("la-bas", "là-bas", "adverb of place"),),
+    0x03C861: (("par la.", "par là.", "adverb of place"),),
+    0x03D3B7: (("Halte-la!", "Halte-là!", "phrase"),),
     # Other homographs.
-    0x038AA1: (("Bien sur", "Bien sûr", "locution"),),
-    0x039334: (("suis sur", "suis sûr", "adjectif"),),
-    0x03AD29: (("leve tot", "levé tôt", "adverbe temporel"),),
+    0x038AA1: (("Bien sur", "Bien sûr", "phrase"),),
+    0x039334: (("suis sur", "suis sûr", "adjective"),),
+    0x03AD29: (("leve tot", "levé tôt", "temporal adverb"),),
 }
 
 
 # A context-specific inflection is required; leaving the same source token
 # untouched elsewhere is intentional.
 CONTEXT_WORD_RULES: dict[int, tuple[tuple[str, str, str], ...]] = {
-    0x030304: (("brule", "brûlé", "participe passé"),),
-    0x03031A: (("gele", "gelé", "participe passé"),),
-    0x030373: (("gele", "gelé", "participe passé"),),
-    0x0326A0: (("Admire", "Admiré", "participe passé"),),
-    0x03326D: (("joue", "joué", "participe passé"),),
+    0x030304: (("brule", "brûlé", "past participle"),),
+    0x03031A: (("gele", "gelé", "past participle"),),
+    0x030373: (("gele", "gelé", "past participle"),),
+    0x0326A0: (("Admire", "Admiré", "past participle"),),
+    0x03326D: (("joue", "joué", "past participle"),),
     0x0339A9: (
-        ("cherche", "cherché", "participe passé"),
-        ("forme", "formé", "participe passé"),
+        ("cherche", "cherché", "past participle"),
+        ("forme", "formé", "past participle"),
     ),
-    0x033A48: (("oublie", "oublié", "participe passé"),),
-    0x034F38: (("visite", "visité", "participe passé"),),
-    0x035154: (("vole", "volé", "participe passé"),),
-    0x0354E1: (("passe", "passé", "participe passé"),),
-    0x035F57: (("évolue", "évolué", "participe passé"),),
-    0x035F65: (("évolue", "évolué", "participe passé"),),
-    0x036E68: (("admire", "admiré", "participe passé"),),
-    0x038230: (("coupe", "coupé", "participe passé"),),
-    0x038C6C: (("cherche", "cherché", "participe passé"),),
-    0x03909E: (("regarde", "regardé", "participe passé"),),
-    0x039215: (("touchee", "touchée", "participe passé féminin"),),
-    0x039251: (("lance", "lancé", "participe passé"),),
-    0x0398BD: (("submergee", "submergée", "participe passé féminin"),),
-    0x039B45: (("Fatigue", "Fatigué", "adjectif"),),
-    0x039CE0: (("entraine", "entraîné", "participe passé"),),
-    0x03A0F7: (("marche", "marché", "participe passé"),),
-    0x03A2EB: (("coule", "coulé", "participe passé"),),
-    0x03AABA: (("consume", "consumé", "participe passé"),),
-    0x03AD43: (("entraine", "entraîne", "verbe conjugué"),),
-    0x03BB1B: (("force", "forcé", "participe passé"),),
-    0x03BB57: (("arrive", "arrivé", "participe passé"),),
-    0x03C765: (("progresse", "progressé", "participe passé"),),
-    0x03CA26: (("ruine", "ruiné", "participe passé"),),
-    0x03CAB3: (("sauves", "sauvés", "participe passé pluriel"),),
-    0x03D50C: (("trouve", "trouvé", "participe passé"),),
-    0x03D6A4: (("brule", "brûle", "verbe conjugué"),),
-    0x03E0F5: (("utilise", "utilisé", "participe passé"),),
-    0x03E308: (("aide", "aidé", "participe passé"),),
-    0x03E3D0: (("consume", "consumé", "participe passé"),),
-    0x03E433: (("creve", "crevé", "adjectif"),),
-    0x03E483: (("capture", "capturé", "participe passé"),),
-    0x03E4A6: (("capture", "capturé", "participe passé"),),
+    0x033A48: (("oublie", "oublié", "past participle"),),
+    0x034F38: (("visite", "visité", "past participle"),),
+    0x035154: (("vole", "volé", "past participle"),),
+    0x0354E1: (("passe", "passé", "past participle"),),
+    0x035F57: (("évolue", "évolué", "past participle"),),
+    0x035F65: (("évolue", "évolué", "past participle"),),
+    0x036E68: (("admire", "admiré", "past participle"),),
+    0x038230: (("coupe", "coupé", "past participle"),),
+    0x038C6C: (("cherche", "cherché", "past participle"),),
+    0x03909E: (("regarde", "regardé", "past participle"),),
+    0x039215: (("touchee", "touchée", "feminine past participle"),),
+    0x039251: (("lance", "lancé", "past participle"),),
+    0x0398BD: (("submergee", "submergée", "feminine past participle"),),
+    0x039B45: (("Fatigue", "Fatigué", "adjective"),),
+    0x039CE0: (("entraine", "entraîné", "past participle"),),
+    0x03A0F7: (("marche", "marché", "past participle"),),
+    0x03A2EB: (("coule", "coulé", "past participle"),),
+    0x03AABA: (("consume", "consumé", "past participle"),),
+    0x03AD43: (("entraine", "entraîne", "conjugated verb"),),
+    0x03BB1B: (("force", "forcé", "past participle"),),
+    0x03BB57: (("arrive", "arrivé", "past participle"),),
+    0x03C765: (("progresse", "progressé", "past participle"),),
+    0x03CA26: (("ruine", "ruiné", "past participle"),),
+    0x03CAB3: (("sauves", "sauvés", "plural past participle"),),
+    0x03D50C: (("trouve", "trouvé", "past participle"),),
+    0x03D6A4: (("brule", "brûle", "conjugated verb"),),
+    0x03E0F5: (("utilise", "utilisé", "past participle"),),
+    0x03E308: (("aide", "aidé", "past participle"),),
+    0x03E3D0: (("consume", "consumé", "past participle"),),
+    0x03E433: (("creve", "crevé", "adjective"),),
+    0x03E483: (("capture", "capturé", "past participle"),),
+    0x03E4A6: (("capture", "capturé", "past participle"),),
 }
 
 
@@ -456,28 +456,28 @@ AMBIGUOUS_RULES: dict[int, tuple[dict[str, object], ...]] = {
         {
             "source": "equilib",
             "replacement": "équilibre",
-            "reason": "mot source déjà tronqué; correction non isométrique",
+            "reason": "source word already truncated; correction changes encoded length",
         },
     ),
     0x032924: (
         {
             "source": "s'evano",
             "replacement": "s'évanouir",
-            "reason": "mot source déjà tronqué; correction non isométrique",
+            "reason": "source word already truncated; correction changes encoded length",
         },
     ),
     0x0369AA: (
         {
             "source": "quand enrage",
             "replacement": "quand il est enragé",
-            "reason": "construction tronquée; reformulation nécessaire",
+            "reason": "truncated construction; rewording required",
         },
     ),
     0x037646: (
         {
             "source": "ecrase",
             "replacement": "écraser",
-            "reason": "infinitif tronqué; correction non isométrique",
+            "reason": "truncated infinitive; correction changes encoded length",
         },
     ),
     0x03BFF8: (
@@ -485,7 +485,7 @@ AMBIGUOUS_RULES: dict[int, tuple[dict[str, object], ...]] = {
             "source": "sauve",
             "replacement": "sauvé",
             "alternatives": ["sauve"],
-            "reason": "genre du locuteur requis pour choisir sauvé/sauve",
+            "reason": "speaker gender required to choose sauvé/sauve",
         },
     ),
 }
@@ -577,7 +577,7 @@ def audit(
                     source,
                     target,
                     count,
-                    "contextuel",
+                    "contextual",
                     reason,
                 )
             )
@@ -599,7 +599,7 @@ def audit(
                     " / ".join(sorted({pair[0] for pair in pairs})),
                     " / ".join(sorted({pair[1] for pair in pairs})),
                     count,
-                    "contextuel",
+                    "contextual",
                     reason,
                 )
             )
@@ -616,7 +616,7 @@ def audit(
                 continue
             corrected = corrected_next
             status = (
-                "contextuel"
+                "contextual"
                 if source in CONTEXTUAL_WORDS
                 else "certain"
             )
@@ -627,9 +627,9 @@ def audit(
                     count,
                     status,
                     (
-                        "forme relue dans son contexte"
-                        if status == "contextuel"
-                        else "graphie française non ambiguë"
+                        "form reviewed in context"
+                        if status == "contextual"
+                        else "unambiguous French spelling"
                     ),
                 )
             )
@@ -642,8 +642,8 @@ def audit(
                         " / ".join(sorted({pair[0] for pair in pairs})),
                         " / ".join(sorted({pair[1] for pair in pairs})),
                         count,
-                        "contextuel",
-                        "préposition confirmée par la syntaxe",
+                        "contextual",
+                        "preposition confirmed by syntax",
                     )
                 )
 
@@ -655,10 +655,10 @@ def audit(
                         " / ".join(sorted({pair[0] for pair in pairs})),
                         " / ".join(sorted({pair[1] for pair in pairs})),
                         count,
-                        "contextuel",
+                        "contextual",
                         (
-                            "pronom démonstratif confirmé; "
-                            "Ç/ç natifs disponibles"
+                            "demonstrative pronoun confirmed; "
+                            "native Ç/ç available"
                         ),
                     )
                 )
@@ -673,7 +673,7 @@ def audit(
                     source,
                     str(rule["replacement"]),
                     count,
-                    "ambigu",
+                    "ambiguous",
                     str(rule["reason"]),
                     applied=False,
                     alternatives=rule.get("alternatives"),
@@ -687,7 +687,7 @@ def audit(
         corrected_encoded = format_game_text(corrected, entry.layout)
         if len(before_encoded) != len(corrected_encoded):
             raise ValueError(
-                f"0x{entry.offset:06X}: correction proposée non isométrique "
+                f"0x{entry.offset:06X}: proposed correction changes encoded length "
                 f"({len(before_encoded)} -> {len(corrected_encoded)})"
             )
 
@@ -757,33 +757,33 @@ def audit(
             },
             "ambiguous_offsets": sorted(
                 f"0x{offset:06X}"
-                for offset in replacement_offsets["ambigu"]
+                for offset in replacement_offsets["ambiguous"]
             ),
         },
         "policy_exclusions": [
             {
                 "forms": ["Soeur", "soeur", "oeufs"],
                 "reason": (
-                    "œ/Œ reste volontairement encodé oe/OE sur deux colonnes"
+                    "œ/Œ intentionally remains encoded as oe/OE across two columns"
                 ),
             },
             {
                 "forms": ["Tot.Soin"],
-                "reason": "abréviation de Total Soin, pas l'adverbe tôt",
+                "reason": "abbreviation of Total Soin, not the adverb tôt",
             },
             {
                 "forms": ["taches solaires"],
-                "reason": "taches est ici le nom correct, sans circonflexe",
+                "reason": "taches is the correct noun here, without a circumflex",
             },
             {
                 "forms": ["évolue!"],
                 "offset_hex": "0x030409",
-                "reason": "présent verbal correct pour « is evolving »",
+                "reason": "correct present-tense verb for 'is evolving'",
             },
             {
                 "forms": ["Électrik paralyse !"],
                 "offset_hex": "0x0397E8",
-                "reason": "paralyse est ici le verbe au présent",
+                "reason": "paralyse is the present-tense verb here",
             },
         ],
         "records": records,
@@ -793,7 +793,7 @@ def audit(
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Inventorie les accents français absents des textes effectifs."
+        description="Inventory missing French accents in effective texts."
     )
     parser.add_argument("--script", default=PATCH_SCRIPT)
     parser.add_argument(
@@ -814,18 +814,18 @@ def main() -> int:
         encoding="utf-8",
     )
     summary = report["summary"]
-    print("Audit accents français")
-    print(f"- Textes effectifs scannés : {report['effective_entries_scanned']}")
-    print(f"- Offsets signalés : {summary['flagged_offsets']}")
+    print("French accent audit")
+    print(f"- Effective texts scanned : {report['effective_entries_scanned']}")
+    print(f"- Flagged offsets : {summary['flagged_offsets']}")
     print(
-        "- Offsets avec proposition isométrique : "
+        "- Offsets with length-preserving proposals : "
         f"{summary['proposal_changed_offsets']}"
     )
     print(
-        "- Occurrences certaines/contextuelles/ambiguës : "
+        "- Certain/contextual/ambiguous occurrences : "
         f"{summary['replacement_occurrences_by_status']}"
     )
-    print(f"- Rapport : {output}")
+    print(f"- Report: {output}")
     return 0
 
 

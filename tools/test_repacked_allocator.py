@@ -673,7 +673,7 @@ class VerifiedPointerRedirectTests(unittest.TestCase):
         self.assertEqual(
             self.entries,
             original_entries,
-            "la redirection ne doit pas muter l'inventaire source",
+            "redirecting must not mutate the source inventory",
         )
 
     def test_redirect_rejects_a_changed_source_word(self) -> None:
@@ -682,7 +682,7 @@ class VerifiedPointerRedirectTests(unittest.TestCase):
 
         with self.assertRaisesRegex(
             ValueError,
-            r"redirection vérifiée 0x038347: cible",
+            r"verified redirect 0x038347: target",
         ):
             apply_verified_pointer_redirects(changed, self.entries)
 
@@ -697,7 +697,7 @@ class VerifiedPointerRedirectTests(unittest.TestCase):
 
         with self.assertRaisesRegex(
             ValueError,
-            r"redirection vérifiée 0x038347: propriétaire inattendu",
+            r"verified redirect 0x038347: owner unexpected",
         ):
             apply_verified_pointer_redirects(self.original, entries)
 
@@ -764,7 +764,7 @@ class VerifiedEmbeddedGraphicalTextTests(unittest.TestCase):
         changed[0x03D074:0x03D076] = b"\0\0"
         with self.assertRaisesRegex(
             ValueError,
-            r"sentinelle vérifiée 0x03D074: cible",
+            r"verified sentinel 0x03D074: target",
         ):
             remove_verified_non_dialogue_pointer_refs(
                 changed,
@@ -936,11 +936,11 @@ print(hashlib.sha256((manifest + '\\n' + residual).encode()).hexdigest())
         self.assertIn(
             (0x031231, 0x031237, 6, 3),
             records,
-            "B1 0D doit rester un code glyphique, pas un délimiteur",
+            "B1 0D must remain a glyph code, not a delimiter",
         )
         self.assertFalse(
             any(start == 0x031233 for start, _, _, _ in records),
-            "le parseur ne doit pas scinder Powder Snow après B1 0D",
+            "the parser must not split Powder Snow after B1 0D",
         )
 
         glyph_starts = {start for start, _, _, _ in records}

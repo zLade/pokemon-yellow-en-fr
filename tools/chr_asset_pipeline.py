@@ -113,7 +113,7 @@ def _reject_duplicate_keys(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
     result: dict[str, Any] = {}
     for key, value in pairs:
         if key in result:
-            raise PipelineError(f"clé JSON dupliquée: {key}")
+            raise PipelineError(f"duplicate JSON key: {key}")
         result[key] = value
     return result
 
@@ -125,7 +125,7 @@ def _load_json_bytes(raw: bytes, label: str) -> Any:
             object_pairs_hook=_reject_duplicate_keys,
         )
     except (UnicodeDecodeError, json.JSONDecodeError) as exc:
-        raise PipelineError(f"{label} JSON invalide: {exc}") from exc
+        raise PipelineError(f"{label} invalid JSON: {exc}") from exc
 
 
 def _canonical_json_bytes(value: Any) -> bytes:
@@ -142,35 +142,35 @@ def _canonical_json_bytes(value: Any) -> bytes:
 
 def _validate_sha256(value: Any, field: str) -> str:
     if not isinstance(value, str) or not SHA256_RE.fullmatch(value):
-        raise PipelineError(f"{field} doit être un SHA-256 hexadécimal")
+        raise PipelineError(f"{field} must be a hexadecimal SHA-256")
     return value.lower()
 
 
 def _parse_safe_relative_path(value: Any, field: str) -> PurePosixPath:
     if not isinstance(value, str) or not value:
-        raise PipelineError(f"{field} doit être un chemin relatif non vide")
+        raise PipelineError(f"{field} must be a nonempty relative path")
     if "\\" in value or ":" in value:
         raise PipelineError(
-            f"{field} doit employer un chemin POSIX relatif sans lecteur"
+            f"{field} must use a relative POSIX path without a drive"
         )
     path = PurePosixPath(value)
     if path.is_absolute() or any(part in ("", ".", "..") for part in path.parts):
-        raise PipelineError(f"{field} sort du pack: {value!r}")
+        raise PipelineError(f"{field} escapes the pack: {value!r}")
     return path
 
 
 def _parse_offset(value: Any, field: str) -> int:
     if not isinstance(value, str) or not HEX_OFFSET_RE.fullmatch(value):
-        raise PipelineError(f"{field} doit être de la forme 0x1234")
+        raise PipelineError(f"{field} must have the form 0x1234")
     return int(value, 16)
 
 
 def load_manifest(path: str | Path) -> Manifest:
     manifest_path = Path(path)
     raw = manifest_path.read_bytes()
-    value = _load_json_bytes(raw, "manifeste")
+    value = _load_json_bytes(raw, "manifest")
     if not isinstance(value, dict):
-        raise PipelineError("le manifeste doit être un objet JSON")
+        raise PipelineError("the manifest must be a JSON object")
 
     allowed_top = {
         "schema",
@@ -181,11 +181,11 @@ def load_manifest(path: str | Path) -> Manifest:
     unknown = sorted(set(value) - allowed_top)
     if unknown:
         raise PipelineError(
-            "champ(s) manifeste inconnu(s): " + ", ".join(unknown)
+            "unknown manifest field(s): " + ", ".join(unknown)
         )
     if value.get("schema") != SCHEMA:
         raise PipelineError(
-            f"schema manifeste {value.get('schema')!r}, attendu {SCHEMA!r}"
+            f"manifest schema {value.get('schema')!r}, expected {SCHEMA!r}"
         )
 
     source_hash = _validate_sha256(
@@ -201,7 +201,7 @@ def load_manifest(path: str | Path) -> Manifest:
 
     raw_assets = value.get("assets")
     if not isinstance(raw_assets, list) or not raw_assets:
-        raise PipelineError("assets doit être une liste non vide")
+        raise PipelineError("assets must be a nonempty list")
 
     assets: list[Asset] = []
     seen_ids: set[str] = set()
@@ -210,17 +210,17 @@ def load_manifest(path: str | Path) -> Manifest:
     for index, item in enumerate(raw_assets):
         label = f"assets[{index}]"
         if not isinstance(item, dict):
-            raise PipelineError(f"{label} doit être un objet")
+            raise PipelineError(f"{label} must be an object")
         unknown_asset = sorted(set(item) - allowed_asset)
         missing_asset = sorted(allowed_asset - set(item))
         if unknown_asset:
             raise PipelineError(
-                f"{label}: champ(s) inconnu(s): "
+                f"{label}: unknown field(s): "
                 + ", ".join(unknown_asset)
             )
         if missing_asset:
             raise PipelineError(
-                f"{label}: champ(s) absent(s): "
+                f"{label}: missing field(s): "
                 + ", ".join(missing_asset)
             )
 
@@ -229,9 +229,9 @@ def load_manifest(path: str | Path) -> Manifest:
             not isinstance(asset_id, str)
             or not ASSET_ID_RE.fullmatch(asset_id)
         ):
-            raise PipelineError(f"{label}.id invalide: {asset_id!r}")
+            raise PipelineError(f"{label}.id invalid: {asset_id!r}")
         if asset_id in seen_ids:
-            raise PipelineError(f"id asset dupliqué: {asset_id}")
+            raise PipelineError(f"duplicate asset ID: {asset_id}")
         seen_ids.add(asset_id)
 
         relative_path = _parse_safe_relative_path(
@@ -239,7 +239,7 @@ def load_manifest(path: str | Path) -> Manifest:
             f"{label}.path",
         )
         if relative_path in seen_paths:
-            raise PipelineError(f"chemin asset dupliqué: {relative_path}")
+            raise PipelineError(f"duplicate asset path: {relative_path}")
         seen_paths.add(relative_path)
 
         offset = _parse_offset(item["offset"], f"{label}.offset")
@@ -249,15 +249,15 @@ def load_manifest(path: str | Path) -> Manifest:
             or not isinstance(length, int)
             or length <= 0
         ):
-            raise PipelineError(f"{label}.length doit être un entier positif")
+            raise PipelineError(f"{label}.length must be a positive integer")
         kind = item["kind"]
         if not isinstance(kind, str) or kind not in ASSET_KINDS:
             raise PipelineError(
-                f"{label}.kind {kind!r}, attendu 'chr' ou 'raw'"
+                f"{label}.kind {kind!r}, expected 'chr' or 'raw'"
             )
         if kind == "chr" and length % 16:
             raise PipelineError(
-                f"{label}: un asset CHR doit mesurer un multiple de 16 octets"
+                f"{label}: a CHR asset must be a multiple of 16 bytes"
             )
 
         assets.append(
@@ -280,28 +280,28 @@ def load_manifest(path: str | Path) -> Manifest:
 
 def parse_mapper163_header(data: bytes) -> dict[str, int | bool]:
     if len(data) < INES_HEADER_SIZE or data[:4] != b"NES\x1A":
-        raise PipelineError("en-tête iNES absent")
+        raise PipelineError("missing iNES header")
     header = data[:INES_HEADER_SIZE]
     if (header[7] & 0x0C) == 0x08:
-        raise PipelineError("NES 2.0 non pris en charge par ce pipeline")
+        raise PipelineError("NES 2.0 is not supported by this pipeline")
     mapper = (header[6] >> 4) | (header[7] & 0xF0)
     prg_bytes = header[4] * 0x4000
     chr_bytes = header[5] * 0x2000
     trainer = bool(header[6] & 0x04)
     if mapper != MAPPER:
-        raise PipelineError(f"mapper {mapper}, attendu {MAPPER}")
+        raise PipelineError(f"mapper {mapper}, expected {MAPPER}")
     if trainer:
-        raise PipelineError("trainer iNES non pris en charge")
+        raise PipelineError("iNES trainer is not supported")
     if chr_bytes != 0:
         raise PipelineError(
-            "CHR-ROM présente; le pipeline cible les sources CHR-RAM en PRG"
+            "CHR-ROM present; the pipeline targets CHR-RAM sources in PRG"
         )
     if prg_bytes <= 0:
-        raise PipelineError("taille PRG nulle")
+        raise PipelineError("zero PRG size")
     expected_size = INES_HEADER_SIZE + prg_bytes
     if len(data) != expected_size:
         raise PipelineError(
-            f"taille ROM {len(data)}, attendue {expected_size} d'après le header"
+            f"ROM size {len(data)}, expected {expected_size} according to the header"
         )
     return {
         "mapper": mapper,
@@ -320,8 +320,8 @@ def _validate_source(
     actual_hash = sha256(data)
     if actual_hash != expected_sha256:
         raise PipelineError(
-            "SHA-256 ROM source inattendu: "
-            f"{actual_hash} au lieu de {expected_sha256}"
+            "unexpected source ROM SHA-256: "
+            f"{actual_hash} instead of {expected_sha256}"
         )
     return header
 
@@ -333,12 +333,12 @@ def _validate_asset_bounds(
     for asset in assets:
         if asset.offset < INES_HEADER_SIZE:
             raise PipelineError(
-                f"asset {asset.asset_id}: offset dans l'en-tête iNES"
+                f"asset {asset.asset_id}: offset inside the iNES header"
             )
         if asset.end > rom_size:
             raise PipelineError(
-                f"asset {asset.asset_id}: plage "
-                f"0x{asset.offset:06X}-0x{asset.end:06X} hors ROM"
+                f"asset {asset.asset_id}: range "
+                f"0x{asset.offset:06X}-0x{asset.end:06X} outside ROM"
             )
 
 
@@ -367,7 +367,7 @@ def _safe_join(root: Path, relative: PurePosixPath) -> Path:
     candidate = root.joinpath(*relative.parts)
     resolved = candidate.resolve(strict=False)
     if not resolved.is_relative_to(root_resolved):
-        raise PipelineError(f"chemin sortant du pack: {relative}")
+        raise PipelineError(f"path escapes the pack: {relative}")
     return candidate
 
 
@@ -433,9 +433,9 @@ def render_chr_png(
 ) -> bytes:
     """Render raw NES 2-bpp tiles to a deterministic grayscale PNG."""
     if not data or len(data) % 16:
-        raise PipelineError("rendu CHR: taille non multiple de 16")
+        raise PipelineError("CHR rendering: size is not a multiple of 16")
     if tiles_per_row <= 0 or scale <= 0:
-        raise PipelineError("rendu CHR: géométrie invalide")
+        raise PipelineError("CHR rendering: invalid geometry")
 
     tile_count = len(data) // 16
     columns = min(tiles_per_row, tile_count)
@@ -513,7 +513,7 @@ def export_pack(
     destination = Path(out_dir)
     if destination.exists():
         raise PipelineError(
-            f"le dossier d'export existe déjà: {destination}"
+            f"export directory already exists: {destination}"
         )
     destination.parent.mkdir(parents=True, exist_ok=True)
     temporary = Path(
@@ -578,10 +578,10 @@ def export_pack(
 def _load_lock(pack_dir: Path) -> dict[str, Any]:
     lock_path = pack_dir / "pack.lock.json"
     if not lock_path.is_file():
-        raise PipelineError(f"lock absent: {lock_path}")
+        raise PipelineError(f"missing lock: {lock_path}")
     value = _load_json_bytes(lock_path.read_bytes(), "lock")
     if not isinstance(value, dict) or value.get("schema") != LOCK_SCHEMA:
-        raise PipelineError("schema du lock invalide")
+        raise PipelineError("invalid lock schema")
     return value
 
 
@@ -599,25 +599,25 @@ def prepare_pack(
     pack = Path(pack_dir)
     lock = _load_lock(pack)
     if lock.get("manifest_sha256") != manifest.file_sha256:
-        raise PipelineError("le manifeste ne correspond pas au lock")
+        raise PipelineError("the manifest does not match the lock")
     if lock.get("source_sha256") != sha256(source):
-        raise PipelineError("la ROM source ne correspond pas au lock")
+        raise PipelineError("the source ROM does not match the lock")
     if lock.get("source_size") != len(source):
-        raise PipelineError("la taille de ROM ne correspond pas au lock")
+        raise PipelineError("the ROM size does not match the lock")
 
     raw_lock_assets = lock.get("assets")
     if not isinstance(raw_lock_assets, list):
-        raise PipelineError("liste assets absente du lock")
+        raise PipelineError("missing asset list in the lock")
     lock_by_id: dict[str, dict[str, Any]] = {}
     for item in raw_lock_assets:
         if not isinstance(item, dict) or not isinstance(item.get("id"), str):
-            raise PipelineError("entrée asset invalide dans le lock")
+            raise PipelineError("invalid asset entry in the lock")
         asset_id = item["id"]
         if asset_id in lock_by_id:
-            raise PipelineError(f"asset dupliqué dans le lock: {asset_id}")
+            raise PipelineError(f"duplicate asset in the lock: {asset_id}")
         lock_by_id[asset_id] = item
     if set(lock_by_id) != {asset.asset_id for asset in manifest.assets}:
-        raise PipelineError("les assets du lock diffèrent du manifeste")
+        raise PipelineError("lock assets differ from the manifest")
 
     states: list[AssetState] = []
     for asset in manifest.assets:
@@ -631,38 +631,38 @@ def prepare_pack(
         for key, expected in expected_metadata.items():
             if item.get(key) != expected:
                 raise PipelineError(
-                    f"asset {asset.asset_id}: {key} du lock incohérent"
+                    f"asset {asset.asset_id}: {key} in the lock is inconsistent"
                 )
 
         baseline_path = _safe_join(pack / "baseline", asset.path)
         work_path = _safe_join(pack / "work", asset.path)
         if not baseline_path.is_file():
             raise PipelineError(
-                f"asset {asset.asset_id}: baseline absente"
+                f"asset {asset.asset_id}: missing baseline"
             )
         if not work_path.is_file():
-            raise PipelineError(f"asset {asset.asset_id}: work absent")
+            raise PipelineError(f"asset {asset.asset_id}: missing work file")
         baseline = baseline_path.read_bytes()
         work = work_path.read_bytes()
         if len(baseline) != asset.length:
             raise PipelineError(
-                f"asset {asset.asset_id}: taille baseline "
-                f"{len(baseline)}, attendue {asset.length}"
+                f"asset {asset.asset_id}: baseline size "
+                f"{len(baseline)}, expected {asset.length}"
             )
         if len(work) != asset.length:
             raise PipelineError(
-                f"asset {asset.asset_id}: taille work "
-                f"{len(work)}, attendue {asset.length}"
+                f"asset {asset.asset_id}: work size "
+                f"{len(work)}, expected {asset.length}"
             )
         expected_baseline_hash = item.get("baseline_sha256")
         if sha256(baseline) != expected_baseline_hash:
             raise PipelineError(
-                f"asset {asset.asset_id}: hash baseline incorrect"
+                f"asset {asset.asset_id}: incorrect baseline hash"
             )
         source_block = source[asset.offset : asset.end]
         if baseline != source_block:
             raise PipelineError(
-                f"asset {asset.asset_id}: baseline différente de la ROM"
+                f"asset {asset.asset_id}: baseline differs from the ROM"
             )
         states.append(
             AssetState(
@@ -674,7 +674,7 @@ def prepare_pack(
 
     expected_overlaps = _asset_overlaps(manifest.assets)
     if lock.get("overlaps") != expected_overlaps:
-        raise PipelineError("la matrice d'overlap du lock est incohérente")
+        raise PipelineError("the lock overlap matrix is inconsistent")
 
     return PreparedPack(
         manifest=manifest,
@@ -739,10 +739,10 @@ def merge_pack(prepared: PreparedPack) -> MergeResult:
             existing_value, owners = existing
             if existing_value != after:
                 raise PipelineError(
-                    "conflit d'overlap à "
+                    "overlap conflict at "
                     f"0x{absolute:06X}: "
-                    f"{'/'.join(owners)} propose 0x{existing_value:02X}, "
-                    f"{state.asset.asset_id} propose 0x{after:02X}"
+                    f"{'/'.join(owners)} proposes 0x{existing_value:02X}, "
+                    f"{state.asset.asset_id} proposes 0x{after:02X}"
                 )
             owners.append(state.asset.asset_id)
         per_asset_logical[state.asset.asset_id] = changed
@@ -770,7 +770,7 @@ def merge_pack(prepared: PreparedPack) -> MergeResult:
     ]
     if unexpected:
         raise PipelineError(
-            "diff hors whitelist: "
+            "diff outside whitelist: "
             + ", ".join(f"0x{offset:06X}" for offset in unexpected[:8])
         )
 
@@ -859,7 +859,7 @@ def _validate_reextraction(
         expected_hash = report_by_id[state.asset.asset_id]["output_sha256"]
         if sha256(extracted) != expected_hash:
             raise PipelineError(
-                f"roundtrip asset {state.asset.asset_id} incorrect"
+                f"incorrect asset roundtrip for {state.asset.asset_id}"
             )
 
 
@@ -876,7 +876,7 @@ def verify_pack(
 
 def build_ips(base: bytes, patched: bytes) -> bytes:
     if len(base) != len(patched):
-        raise PipelineError("base IPS et sortie de tailles différentes")
+        raise PipelineError("IPS base and output sizes differ")
     output = bytearray(b"PATCH")
     cursor = 0
     while cursor < len(base):
@@ -892,7 +892,7 @@ def build_ips(base: bytes, patched: bytes) -> bytes:
         while block:
             chunk = block[:0xFFFF]
             if block_offset > 0xFFFFFF:
-                raise PipelineError("offset IPS supérieur à 24 bits")
+                raise PipelineError("IPS offset exceeds 24 bits")
             output.extend(block_offset.to_bytes(3, "big"))
             output.extend(len(chunk).to_bytes(2, "big"))
             output.extend(chunk)
@@ -904,7 +904,7 @@ def build_ips(base: bytes, patched: bytes) -> bytes:
 
 def apply_ips(base: bytes, patch: bytes) -> bytes:
     if not patch.startswith(b"PATCH"):
-        raise PipelineError("signature IPS absente")
+        raise PipelineError("missing IPS signature")
     output = bytearray(base)
     cursor = 5
     while True:
@@ -912,28 +912,28 @@ def apply_ips(base: bytes, patch: bytes) -> bytes:
             cursor += 3
             break
         if cursor + 5 > len(patch):
-            raise PipelineError("IPS tronqué")
+            raise PipelineError("truncated IPS")
         offset = int.from_bytes(patch[cursor : cursor + 3], "big")
         size = int.from_bytes(patch[cursor + 3 : cursor + 5], "big")
         cursor += 5
         if size == 0:
             if cursor + 3 > len(patch):
-                raise PipelineError("record RLE IPS tronqué")
+                raise PipelineError("truncated IPS RLE record")
             repeat = int.from_bytes(patch[cursor : cursor + 2], "big")
             value = patch[cursor + 2]
             cursor += 3
             payload = bytes([value]) * repeat
         else:
             if cursor + size > len(patch):
-                raise PipelineError("record IPS tronqué")
+                raise PipelineError("truncated IPS record")
             payload = patch[cursor : cursor + size]
             cursor += size
         end = offset + len(payload)
         if end > len(output):
-            raise PipelineError("record IPS hors ROM")
+            raise PipelineError("IPS record outside ROM")
         output[offset:end] = payload
     if cursor != len(patch):
-        raise PipelineError("données après EOF IPS")
+        raise PipelineError("data after IPS EOF")
     return bytes(output)
 
 
@@ -944,15 +944,15 @@ def _validate_ips_base(
 ) -> None:
     parse_mapper163_header(data)
     if len(data) != source_size:
-        raise PipelineError("base IPS de taille différente de la ROM source")
+        raise PipelineError("IPS base size differs from the source ROM")
     actual_hash = sha256(data)
     if (
         manifest.ips_base_sha256 is not None
         and actual_hash != manifest.ips_base_sha256
     ):
         raise PipelineError(
-            "SHA-256 base IPS inattendu: "
-            f"{actual_hash} au lieu de {manifest.ips_base_sha256}"
+            "unexpected IPS base SHA-256: "
+            f"{actual_hash} instead of {manifest.ips_base_sha256}"
         )
 
 
@@ -970,26 +970,26 @@ def _validate_compile_paths(
         previous = output_owners.get(path)
         if previous is not None:
             raise PipelineError(
-                f"sorties {previous} et {label} identiques: {path}"
+                f"outputs {previous} and {label} are identical: {path}"
             )
         output_owners[path] = label
 
     protected_inputs = {
         prepared.source_path.resolve(): "ROM source",
         ips_base_path.resolve(): "base IPS",
-        Path(manifest_path).resolve(): "manifeste",
-        (prepared.pack_dir / "pack.lock.json").resolve(): "lock du pack",
+        Path(manifest_path).resolve(): "manifest",
+        (prepared.pack_dir / "pack.lock.json").resolve(): "pack lock",
     }
     pack_root = prepared.pack_dir.resolve()
     for label, path in resolved_outputs.items():
         protected = protected_inputs.get(path)
         if protected is not None:
             raise PipelineError(
-                f"la sortie {label} ne peut pas écraser {protected}"
+                f"output {label} cannot overwrite {protected}"
             )
         if path.is_relative_to(pack_root):
             raise PipelineError(
-                f"la sortie {label} ne peut pas être écrite dans le pack"
+                f"output {label} cannot be written inside the pack"
             )
 
 
@@ -1015,7 +1015,7 @@ def compile_pack(
     )
     ips = build_ips(ips_base, result.patched)
     if apply_ips(ips_base, ips) != result.patched:
-        raise PipelineError("roundtrip IPS différent de la ROM compilée")
+        raise PipelineError("IPS roundtrip differs from the compiled ROM")
 
     out_rom = Path(out_rom_path)
     out_ips = Path(out_ips_path)
@@ -1074,7 +1074,7 @@ def roundtrip_pack(
         ips_base_label = str(ips_base_file.resolve())
     ips = build_ips(ips_base, result.patched)
     if apply_ips(ips_base, ips) != result.patched:
-        raise PipelineError("roundtrip IPS incorrect")
+        raise PipelineError("incorrect IPS roundtrip")
 
     report = dict(result.report)
     report["command"] = "roundtrip"
@@ -1096,7 +1096,7 @@ def _write_optional_report(
 
 
 def _print_report(report: dict[str, Any]) -> None:
-    print("Pipeline assets CHR mapper 163: PASS")
+    print("Mapper 163 CHR asset pipeline: PASS")
     if "source" in report:
         print(f"- Source SHA-256 : {report['source']['sha256']}")
     if "asset_count" in report:
@@ -1105,15 +1105,15 @@ def _print_report(report: dict[str, Any]) -> None:
         print(f"- Pack : {report['pack']}")
         return
     print(f"- Assets : {len(report['assets'])}")
-    print(f"- Modifications logiques : {report['logical_changed_bytes']}")
-    print(f"- Modifications physiques : {report['physical_changed_bytes']}")
-    print(f"- Whitelist physique : {report['whitelist_bytes']} octets")
-    print(f"- Propositions partagées : {report['shared_proposal_offsets']}")
+    print(f"- Logical changes : {report['logical_changed_bytes']}")
+    print(f"- Physical changes : {report['physical_changed_bytes']}")
+    print(f"- Physical whitelist : {report['whitelist_bytes']} bytes")
+    print(f"- Shared proposals : {report['shared_proposal_offsets']}")
     propagated = sum(
         item["propagated_alias_bytes"] for item in report["assets"]
     )
-    print(f"- Octets propagés dans des aliases : {propagated}")
-    print(f"- Sortie SHA-256 : {report['output_sha256']}")
+    print(f"- Bytes propagated into aliases : {propagated}")
+    print(f"- Output SHA-256 : {report['output_sha256']}")
 
 
 def _add_pack_arguments(parser: argparse.ArgumentParser) -> None:
@@ -1124,13 +1124,13 @@ def _add_pack_arguments(parser: argparse.ArgumentParser) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Exporte et recompile des assets CHR mapper 163.",
+        description="Export and recompile mapper 163 CHR assets.",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     export = subparsers.add_parser(
         "export",
-        help="exporte baseline/work/previews et crée le lock",
+        help="export baseline/work/previews and create the lock",
     )
     export.add_argument("--manifest", required=True)
     export.add_argument("--rom", required=True)
@@ -1138,21 +1138,21 @@ def build_parser() -> argparse.ArgumentParser:
 
     diff = subparsers.add_parser(
         "diff",
-        help="compare work aux baselines et simule la fusion",
+        help="compare work files with baselines and simulate merging",
     )
     _add_pack_arguments(diff)
     diff.add_argument("--report")
 
     verify = subparsers.add_parser(
         "verify",
-        help="valide source, lock, assets, overlaps et roundtrip assets",
+        help="validate source, lock, assets, overlaps and asset roundtrip",
     )
     _add_pack_arguments(verify)
     verify.add_argument("--report")
 
     compile_parser = subparsers.add_parser(
         "compile",
-        help="compile la ROM, l'IPS et un rapport JSON",
+        help="compile the ROM, IPS and a JSON report",
     )
     _add_pack_arguments(compile_parser)
     compile_parser.add_argument("--ips-base", required=True)
@@ -1162,7 +1162,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     roundtrip = subparsers.add_parser(
         "roundtrip",
-        help="vérifie réextraction et aller-retour IPS sans écrire",
+        help="verify re-extraction and IPS roundtrip without writing",
     )
     _add_pack_arguments(roundtrip)
     roundtrip.add_argument("--ips-base")
@@ -1202,11 +1202,11 @@ def main(argv: list[str] | None = None) -> int:
             )
             _write_optional_report(report, args.report)
         else:
-            parser.error(f"commande inconnue: {args.command}")
+            parser.error(f"unknown command: {args.command}")
         _print_report(report)
         return 0
     except (OSError, PipelineError) as exc:
-        print(f"Pipeline assets CHR mapper 163: ECHEC ({exc})", file=sys.stderr)
+        print(f"Mapper 163 CHR asset pipeline: FAIL ({exc})", file=sys.stderr)
         return 2
 
 

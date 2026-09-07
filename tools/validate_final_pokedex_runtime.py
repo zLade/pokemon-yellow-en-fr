@@ -74,7 +74,7 @@ def validate(
     )
     if len(records) != expected_count:
         errors.append(
-            f"table source: {len(records)} fiches au lieu de {expected_count}"
+            f"table source: {len(records)} fiches instead of {expected_count}"
         )
 
     entries = parse_patch_entries(
@@ -83,7 +83,7 @@ def validate(
     )
     by_offset = {entry.offset: entry for entry in entries}
     if len(by_offset) != len(entries):
-        errors.append("offset(s) en double dans script.py")
+        errors.append("duplicate offset(s) in script.py")
 
     exact_payloads = 0
     exact_terminators = 0
@@ -99,7 +99,7 @@ def validate(
     table_end = POKEDEX_DESCRIPTION_TABLE_OFFSET + expected_count * 2
     if len(final_rom) < table_end:
         errors.append(
-            "ROM finale trop courte pour la table Pokédex compilée"
+            "final ROM too short for the compiled Pokédex table"
         )
 
     for record in records:
@@ -124,8 +124,8 @@ def validate(
             valid_pointer_ranges += 1
         else:
             errors.append(
-                f"Pokédex #{species_id}: pointeur final 0x{cpu_pointer:04X} "
-                f"hors banque (cible 0x{target_offset:06X})"
+                f"Pokédex #{species_id}: final pointer 0x{cpu_pointer:04X} "
+                f"outside bank (target 0x{target_offset:06X})"
             )
 
         entry = by_offset.get(source_offset)
@@ -134,12 +134,12 @@ def validate(
         lines: tuple[bytes, ...] = ()
         if entry is None:
             errors.append(
-                f"Pokédex #{species_id}: source absente à "
+                f"Pokédex #{species_id}: source missing at "
                 f"0x{source_offset:06X}"
             )
         elif entry.layout != POKEDEX_LAYOUT:
             errors.append(
-                f"Pokédex #{species_id}: layout {entry.layout!r} au lieu de "
+                f"Pokédex #{species_id}: layout {entry.layout!r} instead of "
                 f"{POKEDEX_LAYOUT!r}"
             )
         else:
@@ -170,8 +170,8 @@ def validate(
                 min(len(actual), len(expected)),
             )
             errors.append(
-                f"Pokédex #{species_id}: payload compilé différent à "
-                f"+0x{mismatch:X} (cible 0x{target_offset:06X})"
+                f"Pokédex #{species_id}: compiled payload differs at "
+                f"+0x{mismatch:X} (target 0x{target_offset:06X})"
             )
 
         terminator_offset = target_offset + len(expected)
@@ -189,13 +189,13 @@ def validate(
                 else None
             )
             rendered = (
-                "hors ROM"
+                "outside ROM"
                 if actual_terminator is None
                 else f"0x{actual_terminator:02X}"
             )
             errors.append(
-                f"Pokédex #{species_id}: terminateur final {rendered} "
-                "au lieu de 0x0D"
+                f"Pokédex #{species_id}: final terminator {rendered} "
+                "instead of 0x0D"
             )
 
         visible_reflow = b" ".join(
@@ -213,8 +213,8 @@ def validate(
         if word_split:
             word_split_boundaries += 1
             errors.append(
-                f"Pokédex #{species_id}: perte ou césure lexicale "
-                "dans les lignes compilées"
+                f"Pokédex #{species_id}: lexical loss or split "
+                "in compiled lines"
             )
 
         physical_lines += len(lines)
@@ -288,8 +288,8 @@ def validate(
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "Valide les 159 descriptions Pokédex via les pointeurs de la "
-            "ROM finale compilée."
+            "Validate the 159 Pokédex descriptions through pointers in the "
+            "final compiled ROM."
         )
     )
     parser.add_argument("--rom", default=DEFAULT_FINAL_ROM)
@@ -310,30 +310,30 @@ def main() -> int:
         encoding="utf-8",
     )
     summary = report["summary"]
-    print("Validation Pokédex compilé")
+    print("Compiled Pokédex validation")
     print(f"- ROM : {report['inputs']['final_rom']}")
     print(f"- SHA-256 : {report['inputs']['final_rom_sha256']}")
     print(
-        "- Fiches : "
+        "- Records: "
         f"{summary['exact_payloads']}/{summary['expected_records']} "
-        "payloads exacts"
+        "exact payloads"
     )
     print(
-        "- Pointeurs/terminateurs : "
+        "- Pointers/terminators : "
         f"{summary['valid_pointer_ranges']}/"
         f"{summary['exact_terminators']}"
     )
     print(
-        f"- Lignes physiques : {summary['physical_lines']}; "
-        f"césures lexicales : {summary['word_split_boundaries']}"
+        f"- Physical lines : {summary['physical_lines']}; "
+        f"lexical splits : {summary['word_split_boundaries']}"
     )
-    print(f"- Rapport : {output.resolve()}")
+    print(f"- Report: {output.resolve()}")
     if errors:
-        print(f"- Résultat : ÉCHEC ({len(errors)} erreur(s))")
+        print(f"- Result: FAIL ({len(errors)} error(s))")
         for error in errors[:20]:
             print(f"  - {error}")
         return 1
-    print("- Résultat : PASS")
+    print("- Result: PASS")
     return 0
 
 

@@ -57,13 +57,13 @@ def u16le(data: bytes, offset: int) -> int:
 
 def ines_info(data: bytes) -> dict[str, int | bool]:
     if len(data) < INES_HEADER_SIZE or data[:4] != b"NES\x1a":
-        raise CatalogError("fichier iNES invalide")
+        raise CatalogError("invalid iNES file")
     prg_length = data[4] * 0x4000
     chr_length = data[5] * 0x2000
     expected_length = INES_HEADER_SIZE + prg_length + chr_length
     if len(data) != expected_length:
         raise CatalogError(
-            f"taille ROM {len(data)}, attendue {expected_length}"
+            f"ROM size {len(data)}, expected {expected_length}"
         )
     return {
         "mapper": (data[6] >> 4) | (data[7] & 0xF0),
@@ -92,7 +92,7 @@ def scan_screen_pack_records(
         pair_base = INES_HEADER_SIZE + pair * PAIR_SIZE
         pair_end = pair_base + PAIR_SIZE
         if pair_end > len(data):
-            raise CatalogError(f"paire PRG {pair} hors ROM")
+            raise CatalogError(f"PRG pair {pair} outside ROM")
 
         def to_file(cpu_pointer: int) -> int | None:
             if CPU_BASE <= cpu_pointer <= 0xFFFF:
@@ -293,7 +293,7 @@ def scan_screen_pack_records(
                         "target_offset": hex_offset(chr_offset),
                         "length": None,
                         "note": (
-                            "Le record borne le pointeur, pas la longueur."
+                            "The record bounds the pointer, not the length."
                         ),
                     },
                     "screen_group": {
@@ -307,7 +307,7 @@ def scan_screen_pack_records(
             )
         if not pair_records:
             raise CatalogError(
-                f"aucun record screen-pack valide dans la paire {pair}"
+                f"no valid screen-pack record in pair {pair}"
             )
         records.extend(pair_records)
     return records
@@ -457,9 +457,9 @@ def build_catalog(
     data = path.read_bytes()
     info = ines_info(data)
     if info["mapper"] != 163:
-        raise CatalogError(f"mapper {info['mapper']}, attendu 163")
+        raise CatalogError(f"mapper {info['mapper']}, expected 163")
     if info["chr_length"] != 0:
-        raise CatalogError("CHR-ROM non nulle; CHR-RAM attendue")
+        raise CatalogError("nonzero CHR-ROM; CHR-RAM expected")
 
     records = scan_screen_pack_records(
         data,
@@ -468,7 +468,7 @@ def build_catalog(
     )
     if expected_records is not None and len(records) != expected_records:
         raise CatalogError(
-            f"{len(records)} records, attendu {expected_records}"
+            f"{len(records)} records, expected {expected_records}"
         )
     pipeline_assets = build_pipeline_assets(records)
     descriptors = bounded_descriptor_assets(records)
@@ -520,8 +520,8 @@ def build_pipeline_manifest(
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "Catalogue les tilemaps/attributs strictement bornés des "
-            "screen-packs mapper 163."
+            "Catalog strictly bounded tilemaps/attributes from "
+            "mapper 163 screen-packs."
         )
     )
     parser.add_argument("rom", type=Path)
@@ -543,7 +543,7 @@ def main() -> int:
     parser.add_argument(
         "--manifest",
         action="store_true",
-        help="émet seulement le manifeste strict pour chr_asset_pipeline.py",
+        help="emit only the strict manifest for chr_asset_pipeline.py",
     )
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()

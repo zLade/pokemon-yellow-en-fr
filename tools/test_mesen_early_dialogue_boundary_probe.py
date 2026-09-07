@@ -59,7 +59,7 @@ def lua_target_rows(source: str) -> dict[int, dict[str, object]]:
             match.group("payload"),
         )
         if not payload_chunks:
-            raise AssertionError(f"payload_hex vide à ${offset:06X}")
+            raise AssertionError(f"Empty payload_hex at ${offset:06X}")
         milestone_match = re.search(
             r'milestone\s*=\s*"([^"]+)"',
             match.group("body"),
@@ -103,7 +103,7 @@ class MesenEarlyDialogueBoundaryProbeTests(unittest.TestCase):
             self.assertEqual(
                 row["payload"],
                 expected,
-                f"payload Lua périmé à ${offset:06X}",
+                f"Stale Lua payload at ${offset:06X}",
             )
             self.assertEqual(row["payload"][-1:], b"\x0D")
 

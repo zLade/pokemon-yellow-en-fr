@@ -18,11 +18,11 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 653,0x033290,5382,dialogue_19_19,14,pointer_table,high,0x03315F,948,0x0334C2,"
 魔术师:你的目标的确伟大!",ascii,I got whipped.,pending_semantic_review,
 654,0x03329F,6091,dialogue_19_19,123,pointer_table,high,0x033143,934,0x03329E,"
-小茂:怎么了?小智在这里遇见你还真是偶然啊!你也去宠物精灵联盟啊?徽章也都收集齐了,干的不错嘛!不过在去联盟之前先和我比试一场吧!",graphical_codes,"<B0B6><B1EC>:<B2D0><B1E6><B0F8>?<B0B6><B0B7><B0B8><B0EE><B0BF><B4DA><B2CD><B0C5><B2BD><B1F5><B0C2><B9E3><B2AA><B2AC>!<B0C5><B0F6><B0C7><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF><B2AC>?<B3D1><B3D2><B0F6><B1C0><B6B7><B6B8><BDE5><B0F8>,<B5A5><B0BC><B0CE><B2DC><B1DC>!<B0CE><B3D4><B0B8><B0C7><B3CE><B3CF><B3E3><B3DD><B6E0><B0C9><B1C2><B2B2><B4A3><B1D1><B3B5><B0BE>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+小茂:怎么了?小智在这里遇见你还真是偶然啊!你也去宠物精灵联盟啊?徽章也都收集齐了,干的不错嘛!不过在去联盟之前先和我比试一场吧!",graphical_codes,"<B0B6><B1EC>:<B2D0><B1E6><B0F8>?<B0B6><B0B7><B0B8><B0EE><B0BF><B4DA><B2CD><B0C5><B2BD><B1F5><B0C2><B9E3><B2AA><B2AC>!<B0C5><B0F6><B0C7><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF><B2AC>?<B3D1><B3D2><B0F6><B1C0><B6B7><B6B8><BDE5><B0F8>,<B5A5><B0BC><B0CE><B2DC><B1DC>!<B0CE><B3D4><B0B8><B0C7><B3CE><B3CF><B3E3><B3DD><B6E0><B0C9><B1C2><B2B2><B4A3><B1D1><B3B5><B0BE>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 655,0x03331B,6099,dialogue_19_19,121,pointer_table,high,0x033145,935,0x03331B,"
-小茂:我只是一时太大意了,可恶!不过你这样的水平想称霸精灵联盟...你还是多练习一下比较好!我多管闲事了啊,那我先走了!再会了...",graphical_codes,"<0A><B0B6><B1EC>:<B1C2><B2BE><B0C2><B1D1><B0F0><B6C6><B1BE><B4A5><B0F8>,<B0DE><B5E0>!<B0CE><B3D4><B0C5><B0EE><B2DA><B0BC><B5F7><B5DC><B1D7><B1C8><BBD4><B0A1><B0A2><B3CE><B3CF>...<B0C5><B2BD><B0C2><B0C8><B2C5><B2C6><B1D1><B0F9><B2B2><B3EB><B1B4>!<B1C2><B0C8><B3A4><B5C0><B1D5><B0F8><B2AC>,<B0B9><B1C2><B6E0><B7C3><B0F8>!<B0FB><B1F9><B0F8>...",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+小茂:我只是一时太大意了,可恶!不过你这样的水平想称霸精灵联盟...你还是多练习一下比较好!我多管闲事了啊,那我先走了!再会了...",graphical_codes,"<0A><B0B6><B1EC>:<B1C2><B2BE><B0C2><B1D1><B0F0><B6C6><B1BE><B4A5><B0F8>,<B0DE><B5E0>!<B0CE><B3D4><B0C5><B0EE><B2DA><B0BC><B5F7><B5DC><B1D7><B1C8><BBD4><B0A1><B0A2><B3CE><B3CF>...<B0C5><B2BD><B0C2><B0C8><B2C5><B2C6><B1D1><B0F9><B2B2><B3EB><B1B4>!<B1C2><B0C8><B3A4><B5C0><B1D5><B0F8><B2AC>,<B0B9><B1C2><B6E0><B7C3><B0F8>!<B0FB><B1F9><B0F8>...",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 656,0x033395,6108,dialogue_19_19,39,pointer_table,high,0x033147,936,0x033395,"
-守卫:啊!你拿的的确是联盟徽章!请通过吧!",graphical_codes,<0A><B3DF><B3E0>:<B2AC>!<B0C5><B0C6><B0BC><B0BC><B9DB><B0C2><B3CE><B3CF><B3D1><B3D2>!<B2D8><B3DA><B3D4><B0BE>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+守卫:啊!你拿的的确是联盟徽章!请通过吧!",graphical_codes,<0A><B3DF><B3E0>:<B2AC>!<B0C5><B0C6><B0BC><B0BC><B9DB><B0C2><B3CE><B3CF><B3D1><B3D2>!<B2D8><B3DA><B3D4><B0BE>!,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 657,0x0333BD,5314,dialogue_19_19,37,pointer_table,high,0x033155,943,0x033455,"
 魔术师:你知道什么是魔术吗?",ascii,You're gonna take on the Elite Four?,pending_semantic_review,
 658,0x0333E3,5319,dialogue_19_19,27,pointer_table,high,0x033157,944,0x033471,"
@@ -74,7 +74,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 681,0x033CB1,4028,dialogue_19_19,62,pointer_table,high,0x03318B,970,0x033CB1,"
 妈妈:听说华蓝市附近有个山洞发生异常,连精灵联盟的四天王加纳都去调查了...",ascii,"Ash,Lorelei was looking for you,shewent to Cerulean cave.",pending_semantic_review,
 682,0x033CF0,6114,dialogue_19_19,105,pointer_table,high,0x03318D,971,0x033CFA,"
-裁判:真是抱歉,四天王的加纳因为不在所以现在联盟暂停训练家挑战...加纳好像去华蓝市调查异变去了...",graphical_codes,"00000000000<B3FC><B3FD>:<B1F5><B0C2><B9FA><B9FB>,<B1E1><B1AD><B4F7><B0BC><B2FC><BDAB><B0E9><B0EA><B0CE><B0B8><B0AD><B0DF><B2F5><B0B8><B3CE><B3CF><B0EF><B3DB><B2DE><B2C5><B1BF><B3FB><B0F2>...<B2FC><BDAB><B1B4><B1B5><B0C7><B4CF><B4D0><B4D1><BDF6><BDAA><BCEC><B3D6><B0C7><B0F8>...",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+裁判:真是抱歉,四天王的加纳因为不在所以现在联盟暂停训练家挑战...加纳好像去华蓝市调查异变去了...",graphical_codes,"00000000000<B3FC><B3FD>:<B1F5><B0C2><B9FA><B9FB>,<B1E1><B1AD><B4F7><B0BC><B2FC><BDAB><B0E9><B0EA><B0CE><B0B8><B0AD><B0DF><B2F5><B0B8><B3CE><B3CF><B0EF><B3DB><B2DE><B2C5><B1BF><B3FB><B0F2>...<B2FC><BDAB><B1B4><B1B5><B0C7><B4CF><B4D0><B4D1><BDF6><BDAA><BCEC><B3D6><B0C7><B0F8>...",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 683,0x033D5B,5856,dialogue_19_19,11,pointer_table,high,0x03318F,972,0x033D5A,"
 超梦:......",ascii,MewTwo:....,pending_semantic_review,
 684,0x033D67,4036,dialogue_19_19,247,pointer_table,high,0x033191,973,0x033D67,"
@@ -88,29 +88,29 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 688,0x033EF8,4054,dialogue_19_19,76,pointer_table,high,0x0331A1,981,0x033EF8,"
 船员:怎么样,是场神奇的旅行吧.现在精灵联盟因为四天王的加纳又回来了,所以又开始接受新的冠军挑战了!",ascii,"Welcome to Navel Rock! If you'd liketo leave, just board the S.S.Anne.",pending_semantic_review,
 689,0x033F45,6119,dialogue_19_19,127,pointer_table,high,0x0331A3,982,0x033F59,"
-加纳:欢迎来到宠物精灵联盟!我是冰系四天王加纳!还没碰过害怕的东西,让我生气了就让你的精灵动弹不得!哈哈觉悟吧!",graphical_codes,"000000000000000000000<B2FC><BDAB>:<B0D2><B0D3><B0FC><B0DB><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B1C2><B0C2><BAE8><B0AF><B1E1><B1AD><B4F7><B2FC><BDAB>!<B2BD><B2B6><B8A4><B3D4><B3EE><B8AC><B0BC><B0D5><B0D6>,<B2CB><B1C2><B1C9><B4AA><B0F8><B2AB><B2CB><B0C5><B0BC><B0A1><B0A2><B0B2><BBF7><B0CE><B2C1>!<B3BC><B3BC><B5EB><BAB8><B0BE>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+加纳:欢迎来到宠物精灵联盟!我是冰系四天王加纳!还没碰过害怕的东西,让我生气了就让你的精灵动弹不得!哈哈觉悟吧!",graphical_codes,"000000000000000000000<B2FC><BDAB>:<B0D2><B0D3><B0FC><B0DB><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B1C2><B0C2><BAE8><B0AF><B1E1><B1AD><B4F7><B2FC><BDAB>!<B2BD><B2B6><B8A4><B3D4><B3EE><B8AC><B0BC><B0D5><B0D6>,<B2CB><B1C2><B1C9><B4AA><B0F8><B2AB><B2CB><B0C5><B0BC><B0A1><B0A2><B0B2><BBF7><B0CE><B2C1>!<B3BC><B3BC><B5EB><BAB8><B0BE>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 690,0x033FC5,6127,dialogue_19_19,57,pointer_table,high,0x0331A5,983,0x033FC5,"
-加纳:你到底是什么人物?...好吧,我输了就朝下一个房间前进吧",graphical_codes,"<0A><B2FC><BDAB>:<B0C5><B0DB><B3D5><B0C2><B2AF><B1E6><B2B5><B0C1>?...<B1B4><B0BE>,<B1C2><B3F1><B0F8><B2AB><B3FE><B0F9><B1D1><B0BA><B9EA><BAF1><B3DD><B3DE><B0BE>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+加纳:你到底是什么人物?...好吧,我输了就朝下一个房间前进吧",graphical_codes,"<0A><B2FC><BDAB>:<B0C5><B0DB><B3D5><B0C2><B2AF><B1E6><B2B5><B0C1>?...<B1B4><B0BE>,<B1C2><B3F1><B0F8><B2AB><B3FE><B0F9><B1D1><B0BA><B9EA><BAF1><B3DD><B3DE><B0BE>",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 691,0x033FFF,6133,dialogue_19_19,127,pointer_table,high,0x0331A7,984,0x033FFF,"
-西巴:我是地系四天王西巴!不管是精灵或人只要战斗磨练都能变的很强,就靠这中磨练与我的精灵工生存!你是小智吧,来尝尝我们的超级力量吧!",graphical_codes,"<0A><B0D6><BBC0>:<B1C2><B0C2><B3BB><B0AF><B1E1><B1AD><B4F7><B0D6><BBC0>!<B0CE><B3A4><B0C2><B0A1><B0A2><B1CB><B2B5><B2BE><B0C3><B0F2><B4B7><BDEC><B2C5><B1C0><B0EC><B3D6><B0BC><B3F7><B2C9>,<B2AB><BAC4><B0EE><B0DC><BDEC><B2C5><B2A1><B1C2><B0BC><B0A1><B0A2><B3B2><B1C9><B0A5>!<B0C5><B0C2><B0B6><B0B7><B0BE>,<B0FC><B7EA><B7EA><B1C2><B2EF><B0BC><B4E4><B8B2><B0E3><B3EC><B0BE>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+西巴:我是地系四天王西巴!不管是精灵或人只要战斗磨练都能变的很强,就靠这中磨练与我的精灵工生存!你是小智吧,来尝尝我们的超级力量吧!",graphical_codes,"<0A><B0D6><BBC0>:<B1C2><B0C2><B3BB><B0AF><B1E1><B1AD><B4F7><B0D6><BBC0>!<B0CE><B3A4><B0C2><B0A1><B0A2><B1CB><B2B5><B2BE><B0C3><B0F2><B4B7><BDEC><B2C5><B1C0><B0EC><B3D6><B0BC><B3F7><B2C9>,<B2AB><BAC4><B0EE><B0DC><BDEC><B2C5><B2A1><B1C2><B0BC><B0A1><B0A2><B3B2><B1C9><B0A5>!<B0C5><B0C2><B0B6><B0B7><B0BE>,<B0FC><B7EA><B7EA><B1C2><B2EF><B0BC><B4E4><B8B2><B0E3><B3EC><B0BE>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 692,0x03407F,6141,dialogue_19_19,65,pointer_table,high,0x0331A9,985,0x03407F,"
-西巴:到底是怎么回事?我竟然输了...既然输了,我无话可说,你就前进吧!",graphical_codes,"<0A><B0D6><BBC0>:<B0DB><B3D5><B0C2><B2D0><B1E6><B2A3><B1D5>?<B1C2><B7D5><B2AA><B3F1><B0F8>...<B2A9><B2AA><B3F1><B0F8>,<B1C2><B3E6><B1EF><B0DE><B1E7>,<B0C5><B2AB><B3DD><B3DE><B0BE>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+西巴:到底是怎么回事?我竟然输了...既然输了,我无话可说,你就前进吧!",graphical_codes,"<0A><B0D6><BBC0>:<B0DB><B3D5><B0C2><B2D0><B1E6><B2A3><B1D5>?<B1C2><B7D5><B2AA><B3F1><B0F8>...<B2A9><B2AA><B3F1><B0F8>,<B1C2><B3E6><B1EF><B0DE><B1E7>,<B0C5><B2AB><B3DD><B3DE><B0BE>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 693,0x0340C1,6146,dialogue_19_19,167,pointer_table,high,0x0331AB,986,0x0340C1,"
-菊子:我是鬼系四天王菊子,听说真新镇的大木博士相当疼你!大木博士以前是相当强的男人!现在看不出来了,光只是做宠物精灵图鉴是不够的!精灵是要用来战斗的!让我来教你真正的战斗吧!",graphical_codes,"<0A><BADE><B1DF>:<B1C2><B0C2><B7B2><B0AF><B1E1><B1AD><B4F7><BADE><B1DF>,<B1F1><B1E7><B1F5><B2D5><B2D6><B0BC><B1BE><B1C3><B1C4><B1C5><B0D0><B2C4><B5F2><B0C5>!<B1BE><B1C3><B1C4><B1C5><B0DF><B3DD><B0C2><B0D0><B2C4><B2C9><B0BC><B1DD><B2B5>!<B2F5><B0B8><B0FD><B0CE><B0A4><B0FC><B0F8>,<B0E4><B2BE><B0C2><B2B4><B0C0><B0C1><B0A1><B0A2><B2F1><B2F2><B0C2><B0CE><B0F1><B0BC>!<B0A1><B0A2><B0C2><B0C3><B1A8><B0FC><B0F2><B4B7><B0BC>!<B2CB><B1C2><B0FC><B7DB><B0C5><B1F5><B2BA><B0BC><B0F2><B4B7><B0BE>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+菊子:我是鬼系四天王菊子,听说真新镇的大木博士相当疼你!大木博士以前是相当强的男人!现在看不出来了,光只是做宠物精灵图鉴是不够的!精灵是要用来战斗的!让我来教你真正的战斗吧!",graphical_codes,"<0A><BADE><B1DF>:<B1C2><B0C2><B7B2><B0AF><B1E1><B1AD><B4F7><BADE><B1DF>,<B1F1><B1E7><B1F5><B2D5><B2D6><B0BC><B1BE><B1C3><B1C4><B1C5><B0D0><B2C4><B5F2><B0C5>!<B1BE><B1C3><B1C4><B1C5><B0DF><B3DD><B0C2><B0D0><B2C4><B2C9><B0BC><B1DD><B2B5>!<B2F5><B0B8><B0FD><B0CE><B0A4><B0FC><B0F8>,<B0E4><B2BE><B0C2><B2B4><B0C0><B0C1><B0A1><B0A2><B2F1><B2F2><B0C2><B0CE><B0F1><B0BC>!<B0A1><B0A2><B0C2><B0C3><B1A8><B0FC><B0F2><B4B7><B0BC>!<B2CB><B1C2><B0FC><B7DB><B0C5><B1F5><B2BA><B0BC><B0F2><B4B7><B0BE>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 694,0x034169,6159,dialogue_19_19,157,pointer_table,high,0x0331AD,987,0x034169,"
-瓦它诺:你是小智?我是龙系四天王菊子瓦它诺,你应该知道龙是神圣传说中的生物,很难抓但培育的好将是天下第一!一般的攻击对龙系是没用的!开始吧,我会让你夹着尾巴逃跑的!",graphical_codes,"<0A><BAF4><B6A6><BBCF>:<B0C5><B0C2><B0B6><B0B7>?<B1C2><B0C2><B6D9><B0AF><B1E1><B1AD><B4F7><BADE><B1DF><BAF4><B6A6><BBCF>,<B0C5><B6B9><B3B3><B2D7><B1A4><B6D9><B0C2><B6DD><BCB3><B6F2><B1E7><B0DC><B0BC><B1C9><B0C1>,<B3F7><B4A7><B2C0><B3A8><B6A3><B6D8><B0BC><B1B4><B1D2><B0C2><B1AD><B0F9><B6A7><B1D1>!<B1D1><BAFD><B0BC><B4AB><B4AC><B0E7><B6D9><B0AF><B0C2><B2B6><B1A8><B0BC>!<B1D9><B1DA><B0BE>,<B1C2><B1F9><B2CB><B0C5><BCBB><B1C7><BBD0><BBC0><B3EF><B8B9><B0BC>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+瓦它诺:你是小智?我是龙系四天王菊子瓦它诺,你应该知道龙是神圣传说中的生物,很难抓但培育的好将是天下第一!一般的攻击对龙系是没用的!开始吧,我会让你夹着尾巴逃跑的!",graphical_codes,"<0A><BAF4><B6A6><BBCF>:<B0C5><B0C2><B0B6><B0B7>?<B1C2><B0C2><B6D9><B0AF><B1E1><B1AD><B4F7><BADE><B1DF><BAF4><B6A6><BBCF>,<B0C5><B6B9><B3B3><B2D7><B1A4><B6D9><B0C2><B6DD><BCB3><B6F2><B1E7><B0DC><B0BC><B1C9><B0C1>,<B3F7><B4A7><B2C0><B3A8><B6A3><B6D8><B0BC><B1B4><B1D2><B0C2><B1AD><B0F9><B6A7><B1D1>!<B1D1><BAFD><B0BC><B4AB><B4AC><B0E7><B6D9><B0AF><B0C2><B2B6><B1A8><B0BC>!<B1D9><B1DA><B0BE>,<B1C2><B1F9><B2CB><B0C5><BCBB><B1C7><BBD0><BBC0><B3EF><B8B9><B0BC>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 695,0x034207,6171,dialogue_19_19,118,pointer_table,high,0x0331AF,988,0x034207,"
-瓦它诺:虽然难过但你的技术一流!不过要想成为真正的冠军就应该进入冠军的房间打败里面的训练师!!他比你早一步打败我们四天王!",graphical_codes,<0A><BAF4><B6A6><BBCF>:<B4A4><B2AA><B4A7><B3D4><B3A8><B0C5><B0BC><B4BF><B1AE><B1D1><B9D7>!<B0CE><B3D4><B0C3><B1D7><B2EA><B0EA><B1F5><B2BA><B0BC><B4A1><B4A2><B2AB><B6B9><B3B3><B3DE><B5BB><B4A1><B4A2><B0BC><B9EA><BAF1><B0CF><B6A2><B0BF><B4A8><B0BC><B2DE><B2C5><B2DF>!!<B1F0><B2B2><B0C5><B2BB><B1D1><B7D4><B0CF><B6A2><B1C2><B2EF><B1E1><B1AD><B4F7>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+瓦它诺:虽然难过但你的技术一流!不过要想成为真正的冠军就应该进入冠军的房间打败里面的训练师!!他比你早一步打败我们四天王!",graphical_codes,<0A><BAF4><B6A6><BBCF>:<B4A4><B2AA><B4A7><B3D4><B3A8><B0C5><B0BC><B4BF><B1AE><B1D1><B9D7>!<B0CE><B3D4><B0C3><B1D7><B2EA><B0EA><B1F5><B2BA><B0BC><B4A1><B4A2><B2AB><B6B9><B3B3><B3DE><B5BB><B4A1><B4A2><B0BC><B9EA><BAF1><B0CF><B6A2><B0BF><B4A8><B0BC><B2DE><B2C5><B2DF>!!<B1F0><B2B2><B0C5><B2BB><B1D1><B7D4><B0CF><B6A2><B1C2><B2EF><B1E1><B1AD><B4F7>!,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 696,0x03427E,4068,dialogue_19_19,368,pointer_table,high,0x0331B1,989,0x03427E,"
 小智:你们就是新的冠军?啊?难道你们是...",ascii,"Jesse: Long time nosee brat! Our boss has disbanded Team Rocket because of you! James: We plan to take over Indigo Plateau and make sure Team Rocket takes its place as true Pok@mon mast- ers. We can't allowa dreadful little twerp such as your-self stand in our way! Meowth:Hehe, you don't stand a chance against Meowth!",pending_semantic_review,
 697,0x0343EF,4074,dialogue_19_19,140,containing_offset,medium,,1001,0x0343BF,"
 小次郎:我们现在跟了新的老大,已经不是从前的我们了!!",ascii,"James: Again! We lost again to this twerp! Jesse&James: Looks like Team Rocket's blasting off again!Meowth:Hey,Wait forMeowth!",pending_semantic_review,
 698,0x03447C,6181,dialogue_19_19,241,pointer_table,high,0x0331D3,1006,0x0344B8,"
-大木博士:你又堂堂正正的赢了!恭喜你小智,从你刚开始得到比卡丘开始到现在你真的变强了,应该说你长大了!小智,你能制霸宠物精灵联盟!不是你一个人的力量!是你与精灵之间巧妙的感情!小智你跟我来!",graphical_codes,"0000000000000000000000000000000000000000000000000000000000000<B1BE><B1C3><B1C4><B1C5>:<B0C5><B5B0><BDF2><BDF2><B2BA><B2BA><B0BC><B3F5><B0F8>!<BBA6><B6EB><B0C5><B0B6><B0B7>,<B1FA><B0C5><B2BF><B1D9><B1DA><B2C1><B0DB><B2B2><B2C2><B2C3><B1D9><B1DA><B0DB><B2F5><B0B8><B0C5><B1F5><B0BC><B3D6><B2C9><B0F8>,<B6B9><B3B3><B1E7><B0C5><B2EB><B1BE><B0F8>!<B0B6><B0B7>,<B0C5><B0EC><B2E4><BBD4><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B0CE><B0C2><B0C5><B1D1><B0BA><B2B5><B0BC><B0E3><B3EC>!<B0C2><B0C5><B2A1><B0A1><B0A2><B3E3><BAF1><BDF5><B7FC><B0BC><B5EA><B7AB>!<B0B6><B0B7><B0C5><B2A2><B1C2><B0FC>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+大木博士:你又堂堂正正的赢了!恭喜你小智,从你刚开始得到比卡丘开始到现在你真的变强了,应该说你长大了!小智,你能制霸宠物精灵联盟!不是你一个人的力量!是你与精灵之间巧妙的感情!小智你跟我来!",graphical_codes,"0000000000000000000000000000000000000000000000000000000000000<B1BE><B1C3><B1C4><B1C5>:<B0C5><B5B0><BDF2><BDF2><B2BA><B2BA><B0BC><B3F5><B0F8>!<BBA6><B6EB><B0C5><B0B6><B0B7>,<B1FA><B0C5><B2BF><B1D9><B1DA><B2C1><B0DB><B2B2><B2C2><B2C3><B1D9><B1DA><B0DB><B2F5><B0B8><B0C5><B1F5><B0BC><B3D6><B2C9><B0F8>,<B6B9><B3B3><B1E7><B0C5><B2EB><B1BE><B0F8>!<B0B6><B0B7>,<B0C5><B0EC><B2E4><BBD4><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B0CE><B0C2><B0C5><B1D1><B0BA><B2B5><B0BC><B0E3><B3EC>!<B0C2><B0C5><B2A1><B0A1><B0A2><B3E3><BAF1><BDF5><B7FC><B0BC><B5EA><B7AB>!<B0B6><B0B7><B0C5><B2A2><B1C2><B0FC>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 699,0x03456E,6191,dialogue_19_19,117,pointer_table,high,0x0331D5,1007,0x03456E,"
-大木博士:小智,你经过激烈的战斗!而如今成为联盟冠军!在此记录下小智的名字与精灵的名字吧!和我一起回家吧,你妈妈一定很想你",graphical_codes,"<0A><B1BE><B1C3><B1C4><B1C5>:<B0B6><B0B7>,<B0C5><B2A5><B3D4><BAB4><BBC8><B0BC><B0F2><B4B7>!<B1CE><B1FE><B6C9><B2EA><B0EA><B3CE><B3CF><B4A1><B4A2>!<B0B8><BDE7><B2F8><B2F9><B0F9><B0B6><B0B7><B0BC><B3B1><B9B1><B2A1><B0A1><B0A2><B0BC><B3B1><B9B1><B0BE>!<B0C9><B1C2><B1D1><B0E8><B2A3><B1BF><B0BE>,<B0C5><B1DB><B1DB><B1D1><B2B1><B3F7><B1D7><B0C5>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+大木博士:小智,你经过激烈的战斗!而如今成为联盟冠军!在此记录下小智的名字与精灵的名字吧!和我一起回家吧,你妈妈一定很想你",graphical_codes,"<0A><B1BE><B1C3><B1C4><B1C5>:<B0B6><B0B7>,<B0C5><B2A5><B3D4><BAB4><BBC8><B0BC><B0F2><B4B7>!<B1CE><B1FE><B6C9><B2EA><B0EA><B3CE><B3CF><B4A1><B4A2>!<B0B8><BDE7><B2F8><B2F9><B0F9><B0B6><B0B7><B0BC><B3B1><B9B1><B2A1><B0A1><B0A2><B0BC><B3B1><B9B1><B0BE>!<B0C9><B1C2><B1D1><B0E8><B2A3><B1BF><B0BE>,<B0C5><B1DB><B1DB><B1D1><B2B1><B3F7><B1D7><B0C5>",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 700,0x0345E4,6200,dialogue_19_19,113,pointer_table,high,0x0331D7,1008,0x0345E4,"
-妈妈:我听说你要去彩虹市的南晶科技开发部挑战名叫卡美优的训练师!听说他的精灵至今还没有被人打败过,你千万要小心啊...",graphical_codes,"<0A><B1DB><B1DB>:<B1C2><B1F1><B1E7><B0C5><B0C3><B0C7><B6CA><B8FD><B4D1><B0BC><B0A7><B0A8><BDE0><B4BF><B1D9><B2F4><B6C1><B3FB><B0F2><B3B1><B1C1><B2C2><B6A8><B8EE><B0BC><B2DE><B2C5><B2DF>!<B1F1><B1E7><B1F0><B0BC><B0A1><B0A2><BDFA><B6C9><B2BD><B2B6><B0AE><B1B6><B2B5><B0CF><B6A2><B3D4>,<B0C5><B8F9><B4B1><B0C3><B0B6><B0DD><B2AC>...",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+妈妈:我听说你要去彩虹市的南晶科技开发部挑战名叫卡美优的训练师!听说他的精灵至今还没有被人打败过,你千万要小心啊...",graphical_codes,"<0A><B1DB><B1DB>:<B1C2><B1F1><B1E7><B0C5><B0C3><B0C7><B6CA><B8FD><B4D1><B0BC><B0A7><B0A8><BDE0><B4BF><B1D9><B2F4><B6C1><B3FB><B0F2><B3B1><B1C1><B2C2><B6A8><B8EE><B0BC><B2DE><B2C5><B2DF>!<B1F1><B1E7><B1F0><B0BC><B0A1><B0A2><BDFA><B6C9><B2BD><B2B6><B0AE><B1B6><B2B5><B0CF><B6A2><B3D4>,<B0C5><B8F9><B4B1><B0C3><B0B6><B0DD><B2AC>...",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 702,0x0346A1,4084,dialogue_19_19,151,pointer_table,high,0x0331DB,1010,0x0346A1,"
 卡美优:不错,你的实力在这个石英地区已经无人能敌了,但别忘了人外有人天外有天啊,在这个世界上还存在别的大陆...有机会的话一定要去宝石大陆看看,那里有这里所没有的精灵!!!那么你的精灵图鉴如果收集齐了的话再来找我吧!",ascii,"You're amazing! It seems you've earnedthe respect of the Legendary Pok@mon! If you can find allthe Pok@mon in Kanto, return and speak to me again!",pending_semantic_review,
 703,0x034739,4100,dialogue_19_19,104,pointer_table,high,0x0331DD,1011,0x03476F,"
@@ -120,7 +120,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 705,0x0347BD,4115,dialogue_19_19,13,pointer_table,high,0x0331E1,1013,0x03483D,"
 得到梦幻",ascii,Recieved Mew!,pending_semantic_review,
 706,0x0347CB,6206,dialogue_19_19,149,pointer_table,high,0x0331E3,1014,0x034847,"
-妈妈:你完成精灵图鉴了吗?",graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1DB><B1DB>:<B0C5><B3A6><B2EA><B0A1><B0A2><B2F1><B2F2><B0F8><B0D7>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+妈妈:你完成精灵图鉴了吗?",graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1DB><B1DB>:<B0C5><B3A6><B2EA><B0A1><B0A2><B2F1><B2F2><B0F8><B0D7>?,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 707,0x034862,4116,dialogue_19_19,16,pointer_table,high,0x0331E5,1015,0x034861,"
 裁判:你真是好样的!",ascii,Great job Champ!,pending_semantic_review,
 708,0x034873,4117,dialogue_19_19,19,pointer_table,high,0x0331E9,1017,0x034883,"
@@ -129,7 +129,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 蓓蓓:你真的是很棒耶!",ascii,Take care of Eevee!,pending_semantic_review,
 710,0x0348B5,4119,dialogue_19_19,37,pointer_table,high,0x0331ED,1019,0x0348B6,"
 小李:再骚扰的话,本大爷要报警了...!",ascii,Your Pok@mon can fly you anywhere.,pending_semantic_review,
-711,0x034927,4130,dialogue_19_19,6,unaligned,low,,,,,graphical_codes,<B2C1><B0DB><B3E6>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+711,0x034927,4130,dialogue_19_19,6,unaligned,low,,,,,graphical_codes,<B2C1><B0DB><B3E6>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 712,0x03492F,4131,dialogue_19_19,11,pointer_table,high,0x0348DF,1020,0x03492E,"
 得到精灵球",ascii,A Pok@ball!,pending_semantic_review,
 713,0x03493B,4132,dialogue_19_19,13,pointer_table,high,0x0348E1,1021,0x03493A,"
@@ -137,7 +137,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 714,0x034949,4133,dialogue_19_19,9,pointer_table,high,0x0348E3,1022,0x034946,"
 得到超力球",ascii,UltraBall,pending_semantic_review,
 715,0x034953,6211,dialogue_19_19,10,pointer_table,high,0x0348E5,1023,0x034952,"
-得到大师球",graphical_codes,<B2C1><B0DB><B1BE><B2DF><B0BD>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到大师球",graphical_codes,<B2C1><B0DB><B1BE><B2DF><B0BD>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 716,0x03495F,4134,dialogue_19_19,9,pointer_table,high,0x0348E7,1024,0x03495E,"
 得到伤药",ascii,A Potion!,pending_semantic_review,
 717,0x034969,5855,dialogue_19_19,9,pointer_table,high,0x0348E9,1025,0x034968,"
@@ -145,7 +145,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 718,0x034973,4135,dialogue_19_19,13,pointer_table,high,0x0348EB,1026,0x034974,"
 得到超级伤药",ascii,A H.Potion!,pending_semantic_review,
 719,0x034981,6212,dialogue_19_19,14,pointer_table,high,0x0348ED,1027,0x034982,"
-得到最大伤药",graphical_codes,00<B2C1><B0DB><B3F2><B1BE><B9C7><BBB9>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到最大伤药",graphical_codes,00<B2C1><B0DB><B3F2><B1BE><B9C7><BBB9>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 720,0x034990,4136,dialogue_19_19,12,pointer_table,high,0x0348EF,1028,0x034990,"
 得到解毒药",ascii,An Antidote!,pending_semantic_review,
 721,0x03499D,4137,dialogue_19_19,21,pointer_table,high,0x0348F1 0x0348F3,1029 1030,0x03499C 0x0349A8,"
@@ -156,15 +156,15 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 722,0x0349B3,5448,dialogue_19_19,11,pointer_table,high,0x0348F5,1031,0x0349B4,"
 得到冰冻药",ascii,Ice Heal!,pending_semantic_review,
 723,0x0349BF,6213,dialogue_19_19,12,pointer_table,high,0x0348F7,1032,0x0349C0,"
-得到烧伤药",graphical_codes,00<B2C1><B0DB><BAE7><B9C7><BBB9>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到烧伤药",graphical_codes,00<B2C1><B0DB><BAE7><B9C7><BBB9>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 724,0x0349CC,4138,dialogue_19_19,13,pointer_table,high,0x0348F9,1033,0x0349CC,"
 得到万能恢复",ascii,A Full Heal!,pending_semantic_review,
 725,0x0349DA,4139,dialogue_19_19,10,pointer_table,high,0x0348FB,1034,0x0349DA,"
 得到精神药",ascii,A Revive!,pending_semantic_review,
 726,0x0349E5,6214,dialogue_19_19,12,pointer_table,high,0x0348FD,1035,0x0349E6,"
-得到PP提升",graphical_codes,00<B2C1><B0DB>PP<B4C7><B4C8>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到PP提升",graphical_codes,00<B2C1><B0DB>PP<B4C7><B4C8>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 727,0x0349F2,6215,dialogue_19_19,11,pointer_table,high,0x0348FF,1036,0x0349F2,"
-得到PP最大",graphical_codes,<0A><B2C1><B0DB>PP<B3F2><B1BE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到PP最大",graphical_codes,<0A><B2C1><B0DB>PP<B3F2><B1BE>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 728,0x0349FF,4140,dialogue_19_19,13,pointer_table,high,0x034901,1037,0x0349FE,"
 得到神奇糖果",ascii,A Rare Candy!,pending_semantic_review,
 729,0x034A0D,4141,dialogue_19_19,11,pointer_table,high,0x034903,1038,0x034A0C,"
@@ -178,44 +178,44 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 733,0x034A3D,4145,dialogue_19_19,11,pointer_table,high,0x03490B,1042,0x034A3C,"
 得到月之石",ascii,Moon Stone!,pending_semantic_review,
 734,0x034A49,6216,dialogue_19_19,8,pointer_table,high,0x03490D,1043,0x034A48,"
-得到包裹",graphical_codes,<B2C1><B0DB><B2E0><B2E1>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到包裹",graphical_codes,<B2C1><B0DB><B2E0><B2E1>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 735,0x034A52,6218,dialogue_19_19,13,pointer_table,high,0x03490F,1044,0x034A52,"
-得到精灵图鉴",graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B2F1><B2F2>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到精灵图鉴",graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B2F1><B2F2>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 736,0x034A60,6219,dialogue_19_19,9,pointer_table,high,0x034911,1045,0x034A60,"
-得到地图",graphical_codes,<0A><B2C1><B0DB><B3BB><B2F1>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到地图",graphical_codes,<0A><B2C1><B0DB><B3BB><B2F1>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 737,0x034A6A,6220,dialogue_19_19,13,pointer_table,high,0x034913,1046,0x034A6A,"
-得到菊石化石",graphical_codes,<0A><B2C1><B0DB><BADE><B1B2><B5AB><B1B2>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到菊石化石",graphical_codes,<0A><B2C1><B0DB><BADE><B1B2><B5AB><B1B2>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 738,0x034A78,6222,dialogue_19_19,13,pointer_table,high,0x034915,1047,0x034A78,"
-得到盔甲化石",graphical_codes,<0A><B2C1><B0DB><BADF><BBBE><B5AB><B1B2>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到盔甲化石",graphical_codes,<0A><B2C1><B0DB><BADF><BBBE><B5AB><B1B2>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 739,0x034A86,6223,dialogue_19_19,9,pointer_table,high,0x034917,1048,0x034A86,"
-得到船票",graphical_codes,<0A><B2C1><B0DB><B6F6><B6F7>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到船票",graphical_codes,<0A><B2C1><B0DB><B6F6><B6F7>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 740,0x034A90,6224,dialogue_19_19,11,pointer_table,high,0x034919,1049,0x034A90,"
-得到矿泉水",graphical_codes,<0A><B2C1><B0DB><B8E9><B8EA><B5F7>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到矿泉水",graphical_codes,<0A><B2C1><B0DB><B8E9><B8EA><B5F7>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 741,0x034A9C,6225,dialogue_19_19,13,pointer_table,high,0x03491B,1050,0x034A9C,"
-得到精灵眼镜",graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B6EE><B8D1>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到精灵眼镜",graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B6EE><B8D1>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 742,0x034AAA,6226,dialogue_19_19,11,pointer_table,high,0x03491D,1051,0x034AAA,"
-得到精灵笛",graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B8DF>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到精灵笛",graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B8DF>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 743,0x034AB6,6227,dialogue_19_19,9,pointer_table,high,0x03491F,1052,0x034AB6,"
-得到金牙",graphical_codes,<0A><B2C1><B0DB><B7BB><B9F9>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到金牙",graphical_codes,<0A><B2C1><B0DB><B7BB><B9F9>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 744,0x034AC0,6228,dialogue_19_19,13,pointer_table,high,0x034921,1053,0x034AC0,"
-得到梦幻船票",graphical_codes,<0A><B2C1><B0DB><B1D6><B9ED><B6F6><B6F7>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到梦幻船票",graphical_codes,<0A><B2C1><B0DB><B1D6><B9ED><B6F6><B6F7>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 745,0x034ACE,6229,dialogue_19_19,11,pointer_table,high,0x034923,1054,0x034ACE,"
-得到居合斩",graphical_codes,<0A><B2C1><B0DB><B1A9><B1AA><B1AB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到居合斩",graphical_codes,<0A><B2C1><B0DB><B1A9><B1AA><B1AB>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 746,0x034ADA,6230,dialogue_19_19,11,pointer_table,high,0x034925,1055,0x034ADA,"
-得到飞天术",graphical_codes,<0A><B2C1><B0DB><B1AC><B1AD><B1AE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
-747,0x034C03,6231,dialogue_19_19,5,unaligned,low,,,,,graphical_codes,<B0D2><B0D3>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+得到飞天术",graphical_codes,<0A><B2C1><B0DB><B1AC><B1AD><B1AE>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
+747,0x034C03,6231,dialogue_19_19,5,unaligned,low,,,,,graphical_codes,<B0D2><B0D3>!,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 748,0x034C09,6232,dialogue_19_19,35,pointer_table,high,0x034AEB,1056,0x034C09,"
-欢迎!到精灵中心可以恢复精灵的体力.",graphical_codes,<0A><B0D2><B0D3>!<B0DB><B0A1><B0A2><B0DC><B0DD><B0DE><B0DF><B0E0><B0E1><B0A1><B0A2><B0BC><B0E2><B0E3>.,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+欢迎!到精灵中心可以恢复精灵的体力.",graphical_codes,<0A><B0D2><B0D3>!<B0DB><B0A1><B0A2><B0DC><B0DD><B0DE><B0DF><B0E0><B0E1><B0A1><B0A2><B0BC><B0E2><B0E3>.,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 749,0x034C2D,6238,dialogue_19_19,29,pointer_table,high,0x034AED,1057,0x034C2D,"
-您的精灵都精神了!!欢迎光临!!",graphical_codes,<0A><B7C5><B0BC><B0A1><B0A2><B1C0><B0A1><B6DD><B0F8>!!<B0D2><B0D3><B0E4><B0E5>!!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+您的精灵都精神了!!欢迎光临!!",graphical_codes,<0A><B7C5><B0BC><B0A1><B0A2><B1C0><B0A1><B6DD><B0F8>!!<B0D2><B0D3><B0E4><B0E5>!!,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 750,0x034C4B,6244,dialogue_19_19,41,pointer_table,high,0x034AEF,1058,0x034C4B,"
-对不起,因为机能所限这里暂时不能够对战...",graphical_codes,"<0A><B0E7><B0CE><B0E8>,<B0E9><B0EA><B0EB><B0EC><B0AD><B0ED><B0EE><B0BF><B0EF><B0F0><B0CE><B0EC><B0F1><B0E7><B0F2>...",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+对不起,因为机能所限这里暂时不能够对战...",graphical_codes,"<0A><B0E7><B0CE><B0E8>,<B0E9><B0EA><B0EB><B0EC><B0AD><B0ED><B0EE><B0BF><B0EF><B0F0><B0CE><B0EC><B0F1><B0E7><B0F2>...",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 751,0x034C75,6249,dialogue_19_19,32,pointer_table,high,0x034AF1,1059,0x034C75,"
-交换机器也坏了...下次再来看看吧",graphical_codes,<0A><B0F3><B0F4><B0EB><B0F5><B0F6><B0F7><B0F8>...<B0F9><B0FA><B0FB><B0FC><B0FD><B0FD><B0BE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+交换机器也坏了...下次再来看看吧",graphical_codes,<0A><B0F3><B0F4><B0EB><B0F5><B0F6><B0F7><B0F8>...<B0F9><B0FA><B0FB><B0FC><B0FD><B0FD><B0BE>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 752,0x034C96,6254,dialogue_19_19,15,pointer_table,high,0x034AF3,1060,0x034C96,"
-欢迎!买东西吗?",graphical_codes,<0A><B0D2><B0D3>!<B0D4><B0D5><B0D6><B0D7>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+欢迎!买东西吗?",graphical_codes,<0A><B0D2><B0D3>!<B0D4><B0D5><B0D6><B0D7>?,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 753,0x034CA6,6256,dialogue_19_19,11,pointer_table,high,0x034AF5,1061,0x034CA6,"
-谢谢惠顾!!",graphical_codes,<0A><B0D8><B0D8><B0D9><B0DA>!!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+谢谢惠顾!!",graphical_codes,<0A><B0D8><B0D8><B0D9><B0DA>!!,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 754,0x034CB3,5186,dialogue_19_19,84,pointer_table,high,0x034AF7,1062,0x034CB2,"
 我也在养育精灵!变强的话就不会让人欺负",ascii,Technology's great!You can now store and recall items and Pok@mon as data via PC!,pending_semantic_review,
 755,0x034D08,5200,dialogue_19_19,67,pointer_table,high,0x034B01,1067,0x034D55,"
@@ -233,15 +233,15 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 761,0x034E32,5368,dialogue_19_19,32,pointer_table,high,0x034B0F,1074,0x034E32,"
 伤药很好,当精灵没有体力时可以使用",ascii,My Dad loves Pok@mon too.,pending_semantic_review,
 762,0x034E55,6257,dialogue_19_19,23,pointer_table,high,0x034B11,1075,0x034E55,"
-小拉达很小但前牙很厉害",graphical_codes,<0A><B0B6><B8BB><B6E5><B3F7><B0B6><B3A8><B3DD><B9F9><B3F7><B3ED><B3EE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+小拉达很小但前牙很厉害",graphical_codes,<0A><B0B6><B8BB><B6E5><B3F7><B0B6><B3A8><B3DD><B9F9><B3F7><B3ED><B3EE>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 763,0x034E6D,6262,dialogue_19_19,28,pointer_table,high,0x034B13,1076,0x034E6D,"
-常青森林是天然的迷宫,小心啊",graphical_codes,"<0A><B3CA><B3CB><B4D8><B4D9><B0C2><B1AD><B2AA><B0BC><B4D3><BDFE>,<B0B6><B0DD><B2AC>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+常青森林是天然的迷宫,小心啊",graphical_codes,"<0A><B3CA><B3CB><B4D8><B4D9><B0C2><B1AD><B2AA><B0BC><B4D3><BDFE>,<B0B6><B0DD><B2AC>",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 764,0x034E8B,5247,dialogue_19_19,44,pointer_table,high,0x034B15,1077,0x034E8A,"
 道路上经常会有小树吧?用精灵的技能可以砍断的",ascii,The HM Flash lightseven the darkest caves.,pending_semantic_review,
 765,0x034EB8,6267,dialogue_19_19,54,pointer_table,high,0x034B17,1078,0x034EB7,"
-有的精灵只在森林或者洞穴生活要得到更多的精灵就要多走走",graphical_codes,<B0AE><B0BC><B0A1><B0A2><B2BE><B0B8><B4D8><B4D9><B1CB><B9AB><B4FB><BDB8><B1C9><B4E0><B0C3><B2C1><B0DB><B2CC><B0C8><B0BC><B0A1><B0A2><B2AB><B0C3><B0C8><B7C3><B7C3>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+有的精灵只在森林或者洞穴生活要得到更多的精灵就要多走走",graphical_codes,<B0AE><B0BC><B0A1><B0A2><B2BE><B0B8><B4D8><B4D9><B1CB><B9AB><B4FB><BDB8><B1C9><B4E0><B0C3><B2C1><B0DB><B2CC><B0C8><B0BC><B0A1><B0A2><B2AB><B0C3><B0C8><B7C3><B7C3>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 766,0x034EEF,6272,dialogue_19_19,40,pointer_table,high,0x034B19,1079,0x034EEF,"
-说起石山矿野很黑的,精灵用闪光术能看清吧",graphical_codes,"<0A><B1E7><B0E8><B1B2><B6DC><B8E9><B1F8><B3F7><B5AC><B0BC>,<B0A1><B0A2><B1A8><B4BE><B0E4><B1AE><B0EC><B0FD><B4C4><B0BE>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+说起石山矿野很黑的,精灵用闪光术能看清吧",graphical_codes,"<0A><B1E7><B0E8><B1B2><B6DC><B8E9><B1F8><B3F7><B5AC><B0BC>,<B0A1><B0A2><B1A8><B4BE><B0E4><B1AE><B0EC><B0FD><B4C4><B0BE>",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 767,0x034F18,5385,dialogue_19_19,31,pointer_table,high,0x034B77,1126,0x035524,"
 啊...游戏机很让人着迷啊...",ascii,Poliwrath is my best friend!,pending_semantic_review,
 768,0x034F38,5256,dialogue_19_19,45,pointer_table,high,0x034B1D,1081,0x034F46,"
@@ -257,7 +257,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 773,0x034FCE,4233,dialogue_19_19,17,pointer_table,high,0x034B27,1086,0x034FD8,"
 好的,50元收下了!",ascii,Enjoy your visit!,pending_semantic_review,
 774,0x034FE0,6279,dialogue_19_19,6,pointer_table,high,0x034B29,1087,0x034FEA,"
-再来啊",graphical_codes,<B0FB><B0FC><B2AC>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+再来啊",graphical_codes,<B0FB><B0FC><B2AC>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 775,0x034FE7,4234,dialogue_19_19,38,pointer_table,high,0x034B2D,1089,0x035005,"
 这个月要去宇宙中",ascii,Team Rocket is always in the news!,pending_semantic_review,
 776,0x03500E,4235,dialogue_19_19,38,pointer_table,high,0x034B2F,1090,0x035017,"
@@ -267,7 +267,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 778,0x035048,4246,dialogue_19_19,46,pointer_table,high,0x034B33,1092,0x035055,"
 我很害怕...我经常在这里听到奇怪的声音",ascii,Only the Pok@mon champion is allowedin here!,pending_semantic_review,
 779,0x035077,6280,dialogue_19_19,68,pointer_table,high,0x034B35,1093,0x03507C,"
-太不幸了,这家人被偷了!是火箭队干的!即使是警察也拿火箭队没办法!",graphical_codes,"000000<B6C6><B0CE><B8E7><B0F8>,<B0EE><B1BF><B2B5><B1B6><B5EF><B0F8>!<B0C2><B5A2><B5A3><B5A4><B5A5><B0BC>!<B1D8><B1A7><B0C2><B5EC><B4B0><B0F6><B0C6><B5A2><B5A3><B5A4><B2B6><B2B7><B2B8>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+太不幸了,这家人被偷了!是火箭队干的!即使是警察也拿火箭队没办法!",graphical_codes,"000000<B6C6><B0CE><B8E7><B0F8>,<B0EE><B1BF><B2B5><B1B6><B5EF><B0F8>!<B0C2><B5A2><B5A3><B5A4><B5A5><B0BC>!<B1D8><B1A7><B0C2><B5EC><B4B0><B0F6><B0C6><B5A2><B5A3><B5A4><B2B6><B2B7><B2B8>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 780,0x0350BD,4256,dialogue_19_19,24,pointer_table,high,0x034B37,1094,0x0350BC,"
 你也有精灵吗!好好磨练吧!",ascii,Welcome to Ceruleancity!,pending_semantic_review,
 781,0x0350D6,5291,dialogue_19_19,47,pointer_table,high,0x034B39,1095,0x0350D6,"
@@ -275,19 +275,19 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 782,0x035106,4261,dialogue_19_19,27,pointer_table,high,0x034B3D,1097,0x035107,"
 你好!骑自行车的心情你知道吗?",ascii,I care for injured Pok@mon.,pending_semantic_review,
 783,0x035122,6293,dialogue_19_19,22,pointer_table,high,0x034B3F,1098,0x035125,"
-我的自行车很漂亮哦",graphical_codes,0000<B1C2><B0BC><B2F3><B3A9><BCB2><B3F7><B9D3><B7EE><B2DD>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+我的自行车很漂亮哦",graphical_codes,0000<B1C2><B0BC><B2F3><B3A9><BCB2><B3F7><B9D3><B7EE><B2DD>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 784,0x03513A,4266,dialogue_19_19,25,pointer_table,high,0x034B41,1099,0x035139,"
 火箭队让精灵挖洞一定有什么事!",ascii,Why would they do this!?,pending_semantic_review,
 785,0x035154,5297,dialogue_19_19,51,pointer_table,high,0x034B43,1100,0x035158,"
 找不到被偷的东西就只有放弃了",ascii,"Those miserable Rockets! They stoleour ""Dig"" TM!",pending_semantic_review,
 786,0x035188,6298,dialogue_19_19,35,pointer_table,high,0x034B47,1102,0x03518E,"
-哎...最近没有发生什么事情...",graphical_codes,0000000<B8F3>...<B3F2><B0CD><B2B6><B0AE><B2F4><B1C9><B2AF><B1E6><B1D5><B7AB>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+哎...最近没有发生什么事情...",graphical_codes,0000000<B8F3>...<B3F2><B0CD><B2B6><B0AE><B2F4><B1C9><B2AF><B1E6><B1D5><B7AB>...,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 787,0x0351AC,6303,dialogue_19_19,30,pointer_table,high,0x034B49,1103,0x0351AC,"
-我老是培育不好我的妙娃种子...",graphical_codes,<0A><B1C2><B2CE><B0C2><B6A3><B6D8><B0CE><B1B4><B1C2><B0BC><B7FC><BEA7><B6AD><B1DF>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+我老是培育不好我的妙娃种子...",graphical_codes,<0A><B1C2><B2CE><B0C2><B6A3><B6D8><B0CE><B1B4><B1C2><B0BC><B7FC><BEA7><B6AD><B1DF>...,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 788,0x0351CB,6312,dialogue_19_19,26,pointer_table,high,0x034B4B,1104,0x0351CB,"
-让精灵进化图鉴可以增加...",graphical_codes,<0A><B2CB><B0A1><B0A2><B3DE><B5AB><B2F1><B2F2><B0DE><B0DF><B2FB><B2FC>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+让精灵进化图鉴可以增加...",graphical_codes,<0A><B2CB><B0A1><B0A2><B3DE><B5AB><B2F1><B2F2><B0DE><B0DF><B2FB><B2FC>...,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 789,0x0351E6,6317,dialogue_19_19,30,pointer_table,high,0x034B4D,1105,0x0351E6,"
-听说紫苑镇出现过幽灵精灵呢...",graphical_codes,<0A><B1F1><B1E7><BDE3><BDE4><B2D6><B0A4><B2F5><B3D4><B8BD><B0A2><B0A1><B0A2><B1EB>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+听说紫苑镇出现过幽灵精灵呢...",graphical_codes,<0A><B1F1><B1E7><BDE3><BDE4><B2D6><B0A4><B2F5><B3D4><B8BD><B0A2><B0A1><B0A2><B1EB>...,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 790,0x035206,5263,dialogue_19_19,56,pointer_table,high,0x034B4F,1106,0x035205,"
 这里是精灵的墓地,有名的城镇...精灵死的时候都会带到精灵塔",ascii,Pok@mon spirits have been seen in the Pok@mon Tower.,pending_semantic_review,
 791,0x03523F,5283,dialogue_19_19,57,pointer_table,high,0x034B51,1107,0x03523F,"
@@ -299,11 +299,11 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 794,0x0352BA,4281,dialogue_19_19,19,pointer_table,high,0x034B5D,1113,0x035355,"
 现在戒严中!!",ascii,Get out of the way!,pending_semantic_review,
 795,0x0352CE,6322,dialogue_19_19,21,pointer_table,high,0x034B57,1110,0x0352CE,"
-精灵塔有很多幽灵居住",graphical_codes,0<B0A1><B0A2><B8BE><B0AE><B3F7><B0C8><B8BD><B0A2><B1A9><B1C6>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+精灵塔有很多幽灵居住",graphical_codes,0<B0A1><B0A2><B8BE><B0AE><B3F7><B0C8><B8BD><B0A2><B1A9><B1C6>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 796,0x0352E4,6327,dialogue_19_19,80,pointer_table,high,0x034B59,1111,0x0352E4,"
-这个紫苑镇最有名的塔也是宠物精灵的墓园...人们将死亡的精灵带到这幽灵塔来祈求冥福",graphical_codes,<0A><B0EE><B0BA><BDE3><BDE4><B2D6><B3F2><B0AE><B3B1><B0BC><B8BE><B0F6><B0C2><B0C0><B0C1><B0A1><B0A2><B0BC><BEA8><B6FE>...<B2B5><B2EF><B1D2><B8C1><BEAA><B0BC><B0A1><B0A2><B8DD><B0DB><B0EE><B8BD><B0A2><B8BE><B0FC><B8C3><B9D2><BEAB><B6B4>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+这个紫苑镇最有名的塔也是宠物精灵的墓园...人们将死亡的精灵带到这幽灵塔来祈求冥福",graphical_codes,<0A><B0EE><B0BA><BDE3><BDE4><B2D6><B3F2><B0AE><B3B1><B0BC><B8BE><B0F6><B0C2><B0C0><B0C1><B0A1><B0A2><B0BC><BEA8><B6FE>...<B2B5><B2EF><B1D2><B8C1><BEAA><B0BC><B0A1><B0A2><B8DD><B0DB><B0EE><B8BD><B0A2><B8BE><B0FC><B8C3><B9D2><BEAB><B6B4>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 797,0x035335,6337,dialogue_19_19,31,pointer_table,high,0x034B5B,1112,0x035335,"
-吉野老人可以安慰可拉可拉的灵魂",graphical_codes,<0A><B8B8><B1F8><B2CE><B2B5><B0DE><B0DF><B8BF><B8C0><B0DE><B8BB><B0DE><B8BB><B0BC><B0A2><B8C6>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+吉野老人可以安慰可拉可拉的灵魂",graphical_codes,<0A><B8B8><B1F8><B2CE><B2B5><B0DE><B0DF><B8BF><B8C0><B0DE><B8BB><B0DE><B8BB><B0BC><B0A2><B8C6>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 798,0x035355,4282,dialogue_19_19,26,pointer_table,high,0x034B5F,1114,0x035363,"
 这些火箭队的人太可恶了...",ascii,Silph Co. is very famous.,pending_semantic_review,
 799,0x035370,4283,dialogue_19_19,38,pointer_table,high,0x034B61,1115,0x03537E,"
@@ -323,7 +323,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 806,0x035486,4327,dialogue_19_19,36,pointer_table,high,0x034B6F,1122,0x03548C,"
 你也想玩吗?不行,你没有硬币盒",ascii,A man was guarding that poster there,pending_semantic_review,
 807,0x0354AB,6342,dialogue_19_19,53,pointer_table,high,0x034B71,1123,0x0354AA,"
-您可以用赢得的硬币盒换取精灵哦...不行,你没有硬币盒...",graphical_codes,"<B7C5><B0DE><B0DF><B1A8><B3F5><B2C1><B0BC><B4B6><BDBB><BEB2><B0F4><B0A3><B0A1><B0A2><B2DD>...<B0CE><B3A9>,<B0C5><B2B6><B0AE><B4B6><BDBB><BEB2>...",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+您可以用赢得的硬币盒换取精灵哦...不行,你没有硬币盒...",graphical_codes,"<B7C5><B0DE><B0DF><B1A8><B3F5><B2C1><B0BC><B4B6><BDBB><BEB2><B0F4><B0A3><B0A1><B0A2><B2DD>...<B0CE><B3A9>,<B0C5><B2B6><B0AE><B4B6><BDBB><BEB2>...",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 808,0x0354E1,4337,dialogue_19_19,30,pointer_table,high,0x034BF1,1187,0x035D11,"
 那家伙怎么消失了呢?!",ascii,Where'd that persongo?,pending_semantic_review,
 809,0x035500,4342,dialogue_19_19,27,pointer_table,high,0x034B75,1125,0x035500,"
@@ -331,7 +331,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 810,0x03551C,4343,dialogue_19_19,28,pointer_table,high,0x034B73,1124,0x0354E1,"
 啊...游戏厅的下面好像有地下室",ascii,I got my Koffing inCinnabar!,pending_semantic_review,
 811,0x035539,6348,dialogue_19_19,28,pointer_table,high,0x034B79,1127,0x035540,"
-这里真是漂亮的地方啊",graphical_codes,00000000<B0EE><B0BF><B1F5><B0C2><B9D3><B7EE><B0BC><B3BB><B1E2><B2AC>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+这里真是漂亮的地方啊",graphical_codes,00000000<B0EE><B0BF><B1F5><B0C2><B9D3><B7EE><B0BC><B3BB><B1E2><B2AC>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 812,0x035556,4352,dialogue_19_19,19,pointer_table,high,0x034B95,1141,0x0356D1,"
 我今天又胜了...哈哈",ascii,Thanks again kid!,pending_semantic_review,
 813,0x03556A,4357,dialogue_19_19,29,pointer_table,high,0x034B7D,1129,0x035569,"
@@ -385,7 +385,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 837,0x0358BD,4525,dialogue_19_19,20,pointer_table,high,0x034BB7,1158,0x0358BD,"
 这么好的化石不要嘛?!",ascii,Go ahead and choose,pending_semantic_review,
 838,0x0358D2,6349,dialogue_19_19,34,pointer_table,high,0x034BB9,1159,0x0358D3,"
-使用怪兽的人不同,结果就有好有坏!",graphical_codes,"00<B1A7><B1A8><B0CA><B0CB><B0BC><B2B5><B0CE><B8CF>,<BCC6><B3F6><B2AB><B0AE><B1B4><B0AE><B0F7>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+使用怪兽的人不同,结果就有好有坏!",graphical_codes,"00<B1A7><B1A8><B0CA><B0CB><B0BC><B2B5><B0CE><B8CF>,<BCC6><B3F6><B2AB><B0AE><B1B4><B0AE><B0F7>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 839,0x0358F6,4535,dialogue_19_19,36,pointer_table,high,0x034BBB,1160,0x0358F5,"
 世上有很多人用怪兽作恶,那些混蛋就是火箭团!",ascii,No! Super Potions are all sold out!,pending_semantic_review,
 840,0x03591B,4541,dialogue_19_19,29,pointer_table,high,0x034BBD,1161,0x035921,"
@@ -397,45 +397,45 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 843,0x0359A3,4572,dialogue_19_19,19,pointer_table,high,0x0331E7,1016,0x034875,"
 得到梦幻船票",ascii,Got Navel Rock Pass,pending_semantic_review,
 844,0x0359B7,6356,dialogue_19_19,38,pointer_table,high,0x034BC5,1165,0x0359BA,"
-不知什么时候草丛里会突然窜出精灵呢",graphical_codes,0000<B0CE><B2D7><B2AF><B1E6><B0F0><B7CD><B1FB><B1FC><B0BF><B1F9><B5B4><B2AA><BEBD><B0A4><B0A1><B0A2><B1EB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+不知什么时候草丛里会突然窜出精灵呢",graphical_codes,0000<B0CE><B2D7><B2AF><B1E6><B0F0><B7CD><B1FB><B1FC><B0BF><B1F9><B5B4><B2AA><BEBD><B0A4><B0A1><B0A2><B1EB>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 845,0x0359DE,6361,dialogue_19_19,35,pointer_table,high,0x034BC7,1166,0x0359DE,"
-到大城市里去会认识很多优秀的训练师",graphical_codes,<0A><B0DB><B1BE><B3BA><B4D1><B0BF><B0C7><B1F9><B4BA><B0D1><B3F7><B0C8><B8EE><BEBE><B0BC><B2DE><B2C5><B2DF>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+到大城市里去会认识很多优秀的训练师",graphical_codes,<0A><B0DB><B1BE><B3BA><B4D1><B0BF><B0C7><B1F9><B4BA><B0D1><B3F7><B0C8><B8EE><BEBE><B0BC><B2DE><B2C5><B2DF>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 846,0x035A02,6366,dialogue_19_19,36,pointer_table,high,0x034BC9,1167,0x035A02,"
-你去过金黄市吗,听说那里有很高的大楼",graphical_codes,"<0A><B0C5><B0C7><B3D4><B7BB><BAC2><B4D1><B0D7>,<B1F1><B1E7><B0B9><B0BF><B0AE><B3F7><B8AF><B0BC><B1BE><BEB4>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+你去过金黄市吗,听说那里有很高的大楼",graphical_codes,"<0A><B0C5><B0C7><B3D4><B7BB><BAC2><B4D1><B0D7>,<B1F1><B1E7><B0B9><B0BF><B0AE><B3F7><B8AF><B0BC><B1BE><BEB4>",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 847,0x035A27,6371,dialogue_19_19,55,pointer_table,high,0x034BCB,1168,0x035A27,"
-我也想拥有传说中的精灵,可是到底哪儿才有传说中的精灵呢?",graphical_codes,"<0A><B1C2><B0F6><B1D7><B6A9><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2>,<B0DE><B0C2><B0DB><B3D5><B4C2><B7D0><B1F2><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1EB>?",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+我也想拥有传说中的精灵,可是到底哪儿才有传说中的精灵呢?",graphical_codes,"<0A><B1C2><B0F6><B1D7><B6A9><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2>,<B0DE><B0C2><B0DB><B3D5><B4C2><B7D0><B1F2><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1EB>?",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 848,0x035A5F,6376,dialogue_19_19,63,pointer_table,high,0x034BCD,1169,0x035A5F,"
-看你的能力一定是训练师新手吧.告诉你要时刻关心自己的精灵状态哦!",graphical_codes,<0A><B0FD><B0C5><B0BC><B0EC><B0E3><B1D1><B2B1><B0C2><B2DE><B2C5><B2DF><B2D5><B1A3><B0BE>.<B2E6><B2E7><B0C5><B0C3><B0F0><B4E7><B0B3><B0DD><B2F3><BBA3><B0BC><B0A1><B0A2><BAF5><BAF6><B2DD>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+看你的能力一定是训练师新手吧.告诉你要时刻关心自己的精灵状态哦!",graphical_codes,<0A><B0FD><B0C5><B0BC><B0EC><B0E3><B1D1><B2B1><B0C2><B2DE><B2C5><B2DF><B2D5><B1A3><B0BE>.<B2E6><B2E7><B0C5><B0C3><B0F0><B4E7><B0B3><B0DD><B2F3><BBA3><B0BC><B0A1><B0A2><BAF5><BAF6><B2DD>!,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 849,0x035A9F,6385,dialogue_19_19,42,pointer_table,high,0x034BCF,1170,0x035A9F,"
-有飞行系的精灵就能带我飞向远方的城市了...",graphical_codes,<0A><B0AE><B1AC><B3A9><B0AF><B0BC><B0A1><B0A2><B2AB><B0EC><B8DD><B1C2><B1AC><B3B7><B5CD><B1E2><B0BC><B3BA><B4D1><B0F8>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+有飞行系的精灵就能带我飞向远方的城市了...",graphical_codes,<0A><B0AE><B1AC><B3A9><B0AF><B0BC><B0A1><B0A2><B2AB><B0EC><B8DD><B1C2><B1AC><B3B7><B5CD><B1E2><B0BC><B3BA><B4D1><B0F8>...,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 850,0x035ACA,6390,dialogue_19_19,15,pointer_table,high,0x034BD1,1171,0x035ACA,"
-今天是个好天气",graphical_codes,<0A><B6C9><B1AD><B0C2><B0BA><B1B4><B1AD><B4AA>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+今天是个好天气",graphical_codes,<0A><B6C9><B1AD><B0C2><B0BA><B1B4><B1AD><B4AA>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 851,0x035ADA,6395,dialogue_19_19,29,pointer_table,high,0x034BD3,1172,0x035ADA,"
-心情不错,偷偷告诉你我恋爱了!",graphical_codes,"<0A><B0DD><B7AB><B0CE><B2DC>,<B5EF><B5EF><B2E6><B2E7><B0C5><B1C2><BEBF><B5DD><B0F8>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+心情不错,偷偷告诉你我恋爱了!",graphical_codes,"<0A><B0DD><B7AB><B0CE><B2DC>,<B5EF><B5EF><B2E6><B2E7><B0C5><B1C2><BEBF><B5DD><B0F8>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 852,0x035AF8,6402,dialogue_19_19,44,pointer_table,high,0x034BD5,1173,0x035AF8,"
-大海很宽阔啊,如果会冲浪术的话就能横渡大海了",graphical_codes,"<0A><B1BE><B6FC><B3F7><B5B6><B5B7><B2AC>,<B1FE><B3F6><B1F9><B1AF><B1B0><B1AE><B0BC><B1EF><B2AB><B0EC><BEC0><BEC1><B1BE><B6FC><B0F8>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+大海很宽阔啊,如果会冲浪术的话就能横渡大海了",graphical_codes,"<0A><B1BE><B6FC><B3F7><B5B6><B5B7><B2AC>,<B1FE><B3F6><B1F9><B1AF><B1B0><B1AE><B0BC><B1EF><B2AB><B0EC><BEC0><BEC1><B1BE><B6FC><B0F8>",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 853,0x035B25,6407,dialogue_19_19,50,pointer_table,high,0x034BD7,1174,0x035B25,"
-你听过吗?在枯叶市上的铁达尼号上都是有钱的训练师呢",graphical_codes,<0A><B0C5><B1F1><B3D4><B0D7>?<B0B8><B6E1><B6E2><B4D1><B1E5><B0BC><B6E4><B6E5><B4B2><B6E6><B1E5><B1C0><B0C2><B0AE><B0FE><B0BC><B2DE><B2C5><B2DF><B1EB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+你听过吗?在枯叶市上的铁达尼号上都是有钱的训练师呢",graphical_codes,<0A><B0C5><B1F1><B3D4><B0D7>?<B0B8><B6E1><B6E2><B4D1><B1E5><B0BC><B6E4><B6E5><B4B2><B6E6><B1E5><B1C0><B0C2><B0AE><B0FE><B0BC><B2DE><B2C5><B2DF><B1EB>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 854,0x035B58,6412,dialogue_19_19,35,pointer_table,high,0x034BD9,1175,0x035B58,"
-在月见山上的晚上偶尔会有皮皮出现呢",graphical_codes,<0A><B0B8><B6CF><B2CD><B6DC><B1E5><B0BC><B2BC><B1E5><B9E3><BEC2><B1F9><B0AE><B6D3><B6D3><B0A4><B2F5><B1EB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+在月见山上的晚上偶尔会有皮皮出现呢",graphical_codes,<0A><B0B8><B6CF><B2CD><B6DC><B1E5><B0BC><B2BC><B1E5><B9E3><BEC2><B1F9><B0AE><B6D3><B6D3><B0A4><B2F5><B1EB>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 855,0x035B7C,6422,dialogue_19_19,46,pointer_table,high,0x034BDB,1176,0x035B7C,"
-宝石大陆你知道吗?我年轻时就是在宝石大陆修行呢",graphical_codes,<0A><B7B5><B1B2><B1BE><B7B6><B0C5><B2D7><B1A4><B0D7>?<B1C2><B3EA><B8B6><B0F0><B2AB><B0C2><B0B8><B7B5><B1B2><B1BE><B7B6><B4CE><B3A9><B1EB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+宝石大陆你知道吗?我年轻时就是在宝石大陆修行呢",graphical_codes,<0A><B7B5><B1B2><B1BE><B7B6><B0C5><B2D7><B1A4><B0D7>?<B1C2><B3EA><B8B6><B0F0><B2AB><B0C2><B0B8><B7B5><B1B2><B1BE><B7B6><B4CE><B3A9><B1EB>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 856,0x035BAB,6431,dialogue_19_19,35,pointer_table,high,0x034BDD,1177,0x035BAB,"
-在精灵体力低下的时候要赶紧使用伤药",graphical_codes,<0A><B0B8><B0A1><B0A2><B0E2><B0E3><BCDD><B0F9><B0BC><B0F0><B7CD><B0C3><B1F3><B1F4><B1A7><B1A8><B9C7><BBB9>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+在精灵体力低下的时候要赶紧使用伤药",graphical_codes,<0A><B0B8><B0A1><B0A2><B0E2><B0E3><BCDD><B0F9><B0BC><B0F0><B7CD><B0C3><B1F3><B1F4><B1A7><B1A8><B9C7><BBB9>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 857,0x035BCF,6436,dialogue_19_19,34,pointer_table,high,0x034BDF,1178,0x035BCF,"
-我不明白怎么照顾精灵,要加紧学习呢",graphical_codes,"<0A><B1C2><B0CE><B5E6><B5E5><B2D0><B1E6><B6CC><B0DA><B0A1><B0A2>,<B0C3><B2FC><B1F4><B4C3><B2C6><B1EB>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+我不明白怎么照顾精灵,要加紧学习呢",graphical_codes,"<0A><B1C2><B0CE><B5E6><B5E5><B2D0><B1E6><B6CC><B0DA><B0A1><B0A2>,<B0C3><B2FC><B1F4><B4C3><B2C6><B1EB>",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 858,0x035BF2,4573,dialogue_19_19,24,pointer_table,high,0x034BE1,1179,0x035BF2,"
 我的精灵老是不听我的话,如果有徽章就好了",ascii,I can't enter the city!,pending_semantic_review,
 859,0x035C0B,6447,dialogue_19_19,59,pointer_table,high,0x034BE3,1180,0x035C1B,"
-在这个地区最强的训练师是石英高原的四大天王",graphical_codes,00000000000000000<B0B8><B0EE><B0BA><B3BB><B7B8><B3F2><B2C9><B0BC><B2DE><B2C5><B2DF><B0C2><B1B2><B7FE><B8AF><B4EF><B0BC><B1E1><B1BE><B1AD><B4F7>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+在这个地区最强的训练师是石英高原的四大天王",graphical_codes,00000000000000000<B0B8><B0EE><B0BA><B3BB><B7B8><B3F2><B2C9><B0BC><B2DE><B2C5><B2DF><B0C2><B1B2><B7FE><B8AF><B4EF><B0BC><B1E1><B1BE><B1AD><B4F7>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 860,0x035C48,4584,dialogue_19_19,30,pointer_table,high,0x034BE5,1181,0x035C47,"
 如果我有只像你的精灵这样听话的精灵就好了",ascii,Do you want to see my Pok@mon?,pending_semantic_review,
 861,0x035C67,6461,dialogue_19_19,31,pointer_table,high,0x034BE7,1182,0x035C71,"
-我想喝水...谁给我水?",graphical_codes,00000000000<B1C2><B1D7><B3C1><B5F7>...<B5F1><B0C4><B1C2><B5F7>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+我想喝水...谁给我水?",graphical_codes,00000000000<B1C2><B1D7><B3C1><B5F7>...<B5F1><B0C4><B1C2><B5F7>?,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 862,0x035C87,6470,dialogue_19_19,21,pointer_table,high,0x034BE9,1183,0x035C87,"
-别动!叫你别动你还动?",graphical_codes,<0A><B2CA><B0B2>!<B1C1><B0C5><B2CA><B0B2><B0C5><B2BD><B0B2>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+别动!叫你别动你还动?",graphical_codes,<0A><B2CA><B0B2>!<B1C1><B0C5><B2CA><B0B2><B0C5><B2BD><B0B2>?,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 863,0x035C9D,6481,dialogue_19_19,35,pointer_table,high,0x034BEB,1184,0x035C9D,"
-看你的样子一定是个了不起的训练师吧",graphical_codes,<0A><B0FD><B0C5><B0BC><B2DA><B1DF><B1D1><B2B1><B0C2><B0BA><B0F8><B0CE><B0E8><B0BC><B2DE><B2C5><B2DF><B0BE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+看你的样子一定是个了不起的训练师吧",graphical_codes,<0A><B0FD><B0C5><B0BC><B2DA><B1DF><B1D1><B2B1><B0C2><B0BA><B0F8><B0CE><B0E8><B0BC><B2DE><B2C5><B2DF><B0BE>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 864,0x035CC1,4589,dialogue_19_19,76,pointer_table,high,0x034BEF,1186,0x035CE9,"
 不知道怎么回事,现在的人都不骑自行车了!",ascii,"Welcome! 1 bike forjust 1,000,000$!",pending_semantic_review,
 865,0x035D0E,4601,dialogue_19_19,32,pointer_table,high,0x034BF3,1188,0x035D27,"
@@ -496,7 +496,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 洞里太黑了,能掌握一些闪光的法术就好了!",ascii,"The cave is pitch black, a Pok@mon could light it up.",pending_semantic_review,
 1118,0x03804B,4791,dialogue_19_19,16,unaligned,low,,,,,ascii,Withdraw Deposit,unaligned_or_non_dialogue,
 1119,0x03805C,6490,dialogue_19_19,17,pointer_table,high,0x03801D,1195,0x03805C,"
-南晶公司版权所有",graphical_codes,<0A><B0A7><B0A8><B0A9><B0AA><B0AB><B0AC><B0AD><B0AE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+南晶公司版权所有",graphical_codes,<0A><B0A7><B0A8><B0A9><B0AA><B0AB><B0AC><B0AD><B0AE>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1120,0x03806F,4792,dialogue_19_19,16,pointer_table,high,0x03801F,1196,0x03806E,"
 精灵系统启动...",ascii,Turned on the PC,pending_semantic_review,
 1121,0x038080,4793,dialogue_19_19,17,pointer_table,high,0x038021,1197,0x03807F,"
@@ -508,7 +508,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 1124,0x0380C5,4811,dialogue_19_19,23,pointer_table,high,0x038029,1201,0x0380ED,"
 欢迎!买东西吗?",ascii,Hello! May I help you?,pending_semantic_review,
 1125,0x0380DD,6492,dialogue_19_19,15,pointer_table,high,0x038027,1200,0x0380E0,"
-不打不相识!",graphical_codes,0000<B0CE><B0CF><B0CE><B0D0><B0D1>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+不打不相识!",graphical_codes,0000<B0CE><B0CF><B0CE><B0D0><B0D1>!,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1126,0x0380EE,4815,dialogue_19_19,14,pointer_table,high,0x03841F,1452,0x03AC16,"
 马其斯:我输了,那么这个橙色徽章拿去吧,还有这个是我的心意!",ascii,"Good job, kid!",pending_semantic_review,
 1127,0x0380FD,4820,dialogue_19_19,10,pointer_table,high,0x03802B,1202,0x0380FD,"
@@ -526,7 +526,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 1133,0x038194,211,dialogue_19_19,16,pointer_table,high,0x038037,1208,0x038193,"
 买      不买    ",ascii,Buy Pass,pending_semantic_review,
 1134,0x0381A5,6502,dialogue_19_19,8,pointer_table,high,0x038039,1209,0x0381A5,"
-钱不够!",graphical_codes,0<B0FE><B0CE><B0F1>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+钱不够!",graphical_codes,0<B0FE><B0CE><B0F1>!,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1135,0x0381AF,213,dialogue_19_19,16,pointer_table,high,0x03803B,1210,0x0381AE,"
 是      否      ",ascii,Yes No,pending_semantic_review,
 1136,0x0381C1,212,dialogue_19_19,16,pointer_table,high,0x03803D,1211,0x0381C0,"
@@ -534,16 +534,16 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 1137,0x0381D2,4832,dialogue_19_19,13,pointer_table,high,0x03803F,1212,0x0381D2,"
 小智使用了居合斩",ascii,Used HM CUT!,pending_semantic_review,
 1138,0x0381E0,6503,dialogue_19_19,21,pointer_table,high,0x038041,1213,0x0381E4,"
-小智使用了飞天术",graphical_codes,00000<B0B6><B0B7><B1A7><B1A8><B0F8><B1AC><B1AD><B1AE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+小智使用了飞天术",graphical_codes,00000<B0B6><B0B7><B1A7><B1A8><B0F8><B1AC><B1AD><B1AE>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1139,0x0381F6,6509,dialogue_19_19,17,pointer_table,high,0x038043,1214,0x0381F6,"
-小智使用了冲浪术",graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B1AF><B1B0><B1AE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+小智使用了冲浪术",graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B1AF><B1B0><B1AE>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1140,0x038208,6515,dialogue_19_19,17,pointer_table,high,0x038045,1215,0x038208,"
-小智使用了怪力术",graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B0CA><B0E3><B1AE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+小智使用了怪力术",graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B0CA><B0E3><B1AE>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1141,0x03821A,6521,dialogue_19_19,21,pointer_table,high,0x038047,1216,0x03821A,"
-这块石头好像能被推动",graphical_codes,<0A><B0EE><B1B1><B1B2><B1B3><B1B4><B1B5><B0EC><B1B6><B1B7><B0B2>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+这块石头好像能被推动",graphical_codes,<0A><B0EE><B1B1><B1B2><B1B3><B1B4><B1B5><B0EC><B1B6><B1B7><B0B2>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1142,0x038230,4836,dialogue_19_19,23,pointer_table,high,0x038049,1217,0x038230,"
 这棵树苗好像能被斩断",ascii,This tree can be cut!,pending_semantic_review,
-1143,0x038445,313,dialogue_19_19,177,unaligned,low,,,,,graphical_codes," <B0C5><B1B4>!<B0D2><B0D3><B0C5><B0E4><B0E5><B0C0><B0C1><B0A1><B0A2><B0BC><B1BC><B1BD>!<B1BE><B1BF><B1C0><B1C1><B1C2><B1BE><B1C3><B1C4><B1C5>,<B0B8><B0EE><B1BC><B1BD><B1C6><B1C7><B1B6><B1C8><B0EA><B0C0><B0C1><B0A1><B0A2><B0BC><B1C9><B0C1>!<B0EE><B1C9><B0C1><B1B6><B1CA><B0EA><B0C0><B0C1>,<B1CB><B1A7><B1A8><B1CC><B0E7><B0F2><B1CD><B1CD>.<B1CE><B1C2><B0C2><B1CF><B1D0><B0EE><B0C0><B0C1><B0A1><B0A2><B0BC>!<B0B6><B0B7>,<B1D1><B0BA><B1D2><B1D3><B1CC><B0C5><B0BC><B1D4><B1D5>,<B1D6><B1D7><B1D8><B1D2><B1D9><B1DA>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1143,0x038445,313,dialogue_19_19,177,unaligned,low,,,,,graphical_codes," <B0C5><B1B4>!<B0D2><B0D3><B0C5><B0E4><B0E5><B0C0><B0C1><B0A1><B0A2><B0BC><B1BC><B1BD>!<B1BE><B1BF><B1C0><B1C1><B1C2><B1BE><B1C3><B1C4><B1C5>,<B0B8><B0EE><B1BC><B1BD><B1C6><B1C7><B1B6><B1C8><B0EA><B0C0><B0C1><B0A1><B0A2><B0BC><B1C9><B0C1>!<B0EE><B1C9><B0C1><B1B6><B1CA><B0EA><B0C0><B0C1>,<B1CB><B1A7><B1A8><B1CC><B0E7><B0F2><B1CD><B1CD>.<B1CE><B1C2><B0C2><B1CF><B1D0><B0EE><B0C0><B0C1><B0A1><B0A2><B0BC>!<B0B6><B0B7>,<B1D1><B0BA><B1D2><B1D3><B1CC><B0C5><B0BC><B1D4><B1D5>,<B1D6><B1D7><B1D8><B1D2><B1D9><B1DA>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1144,0x0384F8,319,dialogue_19_19,32,containing_offset,medium,,1218,0x0384F7,"
  妈妈:是嘛男孩子都是志在四方嘛!...嗯,电视上都是这么说的!对了,隔壁的大木博士在找你呢",ascii,YO ASH! Gramps isn't around!,pending_semantic_review,
 1145,0x038519,330,dialogue_19_19,141,containing_offset,medium,,1218,0x0384F7,"
@@ -575,9 +575,9 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 1158,0x0387F3,418,dialogue_19_19,110,pointer_table,high,0x038271,1237,0x0388C1,"
 店员:你是从真新镇来的吧?你知道大木博士吧.这是他要的东西,请转交给他!",ascii,"Hey! You came from Pallet Town? You know ProfOak,right?His order came in, can you take it to him? Thank you.",pending_semantic_review,
 1159,0x038862,6529,dialogue_19_19,29,pointer_table,high,0x03826B,1234,0x038866,"
-老爷爷:你等等,听听我的话",graphical_codes,"00000<B2CE><B1EE><B1EE>:<B0C5><B1CD><B1CD>,<B1F1><B1F1><B1C2><B0BC><B1EF>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+老爷爷:你等等,听听我的话",graphical_codes,"00000<B2CE><B1EE><B1EE>:<B0C5><B1CD><B1CD>,<B1F1><B1F1><B1C2><B0BC><B1EF>",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1160,0x038880,6532,dialogue_19_19,15,pointer_table,high,0x03826D,1235,0x038880,"
-老爷爷:你还去?",graphical_codes,<0A><B2CE><B1EE><B1EE>:<B0C5><B2BD><B0C7>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+老爷爷:你还去?",graphical_codes,<0A><B2CE><B1EE><B1EE>:<B0C5><B2BD><B0C7>?,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1161,0x038891,1583,dialogue_19_19,43,pointer_table,high,0x038417,1448,0x03AB63,"
 士兵:请进",ascii,Lt.Surge hid a switch inside the cans!,pending_semantic_review,
 1162,0x0388BD,1584,dialogue_19_19,32,pointer_table,high,0x038273,1238,0x038906,"
@@ -625,7 +625,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 1183,0x038D11,559,dialogue_19_19,17,pointer_table,high,0x03841B,1450,0x03AB93,"
 绅士:不想加入吗...",ascii,You're very good!,pending_semantic_review,
 1184,0x038D23,6543,dialogue_19_19,86,pointer_table,high,0x038291,1253,0x038D29,"
-守卫:这扇门之后都是一些强劲的精灵训练家们,你还未拿到徽章啊...当然无法让你通过啊",graphical_codes,"0000000<B3DF><B3E0>:<B0EE><B3E1><B3E2><B3E3><B2A8><B1C0><B0C2><B1D1><B3E4><B2C9><B3D9><B0BC><B0A1><B0A2><B2DE><B2C5><B1BF><B2EF>,<B0C5><B2BD><B3E5><B0C6><B0DB><B3D1><B3D2><B2AC>...<B2C4><B2AA><B3E6><B2B8><B2CB><B0C5><B3DA><B3D4><B2AC>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+守卫:这扇门之后都是一些强劲的精灵训练家们,你还未拿到徽章啊...当然无法让你通过啊",graphical_codes,"0000000<B3DF><B3E0>:<B0EE><B3E1><B3E2><B3E3><B2A8><B1C0><B0C2><B1D1><B3E4><B2C9><B3D9><B0BC><B0A1><B0A2><B2DE><B2C5><B1BF><B2EF>,<B0C5><B2BD><B3E5><B0C6><B0DB><B3D1><B3D2><B2AC>...<B2C4><B2AA><B3E6><B2B8><B2CB><B0C5><B3DA><B3D4><B2AC>",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1185,0x038D7A,596,dialogue_19_19,36,pointer_table,high,0x0382A3,1262,0x038E54,"
 男孩:你是精灵训练家吧?小刚正在找寻对手...来吧!",ascii,You're a trainer right? Follow me!,pending_semantic_review,
 1186,0x038D9F,601,dialogue_19_19,31,pointer_table,high,0x0382A5,1263,0x038E84,"
@@ -970,13 +970,13 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 1353,0x03A745,1633,dialogue_19_19,119,pointer_table,high,0x038421,1453,0x03AC50,"
 得到技能24",ascii,You're the real deal kid!Here's theThunderbadge! That badge lets you use FLY any time kid! And take this TM aswell!,pending_semantic_review,
 1354,0x03A7BD,6556,dialogue_19_19,26,pointer_table,high,0x0383E3,1422,0x03A7C3,"
-绅士:明年我要去旅游",graphical_codes,0000000<B7B4><B1C5>:<B5E6><B3EA><B1C2><B0C3><B0C7><B7C1><B5FB>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+绅士:明年我要去旅游",graphical_codes,0000000<B7B4><B1C5>:<B5E6><B3EA><B1C2><B0C3><B0C7><B7C1><B5FB>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1355,0x03A7D8,6558,dialogue_19_19,27,pointer_table,high,0x0383E5,1423,0x03A7D8,"
-绅士:都一把年纪了,走不动了",graphical_codes,"<0A><B7B4><B1C5>:<B1C0><B1D1><B3D3><B3EA><B7C2><B0F8>,<B7C3><B0CE><B0B2><B0F8>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+绅士:都一把年纪了,走不动了",graphical_codes,"<0A><B7B4><B1C5>:<B1C0><B1D1><B3D3><B3EA><B7C2><B0F8>,<B7C3><B0CE><B0B2><B0F8>",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1356,0x03A7F4,6566,dialogue_19_19,18,pointer_table,high,0x0383E7,1424,0x03A7F4,"
-水手:小子,别乱逛!",graphical_codes,"<0A><B5F7><B1A3>:<B0B6><B1DF>,<B2CA><B7C4><B5C1>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+水手:小子,别乱逛!",graphical_codes,"<0A><B5F7><B1A3>:<B0B6><B1DF>,<B2CA><B7C4><B5C1>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1357,0x03A807,6572,dialogue_19_19,25,pointer_table,high,0x0383E9,1425,0x03A807,"
-水手:我错了,请您随便参观",graphical_codes,"<0A><B5F7><B1A3>:<B1C2><B2DC><B0F8>,<B2D8><B7C5><B5C2><B3A2><B7C6><B6DB>",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+水手:我错了,请您随便参观",graphical_codes,"<0A><B5F7><B1A3>:<B1C2><B2DC><B0F8>,<B2D8><B7C5><B5C2><B3A2><B7C6><B6DB>",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1358,0x03A821,1645,dialogue_19_19,104,pointer_table,high,0x038423,1454,0x03AC5C,"
 女警君莎:那是橙色徽章?你可能是厉害的训练家!!抓到最近老是恶作剧的杰尼龟给你好吗?",ascii,This Squirtle I gotkeeps getting into mischief.I think heneeds a better trainer. Would you like him?,pending_semantic_review,
 1359,0x03A88A,1655,dialogue_19_19,26,pointer_table,high,0x038425,1455,0x03ACAD,"
@@ -984,13 +984,13 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 1360,0x03A8A5,1660,dialogue_19_19,24,pointer_table,high,0x038427,1456,0x03ACCB,"
 拜托了,要好好照顾它哦!",ascii,Please treat him well.,pending_semantic_review,
 1361,0x03A8BE,6578,dialogue_19_19,19,pointer_table,high,0x0383FB,1434,0x03A8C4,"
-水手:快走开!",graphical_codes,0000000<B5F7><B1A3>:<B2EC><B7C3><B1D9>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+水手:快走开!",graphical_codes,0000000<B5F7><B1A3>:<B2EC><B7C3><B1D9>!,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1362,0x03A8D2,6579,dialogue_19_19,21,pointer_table,high,0x0383FD,1435,0x03A8D2,"
-水手:刚才我有说话吗?",graphical_codes,<0A><B5F7><B1A3>:<B2BF><B1F2><B1C2><B0AE><B1E7><B1EF><B0D7>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+水手:刚才我有说话吗?",graphical_codes,<0A><B5F7><B1A3>:<B2BF><B1F2><B1C2><B0AE><B1E7><B1EF><B0D7>?,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1363,0x03A8E8,6581,dialogue_19_19,30,pointer_table,high,0x0383FF,1436,0x03A8E8,"
-绅士:我有个女儿现在和你一样大",graphical_codes,<0A><B7B4><B1C5>:<B1C2><B0AE><B0BA><B2CF><B7D0><B2F5><B0B8><B0C9><B0C5><B1D1><B2DA><B1BE>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+绅士:我有个女儿现在和你一样大",graphical_codes,<0A><B7B4><B1C5>:<B1C2><B0AE><B0BA><B2CF><B7D0><B2F5><B0B8><B0C9><B0C5><B1D1><B2DA><B1BE>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1364,0x03A907,6594,dialogue_19_19,19,pointer_table,high,0x038401,1437,0x03A907,"
-绅士:做我女婿吧...",graphical_codes,<0A><B7B4><B1C5>:<B2B4><B1C2><B2CF><B7D1><B0BE>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+绅士:做我女婿吧...",graphical_codes,<0A><B7B4><B1C5>:<B2B4><B1C2><B2CF><B7D1><B0BE>...,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1365,0x03A91B,1673,dialogue_19_19,19,pointer_table,high,0x038439,1465,0x03ADD9,"
 老爷爷:我的精灵是无敌的!",ascii,"Win, Lose, or Draw!",pending_semantic_review,
 1366,0x03A92F,1678,dialogue_19_19,26,pointer_table,high,0x03843B,1466,0x03ADF3,"
@@ -1100,7 +1100,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 1418,0x03AE43,1868,dialogue_19_19,13,pointer_table,high,0x038441,1469,0x03AE3F,"
 马沙:谢谢......",ascii,Thanks again!,pending_semantic_review,
 1419,0x03AE51,6602,dialogue_19_19,11,pointer_table,high,0x038443,1470,0x03AE50,"
-名人:......",graphical_codes,<B3B1><B2B5>:......,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+名人:......",graphical_codes,<B3B1><B2B5>:......,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1420,0x03B058,1879,dialogue_19_19,15,pointer_table,high,0x03AED8,1530,0x03B615,"
 职员:明天该轻松了吧",ascii,I'm so jealous!,pending_semantic_review,
 1421,0x03B068,1883,dialogue_19_19,33,pointer_table,high,0x03AEDE,1533,0x03B650,"
@@ -1172,9 +1172,9 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 1454,0x03B3C2,2030,dialogue_19_19,28,pointer_table,high,0x03AEFE,1549,0x03B835,"
 修女:幽灵塔是为了安慰死去的精灵之灵而盖的",ascii,Did you come to payrespects?,pending_semantic_review,
 1455,0x03B3DF,6604,dialogue_19_19,11,pointer_table,high,0x03AEA4,1504,0x03B3D3,"
-女孩:你居然能找到这里?",graphical_codes,<B0EC><B1EA><B0DB><B0EE><B0BF>?,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+女孩:你居然能找到这里?",graphical_codes,<B0EC><B1EA><B0DB><B0EE><B0BF>?,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1456,0x03B3EB,6605,dialogue_19_19,44,pointer_table,high,0x03AEA6,1505,0x03B3EB,"
-女孩:我也是听说附近出现了传说中的精灵才来的",graphical_codes,<0A><B2CF><B1DE>:<B1C2><B0F6><B0C2><B1F1><B1E7><B3C8><B0CD><B0A4><B2F5><B0F8><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1F2><B0FC><B0BC>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+女孩:我也是听说附近出现了传说中的精灵才来的",graphical_codes,<0A><B2CF><B1DE>:<B1C2><B0F6><B0C2><B1F1><B1E7><B3C8><B0CD><B0A4><B2F5><B0F8><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1F2><B0FC><B0BC>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1457,0x03B418,2035,dialogue_19_19,14,pointer_table,high,0x03AEA8,1506,0x03B418,"
 闪电鸟:......",ascii,Zapdos: Kree!!,pending_semantic_review,
 1458,0x03B427,2036,dialogue_19_19,34,pointer_table,high,0x03AF00,1550,0x03B860,"
@@ -1232,7 +1232,7 @@ entry_index,english_offset_hex,script_line,layout,source_length,alignment_method
 1484,0x03B7E8,2171,dialogue_19_19,12,pointer_table,high,0x03AF4E,1589,0x03BEA5,"
 水手:你一定会被佳丽亚打败的!",ascii,You're mean!,pending_semantic_review,
 1485,0x03B7F5,6607,dialogue_19_19,63,pointer_table,high,0x03AEFC,1548,0x03B7F6,"
-女孩:可拉可拉的妈妈就是在逃出来的时候被火箭队杀了,我也看到了!",graphical_codes,"00<B2CF><B1DE>:<B0DE><B8BB><B0DE><B8BB><B0BC><B1DB><B1DB><B2AB><B0C2><B0B8><B3EF><B0A4><B0FC><B0BC><B0F0><B7CD><B1B6><B5A2><B5A3><B5A4><B8BC><B0F8>,<B1C2><B0F6><B0FD><B0DB><B0F8>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+女孩:可拉可拉的妈妈就是在逃出来的时候被火箭队杀了,我也看到了!",graphical_codes,"00<B2CF><B1DE>:<B0DE><B8BB><B0DE><B8BB><B0BC><B1DB><B1DB><B2AB><B0C2><B0B8><B3EF><B0A4><B0FC><B0BC><B0F0><B7CD><B1B6><B5A2><B5A3><B5A4><B8BC><B0F8>,<B1C2><B0F6><B0FD><B0DB><B0F8>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1486,0x03B835,2175,dialogue_19_19,27,pointer_table,high,0x03AF4C,1588,0x03BE82,"
 女生:喂!这里是只有女孩才能进入的!",ascii,You're not allowed in here!,pending_semantic_review,
 1487,0x03B851,2176,dialogue_19_19,19,pointer_table,high,0x03AF50,1590,0x03BEC3,"
@@ -1356,9 +1356,9 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 1547,0x03C0C5,2500,dialogue_19_19,16,pointer_table,high,0x03AFD2,1655,0x03C709,"
 修女:僵尸啊...",ascii,Ghost! Kwaaaaah!,pending_semantic_review,
 1548,0x03C0D6,6616,dialogue_19_19,61,pointer_table,high,0x03AF6C,1604,0x03C0D5,"
-火箭队:我是在这里看守这张海报的,妨碍我的话可是要尝到苦头的哦!",graphical_codes,"<B5A2><B5A3><B5A4>:<B1C2><B0C2><B0B8><B0EE><B0BF><B0FD><B3DF><B0EE><B6F9><B6FC><B9A3><B0BC>,<B3C5><B3C6><B1C2><B0BC><B1EF><B0DE><B0C2><B0C3><B7EA><B0DB><B3C0><B1B3><B0BC><B2DD>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+火箭队:我是在这里看守这张海报的,妨碍我的话可是要尝到苦头的哦!",graphical_codes,"<B5A2><B5A3><B5A4>:<B1C2><B0C2><B0B8><B0EE><B0BF><B0FD><B3DF><B0EE><B6F9><B6FC><B9A3><B0BC>,<B3C5><B3C6><B1C2><B0BC><B1EF><B0DE><B0C2><B0C3><B7EA><B0DB><B3C0><B1B3><B0BC><B2DD>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1549,0x03C114,6634,dialogue_19_19,69,pointer_table,high,0x03AF6E,1605,0x03C114,"
-火箭队:可恶,这样下去的话火箭队的基地会被发现的!要赶快和老大联络才行!",graphical_codes,"<0A><B5A2><B5A3><B5A4>:<B0DE><B5E0>,<B0EE><B2DA><B0F9><B0C7><B0BC><B1EF><B5A2><B5A3><B5A4><B0BC><B9A4><B3BB><B1F9><B1B6><B2F4><B2F5><B0BC>!<B0C3><B1F3><B2EC><B0C9><B2CE><B1BE><B3CE><B9A5><B1F2><B3A9>!",english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+火箭队:可恶,这样下去的话火箭队的基地会被发现的!要赶快和老大联络才行!",graphical_codes,"<0A><B5A2><B5A3><B5A4>:<B0DE><B5E0>,<B0EE><B2DA><B0F9><B0C7><B0BC><B1EF><B5A2><B5A3><B5A4><B0BC><B9A4><B3BB><B1F9><B1B6><B2F4><B2F5><B0BC>!<B0C3><B1F3><B2EC><B0C9><B2CE><B1BE><B3CE><B9A5><B1F2><B3A9>!",english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1550,0x03C15A,2501,dialogue_19_19,15,pointer_table,high,0x03AFD4,1656,0x03C719,"
 修女:我的意识恢复了",ascii,Was I dreaming?,pending_semantic_review,
 1551,0x03C16A,2502,dialogue_19_19,18,pointer_table,high,0x03AFD6,1657,0x03C72E,"
@@ -1545,7 +1545,7 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 捉鸟人:没事...",ascii,Not ready yet.,pending_semantic_review,
 1642,0x03CE78,2901,dialogue_19_19,18,pointer_table,high,0x03CEA2,1732,0x03D1A4,"
 大姐姐:好可爱的样子哦",ascii,"Sure, I'll fight!",pending_semantic_review,
-1643,0x03D088,2907,dialogue_19_19,30,unaligned,low,,,,,graphical_codes,<B3E7><B8A7><B2B5>:<B0B9><B0BF><B0AE><B3F7><B0C8><B5C5><B6B2><B0BC><B0A1><B0A2>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+1643,0x03D088,2907,dialogue_19_19,30,unaligned,low,,,,,graphical_codes,<B3E7><B8A7><B2B5>:<B0B9><B0BF><B0AE><B3F7><B0C8><B5C5><B6B2><B0BC><B0A1><B0A2>...,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1644,0x03D0A7,2912,dialogue_19_19,26,pointer_table,high,0x03CEA4,1733,0x03D1BB,"
 大姐姐:不要走吧,陪姐姐我说说话嘛",ascii,"Win,lose,it doesn'tmatter.",pending_semantic_review,
 1645,0x03D0C2,2913,dialogue_19_19,16,pointer_table,high,0x03CE96,1726,0x03D107,"
@@ -1567,9 +1567,9 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 1653,0x03D157,2929,dialogue_19_19,19,pointer_table,high,0x03CEAA,1736,0x03D1FF,"
 暴走族:偶看你不惯!",ascii,I need to burn time,pending_semantic_review,
 1654,0x03D16B,6645,dialogue_19_19,37,pointer_table,high,0x03CE9E,1730,0x03D16A,"
-捉鸟人:拥有连续攻击能力的我你没有胜算",graphical_codes,<B3E7><B8A7><B2B5>:<B6A9><B0AE><B6BA><B4D7><B4AB><B4AC><B0EC><B0E3><B0BC><B1C2><B0C5><B2B6><B0AE><B3F9><B3D0>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+捉鸟人:拥有连续攻击能力的我你没有胜算",graphical_codes,<B3E7><B8A7><B2B5>:<B6A9><B0AE><B6BA><B4D7><B4AB><B4AC><B0EC><B0E3><B0BC><B1C2><B0C5><B2B6><B0AE><B3F9><B3D0>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1655,0x03D191,6650,dialogue_19_19,18,pointer_table,high,0x03CEA0,1731,0x03D191,"
-捉鸟人:又说大话了",graphical_codes,<0A><B3E7><B8A7><B2B5>:<B5B0><B1E7><B1BE><B1EF><B0F8>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+捉鸟人:又说大话了",graphical_codes,<0A><B3E7><B8A7><B2B5>:<B5B0><B1E7><B1BE><B1EF><B0F8>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1656,0x03D1A4,2934,dialogue_19_19,10,pointer_table,high,0x03CEAC,1737,0x03D213,"
 暴走族:现在看惯了,没事",ascii,What? You!,pending_semantic_review,
 1657,0x03D1AF,2935,dialogue_19_19,19,pointer_table,high,0x03CEAE,1738,0x03D22B,"
@@ -1689,7 +1689,7 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 1714,0x03D81D,3197,dialogue_19_19,9,pointer_table,high,0x03CF66,1830,0x03DF9F,"
 空手道:这里是全国格斗家所聚集的道馆啊!",ascii,I give up,pending_semantic_review,
 1715,0x03D827,6655,dialogue_19_19,21,pointer_table,high,0x03CEFC,1777,0x03D826,"
-火箭队:小鬼滚一边去!!",graphical_codes,<B5A2><B5A3><B5A4>:<B0B6><B7B2><B9E7><B1D1><B4D5><B0C7>!!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+火箭队:小鬼滚一边去!!",graphical_codes,<B5A2><B5A3><B5A4>:<B0B6><B7B2><B9E7><B1D1><B4D5><B0C7>!!,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1716,0x03D83E,3205,dialogue_19_19,76,pointer_table,high,0x03CF62,1828,0x03DF7B,"
 得到大师球",ascii,Recieved MasterballThat will catch anyPok@mon without fail! Use it wisely,pending_semantic_review,
 1717,0x03D88B,3210,dialogue_19_19,19,pointer_table,high,0x03CF70,1835,0x03E05B,"
@@ -1907,15 +1907,15 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 1825,0x03E732,3775,dialogue_19_19,68,pointer_table,high,0x03D066,1958,0x03EF91,"
 空手道:我输了,老大会生气的...训兽师:我是天才!",ascii,You can go onto thePok@mon League onlyby defeating our Gym Leader!,pending_semantic_review,
 1826,0x03E777,6667,dialogue_19_19,31,pointer_table,high,0x03D01C,1921,0x03EA79,"
-研究员:这里不是你这种小孩能来的",graphical_codes,<B1CF><B1D0><B2D4>:<B0EE><B0BF><B0CE><B0C2><B0C5><B0EE><B6AD><B0B6><B1DE><B0EC><B0FC><B0BC>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+研究员:这里不是你这种小孩能来的",graphical_codes,<B1CF><B1D0><B2D4>:<B0EE><B0BF><B0CE><B0C2><B0C5><B0EE><B6AD><B0B6><B1DE><B0EC><B0FC><B0BC>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1827,0x03E797,6676,dialogue_19_19,148,pointer_table,high,0x03CFF6,1902,0x03E80D,"
-成熟姐姐:在这不远就是红莲镇了",graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B2EA><B9CE><B3B8><B3B8>:<B0B8><B0EE><B0CE><B5CD><B2AB><B0C2><B5CE><B5CF><B2D6><B0F8>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+成熟姐姐:在这不远就是红莲镇了",graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B2EA><B9CE><B3B8><B3B8>:<B0B8><B0EE><B0CE><B5CD><B2AB><B0C2><B5CE><B5CF><B2D6><B0F8>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1828,0x03E82C,6679,dialogue_19_19,38,pointer_table,high,0x03CFF8,1903,0x03E82C,"
-成熟姐姐:红莲镇经常会有火山爆发的情况",graphical_codes,<0A><B2EA><B9CE><B3B8><B3B8>:<B5CE><B5CF><B2D6><B2A5><B3CA><B1F9><B0AE><B5A2><B6DC><BAD9><B2F4><B0BC><B7AB><BADA>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+成熟姐姐:红莲镇经常会有火山爆发的情况",graphical_codes,<0A><B2EA><B9CE><B3B8><B3B8>:<B5CE><B5CF><B2D6><B2A5><B3CA><B1F9><B0AE><B5A2><B6DC><BAD9><B2F4><B0BC><B7AB><BADA>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1829,0x03E853,6690,dialogue_19_19,32,pointer_table,high,0x03CFFA,1904,0x03E853,"
-研究员:在这每天都有对精灵的研究",graphical_codes,<0A><B1CF><B1D0><B2D4>:<B0B8><B0EE><BADB><B1AD><B1C0><B0AE><B0E7><B0A1><B0A2><B0BC><B1CF><B1D0>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+研究员:在这每天都有对精灵的研究",graphical_codes,<0A><B1CF><B1D0><B2D4>:<B0B8><B0EE><BADB><B1AD><B1C0><B0AE><B0E7><B0A1><B0A2><B0BC><B1CF><B1D0>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1830,0x03E874,6691,dialogue_19_19,43,pointer_table,high,0x03CFFC,1905,0x03E874,"
-小孩:我在观月山发现的化石好象是珍贵的化石!",graphical_codes,<0A><B0B6><B1DE>:<B1C2><B0B8><B6DB><B6CF><B6DC><B2F4><B2F5><B0BC><B5AB><B1B2><B1B4><B8B4><B0C2><B5C5><B6B2><B0BC><B5AB><B1B2>!,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+小孩:我在观月山发现的化石好象是珍贵的化石!",graphical_codes,<0A><B0B6><B1DE>:<B1C2><B0B8><B6DB><B6CF><B6DC><B2F4><B2F5><B0BC><B5AB><B1B2><B1B4><B8B4><B0C2><B5C5><B6B2><B0BC><B5AB><B1B2>!,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1831,0x03E8A0,3787,dialogue_19_19,179,pointer_table,high,0x03D06C,1961,0x03F033,"
 老大:哈哈,这里是我藏身的地方!既然被你发现那就没办法了.我可不会手下留情的!再让你尝尝最强的训练师我沙奇的厉害!!",ascii,"This is my hideout!I planned to resur-rect Team Rocket here! But, you havecaught me again! Sobe it! I'm not holding back! You shall face Giovannithe greatest trainer!",pending_semantic_review,
 1832,0x03E954,3797,dialogue_19_19,351,pointer_table,high,0x03D06E,1962,0x03F0A2,"
@@ -1923,13 +1923,13 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 1833,0x03EAB4,3831,dialogue_19_19,220,pointer_table,high,0x03D076,1966,0x03F1A0,"
 小次郎:那我就大发慈悲的告诉你们!",ascii,"Jessie:Hold it runtWe can't allow TeamRocket to lose likethis! James: You've been quite a thorn in our side, but Team Rocket will never be defeated! Meowth: Meowth! We'll show you who's boss!",pending_semantic_review,
 1834,0x03EB91,6700,dialogue_19_19,143,pointer_table,high,0x03D03A,1936,0x03EC05,"
-研究员:火系还是有弱点啊...",graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1CF><B1D0><B2D4>:<B5A2><B0AF><B2BD><B0C2><B0AE><B7E6><B7D9><B2AC>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+研究员:火系还是有弱点啊...",graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1CF><B1D0><B2D4>:<B5A2><B0AF><B2BD><B0C2><B0AE><B7E6><B7D9><B2AC>...,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1835,0x03EC21,6706,dialogue_19_19,36,pointer_table,high,0x03D03C,1937,0x03EC21,"
-研究员:火对水确实没办法但比冰系要强",graphical_codes,<0A><B1CF><B1D0><B2D4>:<B5A2><B0E7><B5F7><B9DB><B5DE><B2B6><B2B7><B2B8><B3A8><B2B2><BAE8><B0AF><B0C3><B2C9>,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+研究员:火对水确实没办法但比冰系要强",graphical_codes,<0A><B1CF><B1D0><B2D4>:<B5A2><B0E7><B5F7><B9DB><B5DE><B2B6><B2B7><B2B8><B3A8><B2B2><BAE8><B0AF><B0C3><B2C9>,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1836,0x03EC46,3837,dialogue_19_19,182,pointer_table,high,0x03D078,1967,0x03F1C2,"
 武藏:为了防止世界被破坏",ascii,James: I can't believe it! Team Rocket defeated by this brat! Jessie: You may have won this time!But we'll be back! Meowth: Meowth! Youhaven't heard the last of us!,pending_semantic_review,
 1837,0x03ECFD,6713,dialogue_19_19,309,pointer_table,high,0x03D056,1950,0x03EDFE,"
-裁判:未来的冠军!这个常青道馆的首领是谁我也不知道...",graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B3FC><B3FD>:<B3E5><B0FC><B0BC><B4A1><B4A2>!<B0EE><B0BA><B3CA><B3CB><B1A4><B3CC><B0BC><B9EF><B4B3><B0C2><B5F1><B1C2><B0F6><B0CE><B2D7><B1A4>...,english_graphical_residual,La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible.
+裁判:未来的冠军!这个常青道馆的首领是谁我也不知道...",graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B3FC><B3FD>:<B3E5><B0FC><B0BC><B4A1><B4A2>!<B0EE><B0BA><B3CA><B3CB><B1A4><B3CC><B0BC><B9EF><B4B3><B0C2><B5F1><B1C2><B0F6><B0CE><B2D7><B1A4>...,english_graphical_residual,The English ROM retains graphical codes; this text is not a readable English string.
 1838,0x03F033,5178,dialogue_19_19,583,pointer_table,high,0x03D074,1965,0x03F185,"
 武藏:既然你诚心诚意的问了",ascii,Take care of 'em,pending_semantic_review,
 1839,0x03F27B,243,dialogue_19_19,114,unaligned,low,,,,,ascii,"Mother: Right, All boys leave home someday, It said soon TV. PROF.OAK, next dooris looking for you.",unaligned_or_non_dialogue,

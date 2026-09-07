@@ -301,7 +301,7 @@ class TranslationCoverageTests(unittest.TestCase):
 
             self.assertEqual(result, 1)
             self.assertIn(
-                "1 record(s) graphique(s) modifie(s)",
+                "1 graphical record(s) modified",
                 output,
             )
 
@@ -342,7 +342,7 @@ class TranslationCoverageTests(unittest.TestCase):
 
             self.assertEqual(result, 0, output)
             self.assertIn(
-                "Records graphiques déclarés traduits en français : "
+                "Graphical records declared translated into French : "
                 f"{len(declared_starts)}",
                 output,
             )
@@ -379,7 +379,7 @@ class TranslationCoverageTests(unittest.TestCase):
 
             self.assertEqual(result, 1)
             self.assertIn(
-                "ASCII non classe 0x030B20: 'UnreviewedCodexText'",
+                "unclassified ASCII 0x030B20: 'UnreviewedCodexText'",
                 output,
             )
 

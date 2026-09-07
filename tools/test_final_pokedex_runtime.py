@@ -63,6 +63,7 @@ class FinalPokedexRuntimeValidationTests(unittest.TestCase):
         self.assertEqual(report["result"], "FAIL")
         self.assertGreaterEqual(len(errors), 1)
         self.assertIn("Pokédex #1", errors[0])
+        self.assertIn("compiled payload differs at", errors[0])
         self.assertEqual(report["summary"]["exact_payloads"], 158)
 
 

@@ -59,7 +59,7 @@ def dialogue_line_width(
     layout: str = DIALOGUE_LAYOUT,
 ) -> int:
     if line_index < 0:
-        raise ValueError("l'index de ligne doit être positif")
+        raise ValueError("line index must be non-negative")
     if layout == DIALOGUE_LAYOUT:
         return DIALOGUE_LINE_WIDTH
     if layout == INTRO_DIALOGUE_LAYOUT:
@@ -68,7 +68,7 @@ def dialogue_line_width(
             if line_index == 0
             else DIALOGUE_LINE_WIDTH
         )
-    raise ValueError(f"layout de dialogue inconnu: {layout!r}")
+    raise ValueError(f"unknown dialogue layout: {layout!r}")
 
 
 def dialogue_boundaries(
@@ -77,7 +77,7 @@ def dialogue_boundaries(
 ) -> tuple[int, ...]:
     """Return every physical-line boundary inside an encoded payload."""
     if encoded_length < 0:
-        raise ValueError("la longueur encodée doit être positive")
+        raise ValueError("encoded length must be non-negative")
     boundaries: list[int] = []
     line_index = 0
     boundary = dialogue_line_width(line_index, layout)
@@ -100,12 +100,12 @@ def wrap_dialogue_lines_greedy(
     fragments.  Empty forced pages are rejected.
     """
     if layout not in {DIALOGUE_LAYOUT, INTRO_DIALOGUE_LAYOUT}:
-        raise ValueError(f"layout de dialogue inconnu: {layout!r}")
+        raise ValueError(f"unknown dialogue layout: {layout!r}")
     source_pages = text.splitlines()
     if not source_pages:
         return ()
     if any(not page.strip() for page in source_pages):
-        raise ValueError("page de dialogue forcée vide")
+        raise ValueError("empty forced dialogue page")
 
     lines: list[bytes] = []
     line_index = 0
@@ -117,7 +117,7 @@ def wrap_dialogue_lines_greedy(
             encoded = encode_game_text(unit)
             if len(encoded) > DIALOGUE_LINE_WIDTH:
                 raise ValueError(
-                    "unité lexicale trop longue pour une ligne de dialogue "
+                    "lexical unit too long for a dialogue line "
                     f"({len(encoded)} > {DIALOGUE_LINE_WIDTH}): {unit!r}"
                 )
             encoded_units.append(encoded)
@@ -134,7 +134,7 @@ def wrap_dialogue_lines_greedy(
 
             if not current:
                 raise ValueError(
-                    "première unité trop longue pour la ligne courante "
+                    "first unit too long for the current line "
                     f"({len(unit)} > {width}): {source_unit!r}"
                 )
 
@@ -143,7 +143,7 @@ def wrap_dialogue_lines_greedy(
             width = dialogue_line_width(line_index, layout)
             if len(unit) > width:
                 raise ValueError(
-                    "unité lexicale trop longue pour la ligne courante "
+                    "lexical unit too long for the current line "
                     f"({len(unit)} > {width}): {source_unit!r}"
                 )
             current = bytearray(unit)
@@ -208,7 +208,7 @@ def wrap_pokedex_lines(text: str) -> tuple[bytes, ...]:
         encoded = encode_game_text(unit)
         if len(encoded) > POKEDEX_LINE_WIDTH:
             raise ValueError(
-                "unité lexicale trop longue pour une ligne Pokédex "
+                "lexical unit too long for a Pokédex line "
                 f"({len(encoded)} > {POKEDEX_LINE_WIDTH}): {unit!r}"
             )
         encoded_units.append(encoded)
@@ -225,22 +225,22 @@ def wrap_pokedex_lines(text: str) -> tuple[bytes, ...]:
 
         if not current:
             raise ValueError(
-                "première unité trop longue pour une ligne Pokédex: "
+                "first unit too long for a Pokédex line: "
                 f"{source_unit!r}"
             )
         lines.append(bytes(current).ljust(POKEDEX_LINE_WIDTH, b" "))
         if len(lines) >= POKEDEX_MAX_LINES:
             raise ValueError(
-                "description Pokédex trop longue "
-                f"(plus de {POKEDEX_MAX_LINES} lignes)"
+                "Pokédex description too long "
+                f"(more than {POKEDEX_MAX_LINES} lines)"
             )
         current = bytearray(unit)
 
     lines.append(bytes(current))
     if len(lines) > POKEDEX_MAX_LINES:
         raise ValueError(
-            "description Pokédex trop longue "
-            f"({len(lines)} > {POKEDEX_MAX_LINES} lignes)"
+            "Pokédex description too long "
+            f"({len(lines)} > {POKEDEX_MAX_LINES} lines)"
         )
     return tuple(lines)
 
@@ -260,7 +260,7 @@ def format_game_text(text: str, layout: str = "") -> bytes:
         return wrap_dialogue_17_19(text)
     if layout == POKEDEX_LAYOUT:
         return wrap_pokedex_13x4(text)
-    raise ValueError(f"layout de texte inconnu: {layout!r}")
+    raise ValueError(f"unknown text layout: {layout!r}")
 
 
 def _is_lexical_character(character: str) -> bool:

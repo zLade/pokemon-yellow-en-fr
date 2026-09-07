@@ -154,7 +154,7 @@ class MoveLabelCertificationTests(unittest.TestCase):
         base = BASE.read_bytes()
         with self.assertRaisesRegex(
             MoveLabelCertificationError,
-            "profil de noms d'attaques non certifié",
+            "Uncertified move-name profile",
         ):
             certify_move_label_graphics(
                 base=base,
@@ -170,7 +170,7 @@ class MoveLabelCertificationTests(unittest.TestCase):
             damaged[PAIR8_END - 1] ^= 0x01
             with self.assertRaisesRegex(
                 MoveLabelCertificationError,
-                "hors cellules d'attaques certifiées",
+                "outside certified move cells",
             ):
                 certify_move_label_graphics(
                     base=base,
@@ -188,7 +188,7 @@ class MoveLabelCertificationTests(unittest.TestCase):
             damaged[GRAPHIC_ATLAS_OFFSET + 94 * GRAPHIC_ATLAS_SLOT_SIZE] ^= 0x01
             with self.assertRaisesRegex(
                 MoveLabelCertificationError,
-                "non idempotents",
+                "Non-idempotent",
             ):
                 certify_move_label_graphics(
                     base=base,
@@ -215,7 +215,7 @@ class MoveLabelCertificationTests(unittest.TestCase):
             ] = nested_pointer.to_bytes(2, "little")
             with self.assertRaisesRegex(
                 MoveLabelCertificationError,
-                "payloads d'attaques graphiques chevauchants: 000/019",
+                "Overlapping graphical move payloads: 000/019",
             ):
                 certify_move_label_graphics(
                     base=base,

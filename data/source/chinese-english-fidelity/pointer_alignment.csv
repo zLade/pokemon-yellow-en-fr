@@ -1,6 +1,6 @@
 pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,english_target_hex,english_entry_index,english_offset_hex,english_storage,english_text,fidelity_status,review_note
 0x03002B,0x0301C5,1,"
-南晶公司版权所有",0x0301C5,1,0x0301C4,graphical_codes,<0A><B0A7><B0A8><B0A9><B0AA><B0AB><B0AC><B0AD><B0AE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+南晶公司版权所有",0x0301C5,1,0x0301C4,graphical_codes,<0A><B0A7><B0A8><B0A9><B0AA><B0AB><B0AC><B0AD><B0AE>,english_graphical_residual,The English target retains graphical codes.
 0x03002D,0x0301D7,2,"
 啊!野生的",0x03041D,46,0x03041D,ascii,Oh!A Wild,pending_semantic_review,
 0x03002F,0x0301E2,3,"
@@ -8,7 +8,7 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x030031,0x0301EB,4,"
 冲啊!",0x0301EB,3,0x0301EB,ascii,Go!,pending_semantic_review,
 0x030033,0x0301F2,5,"
-野生的",0x0301F2,4,0x0301F0,graphical_codes,00<B1F8><B1C9><B0BC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+野生的",0x0301F2,4,0x0301F0,graphical_codes,00<B1F8><B1C9><B0BC>,english_graphical_residual,The English target retains graphical codes.
 0x030035,0x0301FA,6,"
 不行了!",0x0301F9,5,0x0301F9,ascii,Fainted!,pending_semantic_review,
 0x030037,0x030203,7,"
@@ -78,9 +78,9 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x030079,0x030377,40,"
 冰冻了不能动",0x030377,30,0x030373,ascii,is frozen,pending_semantic_review,
 0x03007B,0x030385,41,"
-中剧毒了损伤",0x030385,31,0x030381,graphical_codes,0000<B0DC><B7AE><B8D8><B0F8><BBA2><B9C7>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+中剧毒了损伤",0x030385,31,0x030381,graphical_codes,0000<B0DC><B7AE><B8D8><B0F8><BBA2><B9C7>,english_graphical_residual,The English target retains graphical codes.
 0x03007D,0x030393,42,"
-害怕不能行动",0x030393,32,0x030392,graphical_codes,<0A><B3EE><B8AC><B0CE><B0EC><B3A9><B0B2>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+害怕不能行动",0x030393,32,0x030392,graphical_codes,<0A><B3EE><B8AC><B0CE><B0EC><B3A9><B0B2>,english_graphical_residual,The English target retains graphical codes.
 0x03007F,0x0303A1,43,"
 上升了",0x0303A1,33,0x0303A1,ascii,Rose,pending_semantic_review,
 0x030081,0x0303A9,44,"
@@ -90,19 +90,19 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x030085,0x0303C3,46,"
 下降了",0x0303C2,35,0x0303BC,ascii,Fell,pending_semantic_review,
 0x030087,0x0303CB,47,"
-迅速下降了",0x0303CB,36,0x0303C8,graphical_codes,000<BBA4><B9D4><B0F9><BBA5><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+迅速下降了",0x0303CB,36,0x0303C8,graphical_codes,000<BBA4><B9D4><B0F9><BBA5><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x030089,0x0303D7,48,"
 不能再下降了",0x0303D6,37,0x0303D6,ascii,can't go lower,pending_semantic_review,
 0x03008B,0x0303E5,49,"
-谢谢",0x0303E6,38,0x0303E6,graphical_codes,<B0D8><B0D8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+谢谢",0x0303E6,38,0x0303E6,graphical_codes,<B0D8><B0D8>,english_graphical_residual,The English target retains graphical codes.
 0x03008D,0x0303EB,50,"
-谢谢",0x0303EB,39,0x0303EB,graphical_codes,<B0D8><B0D8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+谢谢",0x0303EB,39,0x0303EB,graphical_codes,<B0D8><B0D8>,english_graphical_residual,The English target retains graphical codes.
 0x03008F,0x0303F1,51,"
-谢谢",0x0303F1,40,0x0303F0,graphical_codes,<0A><B0D8><B0D8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+谢谢",0x0303F1,40,0x0303F0,graphical_codes,<0A><B0D8><B0D8>,english_graphical_residual,The English target retains graphical codes.
 0x030091,0x0303F7,52,"
-谢谢",0x0303F7,41,0x0303F6,graphical_codes,<0A><B0D8><B0D8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+谢谢",0x0303F7,41,0x0303F6,graphical_codes,<0A><B0D8><B0D8>,english_graphical_residual,The English target retains graphical codes.
 0x030093,0x0303FD,53,"
-谢谢",0x0303FD,42,0x0303FC,graphical_codes,<0A><B0D8><B0D8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+谢谢",0x0303FD,42,0x0303FC,graphical_codes,<0A><B0D8><B0D8>,english_graphical_residual,The English target retains graphical codes.
 0x030095,0x030403,54,"
 什么!?",0x030403,43,0x030403,ascii,What?,pending_semantic_review,
 0x030097,0x03040B,55,"
@@ -116,11 +116,11 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x0300A7,0x030445,61,"
 四个技能已经满了!",0x030445,48,0x03043F,ascii,more than 4 moves!,pending_semantic_review,
 0x0300A9,0x030458,62,"
-要学会",0x030458,49,0x030458,graphical_codes,<B0C3><B4C3><B1F9>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+要学会",0x030458,49,0x030458,graphical_codes,<B0C3><B4C3><B1F9>,english_graphical_residual,The English target retains graphical codes.
 0x0300AB,0x030460,63,"
 忘记其它的技能吗?",0x035F98,883,0x035F98,ascii,Forget an older move?,pending_semantic_review,
 0x0300AD,0x030473,64,"
-是否",0x030473,51,0x030467,graphical_codes,000000000000<B0C2><B1A1>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+是否",0x030473,51,0x030467,graphical_codes,000000000000<B0C2><B1A1>,english_graphical_residual,The English target retains graphical codes.
 0x0300AF,0x030479,65,"
 忘记哪个技能?",0x030479,52,0x030479,ascii,Which move?,pending_semantic_review,
 0x0300B1,0x030488,66,"
@@ -134,43 +134,43 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x0300BB,0x0304B8,71,"
 没有学习",0x0304B3,56,0x0304AB,ascii,Did not learn,pending_semantic_review,
 0x0300BD,0x0304C2,72,"
-聚集了太阳光",0x0304C2,57,0x0304C2,graphical_codes,<BAB7><B6B8><B0F8><B6C6><BBA7><B0E4>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+聚集了太阳光",0x0304C2,57,0x0304C2,graphical_codes,<BAB7><B6B8><B0F8><B6C6><BBA7><B0E4>,english_graphical_residual,The English target retains graphical codes.
 0x0300BF,0x0304D0,73,"
-太阳光射出",0x0304D0,58,0x0304CF,graphical_codes,<0A><B6C6><BBA7><B0E4><BBA8><B0A4>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+太阳光射出",0x0304D0,58,0x0304CF,graphical_codes,<0A><B6C6><BBA7><B0E4><BBA8><B0A4>,english_graphical_residual,The English target retains graphical codes.
 0x0300C1,0x0304DC,74,"
-钻到了地下",0x0304DC,59,0x0304DB,graphical_codes,<0A><BBA9><B0DB><B0F8><B3BB><B0F9>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+钻到了地下",0x0304DC,59,0x0304DB,graphical_codes,<0A><BBA9><B0DB><B0F8><B3BB><B0F9>,english_graphical_residual,The English target retains graphical codes.
 0x0300C3,0x0304E8,75,"
-迅速攻击",0x0304E8,60,0x0304E7,graphical_codes,<0A><BBA4><B9D4><B4AB><B4AC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+迅速攻击",0x0304E8,60,0x0304E7,graphical_codes,<0A><BBA4><B9D4><B4AB><B4AC>,english_graphical_residual,The English target retains graphical codes.
 0x0300C5,0x0304F2,76,"
-蓄集力量",0x0304F2,61,0x0304F1,graphical_codes,<0A><BBAA><B6B8><B0E3><B3EC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+蓄集力量",0x0304F2,61,0x0304F1,graphical_codes,<0A><BBAA><B6B8><B0E3><B3EC>,english_graphical_residual,The English target retains graphical codes.
 0x0300C7,0x0304FC,77,"
-全力一击",0x0304FC,62,0x0304FB,graphical_codes,<0A><B6C0><B0E3><B1D1><B4AC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+全力一击",0x0304FC,62,0x0304FB,graphical_codes,<0A><B6C0><B0E3><B1D1><B4AC>,english_graphical_residual,The English target retains graphical codes.
 0x0300C9,0x030506,78,"
-蓄集力量",0x030506,63,0x030505,graphical_codes,<0A><BBAA><B6B8><B0E3><B3EC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+蓄集力量",0x030506,63,0x030505,graphical_codes,<0A><BBAA><B6B8><B0E3><B3EC>,english_graphical_residual,The English target retains graphical codes.
 0x0300CB,0x030510,79,"
-全力一击",0x030510,64,0x03050F,graphical_codes,<0A><B6C0><B0E3><B1D1><B4AC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+全力一击",0x030510,64,0x03050F,graphical_codes,<0A><B6C0><B0E3><B1D1><B4AC>,english_graphical_residual,The English target retains graphical codes.
 0x0300CD,0x03051A,80,"
-蓄集打消",0x03051A,65,0x030519,graphical_codes,<0A><BBAA><B6B8><B0CF><B4F1>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+蓄集打消",0x03051A,65,0x030519,graphical_codes,<0A><BBAA><B6B8><B0CF><B4F1>,english_graphical_residual,The English target retains graphical codes.
 0x0300CF,0x030524,81,"
-飞上高空",0x030524,66,0x030523,graphical_codes,<0A><B1AC><B1E5><B8AF><B1A2>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+飞上高空",0x030524,66,0x030523,graphical_codes,<0A><B1AC><B1E5><B8AF><B1A2>,english_graphical_residual,The English target retains graphical codes.
 0x0300D1,0x03052E,82,"
-舍命一击",0x03052E,67,0x03052D,graphical_codes,<0A><BBAB><B4B9><B1D1><B4AC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+舍命一击",0x03052E,67,0x03052D,graphical_codes,<0A><BBAB><B4B9><B1D1><B4AC>,english_graphical_residual,The English target retains graphical codes.
 0x0300D3,0x030538,83,"
-蓄集神力",0x030538,68,0x030537,graphical_codes,<0A><BBAA><B6B8><B6DD><B0E3>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+蓄集神力",0x030538,68,0x030537,graphical_codes,<0A><BBAA><B6B8><B6DD><B0E3>,english_graphical_residual,The English target retains graphical codes.
 0x0300D5,0x030542,84,"
-神力射出",0x030542,69,0x030541,graphical_codes,<0A><B6DD><B0E3><BBA8><B0A4>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+神力射出",0x030542,69,0x030541,graphical_codes,<0A><B6DD><B0E3><BBA8><B0A4>,english_graphical_residual,The English target retains graphical codes.
 0x0300D7,0x03054C,85,"
-预知未来",0x03054C,70,0x03054B,graphical_codes,<0A><B6EC><B2D7><B3E5><B0FC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+预知未来",0x03054C,70,0x03054B,graphical_codes,<0A><B6EC><B2D7><B3E5><B0FC>,english_graphical_residual,The English target retains graphical codes.
 0x0300D9,0x030556,86,"
-受到预知未来攻击",0x030556,71,0x030555,graphical_codes,<0A><B4A9><B0DB><B6EC><B2D7><B3E5><B0FC><B4AB><B4AC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+受到预知未来攻击",0x030556,71,0x030555,graphical_codes,<0A><B4A9><B0DB><B6EC><B2D7><B3E5><B0FC><B4AB><B4AC>,english_graphical_residual,The English target retains graphical codes.
 0x0300DB,0x030568,87,"
-吃掉了",0x030568,72,0x030567,graphical_codes,<0A><B9B3><B8AB><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+吃掉了",0x030568,72,0x030567,graphical_codes,<0A><B9B3><B8AB><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x0300DD,0x030570,88,"
-的梦",0x030570,73,0x03056F,graphical_codes,<0A><B0BC><B1D6>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+的梦",0x030570,73,0x03056F,graphical_codes,<0A><B0BC><B1D6>,english_graphical_residual,The English target retains graphical codes.
 0x0300DF,0x030576,89,"
-发怒了",0x030576,74,0x030575,graphical_codes,<0A><B2F4><BAF0><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+发怒了",0x030576,74,0x030575,graphical_codes,<0A><B2F4><BAF0><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x0300E1,0x03057E,90,"
-受到诅咒",0x03057E,75,0x03057D,graphical_codes,<0A><B4A9><B0DB><B9BA><B9BB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+受到诅咒",0x03057E,75,0x03057D,graphical_codes,<0A><B4A9><B0DB><B9BA><B9BB>,english_graphical_residual,The English target retains graphical codes.
 0x0300E3,0x030588,91,"
 战斗",0x030588,76,0x030588,ascii,Fight,pending_semantic_review,
 0x0300E5,0x03058E,92,"
@@ -228,29 +228,29 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x030143,0x0306C9,139,"
 血值有所恢复",0x0306C9,101,0x0306C9,ascii,Recovered HP!,pending_semantic_review,
 0x030145,0x0306D7,140,"
-不能行动!",0x0306D7,102,0x0306D7,graphical_codes,<B0CE><B0EC><B3A9><B0B2>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+不能行动!",0x0306D7,102,0x0306D7,graphical_codes,<B0CE><B0EC><B3A9><B0B2>!,english_graphical_residual,The English target retains graphical codes.
 0x030147,0x0306E2,141,"
-一击必杀!",0x0306E2,103,0x0306E1,graphical_codes,<0A><B1D1><B4AC><BAC5><B8BC>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+一击必杀!",0x0306E2,103,0x0306E1,graphical_codes,<0A><B1D1><B4AC><BAC5><B8BC>!,english_graphical_residual,The English target retains graphical codes.
 0x030149,0x0306ED,142,"
-逃跑了!",0x0306ED,104,0x0306EC,graphical_codes,<0A><B3EF><B8B9><B0F8>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+逃跑了!",0x0306ED,104,0x0306EC,graphical_codes,<0A><B3EF><B8B9><B0F8>!,english_graphical_residual,The English target retains graphical codes.
 0x03014B,0x0306F6,143,"
-不能逃!",0x0306F6,105,0x0306F5,graphical_codes,<0A><B0CE><B0EC><B3EF>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+不能逃!",0x0306F6,105,0x0306F5,graphical_codes,<0A><B0CE><B0EC><B3EF>!,english_graphical_residual,The English target retains graphical codes.
 0x03014D,0x0306FF,144,"
-中毒解除了",0x0306FF,106,0x0306FE,graphical_codes,<0A><B0DC><B8D8><B9B5><BBB2><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+中毒解除了",0x0306FF,106,0x0306FE,graphical_codes,<0A><B0DC><B8D8><B9B5><BBB2><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x03014F,0x03070B,145,"
 醒过来了",0x03070B,107,0x03070B,ascii,Woke up!,pending_semantic_review,
 0x030151,0x030715,146,"
-麻痹解除了",0x030715,108,0x030714,graphical_codes,<0A><B2ED><B5FA><B9B5><BBB2><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+麻痹解除了",0x030715,108,0x030714,graphical_codes,<0A><B2ED><B5FA><B9B5><BBB2><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x030153,0x030721,147,"
-烧伤解除了",0x030721,109,0x030720,graphical_codes,<0A><BAE7><B9C7><B9B5><BBB2><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+烧伤解除了",0x030721,109,0x030720,graphical_codes,<0A><BAE7><B9C7><B9B5><BBB2><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x030155,0x03072D,148,"
 混乱解除了",0x03072D,110,0x03072D,ascii,Recovered!,pending_semantic_review,
 0x030157,0x030739,149,"
-冰冻解除了",0x030739,111,0x030738,graphical_codes,<0A><BAE8><BAD4><B9B5><BBB2><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+冰冻解除了",0x030739,111,0x030738,graphical_codes,<0A><BAE8><BAD4><B9B5><BBB2><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x030159,0x030745,150,"
-剧毒解除了",0x030745,112,0x030744,graphical_codes,<0A><B7AE><B8D8><B9B5><BBB2><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+剧毒解除了",0x030745,112,0x030744,graphical_codes,<0A><B7AE><B8D8><B9B5><BBB2><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x03015B,0x030751,151,"
-害怕解除了",0x030751,113,0x030750,graphical_codes,<0A><B3EE><B8AC><B9B5><BBB2><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+害怕解除了",0x030751,113,0x030750,graphical_codes,<0A><B3EE><B8AC><B9B5><BBB2><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x03015D,0x03075D,152,"
 得到了",0x03075C,114,0x03075C,ascii,You got,pending_semantic_review,
 0x03015F,0x030765,153,"
@@ -260,23 +260,23 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x030163,0x030771,155,"
 比试失败了",0x030775,117,0x030775,ascii,Won!,pending_semantic_review,
 0x030165,0x03077D,156,"
-需要",0x03077D,118,0x03077A,graphical_codes,000<B3C7><B0C3>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+需要",0x03077D,118,0x03077A,graphical_codes,000<B3C7><B0C3>,english_graphical_residual,The English target retains graphical codes.
 0x030167,0x030783,157,"
-蓝色徽章",0x030783,119,0x030782,graphical_codes,<0A><B4D0><B4BC><B3D1><B3D2>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+蓝色徽章",0x030783,119,0x030782,graphical_codes,<0A><B4D0><B4BC><B3D1><B3D2>,english_graphical_residual,The English target retains graphical codes.
 0x030169,0x03078D,158,"
-橙色徽章",0x03078D,120,0x03078C,graphical_codes,<0A><B7EB><B4BC><B3D1><B3D2>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+橙色徽章",0x03078D,120,0x03078C,graphical_codes,<0A><B7EB><B4BC><B3D1><B3D2>,english_graphical_residual,The English target retains graphical codes.
 0x03016B,0x030797,159,"
-粉红徽章",0x030797,121,0x030796,graphical_codes,<0A><BBB3><B5CE><B3D1><B3D2>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+粉红徽章",0x030797,121,0x030796,graphical_codes,<0A><BBB3><B5CE><B3D1><B3D2>,english_graphical_residual,The English target retains graphical codes.
 0x03016D,0x0307A1,160,"
-彩虹徽章",0x0307A1,122,0x0307A0,graphical_codes,<0A><B6CA><B8FD><B3D1><B3D2>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+彩虹徽章",0x0307A1,122,0x0307A0,graphical_codes,<0A><B6CA><B8FD><B3D1><B3D2>,english_graphical_residual,The English target retains graphical codes.
 0x03016F,0x0307AB,161,"
-灰色徽章",0x0307AB,123,0x0307AA,graphical_codes,<0A><B4BB><B4BC><B3D1><B3D2>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+灰色徽章",0x0307AB,123,0x0307AA,graphical_codes,<0A><B4BB><B4BC><B3D1><B3D2>,english_graphical_residual,The English target retains graphical codes.
 0x030173,0x0307BA,162,"
-不能中毒!",0x0307BA,124,0x0307B9,graphical_codes,<0A><B0CE><B0EC><B0DC><B8D8>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+不能中毒!",0x0307BA,124,0x0307B9,graphical_codes,<0A><B0CE><B0EC><B0DC><B8D8>!,english_graphical_residual,The English target retains graphical codes.
 0x030175,0x0307C5,163,"
-不能烧伤!",0x0307C5,125,0x0307C4,graphical_codes,<0A><B0CE><B0EC><BAE7><B9C7>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+不能烧伤!",0x0307C5,125,0x0307C4,graphical_codes,<0A><B0CE><B0EC><BAE7><B9C7>!,english_graphical_residual,The English target retains graphical codes.
 0x030177,0x0307D0,164,"
-不能冰冻!",0x0307D0,126,0x0307CF,graphical_codes,<0A><B0CE><B0EC><BAE8><BAD4>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+不能冰冻!",0x0307D0,126,0x0307CF,graphical_codes,<0A><B0CE><B0EC><BAE8><BAD4>!,english_graphical_residual,The English target retains graphical codes.
 0x030179,0x0307DB,165,"
 存放",0x0307DA,127,0x0307DA,ascii,Send,pending_semantic_review,
 0x03017B,0x0307E1,166,"
@@ -328,7 +328,7 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x0301A9,0x030945,189,"
 攻击",0x0308C7,139,0x0308C7,ascii,Unleashed!,pending_semantic_review,
 0x0301AB,0x03094B,190,"
-受到诅咒",0x03094B,149,0x03094A,graphical_codes,0<B4A9><B0DB><B9BA><B9BB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+受到诅咒",0x03094B,149,0x03094A,graphical_codes,0<B4A9><B0DB><B9BA><B9BB>,english_graphical_residual,The English target retains graphical codes.
 0x0301AD,0x030955,191,"
 撞击",0x030AE5,154,0x030AE5,ascii,Used Struggle!,pending_semantic_review,
 0x0301AF,0x03095B,192,"
@@ -654,15 +654,15 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x030AB3,0x030F8F,352,"
 天空龙",0x0364E3,,,,,unresolved_alignment,
 0x030F9B,0x031101,353,"
-火炎车",0x031101,158,0x031101,graphical_codes,<B0C7><B0C9><B0CB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+火炎车",0x031101,158,0x031101,graphical_codes,<B0C7><B0C9><B0CB>,english_graphical_residual,The English target retains graphical codes.
 0x030F9D,0x031109,354,"
-炎之拳",0x031108,159,0x031108,graphical_codes,<B0CD><B0CF><B0D1>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+炎之拳",0x031108,159,0x031108,graphical_codes,<B0CD><B0CF><B0D1>,english_graphical_residual,The English target retains graphical codes.
 0x030F9F,0x031111,355,"
-火炎放射",0x03110F,160,0x03110F,graphical_codes,<B0D3><B0D5><B0D7><B0D9>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+火炎放射",0x03110F,160,0x03110F,graphical_codes,<B0D3><B0D5><B0D7><B0D9>,english_graphical_residual,The English target retains graphical codes.
 0x030FA1,0x03111B,356,"
-神圣火焰",0x031118,161,0x031118,graphical_codes,<B0DB><B0DD><B0DF>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+神圣火焰",0x031118,161,0x031118,graphical_codes,<B0DB><B0DD><B0DF>,english_graphical_residual,The English target retains graphical codes.
 0x030FA3,0x031125,357,"
-大文字烧",0x03111F,162,0x03111F,graphical_codes,<B0E1><B0E3><B0E5>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+大文字烧",0x03111F,162,0x03111F,graphical_codes,<B0E1><B0E3><B0E5>,english_graphical_residual,The English target retains graphical codes.
 0x030FA5,0x03112F,358,"
 喷火",0x031126,163,0x031126,ascii,Erupt,pending_semantic_review,
 0x030FA7,0x031135,359,"
@@ -670,83 +670,83 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x030FA9,0x03113B,360,"
 泡泡",0x031131,165,0x031131,ascii,Bubble,pending_semantic_review,
 0x030FAB,0x031141,361,"
-水枪",0x031138,166,0x031138,graphical_codes,<B561><B563><B565>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+水枪",0x031138,166,0x031138,graphical_codes,<B561><B563><B565>,english_graphical_residual,The English target retains graphical codes.
 0x030FAD,0x031147,362,"
-水之波动",0x031142,167,0x031142,graphical_codes,<B0E7><B0E9><B0EB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+水之波动",0x031142,167,0x031142,graphical_codes,<B0E7><B0E9><B0EB>,english_graphical_residual,The English target retains graphical codes.
 0x030FAF,0x031151,363,"
-泡泡光线",0x031149,168,0x031149,graphical_codes,<B0ED><B0EF><B0F1>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+泡泡光线",0x031149,168,0x031149,graphical_codes,<B0ED><B0EF><B0F1>,english_graphical_residual,The English target retains graphical codes.
 0x030FB1,0x03115B,364,"
-墨汁炮",0x031150,169,0x031150,graphical_codes,<B567><B569><B56B>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+墨汁炮",0x031150,169,0x031150,graphical_codes,<B567><B569><B56B>,english_graphical_residual,The English target retains graphical codes.
 0x030FB3,0x031163,365,"
-大钳槌",0x03115A,170,0x03115A,graphical_codes,<B0F3><B0F5><B0F7>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+大钳槌",0x03115A,170,0x03115A,graphical_codes,<B0F3><B0F5><B0F7>,english_graphical_residual,The English target retains graphical codes.
 0x030FB5,0x03116B,366,"
 冲浪",0x031161,,,,,unresolved_alignment,
 0x030FB7,0x031171,367,"
-高压水泵",0x031166,171,0x031166,graphical_codes,<B56D><B56F><B571>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+高压水泵",0x031166,171,0x031166,graphical_codes,<B56D><B56F><B571>,english_graphical_residual,The English target retains graphical codes.
 0x030FB9,0x03117B,368,"
-喷水",0x031170,172,0x031170,graphical_codes,<B0F9><B0FB><B0FD>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+喷水",0x031170,172,0x031170,graphical_codes,<B0F9><B0FB><B0FD>,english_graphical_residual,The English target retains graphical codes.
 0x030FBB,0x031181,369,"
 贝壳夹",0x031177,173,0x031177,ascii,Clamp,pending_semantic_review,
 0x030FBD,0x031189,370,"
 躲进贝壳",0x03117D,174,0x03117D,ascii,Withdraw,pending_semantic_review,
 0x030FBF,0x031193,371,"
-电气",0x031186,175,0x031186,graphical_codes,<B1A1><B1A3><B1A5><B1A7>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+电气",0x031186,175,0x031186,graphical_codes,<B1A1><B1A3><B1A5><B1A7>,english_graphical_residual,The English target retains graphical codes.
 0x030FC1,0x031199,372,"
-电击波",0x03118F,176,0x03118F,graphical_codes,<B1A9><B1AB><B1AD>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+电击波",0x03118F,176,0x03118F,graphical_codes,<B1A9><B1AB><B1AD>,english_graphical_residual,The English target retains graphical codes.
 0x030FC3,0x0311A1,373,"
 电火花",0x031196,177,0x031196,ascii,Spark,pending_semantic_review,
 0x030FC5,0x0311A9,374,"
-闪电拳",0x03119C,178,0x03119C,graphical_codes,<B1AF><B1B1><B1B3><B1B5>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+闪电拳",0x03119C,178,0x03119C,graphical_codes,<B1AF><B1B1><B1B3><B1B5>,english_graphical_residual,The English target retains graphical codes.
 0x030FC7,0x0311B1,375,"
-十万伏特",0x0311A5,179,0x0311A5,graphical_codes,<B1B7><B1B9><B1BB><B1BD>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+十万伏特",0x0311A5,179,0x0311A5,graphical_codes,<B1B7><B1B9><B1BB><B1BD>,english_graphical_residual,The English target retains graphical codes.
 0x030FC9,0x0311BB,376,"
-电磁炮",0x0311AE,180,0x0311AE,graphical_codes,<B1BF><B1C1><B1C3>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+电磁炮",0x0311AE,180,0x0311AE,graphical_codes,<B1BF><B1C1><B1C3>,english_graphical_residual,The English target retains graphical codes.
 0x030FCB,0x0311C3,377,"
-高压电击",0x0311B5,181,0x0311B5,graphical_codes,<B1C5><B1C7><B1C9>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+高压电击",0x0311B5,181,0x0311B5,graphical_codes,<B1C5><B1C7><B1C9>,english_graphical_residual,The English target retains graphical codes.
 0x030FCD,0x0311CD,378,"
 雷电",0x0311BC,182,0x0311BC,ascii,Thunder,pending_semantic_review,
 0x030FCF,0x0311D3,379,"
-电磁波",0x0311C4,183,0x0311C4,graphical_codes,<B1CB><B1CD><B1CF><B1D1>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+电磁波",0x0311C4,183,0x0311C4,graphical_codes,<B1CB><B1CD><B1CF><B1D1>,english_graphical_residual,The English target retains graphical codes.
 0x030FD1,0x0311DB,380,"
 吸取",0x0311CD,184,0x0311CD,ascii,Avsorb,pending_semantic_review,
 0x030FD3,0x0311E1,381,"
-百力吸取",0x0311D4,185,0x0311D4,graphical_codes,<B1D3><B1D5><B1D7>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+百力吸取",0x0311D4,185,0x0311D4,graphical_codes,<B1D3><B1D5><B1D7>,english_graphical_residual,The English target retains graphical codes.
 0x030FD5,0x0311EB,382,"
-亿力吸取",0x0311DB,186,0x0311DB,graphical_codes,<B1D9><B1DB><B1DD>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+亿力吸取",0x0311DB,186,0x0311DB,graphical_codes,<B1D9><B1DB><B1DD>,english_graphical_residual,The English target retains graphical codes.
 0x030FD7,0x0311F5,383,"
-蔓藤鞭",0x0311E2,187,0x0311E2,graphical_codes,<B573><B575>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+蔓藤鞭",0x0311E2,187,0x0311E2,graphical_codes,<B573><B575>,english_graphical_residual,The English target retains graphical codes.
 0x030FD9,0x0311FD,384,"
-飞叶快刀",0x0311EC,189,0x0311EC,graphical_codes,<B1DF><B1E1><B1E3>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+飞叶快刀",0x0311EC,189,0x0311EC,graphical_codes,<B1DF><B1E1><B1E3>,english_graphical_residual,The English target retains graphical codes.
 0x030FDB,0x031207,385,"
-魔叶斩",0x0311F3,190,0x0311F3,graphical_codes,<B1E5><B1E7><B1E9>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+魔叶斩",0x0311F3,190,0x0311F3,graphical_codes,<B1E5><B1E7><B1E9>,english_graphical_residual,The English target retains graphical codes.
 0x030FDD,0x03120F,386,"
-刃叶斩",0x0311FA,191,0x0311FA,graphical_codes,<B577><B579>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+刃叶斩",0x0311FA,191,0x0311FA,graphical_codes,<B577><B579>,english_graphical_residual,The English target retains graphical codes.
 0x030FDF,0x031217,387,"
-太阳光线",0x031204,193,0x031204,graphical_codes,<B1EB><B1ED><B1EF>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+太阳光线",0x031204,193,0x031204,graphical_codes,<B1EB><B1ED><B1EF>,english_graphical_residual,The English target retains graphical codes.
 0x030FE1,0x031221,388,"
-硬化植物",0x03120B,194,0x03120B,graphical_codes,<B1F1><B1F3><B1F5>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+硬化植物",0x03120B,194,0x03120B,graphical_codes,<B1F1><B1F3><B1F5>,english_graphical_residual,The English target retains graphical codes.
 0x030FE3,0x03122B,389,"
-草笛",0x031212,195,0x031212,graphical_codes,<B1F7><B1F9><B1FB><B1FD>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+草笛",0x031212,195,0x031212,graphical_codes,<B1F7><B1F9><B1FB><B1FD>,english_graphical_residual,The English target retains graphical codes.
 0x030FE5,0x031231,390,"
-催眠粉",0x03121B,196,0x03121B,graphical_codes,<B1FF><B101><B103><B105>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+催眠粉",0x03121B,196,0x03121B,graphical_codes,<B1FF><B101><B103><B105>,english_graphical_residual,The English target retains graphical codes.
 0x030FE7,0x031239,391,"
 蘑菇孢子",0x031224,197,0x031224,ascii,Spore,pending_semantic_review,
 0x030FE9,0x031243,392,"
-麻痹粉",0x03122A,198,0x03122A,graphical_codes,<B107><B109><B10B>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+麻痹粉",0x03122A,198,0x03122A,graphical_codes,<B107><B109><B10B>,english_graphical_residual,The English target retains graphical codes.
 0x030FEB,0x03124B,393,"
-细雪",0x031231,199,0x031231,graphical_codes,<B10D><B10F><B111>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+细雪",0x031231,199,0x031231,graphical_codes,<B10D><B10F><B111>,english_graphical_residual,The English target retains graphical codes.
 0x030FED,0x031251,394,"
 冰结之风",0x031238,200,0x031238,ascii,Icy Wind,pending_semantic_review,
 0x030FEF,0x03125B,395,"
-极光光线",0x031241,201,0x031241,graphical_codes,<B113><B115><B117>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+极光光线",0x031241,201,0x031241,graphical_codes,<B113><B115><B117>,english_graphical_residual,The English target retains graphical codes.
 0x030FF1,0x031265,396,"
-冷冻拳",0x031248,202,0x031248,graphical_codes,<B57B><B57D><B57F>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+冷冻拳",0x031248,202,0x031248,graphical_codes,<B57B><B57D><B57F>,english_graphical_residual,The English target retains graphical codes.
 0x030FF3,0x03126D,397,"
 冷冻光线",0x031252,203,0x031252,ascii,Ice Beam,pending_semantic_review,
 0x030FF5,0x031277,398,"
 吹雪",0x03125B,204,0x03125B,ascii,Blizzard,pending_semantic_review,
 0x030FF7,0x03127D,399,"
-绝对零度",0x031264,205,0x031264,graphical_codes,<B119><B11B><B11D>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+绝对零度",0x031264,205,0x031264,graphical_codes,<B119><B11B><B11D>,english_graphical_residual,The English target retains graphical codes.
 0x030FF9,0x031287,400,"
 扔泥",0x03126B,206,0x03126B,ascii,Mud Slap,pending_semantic_review,
 0x030FFB,0x03128D,401,"
@@ -754,121 +754,121 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x030FFD,0x031297,402,"
 挖洞",0x03127D,208,0x03127D,ascii,Dig,pending_semantic_review,
 0x030FFF,0x03129D,403,"
-骨头击",0x031281,209,0x031281,graphical_codes,<B581><B583>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+骨头击",0x031281,209,0x031281,graphical_codes,<B581><B583>,english_graphical_residual,The English target retains graphical codes.
 0x031001,0x0312A5,404,"
-地震",0x03128B,211,0x03128B,graphical_codes,<B11F><B121><B123>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+地震",0x03128B,211,0x03128B,graphical_codes,<B11F><B121><B123>,english_graphical_residual,The English target retains graphical codes.
 0x031003,0x0312AB,405,"
-骨头旋镖",0x031296,212,0x031292,graphical_codes,0000<B129><B12B><B12D>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+骨头旋镖",0x031296,212,0x031292,graphical_codes,0000<B129><B12B><B12D>,english_graphical_residual,The English target retains graphical codes.
 0x031005,0x0312B5,406,"
 地裂",0x0312A1,213,0x03129D,ascii,Fissure,pending_semantic_review,
 0x031007,0x0312BB,407,"
-扔沙",0x0312A9,214,0x0312A9,graphical_codes,<B133><B135><B137>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+扔沙",0x0312A9,214,0x0312A9,graphical_codes,<B133><B135><B137>,english_graphical_residual,The English target retains graphical codes.
 0x031009,0x0312C1,408,"
-落石",0x0312B0,215,0x0312B0,graphical_codes,<B139><B13B><B13D>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+落石",0x0312B0,215,0x0312B0,graphical_codes,<B139><B13B><B13D>,english_graphical_residual,The English target retains graphical codes.
 0x03100B,0x0312C7,409,"
-岩石封杀",0x0312B7,216,0x0312B7,graphical_codes,<B585><B587>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+岩石封杀",0x0312B7,216,0x0312B7,graphical_codes,<B585><B587>,english_graphical_residual,The English target retains graphical codes.
 0x03100D,0x0312D1,410,"
-原始力量",0x0312C1,218,0x0312C1,graphical_codes,<B13F><B141><B143><B145>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+原始力量",0x0312C1,218,0x0312C1,graphical_codes,<B13F><B141><B143><B145>,english_graphical_residual,The English target retains graphical codes.
 0x03100F,0x0312DB,411,"
-岩崩",0x0312CA,219,0x0312CA,graphical_codes,<B147><B149><B14B>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+岩崩",0x0312CA,219,0x0312CA,graphical_codes,<B147><B149><B14B>,english_graphical_residual,The English target retains graphical codes.
 0x031011,0x0312E1,412,"
-吸血",0x0312D1,220,0x0312D1,graphical_codes,<B14D><B14F><B151>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+吸血",0x0312D1,220,0x0312D1,graphical_codes,<B14D><B14F><B151>,english_graphical_residual,The English target retains graphical codes.
 0x031013,0x0312E7,413,"
-双针",0x0312D8,221,0x0312D8,graphical_codes,<B153><B155><B157>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+双针",0x0312D8,221,0x0312D8,graphical_codes,<B153><B155><B157>,english_graphical_residual,The English target retains graphical codes.
 0x031015,0x0312ED,414,"
-银色之风",0x0312DF,222,0x0312DF,graphical_codes,<B159><B15B><B15D>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+银色之风",0x0312DF,222,0x0312DF,graphical_codes,<B159><B15B><B15D>,english_graphical_residual,The English target retains graphical codes.
 0x031017,0x0312F7,415,"
-信号光线",0x0312E6,223,0x0312E6,graphical_codes,<B15F><B161><B163>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+信号光线",0x0312E6,223,0x0312E6,graphical_codes,<B15F><B161><B163>,english_graphical_residual,The English target retains graphical codes.
 0x031019,0x031301,416,"
-威力角突",0x0312ED,224,0x0312ED,graphical_codes,<B589><B58B>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+威力角突",0x0312ED,224,0x0312ED,graphical_codes,<B589><B58B>,english_graphical_residual,The English target retains graphical codes.
 0x03101B,0x03130B,417,"
-萤火",0x0312F7,226,0x0312F7,graphical_codes,<B58D><B58F>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+萤火",0x0312F7,226,0x0312F7,graphical_codes,<B58D><B58F>,english_graphical_residual,The English target retains graphical codes.
 0x03101D,0x031311,418,"
-吐丝",0x031301,228,0x031301,graphical_codes,<B165><B167><B169>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+吐丝",0x031301,228,0x031301,graphical_codes,<B165><B167><B169>,english_graphical_residual,The English target retains graphical codes.
 0x03101F,0x031317,419,"
-毒针",0x03130C,229,0x031308,graphical_codes,0000<B16F><B171><B173>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+毒针",0x03130C,229,0x031308,graphical_codes,0000<B16F><B171><B173>,english_graphical_residual,The English target retains graphical codes.
 0x031021,0x03131D,420,"
 烟雾",0x031313,230,0x031313,ascii,Smog,pending_semantic_review,
 0x031023,0x031323,421,"
 溶解液",0x031318,231,0x031318,ascii,Acid,pending_semantic_review,
 0x031025,0x03132B,422,"
-毒尾巴",0x03131D,232,0x03131D,graphical_codes,<B175><B177><B179>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+毒尾巴",0x03131D,232,0x03131D,graphical_codes,<B175><B177><B179>,english_graphical_residual,The English target retains graphical codes.
 0x031027,0x031333,423,"
-剧毒之牙",0x031324,233,0x031324,graphical_codes,<B17B><B17D><B17F>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+剧毒之牙",0x031324,233,0x031324,graphical_codes,<B17B><B17D><B17F>,english_graphical_residual,The English target retains graphical codes.
 0x031029,0x03133D,424,"
 泥攻击",0x03132B,234,0x03132B,ascii,Sludge,pending_semantic_review,
 0x03102B,0x031345,425,"
-泥爆弹",0x031332,235,0x031332,graphical_codes,<B181><B183><B185>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+泥爆弹",0x031332,235,0x031332,graphical_codes,<B181><B183><B185>,english_graphical_residual,The English target retains graphical codes.
 0x03102D,0x03134D,426,"
-毒烟",0x03133D,236,0x031339,graphical_codes,0000<B18B><B18D><B18F>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+毒烟",0x03133D,236,0x031339,graphical_codes,0000<B18B><B18D><B18F>,english_graphical_residual,The English target retains graphical codes.
 0x03102F,0x031353,427,"
-毒粉",0x03163B,338,0x03163B,graphical_codes,<B55B><B55D><B55F>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+毒粉",0x03163B,338,0x03163B,graphical_codes,<B55B><B55D><B55F>,english_graphical_residual,The English target retains graphical codes.
 0x031031,0x031359,428,"
 剧毒",0x031344,237,0x031344,ascii,Toxic,pending_semantic_review,
 0x031033,0x03135F,429,"
 岩碎",0x03134A,238,0x03134A,ascii,Low Kick,pending_semantic_review,
 0x031035,0x031365,430,"
-音速拳",0x031353,239,0x031353,graphical_codes,<B191><B193><B195>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+音速拳",0x031353,239,0x031353,graphical_codes,<B191><B193><B195>,english_graphical_residual,The English target retains graphical codes.
 0x031037,0x03136D,431,"
-空手切",0x03135A,240,0x03135A,graphical_codes,<B197><B199><B19B>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+空手切",0x03135A,240,0x03135A,graphical_codes,<B197><B199><B19B>,english_graphical_residual,The English target retains graphical codes.
 0x031039,0x031375,432,"
-低踢",0x031361,241,0x031361,graphical_codes,<B3E1><B3E3><B3E5>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+低踢",0x031361,241,0x031361,graphical_codes,<B3E1><B3E3><B3E5>,english_graphical_residual,The English target retains graphical codes.
 0x03103B,0x03137B,433,"
 二段踢",0x031368,242,0x031368,ascii,Revenge,pending_semantic_review,
 0x03103D,0x031383,434,"
-回旋踢",0x031370,243,0x031370,graphical_codes,<B3E7><B3E9><B3EB><B3ED>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+回旋踢",0x031370,243,0x031370,graphical_codes,<B3E7><B3E9><B3EB><B3ED>,english_graphical_residual,The English target retains graphical codes.
 0x03103F,0x03138B,435,"
-当身投",0x031379,244,0x031379,graphical_codes,<B3EF><B3F1><B3F3>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+当身投",0x031379,244,0x031379,graphical_codes,<B3EF><B3F1><B3F3>,english_graphical_residual,The English target retains graphical codes.
 0x031041,0x031393,436,"
-飞踢",0x031380,245,0x031380,graphical_codes,<B3F5><B3F7><B3F9><B3FB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+飞踢",0x031380,245,0x031380,graphical_codes,<B3F5><B3F7><B3F9><B3FB>,english_graphical_residual,The English target retains graphical codes.
 0x031043,0x031399,437,"
-瓦割",0x031389,246,0x031389,graphical_codes,<B3FD><B3FF><B301>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+瓦割",0x031389,246,0x031389,graphical_codes,<B3FD><B3FF><B301>,english_graphical_residual,The English target retains graphical codes.
 0x031045,0x03139F,438,"
-天升拳",0x031390,247,0x031390,graphical_codes,<B303><B305><B307><B309>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+天升拳",0x031390,247,0x031390,graphical_codes,<B303><B305><B307><B309>,english_graphical_residual,The English target retains graphical codes.
 0x031047,0x0313A7,439,"
-十字切",0x031399,248,0x031399,graphical_codes,<B30B><B30D><B30F>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+十字切",0x031399,248,0x031399,graphical_codes,<B30B><B30D><B30F>,english_graphical_residual,The English target retains graphical codes.
 0x031049,0x0313AF,440,"
-爆裂拳",0x0313A0,249,0x0313A0,graphical_codes,<B311><B313><B315><B317>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+爆裂拳",0x0313A0,249,0x0313A0,graphical_codes,<B311><B313><B315><B317>,english_graphical_residual,The English target retains graphical codes.
 0x03104B,0x0313B7,441,"
-蛮力",0x0313A9,250,0x0313A9,graphical_codes,<B319><B31B><B31D><B31F>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+蛮力",0x0313A9,250,0x0313A9,graphical_codes,<B319><B31B><B31D><B31F>,english_graphical_residual,The English target retains graphical codes.
 0x03104D,0x0313BD,442,"
-气合拳",0x0313B2,251,0x0313B2,graphical_codes,<B321><B323><B325>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+气合拳",0x0313B2,251,0x0313B2,graphical_codes,<B321><B323><B325>,english_graphical_residual,The English target retains graphical codes.
 0x03104F,0x0313C5,443,"
 啄",0x0313B9,252,0x0313B9,ascii,Peck,pending_semantic_review,
 0x031051,0x0313C9,444,"
 旋风",0x0313BE,253,0x0313BE,ascii,Gust,pending_semantic_review,
 0x031053,0x0313CF,445,"
-真空斩",0x0313C3,254,0x0313C3,graphical_codes,<B327><B329><B32B>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+真空斩",0x0313C3,254,0x0313C3,graphical_codes,<B327><B329><B32B>,english_graphical_residual,The English target retains graphical codes.
 0x031055,0x0313D7,446,"
-翅膀拍击",0x0313CA,255,0x0313CA,graphical_codes,<B32D><B32F><B331>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+翅膀拍击",0x0313CA,255,0x0313CA,graphical_codes,<B32D><B32F><B331>,english_graphical_residual,The English target retains graphical codes.
 0x031057,0x0313E1,447,"
-燕返",0x0313D1,256,0x0313D1,graphical_codes,<B333><B335><B337>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+燕返",0x0313D1,256,0x0313D1,graphical_codes,<B333><B335><B337>,english_graphical_residual,The English target retains graphical codes.
 0x031059,0x0313E7,448,"
 飞天术",0x0313D8,257,0x0313D8,ascii,Fly,pending_semantic_review,
 0x03105B,0x0313EF,449,"
-钻孔啄",0x0313DC,258,0x0313DC,graphical_codes,<B339><B33B><B33D>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+钻孔啄",0x0313DC,258,0x0313DC,graphical_codes,<B339><B33B><B33D>,english_graphical_residual,The English target retains graphical codes.
 0x03105D,0x0313F7,450,"
 飞跃",0x0313E3,259,0x0313E3,ascii,Bounce,pending_semantic_review,
 0x03105F,0x0313FD,451,"
-空中爆破",0x0313EA,260,0x0313EA,graphical_codes,<B33F><B341><B343>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+空中爆破",0x0313EA,260,0x0313EA,graphical_codes,<B33F><B341><B343>,english_graphical_residual,The English target retains graphical codes.
 0x031061,0x031407,452,"
-神鸟",0x0313F1,261,0x0313F1,graphical_codes,<B345><B347><B349>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+神鸟",0x0313F1,261,0x0313F1,graphical_codes,<B345><B347><B349>,english_graphical_residual,The English target retains graphical codes.
 0x031063,0x03140D,453,"
-念力",0x0313F8,262,0x0313F8,graphical_codes,<B591><B593><B595>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+念力",0x0313F8,262,0x0313F8,graphical_codes,<B591><B593><B595>,english_graphical_residual,The English target retains graphical codes.
 0x031065,0x031413,454,"
 精神光线",0x031402,263,0x031402,ascii,Psy Beam,pending_semantic_review,
 0x031067,0x03141D,455,"
-迷雾球",0x03140B,264,0x03140B,graphical_codes,<B597><B599>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+迷雾球",0x03140B,264,0x03140B,graphical_codes,<B597><B599>,english_graphical_residual,The English target retains graphical codes.
 0x031069,0x031425,456,"
-神通力",0x031415,265,0x031415,graphical_codes,<B59B><B59D><B59F>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+神通力",0x031415,265,0x031415,graphical_codes,<B59B><B59D><B59F>,english_graphical_residual,The English target retains graphical codes.
 0x03106B,0x03142D,457,"
-预知未来",0x03141F,266,0x03141F,graphical_codes,<B34B><B34D><B34F><B351>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+预知未来",0x03141F,266,0x03141F,graphical_codes,<B34B><B34D><B34F><B351>,english_graphical_residual,The English target retains graphical codes.
 0x03106D,0x031437,458,"
 精神波动",0x031428,267,0x031428,ascii,Psychic,pending_semantic_review,
 0x03106F,0x031441,459,"
-食梦",0x031430,268,0x031430,graphical_codes,<B353><B355><B357>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+食梦",0x031430,268,0x031430,graphical_codes,<B353><B355><B357>,english_graphical_residual,The English target retains graphical codes.
 0x031071,0x031447,460,"
-精神增压",0x031437,269,0x031437,graphical_codes,<B7E5><B7E7><B7E9>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+精神增压",0x031437,269,0x031437,graphical_codes,<B7E5><B7E7><B7E9>,english_graphical_residual,The English target retains graphical codes.
 0x031073,0x031451,461,"
 催眠术",0x031441,270,0x031441,ascii,Hypnosis,pending_semantic_review,
 0x031075,0x031459,462,"
@@ -876,7 +876,7 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x031077,0x03145F,463,"
 瞬间移动",0x03144F,272,0x03144F,ascii,Teleport,pending_semantic_review,
 0x031079,0x031469,464,"
-瞑想",0x031458,273,0x031458,graphical_codes,<B7EB><B7ED>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+瞑想",0x031458,273,0x031458,graphical_codes,<B7EB><B7ED>,english_graphical_residual,The English target retains graphical codes.
 0x03107B,0x03146F,465,"
 高速移动",0x031462,275,0x031462,ascii,Agility,pending_semantic_review,
 0x03107D,0x031479,466,"
@@ -884,47 +884,47 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x03107F,0x031481,467,"
 惊吓",0x03146F,277,0x03146F,ascii,Astonish,pending_semantic_review,
 0x031081,0x031487,468,"
-暗影拳",0x031478,278,0x031478,graphical_codes,<B359><B35B><B35D>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+暗影拳",0x031478,278,0x031478,graphical_codes,<B359><B35B><B35D>,english_graphical_residual,The English target retains graphical codes.
 0x031083,0x03148F,469,"
-影子球",0x03147F,279,0x03147F,graphical_codes,<B401><B403><B405>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+影子球",0x03147F,279,0x03147F,graphical_codes,<B401><B403><B405>,english_graphical_residual,The English target retains graphical codes.
 0x031085,0x031497,470,"
-恶梦",0x031486,280,0x031486,graphical_codes,<B407><B409><B40B>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+恶梦",0x031486,280,0x031486,graphical_codes,<B407><B409><B40B>,english_graphical_residual,The English target retains graphical codes.
 0x031087,0x03149D,471,"
-怪异光",0x03148D,281,0x03148D,graphical_codes,<B40D><B40F><B411><B413>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+怪异光",0x03148D,281,0x03148D,graphical_codes,<B40D><B40F><B411><B413>,english_graphical_residual,The English target retains graphical codes.
 0x031089,0x0314A5,472,"
 龙卷",0x031496,282,0x031496,ascii,Twister,pending_semantic_review,
 0x03108B,0x0314AB,473,"
-龙之怒",0x03149E,283,0x03149E,graphical_codes,<B415><B417><B419>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+龙之怒",0x03149E,283,0x03149E,graphical_codes,<B415><B417><B419>,english_graphical_residual,The English target retains graphical codes.
 0x03108D,0x0314B3,474,"
-龙之息吹",0x0314A5,284,0x0314A5,graphical_codes,<B41B><B41D><B41F>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+龙之息吹",0x0314A5,284,0x0314A5,graphical_codes,<B41B><B41D><B41F>,english_graphical_residual,The English target retains graphical codes.
 0x03108F,0x0314BD,475,"
-龙之爪",0x0314AC,285,0x0314AC,graphical_codes,<B421><B423><B425>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+龙之爪",0x0314AC,285,0x0314AC,graphical_codes,<B421><B423><B425>,english_graphical_residual,The English target retains graphical codes.
 0x031091,0x0314C5,476,"
-激鳞",0x0314B3,286,0x0314B3,graphical_codes,<B427><B429><B42B>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+激鳞",0x0314B3,286,0x0314B3,graphical_codes,<B427><B429><B42B>,english_graphical_residual,The English target retains graphical codes.
 0x031093,0x0314CB,477,"
-龙之舞",0x0314BA,287,0x0314BA,graphical_codes,<B42D><B42F><B431>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+龙之舞",0x0314BA,287,0x0314BA,graphical_codes,<B42D><B42F><B431>,english_graphical_residual,The English target retains graphical codes.
 0x031095,0x0314D3,478,"
-打落",0x0314C1,288,0x0314C1,graphical_codes,<B7EF><B7F1><B7F3>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+打落",0x0314C1,288,0x0314C1,graphical_codes,<B7EF><B7F1><B7F3>,english_graphical_residual,The English target retains graphical codes.
 0x031097,0x0314D9,479,"
-追击",0x0314CB,289,0x0314CB,graphical_codes,<B433><B435><B437>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+追击",0x0314CB,289,0x0314CB,graphical_codes,<B433><B435><B437>,english_graphical_residual,The English target retains graphical codes.
 0x031099,0x0314DF,480,"
 齿突",0x0314D2,290,0x0314D2,ascii,Bite,pending_semantic_review,
 0x03109B,0x0314E5,481,"
 咬碎",0x0314D7,291,0x0314D7,ascii,Crunch,pending_semantic_review,
 0x03109D,0x0314EB,482,"
-钢之爪",0x0314DE,292,0x0314DE,graphical_codes,<B439><B43B><B43D>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+钢之爪",0x0314DE,292,0x0314DE,graphical_codes,<B439><B43B><B43D>,english_graphical_residual,The English target retains graphical codes.
 0x03109F,0x0314F3,483,"
-钢之翼",0x0314E5,293,0x0314E5,graphical_codes,<B43F><B441><B443>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+钢之翼",0x0314E5,293,0x0314E5,graphical_codes,<B43F><B441><B443>,english_graphical_residual,The English target retains graphical codes.
 0x0310A1,0x0314FB,484,"
-钢之尾",0x0314EC,294,0x0314EC,graphical_codes,<B7F5><B7F7>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+钢之尾",0x0314EC,294,0x0314EC,graphical_codes,<B7F5><B7F7>,english_graphical_residual,The English target retains graphical codes.
 0x0310A3,0x031503,485,"
-慧星拳",0x0314F6,296,0x0314F6,graphical_codes,<B445><B447><B449>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+慧星拳",0x0314F6,296,0x0314F6,graphical_codes,<B445><B447><B449>,english_graphical_residual,The English target retains graphical codes.
 0x0310A5,0x03150B,486,"
-铁壁",0x0314FD,297,0x0314FD,graphical_codes,<B44B><B44D><B44F><B451>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+铁壁",0x0314FD,297,0x0314FD,graphical_codes,<B44B><B44D><B44F><B451>,english_graphical_residual,The English target retains graphical codes.
 0x0310A7,0x031511,487,"
 跳跃",0x031506,298,0x031506,ascii,Splash,pending_semantic_review,
 0x0310A9,0x031517,488,"
-音速波",0x03150D,299,0x03150D,graphical_codes,<B453><B455><B457>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+音速波",0x03150D,299,0x03150D,graphical_codes,<B453><B455><B457>,english_graphical_residual,The English target retains graphical codes.
 0x0310AB,0x03151F,489,"
 撞击",0x031514,300,0x031514,ascii,Tackle,pending_semantic_review,
 0x0310AD,0x031525,490,"
@@ -932,7 +932,7 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x0310AF,0x03152D,491,"
 抓",0x031523,302,0x031523,ascii,Pound,pending_semantic_review,
 0x0310B1,0x031531,492,"
-电光石火",0x031529,303,0x031529,graphical_codes,<B459><B45B><B45D>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+电光石火",0x031529,303,0x031529,graphical_codes,<B459><B45B><B45D>,english_graphical_residual,The English target retains graphical codes.
 0x0310B3,0x03153B,493,"
 招财猫",0x031530,304,0x031530,ascii,Pay Day,pending_semantic_review,
 0x0310B5,0x031543,494,"
@@ -944,51 +944,51 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x0310BB,0x031557,497,"
 角突",0x03154B,308,0x03154B,ascii,Stomp,pending_semantic_review,
 0x0310BD,0x03155D,498,"
-崩击之爪",0x031551,309,0x031551,graphical_codes,<B501><B503><B505>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+崩击之爪",0x031551,309,0x031551,graphical_codes,<B501><B503><B505>,english_graphical_residual,The English target retains graphical codes.
 0x0310BF,0x031567,499,"
-秘密力量",0x031558,310,0x031558,graphical_codes,<B507><B509><B50B>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+秘密力量",0x031558,310,0x031558,graphical_codes,<B507><B509><B50B>,english_graphical_residual,The English target retains graphical codes.
 0x0310C1,0x031571,500,"
-必杀门牙",0x03155F,311,0x03155F,graphical_codes,<B50D><B50F><B511>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+必杀门牙",0x03155F,311,0x03155F,graphical_codes,<B50D><B50F><B511>,english_graphical_residual,The English target retains graphical codes.
 0x0310C3,0x03157B,501,"
-三角攻击",0x031566,312,0x031566,graphical_codes,<B513><B515><B517>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+三角攻击",0x031566,312,0x031566,graphical_codes,<B513><B515><B517>,english_graphical_residual,The English target retains graphical codes.
 0x0310C5,0x031585,502,"
-舍身一击",0x03156D,313,0x03156D,graphical_codes,<B519><B51B><B51D>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+舍身一击",0x03156D,313,0x03156D,graphical_codes,<B519><B51B><B51D>,english_graphical_residual,The English target retains graphical codes.
 0x0310C7,0x03158F,503,"
-破坏光线",0x031574,314,0x031574,graphical_codes,<B51F><B521><B523>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+破坏光线",0x031574,314,0x031574,graphical_codes,<B51F><B521><B523>,english_graphical_residual,The English target retains graphical codes.
 0x0310C9,0x031599,504,"
-自爆",0x03157B,315,0x03157B,graphical_codes,<B525><B527><B529><B52B>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+自爆",0x03157B,315,0x03157B,graphical_codes,<B525><B527><B529><B52B>,english_graphical_residual,The English target retains graphical codes.
 0x0310CB,0x03159F,505,"
 大爆炸",0x031584,316,0x031584,ascii,Explode,pending_semantic_review,
 0x0310CD,0x0315A7,506,"
-尖角钻",0x03158C,317,0x03158C,graphical_codes,<B52D><B52F><B531><B533>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+尖角钻",0x03158C,317,0x03158C,graphical_codes,<B52D><B52F><B531><B533>,english_graphical_residual,The English target retains graphical codes.
 0x0310CF,0x0315AF,507,"
-剪刀断头",0x031595,318,0x031595,graphical_codes,<B535><B537><B539>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+剪刀断头",0x031595,318,0x031595,graphical_codes,<B535><B537><B539>,english_graphical_residual,The English target retains graphical codes.
 0x0310D1,0x0315B9,508,"
 歌唱",0x03159C,319,0x03159C,ascii,Sing,pending_semantic_review,
 0x0310D3,0x0315BF,509,"
-恶魔之吻",0x0315A1,320,0x0315A1,graphical_codes,<B7F9><B7FB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+恶魔之吻",0x0315A1,320,0x0315A1,graphical_codes,<B7F9><B7FB>,english_graphical_residual,The English target retains graphical codes.
 0x0310D5,0x0315C9,510,"
-超音波",0x0315AB,322,0x0315AB,graphical_codes,<B53B><B53D><B53F>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+超音波",0x0315AB,322,0x0315AB,graphical_codes,<B53B><B53D><B53F>,english_graphical_residual,The English target retains graphical codes.
 0x0310D7,0x0315D1,511,"
-剑舞",0x0315B2,323,0x0315B2,graphical_codes,<B541><B543><B545>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+剑舞",0x0315B2,323,0x0315B2,graphical_codes,<B541><B543><B545>,english_graphical_residual,The English target retains graphical codes.
 0x0310D9,0x0315D7,512,"
 叫声",0x0315B9,324,0x0315B9,ascii,Growl,pending_semantic_review,
 0x0310DB,0x0315DD,513,"
 撒娇",0x0315BF,325,0x0315BF,ascii,Bulk-up,pending_semantic_review,
 0x0310DD,0x0315E3,514,"
-变圆",0x0315C7,326,0x0315C7,graphical_codes,<B547><B549><B54B><B54D>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+变圆",0x0315C7,326,0x0315C7,graphical_codes,<B547><B549><B54B><B54D>,english_graphical_residual,The English target retains graphical codes.
 0x0310DF,0x0315E9,515,"
 变硬",0x0315D0,327,0x0315D0,ascii,Harden,pending_semantic_review,
 0x0310E1,0x0315EF,516,"
-摇尾巴",0x0315D7,328,0x0315D7,graphical_codes,<B7FD><B7FF>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+摇尾巴",0x0315D7,328,0x0315D7,graphical_codes,<B7FD><B7FF>,english_graphical_residual,The English target retains graphical codes.
 0x0310E3,0x0315F7,517,"
 挠痒",0x0315E1,330,0x0315E1,ascii,Charm,pending_semantic_review,
 0x0310E5,0x0315FD,518,"
-烟幕",0x0315E7,331,0x0315E7,graphical_codes,<B54F><B551><B553>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+烟幕",0x0315E7,331,0x0315E7,graphical_codes,<B54F><B551><B553>,english_graphical_residual,The English target retains graphical codes.
 0x0310E7,0x031603,519,"
 闪光",0x0315EE,,,,,unresolved_alignment,
 0x0310E9,0x031609,520,"
-影分身",0x0315F4,332,0x0315F4,graphical_codes,<B555><B557><B559>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+影分身",0x0315F4,332,0x0315F4,graphical_codes,<B555><B557><B559>,english_graphical_residual,The English target retains graphical codes.
 0x0310EB,0x031611,521,"
 自我再生",0x0315FB,333,0x0315FB,ascii,Recover,pending_semantic_review,
 0x0310ED,0x03161B,522,"
@@ -996,7 +996,7 @@ pointer_reference_hex,chinese_target_hex,chinese_record_index,chinese_text,engli
 0x0310EF,0x031621,523,"
 吼叫",0x03160A,334,0x03160A,ascii,Roar,pending_semantic_review,
 0x0310F1,0x031627,524,"
-吹飞",0x03160F,335,0x03160F,graphical_codes,<B701><B703><B705>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+吹飞",0x03160F,335,0x03160F,graphical_codes,<B701><B703><B705>,english_graphical_residual,The English target retains graphical codes.
 0x03164B,0x0316ED,528,"
 精灵球",0x035F34,877,0x035F34,ascii,Pok@ball,pending_semantic_review,
 0x03164D,0x0316F5,529,"
@@ -1224,15 +1224,15 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x0319B3,0x031C76,640,"
 梦幻神奇之旅的船票",0x031C27,445,0x031C27,ascii,CinibarGym Key,pending_semantic_review,
 0x0319B5,0x031C8A,641,"
-居合斩",0x031C8A,455,0x031C87,graphical_codes,000<B1A9><B1AA><B1AB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+居合斩",0x031C8A,455,0x031C87,graphical_codes,000<B1A9><B1AA><B1AB>,english_graphical_residual,The English target retains graphical codes.
 0x0319B7,0x031C92,642,"
-飞天术",0x031C92,456,0x031C91,graphical_codes,<0A><B1AC><B1AD><B1AE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+飞天术",0x031C92,456,0x031C91,graphical_codes,<0A><B1AC><B1AD><B1AE>,english_graphical_residual,The English target retains graphical codes.
 0x0319B9,0x031C9A,643,"
-冲浪术",0x031C9A,457,0x031C99,graphical_codes,<0A><B1AF><B1B0><B1AE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+冲浪术",0x031C9A,457,0x031C99,graphical_codes,<0A><B1AF><B1B0><B1AE>,english_graphical_residual,The English target retains graphical codes.
 0x0319BB,0x031CA2,644,"
-怪力术",0x031CA2,458,0x031CA1,graphical_codes,<0A><B0CA><B0E3><B1AE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+怪力术",0x031CA2,458,0x031CA1,graphical_codes,<0A><B0CA><B0E3><B1AE>,english_graphical_residual,The English target retains graphical codes.
 0x0319BD,0x031CAA,645,"
-闪光术",0x031CAA,459,0x031CA9,graphical_codes,<0A><B4BE><B0E4><B1AE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+闪光术",0x031CAA,459,0x031CA9,graphical_codes,<0A><B4BE><B0E4><B1AE>,english_graphical_residual,The English target retains graphical codes.
 0x0319BF,0x031CB2,646,"
 秘传01",0x031CB2,460,0x031CB2,ascii,TM 01,pending_semantic_review,
 0x0319C1,0x031CBA,647,"
@@ -1768,41 +1768,41 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x03303B,0x0330A9,912,"
 绝传05",0x033090,631,0x033090,ascii,HM05,pending_semantic_review,
 0x03303D,0x0330B1,913,"
-真新镇",0x033095,632,0x033095,graphical_codes,<B707><B709><B70B>    ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+真新镇",0x033095,632,0x033095,graphical_codes,<B707><B709><B70B>    ,english_graphical_residual,The English target retains graphical codes.
 0x03303F,0x0330B9,914,"
-常青市",0x0330A0,633,0x0330A0,graphical_codes,<B70D><B70F><B711><B713>  ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+常青市",0x0330A0,633,0x0330A0,graphical_codes,<B70D><B70F><B711><B713>  ,english_graphical_residual,The English target retains graphical codes.
 0x033041,0x0330C1,915,"
-地鼠山洞",0x0330AB,634,0x0330AB,graphical_codes,<B715><B717><B719><B71B>  ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+地鼠山洞",0x0330AB,634,0x0330AB,graphical_codes,<B715><B717><B719><B71B>  ,english_graphical_residual,The English target retains graphical codes.
 0x033043,0x0330CB,916,"
-尼比市",0x0330B6,635,0x0330B6,graphical_codes,<B71D><B71F><B721>    ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+尼比市",0x0330B6,635,0x0330B6,graphical_codes,<B71D><B71F><B721>    ,english_graphical_residual,The English target retains graphical codes.
 0x033045,0x0330D3,917,"
 月见山洞",0x0330C1,636,0x0330C1,ascii,Mt.Moon,pending_semantic_review,
 0x033047,0x0330DD,918,"
-华蓝市",0x0330CC,637,0x0330CC,graphical_codes,<B723><B725><B727><B729>  ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+华蓝市",0x0330CC,637,0x0330CC,graphical_codes,<B723><B725><B727><B729>  ,english_graphical_residual,The English target retains graphical codes.
 0x033049,0x0330E5,919,"
-石山矿野",0x0330D7,638,0x0330D7,graphical_codes,<B72B><B72D><B72F>    ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+石山矿野",0x0330D7,638,0x0330D7,graphical_codes,<B72B><B72D><B72F>    ,english_graphical_residual,The English target retains graphical codes.
 0x03304B,0x0330EF,920,"
-紫苑镇",0x0330E2,639,0x0330E2,graphical_codes,<B731><B733><B735><B737>  ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+紫苑镇",0x0330E2,639,0x0330E2,graphical_codes,<B731><B733><B735><B737>  ,english_graphical_residual,The English target retains graphical codes.
 0x03304D,0x0330F7,921,"
-金黄市",0x0330ED,640,0x0330ED,graphical_codes,<B739><B73B><B73D><B73F>  ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+金黄市",0x0330ED,640,0x0330ED,graphical_codes,<B739><B73B><B73D><B73F>  ,english_graphical_residual,The English target retains graphical codes.
 0x03304F,0x0330FF,922,"
-彩虹市",0x0330F8,641,0x0330F8,graphical_codes,<B741><B743><B745><B747> ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+彩虹市",0x0330F8,641,0x0330F8,graphical_codes,<B741><B743><B745><B747> ,english_graphical_residual,The English target retains graphical codes.
 0x033051,0x033107,923,"
-枯叶市",0x033102,642,0x033102,graphical_codes,<B749><B74B><B74D><B74F><B751>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+枯叶市",0x033102,642,0x033102,graphical_codes,<B749><B74B><B74D><B74F><B751>,english_graphical_residual,The English target retains graphical codes.
 0x033053,0x03310F,924,"
-浅红市",0x03310D,643,0x03310D,graphical_codes,<B753><B755><B757><B759>  ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+浅红市",0x03310D,643,0x03310D,graphical_codes,<B753><B755><B757><B759>  ,english_graphical_residual,The English target retains graphical codes.
 0x033055,0x033117,925,"
-红莲镇",0x033118,644,0x033118,graphical_codes,<B75B><B75D><B75F><B761>  ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+红莲镇",0x033118,644,0x033118,graphical_codes,<B75B><B75D><B75F><B761>  ,english_graphical_residual,The English target retains graphical codes.
 0x033057,0x03311F,926,"
-冠军之路",0x033123,645,0x033123,graphical_codes,<B763><B765><B767><B769>  ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+冠军之路",0x033123,645,0x033123,graphical_codes,<B763><B765><B767><B769>  ,english_graphical_residual,The English target retains graphical codes.
 0x033059,0x033129,927,"
-石英高原",0x03216F,548,0x03216F,graphical_codes,<B76B><B76D><B76F><B771>  ,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+石英高原",0x03216F,548,0x03216F,graphical_codes,<B76B><B76D><B76F><B771>  ,english_graphical_residual,The English target retains graphical codes.
 0x033143,0x03329F,934,"
-小茂:怎么了?小智在这里遇见你还真是偶然啊!你也去宠物精灵联盟啊?徽章也都收集齐了,干的不错嘛!不过在去联盟之前先和我比试一场吧!",0x03329F,654,0x03329F,graphical_codes,"<B0B6><B1EC>:<B2D0><B1E6><B0F8>?<B0B6><B0B7><B0B8><B0EE><B0BF><B4DA><B2CD><B0C5><B2BD><B1F5><B0C2><B9E3><B2AA><B2AC>!<B0C5><B0F6><B0C7><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF><B2AC>?<B3D1><B3D2><B0F6><B1C0><B6B7><B6B8><BDE5><B0F8>,<B5A5><B0BC><B0CE><B2DC><B1DC>!<B0CE><B3D4><B0B8><B0C7><B3CE><B3CF><B3E3><B3DD><B6E0><B0C9><B1C2><B2B2><B4A3><B1D1><B3B5><B0BE>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+小茂:怎么了?小智在这里遇见你还真是偶然啊!你也去宠物精灵联盟啊?徽章也都收集齐了,干的不错嘛!不过在去联盟之前先和我比试一场吧!",0x03329F,654,0x03329F,graphical_codes,"<B0B6><B1EC>:<B2D0><B1E6><B0F8>?<B0B6><B0B7><B0B8><B0EE><B0BF><B4DA><B2CD><B0C5><B2BD><B1F5><B0C2><B9E3><B2AA><B2AC>!<B0C5><B0F6><B0C7><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF><B2AC>?<B3D1><B3D2><B0F6><B1C0><B6B7><B6B8><BDE5><B0F8>,<B5A5><B0BC><B0CE><B2DC><B1DC>!<B0CE><B3D4><B0B8><B0C7><B3CE><B3CF><B3E3><B3DD><B6E0><B0C9><B1C2><B2B2><B4A3><B1D1><B3B5><B0BE>!",english_graphical_residual,The English target retains graphical codes.
 0x033145,0x03331C,935,"
-小茂:我只是一时太大意了,可恶!不过你这样的水平想称霸精灵联盟...你还是多练习一下比较好!我多管闲事了啊,那我先走了!再会了...",0x03331C,655,0x03331B,graphical_codes,"<0A><B0B6><B1EC>:<B1C2><B2BE><B0C2><B1D1><B0F0><B6C6><B1BE><B4A5><B0F8>,<B0DE><B5E0>!<B0CE><B3D4><B0C5><B0EE><B2DA><B0BC><B5F7><B5DC><B1D7><B1C8><BBD4><B0A1><B0A2><B3CE><B3CF>...<B0C5><B2BD><B0C2><B0C8><B2C5><B2C6><B1D1><B0F9><B2B2><B3EB><B1B4>!<B1C2><B0C8><B3A4><B5C0><B1D5><B0F8><B2AC>,<B0B9><B1C2><B6E0><B7C3><B0F8>!<B0FB><B1F9><B0F8>...",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+小茂:我只是一时太大意了,可恶!不过你这样的水平想称霸精灵联盟...你还是多练习一下比较好!我多管闲事了啊,那我先走了!再会了...",0x03331C,655,0x03331B,graphical_codes,"<0A><B0B6><B1EC>:<B1C2><B2BE><B0C2><B1D1><B0F0><B6C6><B1BE><B4A5><B0F8>,<B0DE><B5E0>!<B0CE><B3D4><B0C5><B0EE><B2DA><B0BC><B5F7><B5DC><B1D7><B1C8><BBD4><B0A1><B0A2><B3CE><B3CF>...<B0C5><B2BD><B0C2><B0C8><B2C5><B2C6><B1D1><B0F9><B2B2><B3EB><B1B4>!<B1C2><B0C8><B3A4><B5C0><B1D5><B0F8><B2AC>,<B0B9><B1C2><B6E0><B7C3><B0F8>!<B0FB><B1F9><B0F8>...",english_graphical_residual,The English target retains graphical codes.
 0x033147,0x033396,936,"
-守卫:啊!你拿的的确是联盟徽章!请通过吧!",0x033396,656,0x033395,graphical_codes,<0A><B3DF><B3E0>:<B2AC>!<B0C5><B0C6><B0BC><B0BC><B9DB><B0C2><B3CE><B3CF><B3D1><B3D2>!<B2D8><B3DA><B3D4><B0BE>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+守卫:啊!你拿的的确是联盟徽章!请通过吧!",0x033396,656,0x033395,graphical_codes,<0A><B3DF><B3E0>:<B2AC>!<B0C5><B0C6><B0BC><B0BC><B9DB><B0C2><B3CE><B3CF><B3D1><B3D2>!<B2D8><B3DA><B3D4><B0BE>!,english_graphical_residual,The English target retains graphical codes.
 0x033149,0x0333BE,937,"
 女孩:能来到这里不简单",0x0331F0,646,0x0331EF,ascii,Are you good enoughfor me?,pending_semantic_review,
 0x03314B,0x0333D5,938,"
@@ -1872,7 +1872,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x03318B,0x033CB2,970,"
 妈妈:听说华蓝市附近有个山洞发生异常,连精灵联盟的四天王加纳都去调查了...",0x033CB1,681,0x033CB1,ascii,"Ash,Lorelei was looking for you,shewent to Cerulean cave.",pending_semantic_review,
 0x03318D,0x033CFB,971,"
-裁判:真是抱歉,四天王的加纳因为不在所以现在联盟暂停训练家挑战...加纳好像去华蓝市调查异变去了...",0x033CFB,682,0x033CF0,graphical_codes,"00000000000<B3FC><B3FD>:<B1F5><B0C2><B9FA><B9FB>,<B1E1><B1AD><B4F7><B0BC><B2FC><BDAB><B0E9><B0EA><B0CE><B0B8><B0AD><B0DF><B2F5><B0B8><B3CE><B3CF><B0EF><B3DB><B2DE><B2C5><B1BF><B3FB><B0F2>...<B2FC><BDAB><B1B4><B1B5><B0C7><B4CF><B4D0><B4D1><BDF6><BDAA><BCEC><B3D6><B0C7><B0F8>...",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+裁判:真是抱歉,四天王的加纳因为不在所以现在联盟暂停训练家挑战...加纳好像去华蓝市调查异变去了...",0x033CFB,682,0x033CF0,graphical_codes,"00000000000<B3FC><B3FD>:<B1F5><B0C2><B9FA><B9FB>,<B1E1><B1AD><B4F7><B0BC><B2FC><BDAB><B0E9><B0EA><B0CE><B0B8><B0AD><B0DF><B2F5><B0B8><B3CE><B3CF><B0EF><B3DB><B2DE><B2C5><B1BF><B3FB><B0F2>...<B2FC><BDAB><B1B4><B1B5><B0C7><B4CF><B4D0><B4D1><BDF6><BDAA><BCEC><B3D6><B0C7><B0F8>...",english_graphical_residual,The English target retains graphical codes.
 0x03318F,0x033D5B,972,"
 超梦:......",0x033D5B,683,0x033D5B,ascii,MewTwo:....,pending_semantic_review,
 0x033191,0x033D68,973,"
@@ -1886,27 +1886,27 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x0331A1,0x033EF9,981,"
 船员:怎么样,是场神奇的旅行吧.现在精灵联盟因为四天王的加纳又回来了,所以又开始接受新的冠军挑战了!",0x033EF8,688,0x033EF8,ascii,"Welcome to Navel Rock! If you'd liketo leave, just board the S.S.Anne.",pending_semantic_review,
 0x0331A3,0x033F5A,982,"
-加纳:欢迎来到宠物精灵联盟!我是冰系四天王加纳!还没碰过害怕的东西,让我生气了就让你的精灵动弹不得!哈哈觉悟吧!",0x033F5A,689,0x033F45,graphical_codes,"000000000000000000000<B2FC><BDAB>:<B0D2><B0D3><B0FC><B0DB><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B1C2><B0C2><BAE8><B0AF><B1E1><B1AD><B4F7><B2FC><BDAB>!<B2BD><B2B6><B8A4><B3D4><B3EE><B8AC><B0BC><B0D5><B0D6>,<B2CB><B1C2><B1C9><B4AA><B0F8><B2AB><B2CB><B0C5><B0BC><B0A1><B0A2><B0B2><BBF7><B0CE><B2C1>!<B3BC><B3BC><B5EB><BAB8><B0BE>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+加纳:欢迎来到宠物精灵联盟!我是冰系四天王加纳!还没碰过害怕的东西,让我生气了就让你的精灵动弹不得!哈哈觉悟吧!",0x033F5A,689,0x033F45,graphical_codes,"000000000000000000000<B2FC><BDAB>:<B0D2><B0D3><B0FC><B0DB><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B1C2><B0C2><BAE8><B0AF><B1E1><B1AD><B4F7><B2FC><BDAB>!<B2BD><B2B6><B8A4><B3D4><B3EE><B8AC><B0BC><B0D5><B0D6>,<B2CB><B1C2><B1C9><B4AA><B0F8><B2AB><B2CB><B0C5><B0BC><B0A1><B0A2><B0B2><BBF7><B0CE><B2C1>!<B3BC><B3BC><B5EB><BAB8><B0BE>!",english_graphical_residual,The English target retains graphical codes.
 0x0331A5,0x033FC6,983,"
-加纳:你到底是什么人物?...好吧,我输了就朝下一个房间前进吧",0x033FC6,690,0x033FC5,graphical_codes,"<0A><B2FC><BDAB>:<B0C5><B0DB><B3D5><B0C2><B2AF><B1E6><B2B5><B0C1>?...<B1B4><B0BE>,<B1C2><B3F1><B0F8><B2AB><B3FE><B0F9><B1D1><B0BA><B9EA><BAF1><B3DD><B3DE><B0BE>",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+加纳:你到底是什么人物?...好吧,我输了就朝下一个房间前进吧",0x033FC6,690,0x033FC5,graphical_codes,"<0A><B2FC><BDAB>:<B0C5><B0DB><B3D5><B0C2><B2AF><B1E6><B2B5><B0C1>?...<B1B4><B0BE>,<B1C2><B3F1><B0F8><B2AB><B3FE><B0F9><B1D1><B0BA><B9EA><BAF1><B3DD><B3DE><B0BE>",english_graphical_residual,The English target retains graphical codes.
 0x0331A7,0x034000,984,"
-西巴:我是地系四天王西巴!不管是精灵或人只要战斗磨练都能变的很强,就靠这中磨练与我的精灵工生存!你是小智吧,来尝尝我们的超级力量吧!",0x034000,691,0x033FFF,graphical_codes,"<0A><B0D6><BBC0>:<B1C2><B0C2><B3BB><B0AF><B1E1><B1AD><B4F7><B0D6><BBC0>!<B0CE><B3A4><B0C2><B0A1><B0A2><B1CB><B2B5><B2BE><B0C3><B0F2><B4B7><BDEC><B2C5><B1C0><B0EC><B3D6><B0BC><B3F7><B2C9>,<B2AB><BAC4><B0EE><B0DC><BDEC><B2C5><B2A1><B1C2><B0BC><B0A1><B0A2><B3B2><B1C9><B0A5>!<B0C5><B0C2><B0B6><B0B7><B0BE>,<B0FC><B7EA><B7EA><B1C2><B2EF><B0BC><B4E4><B8B2><B0E3><B3EC><B0BE>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+西巴:我是地系四天王西巴!不管是精灵或人只要战斗磨练都能变的很强,就靠这中磨练与我的精灵工生存!你是小智吧,来尝尝我们的超级力量吧!",0x034000,691,0x033FFF,graphical_codes,"<0A><B0D6><BBC0>:<B1C2><B0C2><B3BB><B0AF><B1E1><B1AD><B4F7><B0D6><BBC0>!<B0CE><B3A4><B0C2><B0A1><B0A2><B1CB><B2B5><B2BE><B0C3><B0F2><B4B7><BDEC><B2C5><B1C0><B0EC><B3D6><B0BC><B3F7><B2C9>,<B2AB><BAC4><B0EE><B0DC><BDEC><B2C5><B2A1><B1C2><B0BC><B0A1><B0A2><B3B2><B1C9><B0A5>!<B0C5><B0C2><B0B6><B0B7><B0BE>,<B0FC><B7EA><B7EA><B1C2><B2EF><B0BC><B4E4><B8B2><B0E3><B3EC><B0BE>!",english_graphical_residual,The English target retains graphical codes.
 0x0331A9,0x034080,985,"
-西巴:到底是怎么回事?我竟然输了...既然输了,我无话可说,你就前进吧!",0x034080,692,0x03407F,graphical_codes,"<0A><B0D6><BBC0>:<B0DB><B3D5><B0C2><B2D0><B1E6><B2A3><B1D5>?<B1C2><B7D5><B2AA><B3F1><B0F8>...<B2A9><B2AA><B3F1><B0F8>,<B1C2><B3E6><B1EF><B0DE><B1E7>,<B0C5><B2AB><B3DD><B3DE><B0BE>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+西巴:到底是怎么回事?我竟然输了...既然输了,我无话可说,你就前进吧!",0x034080,692,0x03407F,graphical_codes,"<0A><B0D6><BBC0>:<B0DB><B3D5><B0C2><B2D0><B1E6><B2A3><B1D5>?<B1C2><B7D5><B2AA><B3F1><B0F8>...<B2A9><B2AA><B3F1><B0F8>,<B1C2><B3E6><B1EF><B0DE><B1E7>,<B0C5><B2AB><B3DD><B3DE><B0BE>!",english_graphical_residual,The English target retains graphical codes.
 0x0331AB,0x0340C2,986,"
-菊子:我是鬼系四天王菊子,听说真新镇的大木博士相当疼你!大木博士以前是相当强的男人!现在看不出来了,光只是做宠物精灵图鉴是不够的!精灵是要用来战斗的!让我来教你真正的战斗吧!",0x0340C2,693,0x0340C1,graphical_codes,"<0A><BADE><B1DF>:<B1C2><B0C2><B7B2><B0AF><B1E1><B1AD><B4F7><BADE><B1DF>,<B1F1><B1E7><B1F5><B2D5><B2D6><B0BC><B1BE><B1C3><B1C4><B1C5><B0D0><B2C4><B5F2><B0C5>!<B1BE><B1C3><B1C4><B1C5><B0DF><B3DD><B0C2><B0D0><B2C4><B2C9><B0BC><B1DD><B2B5>!<B2F5><B0B8><B0FD><B0CE><B0A4><B0FC><B0F8>,<B0E4><B2BE><B0C2><B2B4><B0C0><B0C1><B0A1><B0A2><B2F1><B2F2><B0C2><B0CE><B0F1><B0BC>!<B0A1><B0A2><B0C2><B0C3><B1A8><B0FC><B0F2><B4B7><B0BC>!<B2CB><B1C2><B0FC><B7DB><B0C5><B1F5><B2BA><B0BC><B0F2><B4B7><B0BE>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+菊子:我是鬼系四天王菊子,听说真新镇的大木博士相当疼你!大木博士以前是相当强的男人!现在看不出来了,光只是做宠物精灵图鉴是不够的!精灵是要用来战斗的!让我来教你真正的战斗吧!",0x0340C2,693,0x0340C1,graphical_codes,"<0A><BADE><B1DF>:<B1C2><B0C2><B7B2><B0AF><B1E1><B1AD><B4F7><BADE><B1DF>,<B1F1><B1E7><B1F5><B2D5><B2D6><B0BC><B1BE><B1C3><B1C4><B1C5><B0D0><B2C4><B5F2><B0C5>!<B1BE><B1C3><B1C4><B1C5><B0DF><B3DD><B0C2><B0D0><B2C4><B2C9><B0BC><B1DD><B2B5>!<B2F5><B0B8><B0FD><B0CE><B0A4><B0FC><B0F8>,<B0E4><B2BE><B0C2><B2B4><B0C0><B0C1><B0A1><B0A2><B2F1><B2F2><B0C2><B0CE><B0F1><B0BC>!<B0A1><B0A2><B0C2><B0C3><B1A8><B0FC><B0F2><B4B7><B0BC>!<B2CB><B1C2><B0FC><B7DB><B0C5><B1F5><B2BA><B0BC><B0F2><B4B7><B0BE>!",english_graphical_residual,The English target retains graphical codes.
 0x0331AD,0x03416A,987,"
-瓦它诺:你是小智?我是龙系四天王菊子瓦它诺,你应该知道龙是神圣传说中的生物,很难抓但培育的好将是天下第一!一般的攻击对龙系是没用的!开始吧,我会让你夹着尾巴逃跑的!",0x03416A,694,0x034169,graphical_codes,"<0A><BAF4><B6A6><BBCF>:<B0C5><B0C2><B0B6><B0B7>?<B1C2><B0C2><B6D9><B0AF><B1E1><B1AD><B4F7><BADE><B1DF><BAF4><B6A6><BBCF>,<B0C5><B6B9><B3B3><B2D7><B1A4><B6D9><B0C2><B6DD><BCB3><B6F2><B1E7><B0DC><B0BC><B1C9><B0C1>,<B3F7><B4A7><B2C0><B3A8><B6A3><B6D8><B0BC><B1B4><B1D2><B0C2><B1AD><B0F9><B6A7><B1D1>!<B1D1><BAFD><B0BC><B4AB><B4AC><B0E7><B6D9><B0AF><B0C2><B2B6><B1A8><B0BC>!<B1D9><B1DA><B0BE>,<B1C2><B1F9><B2CB><B0C5><BCBB><B1C7><BBD0><BBC0><B3EF><B8B9><B0BC>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+瓦它诺:你是小智?我是龙系四天王菊子瓦它诺,你应该知道龙是神圣传说中的生物,很难抓但培育的好将是天下第一!一般的攻击对龙系是没用的!开始吧,我会让你夹着尾巴逃跑的!",0x03416A,694,0x034169,graphical_codes,"<0A><BAF4><B6A6><BBCF>:<B0C5><B0C2><B0B6><B0B7>?<B1C2><B0C2><B6D9><B0AF><B1E1><B1AD><B4F7><BADE><B1DF><BAF4><B6A6><BBCF>,<B0C5><B6B9><B3B3><B2D7><B1A4><B6D9><B0C2><B6DD><BCB3><B6F2><B1E7><B0DC><B0BC><B1C9><B0C1>,<B3F7><B4A7><B2C0><B3A8><B6A3><B6D8><B0BC><B1B4><B1D2><B0C2><B1AD><B0F9><B6A7><B1D1>!<B1D1><BAFD><B0BC><B4AB><B4AC><B0E7><B6D9><B0AF><B0C2><B2B6><B1A8><B0BC>!<B1D9><B1DA><B0BE>,<B1C2><B1F9><B2CB><B0C5><BCBB><B1C7><BBD0><BBC0><B3EF><B8B9><B0BC>!",english_graphical_residual,The English target retains graphical codes.
 0x0331AF,0x034208,988,"
-瓦它诺:虽然难过但你的技术一流!不过要想成为真正的冠军就应该进入冠军的房间打败里面的训练师!!他比你早一步打败我们四天王!",0x034208,695,0x034207,graphical_codes,<0A><BAF4><B6A6><BBCF>:<B4A4><B2AA><B4A7><B3D4><B3A8><B0C5><B0BC><B4BF><B1AE><B1D1><B9D7>!<B0CE><B3D4><B0C3><B1D7><B2EA><B0EA><B1F5><B2BA><B0BC><B4A1><B4A2><B2AB><B6B9><B3B3><B3DE><B5BB><B4A1><B4A2><B0BC><B9EA><BAF1><B0CF><B6A2><B0BF><B4A8><B0BC><B2DE><B2C5><B2DF>!!<B1F0><B2B2><B0C5><B2BB><B1D1><B7D4><B0CF><B6A2><B1C2><B2EF><B1E1><B1AD><B4F7>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+瓦它诺:虽然难过但你的技术一流!不过要想成为真正的冠军就应该进入冠军的房间打败里面的训练师!!他比你早一步打败我们四天王!",0x034208,695,0x034207,graphical_codes,<0A><BAF4><B6A6><BBCF>:<B4A4><B2AA><B4A7><B3D4><B3A8><B0C5><B0BC><B4BF><B1AE><B1D1><B9D7>!<B0CE><B3D4><B0C3><B1D7><B2EA><B0EA><B1F5><B2BA><B0BC><B4A1><B4A2><B2AB><B6B9><B3B3><B3DE><B5BB><B4A1><B4A2><B0BC><B9EA><BAF1><B0CF><B6A2><B0BF><B4A8><B0BC><B2DE><B2C5><B2DF>!!<B1F0><B2B2><B0C5><B2BB><B1D1><B7D4><B0CF><B6A2><B1C2><B2EF><B1E1><B1AD><B4F7>!,english_graphical_residual,The English target retains graphical codes.
 0x0331B1,0x03427F,989,"
 小智:你们就是新的冠军?啊?难道你们是...",0x03427E,696,0x03427E,ascii,"Jesse: Long time nosee brat! Our boss has disbanded Team Rocket because of you! James: We plan to take over Indigo Plateau and make sure Team Rocket takes its place as true Pok@mon mast- ers. We can't allowa dreadful little twerp such as your-self stand in our way! Meowth:Hehe, you don't stand a chance against Meowth!",pending_semantic_review,
 0x0331D3,0x0344B9,1006,"
-大木博士:你又堂堂正正的赢了!恭喜你小智,从你刚开始得到比卡丘开始到现在你真的变强了,应该说你长大了!小智,你能制霸宠物精灵联盟!不是你一个人的力量!是你与精灵之间巧妙的感情!小智你跟我来!",0x0344B9,698,0x03447C,graphical_codes,"0000000000000000000000000000000000000000000000000000000000000<B1BE><B1C3><B1C4><B1C5>:<B0C5><B5B0><BDF2><BDF2><B2BA><B2BA><B0BC><B3F5><B0F8>!<BBA6><B6EB><B0C5><B0B6><B0B7>,<B1FA><B0C5><B2BF><B1D9><B1DA><B2C1><B0DB><B2B2><B2C2><B2C3><B1D9><B1DA><B0DB><B2F5><B0B8><B0C5><B1F5><B0BC><B3D6><B2C9><B0F8>,<B6B9><B3B3><B1E7><B0C5><B2EB><B1BE><B0F8>!<B0B6><B0B7>,<B0C5><B0EC><B2E4><BBD4><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B0CE><B0C2><B0C5><B1D1><B0BA><B2B5><B0BC><B0E3><B3EC>!<B0C2><B0C5><B2A1><B0A1><B0A2><B3E3><BAF1><BDF5><B7FC><B0BC><B5EA><B7AB>!<B0B6><B0B7><B0C5><B2A2><B1C2><B0FC>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+大木博士:你又堂堂正正的赢了!恭喜你小智,从你刚开始得到比卡丘开始到现在你真的变强了,应该说你长大了!小智,你能制霸宠物精灵联盟!不是你一个人的力量!是你与精灵之间巧妙的感情!小智你跟我来!",0x0344B9,698,0x03447C,graphical_codes,"0000000000000000000000000000000000000000000000000000000000000<B1BE><B1C3><B1C4><B1C5>:<B0C5><B5B0><BDF2><BDF2><B2BA><B2BA><B0BC><B3F5><B0F8>!<BBA6><B6EB><B0C5><B0B6><B0B7>,<B1FA><B0C5><B2BF><B1D9><B1DA><B2C1><B0DB><B2B2><B2C2><B2C3><B1D9><B1DA><B0DB><B2F5><B0B8><B0C5><B1F5><B0BC><B3D6><B2C9><B0F8>,<B6B9><B3B3><B1E7><B0C5><B2EB><B1BE><B0F8>!<B0B6><B0B7>,<B0C5><B0EC><B2E4><BBD4><B0C0><B0C1><B0A1><B0A2><B3CE><B3CF>!<B0CE><B0C2><B0C5><B1D1><B0BA><B2B5><B0BC><B0E3><B3EC>!<B0C2><B0C5><B2A1><B0A1><B0A2><B3E3><BAF1><BDF5><B7FC><B0BC><B5EA><B7AB>!<B0B6><B0B7><B0C5><B2A2><B1C2><B0FC>!",english_graphical_residual,The English target retains graphical codes.
 0x0331D5,0x03456F,1007,"
-大木博士:小智,你经过激烈的战斗!而如今成为联盟冠军!在此记录下小智的名字与精灵的名字吧!和我一起回家吧,你妈妈一定很想你",0x03456F,699,0x03456E,graphical_codes,"<0A><B1BE><B1C3><B1C4><B1C5>:<B0B6><B0B7>,<B0C5><B2A5><B3D4><BAB4><BBC8><B0BC><B0F2><B4B7>!<B1CE><B1FE><B6C9><B2EA><B0EA><B3CE><B3CF><B4A1><B4A2>!<B0B8><BDE7><B2F8><B2F9><B0F9><B0B6><B0B7><B0BC><B3B1><B9B1><B2A1><B0A1><B0A2><B0BC><B3B1><B9B1><B0BE>!<B0C9><B1C2><B1D1><B0E8><B2A3><B1BF><B0BE>,<B0C5><B1DB><B1DB><B1D1><B2B1><B3F7><B1D7><B0C5>",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+大木博士:小智,你经过激烈的战斗!而如今成为联盟冠军!在此记录下小智的名字与精灵的名字吧!和我一起回家吧,你妈妈一定很想你",0x03456F,699,0x03456E,graphical_codes,"<0A><B1BE><B1C3><B1C4><B1C5>:<B0B6><B0B7>,<B0C5><B2A5><B3D4><BAB4><BBC8><B0BC><B0F2><B4B7>!<B1CE><B1FE><B6C9><B2EA><B0EA><B3CE><B3CF><B4A1><B4A2>!<B0B8><BDE7><B2F8><B2F9><B0F9><B0B6><B0B7><B0BC><B3B1><B9B1><B2A1><B0A1><B0A2><B0BC><B3B1><B9B1><B0BE>!<B0C9><B1C2><B1D1><B0E8><B2A3><B1BF><B0BE>,<B0C5><B1DB><B1DB><B1D1><B2B1><B3F7><B1D7><B0C5>",english_graphical_residual,The English target retains graphical codes.
 0x0331D7,0x0345E5,1008,"
-妈妈:我听说你要去彩虹市的南晶科技开发部挑战名叫卡美优的训练师!听说他的精灵至今还没有被人打败过,你千万要小心啊...",0x0345E5,700,0x0345E4,graphical_codes,"<0A><B1DB><B1DB>:<B1C2><B1F1><B1E7><B0C5><B0C3><B0C7><B6CA><B8FD><B4D1><B0BC><B0A7><B0A8><BDE0><B4BF><B1D9><B2F4><B6C1><B3FB><B0F2><B3B1><B1C1><B2C2><B6A8><B8EE><B0BC><B2DE><B2C5><B2DF>!<B1F1><B1E7><B1F0><B0BC><B0A1><B0A2><BDFA><B6C9><B2BD><B2B6><B0AE><B1B6><B2B5><B0CF><B6A2><B3D4>,<B0C5><B8F9><B4B1><B0C3><B0B6><B0DD><B2AC>...",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+妈妈:我听说你要去彩虹市的南晶科技开发部挑战名叫卡美优的训练师!听说他的精灵至今还没有被人打败过,你千万要小心啊...",0x0345E5,700,0x0345E4,graphical_codes,"<0A><B1DB><B1DB>:<B1C2><B1F1><B1E7><B0C5><B0C3><B0C7><B6CA><B8FD><B4D1><B0BC><B0A7><B0A8><BDE0><B4BF><B1D9><B2F4><B6C1><B3FB><B0F2><B3B1><B1C1><B2C2><B6A8><B8EE><B0BC><B2DE><B2C5><B2DF>!<B1F1><B1E7><B1F0><B0BC><B0A1><B0A2><BDFA><B6C9><B2BD><B2B6><B0AE><B1B6><B2B5><B0CF><B6A2><B3D4>,<B0C5><B8F9><B4B1><B0C3><B0B6><B0DD><B2AC>...",english_graphical_residual,The English target retains graphical codes.
 0x0331D9,0x034657,1009,"
 卡美优:小智,我知道你一定会来的!这一战应该没有任何遗憾吧!!来吧,准备好了吗?",0x037ADC,1116,0x037ADC,ascii,Eusine: Greetings! I've heard about you Ash! Glad to meet you! I've searched the world for the greatest Legendary Pok@mon and finally found them! They seem to want to see your power for them- selves! Allow me toshow you the power of the Legendary Pok@mon!,pending_semantic_review,
 0x0331DB,0x0346A2,1010,"
@@ -1918,7 +1918,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x0331E1,0x03483E,1013,"
 得到梦幻",0x0347BD,705,0x0347BD,ascii,Recieved Mew!,pending_semantic_review,
 0x0331E3,0x034848,1014,"
-妈妈:你完成精灵图鉴了吗?",0x034848,706,0x0347CB,graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1DB><B1DB>:<B0C5><B3A6><B2EA><B0A1><B0A2><B2F1><B2F2><B0F8><B0D7>?,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+妈妈:你完成精灵图鉴了吗?",0x034848,706,0x0347CB,graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1DB><B1DB>:<B0C5><B3A6><B2EA><B0A1><B0A2><B2F1><B2F2><B0F8><B0D7>?,english_graphical_residual,The English target retains graphical codes.
 0x0331E5,0x034862,1015,"
 裁判:你真是好样的!",0x034862,707,0x034862,ascii,Great job Champ!,pending_semantic_review,
 0x0331E7,0x034876,1016,"
@@ -1936,7 +1936,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x0348E3,0x034947,1022,"
 得到超力球",0x034949,714,0x034949,ascii,UltraBall,pending_semantic_review,
 0x0348E5,0x034953,1023,"
-得到大师球",0x034953,715,0x034953,graphical_codes,<B2C1><B0DB><B1BE><B2DF><B0BD>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到大师球",0x034953,715,0x034953,graphical_codes,<B2C1><B0DB><B1BE><B2DF><B0BD>,english_graphical_residual,The English target retains graphical codes.
 0x0348E7,0x03495F,1024,"
 得到伤药",0x03495F,716,0x03495F,ascii,A Potion!,pending_semantic_review,
 0x0348E9,0x034969,1025,"
@@ -1944,7 +1944,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x0348EB,0x034975,1026,"
 得到超级伤药",0x034975,718,0x034973,ascii,A H.Potion!,pending_semantic_review,
 0x0348ED,0x034983,1027,"
-得到最大伤药",0x034983,719,0x034981,graphical_codes,00<B2C1><B0DB><B3F2><B1BE><B9C7><BBB9>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到最大伤药",0x034983,719,0x034981,graphical_codes,00<B2C1><B0DB><B3F2><B1BE><B9C7><BBB9>,english_graphical_residual,The English target retains graphical codes.
 0x0348EF,0x034991,1028,"
 得到解毒药",0x034990,720,0x034990,ascii,An Antidote!,pending_semantic_review,
 0x0348F1,0x03499D,1029,"
@@ -1954,15 +1954,15 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x0348F5,0x0349B5,1031,"
 得到冰冻药",0x0349B5,722,0x0349B3,ascii,Ice Heal!,pending_semantic_review,
 0x0348F7,0x0349C1,1032,"
-得到烧伤药",0x0349C1,723,0x0349BF,graphical_codes,00<B2C1><B0DB><BAE7><B9C7><BBB9>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到烧伤药",0x0349C1,723,0x0349BF,graphical_codes,00<B2C1><B0DB><BAE7><B9C7><BBB9>,english_graphical_residual,The English target retains graphical codes.
 0x0348F9,0x0349CD,1033,"
 得到万能恢复",0x0349CD,724,0x0349CC,ascii,A Full Heal!,pending_semantic_review,
 0x0348FB,0x0349DB,1034,"
 得到精神药",0x0349DB,725,0x0349DA,ascii,A Revive!,pending_semantic_review,
 0x0348FD,0x0349E7,1035,"
-得到PP提升",0x0349E7,726,0x0349E5,graphical_codes,00<B2C1><B0DB>PP<B4C7><B4C8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到PP提升",0x0349E7,726,0x0349E5,graphical_codes,00<B2C1><B0DB>PP<B4C7><B4C8>,english_graphical_residual,The English target retains graphical codes.
 0x0348FF,0x0349F3,1036,"
-得到PP最大",0x0349F3,727,0x0349F2,graphical_codes,<0A><B2C1><B0DB>PP<B3F2><B1BE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到PP最大",0x0349F3,727,0x0349F2,graphical_codes,<0A><B2C1><B0DB>PP<B3F2><B1BE>,english_graphical_residual,The English target retains graphical codes.
 0x034901,0x0349FF,1037,"
 得到神奇糖果",0x0349FF,728,0x0349FF,ascii,A Rare Candy!,pending_semantic_review,
 0x034903,0x034A0D,1038,"
@@ -1976,43 +1976,43 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x03490B,0x034A3D,1042,"
 得到月之石",0x034A3D,733,0x034A3D,ascii,Moon Stone!,pending_semantic_review,
 0x03490D,0x034A49,1043,"
-得到包裹",0x034A49,734,0x034A49,graphical_codes,<B2C1><B0DB><B2E0><B2E1>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到包裹",0x034A49,734,0x034A49,graphical_codes,<B2C1><B0DB><B2E0><B2E1>,english_graphical_residual,The English target retains graphical codes.
 0x03490F,0x034A53,1044,"
-得到精灵图鉴",0x034A53,735,0x034A52,graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B2F1><B2F2>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到精灵图鉴",0x034A53,735,0x034A52,graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B2F1><B2F2>,english_graphical_residual,The English target retains graphical codes.
 0x034911,0x034A61,1045,"
-得到地图",0x034A61,736,0x034A60,graphical_codes,<0A><B2C1><B0DB><B3BB><B2F1>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到地图",0x034A61,736,0x034A60,graphical_codes,<0A><B2C1><B0DB><B3BB><B2F1>,english_graphical_residual,The English target retains graphical codes.
 0x034913,0x034A6B,1046,"
-得到菊石化石",0x034A6B,737,0x034A6A,graphical_codes,<0A><B2C1><B0DB><BADE><B1B2><B5AB><B1B2>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到菊石化石",0x034A6B,737,0x034A6A,graphical_codes,<0A><B2C1><B0DB><BADE><B1B2><B5AB><B1B2>,english_graphical_residual,The English target retains graphical codes.
 0x034915,0x034A79,1047,"
-得到盔甲化石",0x034A79,738,0x034A78,graphical_codes,<0A><B2C1><B0DB><BADF><BBBE><B5AB><B1B2>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到盔甲化石",0x034A79,738,0x034A78,graphical_codes,<0A><B2C1><B0DB><BADF><BBBE><B5AB><B1B2>,english_graphical_residual,The English target retains graphical codes.
 0x034917,0x034A87,1048,"
-得到船票",0x034A87,739,0x034A86,graphical_codes,<0A><B2C1><B0DB><B6F6><B6F7>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到船票",0x034A87,739,0x034A86,graphical_codes,<0A><B2C1><B0DB><B6F6><B6F7>,english_graphical_residual,The English target retains graphical codes.
 0x034919,0x034A91,1049,"
-得到矿泉水",0x034A91,740,0x034A90,graphical_codes,<0A><B2C1><B0DB><B8E9><B8EA><B5F7>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到矿泉水",0x034A91,740,0x034A90,graphical_codes,<0A><B2C1><B0DB><B8E9><B8EA><B5F7>,english_graphical_residual,The English target retains graphical codes.
 0x03491B,0x034A9D,1050,"
-得到精灵眼镜",0x034A9D,741,0x034A9C,graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B6EE><B8D1>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到精灵眼镜",0x034A9D,741,0x034A9C,graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B6EE><B8D1>,english_graphical_residual,The English target retains graphical codes.
 0x03491D,0x034AAB,1051,"
-得到精灵笛",0x034AAB,742,0x034AAA,graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B8DF>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到精灵笛",0x034AAB,742,0x034AAA,graphical_codes,<0A><B2C1><B0DB><B0A1><B0A2><B8DF>,english_graphical_residual,The English target retains graphical codes.
 0x03491F,0x034AB7,1052,"
-得到金牙",0x034AB7,743,0x034AB6,graphical_codes,<0A><B2C1><B0DB><B7BB><B9F9>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到金牙",0x034AB7,743,0x034AB6,graphical_codes,<0A><B2C1><B0DB><B7BB><B9F9>,english_graphical_residual,The English target retains graphical codes.
 0x034921,0x034AC1,1053,"
-得到梦幻船票",0x034AC1,744,0x034AC0,graphical_codes,<0A><B2C1><B0DB><B1D6><B9ED><B6F6><B6F7>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到梦幻船票",0x034AC1,744,0x034AC0,graphical_codes,<0A><B2C1><B0DB><B1D6><B9ED><B6F6><B6F7>,english_graphical_residual,The English target retains graphical codes.
 0x034923,0x034ACF,1054,"
-得到居合斩",0x034ACF,745,0x034ACE,graphical_codes,<0A><B2C1><B0DB><B1A9><B1AA><B1AB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到居合斩",0x034ACF,745,0x034ACE,graphical_codes,<0A><B2C1><B0DB><B1A9><B1AA><B1AB>,english_graphical_residual,The English target retains graphical codes.
 0x034925,0x034ADB,1055,"
-得到飞天术",0x034ADB,746,0x034ADA,graphical_codes,<0A><B2C1><B0DB><B1AC><B1AD><B1AE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+得到飞天术",0x034ADB,746,0x034ADA,graphical_codes,<0A><B2C1><B0DB><B1AC><B1AD><B1AE>,english_graphical_residual,The English target retains graphical codes.
 0x034AEB,0x034C0A,1056,"
-欢迎!到精灵中心可以恢复精灵的体力.",0x034C0A,748,0x034C09,graphical_codes,<0A><B0D2><B0D3>!<B0DB><B0A1><B0A2><B0DC><B0DD><B0DE><B0DF><B0E0><B0E1><B0A1><B0A2><B0BC><B0E2><B0E3>.,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+欢迎!到精灵中心可以恢复精灵的体力.",0x034C0A,748,0x034C09,graphical_codes,<0A><B0D2><B0D3>!<B0DB><B0A1><B0A2><B0DC><B0DD><B0DE><B0DF><B0E0><B0E1><B0A1><B0A2><B0BC><B0E2><B0E3>.,english_graphical_residual,The English target retains graphical codes.
 0x034AED,0x034C2E,1057,"
-您的精灵都精神了!!欢迎光临!!",0x034C2E,749,0x034C2D,graphical_codes,<0A><B7C5><B0BC><B0A1><B0A2><B1C0><B0A1><B6DD><B0F8>!!<B0D2><B0D3><B0E4><B0E5>!!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+您的精灵都精神了!!欢迎光临!!",0x034C2E,749,0x034C2D,graphical_codes,<0A><B7C5><B0BC><B0A1><B0A2><B1C0><B0A1><B6DD><B0F8>!!<B0D2><B0D3><B0E4><B0E5>!!,english_graphical_residual,The English target retains graphical codes.
 0x034AEF,0x034C4C,1058,"
-对不起,因为机能所限这里暂时不能够对战...",0x034C4C,750,0x034C4B,graphical_codes,"<0A><B0E7><B0CE><B0E8>,<B0E9><B0EA><B0EB><B0EC><B0AD><B0ED><B0EE><B0BF><B0EF><B0F0><B0CE><B0EC><B0F1><B0E7><B0F2>...",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+对不起,因为机能所限这里暂时不能够对战...",0x034C4C,750,0x034C4B,graphical_codes,"<0A><B0E7><B0CE><B0E8>,<B0E9><B0EA><B0EB><B0EC><B0AD><B0ED><B0EE><B0BF><B0EF><B0F0><B0CE><B0EC><B0F1><B0E7><B0F2>...",english_graphical_residual,The English target retains graphical codes.
 0x034AF1,0x034C76,1059,"
-交换机器也坏了...下次再来看看吧",0x034C76,751,0x034C75,graphical_codes,<0A><B0F3><B0F4><B0EB><B0F5><B0F6><B0F7><B0F8>...<B0F9><B0FA><B0FB><B0FC><B0FD><B0FD><B0BE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+交换机器也坏了...下次再来看看吧",0x034C76,751,0x034C75,graphical_codes,<0A><B0F3><B0F4><B0EB><B0F5><B0F6><B0F7><B0F8>...<B0F9><B0FA><B0FB><B0FC><B0FD><B0FD><B0BE>,english_graphical_residual,The English target retains graphical codes.
 0x034AF3,0x034C97,1060,"
-欢迎!买东西吗?",0x034C97,752,0x034C96,graphical_codes,<0A><B0D2><B0D3>!<B0D4><B0D5><B0D6><B0D7>?,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+欢迎!买东西吗?",0x034C97,752,0x034C96,graphical_codes,<0A><B0D2><B0D3>!<B0D4><B0D5><B0D6><B0D7>?,english_graphical_residual,The English target retains graphical codes.
 0x034AF5,0x034CA7,1061,"
-谢谢惠顾!!",0x034CA7,753,0x034CA6,graphical_codes,<0A><B0D8><B0D8><B0D9><B0DA>!!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+谢谢惠顾!!",0x034CA7,753,0x034CA6,graphical_codes,<0A><B0D8><B0D8><B0D9><B0DA>!!,english_graphical_residual,The English target retains graphical codes.
 0x034AF7,0x034CB3,1062,"
 我也在养育精灵!变强的话就不会让人欺负",0x034CB3,754,0x034CB3,ascii,Technology's great!You can now store and recall items and Pok@mon as data via PC!,pending_semantic_review,
 0x034AF9,0x034CDA,1063,"
@@ -2040,15 +2040,15 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x034B0F,0x034E33,1074,"
 伤药很好,当精灵没有体力时可以使用",0x034E33,761,0x034E32,ascii,My Dad loves Pok@mon too.,pending_semantic_review,
 0x034B11,0x034E56,1075,"
-小拉达很小但前牙很厉害",0x034E56,762,0x034E55,graphical_codes,<0A><B0B6><B8BB><B6E5><B3F7><B0B6><B3A8><B3DD><B9F9><B3F7><B3ED><B3EE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+小拉达很小但前牙很厉害",0x034E56,762,0x034E55,graphical_codes,<0A><B0B6><B8BB><B6E5><B3F7><B0B6><B3A8><B3DD><B9F9><B3F7><B3ED><B3EE>,english_graphical_residual,The English target retains graphical codes.
 0x034B13,0x034E6E,1076,"
-常青森林是天然的迷宫,小心啊",0x034E6E,763,0x034E6D,graphical_codes,"<0A><B3CA><B3CB><B4D8><B4D9><B0C2><B1AD><B2AA><B0BC><B4D3><BDFE>,<B0B6><B0DD><B2AC>",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+常青森林是天然的迷宫,小心啊",0x034E6E,763,0x034E6D,graphical_codes,"<0A><B3CA><B3CB><B4D8><B4D9><B0C2><B1AD><B2AA><B0BC><B4D3><BDFE>,<B0B6><B0DD><B2AC>",english_graphical_residual,The English target retains graphical codes.
 0x034B15,0x034E8B,1077,"
 道路上经常会有小树吧?用精灵的技能可以砍断的",0x034E8B,764,0x034E8B,ascii,The HM Flash lightseven the darkest caves.,pending_semantic_review,
 0x034B17,0x034EB8,1078,"
-有的精灵只在森林或者洞穴生活要得到更多的精灵就要多走走",0x034EB8,765,0x034EB8,graphical_codes,<B0AE><B0BC><B0A1><B0A2><B2BE><B0B8><B4D8><B4D9><B1CB><B9AB><B4FB><BDB8><B1C9><B4E0><B0C3><B2C1><B0DB><B2CC><B0C8><B0BC><B0A1><B0A2><B2AB><B0C3><B0C8><B7C3><B7C3>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+有的精灵只在森林或者洞穴生活要得到更多的精灵就要多走走",0x034EB8,765,0x034EB8,graphical_codes,<B0AE><B0BC><B0A1><B0A2><B2BE><B0B8><B4D8><B4D9><B1CB><B9AB><B4FB><BDB8><B1C9><B4E0><B0C3><B2C1><B0DB><B2CC><B0C8><B0BC><B0A1><B0A2><B2AB><B0C3><B0C8><B7C3><B7C3>,english_graphical_residual,The English target retains graphical codes.
 0x034B19,0x034EF0,1079,"
-说起石山矿野很黑的,精灵用闪光术能看清吧",0x034EF0,766,0x034EEF,graphical_codes,"<0A><B1E7><B0E8><B1B2><B6DC><B8E9><B1F8><B3F7><B5AC><B0BC>,<B0A1><B0A2><B1A8><B4BE><B0E4><B1AE><B0EC><B0FD><B4C4><B0BE>",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+说起石山矿野很黑的,精灵用闪光术能看清吧",0x034EF0,766,0x034EEF,graphical_codes,"<0A><B1E7><B0E8><B1B2><B6DC><B8E9><B1F8><B3F7><B5AC><B0BC>,<B0A1><B0A2><B1A8><B4BE><B0E4><B1AE><B0EC><B0FD><B4C4><B0BE>",english_graphical_residual,The English target retains graphical codes.
 0x034B1B,0x034F19,1080,"
 啊!这长长的洞穴!是地鼠挖的!听说都到尼比市了!",0x0368BC,1027,0x0368BC,ascii,Diglets dug this cave that goes to Viridian City.,pending_semantic_review,
 0x034B1D,0x034F47,1081,"
@@ -2064,7 +2064,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x034B27,0x034FD9,1086,"
 好的,50元收下了!",0x034FCE,773,0x034FCE,ascii,Enjoy your visit!,pending_semantic_review,
 0x034B29,0x034FEB,1087,"
-再来啊",0x034FE0,774,0x034FE0,graphical_codes,<B0FB><B0FC><B2AC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+再来啊",0x034FE0,774,0x034FE0,graphical_codes,<B0FB><B0FC><B2AC>,english_graphical_residual,The English target retains graphical codes.
 0x034B2B,0x034FF3,1088,"
 太好了,找到了龙骨",0x034E1E,760,0x034E1E,ascii,I like this museum.,pending_semantic_review,
 0x034B2D,0x035006,1089,"
@@ -2076,7 +2076,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x034B33,0x035056,1092,"
 我很害怕...我经常在这里听到奇怪的声音",0x035048,778,0x035048,ascii,Only the Pok@mon champion is allowedin here!,pending_semantic_review,
 0x034B35,0x03507D,1093,"
-太不幸了,这家人被偷了!是火箭队干的!即使是警察也拿火箭队没办法!",0x03507D,779,0x035077,graphical_codes,"000000<B6C6><B0CE><B8E7><B0F8>,<B0EE><B1BF><B2B5><B1B6><B5EF><B0F8>!<B0C2><B5A2><B5A3><B5A4><B5A5><B0BC>!<B1D8><B1A7><B0C2><B5EC><B4B0><B0F6><B0C6><B5A2><B5A3><B5A4><B2B6><B2B7><B2B8>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+太不幸了,这家人被偷了!是火箭队干的!即使是警察也拿火箭队没办法!",0x03507D,779,0x035077,graphical_codes,"000000<B6C6><B0CE><B8E7><B0F8>,<B0EE><B1BF><B2B5><B1B6><B5EF><B0F8>!<B0C2><B5A2><B5A3><B5A4><B5A5><B0BC>!<B1D8><B1A7><B0C2><B5EC><B4B0><B0F6><B0C6><B5A2><B5A3><B5A4><B2B6><B2B7><B2B8>!",english_graphical_residual,The English target retains graphical codes.
 0x034B37,0x0350BD,1094,"
 你也有精灵吗!好好磨练吧!",0x0350BD,780,0x0350BD,ascii,Welcome to Ceruleancity!,pending_semantic_review,
 0x034B39,0x0350D7,1095,"
@@ -2086,7 +2086,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x034B3D,0x035108,1097,"
 你好!骑自行车的心情你知道吗?",0x035106,782,0x035106,ascii,I care for injured Pok@mon.,pending_semantic_review,
 0x034B3F,0x035126,1098,"
-我的自行车很漂亮哦",0x035126,783,0x035122,graphical_codes,0000<B1C2><B0BC><B2F3><B3A9><BCB2><B3F7><B9D3><B7EE><B2DD>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+我的自行车很漂亮哦",0x035126,783,0x035122,graphical_codes,0000<B1C2><B0BC><B2F3><B3A9><BCB2><B3F7><B9D3><B7EE><B2DD>,english_graphical_residual,The English target retains graphical codes.
 0x034B41,0x03513A,1099,"
 火箭队让精灵挖洞一定有什么事!",0x03513A,784,0x03513A,ascii,Why would they do this!?,pending_semantic_review,
 0x034B43,0x035159,1100,"
@@ -2094,13 +2094,13 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x034B45,0x035177,1101,"
 家里的爷爷想要交换精灵",0x035878,835,0x035874,ascii,Bill has lots of Pok@mon!,pending_semantic_review,
 0x034B47,0x03518F,1102,"
-哎...最近没有发生什么事情...",0x03518F,786,0x035188,graphical_codes,0000000<B8F3>...<B3F2><B0CD><B2B6><B0AE><B2F4><B1C9><B2AF><B1E6><B1D5><B7AB>...,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+哎...最近没有发生什么事情...",0x03518F,786,0x035188,graphical_codes,0000000<B8F3>...<B3F2><B0CD><B2B6><B0AE><B2F4><B1C9><B2AF><B1E6><B1D5><B7AB>...,english_graphical_residual,The English target retains graphical codes.
 0x034B49,0x0351AD,1103,"
-我老是培育不好我的妙娃种子...",0x0351AD,787,0x0351AC,graphical_codes,<0A><B1C2><B2CE><B0C2><B6A3><B6D8><B0CE><B1B4><B1C2><B0BC><B7FC><BEA7><B6AD><B1DF>...,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+我老是培育不好我的妙娃种子...",0x0351AD,787,0x0351AC,graphical_codes,<0A><B1C2><B2CE><B0C2><B6A3><B6D8><B0CE><B1B4><B1C2><B0BC><B7FC><BEA7><B6AD><B1DF>...,english_graphical_residual,The English target retains graphical codes.
 0x034B4B,0x0351CC,1104,"
-让精灵进化图鉴可以增加...",0x0351CC,788,0x0351CB,graphical_codes,<0A><B2CB><B0A1><B0A2><B3DE><B5AB><B2F1><B2F2><B0DE><B0DF><B2FB><B2FC>...,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+让精灵进化图鉴可以增加...",0x0351CC,788,0x0351CB,graphical_codes,<0A><B2CB><B0A1><B0A2><B3DE><B5AB><B2F1><B2F2><B0DE><B0DF><B2FB><B2FC>...,english_graphical_residual,The English target retains graphical codes.
 0x034B4D,0x0351E7,1105,"
-听说紫苑镇出现过幽灵精灵呢...",0x0351E7,789,0x0351E6,graphical_codes,<0A><B1F1><B1E7><BDE3><BDE4><B2D6><B0A4><B2F5><B3D4><B8BD><B0A2><B0A1><B0A2><B1EB>...,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+听说紫苑镇出现过幽灵精灵呢...",0x0351E7,789,0x0351E6,graphical_codes,<0A><B1F1><B1E7><BDE3><BDE4><B2D6><B0A4><B2F5><B3D4><B8BD><B0A2><B0A1><B0A2><B1EB>...,english_graphical_residual,The English target retains graphical codes.
 0x034B4F,0x035206,1106,"
 这里是精灵的墓地,有名的城镇...精灵死的时候都会带到精灵塔",0x035206,790,0x035206,ascii,Pok@mon spirits have been seen in the Pok@mon Tower.,pending_semantic_review,
 0x034B51,0x035240,1107,"
@@ -2110,11 +2110,11 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x034B55,0x035295,1109,"
 我无法原谅火箭队!他们把逃亡中可拉可拉的妈妈抓了并杀害了!",0x035294,793,0x035294,ascii,May the souls of Pok@mon rest easy.,pending_semantic_review,
 0x034B57,0x0352CF,1110,"
-精灵塔有很多幽灵居住",0x0352CF,795,0x0352CE,graphical_codes,0<B0A1><B0A2><B8BE><B0AE><B3F7><B0C8><B8BD><B0A2><B1A9><B1C6>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+精灵塔有很多幽灵居住",0x0352CF,795,0x0352CE,graphical_codes,0<B0A1><B0A2><B8BE><B0AE><B3F7><B0C8><B8BD><B0A2><B1A9><B1C6>,english_graphical_residual,The English target retains graphical codes.
 0x034B59,0x0352E5,1111,"
-这个紫苑镇最有名的塔也是宠物精灵的墓园...人们将死亡的精灵带到这幽灵塔来祈求冥福",0x0352E5,796,0x0352E4,graphical_codes,<0A><B0EE><B0BA><BDE3><BDE4><B2D6><B3F2><B0AE><B3B1><B0BC><B8BE><B0F6><B0C2><B0C0><B0C1><B0A1><B0A2><B0BC><BEA8><B6FE>...<B2B5><B2EF><B1D2><B8C1><BEAA><B0BC><B0A1><B0A2><B8DD><B0DB><B0EE><B8BD><B0A2><B8BE><B0FC><B8C3><B9D2><BEAB><B6B4>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+这个紫苑镇最有名的塔也是宠物精灵的墓园...人们将死亡的精灵带到这幽灵塔来祈求冥福",0x0352E5,796,0x0352E4,graphical_codes,<0A><B0EE><B0BA><BDE3><BDE4><B2D6><B3F2><B0AE><B3B1><B0BC><B8BE><B0F6><B0C2><B0C0><B0C1><B0A1><B0A2><B0BC><BEA8><B6FE>...<B2B5><B2EF><B1D2><B8C1><BEAA><B0BC><B0A1><B0A2><B8DD><B0DB><B0EE><B8BD><B0A2><B8BE><B0FC><B8C3><B9D2><BEAB><B6B4>,english_graphical_residual,The English target retains graphical codes.
 0x034B5B,0x035336,1112,"
-吉野老人可以安慰可拉可拉的灵魂",0x035336,797,0x035335,graphical_codes,<0A><B8B8><B1F8><B2CE><B2B5><B0DE><B0DF><B8BF><B8C0><B0DE><B8BB><B0DE><B8BB><B0BC><B0A2><B8C6>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+吉野老人可以安慰可拉可拉的灵魂",0x035336,797,0x035335,graphical_codes,<0A><B8B8><B1F8><B2CE><B2B5><B0DE><B0DF><B8BF><B8C0><B0DE><B8BB><B0DE><B8BB><B0BC><B0A2><B8C6>,english_graphical_residual,The English target retains graphical codes.
 0x034B5D,0x035356,1113,"
 现在戒严中!!",0x0352BA,794,0x0352BA,ascii,Get out of the way!,pending_semantic_review,
 0x034B5F,0x035364,1114,"
@@ -2136,7 +2136,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x034B6F,0x03548D,1122,"
 你也想玩吗?不行,你没有硬币盒",0x035486,806,0x035486,ascii,A man was guarding that poster there,pending_semantic_review,
 0x034B71,0x0354AB,1123,"
-您可以用赢得的硬币盒换取精灵哦...不行,你没有硬币盒...",0x0354AB,807,0x0354AB,graphical_codes,"<B7C5><B0DE><B0DF><B1A8><B3F5><B2C1><B0BC><B4B6><BDBB><BEB2><B0F4><B0A3><B0A1><B0A2><B2DD>...<B0CE><B3A9>,<B0C5><B2B6><B0AE><B4B6><BDBB><BEB2>...",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+您可以用赢得的硬币盒换取精灵哦...不行,你没有硬币盒...",0x0354AB,807,0x0354AB,graphical_codes,"<B7C5><B0DE><B0DF><B1A8><B3F5><B2C1><B0BC><B4B6><BDBB><BEB2><B0F4><B0A3><B0A1><B0A2><B2DD>...<B0CE><B3A9>,<B0C5><B2B6><B0AE><B4B6><BDBB><BEB2>...",english_graphical_residual,The English target retains graphical codes.
 0x034B73,0x0354E2,1124,"
 啊...游戏厅的下面好像有地下室",0x03551C,810,0x03551C,ascii,I got my Koffing inCinnabar!,pending_semantic_review,
 0x034B75,0x035501,1125,"
@@ -2144,7 +2144,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x034B77,0x035525,1126,"
 啊...游戏机很让人着迷啊...",0x034F18,767,0x034F18,ascii,Poliwrath is my best friend!,pending_semantic_review,
 0x034B79,0x035541,1127,"
-这里真是漂亮的地方啊",0x035541,811,0x035539,graphical_codes,00000000<B0EE><B0BF><B1F5><B0C2><B9D3><B7EE><B0BC><B3BB><B1E2><B2AC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+这里真是漂亮的地方啊",0x035541,811,0x035539,graphical_codes,00000000<B0EE><B0BF><B1F5><B0C2><B9D3><B7EE><B0BC><B3BB><B1E2><B2AC>,english_graphical_residual,The English target retains graphical codes.
 0x034B7B,0x035557,1128,"
 铁达尼号出发了吗?",0x036876,1025,0x036876,ascii,"Sorry, Lt. Surge isout right now.",pending_semantic_review,
 0x034B7D,0x03556A,1129,"
@@ -2208,7 +2208,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x034BB7,0x0358BE,1158,"
 这么好的化石不要嘛?!",0x0358BE,837,0x0358BD,ascii,Go ahead and choose,pending_semantic_review,
 0x034BB9,0x0358D4,1159,"
-使用怪兽的人不同,结果就有好有坏!",0x0358D4,838,0x0358D2,graphical_codes,"00<B1A7><B1A8><B0CA><B0CB><B0BC><B2B5><B0CE><B8CF>,<BCC6><B3F6><B2AB><B0AE><B1B4><B0AE><B0F7>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+使用怪兽的人不同,结果就有好有坏!",0x0358D4,838,0x0358D2,graphical_codes,"00<B1A7><B1A8><B0CA><B0CB><B0BC><B2B5><B0CE><B8CF>,<BCC6><B3F6><B2AB><B0AE><B1B4><B0AE><B0F7>!",english_graphical_residual,The English target retains graphical codes.
 0x034BBB,0x0358F6,1160,"
 世上有很多人用怪兽作恶,那些混蛋就是火箭团!",0x0358F6,839,0x0358F6,ascii,No! Super Potions are all sold out!,pending_semantic_review,
 0x034BBD,0x035922,1161,"
@@ -2220,45 +2220,45 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x034BC3,0x035980,1164,"
 等级越高怪兽越强,但怪兽根据类型也有不擅长作战的对手......",0x03596B,842,0x03596B,ascii,Pok@mon Centers heal your injured Pok@mon for free.,pending_semantic_review,
 0x034BC5,0x0359BB,1165,"
-不知什么时候草丛里会突然窜出精灵呢",0x0359BB,844,0x0359B7,graphical_codes,0000<B0CE><B2D7><B2AF><B1E6><B0F0><B7CD><B1FB><B1FC><B0BF><B1F9><B5B4><B2AA><BEBD><B0A4><B0A1><B0A2><B1EB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+不知什么时候草丛里会突然窜出精灵呢",0x0359BB,844,0x0359B7,graphical_codes,0000<B0CE><B2D7><B2AF><B1E6><B0F0><B7CD><B1FB><B1FC><B0BF><B1F9><B5B4><B2AA><BEBD><B0A4><B0A1><B0A2><B1EB>,english_graphical_residual,The English target retains graphical codes.
 0x034BC7,0x0359DF,1166,"
-到大城市里去会认识很多优秀的训练师",0x0359DF,845,0x0359DE,graphical_codes,<0A><B0DB><B1BE><B3BA><B4D1><B0BF><B0C7><B1F9><B4BA><B0D1><B3F7><B0C8><B8EE><BEBE><B0BC><B2DE><B2C5><B2DF>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+到大城市里去会认识很多优秀的训练师",0x0359DF,845,0x0359DE,graphical_codes,<0A><B0DB><B1BE><B3BA><B4D1><B0BF><B0C7><B1F9><B4BA><B0D1><B3F7><B0C8><B8EE><BEBE><B0BC><B2DE><B2C5><B2DF>,english_graphical_residual,The English target retains graphical codes.
 0x034BC9,0x035A03,1167,"
-你去过金黄市吗,听说那里有很高的大楼",0x035A03,846,0x035A02,graphical_codes,"<0A><B0C5><B0C7><B3D4><B7BB><BAC2><B4D1><B0D7>,<B1F1><B1E7><B0B9><B0BF><B0AE><B3F7><B8AF><B0BC><B1BE><BEB4>",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+你去过金黄市吗,听说那里有很高的大楼",0x035A03,846,0x035A02,graphical_codes,"<0A><B0C5><B0C7><B3D4><B7BB><BAC2><B4D1><B0D7>,<B1F1><B1E7><B0B9><B0BF><B0AE><B3F7><B8AF><B0BC><B1BE><BEB4>",english_graphical_residual,The English target retains graphical codes.
 0x034BCB,0x035A28,1168,"
-我也想拥有传说中的精灵,可是到底哪儿才有传说中的精灵呢?",0x035A28,847,0x035A27,graphical_codes,"<0A><B1C2><B0F6><B1D7><B6A9><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2>,<B0DE><B0C2><B0DB><B3D5><B4C2><B7D0><B1F2><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1EB>?",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+我也想拥有传说中的精灵,可是到底哪儿才有传说中的精灵呢?",0x035A28,847,0x035A27,graphical_codes,"<0A><B1C2><B0F6><B1D7><B6A9><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2>,<B0DE><B0C2><B0DB><B3D5><B4C2><B7D0><B1F2><B0AE><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1EB>?",english_graphical_residual,The English target retains graphical codes.
 0x034BCD,0x035A60,1169,"
-看你的能力一定是训练师新手吧.告诉你要时刻关心自己的精灵状态哦!",0x035A60,848,0x035A5F,graphical_codes,<0A><B0FD><B0C5><B0BC><B0EC><B0E3><B1D1><B2B1><B0C2><B2DE><B2C5><B2DF><B2D5><B1A3><B0BE>.<B2E6><B2E7><B0C5><B0C3><B0F0><B4E7><B0B3><B0DD><B2F3><BBA3><B0BC><B0A1><B0A2><BAF5><BAF6><B2DD>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+看你的能力一定是训练师新手吧.告诉你要时刻关心自己的精灵状态哦!",0x035A60,848,0x035A5F,graphical_codes,<0A><B0FD><B0C5><B0BC><B0EC><B0E3><B1D1><B2B1><B0C2><B2DE><B2C5><B2DF><B2D5><B1A3><B0BE>.<B2E6><B2E7><B0C5><B0C3><B0F0><B4E7><B0B3><B0DD><B2F3><BBA3><B0BC><B0A1><B0A2><BAF5><BAF6><B2DD>!,english_graphical_residual,The English target retains graphical codes.
 0x034BCF,0x035AA0,1170,"
-有飞行系的精灵就能带我飞向远方的城市了...",0x035AA0,849,0x035A9F,graphical_codes,<0A><B0AE><B1AC><B3A9><B0AF><B0BC><B0A1><B0A2><B2AB><B0EC><B8DD><B1C2><B1AC><B3B7><B5CD><B1E2><B0BC><B3BA><B4D1><B0F8>...,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+有飞行系的精灵就能带我飞向远方的城市了...",0x035AA0,849,0x035A9F,graphical_codes,<0A><B0AE><B1AC><B3A9><B0AF><B0BC><B0A1><B0A2><B2AB><B0EC><B8DD><B1C2><B1AC><B3B7><B5CD><B1E2><B0BC><B3BA><B4D1><B0F8>...,english_graphical_residual,The English target retains graphical codes.
 0x034BD1,0x035ACB,1171,"
-今天是个好天气",0x035ACB,850,0x035ACA,graphical_codes,<0A><B6C9><B1AD><B0C2><B0BA><B1B4><B1AD><B4AA>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+今天是个好天气",0x035ACB,850,0x035ACA,graphical_codes,<0A><B6C9><B1AD><B0C2><B0BA><B1B4><B1AD><B4AA>,english_graphical_residual,The English target retains graphical codes.
 0x034BD3,0x035ADB,1172,"
-心情不错,偷偷告诉你我恋爱了!",0x035ADB,851,0x035ADA,graphical_codes,"<0A><B0DD><B7AB><B0CE><B2DC>,<B5EF><B5EF><B2E6><B2E7><B0C5><B1C2><BEBF><B5DD><B0F8>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+心情不错,偷偷告诉你我恋爱了!",0x035ADB,851,0x035ADA,graphical_codes,"<0A><B0DD><B7AB><B0CE><B2DC>,<B5EF><B5EF><B2E6><B2E7><B0C5><B1C2><BEBF><B5DD><B0F8>!",english_graphical_residual,The English target retains graphical codes.
 0x034BD5,0x035AF9,1173,"
-大海很宽阔啊,如果会冲浪术的话就能横渡大海了",0x035AF9,852,0x035AF8,graphical_codes,"<0A><B1BE><B6FC><B3F7><B5B6><B5B7><B2AC>,<B1FE><B3F6><B1F9><B1AF><B1B0><B1AE><B0BC><B1EF><B2AB><B0EC><BEC0><BEC1><B1BE><B6FC><B0F8>",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+大海很宽阔啊,如果会冲浪术的话就能横渡大海了",0x035AF9,852,0x035AF8,graphical_codes,"<0A><B1BE><B6FC><B3F7><B5B6><B5B7><B2AC>,<B1FE><B3F6><B1F9><B1AF><B1B0><B1AE><B0BC><B1EF><B2AB><B0EC><BEC0><BEC1><B1BE><B6FC><B0F8>",english_graphical_residual,The English target retains graphical codes.
 0x034BD7,0x035B26,1174,"
-你听过吗?在枯叶市上的铁达尼号上都是有钱的训练师呢",0x035B26,853,0x035B25,graphical_codes,<0A><B0C5><B1F1><B3D4><B0D7>?<B0B8><B6E1><B6E2><B4D1><B1E5><B0BC><B6E4><B6E5><B4B2><B6E6><B1E5><B1C0><B0C2><B0AE><B0FE><B0BC><B2DE><B2C5><B2DF><B1EB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+你听过吗?在枯叶市上的铁达尼号上都是有钱的训练师呢",0x035B26,853,0x035B25,graphical_codes,<0A><B0C5><B1F1><B3D4><B0D7>?<B0B8><B6E1><B6E2><B4D1><B1E5><B0BC><B6E4><B6E5><B4B2><B6E6><B1E5><B1C0><B0C2><B0AE><B0FE><B0BC><B2DE><B2C5><B2DF><B1EB>,english_graphical_residual,The English target retains graphical codes.
 0x034BD9,0x035B59,1175,"
-在月见山上的晚上偶尔会有皮皮出现呢",0x035B59,854,0x035B58,graphical_codes,<0A><B0B8><B6CF><B2CD><B6DC><B1E5><B0BC><B2BC><B1E5><B9E3><BEC2><B1F9><B0AE><B6D3><B6D3><B0A4><B2F5><B1EB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+在月见山上的晚上偶尔会有皮皮出现呢",0x035B59,854,0x035B58,graphical_codes,<0A><B0B8><B6CF><B2CD><B6DC><B1E5><B0BC><B2BC><B1E5><B9E3><BEC2><B1F9><B0AE><B6D3><B6D3><B0A4><B2F5><B1EB>,english_graphical_residual,The English target retains graphical codes.
 0x034BDB,0x035B7D,1176,"
-宝石大陆你知道吗?我年轻时就是在宝石大陆修行呢",0x035B7D,855,0x035B7C,graphical_codes,<0A><B7B5><B1B2><B1BE><B7B6><B0C5><B2D7><B1A4><B0D7>?<B1C2><B3EA><B8B6><B0F0><B2AB><B0C2><B0B8><B7B5><B1B2><B1BE><B7B6><B4CE><B3A9><B1EB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+宝石大陆你知道吗?我年轻时就是在宝石大陆修行呢",0x035B7D,855,0x035B7C,graphical_codes,<0A><B7B5><B1B2><B1BE><B7B6><B0C5><B2D7><B1A4><B0D7>?<B1C2><B3EA><B8B6><B0F0><B2AB><B0C2><B0B8><B7B5><B1B2><B1BE><B7B6><B4CE><B3A9><B1EB>,english_graphical_residual,The English target retains graphical codes.
 0x034BDD,0x035BAC,1177,"
-在精灵体力低下的时候要赶紧使用伤药",0x035BAC,856,0x035BAB,graphical_codes,<0A><B0B8><B0A1><B0A2><B0E2><B0E3><BCDD><B0F9><B0BC><B0F0><B7CD><B0C3><B1F3><B1F4><B1A7><B1A8><B9C7><BBB9>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+在精灵体力低下的时候要赶紧使用伤药",0x035BAC,856,0x035BAB,graphical_codes,<0A><B0B8><B0A1><B0A2><B0E2><B0E3><BCDD><B0F9><B0BC><B0F0><B7CD><B0C3><B1F3><B1F4><B1A7><B1A8><B9C7><BBB9>,english_graphical_residual,The English target retains graphical codes.
 0x034BDF,0x035BD0,1178,"
-我不明白怎么照顾精灵,要加紧学习呢",0x035BD0,857,0x035BCF,graphical_codes,"<0A><B1C2><B0CE><B5E6><B5E5><B2D0><B1E6><B6CC><B0DA><B0A1><B0A2>,<B0C3><B2FC><B1F4><B4C3><B2C6><B1EB>",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+我不明白怎么照顾精灵,要加紧学习呢",0x035BD0,857,0x035BCF,graphical_codes,"<0A><B1C2><B0CE><B5E6><B5E5><B2D0><B1E6><B6CC><B0DA><B0A1><B0A2>,<B0C3><B2FC><B1F4><B4C3><B2C6><B1EB>",english_graphical_residual,The English target retains graphical codes.
 0x034BE1,0x035BF3,1179,"
 我的精灵老是不听我的话,如果有徽章就好了",0x035BF2,858,0x035BF2,ascii,I can't enter the city!,pending_semantic_review,
 0x034BE3,0x035C1C,1180,"
-在这个地区最强的训练师是石英高原的四大天王",0x035C1C,859,0x035C0B,graphical_codes,00000000000000000<B0B8><B0EE><B0BA><B3BB><B7B8><B3F2><B2C9><B0BC><B2DE><B2C5><B2DF><B0C2><B1B2><B7FE><B8AF><B4EF><B0BC><B1E1><B1BE><B1AD><B4F7>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+在这个地区最强的训练师是石英高原的四大天王",0x035C1C,859,0x035C0B,graphical_codes,00000000000000000<B0B8><B0EE><B0BA><B3BB><B7B8><B3F2><B2C9><B0BC><B2DE><B2C5><B2DF><B0C2><B1B2><B7FE><B8AF><B4EF><B0BC><B1E1><B1BE><B1AD><B4F7>,english_graphical_residual,The English target retains graphical codes.
 0x034BE5,0x035C48,1181,"
 如果我有只像你的精灵这样听话的精灵就好了",0x035C48,860,0x035C48,ascii,Do you want to see my Pok@mon?,pending_semantic_review,
 0x034BE7,0x035C72,1182,"
-我想喝水...谁给我水?",0x035C72,861,0x035C67,graphical_codes,00000000000<B1C2><B1D7><B3C1><B5F7>...<B5F1><B0C4><B1C2><B5F7>?,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+我想喝水...谁给我水?",0x035C72,861,0x035C67,graphical_codes,00000000000<B1C2><B1D7><B3C1><B5F7>...<B5F1><B0C4><B1C2><B5F7>?,english_graphical_residual,The English target retains graphical codes.
 0x034BE9,0x035C88,1183,"
-别动!叫你别动你还动?",0x035C88,862,0x035C87,graphical_codes,<0A><B2CA><B0B2>!<B1C1><B0C5><B2CA><B0B2><B0C5><B2BD><B0B2>?,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+别动!叫你别动你还动?",0x035C88,862,0x035C87,graphical_codes,<0A><B2CA><B0B2>!<B1C1><B0C5><B2CA><B0B2><B0C5><B2BD><B0B2>?,english_graphical_residual,The English target retains graphical codes.
 0x034BEB,0x035C9E,1184,"
-看你的样子一定是个了不起的训练师吧",0x035C9E,863,0x035C9D,graphical_codes,<0A><B0FD><B0C5><B0BC><B2DA><B1DF><B1D1><B2B1><B0C2><B0BA><B0F8><B0CE><B0E8><B0BC><B2DE><B2C5><B2DF><B0BE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+看你的样子一定是个了不起的训练师吧",0x035C9E,863,0x035C9D,graphical_codes,<0A><B0FD><B0C5><B0BC><B2DA><B1DF><B1D1><B2B1><B0C2><B0BA><B0F8><B0CE><B0E8><B0BC><B2DE><B2C5><B2DF><B0BE>,english_graphical_residual,The English target retains graphical codes.
 0x034BED,0x035CC2,1185,"
 洞里太黑了,能掌握一些闪光的法术就好了!",0x037BEF,1117,0x037BEF,ascii,"The cave is pitch black, a Pok@mon could light it up.",pending_semantic_review,
 0x034BEF,0x035CEA,1186,"
@@ -2280,7 +2280,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x034BFF,0x035DAD,1194,"
 对不起,你的钱不够!",0x035DAD,871,0x035DAC,ascii,Not enough money.,pending_semantic_review,
 0x03801D,0x03805D,1195,"
-南晶公司版权所有",0x03805D,1119,0x03805C,graphical_codes,<0A><B0A7><B0A8><B0A9><B0AA><B0AB><B0AC><B0AD><B0AE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+南晶公司版权所有",0x03805D,1119,0x03805C,graphical_codes,<0A><B0A7><B0A8><B0A9><B0AA><B0AB><B0AC><B0AD><B0AE>,english_graphical_residual,The English target retains graphical codes.
 0x03801F,0x03806F,1196,"
 精灵系统启动...",0x03806F,1120,0x03806F,ascii,Turned on the PC,pending_semantic_review,
 0x038021,0x038080,1197,"
@@ -2290,7 +2290,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x038025,0x0380D0,1199,"
 要多和怪兽亲近.",0x0380A6,1123,0x0380A6,ascii,"Ash,take good care of Pikachu.",pending_semantic_review,
 0x038027,0x0380E1,1200,"
-不打不相识!",0x0380E1,1125,0x0380DD,graphical_codes,0000<B0CE><B0CF><B0CE><B0D0><B0D1>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+不打不相识!",0x0380E1,1125,0x0380DD,graphical_codes,0000<B0CE><B0CF><B0CE><B0D0><B0D1>!,english_graphical_residual,The English target retains graphical codes.
 0x038029,0x0380EE,1201,"
 欢迎!买东西吗?",0x0380C5,1124,0x0380C5,ascii,Hello! May I help you?,pending_semantic_review,
 0x03802B,0x0380FE,1202,"
@@ -2308,7 +2308,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x038037,0x038194,1208,"
 买      不买    ",0x038194,1133,0x038194,ascii,Buy Pass,pending_semantic_review,
 0x038039,0x0381A6,1209,"
-钱不够!",0x0381A6,1134,0x0381A5,graphical_codes,0<B0FE><B0CE><B0F1>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+钱不够!",0x0381A6,1134,0x0381A5,graphical_codes,0<B0FE><B0CE><B0F1>!,english_graphical_residual,The English target retains graphical codes.
 0x03803B,0x0381AF,1210,"
 是      否      ",0x0381AF,1135,0x0381AF,ascii,Yes No,pending_semantic_review,
 0x03803D,0x0381C1,1211,"
@@ -2316,13 +2316,13 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x03803F,0x0381D3,1212,"
 小智使用了居合斩",0x0381D3,1137,0x0381D2,ascii,Used HM CUT!,pending_semantic_review,
 0x038041,0x0381E5,1213,"
-小智使用了飞天术",0x0381E5,1138,0x0381E0,graphical_codes,00000<B0B6><B0B7><B1A7><B1A8><B0F8><B1AC><B1AD><B1AE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+小智使用了飞天术",0x0381E5,1138,0x0381E0,graphical_codes,00000<B0B6><B0B7><B1A7><B1A8><B0F8><B1AC><B1AD><B1AE>,english_graphical_residual,The English target retains graphical codes.
 0x038043,0x0381F7,1214,"
-小智使用了冲浪术",0x0381F7,1139,0x0381F6,graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B1AF><B1B0><B1AE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+小智使用了冲浪术",0x0381F7,1139,0x0381F6,graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B1AF><B1B0><B1AE>,english_graphical_residual,The English target retains graphical codes.
 0x038045,0x038209,1215,"
-小智使用了怪力术",0x038209,1140,0x038208,graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B0CA><B0E3><B1AE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+小智使用了怪力术",0x038209,1140,0x038208,graphical_codes,<0A><B0B6><B0B7><B1A7><B1A8><B0F8><B0CA><B0E3><B1AE>,english_graphical_residual,The English target retains graphical codes.
 0x038047,0x03821B,1216,"
-这块石头好像能被推动",0x03821B,1141,0x03821A,graphical_codes,<0A><B0EE><B1B1><B1B2><B1B3><B1B4><B1B5><B0EC><B1B6><B1B7><B0B2>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+这块石头好像能被推动",0x03821B,1141,0x03821A,graphical_codes,<0A><B0EE><B1B1><B1B2><B1B3><B1B4><B1B5><B0EC><B1B6><B1B7><B0B2>,english_graphical_residual,The English target retains graphical codes.
 0x038049,0x038231,1217,"
 这棵树苗好像能被斩断",0x038230,1142,0x038230,ascii,This tree can be cut!,pending_semantic_review,
 0x03825D,0x038713,1227,"
@@ -2340,9 +2340,9 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x038269,0x038803,1233,"
 小茂:这不是开玩笑吗,你的精灵这么强??好吧,那我就去找别的精灵对战!好让我的精灵更强!小智.爷爷,再见了!",0x0387A0,1157,0x0387A0,ascii,Okay! I'll make my Pok@mon fight to toughen it up! Ash!Gramps! Smell you later!,pending_semantic_review,
 0x03826B,0x038867,1234,"
-老爷爷:你等等,听听我的话",0x038867,1159,0x038862,graphical_codes,"00000<B2CE><B1EE><B1EE>:<B0C5><B1CD><B1CD>,<B1F1><B1F1><B1C2><B0BC><B1EF>",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+老爷爷:你等等,听听我的话",0x038867,1159,0x038862,graphical_codes,"00000<B2CE><B1EE><B1EE>:<B0C5><B1CD><B1CD>,<B1F1><B1F1><B1C2><B0BC><B1EF>",english_graphical_residual,The English target retains graphical codes.
 0x03826D,0x038881,1235,"
-老爷爷:你还去?",0x038881,1160,0x038880,graphical_codes,<0A><B2CE><B1EE><B1EE>:<B0C5><B2BD><B0C7>?,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+老爷爷:你还去?",0x038881,1160,0x038880,graphical_codes,<0A><B2CE><B1EE><B1EE>:<B0C5><B2BD><B0C7>?,english_graphical_residual,The English target retains graphical codes.
 0x03826F,0x038891,1236,"
 女孩:老爷爷怎在这睡着了?真没办法!只好等到睡醒了",0x03F5A3,1843,0x03F5A3,ascii,Old Man:Ouch! Girl:I'm sorry my grandfather injuredhis back and can't move.,pending_semantic_review,
 0x038271,0x0388C2,1237,"
@@ -2378,7 +2378,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x03828F,0x038CC3,1252,"
 小茂:在宠物精灵联盟里尽是非常强劲的训兽师,不能不想办法通过那里,你也不能尽是停留在这里,想办法往前进吧!",0x038BBC,1175,0x038BBC,ascii,"I hear the Pok@mon League has many tough trainers,I have to figure out how to get past them!You should quit dawdling and get a move on!",pending_semantic_review,
 0x038291,0x038D2A,1253,"
-守卫:这扇门之后都是一些强劲的精灵训练家们,你还未拿到徽章啊...当然无法让你通过啊",0x038D2A,1184,0x038D23,graphical_codes,"0000000<B3DF><B3E0>:<B0EE><B3E1><B3E2><B3E3><B2A8><B1C0><B0C2><B1D1><B3E4><B2C9><B3D9><B0BC><B0A1><B0A2><B2DE><B2C5><B1BF><B2EF>,<B0C5><B2BD><B3E5><B0C6><B0DB><B3D1><B3D2><B2AC>...<B2C4><B2AA><B3E6><B2B8><B2CB><B0C5><B3DA><B3D4><B2AC>",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+守卫:这扇门之后都是一些强劲的精灵训练家们,你还未拿到徽章啊...当然无法让你通过啊",0x038D2A,1184,0x038D23,graphical_codes,"0000000<B3DF><B3E0>:<B0EE><B3E1><B3E2><B3E3><B2A8><B1C0><B0C2><B1D1><B3E4><B2C9><B3D9><B0BC><B0A1><B0A2><B2DE><B2C5><B1BF><B2EF>,<B0C5><B2BD><B3E5><B0C6><B0DB><B3D1><B3D2><B2AC>...<B2C4><B2AA><B3E6><B2B8><B2CB><B0C5><B3DA><B3D4><B2AC>",english_graphical_residual,The English target retains graphical codes.
 0x038293,0x038D7B,1254,"
 捉虫少年:你也是训练师吧,让我们来较量一下!",0x038CA8,1179,0x038CA8,ascii,"Hey,wait up! What'sthe Hurry?",pending_semantic_review,
 0x038295,0x038DA6,1255,"
@@ -2540,7 +2540,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x038345,0x039D12,1343,"
 迷你裙:第二人正是我!现在才是真正的战斗!",0x039B19,1256,0x039B19,ascii,I'm 2nd! Let's go!,pending_semantic_review,
 0x038347,0x039D3B,1344,"
-迷你裙:我承认你了",0x039D3B,1276,0x039D3B,graphical_codes,<B4D3><B0C5><B4D4>:<B1C2><B6C3><B4BA><B0C5><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+迷你裙:我承认你了",0x039D3B,1276,0x039D3B,graphical_codes,<B4D3><B0C5><B4D4>:<B1C2><B6C3><B4BA><B0C5><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x038349,0x039D4E,1345,"
 谈判小子:第三人登场!我不会给你太好过",0x039B45,1258,0x039B45,ascii,I'm No.4!Tired Yet?,pending_semantic_review,
 0x03834B,0x039D74,1346,"
@@ -2696,13 +2696,13 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x0383E1,0x03A7AA,1421,"
 迷你裙:就像喜欢你一样...",0x03A342,1327,0x03A342,ascii,"Oh, I adore your strong Pok@mon!",pending_semantic_review,
 0x0383E3,0x03A7C4,1422,"
-绅士:明年我要去旅游",0x03A7C4,1354,0x03A7BD,graphical_codes,0000000<B7B4><B1C5>:<B5E6><B3EA><B1C2><B0C3><B0C7><B7C1><B5FB>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+绅士:明年我要去旅游",0x03A7C4,1354,0x03A7BD,graphical_codes,0000000<B7B4><B1C5>:<B5E6><B3EA><B1C2><B0C3><B0C7><B7C1><B5FB>,english_graphical_residual,The English target retains graphical codes.
 0x0383E5,0x03A7D9,1423,"
-绅士:都一把年纪了,走不动了",0x03A7D9,1355,0x03A7D8,graphical_codes,"<0A><B7B4><B1C5>:<B1C0><B1D1><B3D3><B3EA><B7C2><B0F8>,<B7C3><B0CE><B0B2><B0F8>",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+绅士:都一把年纪了,走不动了",0x03A7D9,1355,0x03A7D8,graphical_codes,"<0A><B7B4><B1C5>:<B1C0><B1D1><B3D3><B3EA><B7C2><B0F8>,<B7C3><B0CE><B0B2><B0F8>",english_graphical_residual,The English target retains graphical codes.
 0x0383E7,0x03A7F5,1424,"
-水手:小子,别乱逛!",0x03A7F5,1356,0x03A7F4,graphical_codes,"<0A><B5F7><B1A3>:<B0B6><B1DF>,<B2CA><B7C4><B5C1>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+水手:小子,别乱逛!",0x03A7F5,1356,0x03A7F4,graphical_codes,"<0A><B5F7><B1A3>:<B0B6><B1DF>,<B2CA><B7C4><B5C1>!",english_graphical_residual,The English target retains graphical codes.
 0x0383E9,0x03A808,1425,"
-水手:我错了,请您随便参观",0x03A808,1357,0x03A807,graphical_codes,"<0A><B5F7><B1A3>:<B1C2><B2DC><B0F8>,<B2D8><B7C5><B5C2><B3A2><B7C6><B6DB>",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+水手:我错了,请您随便参观",0x03A808,1357,0x03A807,graphical_codes,"<0A><B5F7><B1A3>:<B1C2><B2DC><B0F8>,<B2D8><B7C5><B5C2><B3A2><B7C6><B6DB>",english_graphical_residual,The English target retains graphical codes.
 0x0383EB,0x03A822,1426,"
 双胞胎:你好啊!",0x03A365,1328,0x03A365,ascii,I'm kinda bored.Howabout a battle?,pending_semantic_review,
 0x0383ED,0x03A832,1427,"
@@ -2720,13 +2720,13 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x0383F9,0x03A8AD,1433,"
 大胖子:不过现在又胖了!",0x03A44D,1337,0x03A44D,ascii,"Urf, I Feel Ill...",pending_semantic_review,
 0x0383FB,0x03A8C5,1434,"
-水手:快走开!",0x03A8C5,1361,0x03A8BE,graphical_codes,0000000<B5F7><B1A3>:<B2EC><B7C3><B1D9>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+水手:快走开!",0x03A8C5,1361,0x03A8BE,graphical_codes,0000000<B5F7><B1A3>:<B2EC><B7C3><B1D9>!,english_graphical_residual,The English target retains graphical codes.
 0x0383FD,0x03A8D3,1435,"
-水手:刚才我有说话吗?",0x03A8D3,1362,0x03A8D2,graphical_codes,<0A><B5F7><B1A3>:<B2BF><B1F2><B1C2><B0AE><B1E7><B1EF><B0D7>?,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+水手:刚才我有说话吗?",0x03A8D3,1362,0x03A8D2,graphical_codes,<0A><B5F7><B1A3>:<B2BF><B1F2><B1C2><B0AE><B1E7><B1EF><B0D7>?,english_graphical_residual,The English target retains graphical codes.
 0x0383FF,0x03A8E9,1436,"
-绅士:我有个女儿现在和你一样大",0x03A8E9,1363,0x03A8E8,graphical_codes,<0A><B7B4><B1C5>:<B1C2><B0AE><B0BA><B2CF><B7D0><B2F5><B0B8><B0C9><B0C5><B1D1><B2DA><B1BE>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+绅士:我有个女儿现在和你一样大",0x03A8E9,1363,0x03A8E8,graphical_codes,<0A><B7B4><B1C5>:<B1C2><B0AE><B0BA><B2CF><B7D0><B2F5><B0B8><B0C9><B0C5><B1D1><B2DA><B1BE>,english_graphical_residual,The English target retains graphical codes.
 0x038401,0x03A908,1437,"
-绅士:做我女婿吧...",0x03A908,1364,0x03A907,graphical_codes,<0A><B7B4><B1C5>:<B2B4><B1C2><B2CF><B7D1><B0BE>...,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+绅士:做我女婿吧...",0x03A908,1364,0x03A907,graphical_codes,<0A><B7B4><B1C5>:<B2B4><B1C2><B2CF><B7D1><B0BE>...,english_graphical_residual,The English target retains graphical codes.
 0x038403,0x03A91C,1438,"
 小茂:小智真没想到会在这里见到你!你也受到了邀请啊?图鉴又增加了吗?我可是收集到四十多种了!让我看看你有没有进步吧!!",0x03A460,1338,0x03A460,ascii,"Bonjour Ash! Were you really invited?How's your Pok@Dex?I already have 40 kinds, pal!",pending_semantic_review,
 0x038405,0x03A98D,1439,"
@@ -2792,7 +2792,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x038441,0x03AE40,1469,"
 马沙:谢谢......",0x03AE43,1418,0x03AE43,ascii,Thanks again!,pending_semantic_review,
 0x038443,0x03AE51,1470,"
-名人:......",0x03AE51,1419,0x03AE51,graphical_codes,<B3B1><B2B5>:......,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+名人:......",0x03AE51,1419,0x03AE51,graphical_codes,<B3B1><B2B5>:......,english_graphical_residual,The English target retains graphical codes.
 0x03AE74,0x03B155,1480,"
 谈判小子:你完蛋了!",0x03AACC,1384,0x03AACC,ascii,There's a huge Pok@mon that sleepsback this way.,pending_semantic_review,
 0x03AE76,0x03B169,1481,"
@@ -2842,9 +2842,9 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x03AEA2,0x03B3BE,1503,"
 女孩:不要不给面子吧!",0x03AD43,1406,0x03AD43,ascii,I need to train more.,pending_semantic_review,
 0x03AEA4,0x03B3D4,1504,"
-女孩:你居然能找到这里?",0x03B3DF,1455,0x03B3DF,graphical_codes,<B0EC><B1EA><B0DB><B0EE><B0BF>?,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+女孩:你居然能找到这里?",0x03B3DF,1455,0x03B3DF,graphical_codes,<B0EC><B1EA><B0DB><B0EE><B0BF>?,english_graphical_residual,The English target retains graphical codes.
 0x03AEA6,0x03B3EC,1505,"
-女孩:我也是听说附近出现了传说中的精灵才来的",0x03B3EC,1456,0x03B3EB,graphical_codes,<0A><B2CF><B1DE>:<B1C2><B0F6><B0C2><B1F1><B1E7><B3C8><B0CD><B0A4><B2F5><B0F8><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1F2><B0FC><B0BC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+女孩:我也是听说附近出现了传说中的精灵才来的",0x03B3EC,1456,0x03B3EB,graphical_codes,<0A><B2CF><B1DE>:<B1C2><B0F6><B0C2><B1F1><B1E7><B3C8><B0CD><B0A4><B2F5><B0F8><B6F2><B1E7><B0DC><B0BC><B0A1><B0A2><B1F2><B0FC><B0BC>,english_graphical_residual,The English target retains graphical codes.
 0x03AEA8,0x03B419,1506,"
 闪电鸟:......",0x03B418,1457,0x03B418,ascii,Zapdos: Kree!!,pending_semantic_review,
 0x03AEAA,0x03B428,1507,"
@@ -2930,7 +2930,7 @@ PP最大",0x03176F,354,0x03176F,ascii,MaxEther,pending_semantic_review,
 0x03AEFA,0x03B7CE,1547,"
 商人:火箭队的混蛋们为了钱什么都干的出来",0x03B390,1453,0x03B390,ascii,This town's known as the grave site of Pok@mon.,pending_semantic_review,
 0x03AEFC,0x03B7F7,1548,"
-女孩:可拉可拉的妈妈就是在逃出来的时候被火箭队杀了,我也看到了!",0x03B7F7,1485,0x03B7F5,graphical_codes,"00<B2CF><B1DE>:<B0DE><B8BB><B0DE><B8BB><B0BC><B1DB><B1DB><B2AB><B0C2><B0B8><B3EF><B0A4><B0FC><B0BC><B0F0><B7CD><B1B6><B5A2><B5A3><B5A4><B8BC><B0F8>,<B1C2><B0F6><B0FD><B0DB><B0F8>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+女孩:可拉可拉的妈妈就是在逃出来的时候被火箭队杀了,我也看到了!",0x03B7F7,1485,0x03B7F5,graphical_codes,"00<B2CF><B1DE>:<B0DE><B8BB><B0DE><B8BB><B0BC><B1DB><B1DB><B2AB><B0C2><B0B8><B3EF><B0A4><B0FC><B0BC><B0F0><B7CD><B1B6><B5A2><B5A3><B5A4><B8BC><B0F8>,<B1C2><B0F6><B0FD><B0DB><B0F8>!",english_graphical_residual,The English target retains graphical codes.
 0x03AEFE,0x03B836,1549,"
 修女:幽灵塔是为了安慰死去的精灵之灵而盖的",0x03B3C2,1454,0x03B3C2,ascii,Did you come to payrespects?,pending_semantic_review,
 0x03AF00,0x03B861,1550,"
@@ -3042,9 +3042,9 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 0x03AF6A,0x03C08E,1603,"
 佳丽亚:真是强啊!这个彩虹徽章就奉送给您吧,有了这个徽章就能使用怪力术了!",0x03B9F1,1500,0x03B9F1,ascii,I concede defeat.I confer to you the Rainbow badge. You can use the HM Strength outside ofbattle.,pending_semantic_review,
 0x03AF6C,0x03C0D6,1604,"
-火箭队:我是在这里看守这张海报的,妨碍我的话可是要尝到苦头的哦!",0x03C0D6,1548,0x03C0D6,graphical_codes,"<B5A2><B5A3><B5A4>:<B1C2><B0C2><B0B8><B0EE><B0BF><B0FD><B3DF><B0EE><B6F9><B6FC><B9A3><B0BC>,<B3C5><B3C6><B1C2><B0BC><B1EF><B0DE><B0C2><B0C3><B7EA><B0DB><B3C0><B1B3><B0BC><B2DD>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+火箭队:我是在这里看守这张海报的,妨碍我的话可是要尝到苦头的哦!",0x03C0D6,1548,0x03C0D6,graphical_codes,"<B5A2><B5A3><B5A4>:<B1C2><B0C2><B0B8><B0EE><B0BF><B0FD><B3DF><B0EE><B6F9><B6FC><B9A3><B0BC>,<B3C5><B3C6><B1C2><B0BC><B1EF><B0DE><B0C2><B0C3><B7EA><B0DB><B3C0><B1B3><B0BC><B2DD>!",english_graphical_residual,The English target retains graphical codes.
 0x03AF6E,0x03C115,1605,"
-火箭队:可恶,这样下去的话火箭队的基地会被发现的!要赶快和老大联络才行!",0x03C115,1549,0x03C114,graphical_codes,"<0A><B5A2><B5A3><B5A4>:<B0DE><B5E0>,<B0EE><B2DA><B0F9><B0C7><B0BC><B1EF><B5A2><B5A3><B5A4><B0BC><B9A4><B3BB><B1F9><B1B6><B2F4><B2F5><B0BC>!<B0C3><B1F3><B2EC><B0C9><B2CE><B1BE><B3CE><B9A5><B1F2><B3A9>!",english_graphical_residual,La cible anglaise conserve des codes graphiques.
+火箭队:可恶,这样下去的话火箭队的基地会被发现的!要赶快和老大联络才行!",0x03C115,1549,0x03C114,graphical_codes,"<0A><B5A2><B5A3><B5A4>:<B0DE><B5E0>,<B0EE><B2DA><B0F9><B0C7><B0BC><B1EF><B5A2><B5A3><B5A4><B0BC><B9A4><B3BB><B1F9><B1B6><B2F4><B2F5><B0BC>!<B0C3><B1F3><B2EC><B0C9><B2CE><B1BE><B3CE><B9A5><B1F2><B3A9>!",english_graphical_residual,The English target retains graphical codes.
 0x03AF70,0x03C15B,1606,"
 啊?在海报的后面有秘密按钮!按按看吧!",0x03BAF9,1504,0x03BAF9,ascii,There's a switch! Let's push it.,pending_semantic_review,
 0x03AF72,0x03C180,1607,"
@@ -3232,9 +3232,9 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 0x03CE9C,0x03D152,1729,"
 捉鸟人:怎么样?不错吧...",0x03D0FB,1648,0x03D0FB,ascii,Best way to travel!,pending_semantic_review,
 0x03CE9E,0x03D16B,1730,"
-捉鸟人:拥有连续攻击能力的我你没有胜算",0x03D16B,1654,0x03D16B,graphical_codes,<B3E7><B8A7><B2B5>:<B6A9><B0AE><B6BA><B4D7><B4AB><B4AC><B0EC><B0E3><B0BC><B1C2><B0C5><B2B6><B0AE><B3F9><B3D0>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+捉鸟人:拥有连续攻击能力的我你没有胜算",0x03D16B,1654,0x03D16B,graphical_codes,<B3E7><B8A7><B2B5>:<B6A9><B0AE><B6BA><B4D7><B4AB><B4AC><B0EC><B0E3><B0BC><B1C2><B0C5><B2B6><B0AE><B3F9><B3D0>,english_graphical_residual,The English target retains graphical codes.
 0x03CEA0,0x03D192,1731,"
-捉鸟人:又说大话了",0x03D192,1655,0x03D191,graphical_codes,<0A><B3E7><B8A7><B2B5>:<B5B0><B1E7><B1BE><B1EF><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+捉鸟人:又说大话了",0x03D192,1655,0x03D191,graphical_codes,<0A><B3E7><B8A7><B2B5>:<B5B0><B1E7><B1BE><B1EF><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x03CEA2,0x03D1A5,1732,"
 大姐姐:好可爱的样子哦",0x03CE78,1642,0x03CE78,ascii,"Sure, I'll fight!",pending_semantic_review,
 0x03CEA4,0x03D1BC,1733,"
@@ -3326,7 +3326,7 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 0x03CEFA,0x03D7CE,1776,"
 守卫:好渴啊...想喝水...什么?这个矿泉水真的要送给我??好吧为了答谢你就特别的放你过去吧...",0x03C493,1565,0x03C493,ascii,"Boy! I'm parched! Huh?I can have thisdrink? Thanks! If you want to go to Saffron, you can goon through.",pending_semantic_review,
 0x03CEFC,0x03D827,1777,"
-火箭队:小鬼滚一边去!!",0x03D827,1715,0x03D827,graphical_codes,<B5A2><B5A3><B5A4>:<B0B6><B7B2><B9E7><B1D1><B4D5><B0C7>!!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+火箭队:小鬼滚一边去!!",0x03D827,1715,0x03D827,graphical_codes,<B5A2><B5A3><B5A4>:<B0B6><B7B2><B9E7><B1D1><B4D5><B0C7>!!,english_graphical_residual,The English target retains graphical codes.
 0x03CEFE,0x03D83E,1778,"
 火箭队:在那边的小鬼别到这里徘徊!!",0x03C4FE,1566,0x03C4FE,ascii,What are you doing here kid!?,pending_semantic_review,
 0x03CF00,0x03D861,1779,"
@@ -3548,13 +3548,13 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 0x03CFF4,0x03E7FB,1901,"
 滑雪男:现在听到了",0x03DD07,1751,0x03DD07,ascii,You have to fish for Pok@mon!,pending_semantic_review,
 0x03CFF6,0x03E80E,1902,"
-成熟姐姐:在这不远就是红莲镇了",0x03E80E,1827,0x03E797,graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B2EA><B9CE><B3B8><B3B8>:<B0B8><B0EE><B0CE><B5CD><B2AB><B0C2><B5CE><B5CF><B2D6><B0F8>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+成熟姐姐:在这不远就是红莲镇了",0x03E80E,1827,0x03E797,graphical_codes,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B2EA><B9CE><B3B8><B3B8>:<B0B8><B0EE><B0CE><B5CD><B2AB><B0C2><B5CE><B5CF><B2D6><B0F8>,english_graphical_residual,The English target retains graphical codes.
 0x03CFF8,0x03E82D,1903,"
-成熟姐姐:红莲镇经常会有火山爆发的情况",0x03E82D,1828,0x03E82C,graphical_codes,<0A><B2EA><B9CE><B3B8><B3B8>:<B5CE><B5CF><B2D6><B2A5><B3CA><B1F9><B0AE><B5A2><B6DC><BAD9><B2F4><B0BC><B7AB><BADA>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+成熟姐姐:红莲镇经常会有火山爆发的情况",0x03E82D,1828,0x03E82C,graphical_codes,<0A><B2EA><B9CE><B3B8><B3B8>:<B5CE><B5CF><B2D6><B2A5><B3CA><B1F9><B0AE><B5A2><B6DC><BAD9><B2F4><B0BC><B7AB><BADA>,english_graphical_residual,The English target retains graphical codes.
 0x03CFFA,0x03E854,1904,"
-研究员:在这每天都有对精灵的研究",0x03E854,1829,0x03E853,graphical_codes,<0A><B1CF><B1D0><B2D4>:<B0B8><B0EE><BADB><B1AD><B1C0><B0AE><B0E7><B0A1><B0A2><B0BC><B1CF><B1D0>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+研究员:在这每天都有对精灵的研究",0x03E854,1829,0x03E853,graphical_codes,<0A><B1CF><B1D0><B2D4>:<B0B8><B0EE><BADB><B1AD><B1C0><B0AE><B0E7><B0A1><B0A2><B0BC><B1CF><B1D0>,english_graphical_residual,The English target retains graphical codes.
 0x03CFFC,0x03E875,1905,"
-小孩:我在观月山发现的化石好象是珍贵的化石!",0x03E875,1830,0x03E874,graphical_codes,<0A><B0B6><B1DE>:<B1C2><B0B8><B6DB><B6CF><B6DC><B2F4><B2F5><B0BC><B5AB><B1B2><B1B4><B8B4><B0C2><B5C5><B6B2><B0BC><B5AB><B1B2>!,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+小孩:我在观月山发现的化石好象是珍贵的化石!",0x03E875,1830,0x03E874,graphical_codes,<0A><B0B6><B1DE>:<B1C2><B0B8><B6DB><B6CF><B6DC><B2F4><B2F5><B0BC><B5AB><B1B2><B1B4><B8B4><B0C2><B5C5><B6B2><B0BC><B5AB><B1B2>!,english_graphical_residual,The English target retains graphical codes.
 0x03CFFE,0x03E8A1,1906,"
 博士:我一直都在研究珍贵的化石你有不错的化石吗?",0x03DEDF,1771,0x03DEDF,ascii,"Hi,I study Pok@mon!You have a fossil for me?",pending_semantic_review,
 0x03D000,0x03E8D1,1907,"
@@ -3586,7 +3586,7 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 0x03D01A,0x03EA6B,1920,"
 小偷:放过我吧",0x03E19A,1788,0x03E19A,ascii,I wonder where my partner went.,pending_semantic_review,
 0x03D01C,0x03EA7A,1921,"
-研究员:这里不是你这种小孩能来的",0x03E777,1826,0x03E777,graphical_codes,<B1CF><B1D0><B2D4>:<B0EE><B0BF><B0CE><B0C2><B0C5><B0EE><B6AD><B0B6><B1DE><B0EC><B0FC><B0BC>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+研究员:这里不是你这种小孩能来的",0x03E777,1826,0x03E777,graphical_codes,<B1CF><B1D0><B2D4>:<B0EE><B0BF><B0CE><B0C2><B0C5><B0EE><B6AD><B0B6><B1DE><B0EC><B0FC><B0BC>,english_graphical_residual,The English target retains graphical codes.
 0x03D01E,0x03EA9B,1922,"
 研究员:真不小心...",0x03E13F,1786,0x03E13F,ascii,Mewtwo is far too powerful.We failed to curb its vicioustendencies...,pending_semantic_review,
 0x03D020,0x03EAAF,1923,"
@@ -3616,9 +3616,9 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 0x03D038,0x03EBFB,1935,"
 小偷:好热",0x03E308,1799,0x03E308,ascii,A fiery bird helpedBlaine off a mount-ain when he was lost!,pending_semantic_review,
 0x03D03A,0x03EC06,1936,"
-研究员:火系还是有弱点啊...",0x03EC06,1834,0x03EB91,graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1CF><B1D0><B2D4>:<B5A2><B0AF><B2BD><B0C2><B0AE><B7E6><B7D9><B2AC>...,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+研究员:火系还是有弱点啊...",0x03EC06,1834,0x03EB91,graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B1CF><B1D0><B2D4>:<B5A2><B0AF><B2BD><B0C2><B0AE><B7E6><B7D9><B2AC>...,english_graphical_residual,The English target retains graphical codes.
 0x03D03C,0x03EC22,1937,"
-研究员:火对水确实没办法但比冰系要强",0x03EC22,1835,0x03EC21,graphical_codes,<0A><B1CF><B1D0><B2D4>:<B5A2><B0E7><B5F7><B9DB><B5DE><B2B6><B2B7><B2B8><B3A8><B2B2><BAE8><B0AF><B0C3><B2C9>,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+研究员:火对水确实没办法但比冰系要强",0x03EC22,1835,0x03EC21,graphical_codes,<0A><B1CF><B1D0><B2D4>:<B5A2><B0E7><B5F7><B9DB><B5DE><B2B6><B2B7><B2B8><B3A8><B2B2><BAE8><B0AF><B0C3><B2C9>,english_graphical_residual,The English target retains graphical codes.
 0x03D03E,0x03EC47,1938,"
 阿桂:我是热情的男子汉!!这个火焰之岛红莲岛道馆的馆主就是我!!看看我的火焰精灵的厉害!",0x03E376,1802,0x03E376,ascii,I am Cinnabar Gym Leader Blaine! My Pok@mon will incin-erate all those whochallenge me!,pending_semantic_review,
 0x03D040,0x03EC9B,1939,"
@@ -3644,7 +3644,7 @@ BOSS:哎呀!我是BOSS!要集全所有的宠物精灵很难,不过好好加油�
 0x03D054,0x03EDE7,1949,"
 游泳男:真糟糕...大败了",0x03E433,1805,0x03E433,ascii,Man I'm beat!,pending_semantic_review,
 0x03D056,0x03EDFF,1950,"
-裁判:未来的冠军!这个常青道馆的首领是谁我也不知道...",0x03EDFF,1837,0x03ECFD,graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B3FC><B3FD>:<B3E5><B0FC><B0BC><B4A1><B4A2>!<B0EE><B0BA><B3CA><B3CB><B1A4><B3CC><B0BC><B9EF><B4B3><B0C2><B5F1><B1C2><B0F6><B0CE><B2D7><B1A4>...,english_graphical_residual,La cible anglaise conserve des codes graphiques.
+裁判:未来的冠军!这个常青道馆的首领是谁我也不知道...",0x03EDFF,1837,0x03ECFD,graphical_codes,000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<B3FC><B3FD>:<B3E5><B0FC><B0BC><B4A1><B4A2>!<B0EE><B0BA><B3CA><B3CB><B1A4><B3CC><B0BC><B9EF><B4B3><B0C2><B5F1><B1C2><B0F6><B0CE><B2D7><B1A4>...,english_graphical_residual,The English target retains graphical codes.
 0x03D058,0x03EE34,1951,"
 空手道:我不会让你再前进的!",0x03E53E,1814,0x03E53E,ascii,Rrrroar!I'm workingmyself into a rage!,pending_semantic_review,
 0x03D05A,0x03EE50,1952,"

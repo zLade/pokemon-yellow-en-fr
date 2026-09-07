@@ -103,9 +103,9 @@ FRENCH_GLYPH_LABELS = {
 }
 
 if set(FRENCH_GLYPH_LABELS) != FRENCH_NATIVE_GLYPH_CODES:
-    raise AssertionError("les libellés et les slots de glyphes divergent")
+    raise AssertionError("glyph labels and slots differ")
 if any(chr(code).isalpha() for code in FRENCH_PATCHED_ASCII_CODES):
-    raise AssertionError("une lettre ASCII ne doit jamais être réaffectée")
+    raise AssertionError("an ASCII letter must never be reassigned")
 
 
 def literal_slot_conflicts(text: str) -> set[str]:
@@ -151,12 +151,12 @@ def decode_game_text(data: bytes) -> str:
 
 def _tile_offset(character: str) -> int:
     if len(character) != 1:
-        raise ValueError("un seul caractère ASCII est attendu")
+        raise ValueError("a single ASCII character is expected")
     code = ord(character)
     if not ASCII_FONT_FIRST_CODE <= code < (
         ASCII_FONT_FIRST_CODE + ASCII_FONT_TILE_COUNT
     ):
-        raise ValueError(f"caractère hors police ASCII: {character!r}")
+        raise ValueError(f"character outside the ASCII font: {character!r}")
     return (code - ASCII_FONT_FIRST_CODE) * ASCII_FONT_TILE_SIZE
 
 
@@ -164,7 +164,7 @@ def _base_tile(font: bytes, character: str) -> bytearray:
     start = _tile_offset(character)
     tile = bytearray(font[start : start + ASCII_FONT_TILE_SIZE])
     if len(tile) != ASCII_FONT_TILE_SIZE:
-        raise ValueError("police ASCII tronquée")
+        raise ValueError("truncated ASCII font")
     return tile
 
 
@@ -176,7 +176,7 @@ def _monochrome_tile(rows: bytes | bytearray) -> bytes:
     matches the complete source ASCII font and makes that contract explicit.
     """
     if len(rows) != 8:
-        raise ValueError("un glyphe monochrome doit contenir huit lignes")
+        raise ValueError("a monochrome glyph must contain eight rows")
     return bytes(rows) + b"\0" * 8
 
 
@@ -189,7 +189,7 @@ def _accent_rows(accent: str) -> tuple[int, int]:
         return 0x18, 0x24
     if accent == "diaeresis":
         return 0x24, 0x00
-    raise ValueError(f"accent inconnu: {accent}")
+    raise ValueError(f"unknown accent: {accent}")
 
 
 def _lower_accent(font: bytes, base: str, accent: str) -> bytes:
@@ -218,7 +218,7 @@ def _upper_accent(font: bytes, base: str, accent: str) -> bytes:
             break
     if len(body) != 6:
         raise ValueError(
-            f"le glyphe majuscule {base!r} ne peut pas être comprimé"
+            f"uppercase glyph {base!r} cannot be compressed"
         )
     first, second = _accent_rows(accent)
     return _monochrome_tile(bytes([first, second, *body]))
@@ -239,7 +239,7 @@ def _upper_c_cedilla(font: bytes) -> bytes:
             del body[index]
             break
     if len(body) != 6:
-        raise ValueError("le glyphe majuscule 'C' ne peut pas être comprimé")
+        raise ValueError("uppercase glyph 'C' cannot be compressed")
     return _monochrome_tile(bytes([*body, 0x10, 0x20]))
 
 
@@ -247,7 +247,7 @@ def french_font_tiles(font: bytes) -> dict[int, bytes]:
     """Return ``{ASCII byte: 16-byte NES tile}`` for every French glyph."""
     if len(font) != ASCII_FONT_SIZE:
         raise ValueError(
-            f"police ASCII de {len(font)} octets, attendu {ASCII_FONT_SIZE}"
+            f"ASCII font of {len(font)} bytes, expected {ASCII_FONT_SIZE}"
         )
     tiles = {
         ord('"'): _upper_accent(font, "A", "grave"),
@@ -267,9 +267,9 @@ def french_font_tiles(font: bytes) -> dict[int, bytes]:
         ord("~"): _lower_accent(font, "a", "circumflex"),
     }
     if set(tiles) != FRENCH_PATCHED_ASCII_CODES:
-        raise AssertionError("la table de tuiles et le codec divergent")
+        raise AssertionError("tile table and codec differ")
     if any(len(tile) != ASCII_FONT_TILE_SIZE for tile in tiles.values()):
-        raise AssertionError("une tuile française n'a pas 16 octets")
+        raise AssertionError("a French tile is not 16 bytes long")
     return tiles
 
 
@@ -277,7 +277,7 @@ def patch_french_font(rom: MutableSequence[int]) -> dict[int, bytes]:
     """Patch the French glyph tiles in a mutable full ROM image."""
     font_end = ASCII_FONT_OFFSET + ASCII_FONT_SIZE
     if len(rom) < font_end:
-        raise ValueError("ROM trop courte pour contenir la police ASCII")
+        raise ValueError("ROM too short to contain the ASCII font")
     original_font = bytes(rom[ASCII_FONT_OFFSET:font_end])
     tiles = french_font_tiles(original_font)
     for code, tile in tiles.items():
@@ -289,7 +289,7 @@ def patch_french_font(rom: MutableSequence[int]) -> dict[int, bytes]:
 def extract_ascii_font(rom: bytes) -> bytes:
     end = ASCII_FONT_OFFSET + ASCII_FONT_SIZE
     if len(rom) < end:
-        raise ValueError("ROM trop courte pour contenir la police ASCII")
+        raise ValueError("ROM too short to contain the ASCII font")
     return rom[ASCII_FONT_OFFSET:end]
 
 

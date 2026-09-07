@@ -196,7 +196,7 @@ class ExternalPatcherProofTests(unittest.TestCase):
                 runner = FakePatcherRunner(
                     self.target_bytes, corrupt_call=corrupt_call
                 )
-                with self.assertRaisesRegex(ProofError, "non identique"):
+                with self.assertRaisesRegex(ProofError, "not identical"):
                     generate_and_write(
                         self.config,
                         pins=self.pins,
@@ -244,7 +244,7 @@ class ExternalPatcherProofTests(unittest.TestCase):
             flips_archive_sha256=sha256_file(self.archive),
         )
         runner = FakePatcherRunner(self.target_bytes)
-        with self.assertRaisesRegex(ProofError, "n'existe pas octet pour octet"):
+        with self.assertRaisesRegex(ProofError, "has no byte-for-byte match"):
             generate_proof(
                 self.config,
                 pins=pins,
@@ -258,7 +258,7 @@ class ExternalPatcherProofTests(unittest.TestCase):
         runner = FakePatcherRunner(
             self.target_bytes, mutate_after_call=(3, self.ips_patch)
         )
-        with self.assertRaisesRegex(ProofError, "patch IPS"):
+        with self.assertRaisesRegex(ProofError, "IPS patch"):
             generate_proof(
                 self.config,
                 pins=self.pins,

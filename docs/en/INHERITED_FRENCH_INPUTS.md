@@ -14,11 +14,24 @@ because French is an active locale on this branch.
   that English-profile refactoring does not change the released French ROM;
 - `tools/french_font.py`, French layout helpers and their tests: isolated
   implementation used only when the explicit `fr-FR` profile is selected;
-- French columns inside `locales/en-US/catalog.csv`: secondary gloss and
-  provenance fields for source comparison.
+- `french_v2_gloss` inside `locales/en-US/catalog.csv`: secondary French
+  dialogue text for source comparison. Provenance annotations are English.
 
-These files must not be translated in place: doing so would destroy their
-byte-level hashes, provenance or non-regression value.
+French dialogue payloads and golden byte expectations must remain unchanged.
+Headers, editorial annotations, comments and tool messages use English on
+this branch. CSV readers and generators share the English schema, and source
+ledger IDs, offsets and payloads remain stable across metadata updates.
+
+The original input filenames and stable technical identifiers are retained
+for compatibility. French lexical examples, glyph samples and golden test
+fixtures are reference data, not user-facing tool messages.
+
+The following ROM-free tests check the English schema, annotations,
+lossless spreadsheet export and pinned text/pointer fingerprints:
+
+```sh
+python3 -m unittest tools.test_english_repository_metadata tools.test_csv_to_review_xlsx
+```
 
 ## English authority
 

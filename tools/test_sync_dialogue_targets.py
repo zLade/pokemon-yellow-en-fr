@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tests du synchroniseur des cibles de dialogue Mesen."""
+"""Tests for the Mesen dialogue-target synchronizer."""
 
 from __future__ import annotations
 

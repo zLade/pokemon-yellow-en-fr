@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
-Outils pour analyser l'ecran titre de Pokemon Yellow NES NJ046.
+Tools for analyzing the Pokemon Yellow NES NJ046 title screen.
 
-Constat actuel:
-  - la ROM utilise CHR-RAM;
-  - les graphismes de l'ecran titre visibles dans FCEUX sont stockes crus
-    dans la banque PRG 28, pas sous forme compressee;
-  - les offsets ci-dessous sont des offsets fichier iNES, header inclus.
+The ROM uses CHR-RAM. Title graphics visible in FCEUX are stored uncompressed
+in PRG bank 28. Offsets below include the iNES file header.
 
-Commandes utiles:
+Commands:
   python tools/title_screen_tools.py extract-state
   python tools/title_screen_tools.py scan-rom
   python tools/title_screen_tools.py render-rom
+
+
+
 """
 
 from __future__ import annotations
@@ -54,9 +54,9 @@ TITLE_PT1_FILE = 0x0705AB  # PPU pattern table $1000, 4096 bytes
 TITLE_PT0_FILE = 0x070FFB  # PPU pattern table $0000, 4096 bytes
 TITLE_NT_FILE = 0x071A0B   # nametable, 1024 bytes
 
-# Le menu joueur utilise deux blocs CHR 4 Kio distincts. Le premier contient
-# les libelles POKEDEX/POKEMON/ITEMS/Ash/HMs/SAVE et son nametable visible est
-# stocke cru un peu plus loin dans la meme banque.
+# The player menu uses two separate 4 KiB CHR blocks. The first contains
+# POKEDEX/POKEMON/ITEMS/Ash/HMs/SAVE labels; its visible nametable is
+# stored uncompressed slightly later in the same bank.
 PLAYER_MENU_PT0_FILE = 0x0288D5
 PLAYER_MENU_PT1_FILE = 0x13B17B
 PLAYER_MENU_NT_FILE = 0x0295D5
@@ -170,7 +170,7 @@ def condensed_word_tiles(word: str, tile_count: int) -> list[bytes]:
     for y in range(6):
         row = "0".join(CONDENSED_FONT_5X6[letter][y] for letter in word)
         if len(row) > width:
-            raise ValueError(f"{word} ne tient pas dans {tile_count} tuiles")
+            raise ValueError(f'{word} does not fit in {tile_count} tiles')
         rows.append(row.ljust(width, "0"))
     rows.append("0" * width)
 
@@ -192,9 +192,9 @@ MENU_FR_TILES = condensed_word_tiles("NOUV", 3) + [
     bytes.fromhex("007e181818181800007e181818181800"),  # T
 ]
 
-# Police condensee pour les libelles graphiques du menu joueur. Chaque glyphe
-# fait 4x7 pixels; une ombre claire vers le bas/droite reproduit le relief de
-# la police anglaise sans depasser les tuiles deja reservees par le jeu.
+# Condensed font for graphical player-menu labels. Each glyph is 4x7 pixels;
+# a light lower-right shadow reproduces the original English relief
+# without exceeding the tiles already reserved by the game.
 PLAYER_MENU_FONT_4X7 = {
     "A": ("0110", "1001", "1001", "1111", "1001", "1001", "1001"),
     "B": ("1110", "1001", "1001", "1110", "1001", "1001", "1110"),
@@ -260,7 +260,7 @@ PLAYER_MENU_LABELS = {
 
 def encode_chr_tile(pixels: list[list[int]]) -> bytes:
     if len(pixels) != 8 or any(len(row) != 8 for row in pixels):
-        raise ValueError("Une tuile CHR doit mesurer exactement 8x8 pixels")
+        raise ValueError('A CHR tile must measure exactly 8x8 pixels')
 
     low_plane = bytearray()
     high_plane = bytearray()
@@ -269,7 +269,7 @@ def encode_chr_tile(pixels: list[list[int]]) -> bytes:
         high = 0
         for color in row:
             if not 0 <= color <= 3:
-                raise ValueError(f"Indice de palette CHR invalide: {color}")
+                raise ValueError(f'Invalid CHR palette index: {color}')
             low = (low << 1) | (color & 1)
             high = (high << 1) | ((color >> 1) & 1)
         low_plane.append(low)
@@ -278,23 +278,23 @@ def encode_chr_tile(pixels: list[list[int]]) -> bytes:
 
 
 def player_menu_word_tiles(word: str, tile_count: int) -> list[bytes]:
-    """Compose un mot centre dans les deux rangees CHR deja reservees."""
+    """Center a word in the two previously reserved CHR rows."""
     word = word.upper()
     missing = sorted(set(word) - set(PLAYER_MENU_FONT_4X7))
     if missing:
-        raise ValueError(f"Glyphe(s) menu joueur manquant(s): {', '.join(missing)}")
+        raise ValueError(f"Missing player-menu glyph(s): {', '.join(missing)}")
 
     width = tile_count * 8
     glyph_width = 4
     spacing = 1
     main_width = len(word) * glyph_width + (len(word) - 1) * spacing
-    # L'ombre gagne un pixel a droite. SACHA occupe trois tuiles et utilise
-    # donc un interlettrage nul pour conserver une marge de securite.
+    # The shadow adds one pixel on the right. SACHA occupies three tiles;
+    # therefore use zero letter spacing to retain a safety margin.
     if main_width + 1 > width:
         spacing = 0
         main_width = len(word) * glyph_width
     if main_width + 1 > width:
-        raise ValueError(f"{word} ne tient pas dans {tile_count} tuiles")
+        raise ValueError(f'{word} does not fit in {tile_count} tiles')
 
     pixels = [[2 for _ in range(width)] for _ in range(16)]
     start_x = (width - (main_width + 1)) // 2
@@ -309,8 +309,8 @@ def player_menu_word_tiles(word: str, tile_count: int) -> list[bytes]:
                     glyph_pixels.append((cursor_x + glyph_x, start_y + glyph_y))
         cursor_x += glyph_width + spacing
 
-    # Ombre claire, puis trait sombre. L'ordre evite que l'ombre d'une lettre
-    # recouvre le trait principal de la lettre suivante.
+    # Light shadow, then dark stroke. This order prevents a letter shadow
+    # from covering the next letter's main stroke.
     for x, y in glyph_pixels:
         for shadow_x, shadow_y in ((x, y + 1), (x + 1, y + 1)):
             if 0 <= shadow_x < width and 0 <= shadow_y < 16:
@@ -472,7 +472,7 @@ def render_mapper163_title_nametable(
 def parse_fceux_state(path: Path) -> dict[str, bytes]:
     raw = path.read_bytes()
     if raw[:4] != b"FCSX":
-        raise ValueError(f"{path} n'est pas une savestate FCEUX FCSX")
+        raise ValueError(f'{path} is not an FCEUX FCSX savestate')
 
     data = zlib.decompress(raw[16:])
     offset = 0
@@ -512,7 +512,7 @@ def player_menu_chr_from_rom(rom: bytes) -> bytes:
     pt0 = rom[PLAYER_MENU_PT0_FILE : PLAYER_MENU_PT0_FILE + 0x1000]
     pt1 = rom[PLAYER_MENU_PT1_FILE : PLAYER_MENU_PT1_FILE + 0x1000]
     if len(pt0) != 0x1000 or len(pt1) != 0x1000:
-        raise ValueError("ROM trop courte pour extraire le CHR du menu joueur")
+        raise ValueError('ROM too short to extract player-menu CHR')
     return pt0 + pt1
 
 
@@ -522,13 +522,13 @@ def player_menu_nametable_from_rom(rom: bytes) -> bytes:
         : PLAYER_MENU_NT_FILE + PLAYER_MENU_NT_VISIBLE_SIZE
     ]
     if len(nametable) != PLAYER_MENU_NT_VISIBLE_SIZE:
-        raise ValueError("ROM trop courte pour extraire le nametable du menu joueur")
+        raise ValueError('ROM too short to extract the player-menu nametable')
     return nametable
 
 
 def build_ips(base: bytes, patched: bytes) -> bytes:
     if len(base) != len(patched):
-        raise ValueError("Les ROMs doivent avoir la meme taille pour creer un IPS simple")
+        raise ValueError('ROMs must have the same size to create a simple IPS')
 
     ips = bytearray(b"PATCH")
     i = 0
@@ -567,8 +567,7 @@ def restore_english_title_tiles(
 ) -> None:
     if len(english_reference) != len(rom):
         raise ValueError(
-            "ROM anglaise de référence incompatible: "
-            f"{len(english_reference)} octets au lieu de {len(rom)}"
+            f'Incompatible English reference ROM: {len(english_reference)} bytes instead of {len(rom)}'
         )
     for tile_id in TITLE_LOGO_TILE_IDS:
         offset = TITLE_PT0_FILE + tile_id * 16
@@ -581,7 +580,7 @@ def title_credit_tiles(text: str) -> list[bytes]:
     missing = sorted(set(text) - set(ORIGINAL_TITLE_CREDIT_GLYPHS))
     if missing:
         raise ValueError(
-            "Glyphe(s) crédit titre manquant(s): " + ", ".join(missing)
+            "Missing title-credit glyph(s): " + ", ".join(missing)
         )
     width = len(ENGLISH_CREDIT_TILE_IDS) * 8
     spacing = 1
@@ -591,7 +590,7 @@ def title_credit_tiles(text: str) -> list[bytes]:
     ) + spacing * (len(text) - 1)
     if text_width > width:
         raise ValueError(
-            f"Crédit titre trop long: {text_width} pixels pour {width}"
+            f'Title credit too long: {text_width} pixels for {width}'
         )
     pixels = [[0 for _ in range(width)] for _ in range(8)]
     cursor = (width - text_width) // 2
@@ -616,14 +615,13 @@ def patch_english_yellow_title(
     """Install the true English title graphics and a reproducible credit row."""
     if len(yellow_reference) != len(rom):
         raise ValueError(
-            "ROM anglaise yellow.nes incompatible: "
-            f"{len(yellow_reference)} octets au lieu de {len(rom)}"
+            f'Incompatible yellow.nes English ROM: {len(yellow_reference)} bytes instead of {len(rom)}'
         )
     reference_hash = hashlib.sha256(yellow_reference).hexdigest()
     if reference_hash != ENGLISH_BASE_ROM_SHA256:
         raise ValueError(
-            "Référence yellow.nes non canonique: "
-            f"{reference_hash} au lieu de {ENGLISH_BASE_ROM_SHA256}"
+            "Noncanonical yellow.nes reference: "
+            f"{reference_hash} instead of {ENGLISH_BASE_ROM_SHA256}"
         )
 
     # The raw PT1/PT0 source ranges overlap by design.  Copy only the bytes
@@ -668,7 +666,7 @@ def patch_french_menu_tiles(rom: bytearray) -> None:
     )
     if actual_new != expected_new or actual_load != expected_load:
         raise ValueError(
-            "Table NEW/LOAD inattendue: "
+            "Unexpected NEW/LOAD table: "
             f"NEW={actual_new.hex()} LOAD={actual_load.hex()}"
         )
 
@@ -697,8 +695,8 @@ def patch_french_player_menu_labels(rom: bytearray) -> None:
         )
         if actual_top != top or actual_bottom != bottom:
             raise ValueError(
-                f"Tilemap {source_name} inattendu: "
-                f"haut={actual_top}, bas={actual_bottom}"
+                f"Unexpected {source_name} tilemap: "
+                f"top={actual_top}, bottom={actual_bottom}"
             )
 
         generated = player_menu_word_tiles(str(layout["french"]), len(top))
@@ -714,7 +712,7 @@ def patch_french_player_menu_labels(rom: bytearray) -> None:
         generated_block = b"".join(generated)
         if current_hash != expected_original_hash and current != generated_block:
             raise ValueError(
-                f"Tuiles {source_name} inattendues: SHA-256={current_hash}"
+                f"Unexpected {source_name} tiles: SHA-256={current_hash}"
             )
 
         for tile_id, tile in zip(tile_ids, generated, strict=True):
@@ -798,7 +796,7 @@ def command_extract_state(args: argparse.Namespace) -> None:
     required = ["CHRR", "NTAR", "PRAM"]
     missing = [key for key in required if key not in values]
     if missing:
-        raise SystemExit(f"Savestate incomplete, section(s) absente(s): {', '.join(missing)}")
+        raise SystemExit(f"Incomplete savestate, missing section(s): {', '.join(missing)}")
 
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "state_CHRR.bin").write_bytes(values["CHRR"])
@@ -809,8 +807,8 @@ def command_extract_state(args: argparse.Namespace) -> None:
     render_chr(values["CHRR"][0x1000:0x2000], out_dir / "state_CHR_pt1.bmp")
     render_nametable(values["CHRR"], values["NTAR"][:0x400], out_dir / "state_nametable0.bmp")
 
-    print(f"Extrait: {state_path}")
-    print(f"Sortie:  {out_dir}")
+    print(f"Extracted: {state_path}")
+    print(f"Output:  {out_dir}")
 
 
 def command_scan_rom(args: argparse.Namespace) -> None:
@@ -833,15 +831,15 @@ def command_scan_rom(args: argparse.Namespace) -> None:
         while pos != -1:
             hits.append(pos)
             pos = rom.find(chunk, pos + 1)
-        pretty = ", ".join(f"0x{hit:06X}" for hit in hits) if hits else "aucun match complet"
+        pretty = ", ".join(f"0x{hit:06X}" for hit in hits) if hits else "no complete match"
         print(f"{label}: {pretty}")
 
     print("")
-    print("Offsets connus pour cette ROM anglaise/FR:")
-    print(f"  CHR $1000: 0x{TITLE_PT1_FILE:06X} (4096 octets)")
-    print(f"  CHR $0000: 0x{TITLE_PT0_FILE:06X} (4096 octets)")
-    print(f"  NT  $2000: 0x{TITLE_NT_FILE:06X} (1024 octets)")
-    print("Note: les plages source se chevauchent; c'est normal pour cette banque.")
+    print('Known offsets for this English/French ROM:')
+    print(f'  CHR $1000: 0x{TITLE_PT1_FILE:06X} (4096 bytes)')
+    print(f'  CHR $0000: 0x{TITLE_PT0_FILE:06X} (4096 bytes)')
+    print(f'  NT  $2000: 0x{TITLE_NT_FILE:06X} (1024 bytes)')
+    print('Note: overlapping source ranges are expected in this bank.')
 
 
 def command_render_rom(args: argparse.Namespace) -> None:
@@ -859,7 +857,7 @@ def command_render_rom(args: argparse.Namespace) -> None:
     render_nametable(chr_data, nametable, out_dir / "rom_title_nametable0.bmp")
 
     print(f"ROM:    {rom_path}")
-    print(f"Sortie: {out_dir}")
+    print(f"Output: {out_dir}")
 
 
 def command_render_dump(args: argparse.Namespace) -> None:
@@ -870,7 +868,7 @@ def command_render_dump(args: argparse.Namespace) -> None:
     chr_data = read_file(chr_path)
     if len(chr_data) != 0x2000:
         raise SystemExit(
-            f"Dump CHR invalide: {len(chr_data)} octets au lieu de 8192"
+            f'Invalid CHR dump: {len(chr_data)} bytes instead of 8192'
         )
 
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -885,8 +883,7 @@ def command_render_dump(args: argparse.Namespace) -> None:
         nametable = read_file(nametable_path)
         if len(nametable) < 0x400:
             raise SystemExit(
-                "Dump nametable invalide: "
-                f"{len(nametable)} octets, minimum 1024"
+                f'Invalid nametable dump: {len(nametable)} bytes, minimum 1024'
             )
         first_nametable = nametable[:0x400]
         (out_dir / f"{prefix}_nametable0.bin").write_bytes(first_nametable)
@@ -901,10 +898,10 @@ def command_render_dump(args: argparse.Namespace) -> None:
             out_dir / f"{prefix}_nametable0_mapper163_split_render.bmp",
         )
 
-    print(f"CHR source: {chr_path}")
+    print(f"Source CHR: {chr_path}")
     if nametable_path is not None:
-        print(f"Nametable source: {nametable_path}")
-    print(f"Export manuel: {out_dir}")
+        print(f"Source nametable: {nametable_path}")
+    print(f"Manual export: {out_dir}")
 
 
 def command_patch_jaune(args: argparse.Namespace) -> None:
@@ -927,10 +924,10 @@ def command_patch_jaune(args: argparse.Namespace) -> None:
     render_chr(chr_data[:0x1000], out_dir / "patched_jaune_CHR_pt0.bmp")
     render_nametable(chr_data, nametable, out_dir / "patched_jaune_nametable0.bmp")
 
-    print(f"ROM source: {rom_path}")
-    print(f"ROM sortie: {out_rom_path}")
-    print(f"IPS sortie: {out_ips_path}")
-    print("Patch: petit libelle YELLOW du logo remplace par JAUNE")
+    print(f"Source ROM: {rom_path}")
+    print(f"Output ROM: {out_rom_path}")
+    print(f"Output IPS: {out_ips_path}")
+    print("Patch: small YELLOW logo label replaced with JAUNE")
 
 
 def command_patch_english_title(args: argparse.Namespace) -> None:
@@ -967,10 +964,10 @@ def command_patch_english_title(args: argparse.Namespace) -> None:
         ),
         encoding="utf-8",
     )
-    print(f"ROM source: {rom_path}")
-    print(f"ROM sortie: {out_rom_path}")
-    print(f"IPS sortie: {out_ips_path}")
-    print(f"Titre anglais: YELLOW VERSION; crédits: {args.credits.upper()}")
+    print(f"Source ROM: {rom_path}")
+    print(f"Output ROM: {out_rom_path}")
+    print(f"Output IPS: {out_ips_path}")
+    print(f"English title: YELLOW VERSION; credits: {args.credits.upper()}")
 
 
 def command_patch_french_graphics(args: argparse.Namespace) -> None:
@@ -986,12 +983,12 @@ def command_patch_french_graphics(args: argparse.Namespace) -> None:
     base_hash = hashlib.sha256(base).hexdigest()
     if base_hash != ENGLISH_BASE_ROM_SHA256:
         raise SystemExit(
-            "Base IPS non canonique: "
-            f"{base_hash} au lieu de {ENGLISH_BASE_ROM_SHA256}"
+            "Noncanonical IPS base: "
+            f"{base_hash} instead of {ENGLISH_BASE_ROM_SHA256}"
         )
     if len(source) != len(base):
         raise SystemExit(
-            f"Tailles incompatibles: source={len(source)} base={len(base)}"
+            f"Incompatible sizes: source={len(source)} base={len(base)}"
         )
 
     rom = bytearray(source)
@@ -1004,25 +1001,25 @@ def command_patch_french_graphics(args: argparse.Namespace) -> None:
         ).hexdigest()
         if english_title_hash != ENGLISH_ROM_SHA256:
             raise SystemExit(
-                "ROM anglaise du titre non canonique: "
-                f"{english_title_hash} au lieu de {ENGLISH_ROM_SHA256}"
+                "Noncanonical English title ROM: "
+                f"{english_title_hash} instead of {ENGLISH_ROM_SHA256}"
             )
         restore_english_title_tiles(rom, english_title_reference)
         title_reference_manifest_lines = [
             (
-                "ROM anglaise du titre: "
+                "English title ROM: "
                 f"{english_title_path.resolve()}"
             ),
-            f"ROM anglaise du titre SHA-256: {english_title_hash}",
+            f"English title ROM SHA-256: {english_title_hash}",
         ]
         title_patch_description = (
-            "Logo titre: YELLOW anglais restaure depuis la ROM anglaise, "
-            "tuiles PT0 $51-$55"
+            "Title logo: English YELLOW restored from the English ROM, "
+            "PT0 tiles $51-$55"
         )
     else:
         patch_jaune_tiles(rom)
         title_patch_description = (
-            "Patch logo: YELLOW -> JAUNE, tuiles PT0 $51-$55"
+            "Logo patch: YELLOW -> JAUNE, PT0 tiles $51-$55"
         )
     patch_french_menu_tiles(rom)
     patch_french_player_menu_labels(rom)
@@ -1039,43 +1036,43 @@ def command_patch_french_graphics(args: argparse.Namespace) -> None:
     patched_hash = hashlib.sha256(patched).hexdigest()
     manifest = "\n".join(
         [
-            "Pokemon Yellow NES - export CHR et patch graphique FR",
-            f"ROM source: {rom_path.resolve()}",
-            f"ROM source SHA-256: {source_hash}",
-            f"ROM de base IPS: {base_path.resolve()}",
-            f"ROM de base IPS SHA-256: {base_hash}",
-            f"ROM sortie: {out_rom_path.resolve()}",
-            f"ROM sortie SHA-256: {patched_hash}",
-            f"IPS sortie: {out_ips_path.resolve()}",
-            f"CHR source PT0: 0x{TITLE_PT0_FILE:06X}, 4096 octets",
-            f"CHR source PT1: 0x{TITLE_PT1_FILE:06X}, 4096 octets",
-            f"Mode logo titre: {args.title_logo}",
+            "Pokemon Yellow NES - CHR export and French graphics patch",
+            f"Source ROM: {rom_path.resolve()}",
+            f"Source ROM SHA-256: {source_hash}",
+            f"IPS base ROM: {base_path.resolve()}",
+            f"IPS base ROM SHA-256: {base_hash}",
+            f"Output ROM: {out_rom_path.resolve()}",
+            f"Output ROM SHA-256: {patched_hash}",
+            f"Output IPS: {out_ips_path.resolve()}",
+            f"Source CHR PT0: 0x{TITLE_PT0_FILE:06X}, 4096 bytes",
+            f"Source CHR PT1: 0x{TITLE_PT1_FILE:06X}, 4096 bytes",
+            f"Title logo mode: {args.title_logo}",
             *title_reference_manifest_lines,
             title_patch_description,
-            "Patch menu: NEW -> NOUV condense, tuiles PT1 $30-$32",
-            "Patch menu: LOAD -> CONT, tuiles PT1 $40-$43",
+            "Menu patch: NEW -> condensed NOUV, PT1 tiles $30-$32",
+            "Menu patch: LOAD -> CONT, PT1 tiles $40-$43",
             (
-                "Patch menu joueur: ITEMS -> OBJETS, Ash -> SACHA, "
+                "Player-menu patch: ITEMS -> OBJETS, Ash -> SACHA, "
                 "HMs -> CS, SAVE -> SAUVER"
             ),
-            f"Crédits titre: {ENGLISH_TITLE_CREDITS}",
+            f"Title credits: {ENGLISH_TITLE_CREDITS}",
             (
-                f"CHR menu joueur PT0: 0x{PLAYER_MENU_PT0_FILE:06X}, "
-                "4096 octets"
+                f"Player-menu CHR PT0: 0x{PLAYER_MENU_PT0_FILE:06X}, "
+                "4096 bytes"
             ),
             (
-                f"CHR menu joueur PT1: 0x{PLAYER_MENU_PT1_FILE:06X}, "
-                "4096 octets"
+                f"Player-menu CHR PT1: 0x{PLAYER_MENU_PT1_FILE:06X}, "
+                "4096 bytes"
             ),
             (
-                f"Nametable menu joueur conserve: "
+                f"Preserved player-menu nametable: "
                 f"0x{PLAYER_MENU_NT_FILE:06X}"
             ),
-            f"Table NEW conservee: 0x{MENU_NEW_TILEMAP_FILE:06X}",
-            f"Table LOAD conservee: 0x{MENU_LOAD_TILEMAP_FILE:06X}",
-            f"Export CHR avant: {(out_dir / 'before').resolve()}",
-            f"Export CHR apres: {(out_dir / 'after').resolve()}",
-            "Resultat: PASS",
+            f"Preserved NEW table: 0x{MENU_NEW_TILEMAP_FILE:06X}",
+            f"Preserved LOAD table: 0x{MENU_LOAD_TILEMAP_FILE:06X}",
+            f"Before CHR export: {(out_dir / 'before').resolve()}",
+            f"After CHR export: {(out_dir / 'after').resolve()}",
+            "Result: PASS",
             "",
         ]
     )
@@ -1085,39 +1082,39 @@ def command_patch_french_graphics(args: argparse.Namespace) -> None:
         encoding="utf-8",
     )
 
-    print(f"ROM source:      {rom_path}")
-    print(f"ROM sortie:      {out_rom_path}")
-    print(f"IPS sortie:      {out_ips_path}")
-    print(f"Export CHR avant/apres: {out_dir}")
+    print(f"Source ROM:      {rom_path}")
+    print(f"Output ROM:      {out_rom_path}")
+    print(f"Output IPS:      {out_ips_path}")
+    print(f"Before/after CHR export: {out_dir}")
     print(
-        f"Graphismes: logo={args.title_logo}, NEW -> NOUV, LOAD -> CONT, "
+        f"Graphics: logo={args.title_logo}, NEW -> NOUV, LOAD -> CONT, "
         "ITEMS -> OBJETS, Ash -> SACHA, HMs -> CS, SAVE -> SAUVER; "
-        f"crédits={ENGLISH_TITLE_CREDITS}"
+        f"credits={ENGLISH_TITLE_CREDITS}"
     )
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Analyse l'ecran titre NJ046.")
+    parser = argparse.ArgumentParser(description="Analyze the NJ046 title screen.")
     sub = parser.add_subparsers(dest="command", required=True)
 
-    extract_state = sub.add_parser("extract-state", help="extrait CHR/nametable d'une savestate FCEUX")
+    extract_state = sub.add_parser("extract-state", help="extract CHR/nametable from an FCEUX savestate")
     extract_state.add_argument("--state", default=str(DEFAULT_STATE))
     extract_state.add_argument("--out", default=str(DEFAULT_OUT))
     extract_state.set_defaults(func=command_extract_state)
 
-    scan_rom = sub.add_parser("scan-rom", help="cherche dans la ROM les donnees visibles dans FCEUX")
+    scan_rom = sub.add_parser("scan-rom", help="search the ROM for data visible in FCEUX")
     scan_rom.add_argument("--rom", default=str(ENGLISH_ROM))
     scan_rom.add_argument("--state", default=str(DEFAULT_STATE))
     scan_rom.set_defaults(func=command_scan_rom)
 
-    render_rom = sub.add_parser("render-rom", help="rend les donnees titre connues depuis une ROM")
+    render_rom = sub.add_parser("render-rom", help="render known title data from a ROM")
     render_rom.add_argument("--rom", default=str(FRENCH_ROM))
     render_rom.add_argument("--out", default=str(DEFAULT_OUT))
     render_rom.set_defaults(func=command_render_rom)
 
     render_dump = sub.add_parser(
         "render-dump",
-        help="rend un dump CHR-RAM Mesen en planches BMP pour retouche",
+        help="render a Mesen CHR-RAM dump as BMP sheets for editing",
     )
     render_dump.add_argument("--chr", required=True)
     render_dump.add_argument("--nametable", default="")
@@ -1125,7 +1122,7 @@ def build_parser() -> argparse.ArgumentParser:
     render_dump.add_argument("--prefix", default="mesen")
     render_dump.set_defaults(func=command_render_dump)
 
-    patch_jaune = sub.add_parser("patch-jaune", help="cree une ROM test avec YELLOW -> JAUNE sur le logo")
+    patch_jaune = sub.add_parser("patch-jaune", help="create a test ROM with YELLOW -> JAUNE on the logo")
     patch_jaune.add_argument("--rom", default=str(FRENCH_ROM))
     patch_jaune.add_argument("--base-rom", default=str(ENGLISH_BASE_ROM))
     patch_jaune.add_argument("--out-rom", default=str(PATCHED_TITLE_ROM))
@@ -1135,7 +1132,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     patch_english_title = sub.add_parser(
         "patch-english-title",
-        help="reprend le vrai titre de yellow.nes et ajoute les crédits",
+        help="restore the original yellow.nes title and add credits",
     )
     patch_english_title.add_argument("--rom", required=True)
     patch_english_title.add_argument("--yellow-rom", default=str(ENGLISH_BASE_ROM))
@@ -1148,7 +1145,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     patch_french_graphics = sub.add_parser(
         "patch-french-graphics",
-        help="traduit les graphismes titre/menu et exporte le CHR avant/apres",
+        help="translate title/menu graphics and export before/after CHR",
     )
     patch_french_graphics.add_argument(
         "--rom",
@@ -1163,13 +1160,13 @@ def build_parser() -> argparse.ArgumentParser:
         choices=("english", "french"),
         default="english",
         help=(
-            "logo du titre: YELLOW anglais (défaut) ou JAUNE français"
+            "title logo: English YELLOW (default) or French JAUNE"
         ),
     )
     patch_french_graphics.add_argument(
         "--english-title-rom",
         default=str(ENGLISH_ROM),
-        help="ROM anglaise canonique fournissant les tuiles YELLOW",
+        help="canonical English ROM providing the YELLOW tiles",
     )
     patch_french_graphics.add_argument(
         "--out-rom",

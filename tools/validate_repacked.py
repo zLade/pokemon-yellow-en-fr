@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Validation statique du build repacke.
+Static validation of the repacked build.
 
-Cette verification ne remplace pas un test en jeu, mais elle controle que:
-  - la ROM garde la meme taille;
-  - les textes repointes restent dans leur banque 32 Ko;
-  - les plages repackees ne se chevauchent pas;
-  - chaque pointeur repere pointe vers le texte FR attendu;
-  - chaque texte repointe est bien termine par 0x0D;
-  - aucun libelle fixe ne reste trop long.
+This does not replace in-game testing. It checks unchanged ROM size,
+32 KiB bank boundaries, non-overlapping allocations, pointer targets,
+0x0D text terminators and fixed labels fitting their storage.
+
+
+
+
 """
 
 from __future__ import annotations
@@ -79,8 +79,8 @@ def compute_plan(args: argparse.Namespace):
     original_hash = sha256(original)
     if original_hash != TRANSLATION_BASE_SHA256:
         raise ValueError(
-            "ROM de base non canonique: "
-            f"{original_hash} au lieu de {TRANSLATION_BASE_SHA256}"
+            "Noncanonical base ROM: "
+            f"{original_hash} instead of {TRANSLATION_BASE_SHA256}"
         )
     rows = read_translation_csv(args.csv)
     restoration_payloads = verified_dialogue_restoration_payloads(original)
@@ -113,7 +113,7 @@ def compute_plan(args: argparse.Namespace):
         conflicts = literal_slot_conflicts(row.text)
         if conflicts:
             raise ValueError(
-                f"0x{row.offset:06X}: ponctuation réservée "
+                f"0x{row.offset:06X}: reserved punctuation "
                 + " ".join(repr(item) for item in sorted(conflicts))
             )
         row_info.append((row, max_len, encoded))
@@ -142,7 +142,7 @@ def compute_plan(args: argparse.Namespace):
     )
     if skipped_verified:
         raise ValueError(
-            "conflit dans les pointeurs verifies: "
+            "conflict in verified pointers: "
             + repr(skipped_verified[:5])
         )
     pointer_entries, skipped_field = merge_non_overlapping_pointer_entries(
@@ -151,7 +151,7 @@ def compute_plan(args: argparse.Namespace):
     )
     if skipped_field:
         raise ValueError(
-            "conflit dans les pointeurs terrain verifies: "
+            "conflict in verified field pointers: "
             + repr(skipped_field[:5])
         )
     pointer_entries = remove_verified_non_dialogue_pointer_refs(
@@ -175,18 +175,14 @@ def compute_plan(args: argparse.Namespace):
         != VERIFIED_FIELD_DIALOGUE_POINTER_SLOT_COUNT
     ):
         raise ValueError(
-            f"{field_pointer_slots} slots terrain après redirection, "
-            f"{VERIFIED_FIELD_DIALOGUE_POINTER_SLOT_COUNT} attendus"
+            f'{field_pointer_slots} field slots after redirection; expected {VERIFIED_FIELD_DIALOGUE_POINTER_SLOT_COUNT}'
         )
     if (
         len(field_pointer_entries)
         != VERIFIED_FIELD_DIALOGUE_TARGET_COUNT_AFTER_REDIRECTS
     ):
         raise ValueError(
-            f"{len(field_pointer_entries)} cibles terrain après "
-            f"redirection, "
-            f"{VERIFIED_FIELD_DIALOGUE_TARGET_COUNT_AFTER_REDIRECTS} "
-            "attendues"
+            f'{len(field_pointer_entries)} field targets after redirection; expected {VERIFIED_FIELD_DIALOGUE_TARGET_COUNT_AFTER_REDIRECTS}'
         )
 
     if args.min_context_pointers > 0:
@@ -225,8 +221,7 @@ def compute_plan(args: argparse.Namespace):
         for ref in refs:
             if intersects_spans(ref, ref + 2, glyph_spans):
                 raise ValueError(
-                    f"pointeur 0x{ref:06X} vers 0x{target:06X} "
-                    "dans un record glyphique protege"
+                    f'Pointer 0x{ref:06X} to 0x{target:06X} inside a protected glyph record'
                 )
     row_pointer_refs = assign_pointer_targets_to_rows(
         row_info,
@@ -240,15 +235,14 @@ def compute_plan(args: argparse.Namespace):
             field_target_owners.setdefault(target, []).append(row.offset)
             if row.layout != DIALOGUE_LAYOUT:
                 raise ValueError(
-                    f"0x{row.offset:06X}: cible terrain "
-                    f"0x{target:06X} sans layout {DIALOGUE_LAYOUT}"
+                    f'0x{row.offset:06X}: field target 0x{target:06X} without layout {DIALOGUE_LAYOUT}'
                 )
     unowned_field_targets = sorted(
         set(field_pointer_entries) - set(field_target_owners)
     )
     if unowned_field_targets:
         raise ValueError(
-            "cibles terrain sans traduction: "
+            "field targets without translations: "
             + ", ".join(
                 f"0x{target:06X}"
                 for target in unowned_field_targets
@@ -261,7 +255,7 @@ def compute_plan(args: argparse.Namespace):
     }
     if multiply_owned_field_targets:
         raise ValueError(
-            "cibles terrain possédées plusieurs fois: "
+            "field targets with multiple owners: "
             + repr(multiply_owned_field_targets)
         )
 
@@ -407,7 +401,7 @@ def reconstruct_expected_text_banks(
     for row, max_len, encoded in row_info:
         if max_len < 1:
             errors.append(
-                f"0x{row.offset:06X}: aucune plage source canonique"
+                f"0x{row.offset:06X}: no canonical source span"
             )
             continue
 
@@ -435,8 +429,7 @@ def reconstruct_expected_text_banks(
 
         if len(encoded) > max_len:
             errors.append(
-                f"0x{row.offset:06X}: texte fixe trop long "
-                f"({len(encoded)} > {max_len})"
+                f'0x{row.offset:06X}: fixed text too long ({len(encoded)} > {max_len})'
             )
             continue
         expected[row.offset:row.offset + max_len] = encoded.ljust(max_len)
@@ -483,10 +476,10 @@ def command_validate(args: argparse.Namespace) -> int:
     warnings = []
 
     if len(patched) != len(original):
-        errors.append(f"taille ROM differente: {len(patched)} != {len(original)}")
+        errors.append(f'ROM size differs: {len(patched)} != {len(original)}')
 
     if failures:
-        errors.append(f"{len(failures)} allocation(s) impossible(s)")
+        errors.append(f"{len(failures)} failed allocation(s)")
 
     seen_offsets = set()
     glyph_by_start = structured_glyph_record_map(
@@ -494,7 +487,7 @@ def command_validate(args: argparse.Namespace) -> int:
     )
     for row, max_len, encoded in row_info:
         if row.offset in seen_offsets:
-            errors.append(f"offset traduit en double: 0x{row.offset:06X}")
+            errors.append(f"duplicate translated offset: 0x{row.offset:06X}")
         seen_offsets.add(row.offset)
         canonical_max_len = source_record_len(
             original,
@@ -504,11 +497,11 @@ def command_validate(args: argparse.Namespace) -> int:
         if max_len != canonical_max_len:
             errors.append(
                 f"0x{row.offset:06X}: max_len CSV {max_len}, "
-                f"source canonique {canonical_max_len}"
+                f"canonical source {canonical_max_len}"
             )
         if any(value < 0x20 or value > 0x7E for value in encoded):
             errors.append(
-                f"0x{row.offset:06X}: traduction non imprimable"
+                f"0x{row.offset:06X}: nonprintable translation"
             )
 
     base_font = extract_ascii_font(original)
@@ -518,8 +511,7 @@ def command_validate(args: argparse.Namespace) -> int:
         actual_tile = patched[offset : offset + 16]
         if actual_tile != expected_tile:
             errors.append(
-                f"glyphe français 0x{code:02X} inattendu à "
-                f"0x{offset:06X}"
+                f'Unexpected French glyph 0x{code:02X} at 0x{offset:06X}'
             )
 
     allocated_ranges = []
@@ -537,14 +529,14 @@ def command_validate(args: argparse.Namespace) -> int:
         allocated_ranges.append((new_offset, end, old_offset))
 
         if end > len(patched):
-            errors.append(f"0x{old_offset:06X}: texte repointe hors ROM")
+            errors.append(f'0x{old_offset:06X}: relocated text outside ROM')
         if pair_for_offset(new_offset) != pair_for_offset(end - 1):
-            errors.append(f"0x{old_offset:06X}: texte repointe traverse une banque")
+            errors.append(f'0x{old_offset:06X}: relocated text crosses a bank')
 
         expected = encoded + b"\x0D"
         actual = patched[new_offset:end]
         if actual != expected:
-            errors.append(f"0x{old_offset:06X}: texte repointe different des octets attendus")
+            errors.append(f'0x{old_offset:06X}: relocated text differs from expected bytes')
 
     overlaps = find_overlaps(allocated_ranges)
     incompatible_overlaps = []
@@ -587,15 +579,13 @@ def command_validate(args: argparse.Namespace) -> int:
         right_end,
     ) in incompatible_overlaps[:20]:
         errors.append(
-            "chevauchement incompatible: "
-            f"0x{left:06X} [{left_start:06X}:{left_end:06X}] avec "
-            f"0x{right:06X} [{right_start:06X}:{right_end:06X}]"
+            f'Incompatible overlap: 0x{left:06X} [{left_start:06X}:{left_end:06X}] with 0x{right:06X} [{right_start:06X}:{right_end:06X}]'
         )
     if len(incompatible_overlaps) > 20:
         errors.append(
-            "... et "
-            f"{len(incompatible_overlaps) - 20} chevauchement(s) "
-            "incompatible(s) supplementaire(s)"
+            "... and "
+            f"{len(incompatible_overlaps) - 20} additional "
+            "incompatible overlap(s)"
         )
 
     expected_by_pointer = {}
@@ -629,10 +619,10 @@ def command_validate(args: argparse.Namespace) -> int:
 
     for ref, previous, current in conflicts[:20]:
         errors.append(
-            f"pointeur 0x{ref:06X} cible deux textes: 0x{previous:06X} et 0x{current:06X}"
+            f"pointer 0x{ref:06X} targets two texts: 0x{previous:06X} and 0x{current:06X}"
         )
     if len(conflicts) > 20:
-        errors.append(f"... et {len(conflicts) - 20} conflit(s) de pointeur supplementaire(s)")
+        errors.append(f"... and {len(conflicts) - 20} additional pointer conflict(s)")
 
     for ref, expected_target in expected_by_pointer.items():
         address = int.from_bytes(patched[ref:ref + 2], "little")
@@ -640,20 +630,20 @@ def command_validate(args: argparse.Namespace) -> int:
         actual_target = offset_for_cpu_addr(pair, address, len(patched))
         if actual_target != expected_target:
             errors.append(
-                f"pointeur 0x{ref:06X}: cible 0x{actual_target or 0:06X}, attendu 0x{expected_target:06X}"
+                f'Pointer 0x{ref:06X}: target 0x{actual_target or 0:06X}, expected 0x{expected_target:06X}'
             )
             continue
 
         end = patched.find(b"\x0D", expected_target, min(len(patched), expected_target + args.max_text_scan))
         if end < 0:
-            errors.append(f"pointeur 0x{ref:06X}: texte cible sans terminateur 0x0D")
+            errors.append(f'Pointer 0x{ref:06X}: target text missing 0x0D terminator')
             continue
 
         block = patched[expected_target:end]
         if not block:
-            errors.append(f"pointeur 0x{ref:06X}: texte cible vide")
+            errors.append(f'Pointer 0x{ref:06X}: empty target text')
         if any(value < 0x20 or value > 0x7E for value in block):
-            errors.append(f"pointeur 0x{ref:06X}: texte cible contient des octets non imprimables")
+            errors.append(f'Pointer 0x{ref:06X}: target contains nonprintable bytes')
 
     expected_rom, reconstruction_errors = reconstruct_expected_text_banks(
         original,
@@ -682,8 +672,8 @@ def command_validate(args: argparse.Namespace) -> int:
         )
         if differences:
             errors.append(
-                f"banque {pair}: {len(differences)} plage(s) differente(s) "
-                "de la reconstruction exacte"
+                f"bank {pair}: {len(differences)} range(s) differ "
+                "from the exact reconstruction"
             )
 
         tail_start, tail_end = protected_bank_tail(pair)
@@ -691,7 +681,7 @@ def command_validate(args: argparse.Namespace) -> int:
         patched_tail = patched[tail_start:tail_end]
         if patched_tail != base_tail:
             errors.append(
-                f"banque {pair}: tail code $FFC0-$FFFF modifie "
+                f"bank {pair}: tail code $FFC0-$FFFF changed "
                 f"(base {hashlib.sha256(base_tail).hexdigest()}, "
                 f"ROM {hashlib.sha256(patched_tail).hexdigest()})"
             )
@@ -711,71 +701,71 @@ def command_validate(args: argparse.Namespace) -> int:
                 }
                 if not required_fields.issubset(reader.fieldnames or []):
                     errors.append(
-                        f"rapport de debordement invalide: {report}"
+                        f'Invalid overflow report: {report}'
                     )
                 fixed_overflow_rows = sum(1 for _ in reader)
         except (OSError, csv.Error) as exc:
             errors.append(
-                f"rapport de debordement illisible: {report} ({exc})"
+                f"unreadable overflow report: {report} ({exc})"
             )
     else:
-        errors.append(f"rapport absent: {report}")
+        errors.append(f'Missing report: {report}')
 
     if fixed_overflow_rows:
-        errors.append(f"{fixed_overflow_rows} texte(s) fixe(s) encore trop long(s)")
+        errors.append(f'{fixed_overflow_rows} fixed text record(s) still too long')
 
-    print("Validation statique repack")
+    print("Static repack validation")
     print(f"- ROM : {ROM_DIR / args.rom if not Path(args.rom).is_absolute() else Path(args.rom)}")
-    print(f"- Taille identique : {'OUI' if len(patched) == len(original) else 'NON'} ({len(patched)} octets)")
-    print(f"- Textes repointes : {len(allocations)}")
-    print(f"- Dialogues chinois restaures : {len(restoration_payloads)}")
-    print(f"- Echecs allocation : {len(failures)}")
+    print(f"- Identical size: {'YES' if len(patched) == len(original) else 'NO'} ({len(patched)} bytes)")
+    print(f"- Relocated texts : {len(allocations)}")
+    print(f"- Restored Chinese dialogues : {len(restoration_payloads)}")
+    print(f"- Allocation failures : {len(failures)}")
     print(
-        "- Partages exacts/suffixes : "
+        "- Exact/suffix sharing : "
         f"{len(overlaps) - len(incompatible_overlaps)}"
     )
     print(
-        "- Chevauchements incompatibles : "
+        "- Incompatible overlaps : "
         f"{len(incompatible_overlaps)}"
     )
-    print(f"- Conflits pointeurs : {len(conflicts)}")
-    print(f"- Textes fixes trop longs : {fixed_overflow_rows}")
-    print(f"- Candidats ignores pour chevauchement : {len(unsafe)}")
+    print(f"- Pointer conflicts : {len(conflicts)}")
+    print(f"- Fixed texts too long : {fixed_overflow_rows}")
+    print(f'- Candidates ignored due to overlap: {len(unsafe)}')
     print(
-        "- Ecarts reconstruction banques 6/7 : "
+        "- Bank 6/7 reconstruction differences : "
         f"{len(full_bank_differences)}"
     )
 
     for pair in sorted(pair for pair in free_spans if pair in (6, 7)):
         total = sum(span.length for span in free_spans[pair])
         largest = max((span.length for span in free_spans[pair]), default=0)
-        print(f"- Banque/pair {pair}: {total} octets libres restants, plus grand bloc {largest}")
+        print(f'- Bank/pair {pair}: {total} free bytes remaining, largest block {largest}')
 
     if warnings:
-        print(f"- Avertissements : {len(warnings)}")
+        print(f"- Warnings : {len(warnings)}")
         for warning in warnings:
             print(f"  {warning}")
 
     if errors:
-        print(f"- ERREURS : {len(errors)}")
+        print(f"- ERRORS : {len(errors)}")
         for error in errors[:40]:
             print(f"  {error}")
         remaining = max(0, 40 - len(errors))
         if remaining and full_bank_differences:
             for pair, start, end in full_bank_differences[:remaining]:
                 print(
-                    f"  banque {pair}: 0x{start:06X}-0x{end:06X}"
+                    f"  bank {pair}: 0x{start:06X}-0x{end:06X}"
                 )
         if len(errors) > 40:
-            print(f"  ... et {len(errors) - 40} de plus")
+            print(f"  ... and {len(errors) - 40} more")
         return 1
 
-    print("- Resultat : OK")
+    print("- Result : OK")
     return 0
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Valide statiquement une ROM repackee.")
+    parser = argparse.ArgumentParser(description='Statically validate a repacked ROM.')
     parser.add_argument("--rom", default="Pokemon_Jaune_FR_repacked.nes")
     parser.add_argument("--csv", default="traduction_base.csv")
     parser.add_argument("--input-rom", default=TRANSLATION_BASE_ROM)

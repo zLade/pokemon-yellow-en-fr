@@ -89,12 +89,12 @@ class DialoguePageQualityTests(unittest.TestCase):
         )
         self.assertIsNotNone(issue)
         self.assertEqual(issue.severity, "strong")
-        self.assertIn("mot-outil final", " ".join(issue.reasons))
+        self.assertIn("trailing function word", " ".join(issue.reasons))
 
         issue = assess_page_boundary("Ne sors", "pas !")
         self.assertIsNotNone(issue)
         self.assertEqual(issue.severity, "strong")
-        self.assertIn("complément initial", " ".join(issue.reasons))
+        self.assertIn("leading complement", " ".join(issue.reasons))
 
     def test_sentence_boundary_is_not_a_false_positive(self) -> None:
         self.assertIsNone(
@@ -108,13 +108,19 @@ class DialoguePageQualityTests(unittest.TestCase):
         issue = assess_page_boundary("Le Prof.", "Chen arrive.")
         self.assertIsNotNone(issue)
         self.assertEqual(issue.severity, "strong")
-        self.assertIn("titre abrégé final", " ".join(issue.reasons))
+        self.assertIn("trailing abbreviated title", " ".join(issue.reasons))
+
+    def test_english_reason_labels_preserve_protected_boundary_scores(self) -> None:
+        for pages in (("Le Prof.", "Chen arrive."), ("Mont", "Sélénite")):
+            with self.subTest(pages=pages):
+                vector = quality_vector_dialogue_pages(pages)
+                self.assertEqual(vector[:2], (1, 1))
 
     def test_audit_exposes_short_unpunctuated_fragment(self) -> None:
         issue = assess_page_boundary("trouvé", "les Pokémon")
         self.assertIsNotNone(issue)
         self.assertEqual(issue.severity, "weak")
-        self.assertIn("fragment final très court", " ".join(issue.reasons))
+        self.assertIn("very short trailing fragment", " ".join(issue.reasons))
 
     def test_explicit_newlines_remain_authoritative_pages(self) -> None:
         source = (
@@ -135,7 +141,7 @@ class DialoguePageQualityTests(unittest.TestCase):
         self.assertSemanticIdentity(source, plan.lines)
 
     def test_explicit_page_over_19_columns_is_rejected(self) -> None:
-        with self.assertRaisesRegex(ValueError, "forcée trop longue"):
+        with self.assertRaisesRegex(ValueError, "forced dialogue page too long"):
             optimise_dialogue_pages(
                 "Cette page explicite dépasse dix-neuf colonnes\nSuite"
             )
@@ -151,7 +157,7 @@ class DialoguePageQualityTests(unittest.TestCase):
         self.assertSemanticIdentity(source, lines)
 
     def test_oversized_lexical_unit_is_rejected(self) -> None:
-        with self.assertRaisesRegex(ValueError, "trop longue"):
+        with self.assertRaisesRegex(ValueError, "too long"):
             wrap_dialogue_lines_dp("anticonstitutionnellement")
 
     def test_dp_is_deterministic(self) -> None:

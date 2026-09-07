@@ -58,7 +58,7 @@ function Assert-FileExists {
     )
 
     if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) {
-        throw "$Label introuvable : $Path"
+        throw "$Label not found: $Path"
     }
 }
 
@@ -87,20 +87,20 @@ function Assert-ChrSnapshotBinding {
         -Encoding UTF8 | ConvertFrom-Json
     $ExpectedSha256 = [string]$ManifestObject.source_sha256
     if ($ExpectedSha256 -notmatch '^[0-9a-fA-F]{64}$') {
-        throw "source_sha256 invalide dans le manifeste : $Manifest"
+        throw "Invalid source_sha256 in manifest: $Manifest"
     }
     $ExpectedSha256 = $ExpectedSha256.ToLowerInvariant()
     $ActualSha256 = Get-FileSha256 -Path $Rom
     if ($ActualSha256 -ne $ExpectedSha256) {
         throw (
-            'Le manifeste CHR et la ROM ne forment pas le meme snapshot : ' +
-            "$ActualSha256 au lieu de $ExpectedSha256"
+            'CHR manifest and ROM do not describe the same snapshot: ' +
+            "$ActualSha256 instead of $ExpectedSha256"
         )
     }
     if ($PinnedSha256 -and $ActualSha256 -ne $PinnedSha256) {
         throw (
-            "Le snapshot CHR par defaut $DefaultSnapshotId a derive : " +
-            "$ActualSha256 au lieu de $PinnedSha256"
+            "Default CHR snapshot $DefaultSnapshotId has changed: " +
+            "$ActualSha256 instead of $PinnedSha256"
         )
     }
 }
@@ -116,7 +116,7 @@ function Assert-ChrPackBinding {
     )
 
     $LockPath = Join-Path $Pack 'pack.lock.json'
-    Assert-FileExists -Path $LockPath -Label 'Lock du pack CHR'
+    Assert-FileExists -Path $LockPath -Label 'CHR pack lock'
     $Lock = Get-Content `
         -LiteralPath $LockPath `
         -Raw `
@@ -124,10 +124,10 @@ function Assert-ChrPackBinding {
     $RomSha256 = Get-FileSha256 -Path $Rom
     $ManifestSha256 = Get-FileSha256 -Path $Manifest
     if ([string]$Lock.source_sha256 -ne $RomSha256) {
-        throw 'Le lock du pack CHR ne correspond pas a la ROM source.'
+        throw 'The CHR pack lock does not match the source ROM.'
     }
     if ([string]$Lock.manifest_sha256 -ne $ManifestSha256) {
-        throw 'Le lock du pack CHR ne correspond pas au manifeste.'
+        throw 'The CHR pack lock does not match the manifest.'
     }
 }
 
@@ -175,20 +175,20 @@ function Assert-SafeOutputPath {
     )
 
     foreach ($Protected in @(
-        @{ Path = $RomPath; Label = 'la ROM source' },
-        @{ Path = $IpsBasePath; Label = 'la base IPS' },
-        @{ Path = $ManifestPath; Label = 'le manifeste' },
-        @{ Path = $PipelinePath; Label = 'le pipeline Python' }
+        @{ Path = $RomPath; Label = 'the source ROM' },
+        @{ Path = $IpsBasePath; Label = 'the IPS base' },
+        @{ Path = $ManifestPath; Label = 'the manifest' },
+        @{ Path = $PipelinePath; Label = 'the Python pipeline' }
     )) {
         if (Test-SamePath -Left $Path -Right $Protected.Path) {
-            throw "$Label ne peut pas ecraser $($Protected.Label) : $Path"
+            throw "$Label cannot overwrite $($Protected.Label): $Path"
         }
     }
     if (Test-PathInside -Candidate $Path -Directory $PackPath) {
-        throw "$Label ne peut pas etre ecrit dans le pack : $Path"
+        throw "$Label cannot be written inside the pack: $Path"
     }
     if (Test-SamePath -Left $Path -Right $PackPath) {
-        throw "$Label ne peut pas remplacer le dossier du pack : $Path"
+        throw "$Label cannot replace the pack directory: $Path"
     }
 }
 
@@ -205,12 +205,12 @@ function Resolve-PythonRunner {
                 -DefaultRelativePath $PythonPath
             Assert-FileExists `
                 -Path $ResolvedPython `
-                -Label 'Interpreteur Python'
+                -Label 'Python interpreter'
             $PythonCommand = $ResolvedPython
         } else {
             $Command = Get-Command $PythonPath -ErrorAction SilentlyContinue
             if (-not $Command) {
-                throw "Interpreteur Python introuvable : $PythonPath"
+                throw "Python interpreter not found: $PythonPath"
             }
             $PythonCommand = $Command.Source
         }
@@ -264,8 +264,8 @@ function Resolve-PythonRunner {
     }
 
     throw (
-        'Python 3 est introuvable. Installez Python, activez WSL, ou ' +
-        'indiquez -PythonPath.'
+        'Python 3 was not found. Install Python, enable WSL, or ' +
+        'specify -PythonPath.'
     )
 }
 
@@ -329,14 +329,14 @@ function Convert-ToWslPath {
         }
         if ($Process.ExitCode -ne 0) {
             throw (
-                "wslpath a echoue pour '$WindowsPath' " +
+                "wslpath failed for '$WindowsPath' " +
                 "(code $($Process.ExitCode)) : " +
                 (Convert-ToSingleLine -Text ($Stderr + ' ' + $Stdout))
             )
         }
         $Result = ($Stdout -split '\r?\n')[0].Trim()
         if (-not $Result) {
-            throw "wslpath a renvoye un chemin vide pour : $WindowsPath"
+            throw "wslpath returned an empty path for: $WindowsPath"
         }
         return $Result
     } finally {
@@ -461,13 +461,13 @@ function Invoke-ChrPipeline {
     }
     if ($null -eq $PipelineExitCode -or $PipelineExitCode -ne 0) {
         $ExitLabel = if ($null -eq $PipelineExitCode) {
-            'indisponible'
+            'unavailable'
         } else {
             [string]$PipelineExitCode
         }
         throw (
-            "Le pipeline CHR a echoue avec le code $ExitLabel " +
-            "pendant l'action $Action."
+            "The CHR pipeline failed with code $ExitLabel " +
+            "during action $Action."
         )
     }
 }
@@ -492,9 +492,9 @@ $OutputDirectory = Resolve-ProjectPath `
     -Value $OutputDirectory `
     -DefaultRelativePath "build\chr-modular-$DefaultSnapshotId"
 
-Assert-FileExists -Path $PipelinePath -Label 'Pipeline Python'
-Assert-FileExists -Path $RomPath -Label 'ROM source'
-Assert-FileExists -Path $ManifestPath -Label 'Manifeste CHR'
+Assert-FileExists -Path $PipelinePath -Label 'Python pipeline'
+Assert-FileExists -Path $RomPath -Label 'Source ROM'
+Assert-FileExists -Path $ManifestPath -Label 'CHR manifest'
 $PinnedSnapshotSha256 = if (
     $UsesDefaultRom -or $UsesDefaultManifest -or $UsesDefaultPack
 ) {
@@ -513,8 +513,8 @@ $Arguments = [System.Collections.Generic.List[string]]::new()
 if ($Action -eq 'Export') {
     if (Test-Path -LiteralPath $PackPath) {
         throw (
-            'Le dossier du pack existe deja. Export annule pour preserver ' +
-            "les fichiers edites : $PackPath"
+            'The pack directory already exists. Export cancelled to preserve ' +
+            "edited files: $PackPath"
         )
     }
     $Arguments.Add('export')
@@ -527,8 +527,8 @@ if ($Action -eq 'Export') {
 } else {
     if (-not (Test-Path -LiteralPath $PackPath -PathType Container)) {
         throw (
-            "Pack CHR introuvable : $PackPath. " +
-            "Lancez d'abord explicitement l'action Export."
+            "CHR pack not found: $PackPath. " +
+            "Run the Export action explicitly first."
         )
     }
     Assert-ChrPackBinding `
@@ -546,7 +546,7 @@ if ($Action -eq 'Export') {
     $Arguments.Add($RomPath)
 
     if ($Action -eq 'Compile') {
-        Assert-FileExists -Path $IpsBasePath -Label 'Base IPS'
+        Assert-FileExists -Path $IpsBasePath -Label 'IPS base'
         $OutRomPath = Resolve-ProjectPath `
             -Value $OutRomPath `
             -DefaultRelativePath (
@@ -564,9 +564,9 @@ if ($Action -eq 'Export') {
             )
 
         foreach ($Output in @(
-            @{ Path = $OutRomPath; Label = 'La ROM compilee' },
-            @{ Path = $OutIpsPath; Label = 'Le patch IPS compile' },
-            @{ Path = $ReportPath; Label = 'Le rapport de compilation' }
+            @{ Path = $OutRomPath; Label = 'The compiled ROM' },
+            @{ Path = $OutIpsPath; Label = 'The compiled IPS patch' },
+            @{ Path = $ReportPath; Label = 'The compilation report' }
         )) {
             Assert-SafeOutputPath `
                 -Path $Output.Path `
@@ -580,7 +580,7 @@ if ($Action -eq 'Export') {
             (Test-SamePath -Left $OutRomPath -Right $ReportPath) -or
             (Test-SamePath -Left $OutIpsPath -Right $ReportPath)
         ) {
-            throw 'Les trois sorties de compilation doivent etre distinctes.'
+            throw 'The three compilation outputs must be distinct.'
         }
 
         $Arguments.Add('--ips-base')
@@ -604,13 +604,13 @@ if ($Action -eq 'Export') {
             )
         Assert-SafeOutputPath `
             -Path $ReportPath `
-            -Label "Le rapport $Action"
+            -Label "The $Action report"
         [System.IO.Directory]::CreateDirectory(
             (Split-Path -Parent $ReportPath)
         ) | Out-Null
 
         if ($Action -eq 'Roundtrip') {
-            Assert-FileExists -Path $IpsBasePath -Label 'Base IPS'
+            Assert-FileExists -Path $IpsBasePath -Label 'IPS base'
             $Arguments.Add('--ips-base')
             $Arguments.Add($IpsBasePath)
         }
@@ -619,21 +619,21 @@ if ($Action -eq 'Export') {
     }
 }
 
-Write-Host "Pipeline CHR modulaire - $Action"
-Write-Host "- ROM source : $RomPath"
-Write-Host "- Manifeste  : $ManifestPath"
+Write-Host "Modular CHR pipeline - $Action"
+Write-Host "- Source ROM: $RomPath"
+Write-Host "- Manifest: $ManifestPath"
 Write-Host "- Pack        : $PackPath"
 if ($Action -ne 'Export') {
-    Write-Host "- Sorties     : $OutputDirectory"
+    Write-Host "- Outputs: $OutputDirectory"
 }
 
 Invoke-ChrPipeline -Arguments $Arguments.ToArray()
 
-Write-Host "Action $Action terminee avec succes."
+Write-Host "Action $Action completed successfully."
 if ($Action -eq 'Compile') {
-    Write-Host "- ROM compilee : $OutRomPath"
+    Write-Host "- Compiled ROM: $OutRomPath"
     Write-Host "- Patch IPS     : $OutIpsPath"
-    Write-Host "- Rapport       : $ReportPath"
+    Write-Host "- Report: $ReportPath"
 } elseif ($Action -ne 'Export') {
-    Write-Host "- Rapport       : $ReportPath"
+    Write-Host "- Report: $ReportPath"
 }

@@ -18,6 +18,13 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+      - name: Verify English workbook helpers
+        run: |
+          node --check tools/build_dialogue_review_xlsx.mjs
+          node --test tools/test_build_dialogue_review_xlsx.mjs
       - name: Validate language separation and ROM exclusion
         run: python3 tools/validate_branch_separation.py --language en
       - name: Verify published patch checksums
@@ -31,6 +38,8 @@ jobs:
         run: |
           python3 -m unittest -v \
             tools.test_validate_branch_separation \
+            tools.test_english_repository_metadata \
+            tools.test_csv_to_review_xlsx \
             tools.test_validate_english_catalog \
             tools.test_english_codec \
             tools.test_english_layout \

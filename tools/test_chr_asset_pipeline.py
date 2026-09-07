@@ -288,7 +288,7 @@ class ChrAssetPipelineTests(unittest.TestCase):
 
         with self.assertRaisesRegex(
             pipeline.PipelineError,
-            r"conflit d'overlap à 0x000135",
+            r"overlap conflict at 0x000135",
         ):
             pipeline.verify_pack(manifest, pack, self.rom_path)
 
@@ -299,7 +299,7 @@ class ChrAssetPipelineTests(unittest.TestCase):
 
         with self.assertRaisesRegex(
             pipeline.PipelineError,
-            "taille work 63, attendue 64",
+            "work size 63, expected 64",
         ):
             pipeline.verify_pack(manifest, pack, self.rom_path)
 
@@ -314,7 +314,7 @@ class ChrAssetPipelineTests(unittest.TestCase):
         baseline_path.write_bytes(baseline)
         with self.assertRaisesRegex(
             pipeline.PipelineError,
-            "hash baseline incorrect",
+            "incorrect baseline hash",
         ):
             pipeline.verify_pack(manifest, pack, self.rom_path)
 
@@ -325,7 +325,7 @@ class ChrAssetPipelineTests(unittest.TestCase):
         )
         with self.assertRaisesRegex(
             pipeline.PipelineError,
-            "SHA-256 ROM source inattendu",
+            "unexpected source ROM SHA-256",
         ):
             pipeline.export_pack(
                 wrong_manifest,
@@ -342,7 +342,7 @@ class ChrAssetPipelineTests(unittest.TestCase):
         )
         with self.assertRaisesRegex(
             pipeline.PipelineError,
-            "sort du pack",
+            "escapes the pack",
         ):
             pipeline.load_manifest(manifest)
 
@@ -354,7 +354,7 @@ class ChrAssetPipelineTests(unittest.TestCase):
         shared_output = self.root / "shared-output.bin"
         with self.assertRaisesRegex(
             pipeline.PipelineError,
-            "sorties ROM et IPS identiques",
+            "outputs ROM and IPS are identical",
         ):
             pipeline.compile_pack(
                 manifest,
@@ -368,7 +368,7 @@ class ChrAssetPipelineTests(unittest.TestCase):
 
         with self.assertRaisesRegex(
             pipeline.PipelineError,
-            "ne peut pas être écrite dans le pack",
+            "cannot be written inside the pack",
         ):
             pipeline.compile_pack(
                 manifest,

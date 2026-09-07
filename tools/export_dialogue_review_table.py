@@ -80,27 +80,27 @@ DEFAULT_MARKDOWN = ROM_DIR / "LISTE_EXHAUSTIVE_DIALOGUES.md"
 # supplies the wrong Chinese provenance for this one main-script row unless we
 # select the reviewed live source explicitly.
 REVIEWED_SOURCE_POINTER_BY_MAIN_OFFSET: dict[int, int] = {
-    # Deux messages d'objet chinois partageaient le même texte anglais.
-    # L'Anti-Para est désormais restauré séparément ; le texte principal
-    # restant correspond donc au Réveil.
+    # Two Chinese item messages shared the same English text.
+    # Parlyz Heal is restored separately; the remaining main text
+    # therefore corresponds to Awakening.
     0x03499D: 0x0348F3,
-    # Les premières sources de ces trois paires ont été restaurées à leur
-    # propre emplacement. Le dialogue principal doit montrer la seconde.
+    # The first sources in these three pairs have been restored to their own
+    # locations. The main dialogue must therefore use the second source.
     0x039D74: 0x038367,
     0x039DA8: 0x038377,
     0x039DE5: 0x03837D,
-    # Le pointeur vivant de la scène de Régis sur l'Océane vise une source
-    # distincte de l'enregistrement anglais agrégé retenu automatiquement.
+    # The live pointer for Gary on the S.S. Anne targets a source distinct
+    # from the automatically selected aggregate English record.
     0x03A9D1: 0x038405,
     0x03F033: 0x03D086,
 }
 
-# Cinq lignes ne passent pas par un enregistrement chinois ordinaire dans
-# l'inventaire d'alignement : deux sont encore encodées avec les glyphes
-# graphiques source dans la ROM anglaise et trois vivent dans des blocs
-# spéciaux (menu/introduction). Leur décodage a été relu directement dans la
-# ROM chinoise avec build/.../chinese_glyph_map.csv. Garder cette liste
-# explicite évite de transformer une absence d'alignement en texte inventé.
+# Five rows lack an ordinary Chinese record in the alignment inventory:
+# two still use source graphical glyphs in the English ROM, and three
+# occupy special menu/introduction blocks. Their decoding was reviewed
+# directly against the Chinese ROM using the generated glyph map at
+# build/.../chinese_glyph_map.csv. Keeping this list explicit prevents
+# missing alignments from being silently replaced with invented text.
 REVIEWED_INLINE_CHINESE_BY_MAIN_OFFSET: dict[int, str] = {
     0x034927: "得到无",
     0x034C03: "欢迎!",
@@ -114,9 +114,9 @@ REVIEWED_INLINE_CHINESE_BY_MAIN_OFFSET: dict[int, str] = {
     0x03D088: "捉鸟人:那里有很多珍贵的精灵...",
 }
 
-# Cette restauration a été découverte après la publication des 1 054 IDs
-# initiaux. Elle reste en fin de tableau pour ne pas renuméroter les lignes
-# déjà communiquées au relecteur.
+# This restoration was discovered after the first 1,054 IDs were published.
+# Keep it at the end of the table to preserve IDs already assigned
+# to review rows.
 APPENDED_RESTORATION_REFERENCES = (0x0348F1,)
 
 
@@ -165,7 +165,7 @@ def read_csv_grouped_by_hex(
 def read_offset_map(path: Path) -> dict[int, str]:
     document = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(document, dict):
-        raise ValueError(f"{path}: la racine doit être un objet JSON")
+        raise ValueError(f'{path}: root must be a JSON object')
     return {int(key, 16): str(value) for key, value in document.items()}
 
 
@@ -176,9 +176,12 @@ def clean_source_text(text: str) -> str:
 def english_rom_text(source: dict[str, str]) -> str:
     if source.get("english_storage") == "graphical_codes":
         return (
-            "NON TRADUIT — texte chinois conservé dans la ROM anglaise"
+            "UNTRANSLATED — Chinese text retained in the English ROM"
         )
     return clean_source_text(source.get("english_text", ""))
+
+
+ENGLISH_SPEAKER_LABELS = {'AGENT JENNY': 'OFFICER JENNY', 'ALDO': 'BRUNO', 'ARBITRE': 'REFEREE', 'ARTIKODIN': 'ARTICUNO', 'AUGUSTE': 'BLAINE', 'CHEN': 'OAK', 'CS01': 'HM01', 'CS02': 'HM02', 'CS03': 'HM03', 'CS04': 'HM04', 'DOMPTEUR': 'TAMER', 'EXORCISTE': 'CHANNELER', 'FILLETTE': 'LASS', 'GARDE': 'GUARD', 'GARÇON': 'YOUNGSTER', 'KARATÉKA': 'BLACKBELT', 'LE GRAND MAÎTRE': 'GRAND MASTER', 'LÉO': 'BILL', 'M. FUJI': 'MR. FUJI', 'MAJOR BOB': 'LT. SURGE', 'MAMAN': 'MOM', 'MATELOT': 'SAILOR', 'MIAOUSS': 'MEOWTH', 'MORGANE': 'SABRINA', 'OLGA': 'LORELEI', 'ONDINE': 'MISTY', 'ORNITHOLOGUE': 'BIRD KEEPER', 'PETER': 'LANCE', 'PIERRE': 'BROCK', 'POLICIER': 'POLICE OFFICER', 'PROF. CHEN': 'PROF. OAK', 'PRÉSIDENT': 'PRESIDENT', 'RÉGIS': 'GARY', 'SACHA': 'ASH', 'SCOUT': 'BUG CATCHER', 'SECRÉTAIRE': 'SECRETARY', 'SŒUR DE RÉGIS': "GARY'S SISTER", 'ÉLECTHOR': 'ZAPDOS'}
 
 
 def speaker_from_text(text: str) -> str:
@@ -187,7 +190,7 @@ def speaker_from_text(text: str) -> str:
         return ""
     candidate = match.group(1).strip()
     letters = [character for character in candidate if character.isalpha()]
-    return candidate if letters and candidate == candidate.upper() else ""
+    return ENGLISH_SPEAKER_LABELS.get(candidate, candidate) if letters and candidate == candidate.upper() else ""
 
 
 def history_for_main(
@@ -204,21 +207,21 @@ def history_for_main(
     if layout == "dialogue_intro_17_19":
         labels.append("introduction")
     if offset in official_yellow_offsets:
-        labels.append("adapté d'après Pokémon Jaune (FR)")
+        labels.append("adapted from French Pokemon Yellow")
     elif offset in official_gen1_shared_offsets:
-        labels.append("adapté d'après les dialogues officiels R/B/J (FR)")
+        labels.append("adapted from official French R/B/Y dialogue")
     elif offset in anime_motto_offsets:
-        labels.append("adapté d'après la devise française de l'anime")
+        labels.append("adapted from the French anime motto")
     elif offset in fidelity_offsets:
-        labels.append("corrigé d'après le chinois")
+        labels.append("corrected against the Chinese source")
     if (
         offset in naturalized_offsets
         and offset not in official_yellow_offsets
         and offset not in official_gen1_shared_offsets
         and offset not in anime_motto_offsets
     ):
-        labels.append("naturalisé en français")
-    return " + ".join(labels) if labels else "traduction principale"
+        labels.append("naturalized in French")
+    return " + ".join(labels) if labels else "main translation"
 
 
 def build_rows(
@@ -271,17 +274,17 @@ def build_rows(
     ]
     if len(entries) != 970:
         raise ValueError(
-            f"{len(entries)} dialogues principaux au lieu des 970 attendus"
+            f'{len(entries)} main dialogues; expected 970'
         )
     if len({entry.offset for entry in entries}) != len(entries):
-        raise ValueError("offsets de dialogues principaux non uniques")
+        raise ValueError("Main dialogue offsets are not unique")
 
     rows: list[ReviewRow] = []
     for index, entry in enumerate(entries, start=1):
         source = alignments.get(entry.offset)
         if source is None:
             raise ValueError(
-                f"0x{entry.offset:06X}: alignement chinois absent"
+                f'0x{entry.offset:06X}: missing Chinese alignment'
             )
         reviewed_source_pointer = REVIEWED_SOURCE_POINTER_BY_MAIN_OFFSET.get(
             entry.offset
@@ -304,8 +307,8 @@ def build_rows(
             reviewed_source = source_inventory.get(reviewed_source_pointer)
             if reviewed_source is None:
                 raise ValueError(
-                    f"0x{entry.offset:06X}: source chinoise relue "
-                    f"0x{reviewed_source_pointer:06X} absente"
+                    f"0x{entry.offset:06X}: reviewed Chinese source "
+                    f"0x{reviewed_source_pointer:06X} missing"
                 )
             chinese_text = reviewed_source["chinese_text"]
             alignment_confidence = "high"
@@ -331,7 +334,7 @@ def build_rows(
                 category=(
                     "Introduction"
                     if entry.layout == "dialogue_intro_17_19"
-                    else "Dialogue en jeu"
+                    else "In-game dialogue"
                 ),
                 offset_or_pointer=f"0x{entry.offset:06X}",
                 script_line=str(entry.line),
@@ -343,10 +346,10 @@ def build_rows(
                 alignment_confidence=alignment_confidence,
                 translation_history=history,
                 naturalized=(
-                    "oui" if entry.offset in naturalized_offsets else "non"
+                    "yes" if entry.offset in naturalized_offsets else "no"
                 ),
                 chinese_fidelity_corrected=(
-                    "oui" if entry.offset in fidelity_offsets else "non"
+                    "yes" if entry.offset in fidelity_offsets else "no"
                 ),
             )
         )
@@ -371,18 +374,18 @@ def build_rows(
         source = removed_source or source_inventory.get(reference)
         if source is None:
             raise ValueError(
-                f"0x{reference:06X}: source chinoise restaurée absente"
+                f"0x{reference:06X}: missing restored Chinese source"
             )
         if removed_source is not None:
             english_text = (
-                "ABSENT — dialogue supprimé de la ROM anglaise"
+                "ABSENT — dialogue removed from the English ROM"
             )
         elif reference in COLLAPSED_ENGLISH_POINTER_REFERENCES:
             shared_text = english_rom_text(source)
             english_text = (
-                "TEXTE MUTUALISÉ"
+                "SHARED TEXT"
                 + (
-                    f" — texte affiché : {shared_text}"
+                    f" — displayed text: {shared_text}"
                     if shared_text
                     else ""
                 )
@@ -390,14 +393,14 @@ def build_rows(
         else:
             miswired_text = english_rom_text(source)
             english_text = (
-                "POINTEUR ERRONÉ"
-                + (f" — texte affiché : {miswired_text}" if miswired_text else "")
+                "INCORRECT POINTER"
+                + (f" — displayed text: {miswired_text}" if miswired_text else "")
             )
         rows.append(
             ReviewRow(
                 public_id=f"D{next_index + relative_index:04d}",
                 stable_key=f"RESTORED:0x{reference:06X}",
-                category="Dialogue restauré",
+                category="Restored dialogue",
                 offset_or_pointer=f"0x{reference:06X}",
                 script_line="",
                 layout="dialogue_19_19",
@@ -405,61 +408,61 @@ def build_rows(
                 french_text=clean_source_text(french_text),
                 chinese_text=clean_source_text(source["chinese_text"]),
                 english_intermediate=clean_source_text(english_text),
-                alignment_confidence="source directe",
+                alignment_confidence="direct source",
                 translation_history=(
-                    "restauré d'après le chinois + adapté d'après "
-                    "Pokémon Jaune (FR)"
+                    "restored from the Chinese source + adapted from "
+                    "French Pokemon Yellow"
                     if reference in OFFICIAL_YELLOW_RESTORATION_REFERENCES
                     else (
-                        "restauré d'après le chinois + adapté d'après "
-                        "la devise française de l'anime"
+                        "restored from the Chinese source + adapted from "
+                        "the French anime motto"
                         if reference in ANIME_MOTTO_RESTORATION_REFERENCES
                         else (
-                            "restauré d'après le chinois + "
-                            "naturalisé en français"
+                            "restored from the Chinese source + "
+                            "naturalized in French"
                             if reference in naturalized_restoration_offsets
-                            else "restauré d'après le chinois"
+                            else "restored from the Chinese source"
                         )
                     )
                 ),
                 naturalized=(
-                    "oui"
+                    "yes"
                     if reference in naturalized_restoration_offsets
-                    else "non"
+                    else "no"
                 ),
-                chinese_fidelity_corrected="oui",
+                chinese_fidelity_corrected="yes",
             )
         )
 
     if len(rows) != 1055:
         raise ValueError(
-            f"{len(rows)} dialogues exportés au lieu des 1055 attendus"
+            f'{len(rows)} exported dialogues; expected 1055'
         )
     if len({row.public_id for row in rows}) != len(rows):
-        raise ValueError("IDs publics non uniques")
+        raise ValueError("Public IDs are not unique")
     if len({row.stable_key for row in rows}) != len(rows):
-        raise ValueError("clés techniques non uniques")
+        raise ValueError("Technical keys are not unique")
     return rows
 
 
 def write_csv(path: Path, rows: list[ReviewRow]) -> None:
     fields = (
         "id",
-        "cle_stable",
-        "categorie",
-        "offset_ou_pointeur",
-        "ligne_script",
+        "stable_key",
+        "category",
+        "source_offset_or_pointer",
+        "script_line",
         "layout",
-        "intervenant",
-        "texte_francais",
-        "texte_chinois_source",
-        "traduction_anglaise_rom_anglaise",
-        "confiance_alignement",
-        "historique_traduction",
-        "naturalise",
-        "corrige_d_apres_le_chinois",
-        "votre_verdict",
-        "votre_commentaire",
+        "speaker",
+        "french_reference_text",
+        "chinese_text",
+        "english_2015",
+        "alignment_confidence",
+        "translation_history",
+        "naturalized",
+        "chinese_fidelity_corrected",
+        "review_verdict",
+        "review_comment",
     )
     with path.open("w", newline="", encoding="utf-8-sig") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
@@ -468,25 +471,25 @@ def write_csv(path: Path, rows: list[ReviewRow]) -> None:
             writer.writerow(
                 {
                     "id": row.public_id,
-                    "cle_stable": row.stable_key,
-                    "categorie": row.category,
-                    "offset_ou_pointeur": row.offset_or_pointer,
-                    "ligne_script": row.script_line,
+                    "stable_key": row.stable_key,
+                    "category": row.category,
+                    "source_offset_or_pointer": row.offset_or_pointer,
+                    "script_line": row.script_line,
                     "layout": row.layout,
-                    "intervenant": row.speaker,
-                    "texte_francais": row.french_text,
-                    "texte_chinois_source": row.chinese_text,
-                    "traduction_anglaise_rom_anglaise": (
+                    "speaker": row.speaker,
+                    "french_reference_text": row.french_text,
+                    "chinese_text": row.chinese_text,
+                    "english_2015": (
                         row.english_intermediate
                     ),
-                    "confiance_alignement": row.alignment_confidence,
-                    "historique_traduction": row.translation_history,
-                    "naturalise": row.naturalized,
-                    "corrige_d_apres_le_chinois": (
+                    "alignment_confidence": row.alignment_confidence,
+                    "translation_history": row.translation_history,
+                    "naturalized": row.naturalized,
+                    "chinese_fidelity_corrected": (
                         row.chinese_fidelity_corrected
                     ),
-                    "votre_verdict": "",
-                    "votre_commentaire": "",
+                    "review_verdict": "",
+                    "review_comment": "",
                 }
             )
 
@@ -500,67 +503,41 @@ def markdown_text(text: str, *, missing: str = "—") -> str:
 
 def write_markdown(path: Path, rows: list[ReviewRow]) -> None:
     aligned = sum(bool(row.chinese_text) for row in rows)
-    naturalized = sum(row.naturalized == "oui" for row in rows)
-    restored = sum(row.category == "Dialogue restauré" for row in rows)
+    naturalized = sum(row.naturalized == "yes" for row in rows)
+    restored = sum(row.category == "Restored dialogue" for row in rows)
     lines = [
-        "# Liste exhaustive des dialogues français",
+        "# Complete dialogue source ledger",
         "",
-        (
-            f"Inventaire de **{len(rows)} dialogues** : "
-            f"{len(rows) - restored} dialogues principaux, "
-            f"dont 3 introductions, et {restored} dialogues restaurés "
-            "depuis la ROM chinoise."
-        ),
+        f"Inventory of **{len(rows)} dialogues**: {len(rows) - restored} main "
+        f"dialogues, including three introduction records, and {restored} "
+        "dialogues restored from the Chinese ROM.",
         "",
-        (
-            f"La source chinoise est directement alignée pour "
-            f"**{aligned}/{len(rows)} dialogues**. Les "
-            f"**{naturalized} dialogues** de la passe de naturalisation "
-            "sont signalés dans la colonne « Historique »."
-        ),
+        f"Chinese sources are aligned for **{aligned}/{len(rows)} dialogues**. "
+        f"The history column identifies the **{naturalized} dialogues** in "
+        "the French reference naturalization pass.",
         "",
-        (
-            "Pour demander une correction, indique simplement l'ID et ta "
-            "remarque, par exemple : `D0042 : formulation trop littérale`."
-        ),
+        "To request a correction, provide the ID and a note, for example: "
+        "`D0042: wording is too literal`.",
         "",
-        (
-            "Les retours à la ligne visibles dans une cellule correspondent "
-            "aux changements de page explicitement imposés dans le texte."
-        ),
+        "Line breaks inside cells represent explicitly authored page breaks.",
         "",
-        (
-            "| ID | Type | Intervenant | Texte français | "
-            "ROM anglaise | Source chinoise | Historique |"
-        ),
+        "| ID | Type | Speaker | French reference | English ROM | Chinese source | History |",
         "|---:|---|---|---|---|---|---|",
     ]
     for row in rows:
-        lines.append(
-            "| "
-            + " | ".join(
-                (
-                    row.public_id,
-                    markdown_text(row.category),
-                    markdown_text(row.speaker),
-                    markdown_text(row.french_text),
-                    markdown_text(row.english_intermediate),
-                    markdown_text(
-                        row.chinese_text,
-                        missing="Source non alignée automatiquement",
-                    ),
-                    markdown_text(row.translation_history),
-                )
-            )
-            + " |"
-        )
+        lines.append("| " + " | ".join((
+            row.public_id, markdown_text(row.category), markdown_text(row.speaker),
+            markdown_text(row.french_text), markdown_text(row.english_intermediate),
+            markdown_text(row.chinese_text, missing="Source not automatically aligned"),
+            markdown_text(row.translation_history),
+        )) + " |")
     lines.append("")
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Exporte la table exhaustive de relecture des dialogues."
+        description='Export the complete dialogue review table.'
     )
     parser.add_argument("--script", type=Path, default=ROM_DIR / "script.py")
     parser.add_argument("--alignment", type=Path, default=DEFAULT_ALIGNMENT)
@@ -619,7 +596,7 @@ def main() -> int:
     )
     write_csv(args.csv, rows)
     write_markdown(args.markdown, rows)
-    print(f"Dialogues exportés : {len(rows)}")
+    print(f"Exported dialogues : {len(rows)}")
     print(f"CSV : {args.csv}")
     print(f"Markdown : {args.markdown}")
     return 0

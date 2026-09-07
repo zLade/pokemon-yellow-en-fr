@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tests ciblés des règles à fort signal de l'audit qualité."""
+"""Targeted tests for high-signal quality audit rules."""
 
 from __future__ import annotations
 
@@ -30,6 +30,21 @@ def rule_ids(rows: list[Row]) -> set[str]:
 
 
 class AuditQualityAmbitiousTests(unittest.TestCase):
+    def test_fragment_categories_are_english_with_unchanged_detection(self) -> None:
+        cases = (
+            ("inter", "fragment_01", "fragment_switch"),
+            ("obte", "fragment_02", "fragment_obtained"),
+            ("mig", "fragment_03", "fragment_cute"),
+            ("membr", "fragment_10", "fragment_member"),
+            ("de- vore", "fragment_11", "fragment_devour"),
+            ("autres att", "fragment_14", "fragment_attacks"),
+        )
+        for text, rule_id, category in cases:
+            with self.subTest(text=text):
+                issues = audit_rows([row(0x040001, text)])
+                match = next(issue for issue in issues if issue["rule_id"] == rule_id)
+                self.assertEqual(match["category"], category)
+
     def test_csv_safe_page_breaks_are_restored_before_audit(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "dialogues.csv"
@@ -73,7 +88,7 @@ class AuditQualityAmbitiousTests(unittest.TestCase):
         )
 
         self.assertTrue(
-            {"english_balls", "mixed_oui_no", "article_ball", "pokeball_gender"}
+            {"english_balls", "mixed_yes_no", "article_ball", "pokeball_gender"}
             <= found
         )
 
@@ -90,7 +105,7 @@ class AuditQualityAmbitiousTests(unittest.TestCase):
         self.assertTrue(
             {
                 "english_balls",
-                "mixed_oui_no",
+                "mixed_yes_no",
                 "article_ball",
                 "pokeball_gender",
             }.isdisjoint(found)

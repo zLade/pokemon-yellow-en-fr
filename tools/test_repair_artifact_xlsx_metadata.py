@@ -57,7 +57,7 @@ class ArtifactMetadataRepairTests(unittest.TestCase):
                 node.encode("utf-8") + b"<x:sheetFormatPr",
             )
             with self.subTest(node=node):
-                with self.assertRaisesRegex(ValueError, "réévalué"):
+                with self.assertRaisesRegex(ValueError, "reassessed"):
                     repaired_worksheet_xml(payload)
 
     def test_populates_empty_sheet_views_emitted_by_artifact_tool(self) -> None:

@@ -59,7 +59,7 @@ def write_reviewed_catalogue(path: Path, *, pending_first: bool = False) -> None
     rows: list[dict[str, str]] = []
     for index in range(1844):
         if index < 967:
-            category = "Dialogue en jeu"
+            category = "In-game dialogue"
         elif index < 970:
             category = "Introduction"
         elif index < 1129:
@@ -85,7 +85,7 @@ def write_reviewed_catalogue(path: Path, *, pending_first: bool = False) -> None
             {
                 "stable_key": f"RESTORED:0x{index:06X}",
                 "record_type": "RESTORED",
-                "category": "Dialogue restauré",
+                "category": "Restored dialogue",
                 "chinese_text": f"恢复{index}",
                 "english_v2": f"Restored {index}",
                 "editorial_origin": "chinese_source_review",
@@ -277,7 +277,7 @@ class EnglishReleaseWrapperTests(unittest.TestCase):
             encoding="utf-8"
         )
         self.assertIn("if not all(external):", source)
-        self.assertIn("la release finale exige Lunar IPS", source)
+        self.assertIn("The final release requires Lunar IPS", source)
 
     def test_internal_ips_generator_round_trips_synthetic_bytes(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -332,7 +332,7 @@ class EnglishReleaseWrapperTests(unittest.TestCase):
             self.assertEqual(summary.as_dict(), dict(EXPECTED_CATALOG_COUNTS))
 
             write_reviewed_catalogue(catalog, pending_first=True)
-            with self.assertRaisesRegex(EnglishReleaseError, "non relue"):
+            with self.assertRaisesRegex(EnglishReleaseError, "unreviewed"):
                 validate_catalogue(catalog)
 
     def test_mesen_gate_binds_every_strict_region_run_to_target_hash(self) -> None:
@@ -352,7 +352,7 @@ class EnglishReleaseWrapperTests(unittest.TestCase):
                 ),
                 encoding="utf-8",
             )
-            with self.assertRaisesRegex(EnglishReleaseError, "autre SHA"):
+            with self.assertRaisesRegex(EnglishReleaseError, "different ROM SHA"):
                 validate_mesen_evidence(root, target_hash)
 
             first.write_text(
@@ -373,7 +373,7 @@ class EnglishReleaseWrapperTests(unittest.TestCase):
                 ),
                 encoding="utf-8",
             )
-            with self.assertRaisesRegex(EnglishReleaseError, "marqueur"):
+            with self.assertRaisesRegex(EnglishReleaseError, "marker"):
                 validate_mesen_evidence(root, target_hash)
 
     def test_patch_only_scan_rejects_extension_and_disguised_ines_magic(self) -> None:
@@ -386,13 +386,13 @@ class EnglishReleaseWrapperTests(unittest.TestCase):
 
             forbidden = root / "complete.nes"
             forbidden.write_bytes(b"not even a real ROM")
-            with self.assertRaisesRegex(EnglishReleaseError, "image complète"):
+            with self.assertRaisesRegex(EnglishReleaseError, "Complete ROM image"):
                 assert_no_complete_images(root)
             forbidden.unlink()
 
             disguised = root / "innocent.txt"
             disguised.write_bytes(b"NES\x1a" + b"\0" * 32)
-            with self.assertRaisesRegex(EnglishReleaseError, "image complète"):
+            with self.assertRaisesRegex(EnglishReleaseError, "Complete ROM image"):
                 assert_no_complete_images(root)
 
     def test_private_evidence_accepts_small_snapshots_but_rejects_roms(self) -> None:
@@ -408,12 +408,12 @@ class EnglishReleaseWrapperTests(unittest.TestCase):
             self.assertEqual((destination / "battery.sav").stat().st_size, 8192)
 
             (source / "headerless-rom.bin").write_bytes(b"\0" * (8192 + 1))
-            with self.assertRaisesRegex(EnglishReleaseError, "image complète"):
+            with self.assertRaisesRegex(EnglishReleaseError, "Complete ROM image"):
                 _copy_evidence_tree(source, destination)
             (source / "headerless-rom.bin").unlink()
 
             (source / "disguised.bin").write_bytes(b"NES\x1a" + b"\0" * 28)
-            with self.assertRaisesRegex(EnglishReleaseError, "image complète"):
+            with self.assertRaisesRegex(EnglishReleaseError, "Complete ROM image"):
                 _copy_evidence_tree(source, destination)
 
     def test_bundle_text_scan_rejects_local_absolute_paths(self) -> None:
@@ -424,7 +424,7 @@ class EnglishReleaseWrapperTests(unittest.TestCase):
                 '{"source": "C:\\\\Users\\\\alice\\\\private.nes"}\n',
                 encoding="utf-8",
             )
-            with self.assertRaisesRegex(EnglishReleaseError, "chemin absolu"):
+            with self.assertRaisesRegex(EnglishReleaseError, "Absolute path"):
                 assert_portable_text_tree(root)
             report.write_text('{"source": "$ROOT/yellow.nes"}\n', encoding="utf-8")
             assert_portable_text_tree(root)
@@ -465,7 +465,7 @@ class EnglishReleaseWrapperTests(unittest.TestCase):
             another_dist = root / "another-dist"
             another_private.mkdir()
             another_dist.mkdir()
-            with self.assertRaisesRegex(EnglishReleaseError, "existe déjà"):
+            with self.assertRaisesRegex(EnglishReleaseError, "already exists"):
                 publish_transactionally(
                     another_private,
                     private_destination,

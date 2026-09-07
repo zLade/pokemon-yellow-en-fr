@@ -49,55 +49,55 @@ class CameoMetadata:
 # rewrite cannot silently leave this CSV with the old English replacement.
 CAMEO_METADATA = (
     CameoMetadata(
-        "MAIN:0x0345E4", "creator_mention", "Kameiyu", "Avertissement",
+        "MAIN:0x0345E4", "creator_mention", "Kameiyu", "Warning",
     ),
     CameoMetadata(
-        "MAIN:0x0346A1", "creator_story_dialogue", "Kameiyu", "Boss secret",
+        "MAIN:0x0346A1", "creator_story_dialogue", "Kameiyu", "Secret boss",
     ),
     CameoMetadata(
-        "MAIN:0x034739", "creator_story_dialogue", "Kameiyu", "Boss secret",
+        "MAIN:0x034739", "creator_story_dialogue", "Kameiyu", "Secret boss",
     ),
     CameoMetadata(
-        "MAIN:0x0347A2", "creator_story_dialogue", "Kameiyu", "Don de Mew",
+        "MAIN:0x0347A2", "creator_story_dialogue", "Kameiyu", "Mew gift",
     ),
     CameoMetadata(
-        "MAIN:0x034873", "creator_story_dialogue", "Kameiyu", "Après-combat",
+        "MAIN:0x034873", "creator_story_dialogue", "Kameiyu", "After battle",
     ),
     CameoMetadata(
         "MAIN:0x034887", "creator_story_dialogue", "Beibei", "Compliment",
     ),
     CameoMetadata(
-        "MAIN:0x0348B5", "creator_story_dialogue", "Xiao Li", "Avertissement",
+        "MAIN:0x0348B5", "creator_story_dialogue", "Xiao Li", "Warning",
     ),
     CameoMetadata(
-        "MAIN:0x0353F0", "creator_mention", "Kameiyu", "Rumeur",
+        "MAIN:0x0353F0", "creator_mention", "Kameiyu", "Rumor",
     ),
     CameoMetadata(
-        "MAIN:0x037A51", "creator_mention", "Kameiyu", "Annonce",
+        "MAIN:0x037A51", "creator_mention", "Kameiyu", "Announcement",
     ),
     CameoMetadata(
-        "MAIN:0x037ADC", "creator_story_dialogue", "Kameiyu", "Défi secret",
+        "MAIN:0x037ADC", "creator_story_dialogue", "Kameiyu", "Secret challenge",
     ),
     CameoMetadata(
-        "MAIN:0x03BAB6", "creator_story_dialogue", "Beibei", "Don d'Évoli",
+        "MAIN:0x03BAB6", "creator_story_dialogue", "Beibei", "Eevee gift",
     ),
     CameoMetadata(
-        "MAIN:0x03BCF6", "developer_office", "Xiaohong", "Graphiste",
+        "MAIN:0x03BCF6", "developer_office", "Xiaohong", "Graphic artist",
     ),
     CameoMetadata(
-        "MAIN:0x03BD1A", "developer_office", "Kameiyu", "Scénariste",
+        "MAIN:0x03BD1A", "developer_office", "Kameiyu", "Writer",
     ),
     CameoMetadata(
-        "MAIN:0x03BD3F", "developer_office", "Wei Cunfu", "Programmeur",
+        "MAIN:0x03BD3F", "developer_office", "Wei Cunfu", "Programmer",
     ),
     CameoMetadata(
-        "MAIN:0x03BD65", "developer_office", "BOSS", "Responsable",
+        "MAIN:0x03BD65", "developer_office", "BOSS", "Manager",
     ),
     CameoMetadata(
-        "MAIN:0x03BE0E", "creator_story_dialogue", "Xiao Li", "Don secret",
+        "MAIN:0x03BE0E", "creator_story_dialogue", "Xiao Li", "Secret gift",
     ),
     CameoMetadata(
-        "RESTORED:0x0331D1", "creator_mention", "Kameiyu", "Avertissement",
+        "RESTORED:0x0331D1", "creator_mention", "Kameiyu", "Warning",
     ),
 )
 
@@ -126,20 +126,20 @@ def build_cameo_rows(
         if metadata.stable_key not in by_key
     ]
     if missing:
-        raise ValueError("clés de caméos absentes : " + ", ".join(missing))
+        raise ValueError("Missing cameo keys : " + ", ".join(missing))
     result: list[dict[str, str]] = []
     for metadata in CAMEO_METADATA:
         dialogue = by_key[metadata.stable_key]
         result.append(
             {
                 "id": dialogue.public_id,
-                "cle_stable": dialogue.stable_key,
+                "stable_key": dialogue.stable_key,
                 "scope": metadata.scope,
-                "createur_ou_cameo": metadata.creator,
-                "role_source": metadata.source_role,
-                "texte_chinois_source": dialogue.chinese_text,
-                "texte_francais_actuel": dialogue.french_text,
-                "statut": "restauré dans la version française",
+                "creator_or_cameo": metadata.creator,
+                "source_role": metadata.source_role,
+                "chinese_text": dialogue.chinese_text,
+                "french_reference_text": dialogue.french_text,
+                "status": "restored in the French version",
             }
         )
     return result
@@ -149,13 +149,13 @@ def write_csv(path: Path, rows: list[dict[str, str]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fields = (
         "id",
-        "cle_stable",
+        "stable_key",
         "scope",
-        "createur_ou_cameo",
-        "role_source",
-        "texte_chinois_source",
-        "texte_francais_actuel",
-        "statut",
+        "creator_or_cameo",
+        "source_role",
+        "chinese_text",
+        "french_reference_text",
+        "status",
     )
     with path.open("w", newline="", encoding="utf-8-sig") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
@@ -165,13 +165,13 @@ def write_csv(path: Path, rows: list[dict[str, str]]) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Régénère l'inventaire courant des caméos des créateurs."
+        description='Regenerate the current creator-cameo inventory.'
     )
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
     rows = build_cameo_rows()
     write_csv(args.output, rows)
-    print(f"Caméos exportés : {len(rows)}")
+    print(f"Exported cameos : {len(rows)}")
     print(f"CSV : {args.output}")
     return 0
 

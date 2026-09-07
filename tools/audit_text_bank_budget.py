@@ -89,12 +89,12 @@ def check_floors(
         )
         if budget.free_bytes < floor.minimum_free_bytes:
             errors.append(
-                f"pair {floor.pair}: {budget.free_bytes} octets libres, "
+                f"pair {floor.pair}: {budget.free_bytes} free bytes, "
                 f"minimum {floor.minimum_free_bytes}"
             )
         if budget.largest_block < floor.minimum_largest_block:
             errors.append(
-                f"pair {floor.pair}: plus grand bloc "
+                f"pair {floor.pair}: largest block "
                 f"{budget.largest_block}, minimum "
                 f"{floor.minimum_largest_block}"
             )
@@ -111,14 +111,14 @@ def parse_floor(value: str) -> BudgetFloor:
         )
     except (TypeError, ValueError) as error:
         raise argparse.ArgumentTypeError(
-            "format attendu PAIR:OCTETS_LIBRES:PLUS_GRAND_BLOC"
+            "expected format PAIR:FREE_BYTES:LARGEST_BLOCK"
         ) from error
     if min(
         floor.pair,
         floor.minimum_free_bytes,
         floor.minimum_largest_block,
     ) < 0:
-        raise argparse.ArgumentTypeError("les valeurs doivent être positives")
+        raise argparse.ArgumentTypeError("values must be non-negative")
     return floor
 
 
@@ -164,8 +164,8 @@ def build_report(args: argparse.Namespace) -> tuple[dict[str, object], list[str]
         if pair in (6, 7)
     }
     errors = [
-        f"allocation impossible à 0x{offset:06X}: "
-        f"{size} octets dans le pair {pair}"
+        f"allocation failed at 0x{offset:06X}: "
+        f"{size} bytes in pair {pair}"
         for offset, size, pair in failures
     ]
     errors.extend(check_floors(pairs, args.floor))
@@ -198,8 +198,8 @@ def build_report(args: argparse.Namespace) -> tuple[dict[str, object], list[str]
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Mesure la capacité résiduelle des banques de texte après "
-            "l'allocation déterministe."
+            "Measure the remaining text-bank capacity after "
+            "deterministic allocation."
         )
     )
     parser.add_argument("--csv", default="traduction_base.csv")
@@ -209,10 +209,10 @@ def build_parser() -> argparse.ArgumentParser:
         action="append",
         type=parse_floor,
         default=[],
-        metavar="PAIR:LIBRE:BLOC",
-        help="seuil minimal répétable par pair de banques",
+        metavar="PAIR:FREE:BLOCK",
+        help="repeatable minimum threshold per bank pair",
     )
-    parser.add_argument("--output", help="écrit aussi le rapport JSON")
+    parser.add_argument("--output", help="also write the JSON report")
     return parser
 
 

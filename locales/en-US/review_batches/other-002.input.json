@@ -30,7 +30,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "8",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0306FE",
@@ -51,7 +51,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "11",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x03070B",
@@ -93,7 +93,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "11",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x030720",
@@ -114,7 +114,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "11",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x03072D",
@@ -156,7 +156,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "11",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x030744",
@@ -177,7 +177,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "11",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x030750",
@@ -198,7 +198,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "11",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x03075C",
@@ -303,7 +303,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "7",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x030782",
@@ -324,7 +324,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "9",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x03078C",
@@ -345,7 +345,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "9",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x030796",
@@ -366,7 +366,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "9",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0307A0",
@@ -387,7 +387,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "9",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0307AA",
@@ -408,7 +408,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "9",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0307B9",
@@ -429,7 +429,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "10",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0307C4",
@@ -450,7 +450,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "10",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0307CF",
@@ -471,7 +471,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "10",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0307DA",
@@ -912,7 +912,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "9",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x030955",
@@ -1080,7 +1080,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031108",
@@ -1101,7 +1101,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x03110F",
@@ -1122,7 +1122,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "8",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031118",
@@ -1143,7 +1143,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x03111F",
@@ -1164,7 +1164,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031126",
@@ -1248,7 +1248,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031142",
@@ -1269,7 +1269,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031149",
@@ -1290,7 +1290,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031150",
@@ -1311,7 +1311,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x03115A",
@@ -1332,7 +1332,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031166",
@@ -1353,7 +1353,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031170",
@@ -1374,7 +1374,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031177",
@@ -1437,7 +1437,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "8",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x03118F",
@@ -1458,7 +1458,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031196",
@@ -1500,7 +1500,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "8",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0311A5",
@@ -1521,7 +1521,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "8",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0311AE",
@@ -1542,7 +1542,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0311B5",
@@ -1563,7 +1563,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0311BC",
@@ -1605,7 +1605,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "8",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0311CD",
@@ -1647,7 +1647,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0311DB",
@@ -1668,7 +1668,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0311E2",
@@ -1689,7 +1689,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "4",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0311EC",
@@ -1710,7 +1710,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0311F3",
@@ -1731,7 +1731,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x0311FA",
@@ -1752,7 +1752,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "4",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031204",
@@ -1773,7 +1773,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x03120B",
@@ -1794,7 +1794,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031212",
@@ -1815,7 +1815,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "8",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x03121B",
@@ -1836,7 +1836,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "8",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031224",
@@ -1878,7 +1878,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031231",
@@ -1899,7 +1899,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031238",
@@ -1941,7 +1941,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031248",
@@ -1962,7 +1962,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031252",
@@ -2025,7 +2025,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "6",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x03126B",
@@ -2109,7 +2109,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "4",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     }
   ]
 }

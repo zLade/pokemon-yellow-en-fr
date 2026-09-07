@@ -1,4 +1,4 @@
-# Profils classés par couverture observée.
+# Profiles ranked by observed coverage.
 tools/campaign/explorer_dialogue_offset2_profile.txt
 tools/campaign/explorer_target_e90610aa_profile.txt
 tools/campaign/explorer_building_probe_all_offset2_profile.txt

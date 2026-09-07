@@ -46,8 +46,8 @@ class BudgetFloorTests(unittest.TestCase):
         errors = check_floors(budgets, [BudgetFloor(6, 40, 32)])
 
         self.assertEqual(len(errors), 2)
-        self.assertIn("32 octets libres", errors[0])
-        self.assertIn("plus grand bloc 24", errors[1])
+        self.assertIn("32 free bytes", errors[0])
+        self.assertIn("largest block 24", errors[1])
 
     def test_missing_pair_fails_nonzero_floor(self) -> None:
         errors = check_floors({}, [BudgetFloor(7, 1, 1)])

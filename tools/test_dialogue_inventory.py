@@ -41,7 +41,7 @@ class DialogueInventoryTests(unittest.TestCase):
         self.assertEqual(semantic, record["semantic_text_proposed"])
 
     def test_stale_source_is_fatal(self) -> None:
-        with self.assertRaisesRegex(ValueError, "divergé"):
+        with self.assertRaisesRegex(ValueError, "diverged"):
             reviewed_dialogue_override(0x0333FF, "Texte changé")
 
     def test_unlisted_offset_has_no_override(self) -> None:
@@ -99,7 +99,7 @@ class DialogueInventoryTests(unittest.TestCase):
         )
 
     def test_stale_pokedex_source_is_fatal(self) -> None:
-        with self.assertRaisesRegex(ValueError, "divergé"):
+        with self.assertRaisesRegex(ValueError, "diverged"):
             reviewed_pokedex_override(0x03247F, "Texte changé")
 
 

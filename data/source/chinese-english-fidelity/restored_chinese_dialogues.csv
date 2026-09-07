@@ -1,166 +1,166 @@
-﻿id,cle_stable,pointer_reference_hex,texte_chinois_source,traduction_anglaise_rom_anglaise,texte_francais_actuel,statut
-D0971,RESTORED:0x033137,0x033137,武藏:我们是穿过银河系的即将解散的火箭队!,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
+﻿id,stable_key,pointer_reference_hex,chinese_text,english_2015,french_reference_text,status
+D0971,RESTORED:0x033137,0x033137,武藏:我们是穿过银河系的即将解散的火箭队!,ABSENT — dialogue removed from the English ROM,"JESSIE :
 La Team Rocket
 traverse l'espace !
-Sa fin est proche !",restauré et vérifié dans la ROM française
-D0972,RESTORED:0x033139,0x033139,"小次郎:黑洞,没有明天的黑色在等着我们!",ABSENT — dialogue supprimé de la ROM anglaise,JAMES : Trou noir ! Aucun lendemain !,restauré et vérifié dans la ROM française
-D0973,RESTORED:0x03313B,0x03313B,喵喵:就是这样!!,ABSENT — dialogue supprimé de la ROM anglaise,MIAOUSS : C'est ça !,restauré et vérifié dans la ROM française
-D0974,RESTORED:0x03313D,0x03313D,小次郎:怎么没次都这样...,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : Pourquoi toujours pareil...,restauré et vérifié dans la ROM française
-D0975,RESTORED:0x03313F,0x03313F,武藏:好讨厌的感觉哟...,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : C'est affreux...,restauré et vérifié dans la ROM française
-D0976,RESTORED:0x033141,0x033141,喵喵:喵...,ABSENT — dialogue supprimé de la ROM anglaise,MIAOUSS : Miaouss...,restauré et vérifié dans la ROM française
-D0977,RESTORED:0x033193,0x033193,小智:超梦?,ABSENT — dialogue supprimé de la ROM anglaise,SACHA : Mewtwo ?,restauré et vérifié dans la ROM française
-D0978,RESTORED:0x033195,0x033195,"加纳:是火箭队干的好事,他们用梦幻的遗传基因克隆出来的精灵...幸好你及时发现了才没有造成大的轰动!我也该返回联盟了那么随时欢迎你到联盟挑战!",ABSENT — dialogue supprimé de la ROM anglaise,"OLGA :
+Sa fin est proche !",restored and verified in the French ROM
+D0972,RESTORED:0x033139,0x033139,"小次郎:黑洞,没有明天的黑色在等着我们!",ABSENT — dialogue removed from the English ROM,JAMES : Trou noir ! Aucun lendemain !,restored and verified in the French ROM
+D0973,RESTORED:0x03313B,0x03313B,喵喵:就是这样!!,ABSENT — dialogue removed from the English ROM,MIAOUSS : C'est ça !,restored and verified in the French ROM
+D0974,RESTORED:0x03313D,0x03313D,小次郎:怎么没次都这样...,ABSENT — dialogue removed from the English ROM,JAMES : Pourquoi toujours pareil...,restored and verified in the French ROM
+D0975,RESTORED:0x03313F,0x03313F,武藏:好讨厌的感觉哟...,ABSENT — dialogue removed from the English ROM,JESSIE : C'est affreux...,restored and verified in the French ROM
+D0976,RESTORED:0x033141,0x033141,喵喵:喵...,ABSENT — dialogue removed from the English ROM,MIAOUSS : Miaouss...,restored and verified in the French ROM
+D0977,RESTORED:0x033193,0x033193,小智:超梦?,ABSENT — dialogue removed from the English ROM,SACHA : Mewtwo ?,restored and verified in the French ROM
+D0978,RESTORED:0x033195,0x033195,"加纳:是火箭队干的好事,他们用梦幻的遗传基因克隆出来的精灵...幸好你及时发现了才没有造成大的轰动!我也该返回联盟了那么随时欢迎你到联盟挑战!",ABSENT — dialogue removed from the English ROM,"OLGA :
 La Team Rocket
 a cloné Mewtwo
 avec l'ADN de Mew.
 Tu l'as trouvé.
 Juste à temps !
 Je file à la Ligue.
-Viens nous défier !",restauré et vérifié dans la ROM française
-D0979,RESTORED:0x033197,0x033197,小智:一定会的!,ABSENT — dialogue supprimé de la ROM anglaise,"SACHA :
-Compte sur moi !",restauré et vérifié dans la ROM française
-D0980,RESTORED:0x033199,0x033199,"加纳:啊,对了!我有件礼物要送给你!朋友给我的梦幻旅行船票...但我因为还有联盟的事情没时间去作为答谢就送给你了.",ABSENT — dialogue supprimé de la ROM anglaise,"OLGA :
+Viens nous défier !",restored and verified in the French ROM
+D0979,RESTORED:0x033197,0x033197,小智:一定会的!,ABSENT — dialogue removed from the English ROM,"SACHA :
+Compte sur moi !",restored and verified in the French ROM
+D0980,RESTORED:0x033199,0x033199,"加纳:啊,对了!我有件礼物要送给你!朋友给我的梦幻旅行船票...但我因为还有联盟的事情没时间去作为答谢就送给你了.",ABSENT — dialogue removed from the English ROM,"OLGA :
 Un ami m'a donné
 ce Ticket Mystik.
 La Ligue m'occupe.
-C'est ton cadeau !",restauré et vérifié dans la ROM française
-D0981,RESTORED:0x0331B3,0x0331B3,武藏:既然你诚心诚意的问了,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
-Nous revoilà !",restauré et vérifié dans la ROM française
-D0982,RESTORED:0x0331B5,0x0331B5,小次郎:那我就大发慈悲的告诉你们!,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : Un mauvais tour vous attend !,restauré et vérifié dans la ROM française
-D0983,RESTORED:0x0331B7,0x0331B7,武藏:为了防止世界被破坏,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
+C'est ton cadeau !",restored and verified in the French ROM
+D0981,RESTORED:0x0331B3,0x0331B3,武藏:既然你诚心诚意的问了,ABSENT — dialogue removed from the English ROM,"JESSIE :
+Nous revoilà !",restored and verified in the French ROM
+D0982,RESTORED:0x0331B5,0x0331B5,小次郎:那我就大发慈悲的告诉你们!,ABSENT — dialogue removed from the English ROM,JAMES : Un mauvais tour vous attend !,restored and verified in the French ROM
+D0983,RESTORED:0x0331B7,0x0331B7,武藏:为了防止世界被破坏,ABSENT — dialogue removed from the English ROM,"JESSIE :
 Préservons le monde
-de la dévastation !",restauré et vérifié dans la ROM française
-D0984,RESTORED:0x0331B9,0x0331B9,小次郎:为了维护世界的和平.,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Peuples du monde, ralliez notre nation !",restauré et vérifié dans la ROM française
-D0985,RESTORED:0x0331BB,0x0331BB,武藏:坚持爱与真实的罪恶,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Écrasons amour et vérité !,restauré et vérifié dans la ROM française
-D0986,RESTORED:0x0331BD,0x0331BD,小次郎:最有魅力的反派人物!,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES :
+de la dévastation !",restored and verified in the French ROM
+D0984,RESTORED:0x0331B9,0x0331B9,小次郎:为了维护世界的和平.,ABSENT — dialogue removed from the English ROM,"JAMES : Peuples du monde, ralliez notre nation !",restored and verified in the French ROM
+D0985,RESTORED:0x0331BB,0x0331BB,武藏:坚持爱与真实的罪恶,ABSENT — dialogue removed from the English ROM,JESSIE : Écrasons amour et vérité !,restored and verified in the French ROM
+D0986,RESTORED:0x0331BD,0x0331BD,小次郎:最有魅力的反派人物!,ABSENT — dialogue removed from the English ROM,"JAMES :
 Notre pouvoir
 s'étend jusqu'à
-la Voie Lactée !",restauré et vérifié dans la ROM française
-D0987,RESTORED:0x0331BF,0x0331BF,武藏:武藏!,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Jessie !,restauré et vérifié dans la ROM française
-D0988,RESTORED:0x0331C1,0x0331C1,小次郎:小次郎!,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : James !,restauré et vérifié dans la ROM française
-D0989,RESTORED:0x0331C3,0x0331C3,武藏:我们是穿过银河系的南晶队!,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
+la Voie Lactée !",restored and verified in the French ROM
+D0987,RESTORED:0x0331BF,0x0331BF,武藏:武藏!,ABSENT — dialogue removed from the English ROM,JESSIE : Jessie !,restored and verified in the French ROM
+D0988,RESTORED:0x0331C1,0x0331C1,小次郎:小次郎!,ABSENT — dialogue removed from the English ROM,JAMES : James !,restored and verified in the French ROM
+D0989,RESTORED:0x0331C3,0x0331C3,武藏:我们是穿过银河系的南晶队!,ABSENT — dialogue removed from the English ROM,"JESSIE :
 La Team Nanjing,
 plus rapide
-que la lumière !",restauré et vérifié dans la ROM française
-D0990,RESTORED:0x0331C5,0x0331C5,"小次郎:白洞,白色的明天在等着我们!",ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Rendez-vous, sinon guerre à vous !",restauré et vérifié dans la ROM française
-D0991,RESTORED:0x0331C7,0x0331C7,喵喵:说的对!喵...,ABSENT — dialogue supprimé de la ROM anglaise,"MIAOUSS : Miaouss, oui la guerre !",restauré et vérifié dans la ROM française
-D0992,RESTORED:0x0331C9,0x0331C9,"小次郎:我们现在跟了新的老大,已经不是从前的我们了!!",ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Nouveau Boss, on a changé !",restauré et vérifié dans la ROM française
-D0993,RESTORED:0x0331D1,0x0331D1,"小次郎:尽管你的实力非常强,但是碰上我们新老大卡美优的精灵只有落败的份!哈哈哈",ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Tu es fort.
+que la lumière !",restored and verified in the French ROM
+D0990,RESTORED:0x0331C5,0x0331C5,"小次郎:白洞,白色的明天在等着我们!",ABSENT — dialogue removed from the English ROM,"JAMES : Rendez-vous, sinon guerre à vous !",restored and verified in the French ROM
+D0991,RESTORED:0x0331C7,0x0331C7,喵喵:说的对!喵...,ABSENT — dialogue removed from the English ROM,"MIAOUSS : Miaouss, oui la guerre !",restored and verified in the French ROM
+D0992,RESTORED:0x0331C9,0x0331C9,"小次郎:我们现在跟了新的老大,已经不是从前的我们了!!",ABSENT — dialogue removed from the English ROM,"JAMES : Nouveau Boss, on a changé !",restored and verified in the French ROM
+D0993,RESTORED:0x0331D1,0x0331D1,"小次郎:尽管你的实力非常强,但是碰上我们新老大卡美优的精灵只有落败的份!哈哈哈",ABSENT — dialogue removed from the English ROM,"JAMES : Tu es fort.
 Pourtant,
 notre nouveau chef,
 Kameiyu, te battra
 avec ses Pokémon !
-Ha ha !",restauré et vérifié dans la ROM française
-D0994,RESTORED:0x038313,0x038313,小次郎:那我就大发慈悲的告诉你们!,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : Un mauvais tour vous attend !,restauré et vérifié dans la ROM française
-D0995,RESTORED:0x038315,0x038315,武藏:为了防止世界被破坏,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
+Ha ha !",restored and verified in the French ROM
+D0994,RESTORED:0x038313,0x038313,小次郎:那我就大发慈悲的告诉你们!,ABSENT — dialogue removed from the English ROM,JAMES : Un mauvais tour vous attend !,restored and verified in the French ROM
+D0995,RESTORED:0x038315,0x038315,武藏:为了防止世界被破坏,ABSENT — dialogue removed from the English ROM,"JESSIE :
 Préservons le monde
-de la dévastation !",restauré et vérifié dans la ROM française
-D0996,RESTORED:0x038317,0x038317,小次郎:为了维护世界的和平.,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Peuples du monde, ralliez notre nation !",restauré et vérifié dans la ROM française
-D0997,RESTORED:0x038319,0x038319,武藏:坚持爱与真实的罪恶,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Écrasons amour et vérité !,restauré et vérifié dans la ROM française
-D0998,RESTORED:0x03831B,0x03831B,小次郎:最有魅力的反派人物!,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES :
+de la dévastation !",restored and verified in the French ROM
+D0996,RESTORED:0x038317,0x038317,小次郎:为了维护世界的和平.,ABSENT — dialogue removed from the English ROM,"JAMES : Peuples du monde, ralliez notre nation !",restored and verified in the French ROM
+D0997,RESTORED:0x038319,0x038319,武藏:坚持爱与真实的罪恶,ABSENT — dialogue removed from the English ROM,JESSIE : Écrasons amour et vérité !,restored and verified in the French ROM
+D0998,RESTORED:0x03831B,0x03831B,小次郎:最有魅力的反派人物!,ABSENT — dialogue removed from the English ROM,"JAMES :
 Notre pouvoir
 s'étend jusqu'à
-la Voie Lactée !",restauré et vérifié dans la ROM française
-D0999,RESTORED:0x03831D,0x03831D,武藏:武藏!,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Jessie !,restauré et vérifié dans la ROM française
-D1000,RESTORED:0x03831F,0x03831F,小次郎:小次郎!,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : James !,restauré et vérifié dans la ROM française
-D1001,RESTORED:0x038321,0x038321,武藏:我们是穿过银河系的火箭队!,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
+la Voie Lactée !",restored and verified in the French ROM
+D0999,RESTORED:0x03831D,0x03831D,武藏:武藏!,ABSENT — dialogue removed from the English ROM,JESSIE : Jessie !,restored and verified in the French ROM
+D1000,RESTORED:0x03831F,0x03831F,小次郎:小次郎!,ABSENT — dialogue removed from the English ROM,JAMES : James !,restored and verified in the French ROM
+D1001,RESTORED:0x038321,0x038321,武藏:我们是穿过银河系的火箭队!,ABSENT — dialogue removed from the English ROM,"JESSIE :
 La Team Rocket,
 plus rapide
-que la lumière !",restauré et vérifié dans la ROM française
-D1002,RESTORED:0x038323,0x038323,"小次郎:白洞,白色的明天在等着我们!",ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Rendez-vous, sinon guerre à vous !",restauré et vérifié dans la ROM française
-D1003,RESTORED:0x038325,0x038325,喵喵:说的对!喵...,ABSENT — dialogue supprimé de la ROM anglaise,"MIAOUSS : Miaouss, oui la guerre !",restauré et vérifié dans la ROM française
-D1004,RESTORED:0x038347,0x038347,迷你裙:我承认你了,POINTEUR ERRONÉ — texte affiché : NON TRADUIT — texte chinois conservé dans la ROM anglaise,FILLETTE : Tu as fait tes preuves.,restauré et vérifié dans la ROM française
-D1005,RESTORED:0x03834B,0x03834B,谈判小子:有两下子,POINTEUR ERRONÉ — texte affiché : Got Charmander!,GARÇON : Pas mal !,restauré et vérifié dans la ROM française
-D1006,RESTORED:0x03834F,0x03834F,迷你裙:我今后就关注你吧,POINTEUR ERRONÉ — texte affiché : I saw trainers fromall over!,"FILLETTE :
-Je te surveillerai.",restauré et vérifié dans la ROM française
-D1007,RESTORED:0x038353,0x038353,侦察员:你是第一个打败我们的,POINTEUR ERRONÉ — texte affiché : I'm off to see Bill,"SCOUT :
+que la lumière !",restored and verified in the French ROM
+D1002,RESTORED:0x038323,0x038323,"小次郎:白洞,白色的明天在等着我们!",ABSENT — dialogue removed from the English ROM,"JAMES : Rendez-vous, sinon guerre à vous !",restored and verified in the French ROM
+D1003,RESTORED:0x038325,0x038325,喵喵:说的对!喵...,ABSENT — dialogue removed from the English ROM,"MIAOUSS : Miaouss, oui la guerre !",restored and verified in the French ROM
+D1004,RESTORED:0x038347,0x038347,迷你裙:我承认你了,INCORRECT POINTER — displayed text: UNTRANSLATED — Chinese text retained in the English ROM,FILLETTE : Tu as fait tes preuves.,restored and verified in the French ROM
+D1005,RESTORED:0x03834B,0x03834B,谈判小子:有两下子,INCORRECT POINTER — displayed text: Got Charmander!,GARÇON : Pas mal !,restored and verified in the French ROM
+D1006,RESTORED:0x03834F,0x03834F,迷你裙:我今后就关注你吧,INCORRECT POINTER — displayed text: I saw trainers fromall over!,"FILLETTE :
+Je te surveillerai.",restored and verified in the French ROM
+D1007,RESTORED:0x038353,0x038353,侦察员:你是第一个打败我们的,INCORRECT POINTER — displayed text: I'm off to see Bill,"SCOUT :
 Tu es le premier
 à nous avoir tous
-battus !",restauré et vérifié dans la ROM française
-D1008,RESTORED:0x03AF94,0x03AF94,小智:你们是?,ABSENT — dialogue supprimé de la ROM anglaise,"SACHA :
-Qui êtes-vous ?",restauré et vérifié dans la ROM française
-D1009,RESTORED:0x03AF96,0x03AF96,武藏:既然你诚心诚意的问了,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
-Nous revoilà !",restauré et vérifié dans la ROM française
-D1010,RESTORED:0x03AF98,0x03AF98,小次郎:那我就大发慈悲的告诉你们!,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : Un mauvais tour vous attend !,restauré et vérifié dans la ROM française
-D1011,RESTORED:0x03AF9A,0x03AF9A,武藏:为了防止世界被破坏,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
+battus !",restored and verified in the French ROM
+D1008,RESTORED:0x03AF94,0x03AF94,小智:你们是?,ABSENT — dialogue removed from the English ROM,"SACHA :
+Qui êtes-vous ?",restored and verified in the French ROM
+D1009,RESTORED:0x03AF96,0x03AF96,武藏:既然你诚心诚意的问了,ABSENT — dialogue removed from the English ROM,"JESSIE :
+Nous revoilà !",restored and verified in the French ROM
+D1010,RESTORED:0x03AF98,0x03AF98,小次郎:那我就大发慈悲的告诉你们!,ABSENT — dialogue removed from the English ROM,JAMES : Un mauvais tour vous attend !,restored and verified in the French ROM
+D1011,RESTORED:0x03AF9A,0x03AF9A,武藏:为了防止世界被破坏,ABSENT — dialogue removed from the English ROM,"JESSIE :
 Préservons le monde
-de la dévastation !",restauré et vérifié dans la ROM française
-D1012,RESTORED:0x03AF9C,0x03AF9C,小次郎:为了维护世界的和平.,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Peuples du monde, ralliez notre nation !",restauré et vérifié dans la ROM française
-D1013,RESTORED:0x03AF9E,0x03AF9E,武藏:坚持爱与真实的罪恶,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Écrasons amour et vérité !,restauré et vérifié dans la ROM française
-D1014,RESTORED:0x03AFA0,0x03AFA0,小次郎:最有魅力的反派人物!,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES :
+de la dévastation !",restored and verified in the French ROM
+D1012,RESTORED:0x03AF9C,0x03AF9C,小次郎:为了维护世界的和平.,ABSENT — dialogue removed from the English ROM,"JAMES : Peuples du monde, ralliez notre nation !",restored and verified in the French ROM
+D1013,RESTORED:0x03AF9E,0x03AF9E,武藏:坚持爱与真实的罪恶,ABSENT — dialogue removed from the English ROM,JESSIE : Écrasons amour et vérité !,restored and verified in the French ROM
+D1014,RESTORED:0x03AFA0,0x03AFA0,小次郎:最有魅力的反派人物!,ABSENT — dialogue removed from the English ROM,"JAMES :
 Notre pouvoir
 s'étend jusqu'à
-la Voie Lactée !",restauré et vérifié dans la ROM française
-D1015,RESTORED:0x03AFA2,0x03AFA2,武藏:武藏!,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Jessie !,restauré et vérifié dans la ROM française
-D1016,RESTORED:0x03AFA4,0x03AFA4,小次郎:小次郎!,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : James !,restauré et vérifié dans la ROM française
-D1017,RESTORED:0x03AFA6,0x03AFA6,武藏:我们是穿过银河系的火箭队!,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
+la Voie Lactée !",restored and verified in the French ROM
+D1015,RESTORED:0x03AFA2,0x03AFA2,武藏:武藏!,ABSENT — dialogue removed from the English ROM,JESSIE : Jessie !,restored and verified in the French ROM
+D1016,RESTORED:0x03AFA4,0x03AFA4,小次郎:小次郎!,ABSENT — dialogue removed from the English ROM,JAMES : James !,restored and verified in the French ROM
+D1017,RESTORED:0x03AFA6,0x03AFA6,武藏:我们是穿过银河系的火箭队!,ABSENT — dialogue removed from the English ROM,"JESSIE :
 La Team Rocket,
 plus rapide
-que la lumière !",restauré et vérifié dans la ROM française
-D1018,RESTORED:0x03AFA8,0x03AFA8,"小次郎:白洞,白色的明天在等着我们!",ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Rendez-vous, sinon guerre à vous !",restauré et vérifié dans la ROM française
-D1019,RESTORED:0x03AFAA,0x03AFAA,喵喵:说的对!喵...,ABSENT — dialogue supprimé de la ROM anglaise,"MIAOUSS : Miaouss, oui la guerre !",restauré et vérifié dans la ROM française
-D1020,RESTORED:0x03AFAC,0x03AFAC,小次郎:现在就让我们算清旧帐吧!!,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : C'est l'heure de régler nos vieux comptes !,restauré et vérifié dans la ROM française
-D1021,RESTORED:0x03AFB0,0x03AFB0,武藏:好讨厌的感觉哟...,ABSENT — dialogue supprimé de la ROM anglaise,"TEAM ROCKET :
+que la lumière !",restored and verified in the French ROM
+D1018,RESTORED:0x03AFA8,0x03AFA8,"小次郎:白洞,白色的明天在等着我们!",ABSENT — dialogue removed from the English ROM,"JAMES : Rendez-vous, sinon guerre à vous !",restored and verified in the French ROM
+D1019,RESTORED:0x03AFAA,0x03AFAA,喵喵:说的对!喵...,ABSENT — dialogue removed from the English ROM,"MIAOUSS : Miaouss, oui la guerre !",restored and verified in the French ROM
+D1020,RESTORED:0x03AFAC,0x03AFAC,小次郎:现在就让我们算清旧帐吧!!,ABSENT — dialogue removed from the English ROM,JAMES : C'est l'heure de régler nos vieux comptes !,restored and verified in the French ROM
+D1021,RESTORED:0x03AFB0,0x03AFB0,武藏:好讨厌的感觉哟...,ABSENT — dialogue removed from the English ROM,"TEAM ROCKET :
 À la vitesse
-du son...",restauré et vérifié dans la ROM française
-D1022,RESTORED:0x03AFB2,0x03AFB2,喵喵:喵...,ABSENT — dialogue supprimé de la ROM anglaise,MIAOUSS : Miaouss...,restauré et vérifié dans la ROM française
-D1023,RESTORED:0x03AFEA,0x03AFEA,小智:你们是?,ABSENT — dialogue supprimé de la ROM anglaise,"SACHA :
-Qui êtes-vous ?",restauré et vérifié dans la ROM française
-D1024,RESTORED:0x03AFEC,0x03AFEC,武藏:既然你诚心诚意的问了,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
-Nous revoilà !",restauré et vérifié dans la ROM française
-D1025,RESTORED:0x03AFEE,0x03AFEE,小次郎:那我就大发慈悲的告诉你们!,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : Un mauvais tour vous attend !,restauré et vérifié dans la ROM française
-D1026,RESTORED:0x03AFF0,0x03AFF0,武藏:为了防止世界被破坏,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
+du son...",restored and verified in the French ROM
+D1022,RESTORED:0x03AFB2,0x03AFB2,喵喵:喵...,ABSENT — dialogue removed from the English ROM,MIAOUSS : Miaouss...,restored and verified in the French ROM
+D1023,RESTORED:0x03AFEA,0x03AFEA,小智:你们是?,ABSENT — dialogue removed from the English ROM,"SACHA :
+Qui êtes-vous ?",restored and verified in the French ROM
+D1024,RESTORED:0x03AFEC,0x03AFEC,武藏:既然你诚心诚意的问了,ABSENT — dialogue removed from the English ROM,"JESSIE :
+Nous revoilà !",restored and verified in the French ROM
+D1025,RESTORED:0x03AFEE,0x03AFEE,小次郎:那我就大发慈悲的告诉你们!,ABSENT — dialogue removed from the English ROM,JAMES : Un mauvais tour vous attend !,restored and verified in the French ROM
+D1026,RESTORED:0x03AFF0,0x03AFF0,武藏:为了防止世界被破坏,ABSENT — dialogue removed from the English ROM,"JESSIE :
 Préservons le monde
-de la dévastation !",restauré et vérifié dans la ROM française
-D1027,RESTORED:0x03AFF2,0x03AFF2,小次郎:为了维护世界的和平.,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Peuples du monde, ralliez notre nation !",restauré et vérifié dans la ROM française
-D1028,RESTORED:0x03AFF4,0x03AFF4,武藏:坚持爱与真实的罪恶,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Écrasons amour et vérité !,restauré et vérifié dans la ROM française
-D1029,RESTORED:0x03AFF6,0x03AFF6,小次郎:最有魅力的反派人物!,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES :
+de la dévastation !",restored and verified in the French ROM
+D1027,RESTORED:0x03AFF2,0x03AFF2,小次郎:为了维护世界的和平.,ABSENT — dialogue removed from the English ROM,"JAMES : Peuples du monde, ralliez notre nation !",restored and verified in the French ROM
+D1028,RESTORED:0x03AFF4,0x03AFF4,武藏:坚持爱与真实的罪恶,ABSENT — dialogue removed from the English ROM,JESSIE : Écrasons amour et vérité !,restored and verified in the French ROM
+D1029,RESTORED:0x03AFF6,0x03AFF6,小次郎:最有魅力的反派人物!,ABSENT — dialogue removed from the English ROM,"JAMES :
 Notre pouvoir
 s'étend jusqu'à
-la Voie Lactée !",restauré et vérifié dans la ROM française
-D1030,RESTORED:0x03AFF8,0x03AFF8,武藏:武藏!,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Jessie !,restauré et vérifié dans la ROM française
-D1031,RESTORED:0x03AFFA,0x03AFFA,小次郎:小次郎!,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : James !,restauré et vérifié dans la ROM française
-D1032,RESTORED:0x03AFFC,0x03AFFC,武藏:我们是穿过银河系的火箭队!,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
+la Voie Lactée !",restored and verified in the French ROM
+D1030,RESTORED:0x03AFF8,0x03AFF8,武藏:武藏!,ABSENT — dialogue removed from the English ROM,JESSIE : Jessie !,restored and verified in the French ROM
+D1031,RESTORED:0x03AFFA,0x03AFFA,小次郎:小次郎!,ABSENT — dialogue removed from the English ROM,JAMES : James !,restored and verified in the French ROM
+D1032,RESTORED:0x03AFFC,0x03AFFC,武藏:我们是穿过银河系的火箭队!,ABSENT — dialogue removed from the English ROM,"JESSIE :
 La Team Rocket,
 plus rapide
-que la lumière !",restauré et vérifié dans la ROM française
-D1033,RESTORED:0x03AFFE,0x03AFFE,"小次郎:白洞,白色的明天在等着我们!",ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Rendez-vous, sinon guerre à vous !",restauré et vérifié dans la ROM française
-D1034,RESTORED:0x03B000,0x03B000,喵喵:说的对!喵...,ABSENT — dialogue supprimé de la ROM anglaise,"MIAOUSS : Miaouss, oui la guerre !",restauré et vérifié dans la ROM française
-D1035,RESTORED:0x03B004,0x03B004,武藏:好讨厌的感觉哟...,ABSENT — dialogue supprimé de la ROM anglaise,"TEAM ROCKET :
+que la lumière !",restored and verified in the French ROM
+D1033,RESTORED:0x03AFFE,0x03AFFE,"小次郎:白洞,白色的明天在等着我们!",ABSENT — dialogue removed from the English ROM,"JAMES : Rendez-vous, sinon guerre à vous !",restored and verified in the French ROM
+D1034,RESTORED:0x03B000,0x03B000,喵喵:说的对!喵...,ABSENT — dialogue removed from the English ROM,"MIAOUSS : Miaouss, oui la guerre !",restored and verified in the French ROM
+D1035,RESTORED:0x03B004,0x03B004,武藏:好讨厌的感觉哟...,ABSENT — dialogue removed from the English ROM,"TEAM ROCKET :
 À la vitesse
-d'un gros vélo...",restauré et vérifié dans la ROM française
-D1036,RESTORED:0x03B006,0x03B006,喵喵:喵...,ABSENT — dialogue supprimé de la ROM anglaise,MIAOUSS : Miaouss...,restauré et vérifié dans la ROM française
-D1037,RESTORED:0x03CF3E,0x03CF3E,武藏:既然你诚心诚意的问了,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
-Nous revoilà !",restauré et vérifié dans la ROM française
-D1038,RESTORED:0x03CF40,0x03CF40,小次郎:那我就大发慈悲的告诉你们!,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : Un mauvais tour vous attend !,restauré et vérifié dans la ROM française
-D1039,RESTORED:0x03CF42,0x03CF42,武藏:为了防止世界被破坏,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
+d'un gros vélo...",restored and verified in the French ROM
+D1036,RESTORED:0x03B006,0x03B006,喵喵:喵...,ABSENT — dialogue removed from the English ROM,MIAOUSS : Miaouss...,restored and verified in the French ROM
+D1037,RESTORED:0x03CF3E,0x03CF3E,武藏:既然你诚心诚意的问了,ABSENT — dialogue removed from the English ROM,"JESSIE :
+Nous revoilà !",restored and verified in the French ROM
+D1038,RESTORED:0x03CF40,0x03CF40,小次郎:那我就大发慈悲的告诉你们!,ABSENT — dialogue removed from the English ROM,JAMES : Un mauvais tour vous attend !,restored and verified in the French ROM
+D1039,RESTORED:0x03CF42,0x03CF42,武藏:为了防止世界被破坏,ABSENT — dialogue removed from the English ROM,"JESSIE :
 Préservons le monde
-de la dévastation !",restauré et vérifié dans la ROM française
-D1040,RESTORED:0x03CF44,0x03CF44,小次郎:为了维护世界的和平.,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Peuples du monde, ralliez notre nation !",restauré et vérifié dans la ROM française
-D1041,RESTORED:0x03CF46,0x03CF46,武藏:坚持爱与真实的罪恶,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Écrasons amour et vérité !,restauré et vérifié dans la ROM française
-D1042,RESTORED:0x03CF48,0x03CF48,小次郎:最有魅力的反派人物!,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES :
+de la dévastation !",restored and verified in the French ROM
+D1040,RESTORED:0x03CF44,0x03CF44,小次郎:为了维护世界的和平.,ABSENT — dialogue removed from the English ROM,"JAMES : Peuples du monde, ralliez notre nation !",restored and verified in the French ROM
+D1041,RESTORED:0x03CF46,0x03CF46,武藏:坚持爱与真实的罪恶,ABSENT — dialogue removed from the English ROM,JESSIE : Écrasons amour et vérité !,restored and verified in the French ROM
+D1042,RESTORED:0x03CF48,0x03CF48,小次郎:最有魅力的反派人物!,ABSENT — dialogue removed from the English ROM,"JAMES :
 Notre pouvoir
 s'étend jusqu'à
-la Voie Lactée !",restauré et vérifié dans la ROM française
-D1043,RESTORED:0x03CF4A,0x03CF4A,武藏:武藏!,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Jessie !,restauré et vérifié dans la ROM française
-D1044,RESTORED:0x03CF4C,0x03CF4C,小次郎:小次郎!,ABSENT — dialogue supprimé de la ROM anglaise,JAMES : James !,restauré et vérifié dans la ROM française
-D1045,RESTORED:0x03CF4E,0x03CF4E,武藏:我们是穿过银河系的火箭队!,ABSENT — dialogue supprimé de la ROM anglaise,"JESSIE :
+la Voie Lactée !",restored and verified in the French ROM
+D1043,RESTORED:0x03CF4A,0x03CF4A,武藏:武藏!,ABSENT — dialogue removed from the English ROM,JESSIE : Jessie !,restored and verified in the French ROM
+D1044,RESTORED:0x03CF4C,0x03CF4C,小次郎:小次郎!,ABSENT — dialogue removed from the English ROM,JAMES : James !,restored and verified in the French ROM
+D1045,RESTORED:0x03CF4E,0x03CF4E,武藏:我们是穿过银河系的火箭队!,ABSENT — dialogue removed from the English ROM,"JESSIE :
 La Team Rocket,
 plus rapide
-que la lumière !",restauré et vérifié dans la ROM française
-D1046,RESTORED:0x03CF50,0x03CF50,"小次郎:白洞,白色的明天在等着我们!",ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Rendez-vous, sinon guerre à vous !",restauré et vérifié dans la ROM française
-D1047,RESTORED:0x03CF52,0x03CF52,喵喵:说的对!喵...,ABSENT — dialogue supprimé de la ROM anglaise,"MIAOUSS : Miaouss, oui la guerre !",restauré et vérifié dans la ROM française
-D1048,RESTORED:0x03CF54,0x03CF54,小次郎:果然和平常一样...,ABSENT — dialogue supprimé de la ROM anglaise,TEAM ROCKET : ... Ça craint...,restauré et vérifié dans la ROM française
-D1049,RESTORED:0x03CF56,0x03CF56,武藏:好讨厌的感觉哟...,ABSENT — dialogue supprimé de la ROM anglaise,"TEAM ROCKET :
+que la lumière !",restored and verified in the French ROM
+D1046,RESTORED:0x03CF50,0x03CF50,"小次郎:白洞,白色的明天在等着我们!",ABSENT — dialogue removed from the English ROM,"JAMES : Rendez-vous, sinon guerre à vous !",restored and verified in the French ROM
+D1047,RESTORED:0x03CF52,0x03CF52,喵喵:说的对!喵...,ABSENT — dialogue removed from the English ROM,"MIAOUSS : Miaouss, oui la guerre !",restored and verified in the French ROM
+D1048,RESTORED:0x03CF54,0x03CF54,小次郎:果然和平常一样...,ABSENT — dialogue removed from the English ROM,TEAM ROCKET : ... Ça craint...,restored and verified in the French ROM
+D1049,RESTORED:0x03CF56,0x03CF56,武藏:好讨厌的感觉哟...,ABSENT — dialogue removed from the English ROM,"TEAM ROCKET :
 À la vitesse
-d'une voiture !",restauré et vérifié dans la ROM française
-D1050,RESTORED:0x03CF58,0x03CF58,喵喵:喵...,ABSENT — dialogue supprimé de la ROM anglaise,"MIAOUSS :
-En gros...",restauré et vérifié dans la ROM française
-D1051,RESTORED:0x03D07A,0x03D07A,小次郎:为了维护世界的和平.,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES : Peuples du monde, ralliez notre nation !",restauré et vérifié dans la ROM française
-D1052,RESTORED:0x03D07C,0x03D07C,武藏:坚持爱与真实的罪恶,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Écrasons amour et vérité !,restauré et vérifié dans la ROM française
-D1053,RESTORED:0x03D07E,0x03D07E,小次郎:最有魅力的反派人物!,ABSENT — dialogue supprimé de la ROM anglaise,"JAMES :
+d'une voiture !",restored and verified in the French ROM
+D1050,RESTORED:0x03CF58,0x03CF58,喵喵:喵...,ABSENT — dialogue removed from the English ROM,"MIAOUSS :
+En gros...",restored and verified in the French ROM
+D1051,RESTORED:0x03D07A,0x03D07A,小次郎:为了维护世界的和平.,ABSENT — dialogue removed from the English ROM,"JAMES : Peuples du monde, ralliez notre nation !",restored and verified in the French ROM
+D1052,RESTORED:0x03D07C,0x03D07C,武藏:坚持爱与真实的罪恶,ABSENT — dialogue removed from the English ROM,JESSIE : Écrasons amour et vérité !,restored and verified in the French ROM
+D1053,RESTORED:0x03D07E,0x03D07E,小次郎:最有魅力的反派人物!,ABSENT — dialogue removed from the English ROM,"JAMES :
 Notre pouvoir
 s'étend jusqu'à
-la Voie Lactée !",restauré et vérifié dans la ROM française
-D1054,RESTORED:0x03D080,0x03D080,武藏:武藏!,ABSENT — dialogue supprimé de la ROM anglaise,JESSIE : Jessie !,restauré et vérifié dans la ROM française
-D1055,RESTORED:0x0348F1,0x0348F1,得到解麻药,TEXTE MUTUALISÉ — texte affiché : A S.Heal!,Anti-Para reçu !,restauré et vérifié dans la ROM française
+la Voie Lactée !",restored and verified in the French ROM
+D1054,RESTORED:0x03D080,0x03D080,武藏:武藏!,ABSENT — dialogue removed from the English ROM,JESSIE : Jessie !,restored and verified in the French ROM
+D1055,RESTORED:0x0348F1,0x0348F1,得到解麻药,SHARED TEXT — displayed text: A S.Heal!,Anti-Para reçu !,restored and verified in the French ROM

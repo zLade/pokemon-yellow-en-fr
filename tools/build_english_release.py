@@ -222,7 +222,7 @@ EXPECTED_CATALOG_COUNTS: Mapping[str, int] = {
 }
 
 VALIDATION_LIMITS: Mapping[str, str] = {
-    "hardware_validation": "NON TESTÉ",
+    "hardware_validation": "NOT TESTED",
     "ram_quirk": "inherited_source_engine_quirk_unresolved",
     "harmlessness": "harmlessness_not_proven",
     "new_hzk16_extraction": "absent",
@@ -317,16 +317,16 @@ def manifest_record(record: FileRecord) -> dict[str, object]:
 def require_file(path: Path, label: str) -> Path:
     resolved = path.expanduser().resolve()
     if not resolved.is_file() or resolved.is_symlink():
-        raise EnglishReleaseError(f"{label} absent ou non régulier: {resolved}")
+        raise EnglishReleaseError(f'{label} missing or not a regular entry: {resolved}')
     return resolved
 
 
 def require_nonempty_directory(path: Path, label: str) -> Path:
     resolved = path.expanduser().resolve()
     if not resolved.is_dir() or resolved.is_symlink():
-        raise EnglishReleaseError(f"{label} absent ou non régulier: {resolved}")
+        raise EnglishReleaseError(f'{label} missing or not a regular entry: {resolved}')
     if not any(candidate.is_file() for candidate in resolved.rglob("*")):
-        raise EnglishReleaseError(f"{label} vide: {resolved}")
+        raise EnglishReleaseError(f"{label} is empty: {resolved}")
     return resolved
 
 
@@ -334,7 +334,7 @@ def verify_hash(path: Path, expected: str, label: str) -> None:
     actual = sha256_file(path)
     if actual != expected:
         raise EnglishReleaseError(
-            f"SHA-256 {label} inattendu: {actual}; attendu {expected}"
+            f'Unexpected {label} SHA-256: {actual}; expected {expected}'
         )
 
 
@@ -342,7 +342,7 @@ def _read_dict_rows(path: Path) -> tuple[list[str], list[dict[str, str]]]:
     with path.open(newline="", encoding="utf-8-sig") as handle:
         reader = csv.DictReader(handle)
         if reader.fieldnames is None:
-            raise EnglishReleaseError(f"CSV sans en-tête: {path}")
+            raise EnglishReleaseError(f'CSV has no header: {path}')
         return list(reader.fieldnames), list(reader)
 
 
@@ -377,7 +377,7 @@ def _assert_reviewed_rows(
     if bad:
         preview = ", ".join(bad[:8])
         raise EnglishReleaseError(
-            f"{label}: {len(bad)} ligne(s) non relue(s): {preview}"
+            f"{label}: {len(bad)} unreviewed row(s): {preview}"
         )
 
 
@@ -398,13 +398,13 @@ def validate_catalogue(path: Path) -> CatalogueSummary:
     missing = sorted(required.difference(fields))
     if missing:
         raise EnglishReleaseError(
-            "catalogue EN incomplet; colonnes absentes: " + ", ".join(missing)
+            "Incomplete English catalogue; missing columns: " + ", ".join(missing)
         )
-    _assert_reviewed_rows(rows, label="catalogue EN")
+    _assert_reviewed_rows(rows, label="English catalogue")
 
     keys = [row["stable_key"].strip() for row in rows]
     if any(not key for key in keys) or len(set(keys)) != len(keys):
-        raise EnglishReleaseError("catalogue EN: stable_key vide ou dupliquée")
+        raise EnglishReleaseError("English catalogue: empty or duplicate stable_key")
 
     incomplete = [
         row["stable_key"]
@@ -416,7 +416,7 @@ def validate_catalogue(path: Path) -> CatalogueSummary:
     ]
     if incomplete:
         raise EnglishReleaseError(
-            "catalogue EN: source/traduction/provenance absente pour "
+            "English catalogue: missing source/translation/provenance for "
             + ", ".join(incomplete[:8])
         )
 
@@ -429,7 +429,7 @@ def validate_catalogue(path: Path) -> CatalogueSummary:
     ]
     if unjustified_compressions:
         raise EnglishReleaseError(
-            "catalogue EN: compression sans justification pour "
+            "English catalogue: compression has no justification for "
             + ", ".join(unjustified_compressions[:8])
         )
 
@@ -440,16 +440,15 @@ def validate_catalogue(path: Path) -> CatalogueSummary:
         main=types["MAIN"],
         restored=types["RESTORED"],
         dialogues=(
-            categories["Dialogue en jeu"]
+            categories["In-game dialogue"]
             + categories["Introduction"]
-            + categories["Dialogue restauré"]
+            + categories["Restored dialogue"]
         ),
         pokedex=categories["Pokédex"],
     )
     if summary.as_dict() != dict(EXPECTED_CATALOG_COUNTS):
         raise EnglishReleaseError(
-            "comptages du catalogue EN inattendus: "
-            f"{summary.as_dict()}; attendu {dict(EXPECTED_CATALOG_COUNTS)}"
+            f'Unexpected English catalogue counts: {summary.as_dict()}; expected {dict(EXPECTED_CATALOG_COUNTS)}'
         )
     return summary
 
@@ -465,12 +464,12 @@ def validate_review_companion(
     fields, rows = _read_dict_rows(path)
     if len(rows) != expected_rows:
         raise EnglishReleaseError(
-            f"{label}: {len(rows)} lignes; attendu {expected_rows}"
+            f'{label}: {len(rows)} rows; expected {expected_rows}'
         )
     if status_field is not None:
         if status_field not in fields:
             raise EnglishReleaseError(
-                f"{label}: colonne {status_field} absente"
+                f"{label}: missing column {status_field}"
             )
         _assert_reviewed_rows(
             rows,
@@ -480,7 +479,7 @@ def validate_review_companion(
     missing_fields = sorted(set(required_nonempty).difference(fields))
     if missing_fields:
         raise EnglishReleaseError(
-            f"{label}: colonnes absentes: {', '.join(missing_fields)}"
+            f"{label}: missing columns: {', '.join(missing_fields)}"
         )
     incomplete = [
         str(index)
@@ -489,7 +488,7 @@ def validate_review_companion(
     ]
     if incomplete:
         raise EnglishReleaseError(
-            f"{label}: champs requis vides aux lignes "
+            f"{label}: required fields are empty in rows "
             + ", ".join(incomplete[:8])
         )
     return len(rows)
@@ -504,7 +503,7 @@ def _manifest_value(lines: Sequence[str], label: str, path: Path) -> str:
     ]
     if len(values) != 1:
         raise EnglishReleaseError(
-            f"preuve Mesen {path}: champ {label!r} présent {len(values)} fois"
+            f"Mesen evidence {path}: field {label!r} occurs {len(values)} times"
         )
     return values[0]
 
@@ -525,21 +524,21 @@ def validate_mesen_evidence(
     runtime_manifests = sorted(directory.rglob("english_runtime_manifest.txt"))
     if len(runtime_manifests) != 1:
         raise EnglishReleaseError(
-            "preuves Mesen: un seul english_runtime_manifest.txt est requis; "
-            f"trouvé {len(runtime_manifests)}"
+            "Mesen evidence: exactly one english_runtime_manifest.txt is required; "
+            f"found {len(runtime_manifests)}"
         )
     runtime_path = runtime_manifests[0]
     runtime_lines = runtime_path.read_text(
         encoding="utf-8-sig", errors="strict"
     ).splitlines()
     if _manifest_value(runtime_lines, "Candidate SHA-256", runtime_path).casefold() != expected_hash:
-        raise EnglishReleaseError("preuves Mesen liées à un autre SHA de ROM")
+        raise EnglishReleaseError('Mesen evidence is bound to a different ROM SHA')
     if _manifest_value(runtime_lines, "Result", runtime_path) != "PASS":
-        raise EnglishReleaseError("suite Mesen anglaise non PASS")
+        raise EnglishReleaseError("English Mesen suite result is not PASS")
     if _manifest_value(runtime_lines, "Regions", runtime_path) != ",".join(
         EXPECTED_RUNTIME_REGIONS
     ):
-        raise EnglishReleaseError("matrice régionale Mesen incomplète")
+        raise EnglishReleaseError('Incomplete Mesen region matrix')
 
     expected_steps = [
         f"{region}/{name}"
@@ -558,12 +557,11 @@ def validate_mesen_evidence(
         if match is not None:
             expected_number = len(observed_steps) + 1
             if int(match.group("number")) != expected_number:
-                raise EnglishReleaseError("ordre des étapes Mesen incohérent")
+                raise EnglishReleaseError('Inconsistent Mesen step order')
             observed_steps.append(match.group("name").strip())
     if declared_steps != len(expected_steps) or observed_steps != expected_steps:
         raise EnglishReleaseError(
-            "matrice Mesen incomplète ou étape non PASS: "
-            f"déclaré={declared_steps} observé={len(observed_steps)}"
+            f'Incomplete Mesen matrix or non-PASS step: declared={declared_steps} observed={len(observed_steps)}'
         )
 
     scenario_manifests = sorted(directory.rglob("mesen_run_manifest.txt"))
@@ -572,8 +570,7 @@ def validate_mesen_evidence(
     )
     if len(scenario_manifests) != expected_scenarios:
         raise EnglishReleaseError(
-            "preuves Mesen: "
-            f"{len(scenario_manifests)} scénarios; attendu {expected_scenarios}"
+            f'Mesen evidence: {len(scenario_manifests)} scenarios; expected {expected_scenarios}'
         )
     scenarios_by_region: Counter[str] = Counter()
     scenario_identities: set[tuple[str, str]] = set()
@@ -583,7 +580,7 @@ def validate_mesen_evidence(
         for label in ("ROM SHA-256 before", "ROM SHA-256 after"):
             if _manifest_value(lines, label, path).casefold() != expected_hash:
                 raise EnglishReleaseError(
-                    f"preuve Mesen {path} liée à un autre SHA de ROM"
+                    f'Mesen evidence {path} is bound to a different ROM SHA'
                 )
         required = {
             "Mesen executable SHA-256": EXPECTED_MESEN_SHA256,
@@ -597,26 +594,26 @@ def validate_mesen_evidence(
         for label, expected in required.items():
             if _manifest_value(lines, label, path) != expected:
                 raise EnglishReleaseError(
-                    f"preuve Mesen {path}: {label} n'est pas {expected}"
+                    f"Mesen evidence {path}: {label} is not {expected}"
                 )
         region = _manifest_value(lines, "Region", path)
         if region not in EXPECTED_RUNTIME_REGIONS:
-            raise EnglishReleaseError(f"preuve Mesen région inattendue: {region}")
+            raise EnglishReleaseError(f"Unexpected Mesen evidence region: {region}")
         if _manifest_value(lines, "Expected effective region", path) != region:
             raise EnglishReleaseError(
-                f"preuve Mesen {path}: région effective non vérifiée"
+                f"Mesen evidence {path}: effective region not verified"
             )
 
         scenario_name = path.parent.name
         expected_scenario = EXPECTED_MESEN_SCENARIOS.get(scenario_name)
         if expected_scenario is None:
             raise EnglishReleaseError(
-                f"preuve Mesen {path}: scénario inattendu {scenario_name}"
+                f"Mesen evidence {path}: unexpected scenario {scenario_name}"
             )
         identity = (region, scenario_name)
         if identity in scenario_identities:
             raise EnglishReleaseError(
-                f"preuve Mesen dupliquée: {region}/{scenario_name}"
+                f"Duplicate Mesen evidence: {region}/{scenario_name}"
             )
         scenario_identities.add(identity)
         script_name, expected_marker, input_policy = expected_scenario
@@ -625,7 +622,7 @@ def validate_mesen_evidence(
         )
         if actual_script != script_name:
             raise EnglishReleaseError(
-                f"preuve Mesen {path}: script {actual_script}, attendu {script_name}"
+                f'Mesen evidence {path}: script {actual_script}, expected {script_name}'
             )
         expected_script_hash = sha256_file(TOOLS_DIR / script_name)
         for label in (
@@ -634,11 +631,11 @@ def validate_mesen_evidence(
         ):
             if _manifest_value(lines, label, path).casefold() != expected_script_hash:
                 raise EnglishReleaseError(
-                    f"preuve Mesen {path}: {label} ne correspond pas au script figé"
+                    f"Mesen evidence {path}: {label} does not match the pinned script"
                 )
         if _manifest_value(lines, "Expected marker", path) != expected_marker:
             raise EnglishReleaseError(
-                f"preuve Mesen {path}: marqueur inattendu"
+                f"Mesen evidence {path}: unexpected marker"
             )
         input_before = _manifest_value(
             lines, "Scenario input SHA-256 before", path
@@ -648,26 +645,26 @@ def validate_mesen_evidence(
         ).casefold()
         if input_before != input_after:
             raise EnglishReleaseError(
-                f"preuve Mesen {path}: entrée changée pendant le scénario"
+                f"Mesen evidence {path}: input changed during the scenario"
             )
         if input_policy == "none":
             if input_before:
                 raise EnglishReleaseError(
-                    f"preuve Mesen {path}: entrée inattendue"
+                    f"Mesen evidence {path}: unexpected input"
                 )
         elif input_policy == "route1":
             if input_before != EXPECTED_ROUTE1_INPUT_SHA256:
                 raise EnglishReleaseError(
-                    f"preuve Mesen {path}: flux Route 1 non canonique"
+                    f"Mesen evidence {path}: non-canonical Route 1 input stream"
                 )
         elif input_policy == "critical":
             if not re.fullmatch(r"[0-9a-f]{64}", input_before):
                 raise EnglishReleaseError(
-                    f"preuve Mesen {path}: spécification critique absente"
+                    f"Mesen evidence {path}: missing critical specification"
                 )
             critical_input_hashes.add(input_before)
         else:
-            raise AssertionError(f"politique d'entrée inconnue: {input_policy}")
+            raise AssertionError(f"Unknown input policy: {input_policy}")
         scenarios_by_region[region] += 1
     if scenarios_by_region != Counter(
         {
@@ -676,7 +673,7 @@ def validate_mesen_evidence(
         }
     ):
         raise EnglishReleaseError(
-            f"répartition régionale des scénarios invalide: {scenarios_by_region}"
+            f'Invalid scenario distribution by region: {scenarios_by_region}'
         )
     expected_identities = {
         (region, scenario)
@@ -684,17 +681,16 @@ def validate_mesen_evidence(
         for scenario in EXPECTED_MESEN_SCENARIOS
     }
     if scenario_identities != expected_identities:
-        raise EnglishReleaseError("identités des scénarios Mesen incomplètes")
+        raise EnglishReleaseError('Incomplete Mesen scenario identities')
     if len(critical_input_hashes) != 1:
         raise EnglishReleaseError(
-            "les six scénarios critiques doivent partager une spécification"
+            'All six critical scenarios must share one specification'
         )
 
     battery_manifests = sorted(directory.rglob("battery_persistence_manifest.txt"))
     if len(battery_manifests) != len(EXPECTED_RUNTIME_REGIONS):
         raise EnglishReleaseError(
-            "preuves batterie Mesen incomplètes: "
-            f"{len(battery_manifests)} au lieu de 3"
+            f'Incomplete Mesen battery evidence: {len(battery_manifests)} instead of 3'
         )
     battery_regions: set[str] = set()
     for path in battery_manifests:
@@ -716,12 +712,12 @@ def validate_mesen_evidence(
                 actual = actual.casefold()
             if actual != expected:
                 raise EnglishReleaseError(
-                    f"preuve batterie {path}: {label} n'est pas {expected}"
+                    f"Battery evidence {path}: {label} is not {expected}"
                 )
         region = _manifest_value(lines, "Region", path)
         if region not in EXPECTED_RUNTIME_REGIONS or region in battery_regions:
             raise EnglishReleaseError(
-                f"preuve batterie région absente ou dupliquée: {region}"
+                f"Battery evidence region missing or duplicated: {region}"
             )
         battery_regions.add(region)
 
@@ -751,7 +747,7 @@ def _git_output(root: Path, arguments: Sequence[str]) -> str:
     )
     if process.returncode != 0:
         raise EnglishReleaseError(
-            f"git {' '.join(arguments)} a échoué: {process.stdout.strip()}"
+            f"git {' '.join(arguments)} failed: {process.stdout.strip()}"
         )
     return process.stdout.strip()
 
@@ -765,7 +761,7 @@ def require_clean_git_revision(root: Path) -> str:
     if status:
         preview = "\n".join(status.splitlines()[:12])
         raise EnglishReleaseError(
-            "les sources de release doivent être figées dans Git:\n" + preview
+            "Release sources must be committed to Git:\n" + preview
         )
     return revision
 
@@ -803,7 +799,7 @@ def assert_no_complete_images(directory: Path) -> None:
             violations.append(path.relative_to(directory).as_posix())
     if violations:
         raise EnglishReleaseError(
-            "image complète/interdite dans le bundle patch-only: "
+            "Complete ROM image or prohibited file in patch-only bundle: "
             + ", ".join(violations)
         )
 
@@ -821,7 +817,7 @@ def assert_portable_text_tree(directory: Path) -> None:
             violations.append(path.relative_to(directory).as_posix())
     if violations:
         raise EnglishReleaseError(
-            "chemin absolu ou donnée locale dans le bundle: "
+            "Absolute path or local data in the bundle: "
             + ", ".join(violations)
         )
 
@@ -861,7 +857,7 @@ def create_verified_ips(base: Path, target: Path, output: Path) -> str:
     records, truncate = parse_ips(output)
     rebuilt = apply_ips(base_bytes, records, truncate)
     if rebuilt != target_bytes:
-        raise EnglishReleaseError("échec de l'aller-retour IPS interne")
+        raise EnglishReleaseError("Internal IPS round-trip failed")
     return sha256_file(output)
 
 
@@ -917,7 +913,7 @@ def assert_same_file(left: Path, right: Path, label: str) -> str:
     right_hash = sha256_file(right)
     if left_hash != right_hash or left.read_bytes() != right.read_bytes():
         raise EnglishReleaseError(
-            f"double build non déterministe ({label}): "
+            f"Non-deterministic dual build ({label}): "
             f"{left_hash} != {right_hash}"
         )
     return left_hash
@@ -964,7 +960,7 @@ def publish_transactionally(
 
     if private_destination.exists() or dist_destination.exists():
         raise EnglishReleaseError(
-            "une destination de release existe déjà; aucune écrasement autorisé"
+            'A release destination already exists; overwriting is not allowed'
         )
     private_destination.parent.mkdir(parents=True, exist_ok=True)
     dist_destination.parent.mkdir(parents=True, exist_ok=True)
@@ -982,11 +978,11 @@ def publish_transactionally(
 def _copy_evidence_tree(source: Path, destination: Path) -> None:
     for path in sorted(source.rglob("*")):
         if path.is_symlink():
-            raise EnglishReleaseError(f"lien symbolique interdit: {path}")
+            raise EnglishReleaseError(f"Symbolic link not allowed: {path}")
         if not path.is_file():
             continue
         if _unsafe_evidence_file(path):
-            raise EnglishReleaseError(f"image complète dans les preuves: {path}")
+            raise EnglishReleaseError(f'Complete ROM image found in evidence: {path}')
         relative = path.relative_to(source)
         target = destination / relative
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -1087,7 +1083,7 @@ class EnglishReleaseBuilder:
         self.dist_destination = Path(args.dist_dir).expanduser().resolve()
         if self.private_destination.exists() or self.dist_destination.exists():
             raise EnglishReleaseError(
-                "une destination de release existe déjà; aucune écrasement autorisé"
+                'A release destination already exists; overwriting is not allowed'
             )
 
         # Check the revision before creating the dist-side staging directory,
@@ -1177,7 +1173,7 @@ class EnglishReleaseBuilder:
         if process.returncode != 0:
             tail = "\n".join(log.splitlines()[-12:])
             raise EnglishReleaseError(
-                f"étape {name} en échec (code {process.returncode})\n{tail}"
+                f"Step {name} failed (code {process.returncode})\n{tail}"
             )
 
     def prepare_inputs(self) -> None:
@@ -1224,10 +1220,10 @@ class EnglishReleaseBuilder:
             for label, path in requested.items()
         }
         self.inputs["audits_dir"] = require_nonempty_directory(
-            Path(self.args.audits_dir), "audits anglais"
+            Path(self.args.audits_dir), "English audits"
         )
         self.inputs["mesen_logs_dir"] = require_nonempty_directory(
-            Path(self.args.mesen_logs_dir), "journaux Mesen"
+            Path(self.args.mesen_logs_dir), "Mesen logs"
         )
         for label in ("audits_dir", "mesen_logs_dir"):
             directory = self.inputs[label]
@@ -1244,7 +1240,7 @@ class EnglishReleaseBuilder:
         validate_review_companion(
             self.inputs["source_adjudications"],
             expected_rows=63,
-            label="adjudications de source",
+            label="source adjudications",
             required_nonempty=(
                 "selected_source_method",
                 "selected_chinese_text",
@@ -1254,7 +1250,7 @@ class EnglishReleaseBuilder:
         validate_review_companion(
             self.inputs["pointer_variants"],
             expected_rows=5,
-            label="variantes de pointeur",
+            label="pointer variants",
             required_nonempty=(
                 "chinese_text",
                 "english_v2",
@@ -1264,7 +1260,7 @@ class EnglishReleaseBuilder:
         validate_review_companion(
             self.inputs["storage_overlaps"],
             expected_rows=3,
-            label="chevauchements de stockage",
+            label="storage overlaps",
             status_field=None,
             required_nonempty=(
                 "owner_key",
@@ -1276,7 +1272,7 @@ class EnglishReleaseBuilder:
         validate_review_companion(
             self.inputs["neutral_glyphs"],
             expected_rows=18,
-            label="pictogrammes graphiques neutres",
+            label="neutral graphical glyphs",
             status_field="review_status",
             required_nonempty=(
                 "record_index",
@@ -1294,12 +1290,11 @@ class EnglishReleaseBuilder:
         )
         if not all(external):
             raise EnglishReleaseError(
-                "la release finale exige Lunar IPS, Floating IPS et son "
-                "archive officielle pour la matrice externe"
+                'The final release requires Lunar IPS, Floating IPS and its official archive for external verification'
             )
         if not self.args.external_verified_utc:
             raise EnglishReleaseError(
-                "--external-verified-utc est requis pour une preuve reproductible"
+                '--external-verified-utc is required for reproducible evidence'
             )
         self.inputs["lunar_ips_exe"] = require_file(
             Path(self.args.lunar_ips_exe), "Lunar IPS"
@@ -1308,7 +1303,7 @@ class EnglishReleaseBuilder:
             Path(self.args.floating_ips_exe), "Floating IPS"
         )
         self.inputs["floating_ips_archive"] = require_file(
-            Path(self.args.floating_ips_archive), "archive Floating IPS"
+            Path(self.args.floating_ips_archive), "Floating IPS archive"
         )
 
         self.initial_hashes = {
@@ -1453,11 +1448,11 @@ class EnglishReleaseBuilder:
             ),
         )
         for output, label in (
-            (target, "ROM anglaise"),
-            (assistant_ips, "IPS de build anglais"),
-            (allocation, "rapport d'allocation"),
-            (bank_budget, "budget des banques"),
-            (fixed_overflow, "rapport des textes fixes"),
+            (target, "English ROM"),
+            (assistant_ips, "English build IPS"),
+            (allocation, "allocation report"),
+            (bank_budget, "bank budget"),
+            (fixed_overflow, "fixed-text report"),
         ):
             require_file(output, f"{label} {run_label}")
 
@@ -1696,7 +1691,7 @@ class EnglishReleaseBuilder:
             payload.get("result") != "PASS"
             or payload.get("target", {}).get("sha256") != target_hash
         ):
-            raise EnglishReleaseError("preuve des patchers externes incohérente")
+            raise EnglishReleaseError('Inconsistent external patcher evidence')
         self.external_status = "PASS"
         return proof
 
@@ -1705,7 +1700,7 @@ class EnglishReleaseBuilder:
             actual = sha256_file(self.inputs[label])
             if actual != expected:
                 raise EnglishReleaseError(
-                    f"entrée modifiée pendant le build ({label}): {actual}"
+                    f"Input changed during the build ({label}): {actual}"
                 )
         for label, expected_records in self.evidence_hashes.items():
             directory = self.inputs[label]
@@ -1716,7 +1711,7 @@ class EnglishReleaseBuilder:
             }
             if actual_records != expected_records:
                 raise EnglishReleaseError(
-                    f"preuves modifiées pendant le build ({label})"
+                    f"Evidence changed during the build ({label})"
                 )
 
     def _input_manifest(self) -> dict[str, dict[str, object]]:
@@ -1955,7 +1950,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--floating-ips-archive", type=Path)
     parser.add_argument(
         "--external-verified-utc",
-        help="horodatage reproductible YYYY-MM-DDTHH:MM:SSZ",
+        help="reproducible YYYY-MM-DDTHH:MM:SSZ timestamp",
     )
     return parser
 
@@ -1969,10 +1964,10 @@ def main(argv: Iterable[str] | None = None) -> int:
         print(f"English release build: FAILED\n- {exc}", file=sys.stderr)
         return 1
     target = builder.private_destination / ROM_FILENAME
-    print("Build release EN: PASS")
-    print(f"- ROM privée: {builder.private_destination}")
-    print(f"- Bundle patch-only: {builder.dist_destination}")
-    print(f"- SHA-256 cible: {sha256_file(target)}")
+    print("English release build: PASS")
+    print(f"- Local ROM: {builder.private_destination}")
+    print(f"- Patch-only bundle: {builder.dist_destination}")
+    print(f"- Target SHA-256: {sha256_file(target)}")
     return 0
 
 

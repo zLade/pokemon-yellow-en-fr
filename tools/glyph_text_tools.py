@@ -279,13 +279,13 @@ def validate_sources(english: bytes, chinese: bytes) -> None:
     digest = sha256(english)
     if digest != TRANSLATION_BASE_SHA256:
         raise ValueError(
-            "ROM anglaise non canonique: "
-            f"{digest} au lieu de {TRANSLATION_BASE_SHA256}"
+            "noncanonical English ROM: "
+            f"{digest} instead of {TRANSLATION_BASE_SHA256}"
         )
     if len(english) != len(chinese):
         raise ValueError(
-            "ROM chinoise de taille inattendue: "
-            f"{len(chinese)} au lieu de {len(english)}"
+            "unexpected Chinese ROM size: "
+            f"{len(chinese)} instead of {len(english)}"
         )
     actual_routine = english[
         FONT_INDEX_ROUTINE_OFFSET:
@@ -293,7 +293,7 @@ def validate_sources(english: bytes, chinese: bytes) -> None:
     ]
     if actual_routine != FONT_INDEX_ROUTINE:
         raise ValueError(
-            "routine d'indexation des glyphes non canonique à "
+            "noncanonical glyph indexing routine at "
             f"0x{FONT_INDEX_ROUTINE_OFFSET:06X}"
         )
 
@@ -312,15 +312,15 @@ def validate_sources(english: bytes, chinese: bytes) -> None:
     expected = list(range(ENGLISH_FONT_SLOT_COUNT))
     if changed_slots != expected:
         raise ValueError(
-            "empreinte de la police anglaise inattendue: "
-            f"{len(changed_slots)} slots modifiés, "
-            f"premier={changed_slots[:1]}, dernier={changed_slots[-1:]}"
+            "unexpected English font fingerprint: "
+            f"{len(changed_slots)} modified slots, "
+            f"first={changed_slots[:1]}, last={changed_slots[-1:]}"
         )
 
 
 def glyph_slot(high: int, low: int) -> int:
     if not 0xB0 <= high <= 0xBF:
-        raise ValueError(f"octet haut glyphique invalide: 0x{high:02X}")
+        raise ValueError(f"invalid graphical high byte: 0x{high:02X}")
     return (high - 0xB0) * 94 + ((low - 0xA1) & 0xFF)
 
 
@@ -635,22 +635,22 @@ def command_inventory(args: argparse.Namespace) -> int:
             else "source_chinese"
         )
         counts[key] = counts.get(key, 0) + 1
-    print("Inventaire graphique mapper 163")
+    print("Mapper 163 graphics inventory")
     print(f"- Records: {len(parsed)}")
     print(
-        "- Records entièrement redessinés en anglais: "
+        "- Records fully redrawn in English: "
         f"{counts.get('english_graphic', 0)}"
     )
     print(
-        "- Records mêlant graphismes anglais et glyphes source: "
+        "- Records mixing English graphics and source glyphs: "
         f"{counts.get('mixed_english_chinese', 0)}"
     )
     print(
-        "- Records uniquement en glyphes source: "
+        "- Records using only source glyphs: "
         f"{counts.get('source_chinese', 0)}"
     )
     print(
-        "- Records référencés par une table statique vérifiée: "
+        "- Records referenced by a verified static table: "
         f"{sum(bool(table_refs[record.inventory_index]) for record in parsed)}"
     )
     print(f"- CSV: {output}")
@@ -756,21 +756,21 @@ def command_render(args: argparse.Namespace) -> int:
         page.save_bmp(pages_directory / f"{page_stem}.bmp")
         page.save_png(pages_directory / f"{page_stem}.png")
 
-    print("Export graphique mapper 163")
+    print("Mapper 163 graphics export")
     print(f"- Records: {len(parsed)}")
-    print(f"- Fichiers individuels: {records_directory}")
-    print(f"- Planches: {pages_directory} ({page_count})")
-    print(f"- Police rendue: {args.font_view}")
-    print(f"- Plan binaire: {args.bitplane}")
+    print(f"- Individual files: {records_directory}")
+    print(f"- Contact sheets: {pages_directory} ({page_count})")
+    print(f"- Rendered font: {args.font_view}")
+    print(f"- Bitplane: {args.bitplane}")
     if args.font_view == "english":
         print(
-            "- Convention couleur: noir=police anglaise remplacée, "
-            "rouge=glyphe chinois source non remplacé"
+            "- Color convention: black=replaced English font, "
+            "red=unchanged Chinese source glyph"
         )
     else:
         print(
-            "- Vue source: police chinoise canonique en noir; "
-            "utiliser --unchanged-only pour une correspondance exacte"
+            "- Source view: canonical Chinese font in black; "
+            "use --unchanged-only for an exact match"
         )
     return 0
 
@@ -778,14 +778,14 @@ def command_render(args: argparse.Namespace) -> int:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Inventorie et rend les records texte graphiques de la ROM."
+            "Inventory and render graphical text records from the ROM."
         )
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     inventory = subparsers.add_parser(
         "inventory",
-        help="Écrit la classification exacte des 317 records.",
+        help="Write the exact classification of the 317 records.",
     )
     inventory.add_argument("--english-rom", default=TRANSLATION_BASE_ROM)
     inventory.add_argument("--chinese-rom", default=CHINESE_ROM)
@@ -797,7 +797,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     render = subparsers.add_parser(
         "render-records",
-        help="Exporte les records et des planches BMP lisibles.",
+        help="Export records and readable BMP contact sheets.",
     )
     render.add_argument("--english-rom", default=TRANSLATION_BASE_ROM)
     render.add_argument("--chinese-rom", default=CHINESE_ROM)
@@ -809,23 +809,23 @@ def build_parser() -> argparse.ArgumentParser:
         "--font-view",
         choices=("english", "chinese"),
         default="english",
-        help="Police bitmap utilisée pour rendre les codes inventoriés.",
+        help="Bitmap font used to render inventoried codes.",
     )
     render.add_argument(
         "--bitplane",
         choices=("combined", "0", "1"),
         default="combined",
         help=(
-            "Rend les deux plans superposés ou un seul plan 1 bit; "
-            "les glyphes NJ046 peuvent contenir deux caractères entrelacés."
+            "Render both planes overlaid or a single 1-bit plane; "
+            "NJ046 glyphs can contain two interlaced characters."
         ),
     )
     render.add_argument(
         "--unchanged-only",
         action="store_true",
         help=(
-            "Ne rend que les plages dont les codes sont identiques entre "
-            "la ROM chinoise et le patch anglais."
+            "Render only ranges whose codes are identical between "
+            "the Chinese ROM and the English patch."
         ),
     )
     render.add_argument("--glyph-columns", type=int, default=30)
@@ -839,13 +839,13 @@ def build_parser() -> argparse.ArgumentParser:
 def main() -> int:
     args = build_parser().parse_args()
     if getattr(args, "glyph_columns", 1) < 1:
-        raise SystemExit("--glyph-columns doit être positif")
+        raise SystemExit("--glyph-columns must be positive")
     if getattr(args, "scale", 1) < 1:
-        raise SystemExit("--scale doit être positif")
+        raise SystemExit("--scale must be positive")
     if getattr(args, "panel_height", 32) < 32:
-        raise SystemExit("--panel-height doit valoir au moins 32")
+        raise SystemExit("--panel-height must be at least 32")
     if getattr(args, "records_per_page", 1) < 1:
-        raise SystemExit("--records-per-page doit être positif")
+        raise SystemExit("--records-per-page must be positive")
     return args.function(args)
 
 

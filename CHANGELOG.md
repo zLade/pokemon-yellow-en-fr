@@ -3,6 +3,16 @@
 This file records user-facing changes to the English branch. Complete ROM
 images are never distributed.
 
+## Repository tooling — 2026-09-07
+
+- Standardized CSV headers, source-review annotations and batch metadata in English.
+- Translated inherited tool help, diagnostics, reports, comments and documentation.
+- Updated CSV consumers and spreadsheet exports to use the same English schema.
+- Added ROM-free regression checks for metadata, lossless exports and unchanged
+  dialogue payloads and pointer selections.
+- Preserved Chinese and French reference text and all released IPS/BPS patches.
+  The game release remains English Fidelity 2.0.2.
+
 ## English Fidelity 2.0.2 — 2026-08-26
 
 - Added the corrected NES pitch table.

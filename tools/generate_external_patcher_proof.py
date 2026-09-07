@@ -125,7 +125,7 @@ def files_are_identical(left: Path, right: Path) -> bool:
 def require_file(path: Path, label: str) -> Path:
     resolved = path.expanduser().resolve()
     if not resolved.is_file():
-        raise ProofError(f"{label} absent ou non régulier : {resolved}")
+        raise ProofError(f"{label} missing or not a regular file: {resolved}")
     return resolved
 
 
@@ -143,12 +143,12 @@ def canonical_verified_utc(value: str | None) -> str:
         )
     if re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", value) is None:
         raise ProofError(
-            "--verified-utc doit respecter exactement YYYY-MM-DDTHH:MM:SSZ"
+            "--verified-utc must match YYYY-MM-DDTHH:MM:SSZ exactly"
         )
     try:
         datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ")
     except ValueError as exc:
-        raise ProofError(f"--verified-utc invalide : {value}") from exc
+        raise ProofError(f"Invalid --verified-utc: {value}") from exc
     return value
 
 
@@ -183,7 +183,7 @@ def windows_path(path: Path) -> str:
         return str(resolved)
     if not _is_wsl():
         raise ProofError(
-            "les patchers Windows exigent Windows ou WSL avec interopérabilité"
+            "Windows patchers require Windows or WSL with interoperability enabled"
         )
     try:
         converted = subprocess.run(
@@ -194,11 +194,11 @@ def windows_path(path: Path) -> str:
             check=False,
         )
     except (OSError, subprocess.TimeoutExpired) as exc:
-        raise ProofError(f"conversion wslpath impossible pour {resolved}: {exc}") from exc
+        raise ProofError(f"wslpath conversion failed for {resolved}: {exc}") from exc
     value = converted.stdout.strip()
     if converted.returncode != 0 or not value:
         detail = converted.stderr.strip() or f"code {converted.returncode}"
-        raise ProofError(f"conversion wslpath impossible pour {resolved}: {detail}")
+        raise ProofError(f"wslpath conversion failed for {resolved}: {detail}")
     return value
 
 
@@ -216,7 +216,7 @@ def _archive_members_matching_hash(archive: Path, wanted_sha256: str) -> list[st
                 if digest.hexdigest() == wanted_sha256:
                     matches.append(info.filename)
     except (OSError, zipfile.BadZipFile, RuntimeError) as exc:
-        raise ProofError(f"archive Flips ZIP illisible : {archive}: {exc}") from exc
+        raise ProofError(f"Unreadable Flips ZIP archive: {archive}: {exc}") from exc
     return matches
 
 
@@ -230,16 +230,16 @@ def _run_checked(
     try:
         completed = runner(command, cwd, timeout)
     except subprocess.TimeoutExpired as exc:
-        raise ProofError(f"{label} a dépassé {timeout:g} secondes") from exc
+        raise ProofError(f"{label} exceeded the timeout of {timeout:g} seconds") from exc
     except OSError as exc:
-        raise ProofError(f"impossible de lancer {label}: {exc}") from exc
+        raise ProofError(f"Unable to launch {label}: {exc}") from exc
     if completed.returncode != 0:
         stdout = (completed.stdout or "").strip()
         stderr = (completed.stderr or "").strip()
-        detail = stderr or stdout or "aucune sortie"
+        detail = stderr or stdout or "no output"
         if len(detail) > 1000:
             detail = detail[-1000:]
-        raise ProofError(f"{label} a échoué (code {completed.returncode}) : {detail}")
+        raise ProofError(f"{label} failed (code {completed.returncode}): {detail}")
     return completed
 
 
@@ -270,7 +270,7 @@ def _roundtrip_record(
     output_hash = sha256_file(output)
     if output_hash != sha256_file(target) or not files_are_identical(output, target):
         raise ProofError(
-            f"sortie {format_name} non identique à la ROM cible : {output.name}"
+            f"{format_name} output is not identical to the target ROM: {output.name}"
         )
     return {
         "format": format_name,
@@ -293,47 +293,47 @@ def _roundtrip_record(
 def _input_paths(config: ProofConfig) -> dict[str, Path]:
     return {
         "target ROM": config.target_rom,
-        "base IPS": config.ips_base,
-        "patch IPS": config.ips_patch,
-        "base BPS chinoise": config.chinese_base,
-        "patch BPS chinoise": config.chinese_bps,
-        "base BPS anglaise": config.english_base,
-        "patch BPS anglaise": config.english_bps,
+        "IPS base": config.ips_base,
+        "IPS patch": config.ips_patch,
+        "Chinese BPS base": config.chinese_base,
+        "Chinese BPS patch": config.chinese_bps,
+        "English BPS base": config.english_base,
+        "English BPS patch": config.english_bps,
         "Lunar IPS": config.lunar_executable,
         "Floating IPS": config.flips_executable,
-        "archive Floating IPS": config.flips_archive,
+        "Floating IPS archive": config.flips_archive,
     }
 
 
 def _validated_config(config: ProofConfig) -> ProofConfig:
     if config.timeout_seconds <= 0:
-        raise ProofError("le délai d'exécution doit être strictement positif")
+        raise ProofError("The execution timeout must be strictly positive")
     root = config.root.expanduser().resolve()
     if not root.is_dir():
-        raise ProofError(f"racine absente : {root}")
+        raise ProofError(f"Missing root directory: {root}")
     values = {
         field: require_file(path, label)
         for field, path, label in (
-            ("target_rom", config.target_rom, "ROM cible"),
-            ("ips_base", config.ips_base, "base IPS"),
-            ("ips_patch", config.ips_patch, "patch IPS"),
-            ("chinese_base", config.chinese_base, "base chinoise"),
-            ("chinese_bps", config.chinese_bps, "BPS chinoise"),
-            ("english_base", config.english_base, "base anglaise"),
-            ("english_bps", config.english_bps, "BPS anglaise"),
+            ("target_rom", config.target_rom, "Target ROM"),
+            ("ips_base", config.ips_base, "IPS base"),
+            ("ips_patch", config.ips_patch, "IPS patch"),
+            ("chinese_base", config.chinese_base, "Chinese base"),
+            ("chinese_bps", config.chinese_bps, "Chinese BPS"),
+            ("english_base", config.english_base, "English base"),
+            ("english_bps", config.english_bps, "English BPS"),
             ("lunar_executable", config.lunar_executable, "Lunar IPS"),
             ("flips_executable", config.flips_executable, "Floating IPS"),
-            ("flips_archive", config.flips_archive, "archive Floating IPS"),
+            ("flips_archive", config.flips_archive, "Floating IPS archive"),
         )
     }
     output = config.output.expanduser().resolve()
     protected = set(values.values())
     if output in protected:
-        raise ProofError("la preuve de sortie ne peut écraser aucun fichier d'entrée")
+        raise ProofError("The output proof must not overwrite any input file")
     temp_parent = config.temp_parent.expanduser().resolve()
     temp_parent.mkdir(parents=True, exist_ok=True)
     if not temp_parent.is_dir():
-        raise ProofError(f"parent temporaire non valide : {temp_parent}")
+        raise ProofError(f"Invalid temporary parent directory: {temp_parent}")
     return ProofConfig(
         root=root,
         output=output,
@@ -359,23 +359,23 @@ def generate_proof(
 
     lunar_hash = before["Lunar IPS"].sha256
     flips_hash = before["Floating IPS"].sha256
-    archive_hash = before["archive Floating IPS"].sha256
+    archive_hash = before["Floating IPS archive"].sha256
     expected_tools = (
         ("Lunar IPS 1.03 x64", lunar_hash, pins.lunar_executable_sha256),
         ("Floating IPS v198", flips_hash, pins.flips_executable_sha256),
-        ("archive Floating IPS v198", archive_hash, pins.flips_archive_sha256),
+        ("Floating IPS v198 archive", archive_hash, pins.flips_archive_sha256),
     )
     for label, actual, expected in expected_tools:
         if actual != expected:
             raise ProofError(
-                f"{label} non officiel ou altéré : {actual} (attendu {expected})"
+                f"{label} is unofficial or modified: {actual} (expected {expected})"
             )
 
     archive_members = _archive_members_matching_hash(config.flips_archive, flips_hash)
     if not archive_members:
         raise ProofError(
-            "l'exécutable Floating IPS fourni n'existe pas octet pour octet "
-            "dans l'archive officielle fournie"
+            "The supplied Floating IPS executable has no byte-for-byte match "
+            "in the supplied official archive"
         )
 
     target_hash = before["target ROM"].sha256
@@ -403,7 +403,7 @@ def generate_proof(
             "Lunar IPS",
         )
         if not ips_output.is_file():
-            raise ProofError("Lunar IPS n'a pas produit de ROM")
+            raise ProofError("Lunar IPS did not produce a ROM")
         roundtrips.append(
             _roundtrip_record(
                 format_name="IPS",
@@ -444,7 +444,7 @@ def generate_proof(
                 f"Floating IPS ({slug})",
             )
             if not output.is_file():
-                raise ProofError(f"Floating IPS ({slug}) n'a pas produit de ROM")
+                raise ProofError(f"Floating IPS ({slug}) did not produce a ROM")
             roundtrips.append(
                 _roundtrip_record(
                     format_name="BPS",
@@ -469,7 +469,7 @@ def generate_proof(
     changed = [label for label in originals if after[label] != before[label]]
     if changed:
         raise ProofError(
-            "fichier(s) source modifié(s) pendant la vérification : "
+            "Source file(s) changed during verification: "
             + ", ".join(changed)
         )
 
@@ -500,7 +500,7 @@ def generate_proof(
                 "path": display_path(config.flips_executable, config.root),
                 "size": before["Floating IPS"].size,
                 "archive_path": display_path(config.flips_archive, config.root),
-                "archive_size": before["archive Floating IPS"].size,
+                "archive_size": before["Floating IPS archive"].size,
                 "archive_sha256": archive_hash,
                 "executable_sha256": flips_hash,
                 "executable_archive_members": archive_members,
@@ -577,26 +577,26 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--lunar-ips-exe",
         required=True,
-        help="chemin WSL/Windows vers Lunar IPS 1.03 x64",
+        help="WSL/Windows path to Lunar IPS 1.03 x64",
     )
     parser.add_argument(
         "--floating-ips-exe",
         required=True,
-        help="chemin WSL/Windows vers flips.exe v198",
+        help="WSL/Windows path to flips.exe v198",
     )
     parser.add_argument(
         "--floating-ips-archive",
         required=True,
-        help="archive ZIP officielle contenant exactement flips.exe v198",
+        help="official ZIP archive containing the exact flips.exe v198 executable",
     )
     parser.add_argument("--output", default="build/external-patcher-proof.json")
     parser.add_argument(
         "--temp-parent",
-        help="parent du répertoire temporaire (défaut : dossier de sortie)",
+        help="parent of the temporary directory (default: output directory)",
     )
     parser.add_argument(
         "--verified-utc",
-        help="horodatage reproductible YYYY-MM-DDTHH:MM:SSZ (défaut : maintenant)",
+        help="reproducible YYYY-MM-DDTHH:MM:SSZ timestamp (default: now)",
     )
     parser.add_argument("--timeout-seconds", type=float, default=120.0)
     return parser
@@ -634,10 +634,10 @@ def main(argv: list[str] | None = None) -> int:
         config = config_from_args(args)
         proof = generate_and_write(config)
     except (ProofError, OSError, zipfile.BadZipFile) as exc:
-        print(f"ERREUR : {exc}", file=sys.stderr)
+        print(f"ERROR: {exc}", file=sys.stderr)
         return 1
     print(
-        "PASS : 3/3 sorties IPS/BPS sont identiques octet pour octet à "
+        "PASS: 3/3 IPS/BPS outputs are byte-for-byte identical to "
         f"{proof['target']['sha256']}"
     )
     print(config.output.resolve())

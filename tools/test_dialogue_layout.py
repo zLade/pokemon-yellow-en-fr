@@ -73,7 +73,7 @@ class DialogueLayoutTests(unittest.TestCase):
         )
 
     def test_empty_forced_dialogue_page_is_fatal(self) -> None:
-        with self.assertRaisesRegex(ValueError, "forcée vide"):
+        with self.assertRaisesRegex(ValueError, "empty forced"):
             wrap_dialogue_19_19("Première page\n\nDernière page")
 
     def test_french_punctuation_stays_with_previous_unit(self) -> None:
@@ -142,7 +142,7 @@ class DialogueLayoutTests(unittest.TestCase):
         self.assertEqual(format_game_text("cœur"), b"coeur")
 
     def test_lexical_unit_over_19_columns_is_fatal(self) -> None:
-        with self.assertRaisesRegex(ValueError, "trop longue"):
+        with self.assertRaisesRegex(ValueError, "too long"):
             wrap_dialogue_19_19("anticonstitutionnellement")
 
     def test_pokedex_wraps_four_lines_without_splitting_words(self) -> None:
@@ -169,18 +169,18 @@ class DialogueLayoutTests(unittest.TestCase):
         self.assertEqual(POKEDEX_MAX_LINES, 4)
 
     def test_pokedex_rejects_fifth_line(self) -> None:
-        with self.assertRaisesRegex(ValueError, "trop longue"):
+        with self.assertRaisesRegex(ValueError, "too long"):
             wrap_pokedex_13x4(
                 "aaaaaaaaaaaaa bbbbbbbbbbbbb ccccccccccccc "
                 "ddddddddddddd eeeeeeeeeeeee"
             )
 
     def test_pokedex_rejects_word_over_13_columns(self) -> None:
-        with self.assertRaisesRegex(ValueError, "trop longue"):
+        with self.assertRaisesRegex(ValueError, "too long"):
             wrap_pokedex_13x4("électromagnétique")
 
     def test_unknown_layout_is_fatal(self) -> None:
-        with self.assertRaisesRegex(ValueError, "inconnu"):
+        with self.assertRaisesRegex(ValueError, "unknown"):
             format_game_text("Bonjour", "dialogue_magique")
 
     def test_explicit_raw_layout_is_not_reflowed(self) -> None:

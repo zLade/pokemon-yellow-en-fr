@@ -45,21 +45,21 @@ EXPECTED_CONFIDENCE_RANGE = "K2:K1056"
 EXPECTED_VERDICT_RANGE = "O2:O1056"
 EXPECTED_HEADERS = (
     "id",
-    "cle_stable",
-    "categorie",
-    "offset_ou_pointeur",
-    "ligne_script",
+    "stable_key",
+    "category",
+    "source_offset_or_pointer",
+    "script_line",
     "layout",
-    "intervenant",
-    "texte_francais",
-    "texte_chinois_source",
-    "traduction_anglaise_rom_anglaise",
-    "confiance_alignement",
-    "historique_traduction",
-    "naturalise",
-    "corrige_d_apres_le_chinois",
-    "votre_verdict",
-    "votre_commentaire",
+    "speaker",
+    "french_reference_text",
+    "chinese_text",
+    "english_2015",
+    "alignment_confidence",
+    "translation_history",
+    "naturalized",
+    "chinese_fidelity_corrected",
+    "review_verdict",
+    "review_comment",
 )
 
 CELL_REFERENCE_RE = re.compile(r"^\$?([A-Za-z]{1,3})\$?([1-9][0-9]*)$")
@@ -141,7 +141,7 @@ def _parse_cell_reference(reference: str) -> tuple[int, int]:
     match = CELL_REFERENCE_RE.fullmatch(reference)
     if match is None:
         raise WorkbookVerificationError(
-            f"référence de cellule OpenXML invalide : {reference!r}"
+            f"invalid OpenXML cell reference: {reference!r}"
         )
     return int(match.group(2)), _column_number(match.group(1))
 
@@ -158,7 +158,7 @@ def _canonical_range(reference: str) -> str:
         return cell
     if len(parts) != 2:
         raise WorkbookVerificationError(
-            f"plage OpenXML invalide : {reference!r}"
+            f"invalid OpenXML range: {reference!r}"
         )
     return ":".join(_canonical_cell_reference(part) for part in parts)
 
@@ -179,14 +179,14 @@ def _load_csv(path: Path, result: VerificationResult) -> list[list[str]] | None:
         with path.open(newline="", encoding="utf-8-sig") as handle:
             rows = [list(row) for row in csv.reader(handle, strict=True)]
     except (OSError, UnicodeError, csv.Error) as exc:
-        result.error("CSV_READ", f"impossible de lire {path}: {exc}")
+        result.error("CSV_READ", f"cannot read {path}: {exc}")
         return None
 
     if len(rows) != EXPECTED_ROW_COUNT:
         result.error(
             "CSV_ROWS",
-            f"{path} contient {len(rows)} lignes; "
-            f"{EXPECTED_ROW_COUNT} attendues (en-tête inclus)",
+            f"{path} contains {len(rows)} rows; "
+            f"{EXPECTED_ROW_COUNT} expected (including header)",
         )
     bad_widths = [
         index
@@ -198,8 +198,8 @@ def _load_csv(path: Path, result: VerificationResult) -> list[list[str]] | None:
         suffix = "…" if len(bad_widths) > 8 else ""
         result.error(
             "CSV_COLUMNS",
-            f"lignes non rectangulaires ({preview}{suffix}); "
-            f"{EXPECTED_COLUMN_COUNT} colonnes attendues",
+            f"non-rectangular rows ({preview}{suffix}); "
+            f"{EXPECTED_COLUMN_COUNT} columns expected",
         )
     if not rows or any(len(row) != EXPECTED_COLUMN_COUNT for row in rows):
         return None
@@ -207,8 +207,8 @@ def _load_csv(path: Path, result: VerificationResult) -> list[list[str]] | None:
     if tuple(rows[0]) != EXPECTED_HEADERS:
         result.error(
             "CSV_HEADERS",
-            "l'en-tête CSV ne correspond pas aux 16 colonnes canoniques; "
-            f"reçu={rows[0]!r}",
+            "CSV header does not match the 16 canonical columns; "
+            f"received={rows[0]!r}",
         )
 
     ids = [row[0] for row in rows[1:]]
@@ -220,13 +220,13 @@ def _load_csv(path: Path, result: VerificationResult) -> list[list[str]] | None:
             if actual != expected:
                 result.error(
                     "CSV_ID_SEQUENCE",
-                    f"ligne {position}: ID {actual!r}; {expected!r} attendu",
+                    f"row {position}: ID {actual!r}; {expected!r} expected",
                 )
                 break
         if len(ids) != len(expected_ids):
             result.error(
                 "CSV_ID_SEQUENCE",
-                f"{len(ids)} IDs présents; {len(expected_ids)} attendus",
+                f"{len(ids)} IDs present; {len(expected_ids)} expected",
             )
 
     duplicate_ids = sorted(
@@ -235,7 +235,7 @@ def _load_csv(path: Path, result: VerificationResult) -> list[list[str]] | None:
     if duplicate_ids:
         result.error(
             "CSV_ID_DUPLICATE",
-            "IDs dupliqués : " + ", ".join(duplicate_ids[:8]),
+            "duplicate IDs: " + ", ".join(duplicate_ids[:8]),
         )
 
     stable_keys = [row[1] for row in rows[1:]]
@@ -243,7 +243,7 @@ def _load_csv(path: Path, result: VerificationResult) -> list[list[str]] | None:
     if bad_keys:
         result.error(
             "CSV_STABLE_KEY",
-            "clé stable vide ou mal formée : " + _short(bad_keys[0]),
+            "empty or malformed stable key: " + _short(bad_keys[0]),
         )
     duplicate_keys = sorted(
         value
@@ -253,13 +253,13 @@ def _load_csv(path: Path, result: VerificationResult) -> list[list[str]] | None:
     if duplicate_keys:
         result.error(
             "CSV_STABLE_KEY_DUPLICATE",
-            "clés stables dupliquées : " + ", ".join(duplicate_keys[:8]),
+            "duplicate stable keys: " + ", ".join(duplicate_keys[:8]),
         )
 
     if not result.errors:
         result.check(
-            f"CSV canonique : {EXPECTED_ROW_COUNT} lignes × "
-            f"{EXPECTED_COLUMN_COUNT} colonnes, IDs et clés stables uniques"
+            f"Canonical CSV: {EXPECTED_ROW_COUNT} rows × "
+            f"{EXPECTED_COLUMN_COUNT} columns, unique IDs and stable keys"
         )
     return rows
 
@@ -272,12 +272,12 @@ def _parse_xml(
         payload = archive.read(name)
     except KeyError as exc:
         raise WorkbookVerificationError(
-            f"partie OpenXML obligatoire absente : {name}"
+            f"required OpenXML part missing: {name}"
         ) from exc
     try:
         return ET.fromstring(payload)
     except ET.ParseError as exc:
-        raise WorkbookVerificationError(f"XML invalide dans {name}: {exc}") from exc
+        raise WorkbookVerificationError(f"invalid XML in {name}: {exc}") from exc
 
 
 def _relationship_target(base_part: str, target: str) -> str:
@@ -289,7 +289,7 @@ def _relationship_target(base_part: str, target: str) -> str:
         )
     if resolved == ".." or resolved.startswith("../") or resolved.startswith("/"):
         raise WorkbookVerificationError(
-            f"cible de relation hors paquet : {target!r}"
+            f"relationship target outside package: {target!r}"
         )
     return resolved
 
@@ -305,11 +305,11 @@ def _relationships(
         relationship_id = relationship.get("Id", "")
         if not relationship_id:
             raise WorkbookVerificationError(
-                f"relation sans Id dans {rels_part}"
+                f"relationship without Id in {rels_part}"
             )
         if relationship_id in relationships:
             raise WorkbookVerificationError(
-                f"relation dupliquée {relationship_id!r} dans {rels_part}"
+                f"duplicate relationship {relationship_id!r} in {rels_part}"
             )
         if relationship.get("TargetMode", "Internal") == "External":
             relationships[relationship_id] = (
@@ -338,7 +338,7 @@ def _shared_strings(
         return []
     if len(candidates) != 1:
         raise WorkbookVerificationError(
-            f"{len(candidates)} tables de chaînes partagées trouvées"
+            f"{len(candidates)} shared string tables found"
         )
     root = _parse_xml(archive, candidates[0])
     return [
@@ -361,7 +361,7 @@ def _styles_and_dxfs(
         return []
     if len(candidates) != 1:
         raise WorkbookVerificationError(
-            f"{len(candidates)} feuilles de styles trouvées"
+            f"{len(candidates)} stylesheets found"
         )
     root = _parse_xml(archive, candidates[0])
     container = root.find("m:dxfs", NS)
@@ -372,7 +372,7 @@ def _styles_and_dxfs(
     if declared is not None and declared != str(len(dxfs)):
         result.error(
             "DXF_COUNT",
-            f"styles différentiels : count={declared}, {len(dxfs)} éléments",
+            f"differential styles: count={declared}, {len(dxfs)} elements",
         )
     return dxfs
 
@@ -390,11 +390,11 @@ def _cell_value(cell: ET.Element, shared_strings: list[str]) -> str:
             index = int(raw)
         except ValueError as exc:
             raise WorkbookVerificationError(
-                f"index sharedStrings invalide {raw!r}"
+                f"invalid sharedStrings index {raw!r}"
             ) from exc
         if index < 0 or index >= len(shared_strings):
             raise WorkbookVerificationError(
-                f"index sharedStrings hors limites : {index} / "
+                f"sharedStrings index out of bounds: {index} / "
                 f"{len(shared_strings)}"
             )
         return shared_strings[index]
@@ -408,7 +408,7 @@ def _validate_dimension(root: ET.Element, result: VerificationResult) -> None:
     if len(dimensions) != 1:
         result.error(
             "DIMENSION_COUNT",
-            f"une seule dimension de feuille attendue; {len(dimensions)} trouvée(s)",
+            f"exactly one worksheet dimension expected; {len(dimensions)} found",
         )
         return
     reference = dimensions[0].get("ref", "")
@@ -420,10 +420,10 @@ def _validate_dimension(root: ET.Element, result: VerificationResult) -> None:
     if canonical != EXPECTED_GRID_RANGE:
         result.error(
             "DIMENSION_RANGE",
-            f"dimension {canonical}; {EXPECTED_GRID_RANGE} attendue",
+            f"dimension {canonical}; {EXPECTED_GRID_RANGE} expected",
         )
     else:
-        result.check(f"Dimension de feuille exacte : {EXPECTED_GRID_RANGE}")
+        result.check(f"Exact worksheet dimension: {EXPECTED_GRID_RANGE}")
 
 
 def _validate_freeze(root: ET.Element, result: VerificationResult) -> None:
@@ -431,7 +431,7 @@ def _validate_freeze(root: ET.Element, result: VerificationResult) -> None:
     if len(panes) != 1:
         result.error(
             "FREEZE_PANE_COUNT",
-            f"un volet figé attendu; {len(panes)} trouvé(s)",
+            f"one frozen pane expected; {len(panes)} found",
         )
         return
     pane = panes[0]
@@ -439,7 +439,7 @@ def _validate_freeze(root: ET.Element, result: VerificationResult) -> None:
     if state != "frozen":
         result.error(
             "FREEZE_STATE",
-            f"state={state!r}; 'frozen' attendu",
+            f"state={state!r}; 'frozen' expected",
         )
     try:
         y_split = float(pane.get("ySplit", "0"))
@@ -447,35 +447,35 @@ def _validate_freeze(root: ET.Element, result: VerificationResult) -> None:
     except ValueError:
         result.error(
             "FREEZE_SPLIT",
-            f"séparation invalide xSplit={pane.get('xSplit')!r}, "
+            f"invalid split xSplit={pane.get('xSplit')!r}, "
             f"ySplit={pane.get('ySplit')!r}",
         )
         return
     if y_split != 1:
         result.error(
             "FREEZE_ROW",
-            f"ySplit={y_split:g}; seule la ligne 1 doit être figée",
+            f"ySplit={y_split:g}; only row 1 must be frozen",
         )
     if x_split not in {0, 2}:
         result.error(
             "FREEZE_COLUMNS",
-            f"xSplit={x_split:g}; 0 ou 2 (colonnes A:B) attendu",
+            f"xSplit={x_split:g}; 0 or 2 (columns A:B) expected",
         )
     if x_split == 0:
         result.warning(
             "FREEZE_COLUMNS_RECOMMENDED",
-            "les colonnes A:B ne sont pas figées (xSplit=2 recommandé)",
+            "columns A:B are not frozen (xSplit=2 recommended)",
         )
     expected_top_left = "C2" if x_split == 2 else "A2"
     top_left = pane.get("topLeftCell", "")
     if top_left != expected_top_left:
         result.error(
             "FREEZE_TOP_LEFT",
-            f"topLeftCell={top_left!r}; {expected_top_left!r} attendu",
+            f"topLeftCell={top_left!r}; {expected_top_left!r} expected",
         )
     if state == "frozen" and y_split == 1 and x_split in {0, 2} and top_left == expected_top_left:
-        description = "ligne 1 et colonnes A:B" if x_split == 2 else "ligne 1"
-        result.check(f"Volets figés correctement : {description}")
+        description = "row 1 and columns A:B" if x_split == 2 else "row 1"
+        result.check(f"Correctly frozen panes: {description}")
 
 
 def _worksheet_relationships_part(worksheet_part: str) -> str:
@@ -495,7 +495,7 @@ def _validate_filter(
 ) -> None:
     filters: list[tuple[str, str]] = []
     for element in root.findall("m:autoFilter", NS):
-        filters.append(("feuille", element.get("ref", "")))
+        filters.append(("worksheet", element.get("ref", "")))
 
     table_parts = root.find("m:tableParts", NS)
     table_elements = [] if table_parts is None else list(table_parts.findall("m:tablePart", NS))
@@ -511,7 +511,7 @@ def _validate_filter(
         if rels_part not in names:
             result.error(
                 "TABLE_RELATIONSHIPS",
-                f"relations de table absentes : {rels_part}",
+                f"missing table relationships: {rels_part}",
             )
         else:
             table_relationships = _relationships(
@@ -525,14 +525,14 @@ def _validate_filter(
                 if relationship is None:
                     result.error(
                         "TABLE_RELATIONSHIP",
-                        f"relation de table inconnue : {relationship_id!r}",
+                        f"unknown table relationship: {relationship_id!r}",
                     )
                     continue
                 relationship_type, target = relationship
                 if target == "EXTERNAL" or not relationship_type.endswith("/table"):
                     result.error(
                         "TABLE_RELATIONSHIP",
-                        f"relation {relationship_id!r} non interne ou non-table",
+                        f"relation {relationship_id!r} is external or is not a table relationship",
                     )
                     continue
                 table_root = _parse_xml(archive, target)
@@ -543,8 +543,8 @@ def _validate_filter(
                 if table_formulas:
                     result.error(
                         "UNEXPECTED_TABLE_FORMULA",
-                        f"table {target}: {len(table_formulas)} formule(s) "
-                        "de colonne/total inattendue(s)",
+                        f"table {target}: {len(table_formulas)} unexpected "
+                        "column/total formulas",
                     )
                 table_reference = table_root.get("ref", "")
                 try:
@@ -555,13 +555,13 @@ def _validate_filter(
                 if canonical_table != EXPECTED_GRID_RANGE:
                     result.error(
                         "TABLE_RANGE",
-                        f"table {canonical_table}; {EXPECTED_GRID_RANGE} attendue",
+                        f"table {canonical_table}; {EXPECTED_GRID_RANGE} expected",
                     )
                 auto_filter = table_root.find("m:autoFilter", NS)
                 if auto_filter is None:
                     result.error(
                         "FILTER_MISSING",
-                        f"la table {target} ne contient pas d'autoFilter",
+                        f"table {target} has no autoFilter",
                     )
                 else:
                     filters.append((f"table {target}", auto_filter.get("ref", "")))
@@ -575,15 +575,15 @@ def _validate_filter(
                     ):
                         result.error(
                             "TABLE_COLUMNS",
-                            f"table {target}: {actual_columns} colonnes, "
+                            f"table {target}: {actual_columns} columns, "
                             f"count={declared_columns!r}; "
-                            f"{EXPECTED_COLUMN_COUNT} attendues",
+                            f"{EXPECTED_COLUMN_COUNT} expected",
                         )
 
     if len(filters) != 1:
         result.error(
             "FILTER_COUNT",
-            f"un seul filtre effectif attendu; {len(filters)} trouvé(s)",
+            f"exactly one effective filter expected; {len(filters)} found",
         )
         return
     source, reference = filters[0]
@@ -595,11 +595,11 @@ def _validate_filter(
     if canonical != EXPECTED_FILTER_RANGE:
         result.error(
             "FILTER_RANGE",
-            f"filtre de {source} sur {canonical}; "
-            f"{EXPECTED_FILTER_RANGE} attendu",
+            f"filter from {source} on {canonical}; "
+            f"{EXPECTED_FILTER_RANGE} expected",
         )
     else:
-        result.check(f"Filtre exact : {EXPECTED_FILTER_RANGE} ({source})")
+        result.check(f"Exact filter: {EXPECTED_FILTER_RANGE} ({source})")
 
 
 def _parse_inline_list(formula: str) -> list[str] | None:
@@ -625,13 +625,13 @@ def _validate_data_validation(
         if declared is not None and declared != str(len(items)):
             result.error(
                 "VALIDATION_COUNT_DECLARED",
-                f"dataValidations count={declared}; {len(items)} règle(s)",
+                f"dataValidations count={declared}; {len(items)} rules",
             )
         validations.extend(items)
     if len(validations) != 1:
         result.error(
             "VALIDATION_COUNT",
-            f"une validation de liste attendue; {len(validations)} trouvée(s)",
+            f"one list validation expected; {len(validations)} found",
         )
         return None
 
@@ -639,7 +639,7 @@ def _validate_data_validation(
     if validation.get("type") != "list":
         result.error(
             "VALIDATION_TYPE",
-            f"type={validation.get('type')!r}; 'list' attendu",
+            f"type={validation.get('type')!r}; 'list' expected",
         )
     try:
         references = _canonical_sqref(validation.get("sqref", ""))
@@ -649,26 +649,26 @@ def _validate_data_validation(
     if references != [EXPECTED_VALIDATION_RANGE]:
         result.error(
             "VALIDATION_RANGE",
-            f"plage(s) {references!r}; "
-            f"[{EXPECTED_VALIDATION_RANGE!r}] attendue",
+            f"ranges {references!r}; "
+            f"[{EXPECTED_VALIDATION_RANGE!r}] expected",
         )
     allow_blank = validation.get("allowBlank", "0").lower() in {"1", "true"}
     if not allow_blank:
         result.error(
             "VALIDATION_ALLOW_BLANK",
-            "allowBlank=1 attendu car la colonne O est initialement vide",
+            "allowBlank=1 expected because column O is initially empty",
         )
     hides_arrow = validation.get("showDropDown", "0").lower() in {"1", "true"}
     if hides_arrow:
         result.error(
             "VALIDATION_DROPDOWN",
-            "showDropDown=1 masque la flèche de liste dans Excel",
+            "showDropDown=1 hides the list arrow in Excel",
         )
     formula = validation.findtext("m:formula1", default="", namespaces=NS).strip()
     if not formula:
         result.error(
             "VALIDATION_FORMULA",
-            "formula1 est vide; aucun verdict ne serait proposé",
+            "formula1 is empty; no verdicts would be offered",
         )
         return None
     options = _parse_inline_list(formula)
@@ -676,17 +676,17 @@ def _validate_data_validation(
         if len(set(options)) < 2:
             result.error(
                 "VALIDATION_OPTIONS",
-                f"au moins deux verdicts distincts attendus; reçu={options!r}",
+                f"at least two distinct verdicts expected; received={options!r}",
             )
         elif references == [EXPECTED_VALIDATION_RANGE]:
             result.check(
-                f"Validation de liste exacte : {EXPECTED_VALIDATION_RANGE}, "
+                f"Exact list validation: {EXPECTED_VALIDATION_RANGE}, "
                 f"{len(options)} verdicts"
             )
     elif references == [EXPECTED_VALIDATION_RANGE]:
         result.check(
-            f"Validation de liste exacte : {EXPECTED_VALIDATION_RANGE} "
-            "(source par formule/plage)"
+            f"Exact list validation: {EXPECTED_VALIDATION_RANGE} "
+            "(formula/range source)"
         )
     return options
 
@@ -713,12 +713,12 @@ def _conditional_rule_is_useful(
         try:
             index = int(dxf_id)
         except ValueError:
-            result.error("CONDITIONAL_DXF", f"dxfId invalide : {dxf_id!r}")
+            result.error("CONDITIONAL_DXF", f"invalid dxfId: {dxf_id!r}")
         else:
             if index < 0 or index >= len(dxfs):
                 result.error(
                     "CONDITIONAL_DXF",
-                    f"dxfId={index} hors limites (0..{len(dxfs) - 1})",
+                    f"dxfId={index} out of bounds (0..{len(dxfs) - 1})",
                 )
             else:
                 styled = _dxf_is_meaningful(dxfs[index])
@@ -759,9 +759,9 @@ def _validate_conditional_formatting(
         if len(references) != 1 or references[0] not in rules_by_range:
             result.error(
                 "CONDITIONAL_RANGE",
-                f"plage(s) {references!r}; seules "
-                f"{EXPECTED_CONFIDENCE_RANGE} et "
-                f"{EXPECTED_VERDICT_RANGE} sont attendues",
+                f"ranges {references!r}; only "
+                f"{EXPECTED_CONFIDENCE_RANGE} and "
+                f"{EXPECTED_VERDICT_RANGE} are expected",
             )
             continue
         rules = block.findall("m:cfRule", NS)
@@ -773,13 +773,13 @@ def _validate_conditional_formatting(
             except ValueError:
                 result.error(
                     "CONDITIONAL_PRIORITY",
-                    f"priorité invalide {raw_priority!r} sur {references[0]}",
+                    f"invalid priority {raw_priority!r} on {references[0]}",
                 )
             else:
                 if priority < 1:
                     result.error(
                         "CONDITIONAL_PRIORITY",
-                        f"priorité {priority} invalide sur {references[0]}",
+                        f"invalid priority {priority} on {references[0]}",
                     )
                 priorities.append(priority)
 
@@ -791,7 +791,7 @@ def _validate_conditional_formatting(
     if duplicate_priorities:
         result.error(
             "CONDITIONAL_PRIORITY_DUPLICATE",
-            "priorités dupliquées : "
+            "duplicate priorities: "
             + ", ".join(str(value) for value in duplicate_priorities),
         )
 
@@ -808,8 +808,8 @@ def _validate_conditional_formatting(
         if len(useful) < 2:
             result.error(
                 "CONDITIONAL_USEFUL_RULES",
-                f"{reference}: {len(useful)} règle(s) conditionnelle(s) "
-                "stylée(s) et exploitable(s); au moins 2 attendues",
+                f"{reference}: {len(useful)} conditional rules "
+                "with useful styling; at least 2 expected",
             )
             continue
 
@@ -828,14 +828,14 @@ def _validate_conditional_formatting(
             if len(covered) < min(2, len(set(expected_values))):
                 result.error(
                     "CONDITIONAL_STATUS_COVERAGE",
-                    f"{reference}: les règles ne distinguent que "
-                    f"{sorted(covered)!r}; au moins deux états de "
-                    f"{expected_values!r} sont attendus",
+                    f"{reference}: rules only distinguish "
+                    f"{sorted(covered)!r}; at least two states from "
+                    f"{expected_values!r} are expected",
                 )
                 continue
         result.check(
-            f"Formats conditionnels utiles : {reference} "
-            f"({len(useful)} règles stylées)"
+            f"Useful conditional formatting: {reference} "
+            f"({len(useful)} styled rules)"
         )
 
 
@@ -860,15 +860,15 @@ def _validate_cells(
         try:
             row_number = int(raw_row)
         except ValueError:
-            result.error("ROW_REFERENCE", f"numéro de ligne invalide : {raw_row!r}")
+            result.error("ROW_REFERENCE", f"invalid row number: {raw_row!r}")
             continue
         if row_number in rows_seen:
-            result.error("ROW_DUPLICATE", f"ligne {row_number} dupliquée")
+            result.error("ROW_DUPLICATE", f"duplicate row {row_number}")
         rows_seen.add(row_number)
         if row_number < 1 or row_number > EXPECTED_ROW_COUNT:
             result.error(
                 "ROW_OUTSIDE_GRID",
-                f"ligne physique {row_number} hors de 1:{EXPECTED_ROW_COUNT}",
+                f"physical row {row_number} outside 1:{EXPECTED_ROW_COUNT}",
             )
         for cell in row_element.findall("m:c", NS):
             reference = cell.get("r", "")
@@ -880,11 +880,11 @@ def _validate_cells(
             canonical = f"{_column_name(cell_column)}{cell_row}"
             if cell_row != row_number:
                 bad_row_cells.append(
-                    f"{canonical} déclaré dans la ligne XML {row_number}"
+                    f'{canonical} declared in XML row {row_number}'
                 )
             key = (cell_row, cell_column)
             if key in values:
-                result.error("CELL_DUPLICATE", f"cellule {canonical} dupliquée")
+                result.error("CELL_DUPLICATE", f"duplicate cell {canonical}")
                 continue
             if cell.find("m:f", NS) is not None:
                 formula_cells.append(canonical)
@@ -912,7 +912,7 @@ def _validate_cells(
         suffix = "…" if len(formula_cells) > 12 else ""
         result.error(
             "UNEXPECTED_FORMULA",
-            f"{len(formula_cells)} cellule(s) avec formule : {preview}{suffix}",
+            f"{len(formula_cells)} cells with formulas: {preview}{suffix}",
         )
     if error_cells:
         preview = ", ".join(
@@ -921,14 +921,14 @@ def _validate_cells(
         suffix = "…" if len(error_cells) > 12 else ""
         result.error(
             "EXCEL_ERROR",
-            f"{len(error_cells)} erreur(s) Excel : {preview}{suffix}",
+            f"{len(error_cells)} Excel errors: {preview}{suffix}",
         )
     if outside_cells:
         preview = ", ".join(outside_cells[:12])
         suffix = "…" if len(outside_cells) > 12 else ""
         result.error(
             "CELL_OUTSIDE_GRID",
-            f"{len(outside_cells)} cellule(s) hors de "
+            f"{len(outside_cells)} cells outside "
             f"{EXPECTED_GRID_RANGE} : {preview}{suffix}",
         )
 
@@ -936,8 +936,8 @@ def _validate_cells(
     mismatch_count = 0
     invalid_verdicts: list[str] = []
     for row_index, expected_row in enumerate(csv_rows, start=1):
-        expected_id = expected_row[0] if row_index > 1 else "en-tête"
-        stable_key = expected_row[1] if row_index > 1 else "en-tête"
+        expected_id = expected_row[0] if row_index > 1 else "header"
+        stable_key = expected_row[1] if row_index > 1 else "header"
         for column_index, expected in enumerate(expected_row, start=1):
             actual = values.get((row_index, column_index), "")
             if row_index > 1 and column_index in (15, 16):
@@ -948,7 +948,7 @@ def _validate_cells(
                     and actual not in validation_options
                 ):
                     invalid_verdicts.append(
-                        f"O{row_index} (ID={expected_id}, clé={stable_key})="
+                        f"O{row_index} (ID={expected_id}, key={stable_key})="
                         f"{_short(actual)}"
                     )
                 # O:P are reviewer-owned and deliberately survive a refresh.
@@ -960,26 +960,25 @@ def _validate_cells(
                 continue
             reference = f"{_column_name(column_index)}{row_index}"
             mismatches.append(
-                f"{reference} (ID={expected_id}, clé={stable_key}) : "
-                f"attendu {_short(expected)}, reçu {_short(actual)}"
+                f'{reference} (ID={expected_id}, key={stable_key}): expected {_short(expected)}, received {_short(actual)}'
             )
     if mismatch_count:
         suffix = ""
         if mismatch_count > len(mismatches):
             suffix = (
-                f"; {mismatch_count - len(mismatches)} autre(s) "
-                "écart(s) non affiché(s)"
+                f"; {mismatch_count - len(mismatches)} additional "
+                "mismatches not shown"
             )
         result.error(
             "VALUE_MISMATCH",
-            f"{mismatch_count} valeur(s) différente(s) : "
+            f"{mismatch_count} differing values: "
             + " | ".join(mismatches)
             + suffix,
         )
     if invalid_verdicts:
         result.error(
             "FEEDBACK_VERDICT",
-            "verdict(s) hors liste : " + " | ".join(invalid_verdicts[:20]),
+            "verdicts outside the list: " + " | ".join(invalid_verdicts[:20]),
         )
     else:
         if not mismatch_count:
@@ -987,8 +986,8 @@ def _validate_cells(
                 (EXPECTED_ROW_COUNT - 1) * 14
             )
             result.check(
-                f"Valeurs source exactes : {exact_count} cellules A:N "
-                "et en-têtes comparés au CSV; retours O:P préservables"
+                f"Exact source values: {exact_count} cells in A:N "
+                "and headers compared against CSV; feedback in O:P can be preserved"
             )
 
 
@@ -1004,7 +1003,7 @@ def _verify_package(
         archive = zipfile.ZipFile(xlsx_path)
     except (OSError, zipfile.BadZipFile) as exc:
         raise WorkbookVerificationError(
-            f"impossible d'ouvrir {xlsx_path} comme XLSX : {exc}"
+            f"cannot open {xlsx_path} as XLSX: {exc}"
         ) from exc
 
     with archive:
@@ -1016,7 +1015,7 @@ def _verify_package(
         )
         if duplicates:
             raise WorkbookVerificationError(
-                "parties ZIP dupliquées : " + ", ".join(duplicates[:8])
+                "duplicate ZIP parts: " + ", ".join(duplicates[:8])
             )
         dangerous = [
             name
@@ -1027,20 +1026,20 @@ def _verify_package(
         ]
         if dangerous:
             raise WorkbookVerificationError(
-                "chemins ZIP dangereux : " + ", ".join(sorted(dangerous)[:8])
+                "unsafe ZIP paths: " + ", ".join(sorted(dangerous)[:8])
             )
         encrypted = [info.filename for info in infos if info.flag_bits & 0x1]
         if encrypted:
             raise WorkbookVerificationError(
-                "parties ZIP chiffrées non vérifiables : "
+                "encrypted ZIP parts cannot be verified: "
                 + ", ".join(encrypted[:8])
             )
         try:
             bad_crc = archive.testzip()
         except (OSError, zipfile.BadZipFile) as exc:
-            raise WorkbookVerificationError(f"erreur CRC/ZIP : {exc}") from exc
+            raise WorkbookVerificationError(f"CRC/ZIP error: {exc}") from exc
         if bad_crc is not None:
-            raise WorkbookVerificationError(f"CRC ZIP invalide : {bad_crc}")
+            raise WorkbookVerificationError(f"invalid ZIP CRC: {bad_crc}")
 
         workbook_part = "xl/workbook.xml"
         workbook_root = _parse_xml(archive, workbook_part)
@@ -1053,34 +1052,34 @@ def _verify_package(
         if len(sheets) != 1:
             result.error(
                 "SHEET_COUNT",
-                f"une seule feuille attendue; {len(sheets)} trouvée(s)",
+                f"exactly one worksheet expected; {len(sheets)} found",
             )
         matching_sheets = [sheet for sheet in sheets if sheet.get("name") == sheet_name]
         if len(matching_sheets) != 1:
             names_found = [sheet.get("name", "") for sheet in sheets]
             result.error(
                 "SHEET_NAME",
-                f"feuille {sheet_name!r} introuvable ou dupliquée; "
-                f"feuilles={names_found!r}",
+                f"worksheet {sheet_name!r} missing or duplicated; "
+                f"worksheets={names_found!r}",
             )
             return
         sheet = matching_sheets[0]
         if sheet.get("state", "visible") != "visible":
-            result.error("SHEET_HIDDEN", f"la feuille {sheet_name!r} est masquée")
+            result.error("SHEET_HIDDEN", f"worksheet {sheet_name!r} is hidden")
         relationship_id = sheet.get(f"{{{REL_NS}}}id", "")
         relationship = workbook_relationships.get(relationship_id)
         if relationship is None:
             raise WorkbookVerificationError(
-                f"relation de feuille inconnue : {relationship_id!r}"
+                f"unknown worksheet relationship: {relationship_id!r}"
             )
         relationship_type, worksheet_part = relationship
         if worksheet_part == "EXTERNAL" or not relationship_type.endswith("/worksheet"):
             raise WorkbookVerificationError(
-                f"relation {relationship_id!r} non interne ou non-worksheet"
+                f"relation {relationship_id!r} is external or is not a worksheet relationship"
             )
         if worksheet_part not in names:
             raise WorkbookVerificationError(
-                f"partie de feuille absente : {worksheet_part}"
+                f"missing worksheet part: {worksheet_part}"
             )
 
         shared_strings = _shared_strings(archive, workbook_relationships)
@@ -1113,7 +1112,7 @@ def _verify_package(
             validation_options=validation_options,
         )
         if len(sheets) == 1 and sheet.get("state", "visible") == "visible":
-            result.check(f"Feuille unique et visible : {sheet_name}")
+            result.check(f"Single visible worksheet: {sheet_name}")
 
 
 def verify_dialogue_review_xlsx(
@@ -1127,7 +1126,7 @@ def verify_dialogue_review_xlsx(
 
     result = VerificationResult()
     if max_value_errors < 1:
-        result.error("ARGUMENT", "max_value_errors doit être supérieur à zéro")
+        result.error("ARGUMENT", "max_value_errors must be greater than zero")
         return result
     csv_rows = _load_csv(csv_path, result)
     if csv_rows is None or len(csv_rows) != EXPECTED_ROW_COUNT:
@@ -1152,28 +1151,26 @@ def _print_text_report(
     csv_path: Path,
     strict: bool,
 ) -> None:
-    status = "OK" if result.passed(strict=strict) else "ÉCHEC"
-    print(f"{status} — vérification du classeur de relecture")
+    status = "OK" if result.passed(strict=strict) else "FAILED"
+    print(f'{status} — review workbook verification')
     print(f"XLSX : {xlsx_path}")
     print(f"CSV  : {csv_path}")
     for check in result.checks:
         print(f"  ✓ {check}")
     for warning in result.warnings:
-        label = "ERREUR (mode strict)" if strict else "AVERTISSEMENT"
+        label = "ERROR (strict mode)" if strict else "WARNING"
         print(f"  ! {label} {warning}")
     for error in result.errors:
         print(f"  ✗ {error}")
     print(
-        f"Bilan : {len(result.errors)} erreur(s), "
-        f"{len(result.warnings)} avertissement(s)"
+        f'Summary: {len(result.errors)} error(s), {len(result.warnings)} warning(s)'
     )
 
 
 def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Vérifie le classeur XLSX de relecture des 1 055 dialogues "
-            "contre son CSV canonique."
+            'Verify the 1,055-dialogue review workbook against its canonical CSV.'
         )
     )
     parser.add_argument("--xlsx", type=Path, default=DEFAULT_XLSX)
@@ -1182,18 +1179,18 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--strict",
         action="store_true",
-        help="traite les recommandations (dont le gel A:B) comme des erreurs",
+        help='treat recommendations (including frozen columns A:B) as errors',
     )
     parser.add_argument(
         "--max-value-errors",
         type=int,
         default=20,
-        help="nombre maximal d'écarts de valeurs détaillés (défaut : 20)",
+        help="maximum number of detailed value mismatches (default: 20)",
     )
     parser.add_argument(
         "--json",
         action="store_true",
-        help="émet un rapport JSON exploitable par le build",
+        help="emit a machine-readable JSON report for the build",
     )
     return parser.parse_args(argv)
 

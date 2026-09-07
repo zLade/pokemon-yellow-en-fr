@@ -250,33 +250,33 @@ def assess_page_boundary(
 
     if not left_terminal:
         if _abbreviation_end(left_page):
-            flag("strong", f"titre abrégé final « {left_units[-1]} »")
+            flag("strong", f"trailing abbreviated title « {left_units[-1]} »")
         if (left_last, right_first) in PROTECTED_UNIT_PAIRS:
             flag(
                 "strong",
-                "nom composé séparé "
+                "split compound name "
                 f"« {left_units[-1]} | {right_units[0]} »",
             )
         if left_last in STRONG_END_UNITS:
-            flag("strong", f"mot-outil final « {left_units[-1]} »")
+            flag("strong", f"trailing function word « {left_units[-1]} »")
         if left_last in MEDIUM_END_CONTRACTIONS:
-            flag("medium", f"groupe verbal final « {left_units[-1]} »")
+            flag("medium", f"trailing verb phrase « {left_units[-1]} »")
         if left_last.endswith(("qu'", "lorsqu'", "puisqu'")):
-            flag("strong", f"contraction finale « {left_units[-1]} »")
+            flag("strong", f"trailing contraction « {left_units[-1]} »")
         if left_last in MEDIUM_END_UNITS:
-            flag("medium", f"modifieur final « {left_units[-1]} »")
+            flag("medium", f"trailing modifier « {left_units[-1]} »")
 
         if right_first in STRONG_START_UNITS:
-            flag("strong", f"complément initial « {right_units[0]} »")
+            flag("strong", f"leading complement « {right_units[0]} »")
         elif right_first in MEDIUM_START_UNITS:
-            flag("medium", f"liaison initiale « {right_units[0]} »")
+            flag("medium", f"leading connective « {right_units[0]} »")
 
         if (
             len(left_units) == 1
             and len(encode_game_text(left_units[0])) <= 8
             and not _clause_end(left_page)
         ):
-            flag("weak", f"fragment final très court « {left_units[0]} »")
+            flag("weak", f"very short trailing fragment « {left_units[0]} »")
 
     if not reasons:
         return None
@@ -326,7 +326,7 @@ def _boundary_score(left_page: str, right_page: str) -> int:
 def _line_score(length: int, width: int, *, last: bool) -> int:
     if length < 1 or length > width:
         raise ValueError(
-            f"ligne de dialogue invalide ({length} octets, largeur {width})"
+            f"invalid dialogue line ({length} bytes, width {width})"
         )
     gap = width - length
     raggedness = RAGGEDNESS_FACTOR * gap * gap
@@ -360,7 +360,7 @@ def _boundary_quality_vector(
     reasons = issue.reasons if issue is not None else ()
     protected = int(
         any(
-            reason.startswith(("nom composé", "titre abrégé"))
+            reason.startswith(("split compound name", "trailing abbreviated title"))
             for reason in reasons
         )
     )
@@ -368,8 +368,8 @@ def _boundary_quality_vector(
         any(
             reason.startswith(
                 (
-                    "mot-outil final",
-                    "contraction finale",
+                    "trailing function word",
+                    "trailing contraction",
                 )
             )
             for reason in reasons
@@ -377,7 +377,7 @@ def _boundary_quality_vector(
     )
     strong_start = int(
         any(
-            reason.startswith("complément initial")
+            reason.startswith("leading complement")
             for reason in reasons
         )
     )
@@ -391,9 +391,9 @@ def _boundary_quality_vector(
         any(
             reason.startswith(
                 (
-                    "groupe verbal final",
-                    "liaison initiale",
-                    "modifieur final",
+                    "trailing verb phrase",
+                    "leading connective",
+                    "trailing modifier",
                 )
             )
             for reason in reasons
@@ -401,7 +401,7 @@ def _boundary_quality_vector(
     )
     singleton = int(
         any(
-            reason.startswith("fragment final très court")
+            reason.startswith("very short trailing fragment")
             for reason in reasons
         )
     )
@@ -450,7 +450,7 @@ def quality_vector_dialogue_pages(
         width = dialogue_line_width(index, layout)
         if not raw or len(raw) > width:
             raise ValueError(
-                f"page {index + 1} invalide ({len(raw)} > {width})"
+                f"page {index + 1} invalid ({len(raw)} > {width})"
             )
         lengths.append(len(raw))
         decoded.append(decode_game_text(raw))
@@ -495,10 +495,10 @@ def score_dialogue_pages(
         width = dialogue_line_width(index, layout)
         if len(raw) > width:
             raise ValueError(
-                f"page {index + 1} trop longue ({len(raw)} > {width})"
+                f"page {index + 1} too long ({len(raw)} > {width})"
             )
         if not raw:
-            raise ValueError(f"page {index + 1} vide")
+            raise ValueError(f"page {index + 1} empty")
         lengths.append(len(raw))
         decoded.append(
             decode_game_text(raw)
@@ -524,10 +524,10 @@ def _encoded_units(text: str) -> tuple[tuple[str, bytes], ...]:
     for unit in semantic_units(text):
         encoded = encode_game_text(unit)
         if not encoded:
-            raise ValueError(f"unité vide après encodage: {unit!r}")
+            raise ValueError(f"empty unit after encoding: {unit!r}")
         if len(encoded) > 19:
             raise ValueError(
-                "unité lexicale trop longue pour une page de dialogue "
+                "lexical unit too long for a dialogue page "
                 f"({len(encoded)} > 19): {unit!r}"
             )
         result.append((unit, encoded))
@@ -569,7 +569,7 @@ def _minimum_page_count(
         if len(first) > width:
             unit, encoded = units[unit_index]
             raise ValueError(
-                "unité trop longue pour la page courante "
+                "unit too long for the current page "
                 f"({len(encoded)} > {width}): {unit!r}"
             )
         while end < len(units):
@@ -607,16 +607,16 @@ def _optimise_unforced_text(
     if exact_pages is not None:
         if exact_pages < minimum_pages:
             raise ValueError(
-                f"{exact_pages} page(s) autorisée(s), "
+                f"{exact_pages} page(s) allowed, "
                 f"{minimum_pages} minimum"
             )
         if max_pages is not None and exact_pages > max_pages:
             raise ValueError(
-                f"{exact_pages} page(s) exigée(s), limite {max_pages}"
+                f"{exact_pages} page(s) required, limit {max_pages}"
             )
     if max_pages is not None and max_pages < minimum_pages:
         raise ValueError(
-            f"limite de {max_pages} page(s), "
+            f"limit of {max_pages} page(s), "
             f"{minimum_pages} minimum"
         )
 
@@ -716,8 +716,8 @@ def _optimise_unforced_text(
     if not plans:
         limit = exact_pages if exact_pages is not None else max_pages
         raise ValueError(
-            "aucun découpage de dialogue compatible"
-            + (f" avec {limit} page(s)" if limit is not None else "")
+            "no compatible dialogue page plan"
+            + (f" with {limit} page(s)" if limit is not None else "")
         )
     return min(plans, key=_plan_key).lines
 
@@ -747,12 +747,12 @@ def optimise_dialogue_pages(
     add input waits or consume more repack space.
     """
     if layout not in {DIALOGUE_LAYOUT, INTRO_DIALOGUE_LAYOUT}:
-        raise ValueError(f"layout de dialogue inconnu: {layout!r}")
+        raise ValueError(f"unknown dialogue layout: {layout!r}")
     if max_pages is not None and max_pages < 1:
-        raise ValueError("max_pages doit être positif")
+        raise ValueError("max_pages must be positive")
     if preserve_encoded_length and not preserve_minimum_page_count:
         raise ValueError(
-            "preserve_encoded_length exige "
+            "preserve_encoded_length requires "
             "preserve_minimum_page_count"
         )
     if not text.strip():
@@ -767,7 +767,7 @@ def optimise_dialogue_pages(
 
     source_pages = text.splitlines() if preserve_forced_pages else [text]
     if any(not page.strip() for page in source_pages):
-        raise ValueError("page de dialogue forcée vide")
+        raise ValueError("empty forced dialogue page")
 
     raw_lines: list[bytes] = []
     if preserve_forced_pages and len(source_pages) > 1:
@@ -777,7 +777,7 @@ def optimise_dialogue_pages(
             width = dialogue_line_width(len(raw_lines), layout)
             if len(raw) > width:
                 raise ValueError(
-                    "page de dialogue forcée trop longue "
+                    "forced dialogue page too long "
                     f"({len(raw)} > {width}): {source_page!r}"
                 )
             raw_lines.append(raw)
@@ -805,14 +805,14 @@ def optimise_dialogue_pages(
 
     if max_pages is not None and len(raw_lines) > max_pages:
         raise ValueError(
-            f"{len(raw_lines)} page(s) explicite(s), limite {max_pages}"
+            f"{len(raw_lines)} explicit page(s), limit {max_pages}"
         )
 
     semantic = _semantic_bytes(text)
     visible = b" ".join(line.rstrip(b" ") for line in raw_lines)
     if visible != semantic:
         raise AssertionError(
-            "l'optimisation a modifié le texte ou l'ordre des unités"
+            "optimization changed the text or unit order"
         )
 
     padded = tuple(
@@ -1188,30 +1188,30 @@ def compare_script_dialogue_quality(
         "samples": samples[:sample_limit],
         "limits": [
             (
-                "Le score est une heuristique française, pas une analyse "
-                "grammaticale ou sémantique complète."
+                "The score is a French-language heuristic, not a complete "
+                "grammatical or semantic analysis."
             ),
             (
-                "Les noms propres, locutions, effets de style et changements "
-                "de locuteur peuvent produire des faux positifs ou négatifs."
+                "Proper names, expressions, stylistic effects and speaker "
+                "changes can produce false positives or negatives."
             ),
             (
-                "Le mode d'intégration par défaut conserve exactement le "
-                "nombre minimal de pages et interdit toute hausse de la "
-                "longueur encodée. Les modes d'audit peuvent lever l'une ou "
-                "l'autre contrainte."
+                "The default integration mode preserves the exact "
+                "minimum page count and prevents any increase in "
+                "encoded length. Audit modes can relax either "
+                "constraint."
             ),
             (
-                "Les retours ligne explicites sont autoritaires et ne sont "
-                "pas déplacés automatiquement."
+                "Explicit line breaks are authoritative and are not "
+                "moved automatically."
             ),
             (
-                "Cet audit couvre le renderer de dialogue terrain; menus, "
-                "combats, Pokédex et textes graphiques ont d'autres contrats."
+                "This audit covers the field dialogue renderer; menus, "
+                "battles, Pokédex and graphical text have different contracts."
             ),
             (
-                "Une relecture humaine et un parcours dynamique Mesen restent "
-                "nécessaires avant de qualifier la traduction de fluide."
+                "Human review and a dynamic Mesen playthrough remain "
+                "necessary before calling the translation fluent."
             ),
         ],
     }
@@ -1220,8 +1220,8 @@ def compare_script_dialogue_quality(
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "Compare le découpage glouton et un découpage français par "
-            "programmation dynamique pour les dialogues terrain."
+            "Compare greedy line breaking with French-language "
+            "dynamic programming for field dialogues."
         )
     )
     parser.add_argument("--script", default="script.py")
@@ -1231,16 +1231,16 @@ def main() -> int:
         "--allow-extra-pages",
         action="store_true",
         help=(
-            "autorise le score linguistique à ajouter des pages; "
-            "désactivé par défaut pour conserver la taille"
+            "allow linguistic scoring to add pages; "
+            "disabled by default to preserve size"
         ),
     )
     parser.add_argument(
         "--allow-encoded-growth",
         action="store_true",
         help=(
-            "conserve Nmin mais autorise une dernière page plus longue; "
-            "utile uniquement pour l'audit"
+            "preserve Nmin but allow a longer final page; "
+            "useful only for auditing"
         ),
     )
     args = parser.parse_args()
@@ -1265,33 +1265,33 @@ def main() -> int:
             json.dumps(report, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
-        print(f"- Rapport : {output}")
+        print(f"- Report : {output}")
 
     greedy = report["greedy"]
     dp = report["dynamic_programming"]
     delta = report["delta_dp_minus_greedy"]
-    print("Qualité des pages de dialogue terrain")
+    print("Field dialogue page quality")
     print(f"- Dialogues : {report['common_dialogue_rows']}")
     print(
-        "- Pages minimales conservées : "
+        "- Minimum page count preserved : "
         f"{report['configuration']['preserve_minimum_page_count']}"
     )
     print(
-        "- Longueur encodée non croissante : "
+        "- Non-increasing encoded length : "
         f"{report['configuration']['preserve_encoded_length']}"
     )
     print(
         "- Greedy : "
-        f"{greedy['pages']} pages, {greedy['encoded_bytes']} octets, "
+        f"{greedy['pages']} pages, {greedy['encoded_bytes']} bytes, "
         f"suspects {greedy['issue_counts']}"
     )
     print(
         "- DP : "
-        f"{dp['pages']} pages, {dp['encoded_bytes']} octets, "
+        f"{dp['pages']} pages, {dp['encoded_bytes']} bytes, "
         f"suspects {dp['issue_counts']}"
     )
     print(f"- Delta DP-greedy : {delta}")
-    print(f"- Lignes sémantiques modifiées : {report['semantic_mismatches']}")
+    print(f"- Changed semantic rows : {report['semantic_mismatches']}")
     return 1 if report["semantic_mismatches"] else 0
 
 

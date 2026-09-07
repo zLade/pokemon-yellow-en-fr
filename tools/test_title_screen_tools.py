@@ -132,7 +132,7 @@ class PlayerMenuGraphicsTests(unittest.TestCase):
             + int(first_layout["column"])
         )
         candidate[tilemap_offset] ^= 0xFF
-        with self.assertRaisesRegex(ValueError, "Tilemap ITEMS inattendu"):
+        with self.assertRaisesRegex(ValueError, "Unexpected ITEMS tilemap"):
             graphics.patch_french_player_menu_labels(candidate)
 
 
@@ -274,7 +274,7 @@ class TitleAndLoadMenuGraphicsTests(unittest.TestCase):
         self.assertEqual(bytes(candidate), before)
 
     def test_restore_rejects_incompatible_reference(self) -> None:
-        with self.assertRaisesRegex(ValueError, "référence incompatible"):
+        with self.assertRaisesRegex(ValueError, "Incompatible English reference"):
             graphics.restore_english_title_tiles(
                 bytearray(self.base),
                 self.base[:-1],

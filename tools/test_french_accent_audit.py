@@ -40,6 +40,35 @@ EXPECTED_AMBIGUOUS_OFFSETS: set[str] = set()
 
 
 class FrenchAccentAuditTests(unittest.TestCase):
+    def test_status_summary_keys_are_english(self) -> None:
+        for key in (
+            "replacement_occurrences_by_status",
+            "replacement_offsets_by_status",
+        ):
+            self.assertEqual(
+                set(self.report["summary"][key]),
+                {"certain", "contextual", "ambiguous"},
+            )
+
+    def test_ambiguous_status_keeps_priority_and_does_not_apply_unsafe_fix(self) -> None:
+        fixture = 'p(0x0321DD, "tres equilib")\n'
+        with tempfile.TemporaryDirectory() as directory:
+            script = Path(directory) / "accent_fixture.py"
+            script.write_text(fixture, encoding="utf-8")
+            report = audit(script)
+
+        record = report["records"][0]
+        self.assertEqual(record["status"], "ambiguous")
+        self.assertTrue(record["corrected_text"].endswith("equilib"))
+        replacements = {item["status"]: item for item in record["replacements"]}
+        self.assertEqual(set(replacements), {"certain", "ambiguous"})
+        self.assertTrue(replacements["certain"]["applied_to_proposal"])
+        self.assertFalse(replacements["ambiguous"]["applied_to_proposal"])
+        self.assertEqual(report["summary"]["ambiguous_offsets"], ["0x0321DD"])
+        self.assertEqual(
+            report["summary"]["record_status_counts"], {"ambiguous": 1}
+        )
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.report = audit()
@@ -149,7 +178,7 @@ class FrenchAccentAuditTests(unittest.TestCase):
             for item in record["replacements"]
             if item["source"] == "Ca"
         )
-        self.assertEqual(ca_replacement["status"], "contextuel")
+        self.assertEqual(ca_replacement["status"], "contextual")
         self.assertTrue(ca_replacement["applied_to_proposal"])
 
     def test_imperative_aie_is_not_treated_as_interjection(self) -> None:
@@ -170,7 +199,7 @@ class FrenchAccentAuditTests(unittest.TestCase):
             0,
         )
         self.assertEqual(
-            summary["replacement_occurrences_by_status"]["contextuel"],
+            summary["replacement_occurrences_by_status"]["contextual"],
             0,
         )
         self.assertEqual(
@@ -178,11 +207,11 @@ class FrenchAccentAuditTests(unittest.TestCase):
             EXPECTED_AMBIGUOUS_OFFSETS,
         )
         self.assertEqual(
-            summary["replacement_occurrences_by_status"]["ambigu"],
+            summary["replacement_occurrences_by_status"]["ambiguous"],
             len(EXPECTED_AMBIGUOUS_OFFSETS),
         )
         for record in self.report["records"]:
-            self.assertEqual(record["status"], "ambigu")
+            self.assertEqual(record["status"], "ambiguous")
             self.assertEqual(
                 record["effective_text_before"],
                 record["corrected_text"],

@@ -78,7 +78,7 @@ def decode_pokedex_description_table(
     table_end = POKEDEX_DESCRIPTION_TABLE_OFFSET + total * 2
     if len(rom) < table_end:
         raise ValueError(
-            "ROM trop courte pour la table Pokédex à 0x03201E"
+            "ROM too short for the Pokédex table at 0x03201E"
         )
 
     records: list[PokedexDescriptionPointer] = []
@@ -92,7 +92,7 @@ def decode_pokedex_description_table(
         )
         if not 0x8000 <= cpu_pointer <= 0xFFFF:
             raise ValueError(
-                f"pointeur Pokédex #{zero_based_index + 1} invalide: "
+                f"invalid Pokédex pointer #{zero_based_index + 1}: "
                 f"0x{cpu_pointer:04X}"
             )
         description_offset = cpu_pointer + POKEDEX_POINTER_FILE_BIAS
@@ -107,7 +107,7 @@ def decode_pokedex_description_table(
         )
 
     if len({record.description_offset for record in records}) != total:
-        raise ValueError("offset(s) Pokédex en double dans la table")
+        raise ValueError("duplicate Pokédex offset(s) in the table")
 
     accessible = tuple(records[:POKEDEX_ACCESSIBLE_COUNT])
     extended = tuple(records[POKEDEX_ACCESSIBLE_COUNT:])
@@ -115,8 +115,8 @@ def decode_pokedex_description_table(
         actual = accessible[species_id - 1].description_offset
         if actual != expected_offset:
             raise ValueError(
-                f"ancre Pokédex #{species_id}: 0x{actual:06X}, "
-                f"attendu 0x{expected_offset:06X}"
+                f"Pokédex anchor #{species_id}: 0x{actual:06X}, "
+                f"expected 0x{expected_offset:06X}"
             )
 
     accessible_fingerprint = offset_fingerprint(accessible)
@@ -125,13 +125,13 @@ def decode_pokedex_description_table(
         != POKEDEX_ACCESSIBLE_OFFSET_FINGERPRINT
     ):
         raise ValueError(
-            "cartographie des 151 descriptions Pokédex non canonique: "
+            "noncanonical mapping of the 151 Pokédex descriptions: "
             f"{accessible_fingerprint}"
         )
     extended_fingerprint = offset_fingerprint(extended)
     if extended_fingerprint != POKEDEX_EXTENDED_OFFSET_FINGERPRINT:
         raise ValueError(
-            "cartographie Pokédex étendue non canonique: "
+            "noncanonical extended Pokédex mapping: "
             f"{extended_fingerprint}"
         )
     return accessible, extended
@@ -151,8 +151,8 @@ def load_pokedex_description_table(
     digest = hashlib.sha256(rom).hexdigest()
     if digest != DEFAULT_POINTER_ROM_SHA256:
         raise ValueError(
-            f"ROM de table Pokédex non canonique: {digest} "
-            f"au lieu de {DEFAULT_POINTER_ROM_SHA256}"
+            f"noncanonical Pokédex table ROM: {digest} "
+            f"instead of {DEFAULT_POINTER_ROM_SHA256}"
         )
     return decode_pokedex_description_table(rom)
 

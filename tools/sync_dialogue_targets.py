@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Synchronise les enregistrements texte de la sonde Mesen avec script.py."""
+"""Synchronize Mesen dialogue probe records with script.py."""
 
 from __future__ import annotations
 
@@ -39,7 +39,7 @@ PAYLOAD_RE = re.compile(
 def payload_expression(text: str, layout: str) -> str:
     pages = list(wrap_dialogue_lines(text, layout))
     if not pages:
-        raise ValueError("dialogue sans page")
+        raise ValueError("dialogue has no pages")
     pages[-1] += b"\x0D"
     rendered = []
     for index, page in enumerate(pages):
@@ -62,12 +62,12 @@ def synchronise(
         offset = int(offset_match.group(1), 16)
         if offset not in entries_by_offset:
             raise ValueError(
-                f"cible Mesen absente de script.py : 0x{offset:06X}"
+                f"Mesen target missing from script.py : 0x{offset:06X}"
             )
         payload_match = PAYLOAD_RE.search(block)
         if payload_match is None:
             raise ValueError(
-                f"payload_hex illisible à 0x{offset:06X}"
+                f"unreadable payload_hex at 0x{offset:06X}"
             )
         entry = entries_by_offset[offset]
         replacement = (
@@ -90,8 +90,8 @@ def synchronise(
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "Met à jour les payload_hex de dialogue_targets.lua depuis "
-            "les pages réellement compilées par script.py."
+            "Update payload_hex in dialogue_targets.lua from "
+            "the pages actually compiled by script.py."
         )
     )
     parser.add_argument("--script", type=Path, default=DEFAULT_SCRIPT)
@@ -99,7 +99,7 @@ def main() -> int:
     parser.add_argument(
         "--apply",
         action="store_true",
-        help="écrit le fichier ; sans cette option, vérifie seulement",
+        help="write the file; without this option, check only",
     )
     args = parser.parse_args()
 
@@ -113,15 +113,15 @@ def main() -> int:
     source = args.targets.read_text(encoding="utf-8")
     updated, changed = synchronise(source, entries)
     if not changed:
-        print(f"Dialogue targets synchronisés : {args.targets}")
+        print(f"Dialogue targets synchronized : {args.targets}")
         return 0
     if not args.apply:
         offsets = ", ".join(f"0x{offset:06X}" for offset in changed)
-        print(f"Dialogue targets périmés : {offsets}", file=sys.stderr)
+        print(f"Stale dialogue targets : {offsets}", file=sys.stderr)
         return 1
     args.targets.write_text(updated, encoding="utf-8")
     offsets = ", ".join(f"0x{offset:06X}" for offset in changed)
-    print(f"Dialogue targets mis à jour : {offsets}")
+    print(f"Dialogue targets updated : {offsets}")
     return 0
 
 

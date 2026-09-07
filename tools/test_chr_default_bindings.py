@@ -24,7 +24,7 @@ def powershell_string(source: str, variable: str) -> str:
         source,
     )
     if match is None:
-        raise AssertionError(f"variable PowerShell absente: {variable}")
+        raise AssertionError(f"Missing PowerShell variable: {variable}")
     return match.group(1)
 
 

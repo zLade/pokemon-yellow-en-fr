@@ -19,7 +19,7 @@ import generate_chr_asset_manifest as catalog  # noqa: E402
 
 @unittest.skipUnless(
     catalog.DEFAULT_ROM.is_file() and catalog.DEFAULT_IPS_BASE_ROM.is_file(),
-    "ROM finale ou base IPS absente",
+    "final ROM or IPS base missing",
 )
 class ChrAssetManifestTests(unittest.TestCase):
     @classmethod
@@ -49,7 +49,7 @@ class ChrAssetManifestTests(unittest.TestCase):
         modified[-1] ^= 0xFF
         with self.assertRaisesRegex(
             catalog.CatalogError,
-            "snapshot courant attendu",
+            "expected current snapshot",
         ):
             catalog.validate_default_rom_binding(
                 catalog.DEFAULT_ROM,

@@ -41,6 +41,26 @@ def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+class ReleaseMetadataTests(unittest.TestCase):
+    def test_budget_rationale_includes_english_continuations(self) -> None:
+        from tools.build_release import TEXT_BANK_BUDGET_POLICY
+
+        self.assertEqual(
+            TEXT_BANK_BUDGET_POLICY["pair6_capacity_proof"]["rationale"],
+            "At least 40 of the 85 seven-byte spans retain one byte "
+            "that is unusable after placing the 45 seven-byte roots. The 51 "
+            "theoretically free bytes therefore allow a block of at most 11 "
+            "bytes; the current layout reaches exactly that bound.",
+        )
+
+    def test_missing_input_diagnostic_is_english(self) -> None:
+        from tools.build_release import ReleaseError, require_file
+
+        with tempfile.TemporaryDirectory() as temporary:
+            with self.assertRaisesRegex(ReleaseError, "Test input missing:"):
+                require_file(Path(temporary) / "missing.nes", "Test input")
+
+
 class CanonicalSourceTests(unittest.TestCase):
     def test_script_dump_is_the_checked_in_canonical_csv(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -102,14 +122,14 @@ class CanonicalSourceTests(unittest.TestCase):
             )
             self.assertNotEqual(process.returncode, 0, process.stdout)
             self.assertFalse(output.exists())
-            self.assertIn("SHA-256 canonical_csv inattendu", process.stdout)
+            self.assertIn("Unexpected canonical_csv SHA-256", process.stdout)
             self.assertEqual(
                 list(temporary_path.glob(".release.staging-*")), []
             )
 
     @unittest.skipIf(
         os.environ.get("POKEMON_RELEASE_ACTIVE") == "1",
-        "le wrapper parent execute deja le double build",
+        "the parent wrapper is already running the dual build",
     )
     def test_release_rebuilds_artifacts_in_a_tempdir(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

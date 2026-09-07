@@ -12,13 +12,32 @@ import {
 const EXPECTED_ROWS = 1056;
 const EXPECTED_COLUMNS = 16;
 const DATA_LAST_ROW = EXPECTED_ROWS;
-const VERDICTS = [
-  "Validé",
-  "À revoir",
-  "À réécrire",
-  "Erreur de sens",
-  "Découpage à revoir",
+const EXPECTED_HEADERS = [
+  "id", "stable_key", "category", "source_offset_or_pointer", "script_line",
+  "layout", "speaker", "french_reference_text", "chinese_text", "english_2015",
+  "alignment_confidence", "translation_history", "naturalized",
+  "chinese_fidelity_corrected", "review_verdict", "review_comment",
 ];
+const VERDICTS = [
+  "Approved",
+  "Needs review",
+  "Rewrite required",
+  "Meaning error",
+  "Layout review",
+];
+
+// Input-only aliases preserve feedback imported from older review workbooks.
+const LEGACY_VERDICTS = new Map([
+  ["Validé", "Approved"],
+  ["À revoir", "Needs review"],
+  ["À réécrire", "Rewrite required"],
+  ["Erreur de sens", "Meaning error"],
+  ["Découpage à revoir", "Layout review"],
+]);
+
+function normalizeVerdict(value) {
+  return LEGACY_VERDICTS.get(value) ?? value;
+}
 
 function argumentsFromCommandLine(argv) {
   const options = new Map();
@@ -26,13 +45,13 @@ function argumentsFromCommandLine(argv) {
     const key = argv[index];
     const value = argv[index + 1];
     if (!key?.startsWith("--") || value === undefined) {
-      throw new Error(`Argument incomplet : ${key ?? "<absent>"}`);
+      throw new Error(`Incomplete argument: ${key ?? "<missing>"}`);
     }
     options.set(key.slice(2), value);
   }
   for (const required of ["csv", "output", "preview-dir"]) {
     if (!options.has(required)) {
-      throw new Error(`--${required} est obligatoire`);
+      throw new Error(`--${required} is required`);
     }
   }
   return {
@@ -49,21 +68,27 @@ function assertCanonicalRows(values, label) {
   if (rows !== EXPECTED_ROWS || columns !== EXPECTED_COLUMNS) {
     throw new Error(
       `${label} : ${rows}x${columns}, ` +
-      `${EXPECTED_ROWS}x${EXPECTED_COLUMNS} attendu`,
+      `${EXPECTED_ROWS}x${EXPECTED_COLUMNS} expected`,
     );
   }
+  if (EXPECTED_HEADERS.some((header, index) => values[0][index] !== header)) {
+    throw new Error(`${label}: expected the canonical English column headers`);
+  }
   for (let index = 1; index < values.length; index += 1) {
+    if (values[index].length !== EXPECTED_COLUMNS) {
+      throw new Error(`${label}: row ${index + 1} must have ${EXPECTED_COLUMNS} columns`);
+    }
     const expectedId = `D${String(index).padStart(4, "0")}`;
     if (values[index][0] !== expectedId) {
       throw new Error(
-        `${label} : ID ligne ${index + 1} = ${values[index][0]}, ` +
-        `${expectedId} attendu`,
+        `${label} : ID in row ${index + 1} = ${values[index][0]}, ` +
+        `${expectedId} expected`,
       );
     }
   }
   const keys = values.slice(1).map((row) => row[1]);
   if (keys.some((key) => !key) || new Set(keys).size !== keys.length) {
-    throw new Error(`${label} : clés stables vides ou dupliquées`);
+    throw new Error(`${label} : empty or duplicate stable keys`);
   }
 }
 
@@ -78,11 +103,11 @@ async function preservedFeedback(existingPath) {
   const input = await FileBlob.load(existingPath);
   const workbook = await SpreadsheetFile.importXlsx(input);
   if (workbook.worksheets.items.length !== 1) {
-    throw new Error("Le classeur existant doit contenir une seule feuille");
+    throw new Error("The existing workbook must contain exactly one worksheet");
   }
   const values = workbook.worksheets.getItemAt(0).getUsedRange().values;
   if ((values[0]?.length ?? 0) < EXPECTED_COLUMNS) {
-    throw new Error("Le classeur existant ne contient pas O:P");
+    throw new Error("The existing workbook does not contain columns O:P");
   }
   for (const row of values.slice(1)) {
     const key = row[1];
@@ -98,9 +123,10 @@ async function preservedFeedback(existingPath) {
 function applyFeedback(values, feedback) {
   let preserved = 0;
   for (const row of values.slice(1)) {
+    row[14] = normalizeVerdict(row[14] ?? "");
     const prior = feedback.get(row[1]);
     if (!prior) continue;
-    [row[14], row[15]] = prior;
+    [row[14], row[15]] = [normalizeVerdict(prior[0]), prior[1]];
     preserved += 1;
   }
   return preserved;
@@ -110,7 +136,7 @@ function applyConditionalFormatting(sheet) {
   const confidence = sheet.getRange(`K2:K${DATA_LAST_ROW}`);
   for (const [text, fill, color] of [
     ["high", "#C6EFCE", "#006100"],
-    ["source directe", "#DDEBF7", "#1F4E78"],
+    ["direct source", "#DDEBF7", "#1F4E78"],
     ["medium", "#FFEB9C", "#9C6500"],
     ["low", "#FFC7CE", "#9C0006"],
   ]) {
@@ -122,11 +148,11 @@ function applyConditionalFormatting(sheet) {
 
   const verdict = sheet.getRange(`O2:O${DATA_LAST_ROW}`);
   for (const [text, fill, color] of [
-    ["Validé", "#C6EFCE", "#006100"],
-    ["À revoir", "#FFEB9C", "#9C6500"],
-    ["À réécrire", "#FFC7CE", "#9C0006"],
-    ["Erreur de sens", "#F4CCCC", "#990000"],
-    ["Découpage à revoir", "#FCE5CD", "#B45F06"],
+    ["Approved", "#C6EFCE", "#006100"],
+    ["Needs review", "#FFEB9C", "#9C6500"],
+    ["Rewrite required", "#FFC7CE", "#9C0006"],
+    ["Meaning error", "#F4CCCC", "#990000"],
+    ["Layout review", "#FCE5CD", "#B45F06"],
   ]) {
     verdict.conditionalFormats.add("containsText", {
       text,
@@ -203,7 +229,7 @@ const csvText = (await fs.readFile(args.csv, "utf8")).replace(/^\uFEFF/, "");
 const workbook = await Workbook.fromCSV(csvText, { sheetName: "Dialogues" });
 const sheet = workbook.worksheets.getItemAt(0);
 const values = sheet.getUsedRange().values;
-assertCanonicalRows(values, "CSV importé");
+assertCanonicalRows(values, "Imported CSV");
 
 const feedback = await preservedFeedback(args.existing);
 const feedbackCount = applyFeedback(values, feedback);
@@ -224,11 +250,11 @@ sheet.getRange(`O2:O${DATA_LAST_ROW}`).dataValidation = {
 applyConditionalFormatting(sheet);
 
 const finalValues = sheet.getUsedRange().values;
-assertCanonicalRows(finalValues, "Classeur final");
+assertCanonicalRows(finalValues, "Final workbook");
 for (let row = 0; row < EXPECTED_ROWS; row += 1) {
   for (let column = 0; column < EXPECTED_COLUMNS; column += 1) {
     if ((finalValues[row][column] ?? "") !== (values[row][column] ?? "")) {
-      throw new Error(`Valeur divergente à ${row + 1},${column + 1}`);
+      throw new Error(`Value mismatch at ${row + 1},${column + 1}`);
     }
   }
 }
@@ -253,7 +279,7 @@ const formulaErrors = await workbook.inspect({
   summary: "dialogue review formula error scan",
 });
 if (/"matchCount"\s*:\s*[1-9]/.test(formulaErrors.ndjson)) {
-  throw new Error("Erreur de cellule détectée dans le classeur");
+  throw new Error("Cell error found in the workbook");
 }
 
 await renderRange(

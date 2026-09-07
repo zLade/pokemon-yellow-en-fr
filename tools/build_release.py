@@ -104,10 +104,10 @@ TEXT_BANK_BUDGET_POLICY = {
         "minimum_stranded_bytes": 40,
         "maximum_possible_largest_block": 11,
         "rationale": (
-            "Au moins 40 des 85 spans de 7 octets gardent un octet "
-            "inutilisable apres les 45 racines de 7 octets. Les 51 "
-            "octets theoriques laissent donc au plus un bloc de 11 "
-            "octets; le plan courant atteint exactement cette borne."
+            "At least 40 of the 85 seven-byte spans retain one byte "
+            "that is unusable after placing the 45 seven-byte roots. The 51 "
+            "theoretically free bytes therefore allow a block of at most 11 "
+            "bytes; the current layout reaches exactly that bound."
         ),
     },
 }
@@ -177,7 +177,7 @@ def as_manifest_record(record: FileRecord) -> dict[str, object]:
 def require_file(path: Path, label: str) -> Path:
     resolved = path.expanduser().resolve()
     if not resolved.is_file():
-        raise ReleaseError(f"{label} absent : {resolved}")
+        raise ReleaseError(f"{label} missing: {resolved}")
     return resolved
 
 
@@ -186,7 +186,7 @@ def assert_same_file(left: Path, right: Path, label: str) -> str:
     right_hash = sha256_file(right)
     if left_hash != right_hash or left.read_bytes() != right.read_bytes():
         raise ReleaseError(
-            f"{label} non reproductible : {left} ({left_hash}) != "
+            f"{label} is not reproducible: {left} ({left_hash}) != "
             f"{right} ({right_hash})"
         )
     return left_hash
@@ -201,8 +201,8 @@ class ReleaseBuilder:
         self.output_parent.mkdir(parents=True, exist_ok=True)
         if self.output_dir.exists():
             raise ReleaseError(
-                "le dossier de release existe deja; choisissez une nouvelle "
-                f"destination : {self.output_dir}"
+                "the release directory already exists; choose a new "
+                f"destination: {self.output_dir}"
             )
 
         self.staging = Path(
@@ -291,8 +291,8 @@ class ReleaseBuilder:
         if process.returncode != 0:
             tail = "\n".join(process.stdout.splitlines()[-12:])
             raise ReleaseError(
-                f"etape {name} en echec (code {process.returncode}); "
-                f"journal : {log_path}\n{tail}"
+                f"step {name} failed (code {process.returncode}); "
+                f"log: {log_path}\n{tail}"
             )
 
     def prepare_inputs(self) -> None:
@@ -385,7 +385,7 @@ class ReleaseBuilder:
             actual = sha256_file(self.input_paths[label])
             if actual != expected:
                 raise ReleaseError(
-                    f"SHA-256 {label} inattendu : {actual}; attendu {expected}"
+                    f"Unexpected {label} SHA-256: {actual}; expected {expected}"
                 )
 
         self.initial_hashes = {
@@ -417,12 +417,12 @@ class ReleaseBuilder:
         assert_same_file(
             generated_csv,
             self.input_paths["canonical_csv"],
-            "CSV canonique genere depuis script.py",
+            "Canonical CSV generated from script.py",
         )
         assert_same_file(
             generated_overflow,
             self.input_paths["canonical_overflow_csv"],
-            "CSV canonique des depassements",
+            "Canonical overflow CSV",
         )
         return generated_csv, generated_overflow
 
@@ -461,7 +461,7 @@ class ReleaseBuilder:
         report_path = self.audits / "text_bank_budget.json"
         report = json.loads(report_path.read_text(encoding="utf-8"))
         if report.get("status") != "PASS":
-            raise ReleaseError("audit budget incoherent : statut non PASS")
+            raise ReleaseError("Inconsistent budget audit: status is not PASS")
         report["release_policy"] = TEXT_BANK_BUDGET_POLICY
         report_path.write_text(
             json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True)
@@ -577,12 +577,12 @@ class ReleaseBuilder:
         for produced_name, current_name in CURRENT_ARTIFACTS.items():
             current = require_file(
                 artifact_root / current_name,
-                f"artefact courant {current_name}",
+                f"current artifact {current_name}",
             )
             comparisons[produced_name] = assert_same_file(
                 self.run_dirs[0] / produced_name,
                 current,
-                f"reproduction de {current_name}",
+                f"reproduction of {current_name}",
             )
         return comparisons
 
@@ -813,8 +813,8 @@ class ReleaseBuilder:
             expected = self.initial_hashes[label]
             if actual != expected:
                 raise ReleaseError(
-                    f"entree modifiee pendant le build ({label}) : "
-                    f"{actual} au lieu de {expected}"
+                    f"input changed during the build ({label}) : "
+                    f"{actual} instead of {expected}"
                 )
 
     def promote(
@@ -904,7 +904,7 @@ class ReleaseBuilder:
 
         if self.output_dir.exists():
             raise ReleaseError(
-                f"destination apparue pendant le build : {self.output_dir}"
+                f"destination appeared during the build: {self.output_dir}"
             )
         os.replace(self.staging, self.output_dir)
 
@@ -937,7 +937,7 @@ class ReleaseBuilder:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Construit deux fois, valide puis publie atomiquement une release."
+            "Build twice, validate, then publish a release atomically."
         )
     )
     parser.add_argument("--output-dir", required=True)
@@ -960,21 +960,21 @@ def build_parser() -> argparse.ArgumentParser:
         "--expect-current-artifacts",
         action="store_true",
         help=(
-            "Exige que les cinq artefacts reconstruits soient identiques "
-            "aux fichiers du dossier courant."
+            "Require the five rebuilt artifacts to be identical "
+            "to the files in the current directory."
         ),
     )
     parser.add_argument(
         "--current-artifacts-dir",
         default=ROOT,
-        help="Dossier des artefacts a reproduire avec l'option precedente.",
+        help="Directory containing the artifacts to reproduce with the preceding option.",
     )
     parser.add_argument(
         "--skip-tests",
         action="store_true",
         help=(
-            "Reserve au test d'integration du wrapper; les validateurs "
-            "restent obligatoires."
+            "Reserved for the wrapper integration test; validators "
+            "remain mandatory."
         ),
     )
     return parser
@@ -986,14 +986,14 @@ def main(argv: Iterable[str] | None = None) -> int:
         builder = ReleaseBuilder(args)
         builder.build()
     except (OSError, ReleaseError, subprocess.SubprocessError) as exc:
-        print(f"Build release : ECHEC\n- {exc}", file=sys.stderr)
+        print(f"Release build: FAILED\n- {exc}", file=sys.stderr)
         return 1
     final_rom = builder.output_dir / "Pokemon_Jaune_FR_repacked_title.nes"
-    print("Build release : PASS")
-    print(f"- Dossier : {builder.output_dir}")
-    print(f"- ROM finale SHA-256 : {sha256_file(final_rom)}")
+    print("Release build: PASS")
+    print(f"- Directory: {builder.output_dir}")
+    print(f"- Final ROM SHA-256: {sha256_file(final_rom)}")
     print(f"- Manifest : {builder.output_dir / 'release_manifest.json'}")
-    print(f"- Sommes : {builder.output_dir / 'SHA256SUMS'}")
+    print(f"- Checksums: {builder.output_dir / 'SHA256SUMS'}")
     return 0
 
 

@@ -539,8 +539,8 @@ def validate_cameos(
         raise EnglishCatalogueError("creator/cameo count is not 17")
     errors: list[str] = []
     for row in rows:
-        key = row.get("cle_stable", "")
-        name = row.get("createur_ou_cameo", "")
+        key = row.get("stable_key", "")
+        name = row.get("creator_or_cameo", "")
         catalogue_row = catalogue.get(key)
         if catalogue_row is None:
             errors.append(f"{key}: missing catalogue row")

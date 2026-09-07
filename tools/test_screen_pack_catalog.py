@@ -151,7 +151,7 @@ class ScreenPackCatalogTests(unittest.TestCase):
         )
         with self.assertRaisesRegex(
             catalog.CatalogError,
-            "aucun record screen-pack valide",
+            "no valid screen-pack record",
         ):
             catalog.scan_screen_pack_records(
                 bytes(data),
@@ -181,7 +181,7 @@ class ScreenPackCatalogTests(unittest.TestCase):
             self.assertEqual(len(loaded.assets), 4)
             self.assertTrue(all(asset.kind == "raw" for asset in loaded.assets))
 
-    @unittest.skipUnless(SOURCE_ROM.exists(), "ROM source absente")
+    @unittest.skipUnless(SOURCE_ROM.exists(), "source ROM missing")
     def test_reference_rom_has_96_records_and_832_assets(self) -> None:
         built = catalog.build_catalog(SOURCE_ROM)
         self.assertEqual(built["record_count"], 96)
@@ -232,7 +232,7 @@ class ScreenPackCatalogTests(unittest.TestCase):
 
     @unittest.skipUnless(
         SOURCE_ROM.exists() and CURRENT_ROM.exists(),
-        "ROM source ou candidat final absent",
+        "source ROM or final candidate missing",
     )
     def test_record_structure_is_unchanged_in_current_rom(self) -> None:
         source = catalog.build_catalog(SOURCE_ROM)

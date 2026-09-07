@@ -408,8 +408,8 @@ class AssistantProfilePolicyTests(unittest.TestCase):
                 check=False,
             )
             self.assertEqual(process.returncode, 0, process.stdout)
-            self.assertIn("Police anglaise préservée : OUI", process.stdout)
-            self.assertIn("Export CHR français : AUCUN", process.stdout)
+            self.assertIn("English font preserved : YES", process.stdout)
+            self.assertIn("French CHR export: NONE", process.stdout)
             self.assertTrue(output_ips.is_file())
             self.assertTrue(overflow.is_file())
 

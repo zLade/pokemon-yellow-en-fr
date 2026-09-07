@@ -157,7 +157,7 @@ def _require_hash(path: Path, expected: str, label: str) -> str:
     actual = _file_sha256(path)
     if actual != expected:
         raise ValueError(
-            f"{label} non canonique: {actual} au lieu de {expected}"
+            f"non-canonical {label}: {actual} instead of {expected}"
         )
     return actual
 
@@ -166,7 +166,7 @@ def load_immutable_records(path: Path) -> list[ChineseRecord]:
     _require_hash(
         path,
         IMMUTABLE_RECORDS_SHA256,
-        "extraction Unicode chinoise (records)",
+        "Chinese Unicode extraction (records)",
     )
     with path.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
@@ -175,8 +175,8 @@ def load_immutable_records(path: Path) -> list[ChineseRecord]:
         index = int(row["record_index"])
         if index != expected_index:
             raise ValueError(
-                "index chinois non séquentiel: "
-                f"{index} au lieu de {expected_index}"
+                "non-sequential Chinese index: "
+                f"{index} instead of {expected_index}"
             )
         unresolved = tuple(
             int(value)
@@ -196,12 +196,12 @@ def load_immutable_records(path: Path) -> list[ChineseRecord]:
         )
     if len(records) != SOURCE_RECORD_COUNT:
         raise ValueError(
-            f"{len(records)} records chinois, {SOURCE_RECORD_COUNT} attendus"
+            f"{len(records)} Chinese records, {SOURCE_RECORD_COUNT} expected"
         )
     if sum(record.glyph_count for record in records) != SOURCE_GLYPH_CODE_COUNT:
-        raise ValueError("compte de glyphes chinois immuable invalide")
+        raise ValueError('Invalid immutable Chinese glyph count')
     if any(record.unresolved_codes for record in records):
-        raise ValueError("l'extraction Unicode immuable contient un glyphe non résolu")
+        raise ValueError("the immutable Unicode extraction contains an unresolved glyph")
     return records
 
 
@@ -209,15 +209,15 @@ def load_immutable_glyph_stats(path: Path) -> dict[str, int]:
     _require_hash(
         path,
         IMMUTABLE_GLYPH_MAP_SHA256,
-        "extraction Unicode chinoise (glyph map)",
+        "Chinese Unicode extraction (glyph map)",
     )
     with path.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
     indexes = [int(row["code_index"]) for row in rows]
     if indexes != list(range(len(rows))):
-        raise ValueError("index de glyphes chinois non séquentiel")
+        raise ValueError("non-sequential Chinese glyph index")
     if any(not row["unicode"] for row in rows):
-        raise ValueError("caractère Unicode chinois vide")
+        raise ValueError('Empty Chinese Unicode character')
     contextual = sum(
         row["resolution_method"] == "contextual_reconstruction"
         for row in rows
@@ -227,7 +227,7 @@ def load_immutable_glyph_stats(path: Path) -> dict[str, int]:
         for row in rows
     )
     if contextual != len(CONTEXTUAL_GLYPH_MAP) or exact + contextual != len(rows):
-        raise ValueError("méthodes de résolution des glyphes chinois invalides")
+        raise ValueError('Invalid Chinese glyph resolution methods')
     return {
         "unique_chinese_codes": len(rows),
         "exact_hzk16_chinese_codes": exact,
@@ -240,15 +240,14 @@ def _review_rows(path: Path) -> list[dict[str, str]]:
         rows = list(csv.DictReader(handle))
     if len(rows) != EXPECTED_DIALOGUE_ROWS:
         raise ValueError(
-            f"table de relecture: {len(rows)} dialogues, "
-            f"{EXPECTED_DIALOGUE_ROWS} attendus"
+            f'Review table: {len(rows)} dialogues; expected {EXPECTED_DIALOGUE_ROWS}'
         )
     expected_ids = [f"D{index:04d}" for index in range(1, len(rows) + 1)]
     if [row.get("id") for row in rows] != expected_ids:
-        raise ValueError("suite d'IDs de la table de relecture invalide")
-    keys = [row.get("cle_stable", "") for row in rows]
+        raise ValueError('Invalid review-table ID sequence')
+    keys = [row.get("stable_key", "") for row in rows]
     if any(not key for key in keys) or len(keys) != len(set(keys)):
-        raise ValueError("clés stables de la table de relecture invalides")
+        raise ValueError('Invalid review-table stable keys')
     return rows
 
 
@@ -257,7 +256,7 @@ def validate_review_csv_against_sources(
     script_path: Path,
 ) -> list[dict[str, str]]:
     rows = _review_rows(review_csv)
-    by_key = {row["cle_stable"]: row for row in rows}
+    by_key = {row["stable_key"]: row for row in rows}
     main_entries = [
         entry
         for entry in parse_patch_entries(
@@ -268,31 +267,31 @@ def validate_review_csv_against_sources(
     ]
     if len(main_entries) != EXPECTED_MAIN_DIALOGUES:
         raise ValueError(
-            f"script: {len(main_entries)} dialogues principaux, "
-            f"{EXPECTED_MAIN_DIALOGUES} attendus"
+            f"script: {len(main_entries)} main dialogues, "
+            f"{EXPECTED_MAIN_DIALOGUES} expected"
         )
     for entry in main_entries:
         key = f"MAIN:0x{entry.offset:06X}"
         row = by_key.get(key)
         if row is None:
-            raise ValueError(f"table de relecture: clé absente {key}")
+            raise ValueError(f'Review table: missing key {key}')
         expected = clean_source_text(entry.text)
-        if row.get("texte_francais") != expected:
-            raise ValueError(f"table de relecture périmée pour {key}")
+        if row.get("french_reference_text") != expected:
+            raise ValueError(f'Stale review table for {key}')
         if row.get("layout") != entry.layout:
-            raise ValueError(f"layout de relecture périmé pour {key}")
-        if row.get("ligne_script") != str(entry.line):
-            raise ValueError(f"ligne de script périmée pour {key}")
+            raise ValueError(f'Stale review layout for {key}')
+        if row.get("script_line") != str(entry.line):
+            raise ValueError(f'Stale script line for {key}')
 
     if len(RESTORED_DIALOGUES) != EXPECTED_RESTORATIONS:
-        raise ValueError("inventaire des restaurations françaises invalide")
+        raise ValueError('Invalid French restoration inventory')
     for reference, text in RESTORED_DIALOGUES.items():
         key = f"RESTORED:0x{reference:06X}"
         row = by_key.get(key)
         if row is None:
-            raise ValueError(f"table de relecture: clé absente {key}")
-        if row.get("texte_francais") != clean_source_text(text):
-            raise ValueError(f"table de relecture périmée pour {key}")
+            raise ValueError(f'Review table: missing key {key}')
+        if row.get("french_reference_text") != clean_source_text(text):
+            raise ValueError(f'Stale review table for {key}')
     return rows
 
 
@@ -307,24 +306,24 @@ def write_creator_cameo_inventory(
     the other Chinese/French tables and prevents an editorial rewrite from
     leaving the cameo inventory behind.
     """
-    by_key = {row["cle_stable"]: row for row in review_rows}
+    by_key = {row["stable_key"]: row for row in review_rows}
     missing = [
         metadata.stable_key
         for metadata in CAMEO_METADATA
         if metadata.stable_key not in by_key
     ]
     if missing:
-        raise ValueError("clés de caméos absentes : " + ", ".join(missing))
+        raise ValueError("Missing cameo keys : " + ", ".join(missing))
 
     fields = (
         "id",
-        "cle_stable",
+        "stable_key",
         "scope",
-        "createur_ou_cameo",
-        "role_source",
-        "texte_chinois_source",
-        "texte_francais_actuel",
-        "statut",
+        "creator_or_cameo",
+        "source_role",
+        "chinese_text",
+        "french_reference_text",
+        "status",
     )
     with path.open("w", newline="", encoding="utf-8-sig") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
@@ -334,15 +333,15 @@ def write_creator_cameo_inventory(
             writer.writerow(
                 {
                     "id": dialogue["id"],
-                    "cle_stable": metadata.stable_key,
+                    "stable_key": metadata.stable_key,
                     "scope": metadata.scope,
-                    "createur_ou_cameo": metadata.creator,
-                    "role_source": metadata.source_role,
-                    "texte_chinois_source": dialogue[
-                        "texte_chinois_source"
+                    "creator_or_cameo": metadata.creator,
+                    "source_role": metadata.source_role,
+                    "chinese_text": dialogue[
+                        "chinese_text"
                     ],
-                    "texte_francais_actuel": dialogue["texte_francais"],
-                    "statut": "restauré dans la version française",
+                    "french_reference_text": dialogue["french_reference_text"],
+                    "status": "restored in the French version",
                 }
             )
     return len(CAMEO_METADATA)
@@ -356,21 +355,20 @@ def write_restored_dialogue_inventory(
     restored = [
         row
         for row in review_rows
-        if row["cle_stable"].startswith("RESTORED:")
+        if row["stable_key"].startswith("RESTORED:")
     ]
     if len(restored) != EXPECTED_RESTORATIONS:
         raise ValueError(
-            f"{len(restored)} dialogues restaurés dans la table de "
-            f"relecture, {EXPECTED_RESTORATIONS} attendus"
+            f'{len(restored)} restored dialogues in the review table; expected {EXPECTED_RESTORATIONS}'
         )
     fields = (
         "id",
-        "cle_stable",
+        "stable_key",
         "pointer_reference_hex",
-        "texte_chinois_source",
-        "traduction_anglaise_rom_anglaise",
-        "texte_francais_actuel",
-        "statut",
+        "chinese_text",
+        "english_2015",
+        "french_reference_text",
+        "status",
     )
     with path.open("w", newline="", encoding="utf-8-sig") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
@@ -379,14 +377,14 @@ def write_restored_dialogue_inventory(
             writer.writerow(
                 {
                     "id": row["id"],
-                    "cle_stable": row["cle_stable"],
-                    "pointer_reference_hex": row["offset_ou_pointeur"],
-                    "texte_chinois_source": row["texte_chinois_source"],
-                    "traduction_anglaise_rom_anglaise": row[
-                        "traduction_anglaise_rom_anglaise"
+                    "stable_key": row["stable_key"],
+                    "pointer_reference_hex": row["source_offset_or_pointer"],
+                    "chinese_text": row["chinese_text"],
+                    "english_2015": row[
+                        "english_2015"
                     ],
-                    "texte_francais_actuel": row["texte_francais"],
-                    "statut": "restauré et vérifié dans la ROM française",
+                    "french_reference_text": row["french_reference_text"],
+                    "status": "restored and verified in the French ROM",
                 }
             )
     return len(restored)
@@ -439,8 +437,8 @@ def write_dialogues_removed_from_english(
             )
     if len(rows) != EXPECTED_ENGLISH_REMOVED_POINTERS:
         raise ValueError(
-            f"{len(rows)} dialogues supprimés de l'anglais, "
-            f"{EXPECTED_ENGLISH_REMOVED_POINTERS} attendus"
+            f"{len(rows)} dialogues removed from English, "
+            f"{EXPECTED_ENGLISH_REMOVED_POINTERS} expected"
         )
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
@@ -456,8 +454,8 @@ def validate_live_restoration_payloads(
     expected_payloads = verified_dialogue_restoration_payloads(english)
     if len(expected_payloads) != EXPECTED_RESTORATIONS:
         raise ValueError(
-            f"{len(expected_payloads)} restaurations encodées, "
-            f"{EXPECTED_RESTORATIONS} attendues"
+            f"{len(expected_payloads)} encoded restorations, "
+            f"{EXPECTED_RESTORATIONS} expected"
         )
     errors: list[str] = []
     for reference, payload in sorted(expected_payloads.items()):
@@ -468,17 +466,17 @@ def validate_live_restoration_payloads(
             len(french),
         )
         if target is None:
-            errors.append(f"0x{reference:06X}: pointeur français invalide")
+            errors.append(f'0x{reference:06X}: invalid French pointer')
             continue
         actual = french[target:target + len(payload)]
         terminator = target + len(payload)
         if actual != payload:
-            errors.append(f"0x{reference:06X}: charge utile française différente")
+            errors.append(f'0x{reference:06X}: French payload differs')
         elif terminator >= len(french) or french[terminator] != 0x0D:
-            errors.append(f"0x{reference:06X}: terminateur français absent")
+            errors.append(f'0x{reference:06X}: missing French terminator')
     if errors:
         raise ValueError(
-            "restaurations françaises non publiables:\n  "
+            "French restorations are not publishable:\n  "
             + "\n  ".join(errors[:20])
         )
     return len(expected_payloads)
@@ -516,11 +514,11 @@ def build_refresh(
     english = english_rom.read_bytes()
     french = french_rom.read_bytes()
     if sha256(chinese) != CHINESE_ROM_SHA256:
-        raise ValueError("ROM chinoise non canonique")
+        raise ValueError("non-canonical Chinese ROM")
     if sha256(english) != TRANSLATION_BASE_SHA256:
-        raise ValueError("ROM anglaise non canonique")
+        raise ValueError("non-canonical English ROM")
     if len(french) != len(english):
-        raise ValueError("taille de ROM française inattendue")
+        raise ValueError('Unexpected French ROM size')
     restored_payloads_verified = validate_live_restoration_payloads(
         english,
         french,
@@ -611,13 +609,13 @@ def build_refresh(
         )
 
         count_errors = [
-            f"{key}={summary.get(key)!r} (attendu {expected})"
+            f"{key}={summary.get(key)!r} (expected {expected})"
             for key, expected in EXPECTED_DERIVED_COUNTS.items()
             if summary.get(key) != expected
         ]
         if count_errors:
             raise ValueError(
-                "comptes structurels fidelity inattendus: "
+                "unexpected structural fidelity counts: "
                 + "; ".join(count_errors)
             )
 
@@ -630,9 +628,7 @@ def build_refresh(
             or absent != 0
         ):
             raise ValueError(
-                "état des pointeurs restaurés non publiable: "
-                f"supprimés_en={removed}, restaurés_fr={restored}, "
-                f"absents_en_et_fr={absent}"
+                f'Restored pointer state is not publishable: removed_en={removed}, restored_fr={restored}, absent_en_and_fr={absent}'
             )
 
         contextual_codes = sorted(CONTEXTUAL_GLYPH_MAP)
@@ -694,7 +690,7 @@ def build_refresh(
         for filename in DERIVED_FILENAMES:
             source = staging / filename
             if not source.is_file():
-                raise ValueError(f"sortie dérivée absente: {filename}")
+                raise ValueError(f"missing derived output: {filename}")
         for filename in DERIVED_FILENAMES:
             os.replace(staging / filename, output_directory / filename)
     return summary
@@ -731,12 +727,10 @@ def verify_published_refresh(
             published = published_directory / filename
             expected = temporary / filename
             if not published.is_file():
-                raise ValueError(f"dérivé publié absent: {filename}")
+                raise ValueError(f'Missing published derivative: {filename}')
             if published.read_bytes() != expected.read_bytes():
                 raise ValueError(
-                    f"dérivé publié périmé: {filename}; "
-                    f"actuel={_file_sha256(published)}, "
-                    f"attendu={_file_sha256(expected)}"
+                    f'Stale published derivative: {filename}; current={_file_sha256(published)}, expected={_file_sha256(expected)}'
                 )
     return summary
 
@@ -744,8 +738,7 @@ def verify_published_refresh(
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Rafraîchit les dérivés chinois/anglais/français depuis "
-            "l'extraction Unicode immuable, sans réexécuter HZK16."
+            'Refresh Chinese/English/French derivatives from the immutable Unicode extraction without running HZK16 again.'
         )
     )
     parser.add_argument(
@@ -771,8 +764,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--check",
         action="store_true",
         help=(
-            "Reconstruit dans un répertoire temporaire et refuse tout "
-            "dérivé publié absent ou périmé."
+            'Rebuild in a temporary directory and reject missing or stale published derivatives.'
         ),
     )
     return parser
@@ -793,21 +785,21 @@ def main() -> int:
             **keyword_arguments,
             published_directory=args.output_directory,
         )
-        print("Contrôle des dérivés fidelity aval : PASS")
+        print('Downstream fidelity derivative check: PASS')
     else:
         summary = build_refresh(
             **keyword_arguments,
             output_directory=args.output_directory,
         )
-        print("Rafraîchissement fidelity aval : PASS")
+        print('Downstream fidelity derivative refresh: PASS')
     print(f"- Provenance : {summary['provenance_mode']}")
     print(
-        "- Pointeurs supprimés/restaurés/encore absents : "
+        "- Pointers removed/restored/still absent: "
         f"{summary['source_dialogue_pointers_invalidated_in_english']}/"
         f"{summary['source_dialogue_pointers_restored_in_french']}/"
         f"{summary['source_dialogues_absent_from_english_and_french']}"
     )
-    print(f"- Sortie : {args.output_directory}")
+    print(f"- Output: {args.output_directory}")
     return 0
 
 

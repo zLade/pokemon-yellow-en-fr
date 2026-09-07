@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 BASE_RESTORED_DIALOGUES: dict[int, str] = {
-    # Première conclusion Rocket supprimée.
+    # First removed Rocket conclusion.
     0x033137: "JESSIE : Team Rocket, galaxie... bientôt dissoute !",
     0x033139: "JAMES : Trou noir et avenir perdu !",
     0x03313B: "MIAOUSS : C'est exact !",
@@ -23,7 +23,7 @@ BASE_RESTORED_DIALOGUES: dict[int, str] = {
     0x03313F: "JESSIE : Affreuse sensation...",
     0x033141: "MIAOUSS : Miaouss...",
 
-    # Scène post-Mewtwo et billet de voyage.
+    # Post-Mewtwo scene and travel ticket.
     0x033193: "SACHA : Mewtwo ?",
     0x033195: (
         "OLGA : Team Rocket a cloné Mewtwo avec les gènes de Mew. "
@@ -36,7 +36,7 @@ BASE_RESTORED_DIALOGUES: dict[int, str] = {
         "me retient. Prends-le en remerciement."
     ),
 
-    # Devise de la Team Nanjing et annonce du nouveau chef.
+    # Team Nanjing motto and announcement of the new leader.
     0x0331B3: "JESSIE : Puisque vous le demandez...",
     0x0331B5: "JAMES : Répondons par bonté !",
     0x0331B7: "JESSIE : Pour préserver le monde.",
@@ -54,10 +54,10 @@ BASE_RESTORED_DIALOGUES: dict[int, str] = {
         "Kameiyu, te battra\navec ses Pokémon !\nHa ha !"
     ),
 
-    # La ROM anglaise mutualise par erreur Anti-Para et Réveil.
+    # The English ROM incorrectly shares Parlyz Heal and Awakening text.
     0x0348F1: "Anti-Para reçu !",
 
-    # Devise Rocket du Mont Sélénite.
+    # Team Rocket motto at Mt. Moon.
     0x038313: "JAMES : Répondons par bonté !",
     0x038315: "JESSIE : Pour préserver le monde.",
     0x038317: "JAMES : Pour maintenir la paix.",
@@ -69,13 +69,13 @@ BASE_RESTORED_DIALOGUES: dict[int, str] = {
     0x038323: "JAMES : Trou blanc, avenir radieux !",
     0x038325: "MIAOUSS : Exact ! Miaouss...",
 
-    # Quatre réponses du Pont Pépite mal câblées dans la ROM anglaise.
+    # Four Nugget Bridge responses miswired in the English ROM.
     0x038347: "FILLETTE : Tu as fait tes preuves.",
     0x03834B: "GARÇON : Pas mal !",
     0x03834F: "FILLETTE : Je t'aurai à l'oeil.",
     0x038353: "ÉCLAIREUR : Premier à tous nous battre !",
 
-    # Rencontre Rocket dans le repaire.
+    # Rocket encounter in the hideout.
     0x03AF94: "SACHA : Qui êtes-vous ?",
     0x03AF96: "JESSIE : Puisque vous le demandez...",
     0x03AF98: "JAMES : Répondons par bonté !",
@@ -92,7 +92,7 @@ BASE_RESTORED_DIALOGUES: dict[int, str] = {
     0x03AFB0: "JESSIE : Affreuse sensation...",
     0x03AFB2: "MIAOUSS : Miaouss...",
 
-    # Rencontre Rocket à la Tour Pokémon.
+    # Rocket encounter in Pokemon Tower.
     0x03AFEA: "SACHA : Qui êtes-vous ?",
     0x03AFEC: "JESSIE : Puisque vous le demandez...",
     0x03AFEE: "JAMES : Répondons par bonté !",
@@ -108,7 +108,7 @@ BASE_RESTORED_DIALOGUES: dict[int, str] = {
     0x03B004: "JESSIE : Affreuse sensation...",
     0x03B006: "MIAOUSS : Miaouss...",
 
-    # Rencontre Rocket chez Sylphe SARL.
+    # Team Rocket encounter at Silph Co.
     0x03CF3E: "JESSIE : Puisque vous le demandez...",
     0x03CF40: "JAMES : Répondons par bonté !",
     0x03CF42: "JESSIE : Pour préserver le monde.",
@@ -124,7 +124,7 @@ BASE_RESTORED_DIALOGUES: dict[int, str] = {
     0x03CF56: "JESSIE : Affreuse sensation...",
     0x03CF58: "MIAOUSS : Miaouss...",
 
-    # Dernière devise Rocket.
+    # Final Rocket motto.
     0x03D07A: "JAMES : Pour maintenir la paix.",
     0x03D07C: "JESSIE : Amour, vérité et mal.",
     0x03D07E: "JAMES : Des méchants de charme !",
@@ -147,38 +147,38 @@ EXPECTED_RESTORATION_COUNT = (
     + COLLAPSED_ENGLISH_POINTER_COUNT
 )
 
-# La ROM chinoise récite la devise sur onze enregistrements séparés. La
-# version Game Boy française de Pokémon Jaune ne contient pas cette devise :
-# ces passages emploient donc son adaptation française issue de l'anime.
+# The Chinese ROM spreads the motto over eleven separate records. The
+# French Game Boy Pokemon Yellow does not include this motto, so these
+# passages use its French anime adaptation.
 ANIME_MOTTO_RESTORATION_REFERENCES = frozenset(
     {
-        # Devise complète de la Team Nanjing.
+        # Complete Team Nanjing motto.
         0x0331B3, 0x0331B5, 0x0331B7, 0x0331B9, 0x0331BB,
         0x0331BD, 0x0331BF, 0x0331C1, 0x0331C3, 0x0331C5,
         0x0331C7,
-        # Mont Sélénite : la première réplique reste dans le script principal.
+        # Mt. Moon: the first line remains in the main script.
         0x038313, 0x038315, 0x038317, 0x038319, 0x03831B,
         0x03831D, 0x03831F, 0x038321, 0x038323, 0x038325,
-        # Repaire Rocket.
+        # Rocket hideout.
         0x03AF96, 0x03AF98, 0x03AF9A, 0x03AF9C, 0x03AF9E,
         0x03AFA0, 0x03AFA2, 0x03AFA4, 0x03AFA6, 0x03AFA8,
         0x03AFAA,
-        # Tour Pokémon.
+        # Pokemon Tower.
         0x03AFEC, 0x03AFEE, 0x03AFF0, 0x03AFF2, 0x03AFF4,
         0x03AFF6, 0x03AFF8, 0x03AFFA, 0x03AFFC, 0x03AFFE,
         0x03B000,
-        # Sylphe SARL.
+        # Silph Co.
         0x03CF3E, 0x03CF40, 0x03CF42, 0x03CF44, 0x03CF46,
         0x03CF48, 0x03CF4A, 0x03CF4C, 0x03CF4E, 0x03CF50,
         0x03CF52,
-        # Dernière devise, dont seuls quatre segments avaient été supprimés.
+        # Final motto, of which only four segments had been removed.
         0x03D07A, 0x03D07C, 0x03D07E, 0x03D080,
     }
 )
 
-# Ces conclusions correspondent directement aux quatre rencontres du trio
-# dans Pokémon Jaune ; elles reprennent donc prioritairement le texte officiel
-# de la version française du jeu Game Boy.
+# These conclusions correspond directly to the four encounters with the trio
+# in Pokemon Yellow, so the official French Game Boy wording takes
+# priority for these reference payloads.
 OFFICIAL_YELLOW_RESTORATION_REFERENCES = frozenset(
     {0x03AFB0, 0x03B004, 0x03CF54, 0x03CF56, 0x03CF58}
 )
@@ -187,7 +187,7 @@ EXPECTED_RESTORATION_NATURALIZATION_COUNT = 85
 
 if len(BASE_RESTORED_DIALOGUES) != EXPECTED_RESTORATION_COUNT:
     raise ValueError(
-        f"{len(BASE_RESTORED_DIALOGUES)} restaurations au lieu de "
+        f"{len(BASE_RESTORED_DIALOGUES)} restorations instead of "
         f"{EXPECTED_RESTORATION_COUNT}"
     )
 
@@ -206,7 +206,7 @@ def _load_restoration_naturalization_overrides() -> dict[int, str]:
     if not isinstance(document, dict):
         raise ValueError(
             f"{RESTORATION_NATURALIZATION_PATH}: "
-            "la racine doit être un objet JSON"
+            "the root must be a JSON object"
         )
     overrides = {
         int(reference, 0): str(text)
@@ -218,7 +218,7 @@ def _load_restoration_naturalization_overrides() -> dict[int, str]:
             f"0x{reference:06X}" for reference in sorted(unknown)
         )
         raise ValueError(
-            "naturalisations de restaurations inconnues : " + rendered
+            "Unknown restoration naturalizations: " + rendered
         )
     return overrides
 
@@ -231,13 +231,13 @@ if (
     != EXPECTED_RESTORATION_NATURALIZATION_COUNT
 ):
     raise ValueError(
-        f"{len(RESTORATION_NATURALIZATION_OVERRIDES)} naturalisations "
-        f"restaurées au lieu de "
+        f"{len(RESTORATION_NATURALIZATION_OVERRIDES)} restoration naturalizations "
+        f"instead of "
         f"{EXPECTED_RESTORATION_NATURALIZATION_COUNT}"
     )
 for provenance_name, references in (
-    ("devise de l'anime", ANIME_MOTTO_RESTORATION_REFERENCES),
-    ("Pokémon Jaune", OFFICIAL_YELLOW_RESTORATION_REFERENCES),
+    ("anime motto", ANIME_MOTTO_RESTORATION_REFERENCES),
+    ("Pokémon Yellow", OFFICIAL_YELLOW_RESTORATION_REFERENCES),
 ):
     missing = references - set(RESTORATION_NATURALIZATION_OVERRIDES)
     if missing:
@@ -245,7 +245,7 @@ for provenance_name, references in (
             f"0x{reference:06X}" for reference in sorted(missing)
         )
         raise ValueError(
-            f"références {provenance_name} absentes de la naturalisation : "
+            f"{provenance_name} references missing from naturalization: "
             + rendered
         )
 RESTORED_DIALOGUES = {

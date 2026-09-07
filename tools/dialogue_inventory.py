@@ -32,12 +32,12 @@ def _load_inventory_document() -> dict[str, Any]:
     digest = hashlib.sha256(raw).hexdigest()
     if digest != INVENTORY_SHA256:
         raise ValueError(
-            "inventaire des frontières de dialogue non canonique: "
-            f"{digest} au lieu de {INVENTORY_SHA256}"
+            "noncanonical dialogue boundary inventory: "
+            f"{digest} instead of {INVENTORY_SHA256}"
         )
     document = json.loads(raw.decode("utf-8"))
     if document.get("schema_version") != 1:
-        raise ValueError("version d'inventaire de dialogue inconnue")
+        raise ValueError("unknown dialogue inventory version")
     return document
 
 
@@ -53,8 +53,8 @@ def load_dialogue_inventory() -> dict[int, dict[str, Any]]:
     for field, expected in expected_summary.items():
         if summary.get(field) != expected:
             raise ValueError(
-                f"inventaire dialogue: {field}={summary.get(field)!r}, "
-                f"attendu {expected}"
+                f"dialogue inventory: {field}={summary.get(field)!r}, "
+                f"expected {expected}"
             )
 
     records: dict[int, dict[str, Any]] = {}
@@ -62,19 +62,19 @@ def load_dialogue_inventory() -> dict[int, dict[str, Any]]:
         offset = int(item["offset_hex"], 16)
         if offset in records:
             raise ValueError(
-                f"offset en double dans l'inventaire: 0x{offset:06X}"
+                f"duplicate offset in the inventory: 0x{offset:06X}"
             )
         source = item.get("source_fr_text")
         semantic = item.get("semantic_text_proposed")
         if not isinstance(source, str) or not isinstance(semantic, str):
             raise ValueError(
-                f"texte d'inventaire invalide à 0x{offset:06X}"
+                f"invalid inventory text at 0x{offset:06X}"
             )
         records[offset] = item
     if len(records) != INVENTORY_DIALOGUE_RECORD_COUNT:
         raise ValueError(
-            f"{len(records)} dialogues inventoriés, "
-            f"attendu {INVENTORY_DIALOGUE_RECORD_COUNT}"
+            f"{len(records)} inventoried dialogues, "
+            f"expected {INVENTORY_DIALOGUE_RECORD_COUNT}"
         )
     return records
 
@@ -93,8 +93,8 @@ def load_pokedex_inventory() -> dict[int, dict[str, Any]]:
     for field, expected in expected_summary.items():
         if summary.get(field) != expected:
             raise ValueError(
-                f"inventaire Pokédex: {field}={summary.get(field)!r}, "
-                f"attendu {expected}"
+                f"Pokédex inventory: {field}={summary.get(field)!r}, "
+                f"expected {expected}"
             )
 
     records: dict[int, dict[str, Any]] = {}
@@ -103,7 +103,7 @@ def load_pokedex_inventory() -> dict[int, dict[str, Any]]:
         offset = int(item["offset_hex"], 16)
         if offset in records:
             raise ValueError(
-                "offset Pokédex en double dans l'inventaire: "
+                "duplicate Pokédex offset in the inventory: "
                 f"0x{offset:06X}"
             )
         source = item.get("source_fr_text")
@@ -115,23 +115,23 @@ def load_pokedex_inventory() -> dict[int, dict[str, Any]]:
             or not isinstance(repairs, list)
         ):
             raise ValueError(
-                f"texte d'inventaire Pokédex invalide à 0x{offset:06X}"
+                f"invalid Pokédex inventory text at 0x{offset:06X}"
             )
         artificial_hyphenations += len(repairs)
         records[offset] = item
 
     if len(records) != INVENTORY_POKEDEX_RECORD_COUNT:
         raise ValueError(
-            f"{len(records)} descriptions Pokédex inventoriées, "
-            f"attendu {INVENTORY_POKEDEX_RECORD_COUNT}"
+            f"{len(records)} inventoried Pokédex descriptions, "
+            f"expected {INVENTORY_POKEDEX_RECORD_COUNT}"
         )
     if (
         artificial_hyphenations
         != INVENTORY_POKEDEX_ARTIFICIAL_HYPHENATION_COUNT
     ):
         raise ValueError(
-            f"{artificial_hyphenations} césures Pokédex inventoriées, "
-            "attendu "
+            f"{artificial_hyphenations} inventoried Pokédex hyphenations, "
+            "expected "
             f"{INVENTORY_POKEDEX_ARTIFICIAL_HYPHENATION_COUNT}"
         )
     return records
@@ -148,9 +148,9 @@ def reviewed_dialogue_override(
     expected_source = record["source_fr_text"]
     if source_text != expected_source:
         raise ValueError(
-            f"0x{offset:06X}: le texte source a divergé de l'inventaire "
-            "17/19; déclarer explicitement layout='dialogue_17_19' "
-            "après révision"
+            f"0x{offset:06X}: source text has diverged from the inventory "
+            "17/19; explicitly declare layout='dialogue_17_19' "
+            "after review"
         )
     # The historical source used literal ASCII ``0`` bytes as pointer-side
     # padding. Repointed text starts at the reviewed visible target, so these
@@ -169,7 +169,7 @@ def reviewed_pokedex_override(
     expected_source = record["source_fr_text"]
     if source_text != expected_source:
         raise ValueError(
-            f"0x{offset:06X}: le texte source a divergé de l'inventaire "
+            f"0x{offset:06X}: source text has diverged from the inventory "
             "Pokédex 13×4"
         )
     return str(record["semantic_text_proposed"])

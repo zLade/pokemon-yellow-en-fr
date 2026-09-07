@@ -56,7 +56,7 @@ def local_lua_dependencies(root_script: Path) -> set[Path]:
                 continue
             if not candidate.is_file():
                 raise AssertionError(
-                    f"dépendance Lua locale absente : {candidate}"
+                    f"Missing local Lua dependency: {candidate}"
                 )
             seen.add(candidate)
             dependencies.add(candidate)

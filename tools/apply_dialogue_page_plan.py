@@ -50,7 +50,7 @@ def load_candidates(report_path: Path) -> tuple[Candidate, ...]:
     report = json.loads(report_path.read_text(encoding="utf-8"))
     rows = report.get("encoded_growth_candidates")
     if not isinstance(rows, list):
-        raise ValueError("rapport sans encoded_growth_candidates")
+        raise ValueError("report missing encoded_growth_candidates")
     candidates: list[Candidate] = []
     for row in rows:
         candidate = Candidate(
@@ -63,12 +63,12 @@ def load_candidates(report_path: Path) -> tuple[Candidate, ...]:
         )
         if candidate.prg_pair not in {6, 7}:
             raise ValueError(
-                f"0x{candidate.offset:06X}: paire PRG inattendue "
+                f"0x{candidate.offset:06X}: unexpected PRG pair "
                 f"{candidate.prg_pair}"
             )
         if candidate.byte_cost <= 0 or candidate.strong_gain <= 0:
             raise ValueError(
-                f"0x{candidate.offset:06X}: candidat sans gain/coût positif"
+                f"0x{candidate.offset:06X}: candidate without positive gain/cost"
             )
         candidates.append(candidate)
     return tuple(sorted(candidates, key=lambda row: row.offset))
@@ -80,7 +80,7 @@ def select_for_budget(
 ) -> tuple[Candidate, ...]:
     """Knapsack: maximise strong issues removed, then minimise bytes."""
     if budget < 0:
-        raise ValueError("budget négatif")
+        raise ValueError("negative budget")
     rows = tuple(sorted(candidates, key=lambda row: row.offset))
     # used -> (gain, selected indexes)
     states: dict[int, tuple[int, tuple[int, ...]]] = {0: (0, ())}
@@ -119,7 +119,7 @@ def select_for_budget(
     )
     selected = tuple(rows[index] for index in selected_indexes)
     if sum(row.byte_cost for row in selected) != used:
-        raise AssertionError("coût du knapsack incohérent")
+        raise AssertionError("inconsistent knapsack cost")
     return selected
 
 
@@ -145,13 +145,13 @@ def author_pages(candidate: Candidate) -> tuple[str, ...]:
                 break
         if bytes(encoded) != target or not page_units:
             raise ValueError(
-                f"0x{candidate.offset:06X}: impossible de reconstruire "
-                f"la page {audited_page!r}"
+                f"0x{candidate.offset:06X}: cannot reconstruct "
+                f"page {audited_page!r}"
             )
         authored.append(" ".join(page_units))
     if unit_index != len(units):
         raise ValueError(
-            f"0x{candidate.offset:06X}: unités source non consommées"
+            f"0x{candidate.offset:06X}: unconsumed source units"
         )
     return tuple(authored)
 
@@ -159,7 +159,7 @@ def author_pages(candidate: Candidate) -> tuple[str, ...]:
 def _byte_column_to_character(line: str, byte_column: int) -> int:
     raw = line.encode("utf-8")
     if byte_column > len(raw):
-        raise ValueError("colonne AST hors ligne")
+        raise ValueError("AST column outside line")
     return len(raw[:byte_column].decode("utf-8"))
 
 
@@ -226,13 +226,13 @@ def apply_selected_pages(
             continue
         if not isinstance(text_node, ast.Constant):
             raise ValueError(
-                f"0x{offset:06X}: argument texte non constant"
+                f"0x{offset:06X}: non-constant text argument"
             )
         if not isinstance(text_node.value, str):
-            raise ValueError(f"0x{offset:06X}: texte non chaîne")
+            raise ValueError(f"0x{offset:06X}: text is not a string")
         if text_node.value != by_offset[offset].source_text:
             raise ValueError(
-                f"0x{offset:06X}: source différente du rapport"
+                f"0x{offset:06X}: source differs from report"
             )
         start = _absolute_character_offset(
             lines,
@@ -261,7 +261,7 @@ def apply_selected_pages(
     missing = sorted(set(by_offset) - found)
     if missing:
         raise ValueError(
-            "offset(s) sélectionné(s) absent(s): "
+            "selected offset(s) missing: "
             + ", ".join(f"0x{offset:06X}" for offset in missing)
         )
     for start, end, replacement in sorted(replacements, reverse=True):
@@ -348,7 +348,7 @@ def main() -> int:
         for row in selected:
             if "\n" not in entries[row.offset].text:
                 raise AssertionError(
-                    f"0x{row.offset:06X}: pages non appliquées"
+                    f"0x{row.offset:06X}: pages not applied"
                 )
     plan_path.parent.mkdir(parents=True, exist_ok=True)
     plan_path.write_text(
@@ -356,17 +356,17 @@ def main() -> int:
         encoding="utf-8",
     )
     print(
-        "Plan pagination : "
+        "Pagination plan : "
         f"{plan['selected_rows']} dialogues, "
-        f"{plan['selected_strong_gain']} frontières fortes retirées"
+        f"{plan['selected_strong_gain']} strong boundaries removed"
     )
     for pair, row in plan["pairs"].items():
         print(
-            f"- Paire {pair}: {row['selected_rows']} lignes, "
-            f"{row['used_bytes']}/{row['budget']} octets, "
+            f"- Pair {pair}: {row['selected_rows']} rows, "
+            f"{row['used_bytes']}/{row['budget']} bytes, "
             f"gain {row['strong_gain']}"
         )
-    print(f"- Script modifié : {args.apply}")
+    print(f"- Script modified : {args.apply}")
     print(f"- Plan : {plan_path}")
     return 0
 

@@ -247,8 +247,8 @@ def validate_default_rom_binding(path: Path, data: bytes) -> None:
     actual = sha256(data)
     if actual != CURRENT_ROM_SHA256:
         raise CatalogError(
-            "la ROM CHR par défaut n'est pas le snapshot courant attendu: "
-            f"{actual} au lieu de {CURRENT_ROM_SHA256}"
+            "the default CHR ROM is not the expected current snapshot: "
+            f"{actual} instead of {CURRENT_ROM_SHA256}"
         )
 
 
@@ -258,10 +258,10 @@ def hex_offset(value: int) -> str:
 
 def cpu_to_file(bank: int, cpu_pointer: int) -> int:
     if not 0 <= bank < 64:
-        raise CatalogError(f"banque PRG hors plage: {bank}")
+        raise CatalogError(f"PRG bank out of range: {bank}")
     if not CPU_BANK_BASE <= cpu_pointer <= 0xFFFF:
         raise CatalogError(
-            f"pointeur CPU hors fenêtre $8000-$FFFF: ${cpu_pointer:04X}"
+            f"CPU pointer outside window $8000-$FFFF: ${cpu_pointer:04X}"
         )
     return (
         INES_HEADER_SIZE
@@ -273,7 +273,7 @@ def cpu_to_file(bank: int, cpu_pointer: int) -> int:
 
 def read_u16(data: bytes, offset: int) -> int:
     if offset < 0 or offset + 2 > len(data):
-        raise CatalogError(f"lecture u16 hors ROM à {hex_offset(offset)}")
+        raise CatalogError(f"u16 read outside ROM at {hex_offset(offset)}")
     return struct.unpack_from("<H", data, offset)[0]
 
 
@@ -295,11 +295,11 @@ def append_asset(
 ) -> None:
     if offset < INES_HEADER_SIZE or offset + length > len(data):
         raise CatalogError(
-            f"{asset_id}: plage {hex_offset(offset)}+{length} hors ROM"
+            f"{asset_id}: range {hex_offset(offset)}+{length} outside ROM"
         )
     if kind == "chr" and length % 16:
         raise CatalogError(
-            f"{asset_id}: taille CHR {length} non multiple de 16"
+            f"{asset_id}: CHR size {length} not a multiple of 16"
         )
 
     asset = {
@@ -336,20 +336,20 @@ def parse_sprite_packages(
         table_delta = first_pointer - CPU_BANK_BASE
         if table_delta < 1 or (table_delta - 1) % 2:
             raise CatalogError(
-                f"banque {bank}: premier pointeur ${first_pointer:04X} "
-                "incompatible avec table+marqueur"
+                f"bank {bank}: first pointer ${first_pointer:04X} "
+                "incompatible with table+marker"
             )
         pointer_count = (table_delta - 1) // 2
         if pointer_count != expected_count:
             raise CatalogError(
-                f"banque {bank}: {pointer_count} pointeurs, "
-                f"{expected_count} attendus"
+                f"bank {bank}: {pointer_count} pointers, "
+                f"{expected_count} expected"
             )
 
         marker_offset = cpu_to_file(bank, first_pointer) - 1
         if data[marker_offset] != 0x40:
             raise CatalogError(
-                f"banque {bank}: marqueur 0x40 absent à "
+                f"bank {bank}: missing marker 0x40 at "
                 f"{hex_offset(marker_offset)}"
             )
 
@@ -359,14 +359,14 @@ def parse_sprite_packages(
         ]
         if pointers != sorted(set(pointers)):
             raise CatalogError(
-                f"banque {bank}: pointeurs non strictement croissants"
+                f"bank {bank}: pointers are not strictly increasing"
             )
 
         for index, cpu_pointer in enumerate(pointers):
             chunk_offset = cpu_to_file(bank, cpu_pointer)
             if chunk_offset + 7 > len(data):
                 raise CatalogError(
-                    f"b{bank}#{index}: en-tête de paquet tronqué"
+                    f"b{bank}#{index}: truncated package header"
                 )
 
             width, height, tiles, chr_relative, palette_relative = data[
@@ -376,7 +376,7 @@ def parse_sprite_packages(
             first_map_relative = data[chunk_offset + 5]
             if not width or not height or not tiles:
                 raise CatalogError(
-                    f"b{bank}#{index}: dimensions/nTiles nuls"
+                    f"b{bank}#{index}: zero dimensions/nTiles"
                 )
 
             if first_map_relative == 6:
@@ -391,8 +391,8 @@ def parse_sprite_packages(
                 expected_second_map_relative = 7 + area
                 if second_map_relative != expected_second_map_relative:
                     raise CatalogError(
-                        f"b{bank}#{index}: seconde tilemap +"
-                        f"0x{second_map_relative:02X}, attendue +"
+                        f"b{bank}#{index}: second tilemap +"
+                        f"0x{second_map_relative:02X}, expected +"
                         f"0x{expected_second_map_relative:02X}"
                     )
                 tilemap_relatives = (7, second_map_relative, None)
@@ -406,14 +406,14 @@ def parse_sprite_packages(
                 expected_third_map_relative = 8 + area * 2
                 if second_map_relative != expected_second_map_relative:
                     raise CatalogError(
-                        f"b{bank}#{index}: seconde tilemap +"
-                        f"0x{second_map_relative:02X}, attendue +"
+                        f"b{bank}#{index}: second tilemap +"
+                        f"0x{second_map_relative:02X}, expected +"
                         f"0x{expected_second_map_relative:02X}"
                     )
                 if third_map_relative != expected_third_map_relative:
                     raise CatalogError(
-                        f"b{bank}#{index}: troisième tilemap +"
-                        f"0x{third_map_relative:02X}, attendue +"
+                        f"b{bank}#{index}: third tilemap +"
+                        f"0x{third_map_relative:02X}, expected +"
                         f"0x{expected_third_map_relative:02X}"
                     )
                 tilemap_relatives = (
@@ -424,7 +424,7 @@ def parse_sprite_packages(
                 expected_palette_relative = 8 + area * 3
             else:
                 raise CatalogError(
-                    f"b{bank}#{index}: variante inconnue "
+                    f"b{bank}#{index}: unknown variant "
                     f"(map0=0x{first_map_relative:02X})"
                 )
 
@@ -432,13 +432,13 @@ def parse_sprite_packages(
             if palette_relative != expected_palette_relative:
                 raise CatalogError(
                     f"b{bank}#{index}: palette +"
-                    f"0x{palette_relative:02X}, attendue +"
+                    f"0x{palette_relative:02X}, expected +"
                     f"0x{expected_palette_relative:02X}"
                 )
             if chr_relative != expected_chr_relative:
                 raise CatalogError(
                     f"b{bank}#{index}: CHR +0x{chr_relative:02X}, "
-                    f"attendu +0x{expected_chr_relative:02X}"
+                    f"expected +0x{expected_chr_relative:02X}"
                 )
 
             chr_length = tiles * 16
@@ -447,14 +447,14 @@ def parse_sprite_packages(
             bank_end = bank_file + PRG_BANK_SIZE
             if chunk_end > bank_end:
                 raise CatalogError(
-                    f"b{bank}#{index}: paquet dépasse sa banque"
+                    f"b{bank}#{index}: package exceeds its bank"
                 )
             if index + 1 < pointer_count:
                 next_offset = cpu_to_file(bank, pointers[index + 1])
                 if chunk_end != next_offset:
                     raise CatalogError(
-                        f"b{bank}#{index}: fin {hex_offset(chunk_end)}, "
-                        f"pointeur suivant {hex_offset(next_offset)}"
+                        f"b{bank}#{index}: end {hex_offset(chunk_end)}, "
+                        f"next pointer {hex_offset(next_offset)}"
                     )
 
             chr_offset = chunk_offset + chr_relative
@@ -525,22 +525,22 @@ def parse_sprite_packages(
 
     if package_count != EXPECTED_PACKAGE_COUNT:
         raise CatalogError(
-            f"{package_count} paquets, {EXPECTED_PACKAGE_COUNT} attendus"
+            f"{package_count} packages, {EXPECTED_PACKAGE_COUNT} expected"
         )
     if tile_count_total != EXPECTED_PACKAGE_TILE_COUNT:
         raise CatalogError(
             f"{tile_count_total} tiles, "
-            f"{EXPECTED_PACKAGE_TILE_COUNT} attendues"
+            f"{EXPECTED_PACKAGE_TILE_COUNT} expected"
         )
     if chr_bytes_total != EXPECTED_PACKAGE_CHR_BYTES:
         raise CatalogError(
-            f"0x{chr_bytes_total:X} octets CHR, "
-            f"0x{EXPECTED_PACKAGE_CHR_BYTES:X} attendus"
+            f"0x{chr_bytes_total:X} CHR bytes, "
+            f"0x{EXPECTED_PACKAGE_CHR_BYTES:X} expected"
         )
     if variant_counts != EXPECTED_VARIANT_COUNTS:
         raise CatalogError(
-            f"variantes {variant_counts}, "
-            f"{EXPECTED_VARIANT_COUNTS} attendues"
+            f"variants {variant_counts}, "
+            f"{EXPECTED_VARIANT_COUNTS} expected"
         )
 
     return {
@@ -733,13 +733,13 @@ def append_strict_screen_pack_assets(
     if len(records) != EXPECTED_SCREEN_PACK_RECORD_COUNT:
         raise CatalogError(
             f"{len(records)} screen-packs, "
-            f"{EXPECTED_SCREEN_PACK_RECORD_COUNT} attendus"
+            f"{EXPECTED_SCREEN_PACK_RECORD_COUNT} expected"
         )
     pipeline_assets = screen_pack_catalog.build_pipeline_assets(records)
     if len(pipeline_assets) != EXPECTED_SCREEN_PACK_ASSET_COUNT:
         raise CatalogError(
-            f"{len(pipeline_assets)} assets screen-pack, "
-            f"{EXPECTED_SCREEN_PACK_ASSET_COUNT} attendus"
+            f"{len(pipeline_assets)} screen-pack assets, "
+            f"{EXPECTED_SCREEN_PACK_ASSET_COUNT} expected"
         )
     pipeline_by_id = {
         asset["id"]: asset
@@ -815,15 +815,15 @@ def validate_unique_assets(assets: list[dict[str, Any]]) -> None:
     ids = [asset["id"] for asset in assets]
     paths = [asset["path"] for asset in assets]
     if len(ids) != len(set(ids)):
-        raise CatalogError("identifiants d'assets dupliqués")
+        raise CatalogError("duplicate asset IDs")
     if len(paths) != len(set(paths)):
-        raise CatalogError("chemins d'assets dupliqués")
+        raise CatalogError("duplicate asset paths")
     for asset in assets:
         start = int(asset["offset"], 16)
         end = start + asset["length"]
         if start <= HZK16_EXCLUDED_OFFSET < end:
             raise CatalogError(
-                f"{asset['id']} recouvre HZK16, qui doit rester exclu"
+                f"{asset['id']} overlaps HZK16, which must remain excluded"
             )
 
 
@@ -855,7 +855,7 @@ def build_catalog(
     if ips_base_data is not None:
         if len(ips_base_data) != len(rom_data):
             raise CatalogError(
-                "la ROM de base IPS n'a pas la même taille que la ROM source"
+                "the IPS base ROM size differs from the source ROM"
             )
         manifest["ips_base_sha256"] = sha256(ips_base_data)
 
@@ -921,7 +921,7 @@ def atomic_write(path: Path, data: bytes) -> None:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Génère le manifeste complet des sources CHR-RAM en PRG-ROM."
+            "Generate the complete manifest of CHR-RAM sources in PRG-ROM."
         ),
     )
     parser.add_argument("--rom", type=Path, default=DEFAULT_ROM)
@@ -930,7 +930,7 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         default=DEFAULT_IPS_BASE_ROM,
         help=(
-            "ROM de base dont le SHA-256 sera inscrit dans ips_base_sha256"
+            "base ROM whose SHA-256 will be recorded in ips_base_sha256"
         ),
     )
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
@@ -942,7 +942,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--check",
         action="store_true",
-        help="valide et résume le catalogue sans écrire de fichiers",
+        help="validate and summarize the catalog without writing files",
     )
     return parser
 
@@ -965,39 +965,39 @@ def main(argv: list[str] | None = None) -> int:
             atomic_write(args.manifest, canonical_json_bytes(manifest))
             atomic_write(args.metadata_csv, metadata_csv_bytes(rows))
 
-        print("Catalogue CHR mapper 163: PASS")
+        print("Mapper 163 CHR catalog: PASS")
         print(f"- ROM SHA-256 : {manifest['source_sha256']}")
-        print(f"- Paquets : {stats['package_count']}")
-        print(f"- Tiles paquetées : {stats['package_tile_count']}")
+        print(f"- Packages : {stats['package_count']}")
+        print(f"- Packaged tiles : {stats['package_tile_count']}")
         print(
-            f"- Octets CHR paquetés : 0x{stats['package_chr_bytes']:X}"
+            f"- Packaged CHR bytes : 0x{stats['package_chr_bytes']:X}"
         )
         print(
-            f"- Variantes : {stats['variant_counts']['one_tilemap']} "
-            "à 1 tilemap, "
-            f"{stats['variant_counts']['two_tilemaps']} à 2 tilemaps, "
-            f"{stats['variant_counts']['three_tilemaps']} à 3 tilemaps"
+            f"- Variants : {stats['variant_counts']['one_tilemap']} "
+            "with 1 tilemap, "
+            f"{stats['variant_counts']['two_tilemaps']} with 2 tilemaps, "
+            f"{stats['variant_counts']['three_tilemaps']} with 3 tilemaps"
         )
         print(
-            f"- Composants de bundles écran : "
+            f"- Screen bundle components : "
             f"{stats['screen_component_count']}"
         )
-        print(f"- Assets CHR fixes : {stats['fixed_chr_count']}")
-        print(f"- Alias sémantiques : {stats['semantic_alias_count']}")
+        print(f"- Fixed CHR assets : {stats['fixed_chr_count']}")
+        print(f"- Semantic aliases : {stats['semantic_alias_count']}")
         print(
-            "- Screen-packs stricts : "
+            "- Strict screen-packs : "
             f"{stats['strict_screen_pack_count']} records, "
-            f"{stats['strict_screen_pack_asset_count']} tilemaps/attributs"
+            f"{stats['strict_screen_pack_asset_count']} tilemaps/attributes"
         )
-        print(f"- Assets manifestés : {stats['asset_count']}")
-        print(f"- Paires en chevauchement : {stats['overlap_pair_count']}")
-        print("- HZK16 : exclu")
+        print(f"- Manifested assets : {stats['asset_count']}")
+        print(f"- Overlapping pairs : {stats['overlap_pair_count']}")
+        print("- HZK16: excluded")
         if not args.check:
-            print(f"- Manifeste : {args.manifest.resolve()}")
-            print(f"- Métadonnées : {args.metadata_csv.resolve()}")
+            print(f"- Manifest : {args.manifest.resolve()}")
+            print(f"- Metadata : {args.metadata_csv.resolve()}")
         return 0
     except (OSError, CatalogError, pipeline.PipelineError) as exc:
-        print(f"Catalogue CHR mapper 163: ECHEC ({exc})", file=sys.stderr)
+        print(f"Mapper 163 CHR catalog: FAIL ({exc})", file=sys.stderr)
         return 2
 
 

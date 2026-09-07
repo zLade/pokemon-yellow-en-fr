@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Applique une table JSON offset→texte aux appels p(...) de script.py."""
+"""Apply an offset-to-text JSON map to p(...) calls in script.py."""
 
 from __future__ import annotations
 
@@ -23,18 +23,18 @@ from tools.apply_dialogue_page_plan import (  # noqa: E402
 def load_text_map(path: Path) -> dict[int, str]:
     raw = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(raw, dict) or not raw:
-        raise ValueError("la table JSON doit être un objet non vide")
+        raise ValueError("the JSON map must be a non-empty object")
     result: dict[int, str] = {}
     for raw_offset, raw_text in raw.items():
         if not isinstance(raw_offset, str):
-            raise ValueError("clé d'offset non textuelle")
+            raise ValueError("offset key is not a string")
         if not isinstance(raw_text, str) or not raw_text.strip():
-            raise ValueError(f"texte vide à {raw_offset}")
+            raise ValueError(f"empty text at {raw_offset}")
         offset = int(raw_offset, 0)
         if offset in result:
-            raise ValueError(f"offset dupliqué : 0x{offset:06X}")
+            raise ValueError(f"duplicate offset : 0x{offset:06X}")
         if any(not page.strip() for page in raw_text.splitlines()):
-            raise ValueError(f"page vide à 0x{offset:06X}")
+            raise ValueError(f"empty page at 0x{offset:06X}")
         result[offset] = raw_text
     return result
 
@@ -68,10 +68,10 @@ def apply_text_map(source: str, text_map: dict[int, str]) -> tuple[str, int]:
         offset = offset_node.value
         if not isinstance(text_node, ast.Constant):
             raise ValueError(
-                f"0x{offset:06X}: argument texte non constant"
+                f"0x{offset:06X}: non-constant text argument"
             )
         if not isinstance(text_node.value, str):
-            raise ValueError(f"0x{offset:06X}: texte non chaîne")
+            raise ValueError(f"0x{offset:06X}: text is not a string")
         found.add(offset)
         new_text = text_map[offset]
         if new_text == text_node.value:
@@ -100,7 +100,7 @@ def apply_text_map(source: str, text_map: dict[int, str]) -> tuple[str, int]:
     missing = sorted(set(text_map) - found)
     if missing:
         raise ValueError(
-            "offset(s) absent(s) de script.py : "
+            "offset(s) missing from script.py : "
             + ", ".join(f"0x{offset:06X}" for offset in missing)
         )
     for start, end, replacement in sorted(replacements, reverse=True):
@@ -119,13 +119,13 @@ def main() -> int:
     text_map = load_text_map(args.map)
     source = args.script.read_text(encoding="utf-8")
     updated, changed = apply_text_map(source, text_map)
-    print(f"Offsets déclarés : {len(text_map)}")
-    print(f"Offsets à modifier : {changed}")
+    print(f"Declared offsets : {len(text_map)}")
+    print(f"Offsets to modify : {changed}")
     if changed and not args.apply:
         return 1
     if changed:
         args.script.write_text(updated, encoding="utf-8")
-        print(f"Script mis à jour : {args.script}")
+        print(f"Script updated : {args.script}")
     return 0
 
 

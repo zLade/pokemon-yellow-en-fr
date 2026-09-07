@@ -38,6 +38,25 @@ class EnglishCatalogSeedTests(unittest.TestCase):
             row["stable_key"]: row for row in cls.catalog
         }
 
+    def test_generated_metadata_notes_are_complete_english(self) -> None:
+        self.assertEqual(
+            {row["note"] for row in self.bundle["storage_overlaps.csv"]},
+            {
+                "The short payload already aliased the suffix of the longer "
+                "payload in the 2015 English ROM; future edits must "
+                "relocate them or preserve compatible bytes."
+            },
+        )
+        self.assertEqual(
+            {row["fidelity_comment"] for row in self.bundle["pointer_variants.csv"]},
+            {
+                "The 2015 English ROM shares storage for semantically distinct "
+                "Chinese messages; translate this variant before compilation.",
+                "The 2015 English table shifts this move-name pointer; "
+                "translate this reviewed Chinese variant before compilation.",
+            },
+        )
+
     def test_catalog_cardinalities_and_unique_stable_keys(self) -> None:
         self.assertEqual(len(self.catalog), EXPECTED_CATALOG_ROWS)
         self.assertEqual(

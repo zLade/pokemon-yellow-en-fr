@@ -172,11 +172,11 @@ def certify_move_label_graphics(
     """
     if profile not in {"en-US", "fr-FR"}:
         raise MoveLabelCertificationError(
-            f"profil de noms d'attaques non certifié: {profile}"
+            f"Uncertified move-name profile: {profile}"
         )
     if len(base) != len(candidate):
         raise MoveLabelCertificationError(
-            "tailles base/candidat différentes pour la certification graphique"
+            "Base/candidate sizes differ for graphics certification"
         )
     catalogue_path = Path(catalogue) if catalogue is not None else None
     if catalogue_path is None:
@@ -184,7 +184,7 @@ def certify_move_label_graphics(
     else:
         if not catalogue_path.is_file():
             raise MoveLabelCertificationError(
-                f"catalogue de noms d'attaques absent: {catalogue_path}"
+                f"Missing move-name catalogue: {catalogue_path}"
             )
         encoder = ascii_text_encoder if profile == "en-US" else french_text_encoder
         try:
@@ -203,7 +203,7 @@ def certify_move_label_graphics(
                 f"0x{offset:06X}" for offset in sorted(pair8_changes)[:8]
             )
             raise MoveLabelCertificationError(
-                "modifications banque 8 sans catalogue certifié: " + preview
+                "Bank 8 changes without a certified catalogue: " + preview
             )
         return MoveLabelCertification(
             catalogue=catalogue_path,
@@ -238,7 +238,7 @@ def certify_move_label_graphics(
             f"{left:03d}/{right:03d}" for left, right in sorted(overlaps)[:8]
         )
         raise MoveLabelCertificationError(
-            "payloads d'attaques graphiques chevauchants: " + preview
+            "Overlapping graphical move payloads: " + preview
         )
 
     try:
@@ -255,36 +255,36 @@ def certify_move_label_graphics(
             f"0x{offset:06X}" for offset in sorted(differences)[:8]
         )
         raise MoveLabelCertificationError(
-            "composites/payloads d'attaques non idempotents: " + preview
+            "Non-idempotent move composites/payloads: " + preview
         )
     if not report.complete or report.applied_count != len(specs):
         raise MoveLabelCertificationError(
-            f"composites incomplets: {report.applied_count}/{len(specs)}"
+            f"Incomplete composites: {report.applied_count}/{len(specs)}"
         )
     if (
         report.candidate_target_count != 177
         or report.candidate_unique_target_count != 177
     ):
         raise MoveLabelCertificationError(
-            "table des attaques sans 177 cibles vivantes distinctes"
+            "Move table does not have 177 distinct live targets"
         )
     if report.pool_mode != "source":
         raise MoveLabelCertificationError(
-            f"pool graphique non certifié: {report.pool_mode}"
+            f"Uncertified graphics pool: {report.pool_mode}"
         )
     if set(report.excluded_even_slots) != set(DEFAULT_EXCLUDED_EVEN_SLOTS):
         raise MoveLabelCertificationError(
-            "liste des cellules graphiques exclues non canonique"
+            "Noncanonical excluded graphical cell list"
         )
     used_slots = report.used_even_slots
     if len(used_slots) != len(set(used_slots)) or any(slot % 2 for slot in used_slots):
         raise MoveLabelCertificationError(
-            "cellules graphiques d'attaques dupliquées ou impaires"
+            "Duplicate or odd-numbered graphical move cells"
         )
     forbidden = sorted(set(used_slots) & set(DEFAULT_EXCLUDED_EVEN_SLOTS))
     if forbidden:
         raise MoveLabelCertificationError(
-            "cellules graphiques exclues utilisées: "
+            "Excluded graphical cells in use: "
             + ", ".join(str(slot) for slot in forbidden)
         )
 
@@ -298,11 +298,11 @@ def certify_move_label_graphics(
         record = records[spec.move_index]
         if entry.status != "applied" or record.payload != expected_payload:
             raise MoveLabelCertificationError(
-                f"payload graphique attaque {spec.move_index:03d} inattendu"
+                f"Unexpected graphical payload for move {spec.move_index:03d}"
             )
         if record.graphical_slots != entry.code_slots:
             raise MoveLabelCertificationError(
-                f"codes graphiques attaque {spec.move_index:03d} inattendus"
+                f"Unexpected graphical codes for move {spec.move_index:03d}"
             )
 
     allowed_pair8: set[int] = set()
@@ -311,7 +311,7 @@ def certify_move_label_graphics(
         end = start + 2 * GRAPHIC_ATLAS_SLOT_SIZE
         if not PAIR8_START <= start < end <= PAIR8_END:
             raise MoveLabelCertificationError(
-                f"cellule graphique {slot} hors banque 8"
+                f"Graphical cell {slot} outside bank 8"
             )
         allowed_pair8.update(range(start, end))
     unexpected = sorted(pair8_changes - allowed_pair8)
@@ -320,7 +320,7 @@ def certify_move_label_graphics(
         if len(unexpected) > 8:
             preview += ", ..."
         raise MoveLabelCertificationError(
-            "modifications banque 8 hors cellules d'attaques certifiées: "
+            "Bank 8 changes outside certified move cells: "
             + preview
         )
 
@@ -339,7 +339,7 @@ def sha256(data: bytes) -> str:
 
 def parse_header(data: bytes) -> dict[str, int | bool]:
     if len(data) < INES_HEADER_SIZE or data[:4] != b"NES\x1A":
-        raise ValueError("en-tete iNES absent")
+        raise ValueError('Missing iNES header')
     header = data[:INES_HEADER_SIZE]
     return {
         "mapper": (header[6] >> 4) | (header[7] & 0xF0),
@@ -383,55 +383,55 @@ def validate(args: argparse.Namespace) -> int:
     base_hash = sha256(base)
     if base_hash != TRANSLATION_BASE_SHA256:
         failures.append(
-            "base anglaise non canonique: "
-            f"{base_hash} au lieu de {TRANSLATION_BASE_SHA256}"
+            "Noncanonical English base: "
+            f"{base_hash} instead of {TRANSLATION_BASE_SHA256}"
         )
 
     try:
         info = parse_header(rom)
     except ValueError as exc:
-        print(f"Validation mapper 163: ECHEC ({exc})")
+        print(f"Mapper 163 validation: FAILED ({exc})")
         return 1
 
     expected_length = INES_HEADER_SIZE + PRG_SIZE
     if len(rom) != expected_length:
         failures.append(
-            f"taille ROM {len(rom)} au lieu de {expected_length}"
+            f'ROM size {len(rom)} instead of {expected_length}'
         )
     if info["mapper"] != MAPPER:
-        failures.append(f"mapper {info['mapper']} au lieu de {MAPPER}")
+        failures.append(f"mapper {info['mapper']} instead of {MAPPER}")
     if info["prg_size"] != PRG_SIZE:
-        failures.append(f"PRG {info['prg_size']} au lieu de {PRG_SIZE}")
+        failures.append(f"PRG {info['prg_size']} instead of {PRG_SIZE}")
     if info["chr_size"] != 0:
-        failures.append("CHR-ROM non nulle; cette carte doit utiliser CHR-RAM")
+        failures.append('Nonzero CHR-ROM; this board must use CHR-RAM')
     if not info["vertical"]:
-        failures.append("mirroring vertical absent")
+        failures.append('Missing vertical mirroring')
     if not info["battery"]:
-        failures.append("bit batterie/save-RAM absent")
+        failures.append('Missing battery/save-RAM bit')
     if info["trainer"]:
-        failures.append("trainer iNES inattendu")
+        failures.append("Unexpected iNES trainer")
     if info["four_screen"]:
-        failures.append("mirroring four-screen inattendu")
+        failures.append("Unexpected four-screen mirroring")
     if info["nes2"]:
-        failures.append("header NES 2.0 inattendu; la base est iNES 1.0")
+        failures.append("Unexpected NES 2.0 header; the base is iNES 1.0")
 
     if len(base) != len(rom):
         failures.append(
-            f"taille base differente: {len(base)} au lieu de {len(rom)}"
+            f'Base size differs: {len(base)} instead of {len(rom)}'
         )
     elif base[:INES_HEADER_SIZE] != rom[:INES_HEADER_SIZE]:
-        failures.append("header modifie par rapport a la base anglaise")
+        failures.append("Header differs from the English base")
 
     stub = rom[RESET_STUB_OFFSET:RESET_STUB_OFFSET + len(RESET_STUB)]
     if stub != RESET_STUB:
         failures.append(
-            "trampoline RESET mapper 163 modifie: "
-            f"{stub.hex()} au lieu de {RESET_STUB.hex()}"
+            "Mapper 163 RESET trampoline changed: "
+            f"{stub.hex()} instead of {RESET_STUB.hex()}"
         )
     if rom[-6:] != EXPECTED_VECTORS:
         failures.append(
-            "vecteurs NMI/RESET/IRQ modifies: "
-            f"{rom[-6:].hex()} au lieu de {EXPECTED_VECTORS.hex()}"
+            "NMI/RESET/IRQ vectors changed: "
+            f"{rom[-6:].hex()} instead of {EXPECTED_VECTORS.hex()}"
         )
 
     profile = getattr(args, "profile", "fr-FR")
@@ -439,7 +439,7 @@ def validate(args: argparse.Namespace) -> int:
         "english",
         "yellow-version",
     ):
-        failures.append("le profil en-US exige un titre anglais")
+        failures.append("The en-US profile requires an English title")
 
     same_size = len(base) == len(rom)
     pairs = changed_pairs(base, rom) if same_size else {}
@@ -456,7 +456,7 @@ def validate(args: argparse.Namespace) -> int:
             catalogue=move_label_catalogue,
         )
     except (MoveLabelCertificationError, OSError) as exc:
-        failures.append(f"noms d'attaques graphiques: {exc}")
+        failures.append(f"Graphical move names: {exc}")
         move_label_certification = MoveLabelCertification(
             catalogue=move_label_catalogue,
             requested_count=0,
@@ -479,13 +479,13 @@ def validate(args: argparse.Namespace) -> int:
     unexpected_pairs = sorted(set(pairs) - expected_changed_pairs)
     if unexpected_pairs:
         failures.append(
-            "modifications hors banques traduction/titre/menu joueur: "
+            "Changes outside translation/title/player-menu banks: "
             + ", ".join(str(item) for item in unexpected_pairs)
         )
     missing_pairs = sorted(expected_changed_pairs - set(pairs))
     if missing_pairs:
         failures.append(
-            "banque(s) de traduction/graphismes non modifiee(s): "
+            "Unchanged translation/graphics bank(s): "
             + ", ".join(str(item) for item in missing_pairs)
         )
 
@@ -502,11 +502,11 @@ def validate(args: argparse.Namespace) -> int:
             end = start + len(source)
             if base[start:end] != source:
                 failures.append(
-                    f"source contrôle texte combat inattendue à 0x{start:06X}"
+                    f'Unexpected battle-text control source at 0x{start:06X}'
                 )
             if rom[start:end] != patched:
                 failures.append(
-                    f"patch contrôle texte combat inattendu à 0x{start:06X}"
+                    f'Unexpected battle-text control patch at 0x{start:06X}'
                 )
             allowed_bank4_offsets.update(
                 start + index
@@ -521,11 +521,11 @@ def validate(args: argparse.Namespace) -> int:
         )
         if unexpected_bank4_offsets or missing_bank4_offsets:
             failures.append(
-                "modifications inattendues dans la banque 4: extra="
+                "Unexpected changes in bank 4: extra="
                 + ", ".join(
                     f"0x{offset:06X}" for offset in unexpected_bank4_offsets
                 )
-                + "; manquantes="
+                + "; missing="
                 + ", ".join(
                     f"0x{offset:06X}" for offset in missing_bank4_offsets
                 )
@@ -534,8 +534,8 @@ def validate(args: argparse.Namespace) -> int:
             BATTLE_MENU_CHR_START_LOW_EXPECTED
         ):
             failures.append(
-                "départ CHR du menu combat inattendu: "
-                f"0x{rom[BATTLE_MENU_CHR_START_LOW_OFFSET]:02X} au lieu de "
+                "Unexpected battle-menu CHR start: "
+                f"0x{rom[BATTLE_MENU_CHR_START_LOW_OFFSET]:02X} instead of "
                 f"0x{BATTLE_MENU_CHR_START_LOW_EXPECTED:02X}"
             )
 
@@ -544,9 +544,7 @@ def validate(args: argparse.Namespace) -> int:
     )
     if dojo_deputy_sprite_hash != DOJO_DEPUTY_SPRITE_SHA256:
         failures.append(
-            "sprite du numéro 2 du dojo non conforme à la ROM chinoise: "
-            f"{dojo_deputy_sprite_hash} au lieu de "
-            f"{DOJO_DEPUTY_SPRITE_SHA256}"
+            f'Dojo deputy sprite differs from the Chinese ROM: {dojo_deputy_sprite_hash} instead of {DOJO_DEPUTY_SPRITE_SHA256}'
         )
     bank57_start = INES_HEADER_SIZE + 57 * PRG_BANK_SIZE
     bank57_end = bank57_start + PRG_BANK_SIZE
@@ -563,7 +561,7 @@ def validate(args: argparse.Namespace) -> int:
     )
     if unexpected_bank57_offsets:
         failures.append(
-            "modifications banque 57 hors sprite du numéro 2 du dojo: "
+            "Bank 57 changes outside the dojo deputy sprite: "
             + ", ".join(
                 f"0x{offset:06X}" for offset in unexpected_bank57_offsets[:8]
             )
@@ -591,7 +589,7 @@ def validate(args: argparse.Namespace) -> int:
         if len(unexpected_bank5_offsets) > 8:
             preview += ", ..."
         failures.append(
-            "modifications banque 5 hors tuiles menu joueur: " + preview
+            "Bank 5 changes outside player-menu tiles: " + preview
         )
 
     expected_title_rom = None
@@ -611,7 +609,7 @@ def validate(args: argparse.Namespace) -> int:
             ]
             for tile_id in TITLE_LOGO_TILE_IDS
         }
-        title_logo_label = "YELLOW VERSION + crédits personnalisés"
+        title_logo_label = "YELLOW VERSION + custom credits"
     elif profile == "en-US":
         expected_logo_tiles = {
             TITLE_PT0_FILE + tile_id * 16: base[
@@ -620,7 +618,7 @@ def validate(args: argparse.Namespace) -> int:
             ]
             for tile_id in TITLE_LOGO_TILE_IDS
         }
-        title_logo_label = "YELLOW anglais préservé"
+        title_logo_label = "Preserved English YELLOW"
     elif args.title_logo == "english":
         expected_logo_tiles = {
             TITLE_PT0_FILE + tile_id * 16: base[
@@ -629,7 +627,7 @@ def validate(args: argparse.Namespace) -> int:
             ]
             for tile_id in TITLE_LOGO_TILE_IDS
         }
-        title_logo_label = "YELLOW anglais"
+        title_logo_label = "English YELLOW"
     else:
         expected_logo_tiles = {
             TITLE_PT0_FILE + tile_id * 16: tile
@@ -639,7 +637,7 @@ def validate(args: argparse.Namespace) -> int:
                 strict=True,
             )
         }
-        title_logo_label = "JAUNE français"
+        title_logo_label = "French JAUNE"
 
     expected_menu_tiles = (
         {
@@ -692,7 +690,7 @@ def validate(args: argparse.Namespace) -> int:
         for offset in sorted(credit_offsets):
             if rom[offset] != credits_reference[offset]:
                 failures.append(
-                    f"octet crédits titre 0x{offset:06X} inattendu"
+                    f"Unexpected title-credit byte at 0x{offset:06X}"
                 )
     bank14_changed_offsets = {
         offset
@@ -710,13 +708,13 @@ def validate(args: argparse.Namespace) -> int:
         if len(unexpected_bank14_offsets) > 8:
             preview += ", ..."
         failures.append(
-            "modifications banque 14 hors tuiles titre/menu: " + preview
+            "Bank 14 changes outside title/menu tiles: " + preview
         )
     if expected_title_rom is not None and rom[bank14_start:bank14_end] != (
         expected_title_rom[bank14_start:bank14_end]
     ):
         failures.append(
-            "banque 14 différente du titre YELLOW VERSION + crédits attendu"
+            'Bank 14 differs from the expected YELLOW VERSION title and credits'
         )
 
     if profile == "en-US":
@@ -727,7 +725,7 @@ def validate(args: argparse.Namespace) -> int:
             ]
             for tile_index in range(96)
         }
-        font_label = "Police anglaise préservée"
+        font_label = "Preserved English font"
     else:
         expected_french_font_tiles = french_font_tiles(
             extract_ascii_font(base)
@@ -736,7 +734,7 @@ def validate(args: argparse.Namespace) -> int:
             ASCII_FONT_OFFSET + (code - 0x20) * 16: tile
             for code, tile in expected_french_font_tiles.items()
         }
-        font_label = "Police française"
+        font_label = "French font"
     allowed_bank15_offsets = {
         offset + byte_index
         for offset in expected_font_offsets
@@ -760,15 +758,15 @@ def validate(args: argparse.Namespace) -> int:
         if len(unexpected_bank15_offsets) > 8:
             preview += ", ..."
         failures.append(
-            "modifications banque 15 hors glyphes français: " + preview
+            "Bank 15 changes outside French glyphs: " + preview
         )
 
     for offset, expected_tile in expected_font_offsets.items():
         actual_tile = rom[offset : offset + 16]
         if actual_tile != expected_tile:
             failures.append(
-                f"glyphe du profil {profile} 0x{offset:06X} inattendu: "
-                f"{sha256(actual_tile)} au lieu de {sha256(expected_tile)}"
+                f"Unexpected {profile} profile glyph at 0x{offset:06X}: "
+                f"{sha256(actual_tile)} instead of {sha256(expected_tile)}"
             )
 
     wrong_title_tiles = []
@@ -780,8 +778,8 @@ def validate(args: argparse.Namespace) -> int:
             )
     for offset, actual_hash, expected_hash in wrong_title_tiles:
         failures.append(
-            f"tuile titre/menu 0x{offset:06X} inattendue: "
-            f"{actual_hash} au lieu de {expected_hash}"
+            f"Unexpected title/menu tile at 0x{offset:06X}: "
+            f"{actual_hash} instead of {expected_hash}"
         )
 
     title_graphics_block = b"".join(
@@ -814,84 +812,73 @@ def validate(args: argparse.Namespace) -> int:
     )
     if player_menu_pt0_hash != expected_player_menu_hash:
         failures.append(
-            "CHR menu joueur inattendu: "
-            f"{player_menu_pt0_hash} au lieu de {expected_player_menu_hash}"
+            "Unexpected player-menu CHR: "
+            f"{player_menu_pt0_hash} instead of {expected_player_menu_hash}"
         )
 
-    print("Validation cartouche mapper 163")
+    print("Mapper 163 cartridge validation")
     print(f"- ROM : {rom_path.resolve()}")
     print(f"- SHA-256 : {sha256(rom)}")
     print(
         f"- Header : mapper={info['mapper']} PRG={info['prg_size']} "
         f"CHR-ROM={info['chr_size']} vertical={info['vertical']} "
-        f"batterie={info['battery']}"
+        f"battery={info['battery']}"
     )
     print(
-        "- Modele : 64 banques PRG commutables de 32 Kio, "
-        "CHR-RAM 8 Kio"
+        "- Model : 64 switchable 32 KiB PRG banks, "
+        "8 KiB CHR-RAM"
     )
     print(
         "- Region header : "
         + ("PAL" if info["region_byte"] else "NTSC")
-        + " (Mesen DB classe la ROM chinoise source en Dendy)"
+        + " (Mesen DB classifies the source Chinese ROM as Dendy)"
     )
     print(
-        "- Banques modifiees vs base : "
+        "- Banks changed from base: "
         + ", ".join(f"{pair}={count}" for pair, count in sorted(pairs.items()))
     )
     print(
-        "- Sprite chinois du numéro 2 du dojo : "
+        "- Chinese dojo deputy sprite : "
         f"SHA-256={dojo_deputy_sprite_hash}"
     )
     print(
-        "- Noms d'attaques graphiques banque 8 : "
-        f"{move_label_certification.requested_count} composites, "
-        f"{len(move_label_certification.used_even_slots)} cellules, "
-        f"{len(move_label_certification.changed_pair8_offsets)} octets modifiés"
+        f'- Bank 8 graphical move names: {move_label_certification.requested_count} composites, {len(move_label_certification.used_even_slots)} cells, {len(move_label_certification.changed_pair8_offsets)} bytes changed'
     )
     if profile == "en-US":
         print(
-            "- Fenêtre CHR menu combat banque 4 (stock) : "
-            f"0x{BATTLE_MENU_CHR_START_LOW_OFFSET:06X}=0x"
-            f"{rom[BATTLE_MENU_CHR_START_LOW_OFFSET]:02X}"
+            f'- Bank 4 battle-menu CHR window (stock): 0x{BATTLE_MENU_CHR_START_LOW_OFFSET:06X}=0x{rom[BATTLE_MENU_CHR_START_LOW_OFFSET]:02X}'
         )
     print(
-        "- Graphismes menu joueur banque 5 : "
-        f"{len(bank5_changed_offsets)} octets modifies, "
-        f"CHR PT0 SHA-256={player_menu_pt0_hash}"
+        f'- Bank 5 player-menu graphics: {len(bank5_changed_offsets)} bytes changed, CHR PT0 SHA-256={player_menu_pt0_hash}'
     )
     print(
-        "- Graphismes titre/menu banque 14 : "
-        f"{len(bank14_changed_offsets)} octets modifies, "
-        f"bloc cible SHA-256={title_graphics_hash}"
+        f'- Bank 14 title/menu graphics: {len(bank14_changed_offsets)} bytes changed, target block SHA-256={title_graphics_hash}'
     )
-    print(f"- Logo titre attendu : {title_logo_label}")
+    print(f'- Expected title logo: {title_logo_label}')
     print(
-        f"- {font_label} banque 15 : "
-        f"{len(bank15_changed_offsets)} octets modifiés, "
-        f"{len(expected_font_offsets)} glyphes vérifiés"
+        f'- Bank 15 {font_label}: {len(bank15_changed_offsets)} bytes changed, {len(expected_font_offsets)} glyphs verified'
     )
     print(
-        "- Trampoline RESET $5300/$5000/$5200 : "
-        + ("OK" if stub == RESET_STUB else "ECHEC")
+        "- RESET trampoline $5300/$5000/$5200 : "
+        + ("OK" if stub == RESET_STUB else "FAILED")
     )
     print(
-        "- Vecteurs NMI/RESET/IRQ : "
-        + ("OK" if rom[-6:] == EXPECTED_VECTORS else "ECHEC")
+        "- NMI/RESET/IRQ vectors : "
+        + ("OK" if rom[-6:] == EXPECTED_VECTORS else "FAILED")
     )
 
     if failures:
-        print("- Resultat : ECHEC")
+        print("- Result: FAILED")
         for failure in failures:
             print(f"  - {failure}")
         return 1
-    print("- Resultat : OK")
+    print("- Result: OK")
     return 0
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Valide le contrat materiel iNES mapper 163."
+        description="Validate the iNES mapper 163 hardware contract."
     )
     parser.add_argument(
         "--rom",
@@ -906,13 +893,13 @@ def build_parser() -> argparse.ArgumentParser:
         choices=("english", "yellow-version", "french"),
         default="english",
         help=(
-            "logo attendu: YELLOW anglais (défaut) ou JAUNE français"
+            'expected logo: English YELLOW (default) or French JAUNE'
         ),
     )
     parser.add_argument(
         "--title-reference-rom",
         default="yellow.nes",
-        help="ROM canonique fournissant YELLOW VERSION",
+        help="Canonical ROM providing YELLOW VERSION",
     )
     parser.add_argument(
         "--title-credits",
@@ -922,20 +909,19 @@ def build_parser() -> argparse.ArgumentParser:
         "--title-credits-mode",
         choices=("original", "shared"),
         default="original",
-        help="ligne de crédits d'origine ou commune FR/EN",
+        help="original credit line or shared FR/EN credits",
     )
     parser.add_argument(
         "--profile",
         choices=("fr-FR", "en-US"),
         default="fr-FR",
-        help="Politique de graphismes/police attendue (défaut historique FR).",
+        help="Expected graphics/font policy (legacy default: FR).",
     )
     parser.add_argument(
         "--move-labels-csv",
         type=Path,
         help=(
-            "catalogue explicite des noms d'attaques sur deux lignes; "
-            "par défaut locales/<profil>/move_labels_two_line.csv s'il existe"
+            'explicit two-line move-name catalogue; defaults to locales/<profile>/move_labels_two_line.csv if available'
         ),
     )
     return parser

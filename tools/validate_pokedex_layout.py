@@ -56,7 +56,7 @@ def validate(
     )
     by_offset = {entry.offset: entry for entry in entries}
     if len(by_offset) != len(entries):
-        errors.append("offset(s) en double dans le script")
+        errors.append("duplicate offset(s) in script")
 
     accessible_records, extended_records = load_pokedex_description_table(
         rom_path
@@ -83,17 +83,17 @@ def validate(
         entry = by_offset.get(offset)
         if entry is None:
             errors.append(
-                f"Pokédex #{record.table_index}: description absente "
-                f"du script à 0x{offset:06X}"
+                f"Pokédex #{record.table_index}: missing description "
+                f"from script at 0x{offset:06X}"
             )
         elif entry.layout != POKEDEX_LAYOUT:
             errors.append(
                 f"Pokédex #{record.table_index} 0x{offset:06X}: "
-                "layout Pokédex 13×4 non appliqué"
+                "Pokédex 13×4 layout not applied"
             )
     for offset in sorted(set(layout_entries) - allowed_layout_offsets):
         errors.append(
-            f"layout Pokédex hors table accessible/étendue: 0x{offset:06X}"
+            f"Pokédex layout outside accessible/extended table: 0x{offset:06X}"
         )
 
     artificial_hyphenations_checked = 0
@@ -108,15 +108,15 @@ def validate(
             if source_form in entry.text:
                 artificial_hyphenations_remaining += 1
                 errors.append(
-                    f"0x{offset:06X}: césure artificielle restante "
+                    f"0x{offset:06X}: remaining artificial hyphenation "
                     f"{source_form!r}"
                 )
     if artificial_hyphenations_checked != (
         INVENTORY_POKEDEX_ARTIFICIAL_HYPHENATION_COUNT
     ):
         errors.append(
-            f"{artificial_hyphenations_checked} césures contrôlées, "
-            "attendu "
+            f"{artificial_hyphenations_checked} hyphenations checked, "
+            "expected "
             f"{INVENTORY_POKEDEX_ARTIFICIAL_HYPHENATION_COUNT}"
         )
 
@@ -140,7 +140,7 @@ def validate(
         units = semantic_units(entry.text)
         if entry.text != " ".join(units):
             errors.append(
-                f"0x{offset:06X}: espacement sémantique non canonique"
+                f"0x{offset:06X}: non-canonical semantic spacing"
             )
         try:
             lines = wrap_pokedex_lines(entry.text)
@@ -150,11 +150,11 @@ def validate(
             continue
 
         if not lines:
-            errors.append(f"0x{offset:06X}: description vide")
+            errors.append(f"0x{offset:06X}: empty description")
             continue
         if encoded != b"".join(lines):
             errors.append(
-                f"0x{offset:06X}: divergence wrapper/lignes"
+                f"0x{offset:06X}: wrapper/lines mismatch"
             )
         semantic_text = b" ".join(
             encode_game_text(unit) for unit in units
@@ -165,24 +165,24 @@ def validate(
         if visible_reflow != semantic_text:
             word_split_boundaries += 1
             errors.append(
-                f"0x{offset:06X}: césure ou perte de mot au reflow"
+                f"0x{offset:06X}: word split or loss during reflow"
             )
         if len(lines) > POKEDEX_MAX_LINES:
             errors.append(
-                f"0x{offset:06X}: {len(lines)} lignes, "
+                f"0x{offset:06X}: {len(lines)} lines, "
                 f"maximum {POKEDEX_MAX_LINES}"
             )
         for line_index, line in enumerate(lines):
             is_last = line_index == len(lines) - 1
             if len(line) > POKEDEX_LINE_WIDTH:
                 errors.append(
-                    f"0x{offset:06X}: ligne {line_index + 1} "
-                    f"trop longue ({len(line)} > {POKEDEX_LINE_WIDTH})"
+                    f"0x{offset:06X}: line {line_index + 1} "
+                    f"too long ({len(line)} > {POKEDEX_LINE_WIDTH})"
                 )
             if not is_last and len(line) != POKEDEX_LINE_WIDTH:
                 errors.append(
-                    f"0x{offset:06X}: ligne complète "
-                    f"{line_index + 1} non paddée"
+                    f"0x{offset:06X}: full line "
+                    f"{line_index + 1} not padded"
                 )
 
         physical_lines += len(lines)
@@ -275,13 +275,13 @@ def validate(
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Valide les descriptions Pokédex sur quatre lignes de 13."
+        description="Validate Pokédex descriptions on four 13-column lines."
     )
     parser.add_argument("--script", default=PATCH_SCRIPT)
     parser.add_argument(
         "--rom",
         default=str(DEFAULT_POINTER_ROM),
-        help="ROM anglaise canonique contenant la table à 0x03201E",
+        help="canonical English ROM containing the table at 0x03201E",
     )
     parser.add_argument(
         "--output",
@@ -301,29 +301,29 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    print("Validation mise en page Pokédex 13×4")
+    print("Pokédex 13×4 layout validation")
     print(
-        "- Descriptions accessibles : "
+        "- Accessible descriptions : "
         f"{report['accessible_layout_rows']}/"
         f"{report['accessible_expected_rows']}"
     )
     print(
-        "- Layouts étendus validés : "
+        "- Extended layouts validated : "
         f"{report['extended_layout_rows']}/"
-        f"{report['extended_pointer_rows']} (non requis)"
+        f"{report['extended_pointer_rows']} (not required)"
     )
-    print(f"- Lignes physiques : {report['physical_lines']}")
+    print(f"- Physical lines : {report['physical_lines']}")
     print(
-        "- Césures de mot au reflow : "
+        "- Word splits during reflow : "
         f"{report['word_split_boundaries']}"
     )
-    print(f"- Rapport : {output}")
-    print(f"- Résultat : {report['result']}")
+    print(f"- Report: {output}")
+    print(f"- Result: {report['result']}")
     if errors:
         for error in errors[:40]:
             print(f"  {error}")
         if len(errors) > 40:
-            print(f"  ... et {len(errors) - 40} de plus")
+            print(f"  ... and {len(errors) - 40} more")
     return 1 if errors else 0
 
 

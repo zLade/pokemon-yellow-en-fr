@@ -279,9 +279,9 @@ def _require_unique(
     for row in rows:
         key = row[field]
         if not key:
-            raise ValueError(f"{label}: {field} vide")
+            raise ValueError(f"{label}: empty {field}")
         if key in result:
-            raise ValueError(f"{label}: doublon {field}={key}")
+            raise ValueError(f"{label}: duplicate {field}={key}")
         result[key] = row
     return result
 
@@ -338,14 +338,14 @@ def _multi_source_tuples(
     offsets = _parts(alignment["chinese_offsets"])
     if not (len(references) == len(indexes) == len(offsets)):
         raise ValueError(
-            f"{alignment['english_offset_hex']}: mapping multi-source "
-            "pointer/record/offset non bijectif"
+            f"{alignment['english_offset_hex']}: multi-source mapping: "
+            "pointer/record/offset correspondence is not one-to-one"
         )
     result: list[dict[str, str]] = []
     for reference, index, offset in zip(references, indexes, offsets):
         record = records_by_index.get(index)
         if record is None:
-            raise ValueError(f"record chinois inconnu: {index}")
+            raise ValueError(f"Unknown Chinese record: {index}")
         if int(record["start_hex"], 16) != int(offset, 16):
             raise ValueError(
                 f"record {index}: offset {record['start_hex']} != {offset}"
@@ -367,17 +367,17 @@ def _restored_source_map(
     restored_keys: Iterable[str],
 ) -> dict[str, dict[str, str]]:
     removed_by_ref = _require_unique(
-        removed_rows, "pointer_reference_hex", "dialogues supprimés"
+        removed_rows, "pointer_reference_hex", "removed dialogues"
     )
     pointer_by_ref = _require_unique(
-        pointer_rows, "pointer_reference_hex", "alignement des pointeurs"
+        pointer_rows, "pointer_reference_hex", "pointer alignment"
     )
     result: dict[str, dict[str, str]] = {}
     for key in restored_keys:
         reference = key.removeprefix("RESTORED:")
         source = removed_by_ref.get(reference) or pointer_by_ref.get(reference)
         if source is None:
-            raise ValueError(f"{key}: aucune source chinoise structurelle")
+            raise ValueError(f"{key}: no structural Chinese source")
         result[key] = {
             "record_index": source["chinese_record_index"],
             "chinese_offset": source.get("chinese_offset_hex")
@@ -403,14 +403,14 @@ def _manual_source_map(
         record = records_by_index.get(source["record_index"])
         if record is None:
             raise ValueError(
-                f"{key}: record chinois manuel {source['record_index']} absent"
+                f"{key}: missing manual Chinese record {source['record_index']}"
             )
         record_text = _clean_chinese(record["chinese_text"])
         fragment = source["fragment"]
         if fragment:
             if not record_text.startswith(fragment):
                 raise ValueError(
-                    f"{key}: le fragment manuel ne correspond pas au record "
+                    f"{key}: manual fragment does not match record "
                     f"{source['record_index']}"
                 )
             selected_text = fragment
@@ -426,7 +426,7 @@ def _manual_source_map(
             "selected_source_method": method,
         }
     if set(result) != EXPECTED_MANUAL_SOURCE_KEYS:
-        raise ValueError("résolutions manuelles de source incomplètes")
+        raise ValueError('Incomplete manual source resolutions')
     return result
 
 
@@ -447,10 +447,10 @@ def _overlap_rows(
         overlap_start = max(owner_start, alias_start)
         overlap_end = min(owner_end, alias_end)
         if overlap_start >= overlap_end:
-            raise ValueError(f"chevauchement déclaré absent: {owner_key}/{alias_key}")
+            raise ValueError(f'Missing declared overlap: {owner_key}/{alias_key}')
         if overlap_start != alias_start or overlap_end != alias_end:
             raise ValueError(
-                f"{owner_key}/{alias_key}: l'alias n'est pas le suffixe attendu"
+                f'{owner_key}/{alias_key}: alias is not the expected suffix'
             )
         group = f"storage-overlap-{number:02d}"
         rows.append(
@@ -464,9 +464,9 @@ def _overlap_rows(
                 "relationship": "alias_is_exact_suffix_of_owner",
                 "structural_status": "declared_source_storage_fact",
                 "note": (
-                    "Le payload court aliasait déjà le suffixe du payload "
-                    "long dans la ROM anglaise 2015; une future édition doit "
-                    "les reloger ou préserver des octets compatibles."
+                    "The short payload already aliased the suffix of the longer "
+                    "payload in the 2015 English ROM; future edits must "
+                    "relocate them or preserve compatible bytes."
                 ),
             }
         )
@@ -513,26 +513,26 @@ def build_catalog_bundle(
 
     if len(alignment_rows) != EXPECTED_MAIN_ROWS:
         raise ValueError(
-            f"{len(alignment_rows)} alignements principaux, "
-            f"{EXPECTED_MAIN_ROWS} attendus"
+            f"{len(alignment_rows)} main alignments, "
+            f"{EXPECTED_MAIN_ROWS} expected"
         )
     if len(base_rows) != EXPECTED_MAIN_ROWS:
         raise ValueError(
-            f"{len(base_rows)} entrées traduction_base, "
-            f"{EXPECTED_MAIN_ROWS} attendues"
+            f"{len(base_rows)} traduction_base entries, "
+            f"{EXPECTED_MAIN_ROWS} expected"
         )
     if len(dialogue_rows) != EXPECTED_DIALOGUES:
         raise ValueError(
-            f"{len(dialogue_rows)} dialogues, {EXPECTED_DIALOGUES} attendus"
+            f"{len(dialogue_rows)} dialogues, {EXPECTED_DIALOGUES} expected"
         )
 
     expected_indexes = [str(index) for index in range(1, EXPECTED_MAIN_ROWS + 1)]
     if [row["entry_index"] for row in alignment_rows] != expected_indexes:
-        raise ValueError("les entry_index principaux ne sont pas séquentiels")
+        raise ValueError('Main entry_index values are not sequential')
 
     base_by_offset = _require_unique(base_rows, "offset_hex", "traduction_base")
-    records_by_index = _require_unique(record_rows, "record_index", "records chinois")
-    dialogues_by_key = _require_unique(dialogue_rows, "cle_stable", "dialogues")
+    records_by_index = _require_unique(record_rows, "record_index", "Chinese records")
+    dialogues_by_key = _require_unique(dialogue_rows, "stable_key", "dialogues")
     main_dialogues = {
         key: row
         for key, row in dialogues_by_key.items()
@@ -545,33 +545,33 @@ def build_catalog_bundle(
     }
     if len(main_dialogues) != EXPECTED_MAIN_DIALOGUES:
         raise ValueError(
-            f"{len(main_dialogues)} dialogues MAIN, "
-            f"{EXPECTED_MAIN_DIALOGUES} attendus"
+            f"{len(main_dialogues)} MAIN dialogues, "
+            f"{EXPECTED_MAIN_DIALOGUES} expected"
         )
     if len(restored_dialogues) != EXPECTED_RESTORED_ROWS:
         raise ValueError(
-            f"{len(restored_dialogues)} dialogues RESTORED, "
-            f"{EXPECTED_RESTORED_ROWS} attendus"
+            f"{len(restored_dialogues)} RESTORED dialogues, "
+            f"{EXPECTED_RESTORED_ROWS} expected"
         )
 
     alignments_by_key: dict[str, Mapping[str, str]] = {}
     for alignment in alignment_rows:
         key = _main_key(alignment["english_offset_hex"])
         if key in alignments_by_key:
-            raise ValueError(f"offset principal dupliqué: {key}")
+            raise ValueError(f"Duplicate main offset: {key}")
         base = base_by_offset.get(alignment["english_offset_hex"])
         if base is None:
-            raise ValueError(f"{key}: absent de traduction_base")
+            raise ValueError(f'{key}: missing from traduction_base')
         if base["max_len"] != alignment["source_length"]:
-            raise ValueError(f"{key}: capacité incohérente")
+            raise ValueError(f"{key}: inconsistent capacity")
         if base["layout"] != alignment["layout"]:
-            raise ValueError(f"{key}: layout incohérent")
+            raise ValueError(f"{key}: inconsistent layout")
         alignments_by_key[key] = alignment
 
     unknown_dialogues = set(main_dialogues) - set(alignments_by_key)
     if unknown_dialogues:
         raise ValueError(
-            "dialogues MAIN sans entrée principale: "
+            "MAIN dialogues without a main entry: "
             + ", ".join(sorted(unknown_dialogues))
         )
 
@@ -582,12 +582,12 @@ def build_catalog_bundle(
     }
     if len(multi_source) != EXPECTED_MULTI_SOURCE_ROWS:
         raise ValueError(
-            f"{len(multi_source)} cibles multi-sources, "
-            f"{EXPECTED_MULTI_SOURCE_ROWS} attendues"
+            f"{len(multi_source)} multi-source targets, "
+            f"{EXPECTED_MULTI_SOURCE_ROWS} expected"
         )
     if set(multi_source) != EXPECTED_MULTI_SOURCE_KEYS:
         raise ValueError(
-            "classification multi-source modifiée: "
+            "Multi-source classification changed: "
             f"{sorted(multi_source)}"
         )
 
@@ -598,8 +598,8 @@ def build_catalog_bundle(
     }
     if len(non_high_keys) != EXPECTED_NON_HIGH_ROWS:
         raise ValueError(
-            f"{len(non_high_keys)} alignements non-high, "
-            f"{EXPECTED_NON_HIGH_ROWS} attendus"
+            f"{len(non_high_keys)} non-high alignments, "
+            f"{EXPECTED_NON_HIGH_ROWS} expected"
         )
     unaligned_keys = {
         key
@@ -613,14 +613,13 @@ def build_catalog_bundle(
         != EXPECTED_UNALIGNED_NON_DIALOGUE_KEYS
     ):
         raise ValueError(
-            "classification des 15 alignements absents modifiée: "
-            f"{sorted(unaligned_keys)}"
+            f'The classification of the 15 missing alignments changed: {sorted(unaligned_keys)}'
         )
     adjudication_keys = non_high_keys | FALSE_HIGH_KEYS
     if len(adjudication_keys) != EXPECTED_ADJUDICATION_ROWS:
         raise ValueError(
             f"{len(adjudication_keys)} adjudications, "
-            f"{EXPECTED_ADJUDICATION_ROWS} attendues"
+            f"{EXPECTED_ADJUDICATION_ROWS} expected"
         )
 
     overlap_rows, overlap_annotations = _overlap_rows(alignments_by_key)
@@ -674,9 +673,9 @@ def build_catalog_bundle(
                             "editorial_origin": "untranslated_pointer_variant",
                             "review_status": "pending",
                             "fidelity_comment": (
-                                "La ROM anglaise 2015 mutualise des messages "
-                                "chinois sémantiquement distincts; traduire cette "
-                                "variante avant compilation."
+                                "The 2015 English ROM shares storage for semantically distinct "
+                                "Chinese messages; translate this "
+                                "variant before compilation."
                             ),
                         }
                     )
@@ -694,27 +693,26 @@ def build_catalog_bundle(
                 ]
                 if len(remaining) != 1 or len(restored) != 1:
                     raise ValueError(
-                        f"{key}: séparation MAIN/RESTORED non bijective"
+                        f"{key}: MAIN/RESTORED split is not one-to-one"
                     )
                 selected_records = [remaining[0]["record_index"]]
                 selected_offsets = [remaining[0]["chinese_offset"]]
                 selected_references = [remaining[0]["pointer_reference"]]
                 if dialogue and _clean_chinese(
-                    dialogue["texte_chinois_source"]
+                    dialogue["chinese_text"]
                 ) != remaining[0]["chinese_text"]:
                     raise ValueError(
-                        f"{key}: l'overlay dialogue ne correspond pas à "
-                        "la source MAIN restante"
+                        f'{key}: dialogue overlay does not match the remaining MAIN source'
                     )
             elif key in SAFE_SHARED_KEYS:
                 multi_mode = "safe_shared_payload"
             else:  # pragma: no cover - guarded by the classification gate
-                raise ValueError(f"{key}: multi-source non classé")
+                raise ValueError(f"{key}: unclassified multi-source target")
 
         chinese_text = _clean_chinese(alignment["chinese_text"])
         source_resolution = alignment["alignment_method"]
         if dialogue:
-            chinese_text = _clean_chinese(dialogue["texte_chinois_source"])
+            chinese_text = _clean_chinese(dialogue["chinese_text"])
             source_resolution = "dialogue_inventory_overlay"
             # The reviewed dialogue inventory is an overlay, not merely a
             # fallback for empty alignments.  A unique Unicode match must also
@@ -759,13 +757,13 @@ def build_catalog_bundle(
         overlap_group, overlap_role = overlap_annotations.get(key, ("", ""))
 
         if dialogue:
-            category = dialogue["categorie"]
+            category = dialogue["category"]
             dialogue_id = dialogue["id"]
-            speaker = dialogue["intervenant"]
-            french_text = dialogue["texte_francais"]
-            french_provenance = dialogue["historique_traduction"]
+            speaker = dialogue["speaker"]
+            french_text = dialogue["french_reference_text"]
+            french_provenance = dialogue["translation_history"]
             if dialogue["layout"] != alignment["layout"]:
-                raise ValueError(f"{key}: layout de dialogue incohérent")
+                raise ValueError(f"{key}: inconsistent dialogue layout")
         else:
             category = (
                 "Pokédex"
@@ -876,7 +874,7 @@ def build_catalog_bundle(
             references = _parts(record["pointer_references"])
             if len(references) != 1:
                 raise ValueError(
-                    f"{key}: variante récupérée sans pointeur unique"
+                    f'{key}: recovered variant does not have a unique pointer'
                 )
             pointer_reference = references[0]
             pointer_variants.append(
@@ -896,9 +894,9 @@ def build_catalog_bundle(
                     "editorial_origin": "untranslated_pointer_variant",
                     "review_status": "pending",
                     "fidelity_comment": (
-                        "La table anglaise 2015 décale ce pointeur de nom "
-                        "d'attaque; traduire cette variante chinoise revue "
-                        "avant compilation."
+                        "The 2015 English table shifts this move-name "
+                        "pointer; translate this reviewed Chinese variant "
+                        "before compilation."
                     ),
                 }
             )
@@ -908,37 +906,37 @@ def build_catalog_bundle(
         key=lambda item: int(item[1]["id"].removeprefix("D")),
     ):
         source = restored_sources[key]
-        if _clean_chinese(dialogue["texte_chinois_source"]) != source[
+        if _clean_chinese(dialogue["chinese_text"]) != source[
             "chinese_text"
         ]:
-            raise ValueError(f"{key}: texte chinois restauré incohérent")
+            raise ValueError(f'{key}: inconsistent restored Chinese text')
         catalog.append(
             {
                 "stable_key": key,
                 "record_type": "RESTORED",
                 "entry_index": "",
                 "dialogue_id": dialogue["id"],
-                "category": dialogue["categorie"],
-                "source_offset_or_pointer": dialogue["offset_ou_pointeur"],
+                "category": dialogue["category"],
+                "source_offset_or_pointer": dialogue["source_offset_or_pointer"],
                 "script_line": "",
-                "pointer_references": dialogue["offset_ou_pointeur"],
+                "pointer_references": dialogue["source_offset_or_pointer"],
                 "selected_pointer_references": dialogue[
-                    "offset_ou_pointeur"
+                    "source_offset_or_pointer"
                 ],
                 "layout": dialogue["layout"],
-                "speaker": dialogue["intervenant"],
+                "speaker": dialogue["speaker"],
                 "chinese_record_indexes": source["record_index"],
                 "chinese_offsets": source["chinese_offset"],
                 "chinese_text": source["chinese_text"],
                 "english_2015_storage": "absent_or_wrong_pointer",
                 "english_2015": dialogue[
-                    "traduction_anglaise_rom_anglaise"
+                    "english_2015"
                 ],
-                "french_v2_gloss": dialogue["texte_francais"],
+                "french_v2_gloss": dialogue["french_reference_text"],
                 "english_v2": "",
                 "editorial_origin": "untranslated_restoration_pending",
                 "alignment_method": "restored_pointer_inventory",
-                "alignment_confidence": dialogue["confiance_alignement"],
+                "alignment_confidence": dialogue["alignment_confidence"],
                 "source_resolution": "restored_source_inventory",
                 "review_status": "pending",
                 "encoded_length": "",
@@ -950,7 +948,7 @@ def build_catalog_bundle(
                     "French restoration text."
                 ),
                 "secondary_french_provenance": dialogue[
-                    "historique_traduction"
+                    "translation_history"
                 ],
                 "multi_source_mode": "restored_payload",
                 "pointer_variant_count": "",
@@ -977,26 +975,26 @@ def validate_bundle(bundle: Mapping[str, Sequence[Mapping[str, str]]]) -> None:
 
     if len(catalog) != EXPECTED_CATALOG_ROWS:
         raise ValueError(
-            f"catalogue: {len(catalog)} lignes, {EXPECTED_CATALOG_ROWS} attendues"
+            f"catalogue: {len(catalog)} rows, {EXPECTED_CATALOG_ROWS} expected"
         )
     stable_keys = [row["stable_key"] for row in catalog]
     if len(set(stable_keys)) != len(stable_keys):
-        raise ValueError("catalogue: clés stables dupliquées")
+        raise ValueError("catalogue: duplicate stable keys")
     type_counts = Counter(row["record_type"] for row in catalog)
     if type_counts != Counter(
         {"MAIN": EXPECTED_MAIN_ROWS, "RESTORED": EXPECTED_RESTORED_ROWS}
     ):
-        raise ValueError(f"catalogue: types invalides {type_counts}")
+        raise ValueError(f"catalogue: invalid types {type_counts}")
     dialogue_count = sum(bool(row["dialogue_id"]) for row in catalog)
     if dialogue_count != EXPECTED_DIALOGUES:
         raise ValueError(
-            f"catalogue: {dialogue_count} dialogues, {EXPECTED_DIALOGUES} attendus"
+            f"catalogue: {dialogue_count} dialogues, {EXPECTED_DIALOGUES} expected"
         )
     pokedex_count = sum(row["category"] == "Pokédex" for row in catalog)
     if pokedex_count != EXPECTED_POKEDEX_ROWS:
         raise ValueError(
             f"catalogue: {pokedex_count} Pokédex, "
-            f"{EXPECTED_POKEDEX_ROWS} attendus"
+            f"{EXPECTED_POKEDEX_ROWS} expected"
         )
     non_dialogue_main = sum(
         row["record_type"] == "MAIN" and not row["dialogue_id"]
@@ -1004,16 +1002,16 @@ def validate_bundle(bundle: Mapping[str, Sequence[Mapping[str, str]]]) -> None:
     )
     if non_dialogue_main != EXPECTED_NON_DIALOGUE_MAIN_ROWS:
         raise ValueError(
-            f"catalogue: {non_dialogue_main} MAIN hors dialogues, "
-            f"{EXPECTED_NON_DIALOGUE_MAIN_ROWS} attendus"
+            f"catalogue: {non_dialogue_main} non-dialogue MAIN entries, "
+            f"{EXPECTED_NON_DIALOGUE_MAIN_ROWS} expected"
         )
     if any(row["review_status"] != "pending" for row in catalog):
-        raise ValueError("le seed ne doit déclarer aucune ligne revue")
+        raise ValueError('The seed must not mark any row as reviewed')
     if any(not row["chinese_text"] for row in catalog):
         missing = [
             row["stable_key"] for row in catalog if not row["chinese_text"]
         ]
-        raise ValueError(f"catalogue: source chinoise vide {missing}")
+        raise ValueError(f"catalogue: empty Chinese source {missing}")
     manual_rows = {
         row["stable_key"]: row
         for row in catalog
@@ -1021,14 +1019,14 @@ def validate_bundle(bundle: Mapping[str, Sequence[Mapping[str, str]]]) -> None:
     }
     if set(manual_rows) != EXPECTED_MANUAL_SOURCE_KEYS:
         raise ValueError(
-            "catalogue: résolutions manuelles absentes ou inattendues: "
+            "catalogue: missing or unexpected manual resolutions: "
             f"{sorted(manual_rows)}"
         )
 
     if len(adjudications) != EXPECTED_ADJUDICATION_ROWS:
         raise ValueError(
             f"adjudications: {len(adjudications)}, "
-            f"{EXPECTED_ADJUDICATION_ROWS} attendues"
+            f"{EXPECTED_ADJUDICATION_ROWS} expected"
         )
     adjudication_keys = {row["stable_key"] for row in adjudications}
     expected_adjudications = {
@@ -1038,9 +1036,9 @@ def validate_bundle(bundle: Mapping[str, Sequence[Mapping[str, str]]]) -> None:
         and row["alignment_confidence"] != "high"
     } | FALSE_HIGH_KEYS
     if adjudication_keys != expected_adjudications:
-        raise ValueError("ensemble des adjudications incohérent")
+        raise ValueError('Inconsistent adjudication set')
     if any(row["review_status"] != "pending" for row in adjudications):
-        raise ValueError("une adjudication seed ne peut pas être marquée revue")
+        raise ValueError('A seed adjudication cannot be marked reviewed')
 
     multi_modes = {
         row["stable_key"]: row["multi_source_mode"]
@@ -1056,32 +1054,32 @@ def validate_bundle(bundle: Mapping[str, Sequence[Mapping[str, str]]]) -> None:
         **{key: "safe_shared_payload" for key in SAFE_SHARED_KEYS},
     }
     if multi_modes != expected_modes:
-        raise ValueError(f"traitement multi-source incomplet: {multi_modes}")
+        raise ValueError(f"Incomplete multi-source processing: {multi_modes}")
 
     if len(variants) != EXPECTED_POINTER_VARIANT_ROWS:
         raise ValueError(
-            f"variantes: {len(variants)}, {EXPECTED_POINTER_VARIANT_ROWS} attendues"
+            f"variants: {len(variants)}, {EXPECTED_POINTER_VARIANT_ROWS} expected"
         )
     expected_variant_keys = POINTER_VARIANT_KEYS | set(
         RECOVERED_POINTER_VARIANT_RECORDS
     )
     if {row["stable_key"] for row in variants} != expected_variant_keys:
-        raise ValueError("clés de variantes de pointeur invalides")
+        raise ValueError("Invalid pointer variant keys")
     if any(row["review_status"] != "pending" for row in variants):
-        raise ValueError("une variante seed ne peut pas être marquée revue")
+        raise ValueError('A seed variant cannot be marked reviewed')
     if any(row["english_v2"] for row in variants):
-        raise ValueError("les variantes distinctes ne doivent pas être préremplies")
+        raise ValueError('Distinct variants must not be prefilled')
 
     if len(overlaps) != EXPECTED_STORAGE_OVERLAPS:
         raise ValueError(
-            f"chevauchements: {len(overlaps)}, "
-            f"{EXPECTED_STORAGE_OVERLAPS} attendus"
+            f"overlaps: {len(overlaps)}, "
+            f"{EXPECTED_STORAGE_OVERLAPS} expected"
         )
     actual_pairs = {
         (row["owner_key"], row["alias_key"]) for row in overlaps
     }
     if actual_pairs != set(STORAGE_OVERLAP_PAIRS):
-        raise ValueError("paires de chevauchement invalides")
+        raise ValueError("Invalid overlap pairs")
 
 
 def _render_csv(
@@ -1118,8 +1116,8 @@ def write_bundle(
     if existing and not force:
         rendered = ", ".join(str(path) for path in existing)
         raise FileExistsError(
-            "refus d'écraser le travail éditorial existant: "
-            f"{rendered}; utiliser --force uniquement pour régénérer le seed"
+            "Refusing to overwrite existing editorial work: "
+            f"{rendered}; use --force only to regenerate the seed"
         )
     for name, fields in OUTPUT_FIELDS.items():
         (output_dir / name).write_text(
@@ -1145,7 +1143,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--force",
         action="store_true",
-        help="écrase explicitement le seed existant (perd les éditions EN2)",
+        help='explicitly overwrite the existing seed (discards EN2 edits)',
     )
     return parser.parse_args()
 

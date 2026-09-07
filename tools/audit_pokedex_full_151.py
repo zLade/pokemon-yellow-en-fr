@@ -240,56 +240,56 @@ CURRENT_INCOMPLETE_IDS = frozenset({
 })
 
 CONTENT_ISSUES = {
-    1: "« pour l'énergie » ne rend pas l'action de stocker l'énergie.",
-    3: "La finalité « for energy » disparaît du texte français.",
-    5: "La proposition « quand enragé » est grammaticalement incomplète.",
-    6: "La fin « fondre roche » perd articles et nombre.",
-    7: "Deux mots sont collés dans « danssa ».",
-    8: "Le dernier mot est coupé à « equilib ».",
-    11: "Le dernier mot est coupé à « fra ».",
-    12: "La fin « voler sous pluie » est grammaticalement incomplète.",
-    13: "La proposition anglaise « to eat leaves » a été omise.",
-    19: "« 40 autres attendent » ne rend pas « 40 more near ».",
-    20: "La fonction de chasse des pattes palmées a été omise.",
-    23: "Le complément « bird Pokémon » a été omis.",
-    24: "Le dernier mot est coupé à « avertisse ».",
-    26: "La phrase s'arrête après « protéger » et omet les décharges.",
-    31: "Le dernier mot est coupé à « puiss ».",
-    35: "Deux propositions sont collées sans liaison grammaticale.",
-    36: "La fin « sent gens » est grammaticalement incomplète.",
-    38: "« saints » a été remplacé à tort par « sages ».",
-    42: "La traduction omet que le drainage ne s'arrête plus après la morsure.",
-    43: "« s'enterrele » est collé et « grain » est tronqué.",
-    45: "Le dernier mot est coupé à « toxi ».",
-    48: "La fin « mange insect » est tronquée.",
-    51: "L'article manque dans « peut causer séismes ».",
-    53: "« Bien que ... il est » exige une autre construction.",
-    57: "La poursuite « till it's caught » est omise.",
-    61: "La phrase s'arrête sur l'infinitif « endormir ».",
-    70: "Le dernier mot est coupé à « boug ».",
-    79: "« sente mal » ne signifie pas « feel pain ».",
-    83: "« sprig of onions » doit employer le terme canonique « poireau ».",
-    89: "Le dernier mot est coupé à « s'evano ».",
-    95: "Le texte omet que les grottes servent aux Taupiqueur.",
-    99: "L'unité anglaise « lbs » n'a pas été convertie pour le texte français.",
-    106: "« à coups pied » est grammaticalement incomplet.",
-    109: "Deux mots sont collés dans « explosionsdue ».",
-    110: "Plusieurs mots sont collés et « bactéries » est corrompu.",
-    111: "Le dernier mot est coupé à « l'humai ».",
-    113: "Le complément « to all » a été omis.",
-    114: "Le dernier mot est coupé à « algu ».",
-    116: "L'article manque dans « par bouche ».",
-    122: "La formulation ne rend pas clairement l'illusion créée par le mime.",
-    126: "« volcan,son » et « estcouvert » sont collés.",
-    127: "Le dernier verbe est coupé à « ecrase ».",
-    129: "Le sens « unreliable » a été omis.",
-    133: "Le dernier mot est coupé à « eleme ».",
-    134: "La fin « d'1 sire » est une abréviation tronquée de « sirène ».",
-    141: "Plusieurs mots sont collés ou coupés : « saproie », « grifes », « fluid ».",
-    142: "La fin contient « avecses croc », collé et tronqué.",
-    145: "Deux mots sont collés dans « dansles ».",
-    150: "« Créé par un scientifique par... » répète fautivement la préposition.",
-    151: "La phrase complète doit retrouver sa ponctuation finale.",
+    1: "« pour l'énergie » does not convey the action of storing energy.",
+    3: "The purpose « for energy » is missing from the French text.",
+    5: "The clause « quand enragé » is grammatically incomplete.",
+    6: "The ending « fondre roche » loses articles and grammatical number.",
+    7: "Two words are joined in « danssa ».",
+    8: "The last word is truncated to « equilib ».",
+    11: "The last word is truncated to « fra ».",
+    12: "The ending « voler sous pluie » is grammatically incomplete.",
+    13: "The English clause « to eat leaves » has been omitted.",
+    19: "« 40 autres attendent » does not convey « 40 more near ».",
+    20: "The hunting purpose of the webbed feet has been omitted.",
+    23: "The complement « bird Pokémon » has been omitted.",
+    24: "The last word is truncated to « avertisse ».",
+    26: "The sentence stops after « protéger » and omits the discharges.",
+    31: "The last word is truncated to « puiss ».",
+    35: "Two clauses are joined without a grammatical link.",
+    36: "The ending « sent gens » is grammatically incomplete.",
+    38: "« saints » was incorrectly replaced by « sages ».",
+    42: "The translation omits that draining does not stop after the bite.",
+    43: "« s'enterrele » has joined words and « grain » is truncated.",
+    45: "The last word is truncated to « toxi ».",
+    48: "The ending « mange insect » is truncated.",
+    51: "The article is missing in « peut causer séismes ».",
+    53: "« Bien que ... il est » requires a different construction.",
+    57: "The pursuit « till it's caught » is omitted.",
+    61: "The sentence stops at the infinitive « endormir ».",
+    70: "The last word is truncated to « boug ».",
+    79: "« sente mal » does not mean « feel pain ».",
+    83: "« sprig of onions » must use the canonical term « poireau ».",
+    89: "The last word is truncated to « s'evano ».",
+    95: "The text omits that the caves are used by Taupiqueur.",
+    99: "The English unit « lbs » was not converted for the French text.",
+    106: "« à coups pied » is grammatically incomplete.",
+    109: "Two words are joined in « explosionsdue ».",
+    110: "Several words are joined and « bactéries » is corrupted.",
+    111: "The last word is truncated to « l'humai ».",
+    113: "The complement « to all » has been omitted.",
+    114: "The last word is truncated to « algu ».",
+    116: "The article is missing in « par bouche ».",
+    122: "The wording does not clearly convey the illusion created by the mime.",
+    126: "« volcan,son » and « estcouvert » contain joined words.",
+    127: "The last verb is truncated to « ecrase ».",
+    129: "The meaning « unreliable » has been omitted.",
+    133: "The last word is truncated to « eleme ».",
+    134: "The ending « d'1 sire » is a truncated abbreviation of « sirène ».",
+    141: "Several words are joined or truncated: « saproie », « grifes », « fluid ».",
+    142: "The ending contains « avecses croc », with joined and truncated words.",
+    145: "Two words are joined in « dansles ».",
+    150: "« Créé par un scientifique par... » incorrectly repeats the preposition.",
+    151: "The complete sentence must regain its final punctuation.",
 }
 
 # Complete current texts whose wording is faithful but cannot be reflowed
@@ -474,14 +474,14 @@ def build_report(rom_path: Path, script_path: Path, csv_path: Path) -> dict[str,
         if current_matches_proposal:
             status = "complete"
             proof = (
-                "Le texte actuel correspond exactement à la proposition "
-                "revue et validée en 13x4."
+                "The current text exactly matches the proposal "
+                "reviewed and validated in 13x4."
             )
         else:
             status = "incomplete"
             proof = CONTENT_ISSUES.get(
                 species_id,
-                "Le texte actuel diverge de la proposition fidèle validée en 13x4.",
+                "The current text differs from the faithful proposal validated in 13x4.",
             )
         records.append({
             "species_id": species_id,
@@ -586,15 +586,15 @@ def build_report(rom_path: Path, script_path: Path, csv_path: Path) -> dict[str,
             ],
             "name_table_file_offset": f"0x{NAME_POINTER_TABLE_OFFSET:06X}",
             "mapping_proof": (
-                "Le même identifiant 1..151 indexe la table nationale des "
-                "noms à 0x030977 et la table des descriptions à 0x03201E."
+                "The same identifier 1..151 indexes the national "
+                "name table at 0x030977 and the description table at 0x03201E."
             ),
         },
         "runtime_evidence": {
             "available": all(path.is_file() for path in runtime_files.values()),
             "mode": (
-                "Dendy, strict hardware, full debug; navigation contrôleur; "
-                "drapeaux Pokédex assistés; aucun pointeur ou texte modifié"
+                "Dendy, strict hardware, full debug; controller navigation; "
+                "assisted Pokédex flags; no pointer or text modifications"
             ),
             "sampled_species_ids": [1, 2, 4],
             "files": {
@@ -629,10 +629,10 @@ def build_report(rom_path: Path, script_path: Path, csv_path: Path) -> dict[str,
             "status_counts": status_counts,
             "all_proposals_valid_13x4": True,
             "important_count_correction": (
-                "Au point de départ, 45 des 151 descriptions atteignables "
-                "étaient en 13x4; 4 autres des 49 refaites appartenaient aux "
-                "8 pointeurs étendus. Les compteurs courants sont calculés "
-                "dynamiquement après migration."
+                "At baseline, 45 of the 151 reachable descriptions "
+                "were in 13x4; 4 more of the 49 reworked descriptions belonged to the "
+                "8 extended pointers. Current counts are computed "
+                "dynamically after migration."
             ),
         },
         "records": records,

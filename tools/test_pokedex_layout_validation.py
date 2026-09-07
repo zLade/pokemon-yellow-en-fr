@@ -202,6 +202,7 @@ class PokedexLayoutValidationTests(unittest.TestCase):
         )
         self.assertEqual(len(errors), 1)
         self.assertIn("Pokédex #1", errors[0])
+        self.assertIn("Pokédex 13×4 layout not applied", errors[0])
 
     def test_final_script_requires_all_151_accessible_layouts(self) -> None:
         report, errors = validate()

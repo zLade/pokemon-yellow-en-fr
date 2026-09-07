@@ -128,13 +128,13 @@ class FrenchFontTests(unittest.TestCase):
 
     def test_unsupported_unicode_is_rejected_instead_of_replaced(self) -> None:
         unsupported = {
-            "apostrophe courbe": "l’été",
-            "guillemet ouvrant": "«texte",
-            "guillemet fermant": "texte»",
-            "guillemet anglais ouvrant": "“texte",
-            "guillemet anglais fermant": "texte”",
-            "tiret cadratin": "avant—après",
-            "espace insécable": "avant\u00a0après",
+            "curly apostrophe": "l’été",
+            "opening guillemet": "«texte",
+            "closing guillemet": "texte»",
+            "opening English quotation mark": "“texte",
+            "closing English quotation mark": "texte”",
+            "em dash": "avant—après",
+            "nonbreaking space": "avant\u00a0après",
             "emoji": "Pikachu ⚡",
         }
         for label, source in unsupported.items():

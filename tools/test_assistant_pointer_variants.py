@@ -258,7 +258,7 @@ class PointerVariantUnitTests(unittest.TestCase):
         texts[0x0302FA] = (" was badly poisoned!", "flinched!")
         with tempfile.TemporaryDirectory() as temporary:
             variants = self._load(temporary, group_texts=texts)
-        with self.assertRaisesRegex(ValueError, "espace de jointure"):
+        with self.assertRaisesRegex(ValueError, "join space"):
             assistant.prepare_pointer_variant_payloads(
                 self.original,
                 self._row_info(),
@@ -278,7 +278,7 @@ class PointerVariantUnitTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             variants = self._load(temporary, group_texts=texts)
         owners = self._row_pointer_refs()
-        with self.assertRaisesRegex(ValueError, "première variante"):
+        with self.assertRaisesRegex(ValueError, "first variant"):
             assistant.prepare_pointer_variant_payloads(
                 self.original,
                 self._row_info(),
@@ -297,7 +297,7 @@ class PointerVariantUnitTests(unittest.TestCase):
         modified = bytearray(self.original)
         modified[0x03006D:0x03006F] = (0x9000).to_bytes(2, "little")
         owners = self._row_pointer_refs()
-        with self.assertRaisesRegex(ValueError, "cible anglaise source"):
+        with self.assertRaisesRegex(ValueError, "English source target"):
             assistant.prepare_pointer_variant_payloads(
                 bytes(modified),
                 self._row_info(),
@@ -315,7 +315,7 @@ class PointerVariantUnitTests(unittest.TestCase):
         texts[0x0302FA] = (" was badly poisoned!", " Bad@text")
         with tempfile.TemporaryDirectory() as temporary:
             variants = self._load(temporary, group_texts=texts)
-        with self.assertRaisesRegex(ValueError, "ponctuation réservée"):
+        with self.assertRaisesRegex(ValueError, "reserved punctuation"):
             assistant.prepare_pointer_variant_payloads(
                 self.original,
                 self._row_info(),
@@ -435,7 +435,7 @@ class PointerVariantBuildTests(unittest.TestCase):
             )
             self.assertEqual(process.returncode, 0, process.stdout)
             self.assertIn(
-                "Variantes de pointeurs anglaises : 4",
+                "English pointer variants : 4",
                 process.stdout,
             )
             candidate = output_rom.read_bytes()

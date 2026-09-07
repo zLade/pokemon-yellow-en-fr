@@ -26,8 +26,8 @@
   "chinese_rom_sha256": "450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed",
   "english_rom_sha256": "d5c308b5862ccbe4647d4255a11bb0f1cb6817c4b107feac112509d658a9943b",
   "french_rom_sha256": "1fefecbfa7084d19abfa5a89c389e75f4c0a307dee3b0bf41fde49a7ebf62d5b",
-  "script_sha256": "e870f48105bd570d8323bf0c9358b95dbe5e59e6557214196a547cfedcb56180",
-  "review_csv_sha256": "68fe03318fdd447d5d9be6e1010a8369a796ca27ab52c466edf4cb8762493129",
+  "script_sha256": "7beefdf5342cb336d96ec125b02f9bc328e304cd840f19b0129986b403e96b4d",
+  "review_csv_sha256": "437e574b42e74fc3f6e6bdf5849678d159c90de80addd7fe85c34726ce1a7146",
   "hzk16_sha256": "0a757c641b211419868af188f4a90b2010fcd7620373073a8bc7c1dd848eefdf",
   "chinese_records": 1974,
   "chinese_glyph_occurrences": 20832,
@@ -56,17 +56,17 @@
     "claim": "French-dependent derivatives refreshed from the pinned Unicode extraction; no HZK16 re-extraction."
   },
   "derived_artifacts_sha256": {
-    "chinese_english_alignment.csv": "f938771020b97c7c4dbe187c3a01f1ed1d0686def0ef5ba6aac50cf672d2465d",
-    "chinese_dialogues.csv": "e40f0061e862478feb8bd433d8422c38ce9a41c155d08c39ace327a56632918d",
-    "pointer_alignment.csv": "ac29cfea50f73a6086423d6193de5d9d6916362e1bdd53d9b14c667d974b282c",
+    "chinese_english_alignment.csv": "32cab5c578f1e87adf9ca682710d079049e90fcb8aed589fda8e33fbe467e5fe",
+    "chinese_dialogues.csv": "389ce81fcfc6737579aa1ea71f4b9b3e102d88ec6d5f726b70eb6bafc0471ae1",
+    "pointer_alignment.csv": "83a396409776a5f49d31632dcfb3be0d3b0f27a33f7ea41e5d5cbe5c2bd8aa6b",
     "chinese_french_dialogue_inventory.csv": "64b48aec774a9e91e01e9e93c4debd37fcc87a142028167d5c30ef7d31a1d9f5",
     "dialogues_untranslated_in_english.csv": "6c609a6729c5eaefa309939b66be6becbd61277690316cc2ee94c13b1675c217",
     "field_dialogues_missing_french_owner.csv": "46b6f46cc3b1c981149e1bacc64076506c86fb736fd77b7f354689804a136a16",
-    "reviewed_large_dialogue_divergences.csv": "1fff222606c0a1ea18338ff33644e3423e964fd73a923f6a2b042cf5ec95374b",
+    "reviewed_large_dialogue_divergences.csv": "6a061b1a5b61ed7b319cebb39d7fa74e10a4db9933a9d8d777e1ae78b176e26e",
     "dialogues_removed_from_english.csv": "e0e7fc07c96f664ac78f3fa5f58c24a5c55e873f864a963361e3d7d406d277fa",
     "dialogues_absent_from_english_and_french.csv": "5c82a926419e5ea063a112bbe84cfd5f4334c4108944776f87b9cfde20af3068",
     "dialogues_absent_from_french.csv": "5c82a926419e5ea063a112bbe84cfd5f4334c4108944776f87b9cfde20af3068",
-    "restored_chinese_dialogues.csv": "d279d177507697a32165d4efd82698ced928031a31a5f7ea105f57eb4811b91d",
-    "creator_cameo_dialogues.csv": "8ec91c68a9752fb6a690dc33274540b9eae4b59b977ac6f8d2035d5f71f94897"
+    "restored_chinese_dialogues.csv": "6b6439d1703f71e4e5d6017316fd2ee13c5ea33f27a624f247b499b6feb6994c",
+    "creator_cameo_dialogues.csv": "e879cc50ddc5ffe15b55c5bba6fc83c6455ed95a240d103840c9a71635fb22a7"
   }
 }

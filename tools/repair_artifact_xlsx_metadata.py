@@ -30,13 +30,13 @@ def _tag(name: str) -> str:
 def repaired_worksheet_xml(payload: bytes) -> bytes:
     root = ET.fromstring(payload)
     if root.tag != _tag("worksheet"):
-        raise ValueError("la partie ciblée n'est pas une feuille OpenXML")
+        raise ValueError("the targeted part is not an OpenXML worksheet")
     dimensions = root.findall(_tag("dimension"))
     sheet_views = root.findall(_tag("sheetViews"))
     if dimensions or len(sheet_views) > 1:
         raise ValueError(
-            "artifact_tool a déjà sérialisé dimension/sheetViews; "
-            "le contournement doit être réévalué"
+            "artifact_tool has already serialized dimension/sheetViews; "
+            "the workaround must be reassessed"
         )
     dimension = ET.Element(_tag("dimension"), {"ref": GRID_RANGE})
     views = sheet_views[0] if sheet_views else ET.Element(_tag("sheetViews"))
@@ -48,8 +48,8 @@ def repaired_worksheet_xml(payload: bytes) -> bytes:
             or list(existing_views[0])
         ):
             raise ValueError(
-                "artifact_tool a déjà sérialisé des vues de feuille; "
-                "le contournement doit être réévalué"
+                "artifact_tool has already serialized worksheet views; "
+                "the workaround must be reassessed"
             )
         view = existing_views[0]
         view.set("workbookViewId", view.get("workbookViewId", "0"))
@@ -111,8 +111,8 @@ def repair_xlsx(source: Path, destination: Path) -> None:
             names = reader.namelist()
             if names.count(WORKSHEET_PART) != 1:
                 raise ValueError(
-                    f"{WORKSHEET_PART}: une partie attendue, "
-                    f"{names.count(WORKSHEET_PART)} trouvée(s)"
+                    f"{WORKSHEET_PART}: one part expected, "
+                    f"{names.count(WORKSHEET_PART)} found"
                 )
             with zipfile.ZipFile(temporary, "w") as writer:
                 for info in reader.infolist():
@@ -128,7 +128,7 @@ def repair_xlsx(source: Path, destination: Path) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Restaure dimension et volets figés de l'XLSX artifact_tool."
+        description="Restore dimensions and frozen panes in the artifact_tool XLSX."
     )
     parser.add_argument("--input", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)

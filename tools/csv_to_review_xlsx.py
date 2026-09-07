@@ -91,10 +91,10 @@ def build_xlsx(csv_path: Path, xlsx_path: Path) -> tuple[int, int]:
     with csv_path.open(newline="", encoding="utf-8-sig") as handle:
         rows = [list(row) for row in csv.reader(handle)]
     if not rows or not rows[0]:
-        raise ValueError("CSV vide")
+        raise ValueError("Empty CSV")
     width = len(rows[0])
     if any(len(row) != width for row in rows):
-        raise ValueError("CSV non rectangulaire")
+        raise ValueError("Non-rectangular CSV")
 
     now = datetime.now(UTC).replace(microsecond=0).isoformat().replace(
         "+00:00",
@@ -194,7 +194,7 @@ def build_xlsx(csv_path: Path, xlsx_path: Path) -> tuple[int, int]:
             'xmlns:dc="http://purl.org/dc/elements/1.1/" '
             'xmlns:dcterms="http://purl.org/dc/terms/" '
             'xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">'
-            '<dc:title>Pokémon Jaune NES — Relecture des dialogues</dc:title>'
+            '<dc:title>Pokémon Yellow NES — Dialogue review</dc:title>'
             '<dc:creator>Codex</dc:creator>'
             f'<dcterms:created xsi:type="dcterms:W3CDTF">{now}</dcterms:created>'
             "</cp:coreProperties>"
@@ -230,8 +230,8 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     rows, columns = build_xlsx(args.csv, args.xlsx)
-    print(f"Classeur : {args.xlsx}")
-    print(f"Dimensions : {rows} lignes x {columns} colonnes")
+    print(f"Workbook: {args.xlsx}")
+    print(f"Dimensions : {rows} rows x {columns} columns")
     return 0
 
 

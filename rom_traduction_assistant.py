@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Assistant de traduction pour Lei Dian Huang Bi Ka Qiu Chuan Shuo / Pokemon Yellow NES.
+Translation assistant for Lei Dian Huang Bi Ka Qiu Chuan Shuo / Pokemon Yellow NES.
 
-Objectif:
-  - verifier que le patch IPS anglais correspond bien a la ROM chinoise;
-  - extraire les traductions de script.py dans un CSV plus facile a piloter;
-  - auditer les textes qui semblent encore en anglais;
-  - reconstruire une ROM et un IPS depuis le CSV.
+Checks the English IPS against the Chinese ROM, exports script.py to CSV,
+audits untranslated text, and rebuilds a ROM and IPS from the CSV.
+Offsets include the iNES header, as in script.py.
 
-Offsets:
-  Les offsets sont des offsets fichier, header iNES inclus, comme dans script.py.
+
+
+
+
 """
 
 from __future__ import annotations
@@ -375,7 +375,7 @@ _TOPOLOGY_POINTER_REDIRECTS = {
 }
 if VERIFIED_POINTER_REDIRECTS != _TOPOLOGY_POINTER_REDIRECTS:
     raise AssertionError(
-        "les redirections vérifiées divergent de la topologie des restaurations"
+        "verified redirects differ from the restoration topology"
     )
 
 # Exact pointer slots selected by the overworld/NPC text dispatcher at
@@ -534,18 +534,18 @@ def apply_french_font_and_export(
     )
     manifest = "\n".join(
         [
-            "Pokemon Yellow NES - export police française",
-            f"ROM sortie prévue: {output_rom.resolve()}",
-            f"ROM avec police SHA-256: {sha256(after)}",
-            f"Tuiles françaises: {len(tiles)}",
-            f"Octets de police modifiés: {changed}",
-            f"CHR avant: {before_path.resolve()}",
-            f"CHR français: {after_path.resolve()}",
-            f"Caractères français natifs: {native_characters}",
-            "Note: é réutilise le glyphe @ déjà présent dans la base anglaise.",
-            "Compromis: œ/Œ restent oe/OE pour préserver toutes les lettres "
-            "ASCII dans les noms saisis.",
-            "Résultat: PASS",
+            "Pokemon Yellow NES - French font export",
+            f"Planned output ROM: {output_rom.resolve()}",
+            f"ROM with font SHA-256: {sha256(after)}",
+            f"French tiles: {len(tiles)}",
+            f"Changed font bytes: {changed}",
+            f"Before CHR: {before_path.resolve()}",
+            f"French CHR: {after_path.resolve()}",
+            f"Native French characters: {native_characters}",
+            "Note: é reuses the @ glyph already present in the English base.",
+            "Trade-off: œ/Œ remain oe/OE to preserve all ASCII letters "
+            "in entered names.",
+            "Result: PASS",
             "",
         ]
     )
@@ -595,7 +595,7 @@ def resolve_move_label_catalog(
         if not candidate.is_absolute():
             candidate = ROOT / candidate
         if not candidate.is_file():
-            raise ValueError(f"plan d'attaques deux lignes absent: {candidate}")
+            raise ValueError(f'Missing two-line move plan: {candidate}')
         return candidate
     return default_move_label_catalog(text_profile)
 
@@ -660,12 +660,11 @@ def move_graphic_reservation_payload(
     of another reservation or of any printable translation payload.
     """
     if not 0 <= move_index < MOVE_COUNT:
-        raise ValueError(f"index d'attaque hors plage: {move_index}")
+        raise ValueError(f"move index out of range: {move_index}")
     content_length = required_payload_size - 1
     if content_length not in {2, 4, 6, 8}:
         raise ValueError(
-            "taille de réservation graphique invalide: "
-            f"{required_payload_size}"
+            f'Invalid graphics reservation size: {required_payload_size}'
         )
     safe_identity_bytes = tuple(
         value
@@ -687,7 +686,7 @@ def read_bytes(path: str | Path) -> bytes:
 def parse_ips(path: str | Path) -> tuple[list[IpsRecord], int | None]:
     data = read_bytes(path)
     if not data.startswith(b"PATCH"):
-        raise ValueError(f"{path} n'est pas un IPS valide")
+        raise ValueError(f"{path} is not a valid IPS")
 
     records: list[IpsRecord] = []
     i = 5
@@ -702,12 +701,12 @@ def parse_ips(path: str | Path) -> tuple[list[IpsRecord], int | None]:
                 truncate = int.from_bytes(data[i:i + 3], "big")
             elif remaining != 0:
                 raise ValueError(
-                    f"{path} contient {remaining} octet(s) inattendu(s) apres EOF"
+                    f"{path} contains {remaining} unexpected byte(s) after EOF"
                 )
             break
 
         if i + 5 > len(data):
-            raise ValueError(f"IPS tronque vers 0x{i:X}")
+            raise ValueError(f"IPS truncated near 0x{i:X}")
 
         offset = int.from_bytes(data[i:i + 3], "big")
         i += 3
@@ -716,7 +715,7 @@ def parse_ips(path: str | Path) -> tuple[list[IpsRecord], int | None]:
 
         if size == 0:
             if i + 3 > len(data):
-                raise ValueError(f"IPS RLE tronque vers 0x{i:X}")
+                raise ValueError(f"IPS RLE truncated near 0x{i:X}")
             rle_size = int.from_bytes(data[i:i + 2], "big")
             i += 2
             value = data[i]
@@ -724,12 +723,12 @@ def parse_ips(path: str | Path) -> tuple[list[IpsRecord], int | None]:
             records.append(IpsRecord(offset, bytes([value]) * rle_size, True))
         else:
             if i + size > len(data):
-                raise ValueError(f"IPS record tronque vers 0x{i:X}")
+                raise ValueError(f"IPS record truncated near 0x{i:X}")
             records.append(IpsRecord(offset, data[i:i + size], False))
             i += size
 
     if not found_eof:
-        raise ValueError(f"{path} n'a pas de marqueur EOF IPS")
+        raise ValueError(f"{path} has no IPS EOF marker")
 
     return records, truncate
 
@@ -755,8 +754,7 @@ def make_ips(original: bytes, modified: bytes) -> bytes:
     eof_record_offset = int.from_bytes(b"EOF", "big")
     if len(modified) != len(original) and len(modified) > max_offset:
         raise ValueError(
-            "la taille finale IPS dépasse la limite 24 bits: "
-            f"{len(modified)} > {max_offset}"
+            f'Final IPS size exceeds the 24-bit limit: {len(modified)} > {max_offset}'
         )
 
     ips = bytearray(b"PATCH")
@@ -771,8 +769,7 @@ def make_ips(original: bytes, modified: bytes) -> bytes:
                 block = modified[offset : offset + 1] + block
             if offset > max_offset:
                 raise ValueError(
-                    "offset IPS supérieur à 24 bits: "
-                    f"0x{offset:X}"
+                    f'IPS offset exceeds 24 bits: 0x{offset:X}'
                 )
             chunk = block[:max_record_size]
             ips.extend(offset.to_bytes(3, "big"))
@@ -1102,13 +1099,12 @@ def parse_patch_entries(
                 layout = ast.literal_eval(keyword.value)
             except Exception as exc:
                 raise ValueError(
-                    f"{path}:{getattr(node, 'lineno', 0)}: "
-                    "layout doit être une chaîne littérale"
+                    f"{path}:{getattr(node, 'lineno', 0)}: layout must be a string literal"
                 ) from exc
         if not isinstance(layout, str) or layout not in SUPPORTED_LAYOUTS:
             raise ValueError(
                 f"{path}:{getattr(node, 'lineno', 0)}: "
-                f"layout inconnu {layout!r}"
+                f"unknown layout {layout!r}"
             )
         if isinstance(offset, int) and isinstance(text, str):
             entries.append(
@@ -1178,11 +1174,11 @@ def parse_range(value: str) -> tuple[int, int]:
     elif "-" in value:
         left, right = value.split("-", 1)
     else:
-        raise ValueError(f"Plage invalide: {value}")
+        raise ValueError(f'Invalid range: {value}')
     start = int(left, 16) if left.lower().startswith("0x") else int(left)
     end = int(right, 16) if right.lower().startswith("0x") else int(right)
     if start >= end:
-        raise ValueError(f"Plage invalide: {value}")
+        raise ValueError(f'Invalid range: {value}')
     return start, end
 
 
@@ -1303,9 +1299,7 @@ def verified_structured_glyph_records(
         or fingerprint != STRUCTURED_GLYPH_RECORDS_SHA256
     ):
         raise ValueError(
-            "inventaire des glyphes structurels non canonique: "
-            f"records={len(records)}, glyphes={glyph_count}, "
-            f"payload={payload_size}, sha256={fingerprint}"
+            f'Noncanonical structural glyph inventory: records={len(records)}, glyphs={glyph_count}, payload={payload_size}, sha256={fingerprint}'
         )
     return records
 
@@ -1323,15 +1317,15 @@ def verified_field_graphical_text_records(
             and pair_for_offset(start) == pair_for_offset(end - 1) == pair
         ):
             raise ValueError(
-                "record graphique terrain hors ROM/paire: "
+                "field graphical record outside ROM/pair: "
                 f"0x{start:06X}-0x{end:06X}"
             )
         payload = data[start:end]
         actual_hash = sha256(payload)
         if actual_hash != expected_hash:
             raise ValueError(
-                "record graphique terrain non canonique "
-                f"0x{start:06X}: {actual_hash} au lieu de {expected_hash}"
+                "noncanonical field graphical record "
+                f"0x{start:06X}: {actual_hash} instead of {expected_hash}"
             )
         cursor = 0
         actual_glyph_count = 0
@@ -1344,18 +1338,16 @@ def verified_field_graphical_text_records(
                 cursor += 1
             else:
                 raise ValueError(
-                    "octet invalide dans le record graphique terrain "
-                    f"0x{start + cursor:06X}: 0x{value:02X}"
+                    f'Invalid byte in field graphical record 0x{start + cursor:06X}: 0x{value:02X}'
                 )
         if actual_glyph_count != glyph_count:
             raise ValueError(
-                f"record graphique terrain 0x{start:06X}: "
-                f"{actual_glyph_count} glyphes, {glyph_count} attendus"
+                f"field graphical record 0x{start:06X}: "
+                f"{actual_glyph_count} glyphs, {glyph_count} expected"
             )
         if end >= len(data) or data[end] != 0x0D:
             raise ValueError(
-                "terminateur absent après le record graphique terrain "
-                f"0x{start:06X}"
+                f'Missing terminator after field graphical record 0x{start:06X}'
             )
         records.append((start, end, pair, glyph_count))
     return records
@@ -1372,8 +1364,8 @@ def verified_all_graphical_text_records(
     for left, right in zip(ordered, ordered[1:]):
         if left[1] > right[0]:
             raise ValueError(
-                "records graphiques vérifiés chevauchants: "
-                f"0x{left[0]:06X}-0x{left[1]:06X} et "
+                "overlapping verified graphical records: "
+                f"0x{left[0]:06X}-0x{left[1]:06X} and "
                 f"0x{right[0]:06X}-0x{right[1]:06X}"
             )
     return all_records
@@ -1590,8 +1582,8 @@ def graphical_pointer_target_conflicts(
         )
         if len(live_targets) > 1:
             conflicts.append(
-                f"RECORD GRAPHIQUE 0x{source_offset:06X}: "
-                "plusieurs cibles actives "
+                f"GRAPHICAL RECORD 0x{source_offset:06X}: "
+                "multiple active targets "
                 + ", ".join(
                     f"0x{target:06X}" for target in live_targets
                 )
@@ -1659,7 +1651,7 @@ def prepare_pointer_variant_payloads(
     profile = resolve_text_profile(text_profile)
     if profile is FRENCH_TEXT_PROFILE:
         raise ValueError(
-            "les variantes de pointeurs sont réservées au profil en-US"
+            'Pointer variants require the en-US profile'
         )
 
     rows = tuple(row_info)
@@ -1676,8 +1668,7 @@ def prepare_pointer_variant_payloads(
     }
     if actual_groups != EXPECTED_POINTER_VARIANT_REFERENCES:
         raise ValueError(
-            "topologie variantes en mémoire différente des sept slots "
-            "canoniques"
+            'In-memory variant topology differs from the seven canonical slots'
         )
 
     all_variant_refs = {
@@ -1693,7 +1684,7 @@ def prepare_pointer_variant_payloads(
         details: list[str] = []
         if restoration_collisions:
             details.append(
-                "restaurations "
+                "restorations "
                 + ", ".join(
                     f"0x{offset:06X}"
                     for offset in restoration_collisions
@@ -1701,13 +1692,13 @@ def prepare_pointer_variant_payloads(
             )
         if offset_collisions:
             details.append(
-                "offsets MAIN "
+                "MAIN offsets "
                 + ", ".join(
                     f"0x{offset:06X}" for offset in offset_collisions
                 )
             )
         raise ValueError(
-            "clés synthétiques variantes en collision avec "
+            "synthetic variant key collision with "
             + "; ".join(details)
         )
 
@@ -1719,7 +1710,7 @@ def prepare_pointer_variant_payloads(
                 if ref in all_variant_refs:
                     if ref in pointer_owners:
                         raise ValueError(
-                            f"slot variante 0x{ref:06X} possédé deux fois"
+                            f"variant slot 0x{ref:06X} has two owners"
                         )
                     pointer_owners[ref] = (
                         owner_offset,
@@ -1731,12 +1722,12 @@ def prepare_pointer_variant_payloads(
         info = info_by_offset.get(main_offset)
         if info is None:
             raise ValueError(
-                f"ligne MAIN variante absente 0x{main_offset:06X}"
+                f"missing variant MAIN row 0x{main_offset:06X}"
             )
         row, max_len, main_payload = info
         if max_len < 1:
             raise ValueError(
-                f"ligne MAIN variante sans source 0x{main_offset:06X}"
+                f'Variant MAIN row has no source at 0x{main_offset:06X}'
             )
         source_prefix = reviewed_text_prefix_len(
             data[main_offset:main_offset + max_len]
@@ -1748,20 +1739,19 @@ def prepare_pointer_variant_payloads(
             ref = variant.pointer_reference
             if variant.main_offset != main_offset:
                 raise ValueError(
-                    f"{variant.variant_key}: propriétaire MAIN incohérent"
+                    f"{variant.variant_key}: inconsistent MAIN owner"
                 )
             if variant.shared_source_target != main_offset:
                 raise ValueError(
-                    f"{variant.variant_key}: cible source incohérente"
+                    f"{variant.variant_key}: inconsistent source target"
                 )
             if ref < INES_HEADER_SIZE or ref + 2 > len(data):
                 raise ValueError(
-                    f"{variant.variant_key}: slot hors ROM"
+                    f"{variant.variant_key}: slot outside ROM"
                 )
             if pair_for_offset(ref) != pair_for_offset(main_offset):
                 raise ValueError(
-                    f"{variant.variant_key}: slot et MAIN dans deux "
-                    "paires PRG"
+                    f'{variant.variant_key}: slot and MAIN belong to different PRG pairs'
                 )
             actual_address = int.from_bytes(data[ref:ref + 2], "little")
             actual_target = offset_for_cpu_addr(
@@ -1782,22 +1772,21 @@ def prepare_pointer_variant_payloads(
                 and source_alignment[1] != expected_live_target
             ):
                 raise ValueError(
-                    f"{variant.variant_key}: propriétaire revu "
-                    f"0x{source_alignment[1]:06X} au lieu de "
+                    f"{variant.variant_key}: reviewed owner "
+                    f"0x{source_alignment[1]:06X} instead of "
                     f"0x{expected_live_target:06X}"
                 )
             if actual_target != expected_source_target:
                 raise ValueError(
-                    f"{variant.variant_key}: cible anglaise source "
-                    f"0x{(actual_target or 0):06X} au lieu de "
+                    f"{variant.variant_key}: English source target "
+                    f"0x{(actual_target or 0):06X} instead of "
                     f"0x{expected_source_target:06X}"
                 )
 
             owner = pointer_owners.get(ref)
             if owner is None:
                 raise ValueError(
-                    f"{variant.variant_key}: slot absent de "
-                    "row_pointer_refs"
+                    f'{variant.variant_key}: slot missing from row_pointer_refs'
                 )
             owner_offset, owned_target, _ = owner
             if (
@@ -1805,8 +1794,8 @@ def prepare_pointer_variant_payloads(
                 or owned_target != expected_live_target
             ):
                 raise ValueError(
-                    f"{variant.variant_key}: propriétaire détecté "
-                    f"0x{owner_offset:06X}/0x{owned_target:06X} au lieu de "
+                    f"{variant.variant_key}: detected owner "
+                    f"0x{owner_offset:06X}/0x{owned_target:06X} instead of "
                     f"0x{main_offset:06X}/0x{expected_live_target:06X}"
                 )
 
@@ -1816,7 +1805,7 @@ def prepare_pointer_variant_payloads(
             )
             if conflicts:
                 raise ValueError(
-                    f"{variant.variant_key}: ponctuation réservée "
+                    f"{variant.variant_key}: reserved punctuation "
                     + " ".join(
                         repr(item) for item in sorted(conflicts)
                     )
@@ -1829,23 +1818,22 @@ def prepare_pointer_variant_payloads(
                 )
             except (TypeError, ValueError, UnicodeError) as exc:
                 raise ValueError(
-                    f"{variant.variant_key}: english_v2 invalide: {exc}"
+                    f'{variant.variant_key}: invalid english_v2: {exc}'
                 ) from exc
             if (
                 ref in SEMANTIC_LEADING_SEPARATOR_POINTER_REFS
                 and not payload.startswith(b" ")
             ):
                 raise ValueError(
-                    f"{variant.variant_key}: espace de jointure initial "
-                    "obligatoire"
+                    f"{variant.variant_key}: leading join space "
+                    "required"
                 )
             group_payloads.append(payload)
             encoded_by_ref[ref] = payload
 
         if group_payloads[0] != main_payload:
             raise ValueError(
-                f"{variants[0].variant_key}: la première variante doit "
-                f"être identique au payload MAIN 0x{main_offset:06X}"
+                f'{variants[0].variant_key}: first variant must match MAIN payload 0x{main_offset:06X}'
             )
 
     secondary_refs = {
@@ -1855,8 +1843,8 @@ def prepare_pointer_variant_payloads(
     }
     if len(secondary_refs) != EXPECTED_SECONDARY_POINTER_VARIANT_COUNT:
         raise ValueError(
-            f"{len(secondary_refs)} slots variantes secondaires, "
-            f"{EXPECTED_SECONDARY_POINTER_VARIANT_COUNT} attendus"
+            f"{len(secondary_refs)} secondary variant slots, "
+            f"{EXPECTED_SECONDARY_POINTER_VARIANT_COUNT} expected"
         )
 
     # Mutate only after every CSV, source-target and ownership check passes.
@@ -2021,14 +2009,13 @@ def verified_pointer_override_entries(data: bytes) -> dict[int, list[int]]:
         for ref in refs:
             if pair_for_offset(ref) != target_pair:
                 raise ValueError(
-                    f"pointeur verifie 0x{ref:06X} et cible "
-                    f"0x{target:06X} dans deux banques differentes"
+                    f'Verified pointer 0x{ref:06X} and target 0x{target:06X} belong to different banks'
                 )
             actual_address = int.from_bytes(data[ref:ref + 2], "little")
             if actual_address != target_address:
                 raise ValueError(
-                    f"pointeur verifie 0x{ref:06X}: "
-                    f"0x{actual_address:04X} au lieu de 0x{target_address:04X}"
+                    f"verified pointer 0x{ref:06X}: "
+                    f"0x{actual_address:04X} instead of 0x{target_address:04X}"
                 )
             entries.setdefault(target, []).append(ref)
     return entries
@@ -2044,35 +2031,32 @@ def verified_field_dialogue_pointer_entries(
     for first, last in VERIFIED_FIELD_DIALOGUE_POINTER_RANGES:
         if first > last or (last - first) % 2:
             raise ValueError(
-                "plage de pointeurs terrain invalide: "
-                f"0x{first:06X}-0x{last:06X}"
+                f'Invalid field pointer range: 0x{first:06X}-0x{last:06X}'
             )
         pair = pair_for_offset(first)
         if pair_for_offset(last) != pair:
             raise ValueError(
-                "plage de pointeurs terrain traversant une paire PRG: "
-                f"0x{first:06X}-0x{last:06X}"
+                f'Field pointer range crosses a PRG pair: 0x{first:06X}-0x{last:06X}'
             )
         for ref in range(first, last + 1, 2):
             if ref in seen_refs:
                 raise ValueError(
-                    f"slot terrain en double: 0x{ref:06X}"
+                    f"duplicate field slot: 0x{ref:06X}"
                 )
             seen_refs.add(ref)
             address = int.from_bytes(data[ref:ref + 2], "little")
             target = offset_for_cpu_addr(pair, address, len(data))
             if target is None:
                 raise ValueError(
-                    f"slot terrain 0x{ref:06X}: adresse CPU "
-                    f"0x{address:04X} hors fenêtre PRG"
+                    f'Field slot 0x{ref:06X}: CPU address 0x{address:04X} outside the PRG window'
                 )
             entries.setdefault(target, []).append(ref)
             slot_count += 1
 
     if slot_count != VERIFIED_FIELD_DIALOGUE_POINTER_SLOT_COUNT:
         raise ValueError(
-            f"{slot_count} slots terrain, "
-            f"{VERIFIED_FIELD_DIALOGUE_POINTER_SLOT_COUNT} attendus"
+            f"{slot_count} field slots, "
+            f"{VERIFIED_FIELD_DIALOGUE_POINTER_SLOT_COUNT} expected"
         )
     for refs in entries.values():
         refs.sort()
@@ -2100,8 +2084,8 @@ def remove_verified_non_dialogue_pointer_refs(
         )
         if actual_target != expected_target:
             raise ValueError(
-                f"sentinelle vérifiée 0x{ref:06X}: cible "
-                f"0x{(actual_target or 0):06X} au lieu de "
+                f"verified sentinel 0x{ref:06X}: target "
+                f"0x{(actual_target or 0):06X} instead of "
                 f"0x{expected_target:06X}"
             )
         owners = [
@@ -2113,8 +2097,8 @@ def remove_verified_non_dialogue_pointer_refs(
             owners and owners != [expected_target]
         ):
             raise ValueError(
-                f"sentinelle vérifiée 0x{ref:06X}: propriétaire "
-                f"inattendu {owners!r}"
+                f"verified sentinel 0x{ref:06X}: owner "
+                f"unexpected {owners!r}"
             )
         if not owners:
             continue
@@ -2145,8 +2129,8 @@ def apply_verified_pointer_redirects(
         )
         if actual_target != expected_target:
             raise ValueError(
-                f"redirection vérifiée 0x{ref:06X}: cible "
-                f"0x{(actual_target or 0):06X} au lieu de "
+                f"verified redirect 0x{ref:06X}: target "
+                f"0x{(actual_target or 0):06X} instead of "
                 f"0x{expected_target:06X}"
             )
         owners = [
@@ -2156,8 +2140,8 @@ def apply_verified_pointer_redirects(
         ]
         if owners != [expected_target]:
             raise ValueError(
-                f"redirection vérifiée 0x{ref:06X}: propriétaire "
-                f"inattendu {owners!r}"
+                f"verified redirect 0x{ref:06X}: owner "
+                f"unexpected {owners!r}"
             )
         redirected[expected_target].remove(ref)
         if not redirected[expected_target]:
@@ -2188,8 +2172,8 @@ def apply_verified_source_alignment_pointer_redirects(
         )
         if actual_target != observed_target:
             raise ValueError(
-                f"alignement source vérifié 0x{ref:06X}: cible "
-                f"0x{(actual_target or 0):06X} au lieu de "
+                f"verified source alignment 0x{ref:06X}: target "
+                f"0x{(actual_target or 0):06X} instead of "
                 f"0x{observed_target:06X}"
             )
         owners = [
@@ -2199,8 +2183,8 @@ def apply_verified_source_alignment_pointer_redirects(
         ]
         if owners not in ([], [observed_target]):
             raise ValueError(
-                f"alignement source vérifié 0x{ref:06X}: propriétaire "
-                f"inattendu {owners!r}"
+                f"verified source alignment 0x{ref:06X}: owner "
+                f"unexpected {owners!r}"
             )
         if owners:
             redirected[observed_target].remove(ref)
@@ -2236,12 +2220,12 @@ def verified_dialogue_restoration_payloads(
     if restoration_texts is None:
         if profile is not FRENCH_TEXT_PROFILE:
             raise ValueError(
-                "le profil en-US exige un catalogue de 85 restaurations"
+                "the en-US profile requires a catalogue of 85 restorations"
             )
         restoration_texts = _load_french_restoration_texts()
     validate_restoration_catalogue(
         restoration_texts,
-        label=f"restaurations {profile.locale}",
+        label=f"restorations {profile.locale}",
     )
 
     payloads: dict[int, bytes] = {}
@@ -2249,7 +2233,7 @@ def verified_dialogue_restoration_payloads(
 
     for ref, text in sorted(restoration_texts.items()):
         if ref < INES_HEADER_SIZE or ref + 2 > len(data):
-            errors.append(f"SLOT RESTAURE HORS ROM 0x{ref:06X}")
+            errors.append(f"RESTORED SLOT OUTSIDE ROM 0x{ref:06X}")
             continue
 
         pair = pair_for_offset(ref)
@@ -2263,20 +2247,20 @@ def verified_dialogue_restoration_payloads(
         if slot.kind is RestorationKind.COLLAPSED:
             if actual_target != slot.observed_english_target:
                 errors.append(
-                    f"SLOT MUTUALISE 0x{ref:06X}: cible "
-                    f"0x{(actual_target or 0):06X} au lieu de "
+                    f"COLLAPSED SLOT 0x{ref:06X}: target "
+                    f"0x{(actual_target or 0):06X} instead of "
                     f"0x{slot.observed_english_target:06X}"
                 )
         elif slot.kind is RestorationKind.REMOVED:
             if actual_target is not None:
                 errors.append(
-                    f"SLOT SUPPRIME 0x{ref:06X}: cible anglaise "
-                    f"inattendue 0x{actual_target:06X}"
+                    f"REMOVED SLOT 0x{ref:06X}: English target "
+                    f"unexpected 0x{actual_target:06X}"
                 )
         elif actual_target != slot.observed_english_target:
             errors.append(
-                f"SLOT MAL CABLE 0x{ref:06X}: cible "
-                f"0x{(actual_target or 0):06X} au lieu de "
+                f"MISWIRED SLOT 0x{ref:06X}: target "
+                f"0x{(actual_target or 0):06X} instead of "
                 f"0x{slot.observed_english_target:06X}"
             )
 
@@ -2286,7 +2270,7 @@ def verified_dialogue_restoration_payloads(
         )
         if conflicts:
             errors.append(
-                f"PONCTUATION RESERVEE RESTAURATION 0x{ref:06X}: "
+                f"RESERVED RESTORATION PUNCTUATION 0x{ref:06X}: "
                 + " ".join(repr(item) for item in sorted(conflicts))
             )
             continue
@@ -2299,7 +2283,7 @@ def verified_dialogue_restoration_payloads(
             )
         except (TypeError, ValueError, UnicodeError) as exc:
             errors.append(
-                f"ENCODAGE RESTAURATION 0x{ref:06X}: {exc}"
+                f"RESTORATION ENCODING 0x{ref:06X}: {exc}"
             )
             continue
         if any(
@@ -2308,14 +2292,14 @@ def verified_dialogue_restoration_payloads(
             for value in encoded
         ):
             errors.append(
-                f"TEXTE RESTAURE NON IMPRIMABLE 0x{ref:06X}"
+                f'NONPRINTABLE RESTORED TEXT 0x{ref:06X}'
             )
             continue
         payloads[ref] = encoded
 
     if errors:
         raise ValueError(
-            "restaurations chinoises invalides:\n  "
+            "invalid Chinese restorations:\n  "
             + "\n  ".join(errors)
         )
     return payloads
@@ -2412,7 +2396,7 @@ def find_text_free_spans(
                 continue
             if run_end <= run_start:
                 raise ValueError(
-                    f"arene texte invalide: 0x{run_start:06X}-0x{run_end:06X}"
+                    f'Invalid text arena: 0x{run_start:06X}-0x{run_end:06X}'
                 )
             if (
                 run_start <= pair_start
@@ -2423,8 +2407,7 @@ def find_text_free_spans(
                 )
             ):
                 raise ValueError(
-                    "arene texte differente de la base canonique: "
-                    f"0x{run_start:06X}-0x{run_end:06X}"
+                    f'Text arena differs from the canonical base: 0x{run_start:06X}-0x{run_end:06X}'
                 )
 
             for free_start, free_end in subtract_protected_spans(
@@ -2533,7 +2516,7 @@ def _maximum_fitting_subset(
         root_index = previous_root[total]
         if root_index < 0:
             raise AssertionError(
-                "reconstruction interne du sous-ensemble impossible"
+                "internal subset reconstruction failed"
             )
         selected_indices.append(root_index)
         total = previous_sum[total]
@@ -2951,7 +2934,7 @@ def allocation_report_rows(
             stable_key = f"POINTER_VARIANT:0x{source_offset:06X}"
         else:
             raise AssertionError(
-                f"allocation non classée à 0x{source_offset:06X}"
+                f"unclassified allocation at 0x{source_offset:06X}"
             )
         rows.append(
             {
@@ -3050,20 +3033,20 @@ def command_check(args: argparse.Namespace) -> int:
     records, truncate = parse_ips(args.english_ips)
     rebuilt = apply_ips(chinese, records, truncate)
 
-    print("Verification de provenance de l'IPS anglais")
-    print(f"- ROM chinoise       : {args.chinese_rom} ({len(chinese)} octets, sha256 {sha256(chinese)})")
+    print("English IPS provenance check")
+    print(f'- Chinese ROM: {args.chinese_rom} ({len(chinese)} bytes, sha256 {sha256(chinese)})')
     print(
-        f"- IPS anglais         : {args.english_ips} ({len(records)} records, "
+        f"- English IPS         : {args.english_ips} ({len(records)} records, "
         f"sha256 {sha256(ips_data)})"
     )
-    print(f"- Cible canonique     : {args.english_rom} ({len(canonical)} octets, sha256 {sha256(canonical)})")
-    print(f"- Reconstruction      : {len(rebuilt)} octets, sha256 {sha256(rebuilt)}")
-    print(f"- Reconstruction exacte : {'OUI' if rebuilt == canonical else 'NON'}")
+    print(f'- Canonical target: {args.english_rom} ({len(canonical)} bytes, sha256 {sha256(canonical)})')
+    print(f'- Reconstruction: {len(rebuilt)} bytes, sha256 {sha256(rebuilt)}')
+    print(f"- Exact reconstruction : {'YES' if rebuilt == canonical else 'NO'}")
 
     if args.write_yellow:
         target = ROOT / args.write_yellow
         target.write_bytes(rebuilt)
-        print(f"- Reconstruction ecrite : {target}")
+        print(f"- Reconstruction written : {target}")
 
     return 0 if rebuilt == canonical else 1
 
@@ -3076,15 +3059,14 @@ def command_check_ips(args: argparse.Namespace) -> int:
     rebuilt = apply_ips(base, records, truncate)
     exact = rebuilt == expected
 
-    print("Validation aller-retour IPS")
-    print(f"- ROM de base         : {args.base_rom} ({len(base)} octets, sha256 {sha256(base)})")
+    print("IPS round-trip validation")
+    print(f'- Base ROM: {args.base_rom} ({len(base)} bytes, sha256 {sha256(base)})')
     print(
-        f"- IPS                 : {args.ips} ({len(ips_data)} octets, "
-        f"{len(records)} records, sha256 {sha256(ips_data)})"
+        f'- IPS: {args.ips} ({len(ips_data)} bytes, {len(records)} records, sha256 {sha256(ips_data)})'
     )
-    print(f"- ROM cible           : {args.target_rom} ({len(expected)} octets, sha256 {sha256(expected)})")
-    print(f"- ROM reconstruite    : {len(rebuilt)} octets, sha256 {sha256(rebuilt)}")
-    print(f"- Base + IPS == cible : {'OUI' if exact else 'NON'}")
+    print(f'- Target ROM: {args.target_rom} ({len(expected)} bytes, sha256 {sha256(expected)})')
+    print(f'- Rebuilt ROM: {len(rebuilt)} bytes, sha256 {sha256(rebuilt)}')
+    print(f"- Base + IPS == target : {'YES' if exact else 'NO'}")
 
     if not exact:
         common_length = min(len(rebuilt), len(expected))
@@ -3093,9 +3075,9 @@ def command_check_ips(args: argparse.Namespace) -> int:
             common_length if len(rebuilt) != len(expected) else None,
         )
         if first_difference is not None:
-            print(f"- Premier ecart       : 0x{first_difference:06X}")
+            print(f"- First difference       : 0x{first_difference:06X}")
         if len(rebuilt) != len(expected):
-            print(f"- Tailles differentes : {len(rebuilt)} != {len(expected)}")
+            print(f"- Different sizes : {len(rebuilt)} != {len(expected)}")
 
     return 0 if exact else 1
 
@@ -3104,12 +3086,12 @@ def command_dump_script(args: argparse.Namespace) -> int:
     english = read_bytes(args.english_rom)
     english_hash = sha256(english)
     if english_hash != TRANSLATION_BASE_SHA256:
-        print("Extraction script: ECHEC")
+        print("Script extraction: FAILED")
         print(
-            "- ROM anglaise non canonique : "
-            f"{english_hash} au lieu de {TRANSLATION_BASE_SHA256}"
+            "- Noncanonical English ROM : "
+            f"{english_hash} instead of {TRANSLATION_BASE_SHA256}"
         )
-        print("- Aucun CSV ecrit.")
+        print('- No CSV written.')
         return 1
     glyph_records = verified_all_graphical_text_records(english)
     glyph_by_start = structured_glyph_record_map(glyph_records)
@@ -3159,11 +3141,11 @@ def command_dump_script(args: argparse.Namespace) -> int:
             writer.writeheader()
             writer.writerows(overflow_rows)
 
-    print(f"CSV genere : {output}")
-    print(f"Entrees extraites : {len(entries)}")
-    print(f"Textes trop longs : {len(overflow_rows)}")
+    print(f"Generated CSV : {output}")
+    print(f"Extracted entries : {len(entries)}")
+    print(f"Texts too long : {len(overflow_rows)}")
     if args.overflow_output:
-        print(f"CSV textes trop longs : {overflow_output}")
+        print(f"Overflow CSV : {overflow_output}")
     return 0
 
 
@@ -3227,11 +3209,11 @@ def command_audit(args: argparse.Namespace) -> int:
             })
 
     exact_left = sum(1 for row in candidates if "identique_EN_FR" in str(row["reason"]))
-    print("Audit traduction")
-    print(f"- Entrees p() dans {args.script} : {len(entries)}")
-    print(f"- Candidats ecrits dans : {output}")
-    print(f"- Candidats total : {len(candidates)}")
-    print(f"- Blocs encore identiques anglais/francais : {exact_left}")
+    print("Translation audit")
+    print(f'- p() entries in {args.script}: {len(entries)}')
+    print(f'- Candidates written to: {output}')
+    print(f"- Total candidates : {len(candidates)}")
+    print(f"- Blocks still identical in English/French : {exact_left}")
 
     for row in candidates[:args.preview]:
         sample = str(row["english"]).replace("\n", "\\n")
@@ -3254,7 +3236,7 @@ def _first_csv_value(
 def _parse_csv_integer(value: str, *, label: str) -> int:
     match = re.search(r"0[xX][0-9A-Fa-f]+|\d+", value)
     if match is None:
-        raise ValueError(f"{label}: entier manquant dans {value!r}")
+        raise ValueError(f'{label}: missing integer in {value!r}')
     token = match.group(0)
     return int(token, 16) if token.lower().startswith("0x") else int(token)
 
@@ -3299,7 +3281,7 @@ def _is_restoration_catalogue_row(
     if not identity:
         return False
     try:
-        return _parse_csv_integer(identity, label="référence") in (
+        return _parse_csv_integer(identity, label="reference") in (
             RESTORATION_REFERENCES
         )
     except ValueError:
@@ -3325,10 +3307,10 @@ def _catalogue_identity_offset(
     if not raw_offset:
         raw_offset = _first_csv_value(row, ("stable_key",))
     if not raw_offset:
-        raise ValueError(f"Ligne {line_number}: offset_hex manquant")
+        raise ValueError(f"Line {line_number}: missing offset_hex")
     return _parse_csv_integer(
         raw_offset,
-        label=f"Ligne {line_number}: offset",
+        label=f"Line {line_number}: offset",
     )
 
 
@@ -3365,12 +3347,12 @@ def _catalogue_text(
         }
         if status.casefold().replace(" ", "_") in blocked:
             raise ValueError(
-                f"Ligne {line_number}: review_status anglais non validé "
-                f"({status or 'vide'})"
+                f"Line {line_number}: unapproved English review_status "
+                f"({status or 'empty'})"
             )
         if not text:
             raise ValueError(
-                f"Ligne {line_number}: texte en_v2/english_v2 manquant"
+                f'Line {line_number}: missing en_v2/english_v2 text'
             )
     return text.replace("\\n", "\n").replace("\\r", "\r")
 
@@ -3408,15 +3390,15 @@ def load_restoration_texts_csv(
             )
             if not raw_reference:
                 raise ValueError(
-                    f"Ligne {index}: référence de restauration manquante"
+                    f"Line {index}: missing restoration reference"
                 )
             reference = _parse_csv_integer(
                 raw_reference,
-                label=f"Ligne {index}: référence de restauration",
+                label=f"Line {index}: restoration reference",
             )
             if reference in restorations:
                 raise ValueError(
-                    f"Ligne {index}: restauration en double "
+                    f"Line {index}: duplicate restoration "
                     f"0x{reference:06X}"
                 )
             restorations[reference] = _catalogue_text(
@@ -3426,7 +3408,7 @@ def load_restoration_texts_csv(
             )
     validate_restoration_catalogue(
         restorations,
-        label=f"{csv_path}: restaurations {profile.locale}",
+        label=f"{csv_path}: restorations {profile.locale}",
     )
     return restorations
 
@@ -3440,7 +3422,7 @@ def load_pointer_variants_csv(
     profile = resolve_text_profile(text_profile)
     if profile is FRENCH_TEXT_PROFILE:
         raise ValueError(
-            "les variantes de pointeurs sont réservées au profil en-US"
+            'Pointer variants require the en-US profile'
         )
 
     csv_path = ROOT / path
@@ -3462,14 +3444,14 @@ def load_pointer_variants_csv(
             }
             if status.casefold().replace(" ", "_") in blocked_statuses:
                 raise ValueError(
-                    f"Ligne {line_number}: review_status variante anglaise "
-                    f"non validé ({status or 'vide'})"
+                    f"Line {line_number}: English variant review_status "
+                    f"not approved ({status or 'empty'})"
                 )
 
             raw_text = row.get("english_v2")
             if raw_text is None or not str(raw_text).strip():
                 raise ValueError(
-                    f"Ligne {line_number}: english_v2 variante manquant"
+                    f"Line {line_number}: missing variant english_v2"
                 )
             text = str(raw_text).replace("\\n", "\n").replace("\\r", "\r")
 
@@ -3484,31 +3466,31 @@ def load_pointer_variants_csv(
                 ("shared_english_2015_target",),
             )
             if not stable_key:
-                raise ValueError(f"Ligne {line_number}: stable_key manquante")
+                raise ValueError(f"Line {line_number}: missing stable_key")
             if not variant_key:
-                raise ValueError(f"Ligne {line_number}: variant_key manquante")
+                raise ValueError(f"Line {line_number}: missing variant_key")
             if not raw_reference:
                 raise ValueError(
-                    f"Ligne {line_number}: pointer_reference_hex manquant"
+                    f"Line {line_number}: missing pointer_reference_hex"
                 )
             if not raw_shared_target:
                 raise ValueError(
-                    f"Ligne {line_number}: "
-                    "shared_english_2015_target manquante"
+                    f"Line {line_number}: "
+                    "missing shared_english_2015_target"
                 )
 
             main_offset = _parse_csv_integer(
                 stable_key,
-                label=f"Ligne {line_number}: stable_key",
+                label=f"Line {line_number}: stable_key",
             )
             pointer_reference = _parse_csv_integer(
                 raw_reference,
-                label=f"Ligne {line_number}: pointer_reference_hex",
+                label=f"Line {line_number}: pointer_reference_hex",
             )
             shared_source_target = _parse_csv_integer(
                 raw_shared_target,
                 label=(
-                    f"Ligne {line_number}: "
+                    f"Line {line_number}: "
                     "shared_english_2015_target"
                 ),
             )
@@ -3518,28 +3500,26 @@ def load_pointer_variants_csv(
             )
             if stable_key != expected_stable_key:
                 raise ValueError(
-                    f"Ligne {line_number}: stable_key non canonique "
-                    f"{stable_key!r}, attendu {expected_stable_key!r}"
+                    f'Line {line_number}: noncanonical stable_key {stable_key!r}, expected {expected_stable_key!r}'
                 )
             if variant_key != expected_variant_key:
                 raise ValueError(
-                    f"Ligne {line_number}: variant_key non canonique "
-                    f"{variant_key!r}, attendu {expected_variant_key!r}"
+                    f'Line {line_number}: noncanonical variant_key {variant_key!r}, expected {expected_variant_key!r}'
                 )
             if shared_source_target != main_offset:
                 raise ValueError(
-                    f"Ligne {line_number}: cible anglaise partagée "
-                    f"0x{shared_source_target:06X} différente de "
+                    f"Line {line_number}: shared English target "
+                    f"0x{shared_source_target:06X} differs from "
                     f"0x{main_offset:06X}"
                 )
             if variant_key in seen_variant_keys:
                 raise ValueError(
-                    f"Ligne {line_number}: variant_key en double "
+                    f"Line {line_number}: duplicate variant_key "
                     f"{variant_key!r}"
                 )
             if pointer_reference in seen_pointer_references:
                 raise ValueError(
-                    f"Ligne {line_number}: référence variante en double "
+                    f"Line {line_number}: duplicate variant reference "
                     f"0x{pointer_reference:06X}"
                 )
             seen_variant_keys.add(variant_key)
@@ -3558,8 +3538,8 @@ def load_pointer_variants_csv(
     variant_count = sum(len(group) for group in variants_by_main.values())
     if variant_count != EXPECTED_POINTER_VARIANT_COUNT:
         raise ValueError(
-            f"{csv_path}: {variant_count} variantes de pointeurs, "
-            f"{EXPECTED_POINTER_VARIANT_COUNT} attendues"
+            f"{csv_path}: {variant_count} pointer variants, "
+            f"{EXPECTED_POINTER_VARIANT_COUNT} expected"
         )
     actual_groups = {
         main_offset: tuple(
@@ -3582,8 +3562,7 @@ def load_pointer_variants_csv(
             for main_offset, refs in sorted(actual_groups.items())
         )
         raise ValueError(
-            f"{csv_path}: topologie variantes invalide "
-            f"({actual or 'vide'}), attendu {expected}"
+            f"{csv_path}: invalid variant topology ({actual or 'empty'}), expected {expected}"
         )
     return {
         main_offset: tuple(variants)
@@ -3628,7 +3607,7 @@ def read_translation_csv(
             layout = (row.get("layout") or "").strip()
             if layout not in profile.supported_layouts:
                 raise ValueError(
-                    f"Ligne {index}: layout inconnu {layout!r}"
+                    f"Line {index}: unknown layout {layout!r}"
                 )
             rows.append(TranslationRow(offset, text, max_len, layout))
     return rows
@@ -3653,14 +3632,14 @@ def command_build(args: argparse.Namespace) -> int:
     preflight_errors: list[str] = []
     if original_hash != TRANSLATION_BASE_SHA256:
         preflight_errors.append(
-            "ROM DE BASE NON CANONIQUE: "
-            f"{original_hash} au lieu de {TRANSLATION_BASE_SHA256}"
+            "NONCANONICAL BASE ROM: "
+            f"{original_hash} instead of {TRANSLATION_BASE_SHA256}"
         )
 
     for row in rows:
         offset, text, max_len = row.offset, row.text, row.max_len
         if offset < INES_HEADER_SIZE or offset >= len(original):
-            preflight_errors.append(f"OFFSET HORS ROM 0x{offset:06X}")
+            preflight_errors.append(f"OFFSET OUTSIDE ROM 0x{offset:06X}")
             continue
         canonical_max_len = source_record_len(
             original,
@@ -3671,12 +3650,12 @@ def command_build(args: argparse.Namespace) -> int:
             max_len = canonical_max_len
         elif max_len != canonical_max_len:
             preflight_errors.append(
-                f"LONGUEUR SOURCE INCOHERENTE 0x{offset:06X}: "
+                f"INCONSISTENT SOURCE LENGTH 0x{offset:06X}: "
                 f"CSV={max_len}, ROM={canonical_max_len}"
             )
         if max_len < 1:
             preflight_errors.append(
-                f"AUCUN TEXTE SOURCE 0x{offset:06X}"
+                f'NO SOURCE TEXT 0x{offset:06X}'
             )
             continue
 
@@ -3691,24 +3670,24 @@ def command_build(args: argparse.Namespace) -> int:
         )
         if conflicts:
             preflight_errors.append(
-                f"PONCTUATION RESERVEE 0x{offset:06X}: "
+                f"RESERVED PUNCTUATION 0x{offset:06X}: "
                 + " ".join(repr(item) for item in sorted(conflicts))
             )
         if len(encoded) > max_len:
             preflight_errors.append(
-                f"TRONCATURE INTERDITE 0x{offset:06X}: "
+                f"TRUNCATION FORBIDDEN 0x{offset:06X}: "
                 f"{len(encoded)} > {max_len}"
             )
 
     if preflight_errors:
-        print("Build depuis CSV: ECHEC PREFLIGHT")
+        print("Build from CSV: PREFLIGHT FAILED")
         print(f"- CSV : {args.csv}")
-        print(f"- Erreurs : {len(preflight_errors)}")
+        print(f"- Errors : {len(preflight_errors)}")
         for error in preflight_errors[:40]:
             print(f"  {error}")
         if len(preflight_errors) > 40:
-            print(f"  ... et {len(preflight_errors) - 40} de plus")
-        print("- Aucun artefact ecrit.")
+            print(f"  ... and {len(preflight_errors) - 40} more")
+        print('- No artifacts written.')
         return 1
 
     rom = bytearray(original)
@@ -3742,18 +3721,18 @@ def command_build(args: argparse.Namespace) -> int:
     output_ips.write_bytes(make_ips(original, bytes(rom)))
 
     changed = sum(1 for left, right in zip(original, rom) if left != right)
-    print("Build depuis CSV")
+    print("Build from CSV")
     print(f"- CSV : {args.csv}")
-    print(f"- Entrees appliquees : {applied}")
-    print(f"- Octets modifies : {changed}")
+    print(f"- Applied entries : {applied}")
+    print(f'- Changed bytes: {changed}')
     print(f"- ROM : {output_rom}")
     print(f"- IPS : {output_ips}")
     if text_profile is FRENCH_TEXT_PROFILE:
-        print(f"- Glyphes français : {font_changed} octets modifiés")
-        print(f"- Export CHR police : {font_export_directory}")
+        print(f'- French glyphs: {font_changed} bytes changed')
+        print(f"- Font CHR export : {font_export_directory}")
     else:
-        print("- Police anglaise préservée : OUI")
-        print("- Export CHR français : AUCUN")
+        print("- English font preserved : YES")
+        print('- French CHR export: NONE')
     return 0
 
 
@@ -3768,12 +3747,12 @@ def command_build_repointed(args: argparse.Namespace) -> int:
     )
     original_hash = sha256(original)
     if original_hash != TRANSLATION_BASE_SHA256:
-        print("Build experimental avec repointage: ECHEC PREFLIGHT")
+        print('Experimental pointer-relocation build: PREFLIGHT FAILED')
         print(
-            "- ROM de base non canonique : "
-            f"{original_hash} au lieu de {TRANSLATION_BASE_SHA256}"
+            "- Noncanonical base ROM : "
+            f"{original_hash} instead of {TRANSLATION_BASE_SHA256}"
         )
-        print("- Aucun artefact ecrit.")
+        print('- No artifacts written.')
         return 1
 
     glyph_records = verified_all_graphical_text_records(original)
@@ -3836,7 +3815,7 @@ def command_build_repointed(args: argparse.Namespace) -> int:
         max_len = max_len_by_offset[offset]
         if max_len < 1:
             fatal_errors.append(
-                f"AUCUN TEXTE SOURCE 0x{offset:06X}"
+                f'NO SOURCE TEXT 0x{offset:06X}'
             )
             continue
 
@@ -3851,7 +3830,7 @@ def command_build_repointed(args: argparse.Namespace) -> int:
         )
         if conflicts:
             fatal_errors.append(
-                f"PONCTUATION RESERVEE 0x{offset:06X}: "
+                f"RESERVED PUNCTUATION 0x{offset:06X}: "
                 + " ".join(repr(item) for item in sorted(conflicts))
             )
             continue
@@ -3876,13 +3855,12 @@ def command_build_repointed(args: argparse.Namespace) -> int:
                 applied += 1
                 continue
             fatal_errors.append(
-                f"PAS DE PLACE 0x{offset:06X}: "
-                f"{size} octets necessaires dans paire {pair}"
+                f'NO SPACE 0x{offset:06X}: {size} bytes required in pair {pair}'
             )
 
         if len(encoded) > max_len:
             fatal_errors.append(
-                f"TRONCATURE INTERDITE 0x{offset:06X}: "
+                f"TRUNCATION FORBIDDEN 0x{offset:06X}: "
                 f"{len(encoded)} > {max_len}"
             )
             continue
@@ -3891,14 +3869,14 @@ def command_build_repointed(args: argparse.Namespace) -> int:
         applied += 1
 
     if fatal_errors:
-        print("Build experimental avec repointage: ECHEC PREFLIGHT")
+        print('Experimental pointer-relocation build: PREFLIGHT FAILED')
         print(f"- CSV : {args.csv}")
-        print(f"- Erreurs : {len(fatal_errors)}")
+        print(f"- Errors : {len(fatal_errors)}")
         for error in fatal_errors[:40]:
             print(f"  {error}")
         if len(fatal_errors) > 40:
-            print(f"  ... et {len(fatal_errors) - 40} de plus")
-        print("- Aucun artefact ecrit.")
+            print(f"  ... and {len(fatal_errors) - 40} more")
+        print('- No artifacts written.')
         return 1
 
     output_rom = ROOT / args.output_rom
@@ -3913,36 +3891,36 @@ def command_build_repointed(args: argparse.Namespace) -> int:
     output_ips.write_bytes(make_ips(original, bytes(rom)))
 
     changed = sum(1 for left, right in zip(original, rom) if left != right)
-    print("Build experimental avec repointage")
+    print('Experimental build with pointer relocation')
     print(f"- CSV : {args.csv}")
-    print(f"- Entrees appliquees : {applied}")
-    print(f"- Textes repointes : {len(relocated)}")
-    print(f"- Octets modifies : {changed}")
+    print(f"- Applied entries : {applied}")
+    print(f"- Relocated texts : {len(relocated)}")
+    print(f'- Changed bytes: {changed}')
     print(f"- ROM : {output_rom}")
     print(f"- IPS : {output_ips}")
     if text_profile is FRENCH_TEXT_PROFILE:
-        print(f"- Glyphes français : {font_changed} octets modifiés")
-        print(f"- Export CHR police : {font_export_directory}")
+        print(f'- French glyphs: {font_changed} bytes changed')
+        print(f"- Font CHR export : {font_export_directory}")
     else:
-        print("- Police anglaise préservée : OUI")
-        print("- Export CHR français : AUCUN")
-    print(f"- Avertissements : {len(warnings)}")
+        print("- English font preserved : YES")
+        print('- French CHR export: NONE')
+    print(f"- Warnings : {len(warnings)}")
 
     if relocated:
-        print("- Exemples de repointage :")
+        print("- Pointer-relocation examples :")
         for old_offset, new_offset, length, ref_count in relocated[:15]:
             print(
                 f"  0x{old_offset:06X} -> 0x{new_offset:06X} "
-                f"({length} caracteres, {ref_count} pointeur(s))"
+                f"({length} characters, {ref_count} pointer(s))"
             )
         if len(relocated) > 15:
-            print(f"  ... et {len(relocated) - 15} de plus")
+            print(f"  ... and {len(relocated) - 15} more")
 
     if warnings:
         for warning in warnings[:20]:
             print(f"  {warning}")
         if len(warnings) > 20:
-            print(f"  ... et {len(warnings) - 20} de plus")
+            print(f"  ... and {len(warnings) - 20} more")
 
     return 0
 
@@ -4001,8 +3979,8 @@ def command_build_repacked(args: argparse.Namespace) -> int:
     original_hash = sha256(original)
     if original_hash != TRANSLATION_BASE_SHA256:
         preflight_errors.append(
-            "ROM DE BASE NON CANONIQUE: "
-            f"{original_hash} au lieu de {TRANSLATION_BASE_SHA256}"
+            "NONCANONICAL BASE ROM: "
+            f"{original_hash} instead of {TRANSLATION_BASE_SHA256}"
         )
         glyph_records: list[tuple[int, int, int, int]] = []
     else:
@@ -4016,13 +3994,13 @@ def command_build_repacked(args: argparse.Namespace) -> int:
     for row in rows:
         if row.offset in seen_offsets:
             preflight_errors.append(
-                f"OFFSET EN DOUBLE 0x{row.offset:06X}"
+                f"DUPLICATE OFFSET 0x{row.offset:06X}"
             )
         seen_offsets.add(row.offset)
 
         if row.offset < INES_HEADER_SIZE or row.offset >= len(original):
             preflight_errors.append(
-                f"OFFSET HORS ROM 0x{row.offset:06X}"
+                f"OFFSET OUTSIDE ROM 0x{row.offset:06X}"
             )
             max_len = 0
         else:
@@ -4039,7 +4017,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
                 and row.offset != containing_glyph[0]
             ):
                 preflight_errors.append(
-                    f"OFFSET INTERIEUR A UN RECORD GRAPHIQUE "
+                    f"OFFSET INSIDE A GRAPHICAL RECORD "
                     f"0x{row.offset:06X} "
                     f"(debut 0x{containing_glyph[0]:06X})"
                 )
@@ -4058,7 +4036,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
                 and row.max_len != canonical_max_len
             ):
                 preflight_errors.append(
-                    f"LONGUEUR SOURCE INCOHERENTE 0x{row.offset:06X}: "
+                    f"INCONSISTENT SOURCE LENGTH 0x{row.offset:06X}: "
                     f"CSV={row.max_len}, ROM={canonical_max_len}"
                 )
 
@@ -4073,16 +4051,16 @@ def command_build_repacked(args: argparse.Namespace) -> int:
         )
         if conflicts:
             preflight_errors.append(
-                f"PONCTUATION RESERVEE 0x{row.offset:06X}: "
+                f"RESERVED PUNCTUATION 0x{row.offset:06X}: "
                 + " ".join(repr(item) for item in sorted(conflicts))
             )
         if max_len < 1:
             preflight_errors.append(
-                f"AUCUN TEXTE SOURCE 0x{row.offset:06X}"
+                f'NO SOURCE TEXT 0x{row.offset:06X}'
             )
         if row.offset + max(0, max_len) > len(original):
             preflight_errors.append(
-                f"PLAGE HORS ROM 0x{row.offset:06X}: {max_len} octets"
+                f'RANGE OUTSIDE ROM 0x{row.offset:06X}: {max_len} bytes'
             )
         if any(
             (value < 0x20 or value > 0x7E)
@@ -4090,23 +4068,23 @@ def command_build_repacked(args: argparse.Namespace) -> int:
             for value in encoded
         ):
             preflight_errors.append(
-                f"TEXTE NON IMPRIMABLE 0x{row.offset:06X}"
+                f'NONPRINTABLE TEXT 0x{row.offset:06X}'
             )
         max_len_by_offset[row.offset] = max_len
         row_info.append((row, max_len, encoded))
 
     if not rows:
-        preflight_errors.append("CSV SANS TRADUCTION")
+        preflight_errors.append('CSV HAS NO TRANSLATION')
 
     if preflight_errors:
-        print("Build repack complet par pointeurs: ECHEC PRELIMINAIRE")
+        print("Full pointer repack: PRELIMINARY CHECK FAILED")
         print(f"- CSV : {args.csv}")
-        print(f"- Erreurs : {len(preflight_errors)}")
+        print(f"- Errors : {len(preflight_errors)}")
         for error in preflight_errors[:40]:
             print(f"  {error}")
         if len(preflight_errors) > 40:
-            print(f"  ... et {len(preflight_errors) - 40} de plus")
-        print("- Aucun artefact ecrit.")
+            print(f"  ... and {len(preflight_errors) - 40} more")
+        print('- No artifacts written.')
         return 1
 
     translated_glyph_starts = {
@@ -4126,17 +4104,16 @@ def command_build_repacked(args: argparse.Namespace) -> int:
             glyph_spans,
         ):
             preflight_errors.append(
-                f"PLAGE TRADUITE DANS RECORD GRAPHIQUE NON DECLARE "
-                f"0x{row.offset:06X}"
+                f'TRANSLATED RANGE INSIDE UNDECLARED GRAPHICAL RECORD 0x{row.offset:06X}'
             )
 
     if preflight_errors:
-        print("Build repack complet par pointeurs: ECHEC GLYPHES")
+        print("Full pointer repack: GLYPH CHECK FAILED")
         print(f"- CSV : {args.csv}")
-        print(f"- Erreurs : {len(preflight_errors)}")
+        print(f"- Errors : {len(preflight_errors)}")
         for error in preflight_errors[:40]:
             print(f"  {error}")
-        print("- Aucun artefact ecrit.")
+        print('- No artifacts written.')
         return 1
 
     known_offsets = known_source_target_offsets(
@@ -4171,12 +4148,12 @@ def command_build_repacked(args: argparse.Namespace) -> int:
     )
     if skipped_verified_pointers:
         raise ValueError(
-            "conflit dans les pointeurs verifies: "
+            "conflict in verified pointers: "
             + repr(skipped_verified_pointers[:5])
         )
     if skipped_field_pointers:
         raise ValueError(
-            "conflit dans les pointeurs terrain verifies: "
+            "conflict in verified field pointers: "
             + repr(skipped_field_pointers[:5])
         )
     pointer_entries = remove_verified_non_dialogue_pointer_refs(
@@ -4201,10 +4178,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
         != VERIFIED_FIELD_DIALOGUE_TARGET_COUNT_AFTER_REDIRECTS
     ):
         raise ValueError(
-            f"{len(field_pointer_entries)} cibles terrain après "
-            "redirection, "
-            f"{VERIFIED_FIELD_DIALOGUE_TARGET_COUNT_AFTER_REDIRECTS} "
-            "attendues"
+            f'{len(field_pointer_entries)} field targets after redirection; expected {VERIFIED_FIELD_DIALOGUE_TARGET_COUNT_AFTER_REDIRECTS}'
         )
     contextual_target_offsets: set[int] = set()
     skipped_contextual_pointers: list[tuple[int, int, int]] = []
@@ -4238,7 +4212,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
     synthetic_collisions = sorted(restoration_refs & translated_offsets)
     if synthetic_collisions:
         raise ValueError(
-            "slots restaurés en conflit avec des textes source: "
+            "restored slots conflict with source texts: "
             + ", ".join(
                 f"0x{offset:06X}" for offset in synthetic_collisions
             )
@@ -4264,8 +4238,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
                 and pointer_offset + 2 > tail_start
             ):
                 protected_tail_errors.append(
-                    f"POINTEUR DANS TAIL CODE 0x{pointer_offset:06X} "
-                    f"vers 0x{target_offset:06X}"
+                    f'POINTER IN TAIL CODE 0x{pointer_offset:06X} to 0x{target_offset:06X}'
                 )
             if intersects_spans(
                 pointer_offset,
@@ -4273,8 +4246,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
                 glyph_spans,
             ):
                 protected_glyph_errors.append(
-                    f"POINTEUR DANS RECORD GLYPHIQUE "
-                    f"0x{pointer_offset:06X} vers 0x{target_offset:06X}"
+                    f'POINTER IN GLYPH RECORD 0x{pointer_offset:06X} to 0x{target_offset:06X}'
                 )
 
     row_pointer_refs = assign_pointer_targets_to_rows(
@@ -4317,8 +4289,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
             ]
             if len(owned) > 1:
                 raise ValueError(
-                    "plusieurs attaques graphiques partagent la même ligne "
-                    f"source 0x{row.offset:06X}: {owned!r}"
+                    f'Multiple graphical moves share source row 0x{row.offset:06X}: {owned!r}'
                 )
             if owned:
                 move_index, required_length = owned[0]
@@ -4335,7 +4306,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
         )
         if missing_move_reservations:
             raise ValueError(
-                "attaques graphiques sans ligne allouable: "
+                "graphical moves without an allocatable row: "
                 + ", ".join(
                     str(move_index)
                     for move_index in missing_move_reservations
@@ -4351,8 +4322,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
             field_target_owners.setdefault(target, []).append(row.offset)
             if row.layout != DIALOGUE_LAYOUT:
                 preflight_errors.append(
-                    f"CIBLE TERRAIN 0x{target:06X} POSSÉDÉE PAR "
-                    f"0x{row.offset:06X} SANS LAYOUT {DIALOGUE_LAYOUT}"
+                    f'FIELD TARGET 0x{target:06X} OWNED BY 0x{row.offset:06X} WITHOUT LAYOUT {DIALOGUE_LAYOUT}'
                 )
     unowned_field_targets = sorted(
         set(field_pointer_entries) - set(field_target_owners)
@@ -4364,8 +4334,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
     }
     if unowned_field_targets or multiply_owned_field_targets or preflight_errors:
         print(
-            "Build repack complet par pointeurs: "
-            "ECHEC PROPRIÉTÉ DES CIBLES TERRAIN"
+            'Full pointer repack: FIELD TARGET OWNERSHIP FAILED'
         )
         for target in unowned_field_targets:
             refs = field_pointer_entries[target]
@@ -4377,14 +4346,14 @@ def command_build_repacked(args: argparse.Namespace) -> int:
             multiply_owned_field_targets.items()
         ):
             print(
-                f"  0x{target:06X}: propriétaires "
+                f"  0x{target:06X}: owners "
                 + ", ".join(
                     f"0x{owner:06X}" for owner in owners
                 )
             )
         for error in preflight_errors:
             print(f"  {error}")
-        print("- Aucun artefact ecrit.")
+        print('- No artifacts written.')
         return 1
 
     graphical_target_errors = graphical_pointer_target_conflicts(
@@ -4392,10 +4361,10 @@ def command_build_repacked(args: argparse.Namespace) -> int:
         translated_glyph_starts,
     )
     if graphical_target_errors:
-        print("Build repack complet par pointeurs: ECHEC CIBLES GRAPHIQUES")
+        print("Full pointer repack: GRAPHICAL TARGET CHECK FAILED")
         for error in graphical_target_errors:
             print(f"  {error}")
-        print("- Aucun artefact ecrit.")
+        print('- No artifacts written.')
         return 1
 
     candidate_offsets: set[int] = set()
@@ -4423,7 +4392,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
     )
     if missing_graphic_candidates:
         raise ValueError(
-            "réservations graphiques sans record source repackable: "
+            "graphical reservations without a repackable source record: "
             + ", ".join(
                 f"0x{offset:06X}" for offset in missing_graphic_candidates
             )
@@ -4449,8 +4418,8 @@ def command_build_repacked(args: argparse.Namespace) -> int:
     )
     if unsafe_graphic_candidates:
         raise ValueError(
-            "réservations graphiques en chevauchement avec des données "
-            "protégées: "
+            "graphical reservations overlap protected "
+            "data: "
             + ", ".join(
                 f"0x{offset:06X}" for offset in unsafe_graphic_candidates
             )
@@ -4524,8 +4493,8 @@ def command_build_repacked(args: argparse.Namespace) -> int:
         allocation_payloads,
     )
     allocation_failures = [
-        f"PAS DE PLACE 0x{offset:06X}: "
-        f"{size} octets necessaires dans paire {pair}"
+        f"NO SPACE 0x{offset:06X}: "
+        f"{size} bytes required in pair {pair}"
         for offset, size, pair in raw_allocation_failures
     ]
     candidate_offsets.difference_update(
@@ -4556,9 +4525,9 @@ def command_build_repacked(args: argparse.Namespace) -> int:
                 continue
             if graphic_start < other_end and other_start < graphic_end:
                 graphic_allocation_overlaps.append(
-                    f"RESERVATION GRAPHIQUE 0x{source_offset:06X} "
-                    f"allouee 0x{graphic_start:06X}-0x{graphic_end:06X} "
-                    f"chevauche 0x{other_offset:06X} alloue "
+                    f"GRAPHICAL RESERVATION 0x{source_offset:06X} "
+                    f"allocated at 0x{graphic_start:06X}-0x{graphic_end:06X} "
+                    f"overlaps 0x{other_offset:06X} allocated at "
                     f"0x{other_start:06X}-0x{other_end:06X}"
                 )
 
@@ -4585,8 +4554,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
         tail_start, tail_end = protected_bank_tail(pair)
         if new_offset < tail_end and allocation_end > tail_start:
             protected_tail_errors.append(
-                f"ALLOCATION DANS TAIL CODE 0x{row.offset:06X}: "
-                f"0x{new_offset:06X}-0x{allocation_end:06X}"
+                f'ALLOCATION IN TAIL CODE 0x{row.offset:06X}: 0x{new_offset:06X}-0x{allocation_end:06X}'
             )
 
     for ref, encoded in restoration_payloads.items():
@@ -4598,8 +4566,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
         tail_start, tail_end = protected_bank_tail(pair)
         if new_offset < tail_end and allocation_end > tail_start:
             protected_tail_errors.append(
-                f"RESTAURATION DANS TAIL CODE 0x{ref:06X}: "
-                f"0x{new_offset:06X}-0x{allocation_end:06X}"
+                f'RESTORATION IN TAIL CODE 0x{ref:06X}: 0x{new_offset:06X}-0x{allocation_end:06X}'
             )
 
     for ref, encoded in pointer_variant_payloads.items():
@@ -4611,8 +4578,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
         tail_start, tail_end = protected_bank_tail(pair)
         if new_offset < tail_end and allocation_end > tail_start:
             protected_tail_errors.append(
-                f"VARIANTE DANS TAIL CODE 0x{ref:06X}: "
-                f"0x{new_offset:06X}-0x{allocation_end:06X}"
+                f'VARIANT IN TAIL CODE 0x{ref:06X}: 0x{new_offset:06X}-0x{allocation_end:06X}'
             )
 
     fatal_errors = [
@@ -4623,43 +4589,43 @@ def command_build_repacked(args: argparse.Namespace) -> int:
     ]
     if fixed_overflows:
         fatal_errors.append(
-            f"{len(fixed_overflows)} TEXTE(S) FIXE(S) TROP LONG(S)"
+            f'{len(fixed_overflows)} FIXED TEXT RECORD(S) TOO LONG'
         )
     if skipped_contextual_pointers:
         fatal_errors.append(
-            f"{len(skipped_contextual_pointers)} POINTEUR(S) "
-            "CONTEXTUEL(S) AMBIGU(S)"
+            f"{len(skipped_contextual_pointers)} AMBIGUOUS "
+            "CONTEXTUAL POINTER(S)"
         )
 
     if fatal_errors:
-        print("Build repack complet par pointeurs: ECHEC PREFLIGHT")
+        print("Full pointer repack: PREFLIGHT FAILED")
         print(f"- CSV : {args.csv}")
-        print(f"- Echecs allocation : {len(allocation_failures)}")
+        print(f"- Allocation failures : {len(allocation_failures)}")
         print(
-            "- Chevauchements réservations graphiques : "
+            "- Graphical reservation overlaps : "
             f"{len(graphic_allocation_overlaps)}"
         )
-        print(f"- Textes fixes trop longs : {len(fixed_overflows)}")
-        print(f"- Violations tails code : {len(protected_tail_errors)}")
+        print(f"- Fixed texts too long : {len(fixed_overflows)}")
+        print(f"- Tail-code violations : {len(protected_tail_errors)}")
         print(
-            "- Violations records glyphiques : "
+            "- Glyph-record violations : "
             f"{len(protected_glyph_errors)}"
         )
         print(
-            "- Pointeurs contextuels ambigus : "
+            "- Ambiguous contextual pointers : "
             f"{len(skipped_contextual_pointers)}"
         )
-        print(f"- Erreurs fatales : {len(fatal_errors)}")
+        print(f"- Fatal errors : {len(fatal_errors)}")
         for error in fatal_errors[:40]:
             print(f"  {error}")
         if len(fatal_errors) > 40:
-            print(f"  ... et {len(fatal_errors) - 40} de plus")
+            print(f"  ... and {len(fatal_errors) - 40} more")
         for item in fixed_overflows[:20]:
             print(
-                f"  TRONCATURE INTERDITE {item['offset_hex']}: "
+                f"  TRUNCATION FORBIDDEN {item['offset_hex']}: "
                 f"{item['fr_len']} > {item['max_len']}"
             )
-        print("- Aucun artefact ecrit.")
+        print('- No artifacts written.')
         return 1
 
     applied = 0
@@ -4670,7 +4636,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
 
     for row, max_len, encoded in row_info:
         if max_len < 1:
-            warnings.append(f"SKIP 0x{row.offset:06X}: aucun texte source")
+            warnings.append(f'SKIP 0x{row.offset:06X}: no source text')
             continue
 
         if row.offset in allocations:
@@ -4731,7 +4697,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
         new_offset = allocations[ref]
         if pair_for_offset(new_offset) != pair_for_offset(ref):
             raise AssertionError(
-                f"variante 0x{ref:06X} allouée hors paire PRG"
+                f"variant 0x{ref:06X} allocated outside its PRG pair"
             )
         rom[new_offset:new_offset + len(encoded)] = encoded
         rom[new_offset + len(encoded)] = 0x0D
@@ -4740,7 +4706,7 @@ def command_build_repacked(args: argparse.Namespace) -> int:
         repointed_variants.append((ref, new_offset, len(encoded)))
 
     for offset in sorted(unsafe_candidates):
-        warnings.append(f"NON DEPLACE 0x{offset:06X}: chevauchement avec donnees protegees")
+        warnings.append(f'NOT RELOCATED 0x{offset:06X}: overlaps protected data')
 
     battle_menu_chr_expanded = False
     if text_profile is ENGLISH_TEXT_PROFILE:
@@ -4829,125 +4795,125 @@ def command_build_repacked(args: argparse.Namespace) -> int:
                 writer.writerow(item)
 
     changed = sum(1 for left, right in zip(original, rom) if left != right)
-    print("Build repack complet par pointeurs")
+    print("Full pointer repack")
     print(f"- CSV : {args.csv}")
-    print(f"- Tables/pointeurs detectes : {sum(len(refs) for refs in pointer_entries.values())} refs vers {len(pointer_entries)} cibles")
-    print(f"- Entrees appliquees : {applied}")
-    print(f"- Textes repackes : {len(relocated)}")
-    print(f"- Dialogues chinois restaures : {len(restored)}")
+    print(f"- Detected tables/pointers : {sum(len(refs) for refs in pointer_entries.values())} refs to {len(pointer_entries)} targets")
+    print(f"- Applied entries : {applied}")
+    print(f"- Repacked texts : {len(relocated)}")
+    print(f"- Restored Chinese dialogues : {len(restored)}")
     if pointer_variants:
         print(
-            "- Variantes de pointeurs anglaises : "
+            "- English pointer variants : "
             f"{len(repointed_variants)}"
         )
-    print(f"- Textes fixes encore tronques : {len(fixed_overflows)}")
-    print(f"- Octets modifies : {changed}")
+    print(f"- Fixed texts still truncated : {len(fixed_overflows)}")
+    print(f'- Changed bytes: {changed}')
     print(f"- ROM : {output_rom}")
     print(f"- IPS : {output_ips}")
     if text_profile is FRENCH_TEXT_PROFILE:
-        print(f"- Glyphes français : {font_changed} octets modifiés")
-        print(f"- Export CHR police : {font_export_directory}")
+        print(f'- French glyphs: {font_changed} bytes changed')
+        print(f"- Font CHR export : {font_export_directory}")
     else:
-        print("- Police anglaise préservée : OUI")
-        print("- Export CHR français : AUCUN")
+        print("- English font preserved : YES")
+        print('- French CHR export: NONE')
     if move_label_report is not None:
         print(
-            "- Attaques graphiques deux lignes : "
+            "- Two-line graphical moves : "
             f"{move_label_report.applied_count} "
-            f"({len(move_label_report.used_even_slots)} cellules)"
+            f"({len(move_label_report.used_even_slots)} cells)"
         )
-        print(f"- Plan attaques : {move_label_catalog}")
+        print(f"- Move plan : {move_label_catalog}")
         if move_label_report_path:
-            print(f"- Rapport attaques : {move_label_report_resolved}")
+            print(f"- Move report : {move_label_report_resolved}")
     if text_profile is ENGLISH_TEXT_PROFILE:
         print(
-            "- Zone CHR menu combat : "
+            "- Battle-menu CHR region : "
             f"0x{BATTLE_MENU_CHR_START_LOW_OFFSET:06X}=0x"
             f"{rom[BATTLE_MENU_CHR_START_LOW_OFFSET]:02X} "
-            + ("(étendue)" if battle_menu_chr_expanded else "(stock)")
+            + ("(expanded)" if battle_menu_chr_expanded else "(stock)")
         )
     if args.fixed_overflow_output:
-        print(f"- Rapport textes fixes trop longs : {ROOT / args.fixed_overflow_output}")
+        print(f"- Fixed-text overflow report : {ROOT / args.fixed_overflow_output}")
     if allocation_output:
-        print(f"- Rapport allocations : {ROOT / allocation_output}")
+        print(f"- Allocation report : {ROOT / allocation_output}")
     if bank_budget_output:
-        print(f"- Budget banques : {ROOT / bank_budget_output}")
-    print(f"- Avertissements : {len(warnings)}")
+        print(f"- Bank budget : {ROOT / bank_budget_output}")
+    print(f"- Warnings : {len(warnings)}")
 
     if relocated:
-        print("- Exemples de repack :")
+        print("- Repack examples :")
         for old_offset, new_offset, length, ref_count in relocated[:15]:
             print(
                 f"  0x{old_offset:06X} -> 0x{new_offset:06X} "
-                f"({length} caracteres, {ref_count} pointeur(s))"
+                f"({length} characters, {ref_count} pointer(s))"
             )
         if len(relocated) > 15:
-            print(f"  ... et {len(relocated) - 15} de plus")
+            print(f"  ... and {len(relocated) - 15} more")
 
     if restored:
-        print("- Exemples de restaurations chinoises :")
+        print("- Chinese restoration examples :")
         for ref, new_offset, length in restored[:15]:
             print(
                 f"  slot 0x{ref:06X} -> 0x{new_offset:06X} "
-                f"({length} caracteres)"
+                f"({length} characters)"
             )
         if len(restored) > 15:
-            print(f"  ... et {len(restored) - 15} de plus")
+            print(f"  ... and {len(restored) - 15} more")
 
     if repointed_variants:
-        print("- Variantes de pointeurs anglaises repointées :")
+        print("- Relocated English pointer variants :")
         for ref, new_offset, length in repointed_variants:
             print(
                 f"  slot 0x{ref:06X} -> 0x{new_offset:06X} "
-                f"({length} caracteres)"
+                f"({length} characters)"
             )
 
     if warnings:
         for warning in warnings[:25]:
             print(f"  {warning}")
         if len(warnings) > 25:
-            print(f"  ... et {len(warnings) - 25} de plus")
+            print(f"  ... and {len(warnings) - 25} more")
 
     return 0
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Outils d'audit et de build pour la traduction FR du bootleg Pokemon Yellow NES."
+        description='Audit and build tools for Pokemon Yellow NES translations.'
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
     check = sub.add_parser(
         "check",
-        help="Verifie que l'IPS anglais reconstruit sa cible canonique yellow.nes.",
+        help="Verify that the English IPS rebuilds its canonical yellow.nes target.",
     )
     check.add_argument("--chinese-rom", default=CHINESE_ROM)
     check.add_argument("--english-ips", default=ENGLISH_IPS)
     check.add_argument(
         "--english-rom",
         default=CANONICAL_ENGLISH_ROM,
-        help="Cible canonique attendue de l'IPS anglais (defaut: yellow.nes).",
+        help="Expected canonical target of the English IPS (default: yellow.nes).",
     )
-    check.add_argument("--write-yellow", default="", help="Optionnel: ecrit la reconstruction obtenue.")
+    check.add_argument("--write-yellow", default="", help="Optional: write the rebuilt ROM.")
     check.set_defaults(func=command_check)
 
     check_ips = sub.add_parser(
         "check-ips",
-        help="Applique un IPS a sa base et compare octet par octet avec la ROM cible.",
+        help="Apply an IPS to its base and compare it byte for byte with the target ROM.",
     )
     check_ips.add_argument("--base-rom", default=CANONICAL_ENGLISH_ROM)
     check_ips.add_argument("--ips", default=FINAL_IPS)
     check_ips.add_argument("--target-rom", default=FINAL_ROM)
     check_ips.set_defaults(func=command_check_ips)
 
-    dump = sub.add_parser("dump-script", help="Extrait les p(...) de script.py vers un CSV editable.")
+    dump = sub.add_parser("dump-script", help="Extract p(...) entries from script.py into an editable CSV.")
     dump.add_argument("--script", default=PATCH_SCRIPT)
     dump.add_argument("--english-rom", default=TRANSLATION_BASE_ROM)
     dump.add_argument("--output", default="traduction_base.csv")
     dump.add_argument("--overflow-output", default="traductions_trop_longues.csv")
     dump.set_defaults(func=command_dump_script)
 
-    audit = sub.add_parser("audit", help="Repere les blocs probablement encore anglais.")
+    audit = sub.add_parser("audit", help="Find blocks likely to still be in English.")
     audit.add_argument("--script", default=PATCH_SCRIPT)
     audit.add_argument("--english-rom", default=TRANSLATION_BASE_ROM)
     audit.add_argument("--french-rom", default=FRENCH_ROM)
@@ -4959,32 +4925,32 @@ def build_parser() -> argparse.ArgumentParser:
         "--text-range",
         action="append",
         default=["0x30000:0x40000"],
-        help="Plage texte a scanner. Repetable. Defaut: 0x30000:0x40000.",
+        help="Text range to scan. Repeatable. Default: 0x30000:0x40000.",
     )
     audit.add_argument(
         "--all-ranges",
         action="store_true",
-        help="Scanne toutes les plages fichier, plus bruyant.",
+        help="Scan all file ranges; produces noisier results.",
     )
     audit.add_argument(
         "--include-translated-hits",
         action="store_true",
-        help="Inclut aussi les blocs deja modifies mais contenant des mots anglais.",
+        help="Also include modified blocks that still contain English words.",
     )
     audit.add_argument(
         "--all-ascii",
         dest="only_english_ips",
         action="store_false",
-        help="Scanne toute la ROM au lieu des zones touchees par l'IPS anglais.",
+        help="Scan the entire ROM instead of areas changed by the English IPS.",
     )
     audit.set_defaults(func=command_audit, only_english_ips=True)
 
-    build = sub.add_parser("build", help="Reconstruit une ROM et un IPS depuis un CSV.")
+    build = sub.add_parser("build", help="Rebuild a ROM and an IPS from a CSV.")
     build.add_argument(
         "--profile",
         choices=PROFILE_CHOICES,
         default=DEFAULT_PROFILE,
-        help="Profil texte (défaut historique: fr-FR).",
+        help="Text profile (legacy default: fr-FR).",
     )
     build.add_argument("--csv", default="traduction_base.csv")
     build.add_argument("--input-rom", default=TRANSLATION_BASE_ROM)
@@ -4994,13 +4960,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     repointed = sub.add_parser(
         "build-repointed",
-        help="Construit une ROM experimentale en deplacant les textes trop longs repointables.",
+        help="Build an experimental ROM by relocating oversized texts with pointers.",
     )
     repointed.add_argument(
         "--profile",
         choices=PROFILE_CHOICES,
         default=DEFAULT_PROFILE,
-        help="Profil texte (défaut historique: fr-FR).",
+        help="Text profile (legacy default: fr-FR).",
     )
     repointed.add_argument("--csv", default="traduction_base.csv")
     repointed.add_argument("--input-rom", default=TRANSLATION_BASE_ROM)
@@ -5019,29 +4985,29 @@ def build_parser() -> argparse.ArgumentParser:
 
     repacked = sub.add_parser(
         "build-repacked",
-        help="Repacke les textes a pointeurs par banque et reutilise les anciens emplacements.",
+        help="Repack texts with pointers by bank and reuse their old slots.",
     )
     repacked.add_argument(
         "--profile",
         choices=PROFILE_CHOICES,
         default=DEFAULT_PROFILE,
-        help="Profil texte (défaut historique: fr-FR).",
+        help="Text profile (legacy default: fr-FR).",
     )
     repacked.add_argument("--csv", default="traduction_base.csv")
     repacked.add_argument(
         "--restorations-csv",
         default="",
         help=(
-            "Catalogue optionnel contenant exactement les 85 restaurations. "
-            "Pour en-US, le CSV principal est utilisé s'il est omis."
+            "Optional catalogue containing exactly the 85 restorations. "
+            "For en-US, use the main CSV if omitted."
         ),
     )
     repacked.add_argument(
         "--pointer-variants-csv",
         default="",
         help=(
-            "Catalogue en-US optionnel des sept variantes de pointeurs. "
-            "Ignoré par le profil fr-FR."
+            "Optional en-US catalogue of the seven pointer variants. "
+            "Ignored by the fr-FR profile."
         ),
     )
     repacked.add_argument("--input-rom", default=TRANSLATION_BASE_ROM)
@@ -5052,24 +5018,24 @@ def build_parser() -> argparse.ArgumentParser:
         "--move-labels-csv",
         default="",
         help=(
-            "Plan UTF-8 des attaques graphiques sur deux lignes. Par défaut, "
-            "utilise locales/<profil>/move_labels_two_line.csv s'il existe."
+            "UTF-8 plan for two-line graphical moves. Defaults to "
+            "locales/<profil>/move_labels_two_line.csv if available."
         ),
     )
     repacked.add_argument(
         "--move-label-report",
         default="",
-        help="Rapport JSON optionnel des cellules graphiques allouées.",
+        help="Optional JSON report of allocated graphical cells.",
     )
     repacked.add_argument(
         "--allocation-output",
         default="",
-        help="CSV optionnel détaillant les allocations et le suffix pooling.",
+        help="Optional CSV detailing allocations and suffix pooling.",
     )
     repacked.add_argument(
         "--bank-budget-output",
         default="",
-        help="CSV optionnel du budget libre restant par paire PRG.",
+        help="Optional CSV of the remaining free-space budget per PRG pair.",
     )
     repacked.add_argument("--min-pointer-run", type=int, default=5)
     repacked.add_argument("--min-known-ratio", type=float, default=0.4)
@@ -5085,15 +5051,15 @@ def build_parser() -> argparse.ArgumentParser:
         type=int,
         default=0,
         help=(
-            "Mode exploratoire: nombre de valeurs voisines pour accepter un "
-            "pointeur heuristique. Désactivé par défaut; les pointeurs courts "
-            "requis sont vérifiés explicitement."
+            "Exploratory mode: number of neighboring values required to accept a "
+            "heuristic pointer. Disabled by default; required short pointers "
+            "are verified explicitly."
         ),
     )
     repacked.add_argument(
         "--only-overflow",
         action="store_true",
-        help="Ne deplace que les textes a pointeurs trop longs. Par defaut, repacke toutes les cibles connues.",
+        help="Only relocate oversized texts with pointers. By default, repack all known targets.",
     )
     repacked.set_defaults(func=command_build_repacked)
 

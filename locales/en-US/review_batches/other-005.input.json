@@ -702,7 +702,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "9",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031C91",
@@ -723,7 +723,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "7",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031C99",
@@ -744,7 +744,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "7",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031CA1",
@@ -765,7 +765,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "7",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031CA9",
@@ -786,7 +786,7 @@
       "source_resolution": "pointer_table",
       "source_capacity_bytes": "7",
       "multi_source_mode": "",
-      "fidelity_comment": "La ROM anglaise conserve des codes graphiques; ce texte n'est pas une chaîne anglaise lisible."
+      "fidelity_comment": "The English ROM retains graphical codes; this record is not a readable English string."
     },
     {
       "stable_key": "MAIN:0x031CB2",

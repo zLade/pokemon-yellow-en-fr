@@ -34,7 +34,7 @@ def column_name(number: int) -> str:
 
 def synthetic_rows() -> list[list[str]]:
     rows = [list(EXPECTED_HEADERS)]
-    confidence_values = ("high", "medium", "low", "source directe")
+    confidence_values = ("high", "medium", "low", "direct source")
     for index in range(1, EXPECTED_ROW_COUNT):
         text = f"Dialogue français {index}"
         if index == 1:
@@ -43,18 +43,18 @@ def synthetic_rows() -> list[list[str]]:
             [
                 f"D{index:04d}",
                 f"MAIN:0x{index:06X}",
-                "Dialogue en jeu",
+                "In-game dialogue",
                 f"0x{index:06X}",
                 str(index),
                 "dialogue_19",
-                "PNJ",
+                "NPC",
                 text,
                 f"中文对白{index}",
                 f"English dialogue {index}",
                 confidence_values[(index - 1) % len(confidence_values)],
-                "traduit d'après le chinois",
-                "oui",
-                "oui",
+                "translated from Chinese",
+                "yes",
+                "yes",
                 "",
                 "",
             ]
@@ -143,7 +143,7 @@ def worksheet_xml(
     pane_x: int = 2,
     validation_type: str = "list",
     validation_ref: str = "O2:O1056",
-    validation_formula: str = '"Validé,À revoir,À réécrire"',
+    validation_formula: str = '"Approved,Needs review,Needs rewriting"',
     include_confidence_cf: bool = True,
     include_verdict_cf: bool = True,
     useful_cf: bool = True,
@@ -194,7 +194,7 @@ def worksheet_xml(
     verdict_xml = (
         conditional_block(
             "O2:O1056",
-            ("Validé", "À revoir", "À réécrire"),
+            ("Approved", "Needs review", "Needs rewriting"),
             first_priority=4,
             useful=useful_cf,
         )
@@ -332,18 +332,18 @@ class VerifyDialogueReviewXlsxTests(unittest.TestCase):
         self.assertTrue(result.passed(strict=True), result.warnings)
         self.assertFalse(result.errors)
         self.assertFalse(result.warnings)
-        self.assertTrue(any("14786 cellules" in check for check in result.checks))
+        self.assertTrue(any("14786 cells" in check for check in result.checks))
 
     def test_reviewer_feedback_is_preserved_but_verdict_stays_valid(self) -> None:
         result = self.verify_fixture(
             value_overrides={
-                "O2": "Validé",
-                "P2": "Le ton de cette réplique est parfait.",
+                "O2": "Approved",
+                "P2": "The tone of this line is perfect.",
             }
         )
         self.assertTrue(result.passed(strict=True), result.errors)
 
-        invalid = self.verify_fixture(value_overrides={"O2": "Inconnu"})
+        invalid = self.verify_fixture(value_overrides={"O2": "Unknown"})
         self.assertTrue(
             any("[FEEDBACK_VERDICT]" in error for error in invalid.errors),
             invalid.errors,
@@ -360,7 +360,7 @@ class VerifyDialogueReviewXlsxTests(unittest.TestCase):
         self.assertIn("[VALUE_MISMATCH]", report)
         self.assertIn("H13", report)
         self.assertIn("ID=D0012", report)
-        self.assertIn("clé=MAIN:0x00000C", report)
+        self.assertIn("key=MAIN:0x00000C", report)
         self.assertIn("texte altéré", report)
 
     def test_csv_rejects_nonsequential_ids_and_duplicate_stable_keys(self) -> None:
@@ -402,7 +402,7 @@ class VerifyDialogueReviewXlsxTests(unittest.TestCase):
         result = self.verify_fixture(
             validation_type="custom",
             validation_ref="O2:O1055",
-            validation_formula='"Seul"',
+            validation_formula='"Only"',
         )
         report = "\n".join(result.errors)
         self.assertIn("[VALIDATION_TYPE]", report)
@@ -443,7 +443,7 @@ class VerifyDialogueReviewXlsxTests(unittest.TestCase):
         self.assertIn("xl/tables/table1.xml", report)
 
     def test_any_physical_cell_outside_the_exact_grid_is_rejected(self) -> None:
-        result = self.verify_fixture(extra_cells={"Q1": "hors grille"})
+        result = self.verify_fixture(extra_cells={"Q1": "outside grid"})
         report = "\n".join(result.errors)
         self.assertIn("[CELL_OUTSIDE_GRID]", report)
         self.assertIn("Q1", report)
