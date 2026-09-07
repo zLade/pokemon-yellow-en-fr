@@ -6,7 +6,7 @@ from __future__ import annotations
 import unittest
 from pathlib import Path
 
-from rom_traduction_assistant import verified_dialogue_restoration_payloads
+from tools.rom_builder import verified_dialogue_restoration_payloads
 from tools.move_label_graphics import read_move_records
 from tools.validate_mapper163 import (
     MoveLabelCertificationError,
@@ -25,8 +25,8 @@ from tools.validate_repacked import (
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "Pokemon Yellow English 9-23-2015.nes"
-CATALOGUE = ROOT / "locales" / "fr-FR" / "move_labels_two_line.csv"
-TRANSLATIONS = ROOT / "traduction_base.csv"
+CATALOGUE = ROOT / "traduction" / "move_labels_two_line.csv"
+TRANSLATIONS = ROOT / "traduction/catalogue.csv"
 
 
 @unittest.skipUnless(

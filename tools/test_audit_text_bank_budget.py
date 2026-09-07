@@ -12,7 +12,7 @@ from tools.audit_text_bank_budget import (
     parse_floor,
     summarize_pair,
 )
-from rom_traduction_assistant import FreeSpan
+from tools.rom_builder import FreeSpan
 
 
 class BudgetSummaryTests(unittest.TestCase):

@@ -12,47 +12,14 @@ ROOT = Path(__file__).resolve().parent.parent
 
 PROFILES = {
     "fr": {
-        "required": (
-            ".github/workflows/validate.yml",
-            "CHANGELOG.md",
-            "CONTRIBUTING.md",
-            "NOTICE.md",
-            "docs/fr/REPRODUCTIBILITE.md",
-            "locales/fr-FR/manifest.json",
-            "profiles/fr-release.json",
-            "releases/fr/README.md",
-            "releases/fr/2.0.1/README.md",
-            "releases/fr/2.0.1/SHA256SUMS",
-            "tools/validate_french_release.py",
-        ),
-        "forbidden_prefixes": (
-            "locales/en-US/",
-            "releases/en/",
-        ),
-        "forbidden_files": (
-            "profiles/en-development.json",
-            "tools/build_english_release.py",
-        ),
-    },
-    "en": {
-        "required": (
-            "locales/en-US/catalog.csv",
-            "locales/en-US/README.md",
-            "releases/en/2.0.0/README.md",
-            "releases/en/2.0.0/SHA256SUMS",
-            "tools/build_english_release.py",
-        ),
-        "forbidden_prefixes": (
-            "locales/fr-FR/",
-            "releases/fr/",
-            "dist/fr/",
-        ),
-        "forbidden_files": (
-            "profiles/fr-release.json",
-            "tools/validate_french_release.py",
-        ),
+        "required": ("README.md", "NOTICE.md", "build.py", "traduction/catalogue.csv",
+                     "traduction/pointer_variants.csv", "traduction/move_labels_two_line.csv",
+                     "tools/build_french_release.py", "releases/fr/2.0.11/SHA256SUMS"),
+        "forbidden_prefixes": ("translation/", "releases/en/", "locales/", "profiles/", "tools/campaign/"),
+        "forbidden_files": ("script.py", "traduction_base.csv", "tools/build_english_release.py"),
     },
 }
+
 
 ROM_SUFFIXES = (".nes", ".gb", ".gbc", ".rom")
 

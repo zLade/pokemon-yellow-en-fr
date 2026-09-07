@@ -19,7 +19,7 @@ TOOL_DIR = Path(__file__).resolve().parent
 ROM_DIR = TOOL_DIR.parent
 sys.path.insert(0, str(ROM_DIR))
 
-from rom_traduction_assistant import (  # noqa: E402
+from tools.rom_builder import (  # noqa: E402
     offset_for_cpu_addr,
     pair_for_offset,
 )

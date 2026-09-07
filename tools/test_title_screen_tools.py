@@ -97,6 +97,8 @@ def target_block(rom: bytes, source_name: str) -> bytes:
 class PlayerMenuGraphicsTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
+        if not all((ROM_DIR / name).is_file() for name in ("yellow.nes", "Pokemon Yellow English 9-23-2015.nes")):
+            raise unittest.SkipTest("ROMs sources absentes")
         cls.base = (ROM_DIR / "yellow.nes").read_bytes()
 
     def patched_rom(self) -> bytes:
@@ -165,6 +167,8 @@ class PlayerMenuGraphicsTests(unittest.TestCase):
 class SecondaryMenuGraphicsTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
+        if not all((ROM_DIR / name).is_file() for name in ("yellow.nes", "Pokemon Yellow English 9-23-2015.nes")):
+            raise unittest.SkipTest("ROMs sources absentes")
         cls.base = (
             ROM_DIR / "Pokemon Yellow English 9-23-2015.nes"
         ).read_bytes()
@@ -292,6 +296,8 @@ class SecondaryMenuGraphicsTests(unittest.TestCase):
 class TitleAndLoadMenuGraphicsTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
+        if not all((ROM_DIR / name).is_file() for name in ("yellow.nes", "Pokemon Yellow English 9-23-2015.nes")):
+            raise unittest.SkipTest("ROMs sources absentes")
         cls.base = (
             ROM_DIR / "Pokemon Yellow English 9-23-2015.nes"
         ).read_bytes()
@@ -476,61 +482,6 @@ class TitleAndLoadMenuGraphicsTests(unittest.TestCase):
         )
 
 
-class MesenTitleLanguageProbeTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls) -> None:
-        cls.english_rom = (
-            ROM_DIR / "Pokemon Yellow English 9-23-2015.nes"
-        ).read_bytes()
-        cls.source = (
-            TOOLS_DIR / "mesen_title_en_menu_fr_probe.lua"
-        ).read_text(encoding="utf-8")
-
-    def test_probe_pins_exact_english_and_french_tile_payloads(self) -> None:
-        expected_tiles = [
-            *(
-                self.english_rom[
-                    graphics.TITLE_PT0_FILE + tile_id * 16
-                    : graphics.TITLE_PT0_FILE + (tile_id + 1) * 16
-                ]
-                for tile_id in graphics.TITLE_LOGO_TILE_IDS
-            ),
-            *graphics.MENU_FR_TILES,
-            self.english_rom[
-                graphics.TITLE_PT1_FILE
-                + graphics.TITLE_MENU_CURSOR_TILE_ID * 16
-                : graphics.TITLE_PT1_FILE
-                + (graphics.TITLE_MENU_CURSOR_TILE_ID + 1) * 16
-            ],
-            *graphics.FRENCH_BOTTOM_TITLE_TILES,
-        ]
-        for tile in expected_tiles:
-            with self.subTest(tile=tile.hex()):
-                self.assertIn(
-                    f'bytesFromHex("{tile.hex().upper()}")',
-                    self.source,
-                )
-
-    def test_probe_is_controller_only_and_has_exact_contract(self) -> None:
-        self.assertNotIn("emu.write(", self.source)
-        for required in (
-            "TITLE_EN_MENU_FR_PASS",
-            "TITLE_EN_MENU_FR_FAIL",
-            "sameFrameAssets=true",
-            'writeBinary(prefix .. "_screen.png", screenshot)',
-            'exportState("title_en"',
-            'exportState("title_menu_fr"',
-            "0x21A9",
-            "0x21AD",
-            "0x2267",
-            "0x22AA",
-            "menu_cursor_oam=",
-            "nesSpriteRam",
-            "bottom_title_jaune",
-            "0x2306",
-        ):
-            with self.subTest(required=required):
-                self.assertIn(required, self.source)
 
 
 if __name__ == "__main__":

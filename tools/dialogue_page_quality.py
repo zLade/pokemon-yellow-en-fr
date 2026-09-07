@@ -894,7 +894,7 @@ def compare_script_dialogue_quality(
     preserve_encoded_length: bool = True,
 ) -> dict[str, object]:
     """Compare the current greedy wrapper with the opt-in DP on one script."""
-    from rom_traduction_assistant import (
+    from tools.rom_builder import (
         pair_for_offset,
         parse_patch_entries,
     )
@@ -1224,7 +1224,7 @@ def main() -> int:
             "programmation dynamique pour les dialogues terrain."
         )
     )
-    parser.add_argument("--script", default="script.py")
+    parser.add_argument("--script", default="traduction/catalogue.csv")
     parser.add_argument("--output")
     parser.add_argument("--samples", type=int, default=30)
     parser.add_argument(

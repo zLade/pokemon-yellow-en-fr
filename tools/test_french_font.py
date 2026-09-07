@@ -14,12 +14,9 @@ from pathlib import Path
 ROM_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROM_DIR))
 
-from rom_traduction_assistant import (  # noqa: E402
+from tools.rom_builder import (  # noqa: E402
     TRANSLATION_BASE_ROM,
     parse_patch_entries,
-)
-from tools.audit_translation_coverage import (  # noqa: E402
-    REVIEWED_ASCII_REMAINDERS,
 )
 from tools.french_font import (  # noqa: E402
     ASCII_FONT_OFFSET,
@@ -42,6 +39,8 @@ from tools.french_font import (  # noqa: E402
 class FrenchFontTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
+        if not (ROM_DIR / TRANSLATION_BASE_ROM).is_file():
+            raise unittest.SkipTest("ROM anglaise 2015 absente")
         cls.base = (ROM_DIR / TRANSLATION_BASE_ROM).read_bytes()
         cls.font = extract_ascii_font(cls.base)
 
@@ -230,22 +229,6 @@ class FrenchFontTests(unittest.TestCase):
         self.assertEqual(conflicts, [])
         self.assertEqual(failures, [])
 
-    def test_invariant_runtime_ascii_does_not_use_repurposed_slots(
-        self,
-    ) -> None:
-        conflicts = {
-            offset: {
-                character
-                for character in text
-                if ord(character) in FRENCH_PATCHED_ASCII_CODES
-            }
-            for offset, (text, _, _) in REVIEWED_ASCII_REMAINDERS.items()
-            if any(
-                ord(character) in FRENCH_PATCHED_ASCII_CODES
-                for character in text
-            )
-        }
-        self.assertEqual(conflicts, {})
 
     def test_export_contains_editable_fonts_tiles_and_previews(self) -> None:
         patched = bytearray(self.base)

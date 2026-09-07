@@ -15,7 +15,7 @@ from pathlib import Path
 ROM_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROM_DIR))
 
-from rom_traduction_assistant import (  # noqa: E402
+from tools.rom_builder import (  # noqa: E402
     BATTLE_TEXT_CONTROL_CAVE_OFFSET,
     BATTLE_TEXT_CONTROL_CAVE_ORIGINAL,
     BATTLE_TEXT_CONTROL_CAVE_PATCH,
@@ -727,6 +727,7 @@ class TextFreeSpanTests(unittest.TestCase):
                 )
 
 
+@unittest.skipUnless((ROM_DIR / TRANSLATION_BASE_ROM).is_file(), "ROM source absente")
 class VerifiedPointerRedirectTests(unittest.TestCase):
     EXPECTED_REDIRECTS = {
         0x038347: (0x039D3B, 0x039AF5),
@@ -796,6 +797,7 @@ class VerifiedPointerRedirectTests(unittest.TestCase):
             apply_verified_pointer_redirects(self.original, entries)
 
 
+@unittest.skipUnless((ROM_DIR / TRANSLATION_BASE_ROM).is_file(), "ROM source absente")
 class VerifiedEmbeddedGraphicalTextTests(unittest.TestCase):
     EXPECTED_RECORDS = [
         (0x034927, 0x03492D, 6, 3),
@@ -844,6 +846,7 @@ class VerifiedEmbeddedGraphicalTextTests(unittest.TestCase):
             )
 
 
+@unittest.skipUnless((ROM_DIR / TRANSLATION_BASE_ROM).is_file(), "ROM source absente")
 class CurrentRomPlanTests(unittest.TestCase):
     KNOWN_POINTER_TABLE_HOLES = (
         (0x033193, 0x03319B),

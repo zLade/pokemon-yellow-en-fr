@@ -16,7 +16,7 @@ TOOL_DIR = Path(__file__).resolve().parent
 ROM_DIR = TOOL_DIR.parent
 sys.path.insert(0, str(ROM_DIR))
 
-from rom_traduction_assistant import (
+from tools.rom_builder import (
     DEFAULT_FRENCH_POINTER_VARIANTS,
     TRANSLATION_BASE_ROM,
     cpu_addr_for_offset,
@@ -34,7 +34,7 @@ from tools.validate_repacked import compute_plan
 
 SCHEMA = "pokemon-yellow-nes-pointer-manifest/v2"
 DEFAULT_ROM = "Pokemon_Jaune_FR_repacked_title.nes"
-DEFAULT_CSV = "traduction_base.csv"
+DEFAULT_CSV = "traduction/catalogue.csv"
 DEFAULT_OUTPUT = "build/audits/pointer_manifest.json"
 
 
@@ -153,7 +153,7 @@ def build_manifest(
         for refs in override_entries.values()
         for ref in refs
     }
-    restoration_payloads = verified_dialogue_restoration_payloads(original)
+    restoration_payloads = verified_dialogue_restoration_payloads(original, csv_path)
     restoration_references = set(restoration_payloads)
     variants_by_main = load_french_pointer_variants(
         DEFAULT_FRENCH_POINTER_VARIANTS

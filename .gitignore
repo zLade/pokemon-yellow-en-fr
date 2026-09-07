@@ -35,11 +35,8 @@
 # Legacy/local release output; curated patches live under /releases/.
 /dist/
 
-# Generated outputs; one pinned semantic extraction is versioned deliberately
-/build/**
-!/build/chinese-english-fidelity/
-!/build/chinese-english-fidelity/extraction/
-!/build/chinese-english-fidelity/extraction/**
+# Fichiers générés
+/build/
 /outputs/
 
 # Caches and local tooling
@@ -54,10 +51,7 @@ htmlcov/
 *.log
 *.tmp
 
-# Derived graphics; keep documentation only
-/graphics/**
-!/graphics/chr_modular/
-!/graphics/chr_modular/README.md
+/graphics/
 
 # Local scratch and OS files
 /NUL

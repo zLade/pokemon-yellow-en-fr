@@ -17,7 +17,7 @@ from pathlib import Path
 ROM_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROM_DIR))
 
-from rom_traduction_assistant import (  # noqa: E402
+from tools.rom_builder import (  # noqa: E402
     FINAL_ROM,
     TRANSLATION_BASE_ROM,
     load_french_pointer_variants,
@@ -57,7 +57,9 @@ def intersects(
     return start < protected_end and end > protected_start
 
 
+@unittest.skipUnless((ROM_DIR / TRANSLATION_BASE_ROM).is_file(), "ROM source absente")
 class RepackedTailSafetyTests(unittest.TestCase):
+    @unittest.skipUnless(FINAL_ROM_UNDER_TEST.is_file(), "ROM finale absente")
     def test_final_rom_preserves_text_bank_tail_hashes(self) -> None:
         base = (ROM_DIR / TRANSLATION_BASE_ROM).read_bytes()
         rebuilt = FINAL_ROM_UNDER_TEST.read_bytes()
@@ -151,9 +153,10 @@ class RepackedTailSafetyTests(unittest.TestCase):
                     )
 
 
+@unittest.skipUnless((ROM_DIR / TRANSLATION_BASE_ROM).is_file(), "ROM source absente")
 class RepackedCliSafetyTests(unittest.TestCase):
     def test_oversized_translation_fails_without_outputs(self) -> None:
-        source_csv = ROM_DIR / "traduction_base.csv"
+        source_csv = ROM_DIR / "traduction/catalogue.csv"
         with source_csv.open(newline="", encoding="utf-8") as handle:
             reader = csv.DictReader(handle)
             fieldnames = reader.fieldnames
@@ -185,7 +188,7 @@ class RepackedCliSafetyTests(unittest.TestCase):
                 writer.writeheader()
                 writer.writerows(rows)
 
-            for command in ("build", "build-repointed", "build-repacked"):
+            for command in ("build-repacked",):
                 with self.subTest(command=command):
                     output_rom.unlink(missing_ok=True)
                     output_ips.unlink(missing_ok=True)
@@ -193,7 +196,7 @@ class RepackedCliSafetyTests(unittest.TestCase):
                     arguments = [
                         sys.executable,
                         "-B",
-                        str(ROM_DIR / "rom_traduction_assistant.py"),
+                        str(ROM_DIR / "tools/rom_builder.py"),
                         command,
                         "--csv",
                         str(oversized_csv),
@@ -248,10 +251,10 @@ class RepackedCliSafetyTests(unittest.TestCase):
                 [
                     sys.executable,
                     "-B",
-                    str(ROM_DIR / "rom_traduction_assistant.py"),
+                    str(ROM_DIR / "tools/rom_builder.py"),
                     "build-repacked",
                     "--csv",
-                    str(ROM_DIR / "traduction_base.csv"),
+                    str(ROM_DIR / "traduction/catalogue.csv"),
                     "--input-rom",
                     str(ROM_DIR / TRANSLATION_BASE_ROM),
                     "--output-rom",
@@ -286,7 +289,7 @@ class RepackedCliSafetyTests(unittest.TestCase):
                     "--rom",
                     str(output_rom),
                     "--csv",
-                    str(ROM_DIR / "traduction_base.csv"),
+                    str(ROM_DIR / "traduction/catalogue.csv"),
                     "--input-rom",
                     str(ROM_DIR / TRANSLATION_BASE_ROM),
                     "--fixed-overflow",

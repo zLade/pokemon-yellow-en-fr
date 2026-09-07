@@ -6,3 +6,4 @@
 *.bin binary
 *.nes binary
 *.cdl binary
+/data/source/*.csv -text

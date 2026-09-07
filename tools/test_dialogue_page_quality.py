@@ -248,7 +248,7 @@ class DialoguePageQualityTests(unittest.TestCase):
 
     def test_full_report_exposes_residual_and_growth_schema(self) -> None:
         report = compare_script_dialogue_quality(
-            "script.py",
+            "traduction/catalogue.csv",
             sample_limit=0,
         )
         self.assertEqual(report["common_dialogue_rows"], 967)

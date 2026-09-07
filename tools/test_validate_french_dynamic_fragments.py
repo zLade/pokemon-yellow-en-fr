@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import unittest
 
-from rom_traduction_assistant import cpu_addr_for_offset
+from tools.rom_builder import cpu_addr_for_offset
 from tools.dialogue_layout import format_game_text
 from tools.validate_french_dynamic_fragments import (
     BATTLE_ARTIFACT_FREE_CELLS,

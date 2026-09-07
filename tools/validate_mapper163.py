@@ -144,7 +144,7 @@ class MoveLabelCertification:
 
 
 def default_move_label_catalogue(profile: str) -> Path:
-    return ROOT / "locales" / profile / "move_labels_two_line.csv"
+    return ROOT / ("traduction" if profile == "fr-FR" else "translation") / "move_labels_two_line.csv"
 
 
 def resolve_move_label_catalogue(
@@ -915,7 +915,7 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         help=(
             "catalogue explicite des noms d'attaques sur deux lignes; "
-            "par défaut locales/fr-FR/move_labels_two_line.csv s'il existe"
+            "par défaut traduction/move_labels_two_line.csv s'il existe"
         ),
     )
     return parser

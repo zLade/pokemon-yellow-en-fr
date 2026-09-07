@@ -21,7 +21,7 @@ TOOL_DIR = Path(__file__).resolve().parent
 ROM_DIR = TOOL_DIR.parent
 sys.path.insert(0, str(ROM_DIR))
 
-from rom_traduction_assistant import (  # noqa: E402
+from tools.rom_builder import (  # noqa: E402
     TRANSLATION_BASE_ROM,
     FreeSpan,
     pair_for_offset,
@@ -202,7 +202,7 @@ def build_parser() -> argparse.ArgumentParser:
             "l'allocation déterministe."
         )
     )
-    parser.add_argument("--csv", default="traduction_base.csv")
+    parser.add_argument("--csv", default="traduction/catalogue.csv")
     parser.add_argument("--input-rom", default=TRANSLATION_BASE_ROM)
     parser.add_argument(
         "--floor",

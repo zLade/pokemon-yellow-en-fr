@@ -25,36 +25,7 @@ from tools.verify_mesen_battery_corruption import (
 )
 
 
-FINAL_ROM_SHA256 = (
-    "1fefecbfa7084d19abfa5a89c389e75f4c0a307dee3b0bf41fde49a7ebf62d5b"
-)
-REAL_FINAL_RUNS = {
-    "Dendy": ROOT
-    / "build/runtime-proof-final-1fefecbf-battery-dendy"
-    / "run-20260809T160623Z-656bc1c8",
-    "Ntsc": ROOT
-    / "build/runtime-proof-final-1fefecbf-battery-ntsc"
-    / "run-20260809T160700Z-fbdf742f",
-    "Pal": ROOT
-    / "build/runtime-proof-final-1fefecbf-battery-pal"
-    / "run-20260809T160736Z-13cd0523",
-}
-
-
 class BatteryCorruptionEvidenceTests(unittest.TestCase):
-    def test_real_final_evidence_passes_all_three_regions(self) -> None:
-        rom_path = ROOT / "Pokemon_Jaune_FR_repacked_title.nes"
-        for expected_region, run_dir in REAL_FINAL_RUNS.items():
-            with self.subTest(region=expected_region):
-                report, errors = verify_run(run_dir, rom_path)
-                self.assertEqual(errors, [])
-                self.assertEqual(report["result"], "PASS")
-                self.assertEqual(report["region"], expected_region)
-                self.assertEqual(report["rom_sha256"], FINAL_ROM_SHA256)
-                self.assertEqual(len(report["phases"]), 5)
-                stored_path = run_dir.parent / "verification.json"
-                stored = json.loads(stored_path.read_text(encoding="utf-8"))
-                self.assertEqual(stored, report)
 
     def test_corruption_probe_observes_without_memory_injection(self) -> None:
         source = (

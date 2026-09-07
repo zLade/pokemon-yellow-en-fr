@@ -9,7 +9,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from rom_traduction_assistant import cpu_addr_for_offset, pair_for_offset
+from tools.rom_builder import cpu_addr_for_offset, pair_for_offset
 from tools.pointer_manifest import (
     SCHEMA,
     canonical_inventory_commitment,

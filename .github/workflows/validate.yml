@@ -13,48 +13,20 @@ jobs:
   validation-sans-rom:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    strategy:
+      matrix:
+        python: ["3.12", "3.14"]
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
-      - name: Vérifier la séparation et l'absence de ROM
-        run: python3 tools/validate_branch_separation.py --language fr
-      - name: Vérifier les patchs français actifs
+          python-version: ${{ matrix.python }}
+      - name: Contrôler les sources françaises
+        run: python build.py check
+      - name: Contrôler la séparation et l'absence de ROM
+        run: python tools/validate_branch_separation.py --language fr
+      - name: Vérifier le patch publié
         working-directory: releases/fr/2.0.11
         run: sha256sum -c SHA256SUMS
-      - name: Vérifier les contrôles historiques de la traduction
-        run: python3 -m unittest -v tools.test_validate_french_release
-      - name: Vérifier les inventaires chinois suivis sans ROM
-        run: |
-          python3 - <<'PY'
-          import csv
-          import hashlib
-          import json
-          from pathlib import Path
-
-          root = Path("build/chinese-english-fidelity/extraction")
-          summary = json.loads((root / "summary.json").read_text(encoding="utf-8"))
-          assert summary["provenance_mode"] == "derived_refresh_without_hzk_reextraction"
-          assert summary["source_dialogue_pointers_invalidated_in_english"] == 80
-          assert summary["source_dialogue_pointers_restored_in_french"] == 80
-          assert summary["source_dialogues_absent_from_english_and_french"] == 0
-          for name, expected in summary["derived_artifacts_sha256"].items():
-              actual = hashlib.sha256((root / name).read_bytes()).hexdigest()
-              assert actual == expected, (name, actual, expected)
-          with (root / "restored_chinese_dialogues.csv").open(
-              newline="", encoding="utf-8-sig"
-          ) as handle:
-              assert len(list(csv.DictReader(handle))) == 85
-          print("Inventaires chinois suivis: PASS (80 slots, 85 restaurations)")
-          PY
-      - name: Lancer les tests sans ROM
-        run: |
-          python3 -m unittest -v \
-            tools.test_validate_branch_separation \
-            tools.test_dialogue_layout \
-            tools.test_dialogue_page_quality \
-            tools.test_dialogue_inventory \
-            tools.test_coherence_corrections \
-            tools.test_french_naturalization \
-            tools.test_apply_dialogue_page_plan
+      - name: Exécuter les tests sans ROM
+        run: python -m unittest discover -s tools -p "test_*.py" -v

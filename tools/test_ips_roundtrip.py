@@ -13,7 +13,7 @@ from pathlib import Path
 ROM_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROM_DIR))
 
-from rom_traduction_assistant import (  # noqa: E402
+from tools.rom_builder import (  # noqa: E402
     FINAL_IPS,
     FINAL_ROM,
     apply_ips,

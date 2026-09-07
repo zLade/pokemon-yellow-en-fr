@@ -24,7 +24,7 @@ TOOL_DIR = Path(__file__).resolve().parent
 ROM_DIR = TOOL_DIR.parent
 sys.path.insert(0, str(ROM_DIR))
 
-from rom_traduction_assistant import (  # noqa: E402
+from tools.rom_builder import (  # noqa: E402
     BATTLE_TEXT_CONTROL_CAVE_OFFSET,
     BATTLE_TEXT_CONTROL_CAVE_PATCH,
     BATTLE_TEXT_CONTROL_HOOK_OFFSET,
@@ -103,7 +103,7 @@ from tools.validate_mapper163 import (  # noqa: E402
 
 
 DEFAULT_MOVE_LABEL_CATALOGUE = (
-    ROM_DIR / "locales" / "fr-FR" / "move_labels_two_line.csv"
+    ROM_DIR / "traduction" / "move_labels_two_line.csv"
 )
 EXPECTED_FRENCH_MOVE_LABEL_COUNT = 94
 
@@ -146,7 +146,7 @@ def compute_plan(args: argparse.Namespace):
         )
     rows = read_translation_csv(args.csv)
     move_label_catalogue, move_label_specs = load_french_move_label_specs(args)
-    restoration_payloads = verified_dialogue_restoration_payloads(original)
+    restoration_payloads = verified_dialogue_restoration_payloads(original, args.csv)
     pointer_variants = load_french_pointer_variants(
         getattr(
             args,
@@ -689,7 +689,7 @@ def command_validate(args: argparse.Namespace) -> int:
             for pointer_offset in pointer_offsets
         )
     }
-    restoration_payloads = verified_dialogue_restoration_payloads(original)
+    restoration_payloads = verified_dialogue_restoration_payloads(original, args.csv)
     layouts = {row.offset: row.layout for row, _, _ in row_info}
     pointer_variant_payloads = {
         variant.pointer_reference: format_game_text(
@@ -1125,7 +1125,7 @@ def command_validate(args: argparse.Namespace) -> int:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Valide statiquement une ROM repackee.")
     parser.add_argument("--rom", default="Pokemon_Jaune_FR_repacked.nes")
-    parser.add_argument("--csv", default="traduction_base.csv")
+    parser.add_argument("--csv", default="traduction/catalogue.csv")
     parser.add_argument("--input-rom", default=TRANSLATION_BASE_ROM)
     parser.add_argument("--fixed-overflow", default="textes_fixes_trop_longs.csv")
     parser.add_argument(
@@ -1133,7 +1133,7 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         help=(
             "catalogue des 94 noms d'attaques graphiques; "
-            "par défaut locales/fr-FR/move_labels_two_line.csv"
+            "par défaut traduction/move_labels_two_line.csv"
         ),
     )
     parser.add_argument(
