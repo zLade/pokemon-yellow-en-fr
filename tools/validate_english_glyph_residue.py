@@ -34,7 +34,7 @@ DEFAULT_ROM = (
     "Pokemon_Yellow_NJ046_EN_v2.0.0.nes"
 )
 DEFAULT_BASE = ROOT / "Pokemon Yellow English 9-23-2015.nes"
-DEFAULT_CATALOGUE = ROOT / "translation" / "catalog.csv"
+DEFAULT_CATALOGUE = ROOT / "translation"
 DEFAULT_NEUTRAL = ROOT / "data" / "validation" / "neutral_glyph_records.csv"
 EXPECTED_NEUTRAL_INDICES = frozenset(range(32, 50))
 
@@ -43,12 +43,15 @@ class EnglishGlyphResidueError(RuntimeError):
     pass
 
 
+from tools.catalogue_io import open_csv
+
+
 def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
 def _read_rows(path: Path) -> list[dict[str, str]]:
-    with path.open(encoding="utf-8-sig", newline="") as handle:
+    with open_csv(path) as handle:
         reader = csv.DictReader(handle)
         if reader.fieldnames is None:
             raise EnglishGlyphResidueError(f"CSV without header: {path}")

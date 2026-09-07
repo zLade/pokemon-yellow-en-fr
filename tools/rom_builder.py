@@ -72,7 +72,7 @@ TRANSLATION_BASE_SHA256 = (
 )
 FINAL_ROM = "build/en/Pokemon_Yellow_EN.nes"
 FINAL_IPS = "build/en/Pokemon_Yellow_EN.ips"
-DEFAULT_CATALOG = "translation/catalog.csv"
+DEFAULT_CATALOG = "translation"
 DEFAULT_PROFILE = "en-US"
 PROFILE_CHOICES = ("en-US",)
 
@@ -438,6 +438,9 @@ class PointerVariant:
 class FreeSpan:
     start: int
     length: int
+
+
+from tools.catalogue_io import open_csv
 
 
 def sha256(data: bytes) -> str:
@@ -3103,7 +3106,7 @@ def load_restoration_texts_csv(
     profile = resolve_text_profile(text_profile)
     restorations: dict[int, str] = {}
     csv_path = ROOT / path
-    with csv_path.open("r", newline="", encoding="utf-8-sig") as handle:
+    with open_csv(csv_path) as handle:
         reader = csv.DictReader(handle)
         for index, row in enumerate(reader, start=2):
             if not _is_restoration_catalogue_row(row):
@@ -3166,7 +3169,7 @@ def load_pointer_variants_csv(
     variants_by_main: dict[int, list[PointerVariant]] = {}
     seen_variant_keys: set[str] = set()
     seen_pointer_references: set[int] = set()
-    with csv_path.open("r", newline="", encoding="utf-8-sig") as handle:
+    with open_csv(csv_path) as handle:
         reader = csv.DictReader(handle)
         for line_number, row in enumerate(reader, start=2):
             status = _first_csv_value(row, ("review_status", "status"))
@@ -3315,7 +3318,7 @@ def read_translation_csv(
 ) -> list[TranslationRow]:
     profile = resolve_text_profile(text_profile)
     rows: list[TranslationRow] = []
-    with (ROOT / path).open("r", newline="", encoding="utf-8-sig") as handle:
+    with open_csv((ROOT / path)) as handle:
         reader = csv.DictReader(handle)
         for index, row in enumerate(reader, start=2):
             if skip_restoration_rows and _is_restoration_catalogue_row(row):

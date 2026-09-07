@@ -20,7 +20,7 @@ if str(ROOT) not in sys.path:
 from tools.locales.profiles import ENGLISH_TEXT_PROFILE  # noqa: E402
 
 
-DEFAULT_CATALOGUE = ROOT / "translation" / "catalog.csv"
+DEFAULT_CATALOGUE = ROOT / "translation"
 DEFAULT_ADJUDICATIONS = (
     ROOT / "data" / "validation" / "source_adjudications.csv"
 )
@@ -245,8 +245,11 @@ class EnglishCatalogueError(ValueError):
     """One or more release-blocking corpus defects were found."""
 
 
+from tools.catalogue_io import open_csv
+
+
 def read_csv(path: Path) -> tuple[list[str], list[dict[str, str]]]:
-    with path.open(newline="", encoding="utf-8-sig") as handle:
+    with open_csv(path) as handle:
         reader = csv.DictReader(handle)
         return list(reader.fieldnames or []), list(reader)
 

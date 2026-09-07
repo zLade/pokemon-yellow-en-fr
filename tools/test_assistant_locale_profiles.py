@@ -228,7 +228,7 @@ class AssistantProfilePolicyTests(unittest.TestCase):
             ]
         )
         self.assertEqual(default.profile, "en-US")
-        self.assertEqual(default.csv, "translation/catalog.csv")
+        self.assertEqual(default.csv, "translation")
         self.assertIs(assistant.resolve_text_profile(), ENGLISH_TEXT_PROFILE)
         self.assertEqual(english.profile, "en-US")
         self.assertEqual(english.restorations_csv, "restorations.csv")

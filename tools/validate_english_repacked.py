@@ -62,7 +62,7 @@ DEFAULT_ROM = (
     / "Pokemon_Yellow_NJ046_EN_v2.0.0.nes"
 )
 DEFAULT_BASE = ROOT / "Pokemon Yellow English 9-23-2015.nes"
-DEFAULT_CATALOGUE = ROOT / "translation" / "catalog.csv"
+DEFAULT_CATALOGUE = ROOT / "translation"
 DEFAULT_VARIANTS = ROOT / "translation" / "pointer_variants.csv"
 DEFAULT_MOVE_LABELS = ROOT / "translation" / "move_labels_two_line.csv"
 
@@ -84,6 +84,9 @@ EXPECTED_BATTLE_LINE_BREAK_PAYLOADS = {
 
 class EnglishRepackedError(ValueError):
     """The candidate differs from its reviewed deterministic reconstruction."""
+
+
+from tools.catalogue_io import open_csv, catalogue_paths
 
 
 def sha256(data: bytes) -> str:
@@ -225,7 +228,7 @@ def builder_arguments(
 
 
 def validate_overflow_report(path: Path) -> None:
-    with path.open(newline="", encoding="utf-8-sig") as handle:
+    with open_csv(path) as handle:
         reader = csv.DictReader(handle)
         rows = list(reader)
     if rows:
@@ -319,7 +322,7 @@ def validate_candidate(
         (variants_path, "pointer variants"),
         (move_labels_path, "two-line move labels"),
     ):
-        if not path.is_file():
+        if not (path.is_file() or (path == catalogue_path and path.is_dir() and all(part.is_file() for part in catalogue_paths(path)))):
             raise EnglishRepackedError(f"{label} missing: {path}")
 
     base = base_path.read_bytes()

@@ -37,7 +37,7 @@ DEFAULT_ROM = (
     / "2.0.0"
     / "Pokemon_Yellow_NJ046_EN_v2.0.0.nes"
 )
-DEFAULT_CATALOGUE = ROOT / "translation" / "catalog.csv"
+DEFAULT_CATALOGUE = ROOT / "translation"
 DEFAULT_VARIANTS = ROOT / "translation" / "pointer_variants.csv"
 DEFAULT_INVENTORY = ROOT / "data" / "validation" / "structural_pointer_inventory.json"
 DEFAULT_MOVE_LABELS = ROOT / "translation" / "move_labels_two_line.csv"
@@ -100,12 +100,15 @@ class EnglishPointerManifestError(ValueError):
     """The candidate's pointer graph differs from the reviewed inventory."""
 
 
+from tools.catalogue_io import open_csv, catalogue_bytes
+
+
 def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
 def read_csv_by_key(path: Path, key_field: str) -> dict[str, dict[str, str]]:
-    with path.open(newline="", encoding="utf-8-sig") as handle:
+    with open_csv(path) as handle:
         rows = list(csv.DictReader(handle))
     result: dict[str, dict[str, str]] = {}
     for row in rows:
@@ -387,7 +390,7 @@ def build_manifest(
             "rom": {"name": rom_path.name, "sha256": sha256(rom)},
             "catalogue": {
                 "name": catalogue_path.name,
-                "sha256": sha256(catalogue_path.read_bytes()),
+                "sha256": sha256(catalogue_bytes(catalogue_path)),
             },
             "variants": {
                 "name": variants_path.name,

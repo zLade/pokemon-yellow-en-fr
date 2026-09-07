@@ -215,9 +215,9 @@ class ReleaseProfile:
                 raise ValueError(f"{label} SHA-256 must be lowercase hex")
         if self.dist_directory.startswith(("/", "\\")):
             raise ValueError("distribution directory must be repository-relative")
-        if not self.catalogue_path.endswith((".py", ".csv")):
+        if not self.catalogue_path.endswith((".py", ".csv")) and self.catalogue_path != "translation":
             raise ValueError(
-                "canonical catalogue must be a Python source or CSV file"
+                "canonical catalogue must be a Python source, CSV file or the translation directory"
             )
 
     @property
@@ -287,8 +287,8 @@ ENGLISH_RELEASE_PROFILE = ReleaseProfile(
     key="en",
     version="2.0.0",
     text=ENGLISH_TEXT_PROFILE,
-    catalogue_path="translation/catalog.csv",
-    restoration_catalogue="translation/catalog.csv",
+    catalogue_path="translation",
+    restoration_catalogue="translation",
     base_rom_filename="Pokemon Yellow English 9-23-2015.nes",
     base_rom_sha256=(
         "d5c308b5862ccbe4647d4255a11bb0f1"

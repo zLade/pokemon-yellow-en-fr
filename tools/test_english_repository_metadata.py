@@ -27,8 +27,11 @@ FRENCH_METADATA = re.compile(
 )
 
 
+from tools.catalogue_io import open_csv
+
+
 def rows(path: Path) -> tuple[list[str], list[dict[str, str]]]:
-    with path.open(encoding="utf-8-sig", newline="") as handle:
+    with open_csv(path) as handle:
         reader = csv.DictReader(handle)
         return list(reader.fieldnames or ()), list(reader)
 
@@ -37,7 +40,7 @@ class EnglishRepositoryMetadataTests(unittest.TestCase):
     def test_single_translation_directory(self) -> None:
         self.assertEqual(
             {path.name for path in TRANSLATION.glob("*.csv")},
-            {"catalog.csv", "pointer_variants.csv", "move_labels_two_line.csv"},
+            {"catalog_part_1.csv", "catalog_part_2.csv", "pointer_variants.csv", "move_labels_two_line.csv"},
         )
         self.assertFalse((ROOT / "locales" / "en-US" / "catalog.csv").exists())
         self.assertFalse((ROOT / "script.py").exists())
@@ -61,7 +64,7 @@ class EnglishRepositoryMetadataTests(unittest.TestCase):
                             self.assertIsNone(FRENCH_METADATA.search(value), value)
 
     def test_catalogue_ownership_is_preserved(self) -> None:
-        fields, records = rows(TRANSLATION / "catalog.csv")
+        fields, records = rows(TRANSLATION)
         self.assertFalse(set(fields) & {
             "script_line", "french_v2_gloss", "secondary_french_provenance",
             "encoded_length",

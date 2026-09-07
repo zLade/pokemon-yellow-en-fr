@@ -44,14 +44,17 @@ All editable translation text is in **[translation/](translation/)**:
 
 | File | Use |
 | --- | --- |
-| [catalog.csv](translation/catalog.csv) | Main catalogue: compare `chinese_text` and edit `english_v2`. Contains 1,844 MAIN and 85 RESTORED records. |
+| [catalog_part_1.csv](translation/catalog_part_1.csv) | First part of the catalogue: compare `chinese_text` and edit `english_v2`. |
+| [catalog_part_2.csv](translation/catalog_part_2.csv) | Continuation of the same catalogue, with identical columns. Together the two parts contain 1,844 MAIN and 85 RESTORED records. |
 | [pointer_variants.csv](translation/pointer_variants.csv) | Context-specific `english_v2` for Chinese messages merged by the old English translation. |
 | [move_labels_two_line.csv](translation/move_labels_two_line.csv) | Graphical attack names: `full_name` is the name; `line_1` and `line_2` control its display. |
 
-For most changes, edit only `english_v2` in `catalog.csv`. Search by Chinese
+For most changes, edit only `english_v2` in either catalogue part. Search by Chinese
 text, current English text or `stable_key`. `english_2015` is a comparison
 with the older translation and can contain mistakes. Menus, names and
 descriptions are included; not every record is spoken dialogue.
+
+The scripts read `catalog_part_1.csv` followed by `catalog_part_2.csv` automatically. The CLI catalogue argument is the `translation` directory, not one individual part. Do not recreate a merged editable catalogue. Both parts must keep identical headers, unique stable keys and the original combined row order. Each file must stay below 512 KiB for GitHub table rendering; `build.py check` enforces this. If one grows too large, move complete rows across the boundary without changing the combined order.
 
 Save CSV files as UTF-8 with the existing headers and row order. Use an editor
 that preserves quoted commas, line breaks and leading/trailing spaces. Keep
@@ -81,7 +84,7 @@ python build.py check
 python -m unittest discover -s tools -p "test_*.py"
 ```
 
-`check` validates all three translation tables, including graphical labels.
+`check` validates all four translation files, including graphical labels.
 Tests needing local ROMs or fixtures are skipped when those inputs are absent.
 Fix reported encoding or layout errors; do not weaken the checks to accept an
 overflow. Static checks do not establish that a sentence is natural or that
@@ -180,7 +183,7 @@ not a translation table to commit.
 
 | Location | Role |
 | --- | --- |
-| `translation/` | The three editable translation tables. Start here. |
+| `translation/` | The four editable translation files. Start here. |
 | `data/source/` | Pinned Chinese records and glyph-to-Unicode map, used to verify source context. Do not edit during routine translation work. |
 | `data/validation/` | Reviewed source decisions, pointer ownership, shared storage, cameo names, neutral graphics and bank-space limits. These are safeguards, not another translation. |
 | `tools/` | Build implementation, regression tests and optional emulator probes. Contributors normally use `build.py` instead. |

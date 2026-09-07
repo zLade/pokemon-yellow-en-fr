@@ -10,13 +10,14 @@ import unittest
 from pathlib import Path
 
 from tools import rom_builder as builder
+from tools.catalogue_io import open_csv
 from tools.english_pointer_manifest import build_manifest
 from tools.validate_english_bank_budget import validate_budget, DEFAULT_POLICY
 from tools.validate_english_repacked import validate_candidate, EnglishRepackedError
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = ROOT / builder.TRANSLATION_BASE_ROM
-CATALOG = ROOT / "translation/catalog.csv"
+CATALOG = ROOT / "translation"
 VARIANTS = ROOT / "translation/pointer_variants.csv"
 MOVES = ROOT / "translation/move_labels_two_line.csv"
 INVENTORY = ROOT / "data/validation/structural_pointer_inventory.json"
@@ -32,7 +33,7 @@ FALSE_REFS = {0x031C9C, 0x0332F6, 0x03338C, 0x033FE6, 0x034010,
 
 
 def read_rows(path):
-    with path.open(encoding="utf-8-sig", newline="") as handle:
+    with open_csv(path) as handle:
         return list(csv.DictReader(handle))
 
 

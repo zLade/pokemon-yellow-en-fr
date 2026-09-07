@@ -20,6 +20,9 @@ from tools.restoration_topology import (
 )
 
 
+from tools.catalogue_io import open_csv
+
+
 class RestorationTopologyTests(unittest.TestCase):
     def test_topology_has_exact_structural_partition(self) -> None:
         counts = {
@@ -40,8 +43,8 @@ class RestorationTopologyTests(unittest.TestCase):
         )
 
     def test_current_english_catalogue_covers_neutral_topology_exactly(self) -> None:
-        path = Path(__file__).resolve().parent.parent / "translation/catalog.csv"
-        with path.open(encoding="utf-8-sig", newline="") as handle:
+        path = Path(__file__).resolve().parent.parent / "translation"
+        with open_csv(path) as handle:
             rows = [
                 row for row in csv.DictReader(handle)
                 if row["record_type"] == "RESTORED"

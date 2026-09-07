@@ -33,7 +33,7 @@ CORE_SCRIPT = ROOT / "tools" / "rom_builder.py"
 LOCALE = ROOT / "translation"
 VALIDATION = ROOT / "data" / "validation"
 DATA_INPUTS = {
-    "catalogue": LOCALE / "catalog.csv",
+    "catalogue": LOCALE,
     "adjudications": VALIDATION / "source_adjudications.csv",
     "variants": LOCALE / "pointer_variants.csv",
     "overlaps": VALIDATION / "storage_overlaps.csv",
@@ -62,6 +62,7 @@ ROM_SIZE = 2097168
 SOURCE_FILES = (
     "build.py",
     "tools/build_english_release.py",
+    "tools/catalogue_io.py",
     "tools/dialogue_layout.py",
     "tools/english_pointer_manifest.py",
     "tools/french_font.py",
@@ -114,6 +115,9 @@ PITCH_AFTER = bytes.fromhex(
 
 class BuildError(RuntimeError):
     """An input, byte check, or destination is unsafe."""
+
+
+from tools.catalogue_io import open_csv, catalogue_paths
 
 
 def sha256(data: bytes) -> str:
@@ -176,7 +180,7 @@ def safe_destination(path: Path, inputs: list[Path]) -> Path:
 
 def input_records(paths: list[Path]) -> dict[str, dict[str, object]]:
     records = {}
-    for path in sorted({p.resolve() for p in paths}):
+    for path in sorted({part.resolve() for p in paths for part in catalogue_paths(p)}):
         name = path.relative_to(ROOT).as_posix() if path.is_relative_to(ROOT) else path.as_posix()
         data = path.read_bytes()
         records[name] = {"size": len(data), "sha256": sha256(data)}
@@ -239,7 +243,7 @@ def build_core(english_rom: Path, work: Path) -> bytes:
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
-    with path.open(encoding="utf-8-sig", newline="") as handle:
+    with open_csv(path) as handle:
         return list(csv.DictReader(handle))
 
 
