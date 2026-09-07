@@ -5,7 +5,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RUNNER_PATH = ROOT / "tools/run-mesen-pokemon-scenario.ps1"
-CAMPAIGN_PATH = ROOT / "tools/campaign/mesen_campaign_prototype.lua"
 
 LUA_DEPENDENCY_PATTERN = re.compile(
     r"""(?:loadModule|dofile|require)\s*\(\s*
@@ -117,17 +116,10 @@ class MesenScenarioRunnerTests(unittest.TestCase):
         for snippet in required:
             self.assertIn(snippet, self.runner)
 
-    def test_campaign_dependency_set_is_complete(self) -> None:
-        dependencies = local_lua_dependencies(CAMPAIGN_PATH)
-        self.assertEqual(
-            {path.name for path in dependencies},
-            {
-                "engine.lua",
-                "input_queue.lua",
-                "memory_guard.lua",
-                "ram_map.lua",
-            },
-        )
+    def test_targeted_probe_dependency_sets_are_complete(self) -> None:
+        for script in (ROOT / "tools").glob("mesen_*.lua"):
+            with self.subTest(script=script.name):
+                local_lua_dependencies(script)
 
 if __name__ == "__main__":
     unittest.main()

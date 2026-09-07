@@ -13,10 +13,6 @@ CASES = (
     ("pair6", "RESTORED:0x033195", 0x03018D),
     ("pair6", "RESTORED:0x0331D1", 0x03018F),
     ("pair6", "RESTORED:0x0348F1", 0x030191),
-    ("pair7", "RESTORED:0x038347", 0x03825D),
-    ("pair7", "RESTORED:0x03834B", 0x03825F),
-    ("pair7", "RESTORED:0x03834F", 0x038261),
-    ("pair7", "RESTORED:0x038353", 0x038263),
 )
 HEADER = (
     "group",

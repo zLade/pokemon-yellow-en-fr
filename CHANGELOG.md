@@ -5,6 +5,8 @@ images are never distributed.
 
 ## Repository tooling — 2026-09-07
 
+- Removed the automated campaign prototype, route replays and dependent runtime checks.
+- Retained targeted Mesen diagnostics and static verification of all restored text.
 - Made the README the single contributor and build guide.
 - Removed redundant navigation pages and unused legacy patch/save utilities.
 - Consolidated editable translation inputs under `translation/`.

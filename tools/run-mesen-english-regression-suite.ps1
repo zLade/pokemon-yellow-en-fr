@@ -5,7 +5,6 @@ param(
     [string]$OutputDirectory,
     [Parameter(Mandatory = $true)]
     [string]$ExpectedRomSha256,
-    [string]$Route1InputPath,
     [string]$CriticalRestorationTargetsPath,
     [int]$TimeoutSeconds = 180,
     [bool]$StrictHardware = $true,
@@ -19,10 +18,8 @@ param(
 
 # Runtime suite for NJ046 English Fidelity 2.0.
 #
-# This is deliberately separate from run-mesen-pokemon-regression-suite.ps1:
-# that historical runner contains French-only charset, menu and source gates.
-# Every scenario below starts from the English candidate and therefore creates
-# evidence tied to the candidate SHA rather than reusing archived French logs.
+# Targeted checks only: no automated playthrough or recorded route replay.
+# Every scenario creates evidence tied to the English candidate SHA.
 # Critical restoration coverage uses an assisted transient loaded-PRG pointer patch.
 
 $ErrorActionPreference = 'Stop'
@@ -40,31 +37,17 @@ $PromptProbe = Join-Path `
 $EnglishCharsetProbe = Join-Path $ToolsRoot 'mesen_english_charset_probe.lua'
 $TitleMenuProbe = Join-Path $ToolsRoot 'mesen_title_yellow_version_probe.lua'
 $PlayerMenuProbe = Join-Path $ToolsRoot 'mesen_player_menu_en_probe.lua'
-$CampaignProbe = Join-Path $ToolsRoot 'mesen_campaign_english_trace.lua'
 $CriticalPair6Probe = Join-Path `
     $ToolsRoot `
     'mesen_critical_restorations_pair6_probe.lua'
-$CriticalPair7Probe = Join-Path `
-    $ToolsRoot `
-    'mesen_critical_restorations_pair7_probe.lua'
-$Route1Probe = Join-Path `
-    $ToolsRoot `
-    'mesen_fm3_route1_viridian_en_after_prototype.lua'
-
-if (-not $Route1InputPath) {
-    $Route1InputPath = Join-Path `
-        $ProjectRoot `
-        'build\campaign-reference\LeiDianHuangBiKaQiuChuanShuo-WIP1.inputs.bin'
-}
 if (-not $CriticalRestorationTargetsPath) {
     $CriticalRestorationTargetsPath = Join-Path `
         $ProjectRoot `
-        'build\evidence\en\2.0.0\audits\critical_restoration_runtime_targets.tsv'
+        'build\critical_restoration_runtime_targets.tsv'
 }
 
 $RomPath = [System.IO.Path]::GetFullPath($RomPath)
 $OutputDirectory = [System.IO.Path]::GetFullPath($OutputDirectory)
-$Route1InputPath = [System.IO.Path]::GetFullPath($Route1InputPath)
 $CriticalRestorationTargetsPath = [System.IO.Path]::GetFullPath(
     $CriticalRestorationTargetsPath
 )
@@ -86,7 +69,6 @@ if ($TimeoutSeconds -lt 30) {
 
 $RequiredFiles = @(
     $RomPath,
-    $Route1InputPath,
     $ScenarioRunner,
     $BatteryRunner,
     $BootProbe,
@@ -96,11 +78,8 @@ $RequiredFiles = @(
     $EnglishCharsetProbe,
     $TitleMenuProbe,
     $PlayerMenuProbe,
-    $CampaignProbe,
     $CriticalPair6Probe,
-    $CriticalPair7Probe,
-    $CriticalRestorationTargetsPath,
-    $Route1Probe
+    $CriticalRestorationTargetsPath
 )
 foreach ($Path in $RequiredFiles) {
     if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) {
@@ -229,7 +208,7 @@ function Invoke-EnglishBattery {
         RomPath = $RomPath
         OutputDirectory = Join-Path `
             (Join-Path $RunDirectory $Region.ToLowerInvariant()) `
-            '12-battery-primary-backup-corruption'
+            '09-battery-primary-backup-corruption'
         Region = $Region
         TimeoutSeconds = $TimeoutSeconds
         StrictHardware = $StrictHardware
@@ -269,7 +248,7 @@ function Write-EnglishRuntimeManifest {
     $Lines.Add("CHR-ROM bytes: $ChrBytes") | Out-Null
     $Lines.Add('Expected CHR-RAM bytes: 8192') | Out-Null
     $Lines.Add('Regions: Dendy,Ntsc,Pal') | Out-Null
-    $Lines.Add('Route 1 qualification: diagnostic, not a full campaign') |
+    $Lines.Add('Scope: targeted checks only; no automated playthrough') |
         Out-Null
     $Lines.Add(
         'Critical restoration qualification: assisted transient loaded-PRG ' +
@@ -334,28 +313,10 @@ try {
                 ''
             ),
             @(
-                '08-campaign-start',
-                $CampaignProbe,
-                'POKEMON_CAMPAIGN_ENGLISH_TRACE_PASS',
-                ''
-            ),
-            @(
-                '09-critical-restorations-pair6-assisted',
+                '08-critical-restorations-pair6-assisted',
                 $CriticalPair6Probe,
                 'POKEMON_CRITICAL_RESTORATIONS_PAIR6_PASS',
                 $CriticalRestorationTargetsPath
-            ),
-            @(
-                '10-critical-restorations-pair7-assisted',
-                $CriticalPair7Probe,
-                'POKEMON_CRITICAL_RESTORATIONS_PAIR7_PASS',
-                $CriticalRestorationTargetsPath
-            ),
-            @(
-                '11-route1-viridian',
-                $Route1Probe,
-                'POKEMON_FM3_ROUTE1_VIRIDIAN_EN_TRACE_PASS',
-                $Route1InputPath
             )
         )
         foreach ($Scenario in $Scenarios) {

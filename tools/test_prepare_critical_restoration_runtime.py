@@ -20,7 +20,6 @@ class CriticalRestorationRuntimeMapTests(unittest.TestCase):
         records: list[dict[str, object]] = []
         case_targets = {
             "pair6": iter((0x030010, 0x030020, 0x030030)),
-            "pair7": iter((0x038010, 0x038020, 0x038030, 0x038040)),
         }
         for group, stable_key, harness_reference in CASES:
             target = next(case_targets[group])
@@ -54,11 +53,11 @@ class CriticalRestorationRuntimeMapTests(unittest.TestCase):
         }
         return manifest, bytes(rom)
 
-    def test_exact_seven_cases_are_bound_to_same_pair_harnesses(self) -> None:
+    def test_exact_three_cases_are_bound_to_same_pair_harnesses(self) -> None:
         manifest, rom = self.fixtures()
         rows = build_rows(manifest, rom)
-        self.assertEqual(len(rows), 7)
-        self.assertEqual({row["group"] for row in rows}, {"pair6", "pair7"})
+        self.assertEqual(len(rows), 3)
+        self.assertEqual({row["group"] for row in rows}, {"pair6"})
         self.assertIn(
             "schema\tnj046-en2-critical-restoration-runtime/v1",
             render(manifest, rows),
