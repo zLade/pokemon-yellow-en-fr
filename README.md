@@ -77,6 +77,96 @@ Translation rules:
 - Keep comments and editorial notes in English. Do not add a second review
   spreadsheet, exported catalogue or JSON copy of the same translation.
 
+### Translation column reference
+
+The following tables cover every column in the editable CSV files. **Edit**
+means a normal translation contribution; **Note** means editorial information
+to update only when your correction warrants it; **Keep** means source or
+technical metadata to leave unchanged. These labels are guidance, not CSV values.
+Do not rename headers, add/delete records or renumber IDs for a wording change.
+Blank metadata does not invite filling it with a guess.
+
+#### Main catalogue (both parts)
+
+| Column | Meaning | What to do |
+| --- | --- | --- |
+| `stable_key` | Permanent record identity, such as `MAIN:0x0301C4`. Use it in reports and cross-references. | Keep. |
+| `record_type` | `MAIN`: a main translation record; `RESTORED`: a Chinese text restored after omission or pointer merging in the old English base. | Keep. |
+| `entry_index` | Reference index of the entry in the catalogue inventory; not a screen position. | Keep. |
+| `dialogue_id` | Link to the dialogue inventory, where applicable. | Keep. |
+| `category` | Descriptive classification of the text's use. | Note: correct only with confirmed context. |
+| `source_offset_or_pointer` | Hexadecimal source identity used by the builder; not the relocated address in the final ROM. | Keep. |
+| `pointer_references` | Source pointer locations associated with the record. A pointer location is distinct from its text target. | Keep. |
+| `selected_pointer_references` | Reviewed subset of references assigned to this record. | Keep; changing ownership requires technical review. |
+| `layout` | Encoding/layout rule for the text box. See the explanation below. | Keep. |
+| `speaker` | Speaker/context annotation when known; not a name automatically inserted into the game. | Note: correct only with evidence. |
+| `chinese_record_indexes` | Links to record indexes in the pinned Chinese extraction. | Keep. |
+| `chinese_offsets` | Corresponding source locations in the Chinese ROM. | Keep. |
+| `chinese_text` | Chinese source meaning, possibly covering several source records. | Keep; report extraction/alignment errors separately. |
+| `english_2015_storage` | How the old base stored the entry: ASCII, graphical codes, or absent/wrong pointer. | Keep. |
+| `english_2015` | Historical English text or decoded representation, potentially incorrect. | Keep; it is a comparison, not the text to translate into. |
+| `english_v2` | Current English text encoded into the game. | **Edit this for wording corrections.** Preserve significant spaces and controls. |
+| `editorial_origin` | Provenance of the translation/review, such as direct Chinese translation with AI review. | Note: retain truthful provenance; do not relabel an edit as a completed review. |
+| `alignment_method` | How the Chinese source was matched: pointer table, offset, overlap or restoration inventory, for example. | Keep; not a translation-quality rating. |
+| `alignment_confidence` | Confidence in that source match, not proof of linguistic correctness. | Keep unless the source match is re-reviewed. |
+| `source_resolution` | Reviewed decision used to resolve source identity or shared meanings. | Keep; coordinated source review is required to change it. |
+| `review_status` | Recorded review state; `ai_source_reviewed` does not mean a complete human playthrough. | Note: change only to reflect an actual agreed review; never to bypass validation. |
+| `source_capacity_bytes` | Original storage capacity in bytes, used by the builder's space checks. | Keep; not the visible line width or a manual length counter. |
+| `compression` | Whether the wording was shortened to meet constraints. This is editorial shortening, not a binary compression switch. | Note: keep consistent with the wording. |
+| `compression_justification` | Why shortening was necessary; required when `compression` is `yes`. | Note: explain the constraint and retained meaning. |
+| `fidelity_comment` | Explanation of meaning, terminology or an intentional difference from the old English text. | Note: update in English when relevant. |
+| `multi_source_mode` | Reviewed handling of multiple source meanings: safe sharing, pointer variants or restored text/reference splits. | Keep. |
+| `pointer_variant_count` | Number of context-specific variants associated with the entry. | Keep; do not change to hide a missing variant. |
+| `storage_overlap_group` | Identifier of a reviewed group whose source storage overlaps. | Keep. |
+| `storage_overlap_role` | `owner` owns the storage; `suffix_alias` refers to a shared ending within it. | Keep; wording changes may need a coordinated review of the group. |
+
+`dialogue_19_19` and `dialogue_intro_17_19` select dialogue line-width
+rules; `pokedex_13x4` selects the 13-column, four-line description layout;
+`fixed_grid_7x3` selects the seven-column, three-line item-description grid.
+An empty layout or `raw` does **not** mean unlimited space: fixed slots,
+runtime-inserted names and special battle routines still impose constraints.
+The builder handles allocation; never increase a capacity or change a layout
+just to make longer wording pass.
+
+#### Context-specific pointer variants
+
+| Column | Meaning | What to do |
+| --- | --- | --- |
+| `variant_key` | Unique variant identity, combining the parent key and pointer reference. | Keep. |
+| `stable_key` | Parent MAIN record in the catalogue. | Keep. |
+| `entry_index` | Parent entry's inventory index. | Keep. |
+| `pointer_reference_hex` | Hexadecimal location of the pointer selecting this particular meaning. | Keep. |
+| `chinese_record_index` | Specific Chinese extraction record for this variant. | Keep. |
+| `chinese_offset_hex` | Location of that Chinese source text. | Keep. |
+| `chinese_text` | Chinese meaning for this context. | Keep; use it to translate the variant. |
+| `shared_english_2015_target` | Old English text address shared by otherwise distinct Chinese contexts. | Keep. |
+| `english_2015` | Historical shared English wording, possibly wrong for this context. | Keep. |
+| `english_v2` | English text for this pointer's context. | **Edit.** Keep the primary variant identical to its MAIN text; do not copy it over distinct secondary meanings. |
+| `editorial_origin` | Translation/review provenance, as in the main catalogue. | Note: preserve accurate provenance. |
+| `review_status` | Recorded review state, as in the main catalogue. | Note: do not change merely to satisfy a check. |
+| `fidelity_comment` | Explanation of the contextual distinction and wording. | Note: update in English when relevant. |
+
+#### Graphical move names
+
+| Column | Meaning | What to do |
+| --- | --- | --- |
+| `move_index` | Move's index in this NES game's move table; not a row number to renumber or an assumed Game Boy ID. | Keep, including its formatting. |
+| `full_name` | Complete readable move name for identification and reports. | **Edit** when correcting the name; this field alone does not redraw the label. |
+| `line_1` | Actual top line of the graphical label. | **Edit**, using 1–8 encoded glyphs. |
+| `line_2` | Actual bottom line of the graphical label. | **Edit**, using 1–8 encoded glyphs; the current loader requires a nonempty second line. |
+
+For example, `Flame Wheel` is displayed with `Flame` / `Wheel`. Keep
+the complete name in `full_name` even when the displayed lines need an
+abbreviation. These limits apply to this graphical table, not all dialogue.
+The file contains selected graphical overrides, not every attack in the game.
+Do not add/remove move indexes without checking the graphics allocation and tests.
+
+For a typical correction, edit `english_v2`, adjust its primary variant if
+present, and update a relevant explanation rather than unrelated metadata.
+Run the checks below. Some intentional battle or source changes also require
+reviewing explicit test expectations; report that need rather than disabling
+the test. Never “fix” a mismatch by changing pointers or source text.
+
 ### 3. Check your change
 
 ```sh
