@@ -29,6 +29,79 @@ Conserver le CSV UTF-8, les espaces de début/fin et les retours à la ligne dan
 
 `chinese_text` est la référence linguistique ; `source_en` est la traduction historique de 2015, pas une autorité. `source_alignment` indique une correspondance unique, multiple, restaurée ou non alignée. Plusieurs textes chinois peuvent partager un texte anglais : ne pas supposer une correspondance certaine. Les lignes `RESTORED` rétablissent des textes absents ou confondus dans la base anglaise. Une entrée vide est volontaire et réservée par les contrôles structurels.
 
+### Dictionnaire des colonnes
+
+Les tableaux ci-dessous décrivent toutes les colonnes des trois CSV éditables.
+**Modifier** désigne le travail habituel de traduction ; **Note** une information
+éditoriale à actualiser seulement si la correction le justifie ; **Conserver**
+une donnée source ou technique à ne pas changer. Ces indications ne sont pas
+des valeurs à saisir dans le CSV. Ne pas renommer les colonnes, ajouter/supprimer
+des entrées ou renuméroter les identifiants pour corriger une phrase.
+
+#### Catalogue principal
+
+| Colonne | Signification | Consigne |
+| --- | --- | --- |
+| `stable_key` | Identifiant permanent, par exemple `MAIN:0x0301C4`, à citer dans une correction ou un signalement. | Conserver. |
+| `record_type` | `MAIN` : entrée principale ; `RESTORED` : texte chinois rétabli après une omission ou une confusion dans la base anglaise. | Conserver. |
+| `offset_hex` | Adresse source hexadécimale qui identifie l'entrée pour le moteur, pas nécessairement son adresse après déplacement dans la ROM finale. | Conserver. |
+| `layout` | Règle de mise en page et d'encodage de cette entrée, détaillée ci-dessous. | Conserver. |
+| `max_len` | Capacité de stockage source en octets, pas nombre de lettres autorisées à l'écran. Une cellule vide laisse le moteur déterminer la capacité applicable. | Conserver, y compris les cellules vides ; ne pas augmenter pour faire passer un texte. |
+| `chinese_text` | Texte chinois de référence, parfois associé à plusieurs entrées sources. | Conserver ; signaler séparément une erreur d'extraction ou de correspondance. |
+| `source_en` | Texte historique de la base anglaise de 2015, potentiellement erroné. | Conserver : c'est une comparaison, pas le texte français à modifier. |
+| `fr_text` | Traduction française actuelle utilisée pour construire la ROM. | **Modifier cette colonne pour corriger le texte.** Préserver espaces de raccord, retours à la ligne et contrôles. |
+| `source_alignment` | État de la correspondance avec le chinois : `unique`, `multiple`, `restaure` ou `non_aligne`. | Conserver sauf réexamen de la source ; ce n'est pas une note de qualité de la traduction. |
+
+`unique` indique une correspondance unique, `multiple` plusieurs sources
+associées, `restaure` une entrée restaurée et `non_aligne` l'absence de
+correspondance établie. Ne pas inventer une source pour remplir une cellule.
+
+`dialogue_19_19` et `dialogue_intro_17_19` sélectionnent les règles de
+largeur des lignes de dialogue ; `pokedex_13x4` sélectionne une description
+sur quatre lignes de treize colonnes. Un `layout` vide ou `raw` ne signifie
+pas « espace illimité » : les emplacements fixes, les noms insérés pendant le
+jeu et les routines de combat imposent aussi des limites. Le moteur gère les
+déplacements de texte ; les capacités source ne sont pas des compteurs à
+recalculer manuellement après une correction.
+
+#### Variantes liées aux pointeurs
+
+Un pointeur indique au jeu où lire un texte. Son adresse dans la table est
+différente de l'adresse du texte visé. Certaines situations chinoises distinctes
+partageaient un même texte anglais : ces variantes permettent de les séparer.
+
+| Colonne | Signification | Consigne |
+| --- | --- | --- |
+| `main_offset_hex` | Adresse de l'entrée MAIN du catalogue à laquelle appartient la variante. | Conserver. |
+| `pointer_reference_hex` | Adresse du pointeur qui sélectionne ce contexte précis. | Conserver ; ne pas la confondre avec l'adresse du texte. |
+| `chinese_text` | Sens chinois propre à ce contexte. | Conserver et utiliser comme référence. |
+| `fr_text` | Texte français destiné à ce pointeur. | **Modifier.** La première variante de chaque groupe doit rester identique au texte MAIN correspondant ; les autres gardent leur sens distinct. |
+| `review_status` | État de relecture ; le chargeur exige actuellement `reviewed`. | Note : ne pas marquer une variante comme relue sans relecture, ni changer le statut pour contourner un contrôle. |
+| `fidelity_comment` | Explication du sens, des différences entre contextes et des choix de formulation. | Note : actualiser en français lorsque la correction le nécessite. Ce commentaire n'est pas affiché en jeu. |
+
+#### Noms d'attaques graphiques
+
+| Colonne | Signification | Consigne |
+| --- | --- | --- |
+| `move_index` | Indice de l'attaque dans la table de ce jeu NES ; ce n'est pas un numéro de ligne à renuméroter ni nécessairement un identifiant Game Boy. | Conserver, y compris sa présentation. |
+| `full_name` | Nom complet lisible servant à identifier l'attaque et aux rapports. | **Modifier** pour corriger le nom ; ce champ seul ne redessine pas le libellé en jeu. |
+| `line_1` | Première ligne réellement dessinée dans le libellé graphique. | **Modifier**, avec 1 à 8 glyphes encodés. |
+| `line_2` | Seconde ligne réellement dessinée dans le libellé graphique. | **Modifier**, avec 1 à 8 glyphes encodés ; le chargeur actuel exige une seconde ligne non vide. |
+
+Exemple : `Roue de Feu` conserve son nom complet dans `full_name`, avec
+`Roue` dans `line_1` et `de Feu` dans `line_2`. Conserver le nom complet
+même si les lignes affichées nécessitent une abréviation. Cette limite de huit
+glyphes concerne ce tableau graphique, pas tous les dialogues. Le fichier ne
+contient que les remplacements graphiques sélectionnés, pas toutes les attaques
+du jeu. Ajouter ou retirer un indice demande une vérification technique des
+allocations graphiques et des tests.
+
+Pour une correction ordinaire, modifier `fr_text`, répercuter la modification
+dans la première variante si elle existe, puis lancer les contrôles ci-dessous.
+Ne pas changer une source, un pointeur ou une limite pour contourner une erreur.
+Les fichiers de `data/source/` et `data/validation/` sont des références et
+des garde-fous, pas des tableaux supplémentaires à mettre à jour à chaque phrase.
+
 ## Contribuer
 
 1. Créer une branche de travail à partir de `fr` et modifier les cellules concernées.
