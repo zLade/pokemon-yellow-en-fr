@@ -26,7 +26,7 @@ jobs:
       - name: Contrôler la séparation et l'absence de ROM
         run: python tools/validate_branch_separation.py --language fr
       - name: Vérifier le patch publié
-        working-directory: releases/fr/2.0.12
+        working-directory: releases/fr/2.0.13
         run: sha256sum -c SHA256SUMS
       - name: Exécuter les tests sans ROM
         run: python -m unittest discover -s tools -p "test_*.py" -v

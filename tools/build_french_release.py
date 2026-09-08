@@ -26,7 +26,7 @@ from tools.dialogue_layout import format_game_text
 from tools.move_label_graphics import load_move_label_csv, french_text_encoder
 
 CATALOGUE = ROOT / "traduction/catalogue.csv"
-VERSION = "2.0.12"
+VERSION = "2.0.13"
 DEFAULT_ROMS = {
     "english": ROOT / core.TRANSLATION_BASE_ROM,
     "chinese": ROOT / core.CHINESE_ROM,
@@ -35,8 +35,8 @@ SOURCE_HASHES = {
     "english": "d5c308b5862ccbe4647d4255a11bb0f1cb6817c4b107feac112509d658a9943b",
     "chinese": "450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed",
 }
-ROM_HASH = "efc7ba0837a65d06e0658348d3debaa1194b9cf03b59492a1a8d4dfab346327e"
-IPS_HASH = "cda7966b1767538a8712cc3506269b22db8b3650e13847c32bdf64511f3d0667"
+ROM_HASH = "2846fac5738ad24bc65dd1c24622fe4a1e9fffe94062052e84bfbae1cd34fae3"
+IPS_HASH = "c05525ad4bbc628f5f97c9005ff85751236be282913ce835d25d350f6dccec0c"
 PITCH_START = 0x01B0A9
 PITCH_BEFORE = bytes.fromhex(
     "9a2dc66408b26013ca854407cd96633204d9b08965422203e6cbb199826c584432211101"
@@ -182,8 +182,8 @@ def build(args: argparse.Namespace) -> dict:
         errors += bank_errors
         require(not errors, "\n".join(errors))
         if args.verify_release:
-            require(sha(final) == ROM_HASH and sha(ips) == IPS_HASH, "Différence avec la release 2.0.12")
-            published = ROOT / "releases/fr/2.0.12/Pokemon_Jaune_NJ046_FR_v2.0.12.ips"
+            require(sha(final) == ROM_HASH and sha(ips) == IPS_HASH, "Différence avec la release 2.0.13")
+            published = ROOT / "releases/fr/2.0.13/Pokemon_Jaune_NJ046_FR_v2.0.13.ips"
             require(ips == published.read_bytes(), "IPS publié différent")
         require(before == {str(path.relative_to(ROOT)): sha(path.read_bytes()) for path in source_files},
                 "Une source a changé pendant la compilation")
@@ -211,7 +211,7 @@ def main(argv=None) -> int:
     commands.add_parser("check", help="Contrôles du catalogue sans ROM")
     command = commands.add_parser("build", help="Compiler et contrôler les ROM et IPS")
     command.add_argument("--output-dir", type=Path, default=ROOT / "build/fr")
-    command.add_argument("--verify-release", action="store_true", help="Exiger les octets exacts de la 2.0.12")
+    command.add_argument("--verify-release", action="store_true", help="Exiger les octets exacts de la 2.0.13")
     for name, path in DEFAULT_ROMS.items():
         command.add_argument(f"--{name}", type=Path, default=path)
     args = parser.parse_args(argv)

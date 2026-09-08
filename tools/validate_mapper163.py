@@ -11,7 +11,7 @@ from pathlib import Path
 try:
     from .title_screen_tools import (
         ENGLISH_TITLE_CREDITS,
-        JAUNE_TILES,
+        FRENCH_TITLE_VERSION_TILES,
         MENU_FR_TILES,
         MENU_TILE_IDS,
         SAVING_SCREEN_CHR_FILE,
@@ -45,7 +45,7 @@ try:
 except ImportError:  # Direct ``python tools/validate_mapper163.py`` use.
     from title_screen_tools import (
         ENGLISH_TITLE_CREDITS,
-        JAUNE_TILES,
+        FRENCH_TITLE_VERSION_TILES,
         MENU_FR_TILES,
         MENU_TILE_IDS,
         SAVING_SCREEN_CHR_FILE,
@@ -642,11 +642,11 @@ def validate(args: argparse.Namespace) -> int:
             TITLE_PT0_FILE + tile_id * 16: tile
             for tile_id, tile in zip(
                 TITLE_LOGO_TILE_IDS,
-                JAUNE_TILES,
+                FRENCH_TITLE_VERSION_TILES,
                 strict=True,
             )
         }
-        title_logo_label = "JAUNE français"
+        title_logo_label = "VERSION JAUNE français"
 
     expected_title_tiles = {
         **expected_logo_tiles,

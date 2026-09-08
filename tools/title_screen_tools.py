@@ -157,12 +157,12 @@ def english_title_changed_offsets(
         if before != after
     }
 
-JAUNE_TILES = [
-    bytes.fromhex("1c08080848483000e3f7f7f7b7b7cfff"),
-    bytes.fromhex("3844447c44444400c7bbbb83bbbbbbff"),
-    bytes.fromhex("4444444444443800bbbbbbbbbbbbc7ff"),
-    bytes.fromhex("4464544c44444400bb9babb3bbbbbbff"),
-    bytes.fromhex("7c40407840407c0083bfbf87bfbf83ff"),
+FRENCH_TITLE_VERSION_TILES = [
+    bytes.fromhex("0053525257222300ffacadada8dd5477"),
+    bytes.fromhex("0063545663515600f79caba99caea9ff"),
+    bytes.fromhex("0049555555554900ffb6aaaaaaaab6ff"),
+    bytes.fromhex("0020a0a060602000f8d858589898d8f8"),
+    bytes.fromhex("0f030000000000001c07010000000000"),
 ]
 
 BOTTOM_TITLE_FONT_5X6 = {
@@ -714,9 +714,10 @@ def build_ips(base: bytes, patched: bytes) -> bytes:
 
 
 def patch_jaune_tiles(rom: bytearray) -> None:
-    # Tiles 0x51..0x55 spell the small YELLOW label under the main logo.
+    # Tiles 0x51..0x55 contain VERSION in the canonical 2015 base.
+    # The earlier patch overwrote it with JAUNE; the right-hand JAUNE stays intact.
     # They live in pattern table $0000, whose source block starts at TITLE_PT0_FILE.
-    for tile_id, tile in zip(TITLE_LOGO_TILE_IDS, JAUNE_TILES, strict=True):
+    for tile_id, tile in zip(TITLE_LOGO_TILE_IDS, FRENCH_TITLE_VERSION_TILES, strict=True):
         offset = TITLE_PT0_FILE + tile_id * 16
         rom[offset : offset + 16] = tile
 
@@ -1291,7 +1292,7 @@ def command_patch_jaune(args: argparse.Namespace) -> None:
     print(f"ROM source: {rom_path}")
     print(f"ROM sortie: {out_rom_path}")
     print(f"IPS sortie: {out_ips_path}")
-    print("Patch: petit libelle YELLOW du logo remplace par JAUNE")
+    print("Patch: libelle VERSION du logo restaure, JAUNE a droite conserve")
 
 
 def command_patch_english_title(args: argparse.Namespace) -> None:
@@ -1383,7 +1384,7 @@ def command_patch_french_graphics(args: argparse.Namespace) -> None:
     else:
         patch_jaune_tiles(rom)
         title_patch_description = (
-            "Patch logo: YELLOW -> JAUNE, tuiles PT0 $51-$55"
+            "Patch logo: VERSION restaure, tuiles PT0 $51-$55"
         )
     patch_french_menu_tiles(rom)
     patch_french_player_menu_labels(rom)
@@ -1494,7 +1495,7 @@ def build_parser() -> argparse.ArgumentParser:
     render_dump.add_argument("--prefix", default="mesen")
     render_dump.set_defaults(func=command_render_dump)
 
-    patch_jaune = sub.add_parser("patch-jaune", help="cree une ROM test avec YELLOW -> JAUNE sur le logo")
+    patch_jaune = sub.add_parser("patch-jaune", help="restaure VERSION a gauche du logo francais")
     patch_jaune.add_argument("--rom", default=str(FRENCH_ROM))
     patch_jaune.add_argument("--base-rom", default=str(ENGLISH_BASE_ROM))
     patch_jaune.add_argument("--out-rom", default=str(PATCHED_TITLE_ROM))
@@ -1532,7 +1533,7 @@ def build_parser() -> argparse.ArgumentParser:
         choices=("english", "french"),
         default="english",
         help=(
-            "logo du titre: YELLOW anglais (défaut) ou JAUNE français"
+            "tuiles VERSION de la base (défaut) ou restauration du titre français"
         ),
     )
     patch_french_graphics.add_argument(

@@ -351,7 +351,7 @@ try {
         -ArgumentList $Arguments `
         -Wait `
         -PassThru `
-        -NoNewWindow `
+        -WindowStyle Hidden `
         -WorkingDirectory $OutputDirectory `
         -RedirectStandardOutput $StdoutPath `
         -RedirectStandardError $StderrPath

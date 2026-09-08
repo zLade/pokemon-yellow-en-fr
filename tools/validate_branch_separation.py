@@ -14,7 +14,7 @@ PROFILES = {
     "fr": {
         "required": ("README.md", "NOTICE.md", "build.py", "traduction/catalogue.csv",
                      "traduction/pointer_variants.csv", "traduction/move_labels_two_line.csv",
-                     "tools/build_french_release.py", "releases/fr/2.0.12/SHA256SUMS"),
+                     "tools/build_french_release.py", "releases/fr/2.0.13/SHA256SUMS"),
         "forbidden_prefixes": ("translation/", "releases/en/", "locales/", "profiles/", "tools/campaign/"),
         "forbidden_files": ("script.py", "traduction_base.csv", "tools/build_english_release.py"),
     },

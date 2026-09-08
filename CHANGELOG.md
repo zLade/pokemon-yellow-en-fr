@@ -1,5 +1,13 @@
 # Historique des versions françaises
 
+## Français 2.0.13 — 8 septembre 2026
+
+- Restauration du petit libellé VERSION à gauche du logo : VERSION JAUNE au lieu de JAUNE JAUNE.
+- Correction de l'identification des tuiles $51–$55 dans la base technique de 2015.
+- Différence limitée à 73 octets graphiques par rapport à la 2.0.12.
+- Test de non-régression et sonde Mesen du titre, du menu et du curseur.
+- IPS toujours applicable directement à la ROM chinoise originale.
+
 ## Français 2.0.12
 
 - IPS final applicable directement à la ROM chinoise originale NJ046.

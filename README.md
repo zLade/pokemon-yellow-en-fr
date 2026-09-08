@@ -2,18 +2,18 @@
 
 Traduction française du jeu Famicom non officiel **Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046)**. Cette branche `fr` contient les sources françaises ; la version anglaise se trouve sur [la branche en](https://github.com/zLade/pokemon-yellow-en-fr/tree/en).
 
-Release de référence : **2.0.12**, avec correction de la hauteur musicale, sur **mapper 163**. Aucune ROM complète n'est distribuée. Voir [la notice](NOTICE.md) pour les éléments tiers et [CHANGELOG.md](CHANGELOG.md) pour les versions.
+Release de référence : **2.0.13**, avec correction de la hauteur musicale, sur **mapper 163**. Aucune ROM complète n'est distribuée. Voir [la notice](NOTICE.md) pour les éléments tiers et [CHANGELOG.md](CHANGELOG.md) pour les versions.
 
 ## Jouer
 
-Appliquer le [patch IPS français 2.0.12](releases/fr/2.0.12/Pokemon_Jaune_NJ046_FR_v2.0.12.ips) à une copie propre de la ROM chinoise originale `Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes` avec un outil IPS. Il ne s'applique pas à Pokémon Jaune sur Game Boy.
+Appliquer le [patch IPS français 2.0.13](releases/fr/2.0.13/Pokemon_Jaune_NJ046_FR_v2.0.13.ips) à une copie propre de la ROM chinoise originale `Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes` avec un outil IPS. Il ne s'applique pas à Pokémon Jaune sur Game Boy.
 
 - Entrée : 2 097 168 octets, SHA-256 `450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed`.
-- Résultat : SHA-256 `efc7ba0837a65d06e0658348d3debaa1194b9cf03b59492a1a8d4dfab346327e`.
+- Résultat : SHA-256 `2846fac5738ad24bc65dd1c24622fe4a1e9fffe94062052e84bfbae1cd34fae3`.
 
-Utiliser un émulateur compatible mapper 163, par exemple Mesen 2.2.1. Les détails du patch figurent dans [le dossier de release](releases/fr/2.0.12/README.md).
+Utiliser un émulateur compatible mapper 163, par exemple Mesen 2.2.1. Les détails du patch figurent dans [le dossier de release](releases/fr/2.0.13/README.md).
 
-La 2.0.12 change uniquement la base du patch : la ROM obtenue est identique à la 2.0.11. Ne pas appliquer ce nouvel IPS sur une traduction anglaise ou une ROM déjà patchée. Un IPS ne vérifie pas lui-même la bonne ROM de départ : contrôler son SHA-256.
+La 2.0.13 restaure « VERSION » à gauche du logo pour afficher « VERSION JAUNE ». Seuls 73 octets graphiques changent par rapport à la 2.0.12. Ne pas appliquer ce nouvel IPS sur une traduction anglaise ou une ROM déjà patchée. Un IPS ne vérifie pas lui-même la bonne ROM de départ : contrôler son SHA-256.
 
 ## Sources de traduction
 
@@ -146,7 +146,7 @@ Les résultats sont dans `build/fr/` : ROM, IPS, rapport et manifeste des pointe
 Pour reproduire exactement les octets de la release :
 
 ```bash
-python build.py build --verify-release --output-dir build/verification-2.0.12
+python build.py build --verify-release --output-dir build/verification-2.0.13
 ```
 
 Omettre `--verify-release` après une modification de traduction : le résultat peut différer de la release tout en passant les contrôles de sécurité.
@@ -154,6 +154,10 @@ Omettre `--verify-release` après une modification de traduction : le résultat 
 Les contrôles comprennent deux compilations déterministes, la reconstruction indépendante des banques de texte, les 1 916 propriétaires de pointeurs, les limites des messages dynamiques et attaques, les marges des banques, le mapper 163 avant la correction musicale strictement bornée et l'aller-retour IPS.
 
 ## Tests en jeu
+
+La sonde `tools/mesen_french_title_probe.lua` vérifie les tuiles VERSION après
+un démarrage à froid, ouvre le menu NOUV/CONT et capture le déplacement du
+curseur. Elle utilise le lanceur ci-dessous avec `-ExpectedMarker FRENCH_TITLE_PASS`.
 
 Un build réussi ne prouve pas que tout le jeu a été parcouru. Vérifier notamment les noms longs, les débuts/fins de combat, le curseur Oui/Non d'oubli d'attaque, l'effacement des messages, le Pokéshop et les sauvegardes.
 
@@ -171,7 +175,7 @@ Chaque sonde décrit ses conditions et son marqueur de réussite dans son code ;
 - `data/source/` : extraction chinoise et correspondance des glyphes en lecture seule.
 - `data/validation/` : structure attendue, propriété des pointeurs et indices graphiques, sans deuxième copie des traductions.
 - `tools/` : moteur, contrôles, tests et diagnostics ciblés.
-- `releases/fr/2.0.12/` : patch courant, version et empreintes.
+- `releases/fr/2.0.13/` : patch courant, version et empreintes.
 - `build/` : résultats locaux générés, non suivis par Git.
 
 Le point d'entrée public est `build.py`. Les versions antérieures restent accessibles dans l'historique Git.

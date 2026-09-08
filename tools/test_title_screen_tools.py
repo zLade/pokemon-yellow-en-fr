@@ -56,9 +56,9 @@ EXPECTED_SECONDARY_LABEL_HASHES = {
         "dd8972052b6006b9e2c7f6278aeb405b"
     ),
 }
-EXPECTED_JAUNE_TILES_SHA256 = (
-    "4040c84de53f2c181cb9673bbf1d46da"
-    "b815c8c39cce7774e9e5b2d0e3eb5f35"
+EXPECTED_FRENCH_TITLE_VERSION_TILES_SHA256 = (
+    "8c021c6dc3811bc12cbda9bbbb3b0837"
+    "426c4d2dbc86ce45ae41ccdcddfc6640"
 )
 EXPECTED_ENGLISH_TITLE_TILES_SHA256 = (
     "8c021c6dc3811bc12cbda9bbbb3b0837"
@@ -73,8 +73,8 @@ EXPECTED_ENGLISH_TITLE_MENU_BLOCK_SHA256 = (
     "78805fbecf11130552c3b254d59876ae"
 )
 EXPECTED_FRENCH_TITLE_MENU_BLOCK_SHA256 = (
-    "ef28aedb49b5adf9ec778e2ec04eb205"
-    "8e705de2d149a6b9729e65ba7e0eee4c"
+    "8674112c1b02e4aeba43b1756655be68"
+    "78805fbecf11130552c3b254d59876ae"
 )
 EXPECTED_FRENCH_BOTTOM_TITLE_TILES_SHA256 = (
     "6a83ec769258865d01059c7d2a368f36f"
@@ -327,9 +327,9 @@ class TitleAndLoadMenuGraphicsTests(unittest.TestCase):
     def test_generated_graphic_asset_hashes(self) -> None:
         self.assertEqual(
             hashlib.sha256(
-                b"".join(graphics.JAUNE_TILES)
+                b"".join(graphics.FRENCH_TITLE_VERSION_TILES)
             ).hexdigest(),
-            EXPECTED_JAUNE_TILES_SHA256,
+            EXPECTED_FRENCH_TITLE_VERSION_TILES_SHA256,
         )
         self.assertEqual(
             hashlib.sha256(
@@ -388,7 +388,7 @@ class TitleAndLoadMenuGraphicsTests(unittest.TestCase):
             )
             if before != after
         }
-        self.assertEqual(len(changed_offsets), 141)
+        self.assertEqual(len(changed_offsets), 68)
         self.assertEqual(
             hashlib.sha256(self.title_menu_block(candidate)).hexdigest(),
             EXPECTED_FRENCH_TITLE_MENU_BLOCK_SHA256,
