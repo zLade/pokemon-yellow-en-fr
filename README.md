@@ -9,7 +9,7 @@ the ROM-hacking community, with in-game credits to LUIGA2009, ZLADE and CHPEXO.
 | Version | Patch and instructions | Source code |
 |---|---|---|
 | English 2.0.3 | [English release](https://github.com/zLade/pokemon-yellow-en-fr/releases/tag/en-v2.0.3) | [en branch](https://github.com/zLade/pokemon-yellow-en-fr/tree/en) |
-| French 2.0.12 | [French release](https://github.com/zLade/pokemon-yellow-en-fr/releases/tag/fr-v2.0.12) | [fr branch](https://github.com/zLade/pokemon-yellow-en-fr/tree/fr) |
+| French 2.0.13 | [French release](https://github.com/zLade/pokemon-yellow-en-fr/releases/tag/fr-v2.0.13) | [fr branch](https://github.com/zLade/pokemon-yellow-en-fr/tree/fr) |
 
 Releases contain IPS patches, instructions and checksums. No complete ROM is
 distributed. Both current patches apply directly to a clean copy of the
