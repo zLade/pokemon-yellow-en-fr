@@ -690,7 +690,6 @@ TRAILING_SEPARATOR_OFFSETS = frozenset(
         0x0302BF,  # <Pokemon> utilise <move>
         0x030417,  # Bravo ! <ancienne espèce>
         0x03041D,  # Un <wild Pokemon>
-        0x030458,  # <Pokemon> essaie d'apprendre <move>
         0x03045F,  # L'attaque <move> / est oubliée !
         0x0304AB,  # <Pokemon> n'a pas appris <move>
         0x030567,  # dévore le rêve de <Pokemon>
@@ -704,7 +703,7 @@ TRAILING_SEPARATOR_OFFSETS = frozenset(
         0x030ADB,  # Sacha a vaincu <trainer>
         0x035F3D,  # Résultat : <montant>
         0x035F57,  # <Pokémon> a évolué en <espèce>
-        0x035FAE,  # Oublier <attaque>
+        0x035FAE,  # Ignorer <attaque>
         0x035FB6,  # Adversaire : <Pokémon>
     }
 )
@@ -720,7 +719,7 @@ LEADING_SEPARATOR_POINTER_OFFSETS = frozenset(
         0x0302FA,  # <Pokémon> intoxiqué ! / a peur !
         0x0303A9,  # <statistique> au maximum ! (cible au milieu du préfixe source)
         0x0306EC,  # <Pokémon> s'est enfui !
-        0x0306F5,  # <Pokémon> ne peut pas fuir !
+        0x0306F5,  # <Pokémon> est bloqué !
         0x03651B,  # <Pokémon> s'est endormi !
     }
 )
@@ -730,6 +729,7 @@ LEADING_SEPARATOR_POINTER_OFFSETS = frozenset(
 # once repacked they must land on 0x0A itself so the hook can move the cursor
 # before the first visible glyph.
 LEADING_NEWLINE_POINTER_OFFSETS = BATTLE_TEXT_NEWLINE_SOURCE_OFFSETS
+FIELD_FIXED_CHOICE_OFFSETS = frozenset({0x0381AF, 0x0381C1})
 
 
 def normalize_repacked_payload(
@@ -761,6 +761,10 @@ def normalize_repacked_payload(
 
     if graphical or all(delta in (0, source_prefix) for delta in deltas):
         payload = payload.lstrip(b"0")
+
+    if source_offset in FIELD_FIXED_CHOICE_OFFSETS:
+        # The overworld choice renderer reads two fields of eight bytes.
+        return payload
 
     keep_trailing_separator = (
         source_offset in TRAILING_SEPARATOR_OFFSETS
@@ -3007,12 +3011,15 @@ def command_build_repacked(args: argparse.Namespace) -> int:
     graphic_reservation_offsets = set(graphic_reservation_payloads)
 
     field_target_owners: dict[int, list[int]] = {}
-    for row, _, _ in row_info:
+    for row, _, encoded in row_info:
         for target, refs in row_pointer_refs[row.offset]:
             if target not in field_pointer_entries or not refs:
                 continue
             field_target_owners.setdefault(target, []).append(row.offset)
-            if row.layout != DIALOGUE_LAYOUT:
+            if target == row.offset and target in FIELD_FIXED_CHOICE_OFFSETS:
+                if row.layout != "raw" or len(encoded) != 16:
+                    preflight_errors.append(f"LE CHOIX TERRAIN 0x{target:06X} EXIGE 16 OCTETS BRUTS")
+            elif row.layout != DIALOGUE_LAYOUT:
                 preflight_errors.append(
                     f"CIBLE TERRAIN 0x{target:06X} POSSÉDÉE PAR "
                     f"0x{row.offset:06X} SANS LAYOUT {DIALOGUE_LAYOUT}"

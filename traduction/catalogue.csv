@@ -8,7 +8,7 @@ MAIN:0x0301EB,MAIN,0x0301EB,,4,"
 MAIN:0x0301F0,MAIN,0x0301F0,,8,"
 野生的",00<B1F8><B1C9><B0BC>,sauvage ,unique
 MAIN:0x0301F9,MAIN,0x0301F9,,9,"
-不行了!", Fainted!, est K.O. !,unique
+不行了!", Fainted!, K.O. !,unique
 MAIN:0x030203,MAIN,0x030203,,12,, Experience!, EXP gagn. !,non_aligne
 MAIN:0x030210,MAIN,0x030210,,16,"
 情况不妙快逃!",Got away safely!,Vous prenez la fuite !,unique
@@ -97,7 +97,7 @@ MAIN:0x030428,MAIN,0x030428,,8,, learned, apprend,non_aligne
 MAIN:0x03043F,MAIN,0x03043F,,24,"
 四个技能已经满了!",000000more than 4 moves!,000000déjà 4 attaques !,unique
 MAIN:0x030458,MAIN,0x030458,,6,"
-要学会",<B0C3><B4C3><B1F9>, veut apprendre ,unique
+要学会",<B0C3><B4C3><B1F9>, veulent se battre !,unique
 MAIN:0x03045F,MAIN,0x03045F,,7,"
 将",Forgot ,L'attaque ,unique
 MAIN:0x030467,MAIN,0x030467,,16,"
@@ -210,7 +210,7 @@ MAIN:0x0306E1,MAIN,0x0306E1,,10,"
 MAIN:0x0306EC,MAIN,0x0306EC,,8,"
 逃跑了!",<0A><B3EF><B8B9><B0F8>!, s'est enfui !,unique
 MAIN:0x0306F5,MAIN,0x0306F5,,8,"
-不能逃!",<0A><B0CE><B0EC><B3EF>!, ne peut pas fuir !,unique
+不能逃!",<0A><B0CE><B0EC><B3EF>!, est bloqué !,unique
 MAIN:0x0306FE,MAIN,0x0306FE,,11,"
 中毒解除了",<0A><B0DC><B8D8><B9B5><BBB2><B0F8>, est guéri !,unique
 MAIN:0x03070B,MAIN,0x03070B,,8,"
@@ -294,9 +294,9 @@ MAIN:0x0308C7,MAIN,0x0308C7,,11,"
 MAIN:0x0308D3,MAIN,0x0308D3,,12,"
 欢迎光临",0Item   Shop,0Magasin    ,unique
 MAIN:0x0308E1,MAIN,0x0308E1,,3,"
-买",Buy,Achat,unique
+买",Buy,Ach,unique
 MAIN:0x0308E5,MAIN,0x0308E5,,3,"
-卖",Sel,Vente,unique
+卖",Sel,Vte,unique
 MAIN:0x0308E9,MAIN,0x0308E9,,12,"
 买几个?
 ---
@@ -845,19 +845,19 @@ MAIN:0x031A15,MAIN,0x031A15,,14,"
 MAIN:0x031A24,MAIN,0x031A24,,18,"
 一定能捉住精灵的球",Catch  Pok@mon100%,CapturePokémon100%,unique
 MAIN:0x031A37,MAIN,0x031A37,,18,"
-让特定的精灵进化",Evolve Fire   PKMN,Évol. Pokémon Feu ,unique
+让特定的精灵进化",Evolve Fire   PKMN,Évol.  PokémonFeu,unique
 MAIN:0x031A4A,MAIN,0x031A4A,,18,"
-让特定的精灵进化",Evolve Water  PKMN,Évol. Pokémon Eau ,unique
+让特定的精灵进化",Evolve Water  PKMN,Évol.  PokémonEau,unique
 MAIN:0x031A5D,MAIN,0x031A5D,,26,"
-体力恢复20点",00000000000000Restore20 HP,00000000000000Restaure 20PV,unique
+体力恢复20点",00000000000000Restore20 HP,00000000000000Soigne 20 PV,unique
 MAIN:0x031A78,MAIN,0x031A78,,13,"
-体力恢复50点",0Restore50 HP,0Restaure50PV,unique
+体力恢复50点",0Restore50 HP,0Soigne 50 PV,unique
 MAIN:0x031A86,MAIN,0x031A86,,14,"
-体力恢复200点",0Restore200 HP,0Restaur200 PV,unique
+体力恢复200点",0Restore200 HP,0Soigne 200 PV,unique
 MAIN:0x031A95,MAIN,0x031A95,,14,"
-体力完全恢复",0RestoreAll HP,0Restaur ts PV,unique
+体力完全恢复",0RestoreAll HP,0Soigne tous PV,unique
 MAIN:0x031AA4,MAIN,0x031AA4,,13,"
-解除中毒状态",Cures  Poison,Anti-poison,unique
+解除中毒状态",Cures  Poison,Stop   poison,unique
 MAIN:0x031AB2,MAIN,0x031AB2,,14,"
 解除麻痹状态",Cures  Paralyz,État   normal,unique
 MAIN:0x031AC1,MAIN,0x031AC1,,12,"
@@ -871,37 +871,37 @@ MAIN:0x031AE8,MAIN,0x031AE8,,22,"
 MAIN:0x031AFF,MAIN,0x031AFF,,14,"
 从临死状态恢复体力一半",Revive Pok@mon,Ranime Pokémon,unique
 MAIN:0x031B0E,MAIN,0x031B0E,,26,"
-精灵的一项PP值恢复10点",000000Restore10PP to1 Move,000000Restaure10PP 1 Atq,unique
+精灵的一项PP值恢复10点",000000Restore10PP to1 Move,000000Rend   10 PP  1 Atq,unique
 MAIN:0x031B29,MAIN,0x031B29,,23,"
-精灵的一项PP值全恢复",000RestoreAll PP 1 Move,000Restaure ts PP 1 Atq,unique
+精灵的一项PP值全恢复",000RestoreAll PP 1 Move,000Rend   tous PP1 Atq,unique
 MAIN:0x031B42,MAIN,0x031B42,,17,"
-提升精灵等级一级",Pok@monLevelUp1LV,Pokémon+1 Niveau ,unique
+提升精灵等级一级",Pok@monLevelUp1LV,PokémonNiveau +1,unique
 MAIN:0x031B54,MAIN,0x031B54,,18,"
-让特定的精灵进化",Evolve ThunderPKMN,Évol. Pokémon Foudre,unique
+让特定的精灵进化",Evolve ThunderPKMN,Évol.  PokémonFoudre,unique
 MAIN:0x031B67,MAIN,0x031B67,,18,"
-让特定的精灵进化",Evolve Grass  PKMN,Évol. Pokémon Plante,unique
+让特定的精灵进化",Evolve Grass  PKMN,Évol.  PokémonPlante,unique
 MAIN:0x031B7A,MAIN,0x031B7A,,18,"
-让特定的精灵进化",Evolve Normal PKMN,Évol. Pokémon Normal,unique
+让特定的精灵进化",Evolve Normal PKMN,Évol.  Pokémonciblés,unique
 MAIN:0x031B8D,MAIN,0x031B8D,,18,"
-可以查看精灵的资料",Pok@monData-  Base,BaseDonnees Poké ,unique
+可以查看精灵的资料",Pok@monData-  Base,Index  Pokémon,unique
 MAIN:0x031BA0,MAIN,0x031BA0,,10,"
-小茂姐姐给的地图",Town   Map,Carte Ville,unique
+小茂姐姐给的地图",Town   Map,Carte  locale,unique
 MAIN:0x031BAB,MAIN,0x031BAB,,16,"
-大木博士的包裹",000Oak's  Parcel,000Colis Chen,unique
+大木博士的包裹",000Oak's  Parcel,000Colis  de Chen,unique
 MAIN:0x031BBC,MAIN,0x031BBC,,13,"
-古代精灵的化石",Pok@monFossil,Fossile Pokémon,unique
+古代精灵的化石",Pok@monFossil,FossilePokémon,unique
 MAIN:0x031BCA,MAIN,0x031BCA,,21,"
-马沙给的铁达尼号船票",Ticket for theSS Anne,Passe pour l'Océane,unique
+马沙给的铁达尼号船票",Ticket for theSS Anne,Billet Océane,unique
 MAIN:0x031BE0,MAIN,0x031BE0,,7,"
-彩虹商店幸运顾客纪念",Lemonad,Limonad,unique
+彩虹商店幸运顾客纪念",Lemonad,Boisson,unique
 MAIN:0x031BE8,MAIN,0x031BE8,,20,"
-能看见一切灵异现象的眼镜",Lets   you seeGhosts,Permet de voir les fantômes,unique
+能看见一切灵异现象的眼镜",Lets   you seeGhosts,Révèle esprits,unique
 MAIN:0x031BFD,MAIN,0x031BFD,,21,"
-就算是熟睡的精灵也会跳起",Wake   Asleep Pok@mon,Réveille Pokémon   ,unique
+就算是熟睡的精灵也会跳起",Wake   Asleep Pok@mon,Réveil Pokémonendormi,unique
 MAIN:0x031C13,MAIN,0x031C13,,19,"
 浅红市园长的假牙",SomeoneGold   Teeth,Dentier en Or      ,unique
 MAIN:0x031C27,MAIN,0x031C27,,14,"
-梦幻神奇之旅的船票",CinibarGym Key,Clé Arène Cram,unique
+梦幻神奇之旅的船票",CinibarGym Key,Clé    Arène  Cram.,unique
 MAIN:0x031C36,MAIN,0x031C36,,4,"
 训兽师",Will,Clément,unique
 MAIN:0x031C3B,MAIN,0x031C3B,,11,"
@@ -921,15 +921,15 @@ MAIN:0x031C77,MAIN,0x031C77,,6,"
 MAIN:0x031C7E,MAIN,0x031C7E,,8,"
 大婶婶",Pok@Fan=,Pokéfan=,unique
 MAIN:0x031C87,MAIN,0x031C87,,9,"
-居合斩",000<B1A9><B1AA><B1AB>,CS Coupe,unique
+居合斩",000<B1A9><B1AA><B1AB>,Coupe  CS,unique
 MAIN:0x031C91,MAIN,0x031C91,,7,"
 飞天术",<0A><B1AC><B1AD><B1AE>,CS Vol,unique
 MAIN:0x031C99,MAIN,0x031C99,,7,"
 冲浪术",<0A><B1AF><B1B0><B1AE>,CS Surf,unique
 MAIN:0x031CA1,MAIN,0x031CA1,,7,"
-怪力术",<0A><B0CA><B0E3><B1AE>,CS Force,unique
+怪力术",<0A><B0CA><B0E3><B1AE>,Force  CS,unique
 MAIN:0x031CA9,MAIN,0x031CA9,,7,"
-闪光术",<0A><B4BE><B0E4><B1AE>,CS Flash,unique
+闪光术",<0A><B4BE><B0E4><B1AE>,Flash  CS,unique
 MAIN:0x031CB2,MAIN,0x031CB2,,6,"
 秘传01",TM 01 ,CT 01 ,unique
 MAIN:0x031CBA,MAIN,0x031CBA,,6,"
@@ -2135,7 +2135,7 @@ MAIN:0x035F85,MAIN,0x035F85,,18,"
 MAIN:0x035F98,MAIN,0x035F98,raw,21,"
 忘记其它的技能吗?",Forget an older move?,Oublier une attaque ?,unique
 MAIN:0x035FAE,MAIN,0x035FAE,,7,"
-放弃学习",Forget ,Oublier ,unique
+放弃学习",Forget ,Ignorer ,unique
 MAIN:0x035FB6,MAIN,0x035FB6,,17,"
 对手要使用",Opponent sent out,Adversaire : ,unique
 MAIN:0x035FCD,MAIN,0x035FCD,,9,"
@@ -2679,10 +2679,10 @@ MAIN:0x038194,MAIN,0x038194,dialogue_19_19,16,"
 买      不买    ",Buy     Pass    ,Acheter  Annuler,unique
 MAIN:0x0381A5,MAIN,0x0381A5,dialogue_19_19,8,"
 钱不够!",0<B0FE><B0CE><B0F1>!,Pas assez d'argent !,unique
-MAIN:0x0381AF,MAIN,0x0381AF,dialogue_19_19,16,"
-是      否      ",Yes     No      ,Oui     Non,unique
-MAIN:0x0381C1,MAIN,0x0381C1,dialogue_19_19,16,"
-空手道  跆拳道  ",Left    Right   ,Karaté  Taekwondo,unique
+MAIN:0x0381AF,MAIN,0x0381AF,raw,16,"
+是      否      ",Yes     No      ,Oui     Non     ,unique
+MAIN:0x0381C1,MAIN,0x0381C1,raw,16,"
+空手道  跆拳道  ",Left    Right   ,Karaté  Taekw.  ,unique
 MAIN:0x0381D2,MAIN,0x0381D2,dialogue_19_19,13,"
 小智使用了居合斩",0Used HM CUT!,"Sacha utilise
 Coupe !",unique
@@ -3288,7 +3288,7 @@ MAIN:0x03A2D1,MAIN,0x03A2D1,dialogue_19_19,25,"
 MAIN:0x03A2EB,MAIN,0x03A2EB,dialogue_19_19,12,"
 水手:我玩的很开心",You sank me!,Je me suis bien amusé.,unique
 MAIN:0x03A2F8,MAIN,0x03A2F8,dialogue_19_19,28,"
-大胖子:看我钓上的好货色吧!",I like feisty kids like you!,Admire ma prise !,unique
+大胖子:看我钓上的好货色吧!",I like feisty kids like you!,Vois ma prise !,unique
 MAIN:0x03A315,MAIN,0x03A315,dialogue_19_19,14,"
 大胖子:可恶...",Argh! Lost it!,Zut...,unique
 MAIN:0x03A324,MAIN,0x03A324,dialogue_19_19,29,"

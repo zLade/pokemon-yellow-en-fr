@@ -34,7 +34,7 @@ DYNAMIC_FRAGMENT_EXPECTATIONS: dict[int, str] = {
     0x03002F: " sauvage apparaît !",
     0x030031: "En avant ! ",
     0x030033: "sauvage ",
-    0x030035: " est K.O. !",
+    0x030035: " K.O. !",
     0x030037: " EXP gagnés !",
     0x03003B: "Sacha lance une ",
     0x03003D: "Oui ! ",
@@ -78,14 +78,14 @@ DYNAMIC_FRAGMENT_EXPECTATIONS: dict[int, str] = {
     0x0300A3: "...!",
     0x0300A5: "Mais il connaît",
     0x0300A7: "déjà 4 attaques !",
-    0x0300A9: " veut apprendre ",
+    0x0300A9: " veulent se battre !",
     0x0300AB: "Oublier une attaque ?",
     0x0300AD: "Oui / Non",
     0x0300AF: "Quelle attaque ?",
     0x0300B1: "L'attaque ",
     0x0300B3: "est oubliée !",
     0x0300B5: "Attaque apprise :",
-    0x0300B7: "Oublier ",
+    0x0300B7: "Ignorer ",
     0x0300B9: " ?",
     0x0300BB: " n'apprend pas",
     0x0300BD: " rayonne !",
@@ -114,7 +114,7 @@ DYNAMIC_FRAGMENT_EXPECTATIONS: dict[int, str] = {
     0x030135: "Statut inchangé !",
     0x030145: " immobile !",
     0x030149: " s'est enfui !",
-    0x03014B: " ne peut pas fuir !",
+    0x03014B: " est bloqué !",
     0x03014D: " est guéri !",
     0x03014F: " se réveille !",
     0x030151: " n'est plus paralysé !",
@@ -211,7 +211,7 @@ TRAINER_NAME_MAX_CELLS = 10
 BADGE_NAME_MAX_CELLS = 13
 
 NAME_SUFFIX_REFS = frozenset(
-    {0x030035, 0x030055, 0x030097, 0x0300A1, 0x0300BB}
+    {0x030035, 0x030055, 0x030097, 0x0300A1, 0x0300BB, 0x03014B}
 )
 STATUS_LINE2_REFS = frozenset(
     {0x03005F, 0x030061, 0x030063, 0x030065, 0x030067,
@@ -226,7 +226,7 @@ ROW2_PAYLOAD_REFS = frozenset(
         0x0300D1, 0x0300D3, 0x0300D5, 0x0300D7, 0x0300D9,
         0x0300DF, 0x0300E1,
         0x030135,
-        0x030145, 0x030149, 0x03014B, 0x03014D, 0x03014F,
+        0x030145, 0x030149, 0x03014D, 0x03014F,
         0x030151, 0x030153, 0x030157, 0x030159, 0x03015B,
         0x0301A9, 0x0301AB,
     }
@@ -264,12 +264,12 @@ MULTI_ROW_REFS = frozenset(
 FORGET_MOVE_TWO_ROW_REFS = frozenset({0x0300B1, 0x0300B3})
 SEPARATE_ROW_REFS = frozenset(
     {
-        0x030037, 0x030045, 0x03004D, 0x03012D,
+        0x030037, 0x030045, 0x03004D, 0x0300A9, 0x03012D,
         0x030173, 0x030175, 0x030177,
     }
 )
 DEAD_UNREFERENCED_REFS = frozenset(
-    {0x0300A9, 0x0300AD, 0x0300DB, 0x0300DD}
+    {0x0300AD, 0x0300DB, 0x0300DD}
 )
 CONTROL_COMPONENT_REFS = frozenset({0x0300A3, 0x0300B7, 0x0300B9, 0x030125})
 STANDALONE_MESSAGE_REFS = frozenset(
@@ -310,8 +310,9 @@ def dynamic_layout_composed_max(reference: int) -> int | None:
     if reference in STANDALONE_MESSAGE_REFS:
         return length
     if reference in NAME_SUFFIX_REFS:
-        indent = 1 if reference == 0x030035 else 0
-        return indent + POKEMON_NAME_MAX_CELLS + length
+        # The wild KO row can contain both "Sauv. " and the Pokémon name.
+        leading = {0x030035: _payload_length(0x030123), 0x03014B: 1}
+        return leading.get(reference, 0) + POKEMON_NAME_MAX_CELLS + length
     if reference in STATUS_LINE2_REFS:
         # Normal status application: actor is row 1, event payload is row 2.
         # The already-present branches are diverted to autonomous ref 0x135.
@@ -358,7 +359,7 @@ def dynamic_layout_composed_max(reference: int) -> int | None:
         return max(length, MOVE_NAME_MAX_CELLS)
     if reference == 0x030037:
         return 5 + length  # maximum experience amount on row 2
-    if reference in {0x030045, 0x03004D}:
+    if reference in {0x030045, 0x03004D, 0x0300A9}:
         return length
     if reference == 0x03012D:
         return max(length, POKEMON_NAME_MAX_CELLS)
@@ -475,6 +476,23 @@ def payload_at_pointer(rom: bytes, reference: int) -> tuple[int, bytes]:
             f"0x{reference:06X}: terminateur absent après 0x{target:06X}"
         )
     return target, rom[target:end]
+
+
+def validate_item_description_width(rom: bytes) -> list[str]:
+    """Check the 80 bag description pointers against the 7 × 3 tile panel."""
+    errors = []
+    for reference in range(0x03196F, 0x031A0F, 2):
+        try:
+            target, payload = payload_at_pointer(rom, reference)
+        except ValueError as exc:
+            errors.append(str(exc))
+            continue
+        if len(payload) > 21:
+            errors.append(
+                f"0x{reference:06X} -> 0x{target:06X}: description d’objet "
+                f"de {len(payload)} cases, maximum 21"
+            )
+    return errors
 
 
 def validate_dynamic_fragments(rom: bytes) -> list[str]:

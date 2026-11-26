@@ -447,6 +447,16 @@ class TextFreeSpanTests(unittest.TestCase):
             "translated control padding remains skippable",
         )
 
+    def test_overworld_choice_preserves_fixed_width_padding(self) -> None:
+        offset = 0x0381AF
+        original = b"Yes     No      "
+        translated = b"Oui     Non     "
+        source = bytes(offset) + original
+        self.assertEqual(
+            normalize_repacked_payload(source, offset, len(original), translated, [offset]),
+            translated,
+        )
+
     def test_ascii_padding_relocation_preserves_leading_battle_newline(
         self,
     ) -> None:

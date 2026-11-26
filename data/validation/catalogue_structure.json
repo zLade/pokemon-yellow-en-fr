@@ -7955,14 +7955,14 @@
     "stable_key": "MAIN:0x0381AF",
     "record_type": "MAIN",
     "offset_hex": "0x0381AF",
-    "layout": "dialogue_19_19",
+    "layout": "raw",
     "max_len": "16"
   },
   {
     "stable_key": "MAIN:0x0381C1",
     "record_type": "MAIN",
     "offset_hex": "0x0381C1",
-    "layout": "dialogue_19_19",
+    "layout": "raw",
     "max_len": "16"
   },
   {

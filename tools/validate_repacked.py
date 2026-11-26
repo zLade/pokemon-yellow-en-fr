@@ -35,6 +35,7 @@ from tools.rom_builder import (  # noqa: E402
     STATUS_ALREADY_SKIP_OFFSET,
     STATUS_ALREADY_SKIP_PATCH,
     DEFAULT_FRENCH_POINTER_VARIANTS,
+    FIELD_FIXED_CHOICE_OFFSETS,
     TRANSLATION_BASE_ROM,
     TRANSLATION_BASE_SHA256,
     VERIFIED_FIELD_DIALOGUE_POINTER_SLOT_COUNT,
@@ -351,12 +352,15 @@ def compute_plan(args: argparse.Namespace):
         )
     graphic_reservation_offsets = set(graphic_reservation_payloads)
     field_target_owners: dict[int, list[int]] = {}
-    for row, _, _ in row_info:
+    for row, _, encoded in row_info:
         for target, refs in row_pointer_refs[row.offset]:
             if target not in field_pointer_entries or not refs:
                 continue
             field_target_owners.setdefault(target, []).append(row.offset)
-            if row.layout != DIALOGUE_LAYOUT:
+            if target == row.offset and target in FIELD_FIXED_CHOICE_OFFSETS:
+                if row.layout != "raw" or len(encoded) != 16:
+                    raise ValueError(f"Le choix terrain 0x{target:06X} exige 16 octets bruts")
+            elif row.layout != DIALOGUE_LAYOUT:
                 raise ValueError(
                     f"0x{row.offset:06X}: cible terrain "
                     f"0x{target:06X} sans layout {DIALOGUE_LAYOUT}"

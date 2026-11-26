@@ -247,6 +247,7 @@ PLAYER_MENU_FONT_4X7 = {
     "I": ("1111", "0110", "0110", "0110", "0110", "0110", "1111"),
     "J": ("0011", "0001", "0001", "0001", "1001", "1001", "0110"),
     "K": ("1001", "1010", "1100", "1100", "1010", "1001", "1001"),
+    "L": ("1000", "1000", "1000", "1000", "1000", "1000", "1111"),
     "M": ("1001", "1111", "1111", "1001", "1001", "1001", "1001"),
     "N": ("1001", "1101", "1101", "1011", "1011", "1001", "1001"),
     "O": ("0110", "1001", "1001", "1001", "1001", "1001", "0110"),
@@ -935,6 +936,340 @@ def patch_french_player_menu_labels(rom: bytearray) -> None:
         for tile_id, tile in zip(tile_ids, generated, strict=True):
             offset = PLAYER_MENU_PT0_FILE + tile_id * 16
             rom[offset : offset + 16] = tile
+
+
+def patch_french_party_order_label(rom: bytearray) -> None:
+    """Pack Déplacer and Stats into the static party template."""
+    font = {
+        "D": (14, 9, 9, 9, 9, 14, 0),
+        "é": (2, 4, 6, 9, 15, 8, 7),
+        "p": (0, 0, 14, 9, 14, 8, 8),
+        "l": (4, 4, 4, 4, 4, 6, 0),
+        "a": (0, 0, 6, 1, 7, 9, 7),
+        "c": (0, 0, 7, 8, 8, 8, 7),
+        "e": (0, 0, 6, 9, 15, 8, 7),
+        "r": (0, 0, 11, 12, 8, 8, 8),
+    }
+    chr_offset = 0x02D3B5
+    original_sha = "efa6defb7669bc71a2fc3c47b7a210e06f0cd4992d56bb34c33b7ca156f75efe"
+    region = slice(chr_offset, chr_offset + 12 * 16)
+    current = bytes(rom[region])
+    tiles = bytearray(current)
+    move_ids = (0x25, 0x1F, 0x20, 0x26, 0x29)
+    move_pixels = [[0] * (len(move_ids) * 8) for _ in range(8)]
+    for index, letter in enumerate("Déplacer"):
+        for y, bits in enumerate(font[letter], 1):
+            for x in range(4):
+                move_pixels[y][index * 5 + x] = (bits >> (3 - x)) & 1
+    # Stats is drawn at variable width, with 2 px t's to fit two existing tiles.
+    stats_pixels = [[0] * 16 for _ in range(8)]
+    for start, width, rows in (
+        (0, 3, (3, 4, 4, 2, 1, 6)),
+        (3, 2, (2, 3, 2, 2, 2, 1)),
+        (6, 3, (0, 0, 6, 1, 7, 5)),
+        (10, 2, (2, 3, 2, 2, 2, 1)),
+        (13, 3, (0, 0, 3, 6, 1, 6)),
+    ):
+        for y, bits in enumerate(rows, 1):
+            for x in range(width):
+                stats_pixels[y][start + x] = (bits >> (width - 1 - x)) & 1
+    stats_pixels[7][6:9] = [0, 1, 1]
+    for ids, pixels in ((move_ids, move_pixels), ((0x24, 0x21), stats_pixels)):
+        for column, tile_id in enumerate(ids):
+            start = (tile_id - 0x1E) * 16
+            tiles[start : start + 16] = encode_chr_tile(
+                [row[column * 8 : (column + 1) * 8] for row in pixels]
+            )
+    if current != tiles and hashlib.sha256(current).hexdigest() != original_sha:
+        raise ValueError("Tuiles du menu d’équipe inattendues")
+    rom[region] = tiles
+    for offset, original, translated in (
+        (0x02D7DA, "24251f212629", "251f2026290b"),  # Sixth cell stays blank for Envoi.
+        (0x02D83A, "2421202124", "24210b0b0b"),
+    ):
+        replacement = bytes.fromhex(translated)
+        end = offset + len(replacement)
+        if rom[offset:end] not in (bytes.fromhex(original), replacement):
+            raise ValueError(f"Gabarit de menu d’équipe inattendu à 0x{offset:06X}")
+        rom[offset:end] = replacement
+
+
+PC_STAT_CHR_OFFSET = 0x07C961
+PC_STAT_CHR_SIZE = 128
+
+
+def patch_french_pc_stat_label(rom: bytearray) -> None:
+    """Match the PC STAT label to Retirer and Libérer."""
+    replacement = b"".join(player_menu_word_tiles(
+        "STAT", 4, background_color=1, foreground_color=2, shadow_color=1
+    ))
+    region = slice(PC_STAT_CHR_OFFSET, PC_STAT_CHR_OFFSET + PC_STAT_CHR_SIZE)
+    original_sha = "8f32c847560e505681f2ab039573e69dadeb7948d6693c001060d8bdc8b419ea"
+    if rom[region] != replacement and hashlib.sha256(rom[region]).hexdigest() != original_sha:
+        raise ValueError("Tuiles STAT du PC inattendues")
+    rom[region] = replacement
+
+
+TRAINER_INTRO_DUO_CODE = bytes.fromhex("AD 94 7D C9 0D D0 04 A9 40 D0 02 A9 0E 85 6A 4C 1C 89")
+TRAINER_INTRO_DUO_PATCHES = (
+    (0x0228F0, bytes.fromhex("20 1C 89"), bytes.fromhex("20 A0 F4")),
+    (0x0274B0, bytes(len(TRAINER_INTRO_DUO_CODE)), TRAINER_INTRO_DUO_CODE),
+)
+
+
+def patch_french_trainer_intro_duo(rom: bytearray) -> None:
+    """Select the plural suffix only for the intro of trainer $0D."""
+    # $7D94 holds the trainer-name index. Send the original renderer the
+    # singular fragment $0E or the repurposed, formerly unused fragment $40.
+    for offset, original, patched in TRAINER_INTRO_DUO_PATCHES:
+        if rom[offset:offset + len(original)] != original:
+            raise ValueError(f"Octets inattendus dans l'intro des dresseurs à 0x{offset:06X}")
+        rom[offset:offset + len(original)] = patched
+
+
+FIELD_ROCKET_WAIT_HOOK = 0x01965D  # $964D, pair 3, before the one-line wait loop
+FIELD_ROCKET_WAIT_CODE = 0x01E840  # $E830, pair 3, zero-filled
+
+
+def french_rocket_wait_patches(rom: bytes | bytearray) -> tuple[tuple[int, bytes, bytes], ...]:
+    """Queue a down arrow for the three continuing Rocket pages after Giovanni."""
+    # The one-line renderer has already drawn 19 cells here. In group 7:3,
+    # $02/$03 is the next text address and $06 is the last cell's column.
+    # Tie the hook to the two live table slots so it survives text repacking.
+    code = bytes.fromhex(
+        "A5 6B C9 07 D0 50 A5 6C C9 03 D0 4A"  # text bank and group
+        "A2 04 A5 02 DD 8B E8 D0 07 A5 03 DD 8C E8 F0 07"
+        "CA CA 10 EE 4C 86 E8"  # compare $02/$03 with the three page boundaries
+        "A2 17 BD 91 E8 9D 00 07 CA 10 F7"  # copy the two VRAM writes
+        "A5 06 C9 1F F0 0B 18 65 0A 69 01 8D 03 07 A5 0B D0 0A"
+        "A5 0A 8D 03 07 A5 0B 49 04 18 65 09 8D 02 07"  # wrap to the adjacent nametable
+        "A9 FF 85 2D 20 10 80"  # set the tilemap address and flush
+        "A9 0F 85 55 60"  # original wait initialization
+    )
+    boundaries = b"".join(
+        (int.from_bytes(rom[ref:ref + 2], "little") + cells).to_bytes(2, "little")
+        for ref, cells in ((0x03D076, 19), (0x03D078, 19), (0x03D078, 38))
+    )
+    # Place tile $FB in the last interior cell and upload its arrow to $0FB0.
+    arrow = bytes.fromhex("02 01 00 00 FB 10 0F B0 FF FF 81 C3 E7 FF FF FF") + bytes(8)
+    cave = code + boundaries + arrow
+    return (
+        (FIELD_ROCKET_WAIT_HOOK, bytes.fromhex("A9 0F 85 55"), bytes.fromhex("20 30 E8 EA")),
+        (FIELD_ROCKET_WAIT_CODE, bytes(len(cave)), cave),
+    )
+
+
+def patch_french_rocket_wait_indicator(rom: bytearray) -> None:
+    for offset, original, patched in french_rocket_wait_patches(rom):
+        if rom[offset:offset + len(original)] != original:
+            raise ValueError(f"Octets inattendus dans l'attente Rocket à 0x{offset:06X}")
+        rom[offset:offset + len(original)] = patched
+
+
+def patch_french_pokedex_counters(rom: bytearray) -> None:
+    """Translate the two static counter labels without touching digit tiles."""
+    labels = (("VUS", 3, 0x37, 0x02C03B, "3738383a333333", "3b3c3c3e333333"),
+              ("CAPTURÉS", 5, 0x3D, 0x02C09B, "3f404142393333", "43444546333333"))
+    tiles = bytearray()
+    for word, width, start, offset, original_top, original_bottom in labels:
+        tiles += b"".join(player_menu_word_tiles(
+            word, width, background_color=1, foreground_color=0, shadow_color=1
+        ))
+        for row, original in enumerate((original_top, original_bottom)):
+            at = offset + row * 32
+            first = start + row * width
+            replacement = bytes(range(first, first + width)) + bytes([0x33]) * (7 - width)
+            if rom[at:at + 7] not in (bytes.fromhex(original), replacement):
+                raise ValueError(f"Gabarit des compteurs Pokédex inattendu à 0x{at:06X}")
+            rom[at:at + 7] = replacement
+    region = slice(0x02BC75, 0x02BD75)
+    original_sha = "d104185e08045a3ef901fb774bc9f9c2933a044a37fe6dd90d954026619d6a45"
+    if rom[region] != tiles and hashlib.sha256(rom[region]).hexdigest() != original_sha:
+        raise ValueError("Tuiles des compteurs Pokédex inattendues")
+    rom[region] = tiles
+
+
+SHOP_SELL_TRAILING_TILE_OFFSET = 0x070375
+SHOP_SELL_TRAILING_TILE = 0x0C
+
+
+def patch_french_shop_sell_template(rom: bytearray) -> None:
+    """Remove the template's extra l-shaped cell after the three-cell label."""
+    offset = SHOP_SELL_TRAILING_TILE_OFFSET
+    if rom[offset] not in (0x3C, SHOP_SELL_TRAILING_TILE):
+        raise ValueError(f"Tuile de fin de Vente inattendue à 0x{offset:06X}")
+    rom[offset] = SHOP_SELL_TRAILING_TILE
+
+
+def french_shop_label_patches() -> tuple[tuple[int, bytes, bytes], ...]:
+    """Keep both five-letter labels within their three CHR columns."""
+    font = {
+        "A": ("0110", "1001", "1001", "1111", "1001", "1001"),
+        "V": ("10001", "10001", "10001", "01010", "01010", "00100"),
+        "a": ("000", "110", "001", "111", "101", "111"),
+        "c": ("000", "011", "100", "100", "100", "011"),
+        "e": ("000", "010", "101", "111", "100", "011"),
+        "h": ("100", "100", "110", "101", "101", "101"),
+        "n": ("000", "000", "110", "101", "101", "101"),
+        "t": ("010", "111", "010", "010", "010", "011"),
+    }
+    tiles = bytearray()
+    for word in ("Achat", "Vente"):
+        pixels = [[2] * 24 for _ in range(16)]  # same green and white as the stock labels
+        for y in range(6):
+            line = "0".join(font[letter][y] for letter in word).center(24, "0")
+            for x, bit in enumerate(line):
+                if bit == "1":
+                    pixels[4 + y][x] = 0
+        # The shop nametable pairs the upper and lower tiles of each column.
+        for column in range(0, 24, 8):
+            for top in (0, 8):
+                tiles.extend(encode_chr_tile([row[column:column + 8] for row in pixels[top:top + 8]]))
+
+    # Replace the final JSR in the shop label setup at $E46D (PRG pair 4).
+    # Finish the original tilemap/CHR setup before replacing tiles $31–$3C.
+    # Rendering is disabled here. Mask NMI during the direct VRAM upload so it
+    # cannot interrupt the address/data writes. Leave VRAM at $03D0 as before.
+    shop_code = bytes.fromhex(
+        "20 0E 8D 08 48 8A 48"  # original text draw, save flags/A/X
+        "A5 15 29 7F 8D 00 20 2C 02 20"  # mask NMI and reset the PPU address latch
+        "A9 03 8D 06 20 A9 10 8D 06 20 A2 00"
+        "BD F2 F4 8D 07 20 E8 E0 C0 D0 F5"  # upload 192 bytes from $F4F2
+        "A5 15 8D 00 20 68 AA 68 28 60"  # restore PPUCTRL, X, A and flags
+    )
+    code_and_tiles = shop_code + bytes(tiles)
+    return (
+        (0x02647D, bytes.fromhex("20 0E 8D"), bytes.fromhex("20 C0 F4")),
+        (0x0274D0, bytes(len(code_and_tiles)), code_and_tiles),
+    )
+
+
+def patch_french_shop_compact_labels(rom: bytearray) -> None:
+    for offset, original, patched in french_shop_label_patches():
+        end = offset + len(original)
+        if rom[offset:end] != original:
+            raise ValueError(f"Code boutique inattendu à 0x{offset:06X}")
+        rom[offset:end] = patched
+
+
+PC_OPTIONS_CHR_OFFSET = 0x07C831
+PC_OPTIONS_CHR_SIZE = 256
+PC_BOX_LABEL_CHR_ROWS = (0x07C011, 0x07C0A1)
+PC_BOX_LABEL_CHR_ROW_SIZE = 48
+
+
+def patch_french_pc_box_label(rom: bytearray) -> None:
+    """Translate the label shared by the eight boxes, leaving digits untouched."""
+    replacement = b"".join(
+        player_menu_word_tiles("BTE", 3, background_color=1, foreground_color=0, shadow_color=1)
+    )
+    original = bytes.fromhex(
+        "ff838199999999830000000000000000ffc38199999999990000000000000000"
+        "ff9999999999c3c3000000000000000083999999998183ff0000000000000000"
+        "999999999981c3ff0000000000000000c3c39999999999ff0000000000000000"
+    )
+    size = PC_BOX_LABEL_CHR_ROW_SIZE
+    actual = b"".join(rom[offset : offset + size] for offset in PC_BOX_LABEL_CHR_ROWS)
+    if actual != original and actual != replacement:
+        raise ValueError("Graphismes du libellé de boîte PC inattendus")
+    for row, offset in enumerate(PC_BOX_LABEL_CHR_ROWS):
+        rom[offset : offset + size] = replacement[row * size : (row + 1) * size]
+
+
+def patch_french_pc_options(rom: bytearray) -> None:
+    """Replace two four-tile-wide labels in the PC withdrawal menu."""
+    replacement = b"".join(
+        tile
+        for word in ("Retirer", "Libérer")
+        for tile in player_menu_word_tiles(
+            word, 4, background_color=1, foreground_color=2, shadow_color=1
+        )
+    )
+    region = slice(PC_OPTIONS_CHR_OFFSET, PC_OPTIONS_CHR_OFFSET + PC_OPTIONS_CHR_SIZE)
+    original_sha = "02ac5f922ab7a3b665b462c3e70d8d5fd5e6093f88344f036e917e96337ce22d"
+    if rom[region] != replacement and hashlib.sha256(rom[region]).hexdigest() != original_sha:
+        raise ValueError("Bloc graphique des options PC inattendu")
+    rom[region] = replacement
+
+
+BATTLE_SLEEP_CHR_OFFSET = 0x07F775
+BATTLE_SLEEP_CHR_SIZE = 48
+
+
+PARTY_TARGET_STATUS_TABLES = (
+    (0x06BAC6, bytes.fromhex("0e3020ba0e60213a000021ba0030223a006022ba0090233ae3e600030609"),
+     bytes.fromhex("0d0020ba0d30213a0d6021ba0d90223a0dc022ba0df0233ad0d3d6d9dcdf")),
+    (0x06BB15, bytes.fromhex("06b0209007f02110093021900a7022100bb022900cf02310"),
+     bytes.fromhex("0700209008002110090021900a0022100b0022900c002310")),
+)
+
+
+def restore_party_target_status_tables(rom: bytearray) -> None:
+    """Restore the original CHR destinations for all six party slots."""
+    for offset, english, original in PARTY_TARGET_STATUS_TABLES:
+        end = offset + len(original)
+        if rom[offset:end] not in (english, original):
+            raise ValueError(f"Unexpected party status table at 0x{offset:06X}")
+        rom[offset:end] = original
+
+
+PARTY_ITEM_PANEL_CODE = bytes.fromhex(
+    "adbc7dc901f00cc900f005c904f001604cebbf"  # Dispatch on $7DBC.
+    "8a48ad0220a9228d0620a9658d0620a90ba2068d0720cad0fa"  # $2265, 6 cells.
+    "a9228d0620a9c58d0620a90ba2058d0720cad0fa"  # $22C5, 5 cells.
+    "a9008d06208d062068aaa901c90460"  # Reset PPU address and restore X.
+)
+PARTY_ITEM_PANEL_PATCHES = (
+    (0x06BFF1, bytes.fromhex("adbc7d"), bytes.fromhex("4c50e7")),
+    (0x06E760, bytes(len(PARTY_ITEM_PANEL_CODE)), PARTY_ITEM_PANEL_CODE),
+)
+
+
+def hide_party_item_panel_labels(rom: bytearray) -> None:
+    """Blank the two static actions during item targeting with rendering off."""
+    for offset, original, replacement in PARTY_ITEM_PANEL_PATCHES:
+        end = offset + len(original)
+        if rom[offset:end] not in (original, replacement):
+            raise ValueError(f"Unexpected party item panel code at 0x{offset:06X}")
+    for offset, _, replacement in PARTY_ITEM_PANEL_PATCHES:
+        rom[offset : offset + len(replacement)] = replacement
+
+
+def patch_french_battle_sleep_label(rom: bytearray) -> None:
+    """Replace the three-tile SLEEP badge with the DORT graphic."""
+    original = bytes.fromhex(
+        "7fcdb5ddedb5cc7f0000000000000000"
+        "ffc4ddccdddd44ff0000000000000000"
+        "fe47dbdbc7df5ffe0000000000000000"
+    )
+    translated = bytes.fromhex(
+        "7f73757575737f7f0000000000000000"
+        "ff1355535515ffff0000000000000000"
+        "fe1ebebebebefefe0000000000000000"
+    )
+    region = slice(BATTLE_SLEEP_CHR_OFFSET, BATTLE_SLEEP_CHR_OFFSET + BATTLE_SLEEP_CHR_SIZE)
+    if rom[region] not in (original, translated):
+        raise ValueError("Graphismes du statut Sommeil inattendus")
+    rom[region] = translated
+
+
+BATTLE_BURN_FREEZE_LABELS = (
+    (0x07F7D5,
+     bytes.fromhex("7fc6dac6dadac77f0000000000000000ffd1d6d6d1d636ff0000000000000000feb79797a7a7b7fe0000000000000000"),
+     bytes.fromhex("7fffc6dac6dac67f0000000000000000ffff36d636b6d9ff0000000000000000feffbfbfbfbf87fe0000000000000000")),
+    (0x07F835,
+     bytes.fromhex("7fc9dac9dadada7f0000000000000000ff92b7b792b692ff0000000000000000fe27af6fe7ef27fe0000000000000000"),
+     bytes.fromhex("7ffffcfbfafbfc7f0000000000000000ffff42de465e42ff0000000000000000feffffffffff1ffe0000000000000000")),
+)
+
+
+def patch_french_battle_burn_freeze_labels(rom: bytearray) -> None:
+    """Replace the BURN and FREEZE badges with BRUL and GEL."""
+    for offset, original, translated in BATTLE_BURN_FREEZE_LABELS:
+        end = offset + len(original)
+        if rom[offset:end] not in (original, translated):
+            raise ValueError(f"Graphismes de statut inattendus à 0x{offset:06X}")
+        rom[offset:end] = translated
 
 
 def _patch_two_row_graphical_labels(

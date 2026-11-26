@@ -16,12 +16,16 @@ SOURCE_SHA = "450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed"
 
 class DistributionTests(unittest.TestCase):
     def test_patch_structure_and_checksum_without_rom(self):
-        records, truncate = parse_ips(PATCH)
-        self.assertTrue(records)
-        self.assertIsNone(truncate)
-        self.assertEqual(hashlib.sha256(PATCH.read_bytes()).hexdigest(), IPS_SHA)
-        self.assertEqual((RELEASE / "VERSION").read_text().strip(), "2.0.13")
-        self.assertEqual((RELEASE / "SHA256SUMS").read_text().strip(), IPS_SHA + "  " + PATCH.name)
+        for version, checksum in (("2.0.13", IPS_SHA), (builder.VERSION, builder.IPS_HASH)):
+            with self.subTest(version=version):
+                release = ROOT / f"releases/fr/{version}"
+                patch = release / f"Pokemon_Jaune_NJ046_FR_v{version}.ips"
+                records, truncate = parse_ips(patch)
+                self.assertTrue(records)
+                self.assertIsNone(truncate)
+                self.assertEqual(hashlib.sha256(patch.read_bytes()).hexdigest(), checksum)
+                self.assertEqual((release / "VERSION").read_text().strip(), version)
+                self.assertEqual((release / "SHA256SUMS").read_text().strip(), checksum + "  " + patch.name)
 
     def test_only_two_source_roms_are_needed(self):
         self.assertEqual(len(builder.DEFAULT_ROMS), 2)

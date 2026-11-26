@@ -9,17 +9,43 @@ from dataclasses import dataclass
 from pathlib import Path
 
 try:
+    from .battle_priority import quick_attack_priority_patches
+    from .battle_morphing import morphing_patches
+    from .party_name_graphics import party_name_patches
+    from .shop_item_graphics import shop_item_name_patches
     from .title_screen_tools import (
+        BATTLE_SLEEP_CHR_OFFSET,
+        BATTLE_BURN_FREEZE_LABELS,
+        BATTLE_SLEEP_CHR_SIZE,
         ENGLISH_TITLE_CREDITS,
         FRENCH_TITLE_VERSION_TILES,
         MENU_FR_TILES,
         MENU_TILE_IDS,
+        PC_OPTIONS_CHR_OFFSET,
+        PC_OPTIONS_CHR_SIZE,
+        PC_STAT_CHR_OFFSET,
+        PC_STAT_CHR_SIZE,
+        PC_BOX_LABEL_CHR_ROWS,
+        PC_BOX_LABEL_CHR_ROW_SIZE,
         SAVING_SCREEN_CHR_FILE,
+        TRAINER_INTRO_DUO_PATCHES,
+        french_rocket_wait_patches,
+        french_shop_label_patches,
+        SHOP_SELL_TRAILING_TILE,
+        SHOP_SELL_TRAILING_TILE_OFFSET,
         STATUS_SCREEN_CHR_FILE,
         TITLE_LOGO_TILE_IDS,
         TITLE_PT0_FILE,
         TITLE_PT1_FILE,
         patch_french_bottom_title_label,
+        patch_french_battle_sleep_label,
+        PARTY_TARGET_STATUS_TABLES,
+        PARTY_ITEM_PANEL_PATCHES,
+        patch_french_party_order_label,
+        patch_french_pc_options,
+        patch_french_pc_stat_label,
+        patch_french_pokedex_counters,
+        patch_french_pc_box_label,
         patch_french_saving_screen_label,
         patch_french_status_screen_labels,
         patch_title_credits,
@@ -43,17 +69,43 @@ try:
         read_move_records,
     )
 except ImportError:  # Direct ``python tools/validate_mapper163.py`` use.
+    from battle_priority import quick_attack_priority_patches
+    from battle_morphing import morphing_patches
+    from party_name_graphics import party_name_patches
+    from shop_item_graphics import shop_item_name_patches
     from title_screen_tools import (
+        BATTLE_SLEEP_CHR_OFFSET,
+        BATTLE_BURN_FREEZE_LABELS,
+        BATTLE_SLEEP_CHR_SIZE,
         ENGLISH_TITLE_CREDITS,
         FRENCH_TITLE_VERSION_TILES,
         MENU_FR_TILES,
         MENU_TILE_IDS,
+        PC_OPTIONS_CHR_OFFSET,
+        PC_OPTIONS_CHR_SIZE,
+        PC_STAT_CHR_OFFSET,
+        PC_STAT_CHR_SIZE,
+        PC_BOX_LABEL_CHR_ROWS,
+        PC_BOX_LABEL_CHR_ROW_SIZE,
         SAVING_SCREEN_CHR_FILE,
+        TRAINER_INTRO_DUO_PATCHES,
+        french_rocket_wait_patches,
+        french_shop_label_patches,
+        SHOP_SELL_TRAILING_TILE,
+        SHOP_SELL_TRAILING_TILE_OFFSET,
         STATUS_SCREEN_CHR_FILE,
         TITLE_LOGO_TILE_IDS,
         TITLE_PT0_FILE,
         TITLE_PT1_FILE,
         patch_french_bottom_title_label,
+        patch_french_battle_sleep_label,
+        PARTY_TARGET_STATUS_TABLES,
+        PARTY_ITEM_PANEL_PATCHES,
+        patch_french_party_order_label,
+        patch_french_pc_options,
+        patch_french_pc_stat_label,
+        patch_french_pokedex_counters,
+        patch_french_pc_box_label,
         patch_french_saving_screen_label,
         patch_french_status_screen_labels,
         patch_title_credits,
@@ -454,7 +506,36 @@ def validate(args: argparse.Namespace) -> int:
             allowed_pair8_offsets=frozenset(),
             changed_pair8_offsets=frozenset(),
         )
-    expected_changed_pairs = {4, 5, 6, 7, 14, 15, 57}
+    expected_changed_pairs = {3, 4, 5, 6, 7, 14, 15, 57}
+    if 13 in pairs:
+        expected_changed_pairs.add(13)
+        allowed_status_offsets = set()
+        for offset, english, original in PARTY_TARGET_STATUS_TABLES:
+            end = offset + len(original)
+            if base[offset:end] != english or rom[offset:end] != original:
+                failures.append(f"Table de statut d’équipe inattendue à 0x{offset:06X}")
+            allowed_status_offsets.update(range(offset, end))
+        panel_changed = any(
+            rom[offset : offset + len(original)] != original
+            for offset, original, _ in PARTY_ITEM_PANEL_PATCHES
+        )
+        if panel_changed:
+            for offset, original, replacement in PARTY_ITEM_PANEL_PATCHES:
+                end = offset + len(original)
+                if base[offset:end] != original or rom[offset:end] != replacement:
+                    failures.append(f"Correctif du panneau d’objet inattendu à 0x{offset:06X}")
+                allowed_status_offsets.update(range(offset, end))
+        for offset, original, replacement in party_name_patches(rom):
+            end = offset + len(original)
+            if base[offset:end] != original or rom[offset:end] != replacement:
+                failures.append(f"Noms compacts d’équipe inattendus à 0x{offset:06X}")
+            allowed_status_offsets.update(range(offset, end))
+        if any(
+            (offset - INES_HEADER_SIZE) // PRG_BANK_SIZE == 13
+            and offset not in allowed_status_offsets
+            for offset in all_changed_offsets
+        ):
+            failures.append("Modifications hors correctifs du menu d’équipe en banque 13")
     if move_label_certification.changed_pair8_offsets:
         expected_changed_pairs.add(8)
     unexpected_pairs = sorted(set(pairs) - expected_changed_pairs)
@@ -471,15 +552,38 @@ def validate(args: argparse.Namespace) -> int:
         )
 
     bank4_start = INES_HEADER_SIZE + 4 * PRG_BANK_SIZE
+    bank3_start = bank4_start - PRG_BANK_SIZE
+    rocket_offsets = set()
+    for offset, original, patched in french_rocket_wait_patches(rom):
+        end = offset + len(patched)
+        if base[offset:end] != original or rom[offset:end] != patched:
+            failures.append(f"indicateur d'attente Rocket non conforme à 0x{offset:06X}")
+        rocket_offsets.update(
+            offset + index
+            for index, value in enumerate(patched)
+            if base[offset + index] != value
+        )
+    if {offset for offset in all_changed_offsets if bank3_start <= offset < bank4_start} != rocket_offsets:
+        failures.append("modifications non autorisées dans la banque de dialogue 3")
+
     bank4_end = bank4_start + PRG_BANK_SIZE
     bank4_changed_offsets = {
         offset
         for offset in all_changed_offsets
         if bank4_start <= offset < bank4_end
     }
+    shop_patches = (*french_shop_label_patches(), *shop_item_name_patches())
+    priority_patches = quick_attack_priority_patches()
+    allowed_morphing = morphing_patches() if args.morphing else ()
     allowed_bank4_offsets = {
         BATTLE_MENU_CHR_START_LOW_OFFSET,
         BATTLE_MESSAGE_CLEAR_WIDTH_OFFSET,
+        *(
+            offset + index
+            for offset, _, patched in (*TRAINER_INTRO_DUO_PATCHES, *shop_patches, *priority_patches, *allowed_morphing)
+            for index, value in enumerate(patched)
+            if base[offset + index] != value
+        ),
         *(
             BATTLE_TEXT_CONTROL_HOOK_OFFSET + index
             for index, value in enumerate(
@@ -502,11 +606,26 @@ def validate(args: argparse.Namespace) -> int:
     }
     if bank4_changed_offsets != allowed_bank4_offsets:
         failures.append(
-            "modifications banque 4 hors menu/hook texte combat: "
+            "modifications inattendues des menus ou du texte en banque 4: "
             + ", ".join(
                 f"0x{offset:06X}" for offset in sorted(bank4_changed_offsets)
             )
         )
+    for offset, _, patched in TRAINER_INTRO_DUO_PATCHES:
+        if rom[offset:offset + len(patched)] != patched:
+            failures.append(f"intro de Jessie et James non conforme à 0x{offset:06X}")
+    for offset, original, patched in shop_patches:
+        end = offset + len(patched)
+        if base[offset:end] != original or rom[offset:end] != patched:
+            failures.append(f"libellé de boutique non conforme à 0x{offset:06X}")
+    for offset, original, patched in priority_patches:
+        end = offset + len(patched)
+        if base[offset:end] != original or rom[offset:end] != patched:
+            failures.append(f"priorité de Vive-Attaque non conforme à 0x{offset:06X}")
+    for offset, original, patched in allowed_morphing:
+        end = offset + len(patched)
+        if base[offset:end] != original or rom[offset:end] != patched:
+            failures.append(f"Morphing non conforme à 0x{offset:06X}")
     if rom[BATTLE_MENU_CHR_START_LOW_OFFSET] != (
         BATTLE_MENU_CHR_START_LOW_EXPECTED
     ):
@@ -590,8 +709,27 @@ def validate(args: argparse.Namespace) -> int:
         for offset in range(SAVING_SCREEN_CHR_FILE, STATUS_SCREEN_CHR_FILE + 0x1000)
         if secondary_screen_reference[offset] != base[offset]
     }
+    party_order_reference = bytearray(base)
+    patch_french_party_order_label(party_order_reference)
+    party_order_offsets = {
+        offset
+        for offset in range(0x02D3B5, 0x02D83F)
+        if party_order_reference[offset] != base[offset]
+    }
+    if any(rom[offset] != base[offset] for offset in party_order_offsets):
+        if any(rom[offset] != party_order_reference[offset] for offset in party_order_offsets):
+            failures.append("Libellé d’ordre de l’équipe incomplet ou inattendu")
+    dex_reference = bytearray(base)
+    patch_french_pokedex_counters(dex_reference)
+    dex_offsets = {
+        offset for offset in range(0x02BC75, 0x02C0C2)
+        if dex_reference[offset] != base[offset]
+    }
+    if any(rom[offset] != base[offset] for offset in dex_offsets):
+        if any(rom[offset] != dex_reference[offset] for offset in dex_offsets):
+            failures.append("Libellés des compteurs Pokédex incomplets ou inattendus")
     allowed_bank5_offsets = (
-        allowed_player_menu_offsets | allowed_secondary_screen_offsets
+        allowed_player_menu_offsets | allowed_secondary_screen_offsets | party_order_offsets | dex_offsets
     )
     bank5_start = INES_HEADER_SIZE + 5 * PRG_BANK_SIZE
     bank5_end = bank5_start + PRG_BANK_SIZE
@@ -675,6 +813,8 @@ def validate(args: argparse.Namespace) -> int:
         if bottom_title_reference[offset] != base[offset]
     }
     allowed_bank14_offsets |= bottom_title_offsets
+    if rom[SHOP_SELL_TRAILING_TILE_OFFSET] == SHOP_SELL_TRAILING_TILE:
+        allowed_bank14_offsets.add(SHOP_SELL_TRAILING_TILE_OFFSET)
     for offset in sorted(bottom_title_offsets):
         if rom[offset] != bottom_title_reference[offset]:
             failures.append(
@@ -727,6 +867,49 @@ def validate(args: argparse.Namespace) -> int:
         for offset in expected_font_offsets
         for byte_index in range(16)
     }
+    pc_region = slice(PC_OPTIONS_CHR_OFFSET, PC_OPTIONS_CHR_OFFSET + PC_OPTIONS_CHR_SIZE)
+    if rom[pc_region] != base[pc_region]:
+        pc_reference = bytearray(base)
+        patch_french_pc_options(pc_reference)
+        if rom[pc_region] == pc_reference[pc_region]:
+            allowed_bank15_offsets.update(range(pc_region.start, pc_region.stop))
+        else:
+            failures.append("Graphismes des options PC inattendus")
+    pc_box_offsets = {
+        offset + index
+        for offset in PC_BOX_LABEL_CHR_ROWS
+        for index in range(PC_BOX_LABEL_CHR_ROW_SIZE)
+    }
+    if any(rom[offset] != base[offset] for offset in pc_box_offsets):
+        pc_box_reference = bytearray(base)
+        patch_french_pc_box_label(pc_box_reference)
+        if all(rom[offset] == pc_box_reference[offset] for offset in pc_box_offsets):
+            allowed_bank15_offsets.update(pc_box_offsets)
+        else:
+            failures.append("Graphismes du libellé de boîte PC inattendus")
+    stat_region = slice(PC_STAT_CHR_OFFSET, PC_STAT_CHR_OFFSET + PC_STAT_CHR_SIZE)
+    if rom[stat_region] != base[stat_region]:
+        stat_reference = bytearray(base)
+        patch_french_pc_stat_label(stat_reference)
+        if rom[stat_region] == stat_reference[stat_region]:
+            allowed_bank15_offsets.update(range(stat_region.start, stat_region.stop))
+        else:
+            failures.append("Graphismes du libellé STAT du PC inattendus")
+    sleep_region = slice(BATTLE_SLEEP_CHR_OFFSET, BATTLE_SLEEP_CHR_OFFSET + BATTLE_SLEEP_CHR_SIZE)
+    if rom[sleep_region] != base[sleep_region]:
+        sleep_reference = bytearray(base)
+        patch_french_battle_sleep_label(sleep_reference)
+        if rom[sleep_region] == sleep_reference[sleep_region]:
+            allowed_bank15_offsets.update(range(sleep_region.start, sleep_region.stop))
+        else:
+            failures.append("Graphismes du statut Sommeil inattendus")
+    for offset, original, translated in BATTLE_BURN_FREEZE_LABELS:
+        end = offset + len(original)
+        if rom[offset:end] != base[offset:end]:
+            if base[offset:end] == original and rom[offset:end] == translated:
+                allowed_bank15_offsets.update(range(offset, end))
+            else:
+                failures.append(f"Graphismes de statut inattendus à 0x{offset:06X}")
     bank15_start = INES_HEADER_SIZE + 15 * PRG_BANK_SIZE
     bank15_end = bank15_start + PRG_BANK_SIZE
     bank15_changed_offsets = {
@@ -888,6 +1071,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--base-rom",
         default="Pokemon Yellow English 9-23-2015.nes",
     )
+    parser.add_argument("--morphing", action="store_true", help="Vérifier Morphing côté joueur")
     parser.add_argument(
         "--title-logo",
         choices=("english", "french"),

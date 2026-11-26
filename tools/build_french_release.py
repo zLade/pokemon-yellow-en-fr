@@ -24,9 +24,13 @@ from tools.restore_chinese_dojo_deputy import restore
 from tools.french_font import encode_game_text, literal_slot_conflicts
 from tools.dialogue_layout import format_game_text
 from tools.move_label_graphics import load_move_label_csv, french_text_encoder
+from tools.shop_item_graphics import patch_shop_item_names
+from tools.party_name_graphics import patch_party_names
+from tools.battle_priority import patch_quick_attack_priority
+from tools.battle_morphing import patch_morphing
 
 CATALOGUE = ROOT / "traduction/catalogue.csv"
-VERSION = "2.0.13"
+VERSION = "2.0.14"
 DEFAULT_ROMS = {
     "english": ROOT / core.TRANSLATION_BASE_ROM,
     "chinese": ROOT / core.CHINESE_ROM,
@@ -35,8 +39,8 @@ SOURCE_HASHES = {
     "english": "d5c308b5862ccbe4647d4255a11bb0f1cb6817c4b107feac112509d658a9943b",
     "chinese": "450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed",
 }
-ROM_HASH = "2846fac5738ad24bc65dd1c24622fe4a1e9fffe94062052e84bfbae1cd34fae3"
-IPS_HASH = "c05525ad4bbc628f5f97c9005ff85751236be282913ce835d25d350f6dccec0c"
+ROM_HASH = "f966f61908685deca71d63c6472a38d95c4009f424b66342008a63b71ecedd93"
+IPS_HASH = "305d178761ae18e7b43fa82d0ac107147857be10bd0a42aff392f2075cf60a8a"
 PITCH_START = 0x01B0A9
 PITCH_BEFORE = bytes.fromhex(
     "9a2dc66408b26013ca854407cd96633204d9b08965422203e6cbb199826c584432211101"
@@ -149,15 +153,34 @@ def build(args: argparse.Namespace) -> dict:
         require(first == second, "Compilation non déterministe")
         rom = bytearray(first)
         for patch in (title.patch_jaune_tiles, title.patch_french_menu_tiles,
-                      title.patch_french_player_menu_labels, title.patch_french_status_screen_labels,
+                      title.patch_french_player_menu_labels, title.patch_french_party_order_label,
+                      patch_party_names,
+                      title.patch_french_shop_sell_template,
+                      title.patch_french_shop_compact_labels,
+                      patch_shop_item_names,
+                      title.patch_french_pc_options,
+                      title.patch_french_pc_stat_label,
+                      title.patch_french_pc_box_label,
+                      title.patch_french_pokedex_counters,
+                      title.patch_french_trainer_intro_duo,
+                      title.patch_french_rocket_wait_indicator,
+                      title.patch_french_battle_sleep_label,
+                      title.patch_french_battle_burn_freeze_labels,
+                      patch_quick_attack_priority,
+                      title.restore_party_target_status_tables,
+                      title.hide_party_item_panel_labels,
+                      title.patch_french_status_screen_labels,
                       title.patch_french_saving_screen_label, title.patch_title_credits,
                       title.patch_french_bottom_title_label):
             patch(rom)
+        if args.morphing:
+            patch_morphing(rom)
         rom = restore(bytes(rom), data["chinese"])
         pre_pitch = stage / "mapper.nes"
         pre_pitch.write_bytes(rom)
         mapper_args = mapper.build_parser().parse_args([
-            "--rom", str(pre_pitch), "--base-rom", str(inputs["english"]), "--title-logo", "french"])
+            "--rom", str(pre_pitch), "--base-rom", str(inputs["english"]), "--title-logo", "french",
+            *(["--morphing"] if args.morphing else [])])
         require(mapper.validate(mapper_args) == 0, "Contrat mapper 163 invalide")
         final = apply_pitch(rom)
         ips = core.make_ips(data["chinese"], final)
@@ -175,6 +198,7 @@ def build(args: argparse.Namespace) -> dict:
         require(commitment == expected, "Inventaire des 1 916 pointeurs modifié")
         errors = pointers.validate_manifest(rom_path=rom_path, manifest=manifest)
         errors += dynamic.validate_dynamic_fragments(final)
+        errors += dynamic.validate_item_description_width(final)
         bank_args = budget.build_parser().parse_args([
             "--csv", str(CATALOGUE), "--input-rom", str(inputs["english"]),
             "--floor", "6:40:4", "--floor", "7:128:128"])
@@ -182,8 +206,8 @@ def build(args: argparse.Namespace) -> dict:
         errors += bank_errors
         require(not errors, "\n".join(errors))
         if args.verify_release:
-            require(sha(final) == ROM_HASH and sha(ips) == IPS_HASH, "Différence avec la release 2.0.13")
-            published = ROOT / "releases/fr/2.0.13/Pokemon_Jaune_NJ046_FR_v2.0.13.ips"
+            require(sha(final) == ROM_HASH and sha(ips) == IPS_HASH, f"Différence avec la release {VERSION}")
+            published = ROOT / f"releases/fr/{VERSION}/Pokemon_Jaune_NJ046_FR_v{VERSION}.ips"
             require(ips == published.read_bytes(), "IPS publié différent")
         require(before == {str(path.relative_to(ROOT)): sha(path.read_bytes()) for path in source_files},
                 "Une source a changé pendant la compilation")
@@ -211,7 +235,9 @@ def main(argv=None) -> int:
     commands.add_parser("check", help="Contrôles du catalogue sans ROM")
     command = commands.add_parser("build", help="Compiler et contrôler les ROM et IPS")
     command.add_argument("--output-dir", type=Path, default=ROOT / "build/fr")
-    command.add_argument("--verify-release", action="store_true", help="Exiger les octets exacts de la 2.0.13")
+    command.add_argument("--morphing", action=argparse.BooleanOptionalAction, default=True,
+                         help="Inclure Morphing côté joueur (activé par défaut)")
+    command.add_argument("--verify-release", action="store_true", help=f"Exiger les octets exacts de la {VERSION}")
     for name, path in DEFAULT_ROMS.items():
         command.add_argument(f"--{name}", type=Path, default=path)
     args = parser.parse_args(argv)

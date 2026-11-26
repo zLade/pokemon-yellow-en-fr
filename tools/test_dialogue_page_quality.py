@@ -251,7 +251,8 @@ class DialoguePageQualityTests(unittest.TestCase):
             "traduction/catalogue.csv",
             sample_limit=0,
         )
-        self.assertEqual(report["common_dialogue_rows"], 967)
+        # The two battle-name fragments at 0x0381AF and 0x0381C1 use raw layout.
+        self.assertEqual(report["common_dialogue_rows"], 965)
         residuals = report["residual_strong_rows"]
         self.assertEqual(
             sum(row["strong_issue_count"] for row in residuals),

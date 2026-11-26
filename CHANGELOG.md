@@ -1,5 +1,12 @@
 # Historique des versions françaises
 
+## Français 2.0.14 — 26 novembre 2026
+
+Vive-Attaque est prioritaire si un seul des deux Pokémon la choisit. Si les deux
+la choisissent, le jeu applique le départage habituel par Vitesse. Le Métamorph
+du joueur peut utiliser Morphing. La release reprend aussi les corrections
+de texte et d'affichage de la v11.
+
 ## Français 2.0.13 — 8 septembre 2026
 
 - Restauration du petit libellé VERSION à gauche du logo : VERSION JAUNE au lieu de JAUNE JAUNE.

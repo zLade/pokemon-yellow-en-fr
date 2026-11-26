@@ -117,7 +117,7 @@ class FrenchReleaseIntegrationTests(unittest.TestCase):
         parent.mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(prefix="fr-integration-", dir=parent) as temporary:
             args = argparse.Namespace(**builder.DEFAULT_ROMS, output_dir=Path(temporary) / "result",
-                                      verify_release=True)
+                                      verify_release=True, morphing=True)
             with contextlib.redirect_stdout(io.StringIO()):
                 report = builder.build(args)
             self.assertEqual(report["rom_sha256"], builder.ROM_HASH)
