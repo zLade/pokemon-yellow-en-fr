@@ -11,6 +11,9 @@ the ROM-hacking community, with in-game credits to LUIGA2009, ZLADE and CHPEXO.
 | English 2.0.4 | [English release](https://github.com/zLade/pokemon-yellow-en-fr/releases/tag/en-v2.0.4) | [en branch](https://github.com/zLade/pokemon-yellow-en-fr/tree/en) |
 | French 2.0.14 | [French release](https://github.com/zLade/pokemon-yellow-en-fr/releases/tag/fr-v2.0.14) | [fr branch](https://github.com/zLade/pokemon-yellow-en-fr/tree/fr) |
 
+- **Quick Attack (Vive-Attaque)** goes first when only one Pokémon chooses it. If both choose it, Speed determines who goes first.
+- **Transform (Morphing)** lets the player's Ditto (Métamorph) copy the opponent's appearance and moves, with 5 temporary PP per copied move. Ditto regains its original moves when it switches out or the battle ends.
+
 Releases contain IPS patches, instructions and checksums. No complete ROM is
 distributed. Both current patches apply directly to a clean copy of the
 original Chinese NES ROM:
