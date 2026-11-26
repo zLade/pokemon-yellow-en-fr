@@ -2,7 +2,7 @@
 """Local English builder. Static/byte checks are not emulator validation.
 
 Run ``python build.py check`` without ROMs, or ``python build.py build``.
-Only --verify-release pins the output to the published 2.0.3 bytes.
+Only --verify-release pins the output to the published release bytes.
 Outputs must be in an ignored directory inside this checkout; existing
 nonempty directories are never replaced. No release files are modified.
 """
@@ -25,7 +25,7 @@ if str(ROOT) not in sys.path:
 from tools import validate_english_catalog as catalog
 from tools.move_label_graphics import load_move_label_csv
 
-VERSION = "2.0.3"
+VERSION = "2.0.4"
 ROM_FILENAME = "Pokemon_Yellow_NJ046_EN.nes"
 IPS_FILENAME = "Pokemon_Yellow_NJ046_EN.ips"
 REPORT_FILENAME = "build_report.json"
@@ -51,8 +51,8 @@ EXPECTED_ROM_SHA256 = {
     "english_2015": "d5c308b5862ccbe4647d4255a11bb0f1cb6817c4b107feac112509d658a9943b",
     "chinese": "450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed",
 }
-RELEASE_ROM_SHA256 = "703662c3739884513bf6493b748743eff0933b2479dc21644433699891f9d0f3"
-RELEASE_IPS_SHA256 = "6f42637770fd4fc4971ef90d156d6f5959bb88e546122e2747b6b34c8cd168da"
+RELEASE_ROM_SHA256 = "5b1f1f006f7aa0f0eb42874a90e0d4ea3b68529d2064f3145b9950d20c217a83"
+RELEASE_IPS_SHA256 = "8fcb977abc137cc4f4a930dc446e0a607a138215f264f018a4d1c72ead617c8a"
 ROM_SIZE = 2097168
 
 # Retained local build/validator closure, independent of the caller's imports.
@@ -61,6 +61,8 @@ ROM_SIZE = 2097168
 # French translation inputs or French release-validation requirements.
 SOURCE_FILES = (
     "build.py",
+    "tools/battle_priority.py",
+    "tools/battle_transform.py",
     "tools/build_english_release.py",
     "tools/catalogue_io.py",
     "tools/dialogue_layout.py",
@@ -142,7 +144,7 @@ def read_source_rom(path: Path, label: str) -> bytes:
 
 def verify_release(rom: bytes, ips: bytes) -> None:
     if sha256(rom) != RELEASE_ROM_SHA256 or sha256(ips) != RELEASE_IPS_SHA256:
-        raise BuildError("Output differs from published 2.0.3; omit --verify-release for edited sources")
+        raise BuildError(f"Output differs from published {VERSION}; omit --verify-release for edited sources")
 
 
 def run_git(*args: str) -> subprocess.CompletedProcess:
@@ -259,6 +261,9 @@ def build(args: argparse.Namespace) -> dict[str, object]:
     from tools import validate_english_bank_budget as budget
     from tools import validate_english_glyph_residue as glyphs
     from tools import validate_english_repacked as repacked
+    from tools import validate_mapper163 as mapper
+    from tools.battle_priority import patch_quick_attack_priority
+    from tools.battle_transform import patch_transform
     from tools.restore_chinese_dojo_deputy import restore
     from tools.title_screen_tools import patch_english_yellow_title
 
@@ -298,10 +303,26 @@ def build(args: argparse.Namespace) -> dict[str, object]:
         title = bytearray(raw)
         patch_english_yellow_title(title, roms["english_2015"], "LUIGA2009, ZLADE, CHPEXO")
         dojo = restore(bytes(title), roms["chinese"])
-        final = apply_pitch(dojo)
+        battle = bytearray(dojo)
+        patch_quick_attack_priority(battle)
+        patch_transform(battle)
+        pre_pitch = work / "mapper.nes"
+        pre_pitch.write_bytes(battle)
+        mapper_args = mapper.build_parser().parse_args([
+            "--rom", str(pre_pitch), "--base-rom", str(rom_paths["english_2015"]),
+            "--profile", "en-US", "--title-logo", "yellow-version",
+            "--title-reference-rom", str(rom_paths["english_2015"]),
+            "--move-labels-csv", str(DATA_INPUTS["move_labels"]), "--battle-fixes",
+        ])
+        if mapper.validate(mapper_args):
+            raise BuildError("Mapper 163 validation failed")
+        final = apply_pitch(battle)
         ips = core.make_ips(roms["chinese"], final)
         if args.verify_release:
             verify_release(final, ips)
+            published = ROOT / f"releases/en/{VERSION}/Pokemon_Yellow_NJ046_EN_v{VERSION}.ips"
+            if ips != published.read_bytes():
+                raise BuildError("Published IPS differs")
         staged = work / "publish"
         staged.mkdir()
         target = staged / ROM_FILENAME
@@ -332,9 +353,11 @@ def build(args: argparse.Namespace) -> dict[str, object]:
             "release_reference": VERSION, "ips_base": "chinese",
             "ips_base_sha256": EXPECTED_ROM_SHA256["chinese"], "inputs": before, "source_inputs_unchanged": True,
             "stages": {"core_sha256": sha256(raw), "title_sha256": sha256(bytes(title)),
-                       "dojo_sha256": sha256(dojo), "pitch_changed_bytes": 69},
+                       "dojo_sha256": sha256(dojo), "battle_sha256": sha256(battle),
+                       "pitch_changed_bytes": 69},
             "checks": {"source_rom_hashes": "PASS", "catalogue": static, "core_exact_rebuild": "PASS",
-                       "mapper_header_preserved": "PASS", "english_font_preserved": "PASS",
+                       "mapper_header_preserved": "PASS", "mapper_before_pitch": "PASS",
+                       "english_font_preserved": "PASS",
                        "battle_control": "PASS", "restored_pointers": "PASS",
                        "move_labels": move_check.requested_count,
                        "bank_budget": budget_check, "glyphs": glyph_check,
@@ -358,7 +381,7 @@ def build_parser() -> argparse.ArgumentParser:
     commands.add_parser("check", help="ROM-free catalogue, variant and graphical-label validation")
     command = commands.add_parser("build", help="Build into a new/empty ignored directory")
     command.add_argument("--verify-release", action="store_true",
-                         help="Require exact published 2.0.3 ROM and IPS hashes")
+                         help=f"Require exact published {VERSION} ROM and IPS hashes")
     command.add_argument("--output-dir", type=Path, default=ROOT / "build" / "en")
     command.add_argument("--english-2015-rom", type=Path, default=DEFAULT_ROMS["english_2015"])
     command.add_argument("--chinese-rom", type=Path, default=DEFAULT_ROMS["chinese"])

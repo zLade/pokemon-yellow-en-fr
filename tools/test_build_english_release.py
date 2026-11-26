@@ -274,7 +274,7 @@ class ExactReleaseIntegrationTests(unittest.TestCase):
             self.assertEqual(report["outputs"][builder.ROM_FILENAME]["sha256"], builder.RELEASE_ROM_SHA256)
             self.assertEqual(report["outputs"][builder.IPS_FILENAME]["sha256"], builder.RELEASE_IPS_SHA256)
             self.assertEqual(report["release_verification"], "PASS")
-            published = builder.ROOT / "releases" / "en" / "2.0.3" / "Pokemon_Yellow_NJ046_EN_v2.0.3.ips"
+            published = builder.ROOT / f"releases/en/{builder.VERSION}/Pokemon_Yellow_NJ046_EN_v{builder.VERSION}.ips"
             self.assertEqual((output / builder.IPS_FILENAME).read_bytes(), published.read_bytes())
 
 

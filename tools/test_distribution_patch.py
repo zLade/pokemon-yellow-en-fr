@@ -16,12 +16,16 @@ SOURCE_SHA = "450d40c0d648f8651ac6b42f1c094921cb2202ed420194e65271e2f7b40c65ed"
 
 class DistributionTests(unittest.TestCase):
     def test_patch_structure_and_checksum_without_rom(self):
-        records, truncate = parse_ips(PATCH)
-        self.assertTrue(records)
-        self.assertIsNone(truncate)
-        self.assertEqual(hashlib.sha256(PATCH.read_bytes()).hexdigest(), IPS_SHA)
-        self.assertEqual((RELEASE / "VERSION").read_text().strip(), "2.0.3")
-        self.assertEqual((RELEASE / "SHA256SUMS").read_text().strip(), IPS_SHA + "  " + PATCH.name)
+        for version, checksum in (("2.0.3", IPS_SHA), (builder.VERSION, builder.RELEASE_IPS_SHA256)):
+            with self.subTest(version=version):
+                release = ROOT / f"releases/en/{version}"
+                patch = release / f"Pokemon_Yellow_NJ046_EN_v{version}.ips"
+                records, truncate = parse_ips(patch)
+                self.assertTrue(records)
+                self.assertIsNone(truncate)
+                self.assertEqual(hashlib.sha256(patch.read_bytes()).hexdigest(), checksum)
+                self.assertEqual((release / "VERSION").read_text().strip(), version)
+                self.assertEqual((release / "SHA256SUMS").read_text().strip(), checksum + "  " + patch.name)
 
     def test_only_two_source_roms_are_needed(self):
         self.assertEqual(len(builder.DEFAULT_ROMS), 2)
@@ -36,6 +40,14 @@ class DistributionTests(unittest.TestCase):
         self.assertEqual(len(result), 2097168)
         self.assertEqual(hashlib.sha256(result).hexdigest(), ROM_SHA)
         self.assertEqual(make_ips(original, result), PATCH.read_bytes())
+
+        current_patch = ROOT / f"releases/en/{builder.VERSION}/Pokemon_Yellow_NJ046_EN_v{builder.VERSION}.ips"
+        current = apply_ips(original, *parse_ips(current_patch))
+        self.assertEqual(hashlib.sha256(current).hexdigest(), builder.RELEASE_ROM_SHA256)
+        self.assertEqual(len(current), len(result))
+        changed = [offset for offset, (before, after) in enumerate(zip(result, current)) if before != after]
+        self.assertEqual(len(changed), 332)
+        self.assertTrue(all(0x020010 <= offset < 0x028010 for offset in changed))
 
     @unittest.skipUnless(ENGLISH.is_file(), "2015 technical ROM not supplied")
     def test_intermediate_translation_is_not_the_application_base(self):

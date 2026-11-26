@@ -5,18 +5,20 @@ Ka Qiu Chuan Shuo (NJ046)** from Chinese into natural English. The Chinese
 game is the source of meaning; the 2015 English ROM supplies the technical
 build base, not the translation authority.
 
-Current game release: **English Fidelity 2.0.3**. This is the **en** branch.
+Current game release: **English Fidelity 2.0.4**. This is the **en** branch.
 The [French project](https://github.com/zLade/pokemon-yellow-en-fr/tree/fr)
 is maintained separately and is not required to work on this translation.
 
 ## Play the translation
 
-Apply the [2.0.3 IPS patch](releases/en/2.0.3/Pokemon_Yellow_NJ046_EN_v2.0.3.ips)
+Apply the [2.0.4 IPS patch](releases/en/2.0.4/Pokemon_Yellow_NJ046_EN_v2.0.4.ips)
 to the original Chinese NES ROM `Lei Dian Huang Bi Ka Qiu Chuan Shuo (NJ046) (Ch) [!].nes`, matching the base hash in the
-[release instructions](releases/en/2.0.3/README.md). This is **not** the Game
+[release instructions](releases/en/2.0.4/README.md). This is **not** the Game
 Boy game. No ROM images are distributed.
 
-Version 2.0.3 changes only the patch base: the resulting ROM is identical to 2.0.2. Do not apply this IPS to an English translation or an already patched ROM. IPS does not verify the input identity: check its SHA-256 first. Only the Chinese ROM is needed to apply the published patch; the other images below are internal build references.
+Quick Attack has priority when only one side uses it. When both sides use it,
+the original Speed comparison applies. The player's Ditto can use Transform.
+Check the SHA-256 of the original Chinese ROM before applying the IPS.
 
 ## Help with the translation
 
@@ -223,7 +225,7 @@ glyph preservation, deterministic rebuilding and the IPS round trip.
 To reproduce the unchanged published release byte for byte:
 
 ```sh
-python build.py build --verify-release --output-dir build/reproduce-2.0.3
+python build.py build --verify-release --output-dir build/reproduce-2.0.4
 ```
 
 Omit `--verify-release` for intentional translation changes: their output hash
@@ -277,7 +279,7 @@ not a translation table to commit.
 | `data/source/` | Pinned Chinese records and glyph-to-Unicode map, used to verify source context. Do not edit during routine translation work. |
 | `data/validation/` | Reviewed source decisions, pointer ownership, shared storage, cameo names, neutral graphics and bank-space limits. These are safeguards, not another translation. |
 | `tools/` | Build implementation, regression tests and optional emulator probes. Contributors normally use `build.py` instead. |
-| `releases/en/2.0.3/` | Published IPS, version, application instructions and checksum. |
+| `releases/en/2.0.4/` | Published IPS, version, application instructions and checksum. |
 | `build/` | Ignored generated files and local test evidence; never translation inputs. |
 
 The Chinese extraction is hash-pinned; its original HZK16 extraction tools are

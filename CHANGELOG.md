@@ -1,5 +1,10 @@
 # Changelog
 
+## English Fidelity 2.0.4 — 26 November 2026
+
+Quick Attack has priority when only one side uses it. When both sides use it,
+the original Speed comparison applies. The player's Ditto can use Transform.
+
 ## English Fidelity 2.0.3
 
 - Final IPS applies directly to the original Chinese NJ046 ROM.

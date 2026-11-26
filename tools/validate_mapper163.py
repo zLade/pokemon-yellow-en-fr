@@ -9,6 +9,8 @@ from dataclasses import dataclass
 from pathlib import Path
 
 try:
+    from .battle_priority import quick_attack_priority_patches
+    from .battle_transform import transform_patches
     from .title_screen_tools import (
         JAUNE_TILES,
         ENGLISH_TITLE_CREDITS,
@@ -39,6 +41,8 @@ try:
         read_move_records,
     )
 except ImportError:  # Direct ``python tools/validate_mapper163.py`` execution.
+    from battle_priority import quick_attack_priority_patches
+    from battle_transform import transform_patches
     from title_screen_tools import (
         JAUNE_TILES,
         ENGLISH_TITLE_CREDITS,
@@ -498,15 +502,18 @@ def validate(args: argparse.Namespace) -> int:
             if bank4_start <= offset < bank4_end
         }
         allowed_bank4_offsets: set[int] = set()
-        for start, source, patched in BATTLE_TEXT_CONTROL_REGIONS:
+        battle_regions = BATTLE_TEXT_CONTROL_REGIONS
+        if getattr(args, "battle_fixes", False):
+            battle_regions += (*quick_attack_priority_patches(), *transform_patches())
+        for start, source, patched in battle_regions:
             end = start + len(source)
             if base[start:end] != source:
                 failures.append(
-                    f'Unexpected battle-text control source at 0x{start:06X}'
+                    f'Unexpected battle-bank source at 0x{start:06X}'
                 )
             if rom[start:end] != patched:
                 failures.append(
-                    f'Unexpected battle-text control patch at 0x{start:06X}'
+                    f'Unexpected battle-bank patch at 0x{start:06X}'
                 )
             allowed_bank4_offsets.update(
                 start + index
@@ -924,6 +931,8 @@ def build_parser() -> argparse.ArgumentParser:
             'explicit two-line move-name catalogue; defaults to locales/<profile>/move_labels_two_line.csv if available'
         ),
     )
+    parser.add_argument("--battle-fixes", action="store_true",
+                        help="Require the English Quick Attack and Transform patches")
     return parser
 
 
